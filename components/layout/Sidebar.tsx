@@ -28,8 +28,10 @@ import {
   CheckSquare,
   Shield,
   HelpCircle,
-  BarChart2
+  BarChart2,
+  CreditCard
 } from "lucide-react";
+
 
 interface SidebarProps {
   isOpen: boolean;
@@ -75,6 +77,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       title: "Dashboard",
       href: "/dashboard",
       icon: Gauge,
+    },
+    {
+      title: "Fee Collection",
+      href: "/collect-fees",
+      icon: CreditCard,
     },
     {
       title: "Institute Details",
@@ -355,8 +362,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const renderNavGroup = (items: typeof SCHOOL_ADMIN_ITEMS, groupTitle: string) => {
     if (items.length === 0) return null;
     return (
-      <div className="mb-2">
-        <div className="px-4 pt-3 pb-1 text-[11px] font-bold uppercase tracking-wider text-[#4b646f]">
+      <div className="mb-3">
+        <div className="px-4 pt-3 pb-1.5 text-xs font-bold uppercase tracking-wider text-slate-400">
           {groupTitle}
         </div>
         {items.map((item, idx) => {
@@ -371,19 +378,16 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 key={idx}
                 href={item.href || "#"}
                 onClick={onClose}
-                className={`relative flex items-center justify-between px-4 py-2 transition-colors ${
+                className={`relative flex items-center justify-between px-4 py-2 text-sm transition-colors rounded-r-lg mr-2 ${
                   isActive
-                    ? "bg-[#1a2226] text-white font-bold"
-                    : "text-[#b8c7ce] hover:bg-[#1a2226] hover:text-white"
+                    ? "bg-emerald-500/10 text-emerald-400 font-semibold border-r-2 border-emerald-500"
+                    : "text-slate-300 hover:bg-slate-800 hover:text-white"
                 }`}
               >
                 <div className="flex items-center space-x-3">
-                  <Icon className={`w-4 h-4 shrink-0 ${isActive ? "text-[#28d4a4]" : "text-[#b8c7ce]"}`} />
+                  <Icon className={`w-4 h-4 shrink-0 ${isActive ? "text-emerald-400" : "text-slate-400"}`} />
                   <span className="truncate">{item.title}</span>
                 </div>
-                {isActive && (
-                  <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-y-[6px] border-y-transparent border-r-[6px] border-r-white" />
-                )}
               </Link>
             );
           }
@@ -392,21 +396,21 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <div key={idx}>
               <button
                 onClick={() => toggleAccordion(item.title)}
-                className="w-full flex items-center justify-between px-4 py-2 text-[#b8c7ce] hover:bg-[#1a2226] hover:text-white transition-colors text-left"
+                className="w-full flex items-center justify-between px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white transition-colors text-left"
               >
                 <div className="flex items-center space-x-3">
-                  <Icon className="w-4 h-4 shrink-0 text-[#b8c7ce]" />
+                  <Icon className="w-4 h-4 shrink-0 text-slate-400" />
                   <span className="truncate">{item.title}</span>
                 </div>
                 <ChevronRight
-                  className={`w-3.5 h-3.5 text-slate-400 transition-transform ${
+                  className={`w-4 h-4 text-slate-500 transition-transform ${
                     isAccordionOpen ? "rotate-90" : ""
                   }`}
                 />
               </button>
 
               {isAccordionOpen && item.children && (
-                <div className="bg-[#2c3b41] py-1">
+                <div className="bg-slate-950/40 border-l border-slate-800 ml-5 pl-2 my-1 space-y-0.5 py-1">
                   {item.children.map((child, cIdx) => {
                     const isChildActive = child.href !== "#" && pathname === child.href;
                     return (
@@ -414,15 +418,15 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         key={cIdx}
                         href={child.href}
                         onClick={onClose}
-                        className={`flex items-center justify-between pl-11 pr-4 py-1.5 text-xs transition-colors ${
+                        className={`flex items-center justify-between px-3 py-1.5 text-sm rounded-lg transition-colors ${
                           isChildActive
-                            ? "text-white font-bold bg-[#1e282c]"
-                            : "text-[#8aa4af] hover:text-white hover:bg-[#222d32]"
+                            ? "text-emerald-400 font-semibold bg-emerald-500/10"
+                            : "text-slate-400 hover:text-white hover:bg-slate-800/60"
                         }`}
                       >
                         <span className="truncate">{child.title}</span>
                         {child.badge && (
-                          <span className="px-1.5 py-0.2 rounded text-[10px] bg-[#e67e22] text-white font-bold">
+                          <span className="px-2 py-0.5 rounded-full text-xs bg-amber-500/20 text-amber-300 border border-amber-500/30 font-semibold">
                             {child.badge}
                           </span>
                         )}
@@ -443,61 +447,76 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       {isOpen && (
         <div
           onClick={onClose}
-          className="fixed inset-0 bg-black/50 z-30 md:hidden backdrop-blur-xs"
+          className="fixed inset-0 bg-slate-950/70 z-30 md:hidden backdrop-blur-xs"
         />
       )}
 
       <aside
-        className={`fixed top-14 bottom-0 left-0 z-30 w-60 bg-[#1e282c] text-[#b8c7ce] flex flex-col transition-transform duration-200 ease-in-out border-r border-[#151d20] select-none ${
-          isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
+        className={`w-64 shrink-0 bg-slate-900 border-r border-slate-800 text-slate-300 flex flex-col h-full z-40 select-none transition-transform duration-200 ease-in-out fixed inset-y-0 left-0 md:static md:translate-x-0 ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        {/* Top Two-Icon Tab Switcher */}
-        <div className="flex bg-[#1a2226] border-b border-[#151d20] h-10 shrink-0">
+        {/* Brand Bar in Sidebar Header */}
+        <div className="flex items-center space-x-3 px-4 h-14 border-b border-slate-800 bg-slate-900 shrink-0">
+          <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-bold text-sm shadow-xs">
+            MT
+          </div>
+          <div className="overflow-hidden leading-tight">
+            <div className="text-sm font-bold text-white tracking-tight truncate">
+              MTNA SchoolDesk
+            </div>
+            <div className="text-xs text-slate-400 font-mono">
+              SLRJ0402749
+            </div>
+          </div>
+        </div>
+
+        {/* Top Two-Tab Switcher */}
+        <div className="flex bg-slate-950/60 border-b border-slate-800 h-10 shrink-0">
           <button
             onClick={() => setActiveTab("erp")}
-            className={`flex-1 flex items-center justify-center transition-colors ${
+            className={`flex-1 flex items-center justify-center space-x-2 text-xs font-semibold transition-colors ${
               activeTab === "erp"
-                ? "text-white bg-[#1e282c] border-b-2 border-[#16a085]"
-                : "text-slate-400 hover:text-white"
+                ? "text-emerald-400 bg-slate-900 border-b-2 border-emerald-500"
+                : "text-slate-400 hover:text-slate-200"
             }`}
-            title="ERP Menu Tree"
+            title="ERP Modules Navigation"
           >
-            <div className="flex items-center space-x-1">
-              <Layers className="w-4 h-4" />
-            </div>
+            <Layers className="w-4 h-4" />
+            <span>Modules</span>
           </button>
           <button
             onClick={() => setActiveTab("account")}
-            className={`flex-1 flex items-center justify-center transition-colors ${
+            className={`flex-1 flex items-center justify-center space-x-2 text-xs font-semibold transition-colors ${
               activeTab === "account"
-                ? "text-white bg-[#1e282c] border-b-2 border-[#16a085]"
-                : "text-slate-400 hover:text-white"
+                ? "text-emerald-400 bg-slate-900 border-b-2 border-emerald-500"
+                : "text-slate-400 hover:text-slate-200"
             }`}
-            title="User Account"
+            title="User Account & Preferences"
           >
             <User className="w-4 h-4" />
+            <span>Account</span>
           </button>
         </div>
 
         {activeTab === "erp" ? (
           <>
             {/* Search Filter Box */}
-            <div className="px-3 py-2 bg-[#1a2226]/60 shrink-0">
+            <div className="p-3 bg-slate-900 shrink-0">
               <div className="relative">
                 <input
                   type="text"
-                  placeholder="Search..."
+                  placeholder="Filter menu items..."
                   value={filterQuery}
                   onChange={(e) => setFilterQuery(e.target.value)}
-                  className="w-full bg-[#374850] text-xs text-white placeholder-slate-400 px-3 py-1.5 rounded-sm border-none focus:outline-none focus:ring-1 focus:ring-[#16a085]"
+                  className="w-full bg-slate-800 text-sm text-white placeholder-slate-400 px-3 py-1.5 pr-8 rounded-lg border border-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 />
-                <Search className="w-3.5 h-3.5 text-slate-400 absolute right-2.5 top-2 pointer-events-none" />
+                <Search className="w-4 h-4 text-slate-400 absolute right-2.5 top-2 pointer-events-none" />
               </div>
             </div>
 
-            {/* Navigation Lists with Custom Scrollbar */}
-            <div className="flex-1 overflow-y-auto space-y-0.5 pb-8 text-xs font-medium scrollbar-thin scrollbar-thumb-[#374850]">
+            {/* Navigation Lists */}
+            <div className="flex-1 overflow-y-auto space-y-0.5 pb-8 text-sm font-medium">
               {renderNavGroup(filteredAdmin, "SCHOOL ADMIN")}
               {renderNavGroup(filteredTeacher, "SCHOOL TEACHER")}
               {renderNavGroup(filteredExamCell, "EXAM CELL")}
@@ -505,40 +524,54 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             </div>
           </>
         ) : (
-          /* Tab 2: User Account & Preferences Drawer (Exact match to media_1789476274393.png) */
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 text-xs text-[#b8c7ce]">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-[#4b646f]">
-              USER CREDENTIALS
+          /* Tab 2: User Account & Preferences Drawer */
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 text-sm text-slate-300">
+            <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
+              ADMINISTRATOR CREDENTIALS
+            </div>
+
+            <div className="p-3.5 rounded-xl bg-slate-800/70 border border-slate-700/80 space-y-2.5">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white font-black text-sm flex items-center justify-center shadow-xs">
+                  MP
+                </div>
+                <div>
+                  <div className="font-bold text-white text-sm">Mahendra Parihar</div>
+                  <div className="text-xs text-slate-400">Principal / Administrator</div>
+                </div>
+              </div>
+              <div className="pt-2 border-t border-slate-700 text-xs text-slate-400">
+                School Account: <span className="font-mono text-emerald-400 font-bold">SLRJ0402749</span>
+              </div>
             </div>
 
             <div className="space-y-2">
-              <div
-                onClick={() => alert("Edit Username: MAHENDRA PARIHAR")}
-                className="flex items-center justify-between p-3 bg-[#222d32] hover:bg-[#2c3b41] rounded border border-slate-700/40 cursor-pointer transition-colors"
+              <Link
+                href="/staff-profile-settings"
+                onClick={onClose}
+                className="flex items-center justify-between p-3 bg-slate-800/50 hover:bg-slate-800 rounded-xl border border-slate-700/60 transition-colors"
               >
-                <span className="font-semibold text-white">Edit Username</span>
+                <span className="font-medium text-slate-200">Staff Profile Details</span>
                 <Edit3 className="w-4 h-4 text-slate-400" />
-              </div>
+              </Link>
 
-              <div
-                onClick={() => alert("Change Password modal")}
-                className="flex items-center justify-between p-3 bg-[#222d32] hover:bg-[#2c3b41] rounded border border-slate-700/40 cursor-pointer transition-colors"
-              >
-                <span className="font-semibold text-white">Edit Password</span>
-                <Edit3 className="w-4 h-4 text-slate-400" />
-              </div>
-            </div>
-
-            <div className="pt-4 border-t border-[#151d20]">
-              <div className="text-[11px] font-bold uppercase tracking-wider text-[#4b646f] mb-2">
-                USER PREFERENCES
-              </div>
               <Link
                 href="/school-settings"
                 onClick={onClose}
-                className="flex items-center justify-center space-x-2 w-full py-2 px-3 bg-[#28d4a4] hover:bg-[#23be93] text-slate-900 font-bold uppercase tracking-wider text-[11px] rounded transition-colors shadow-xs"
+                className="flex items-center justify-between p-3 bg-slate-800/50 hover:bg-slate-800 rounded-xl border border-slate-700/60 transition-colors"
               >
-                <Sliders className="w-3.5 h-3.5" />
+                <span className="font-medium text-slate-200">Institution Preferences</span>
+                <Sliders className="w-4 h-4 text-slate-400" />
+              </Link>
+            </div>
+
+            <div className="pt-4 border-t border-slate-800">
+              <Link
+                href="/school-settings"
+                onClick={onClose}
+                className="flex items-center justify-center space-x-2 w-full py-2.5 px-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold uppercase tracking-wider text-xs rounded-lg transition-colors shadow-xs"
+              >
+                <Sliders className="w-4 h-4" />
                 <span>MANAGE PREFERENCES</span>
               </Link>
             </div>
@@ -548,3 +581,4 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     </>
   );
 }
+
