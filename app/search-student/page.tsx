@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useMemo, useRef } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import Link from "next/link";
+
 import {
   Search,
   Filter,
@@ -16,13 +17,17 @@ import {
   FileSpreadsheet,
   Upload,
   CheckCircle2,
-  Download
+  Download,
+  Database,
+  RefreshCw
 } from "lucide-react";
 import { MOCK_STUDENTS, Student } from "@/data/mockData";
+import { studentService } from "@/lib/services/studentService";
 import { ProfileModal } from "@/components/search/ProfileModal";
 import { FeeLedgerModal } from "@/components/search/FeeLedgerModal";
 import { GatePassModal } from "@/components/search/GatePassModal";
 import { exportStudentsToExcel, importStudentsFromExcel } from "@/lib/excelHelper";
+
 
 type SearchField =
   | "Name"
@@ -48,10 +53,30 @@ const SEARCH_OPTIONS: SearchField[] = [
 ];
 
 export default function SearchStudentPage() {
-  // Student List State (supports importing from Excel)
-  const [studentsList, setStudentsList] = useState<Student[]>(MOCK_STUDENTS);
+  // Student List State (loaded from live Supabase database with fallback)
+  const [studentsList, setStudentsList] = useState<Student[]>([]);
+  const [isLive, setIsLive] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [importNotification, setImportNotification] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const loadStudents = async () => {
+    setIsLoading(true);
+    try {
+      const res = await studentService.fetchStudents();
+      setStudentsList(res.data);
+      setIsLive(res.isLive);
+    } catch (err) {
+      console.error("Failed to load students:", err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    loadStudents();
+  }, []);
+
 
   // Main Search State
   const [selectedField, setSelectedField] = useState<SearchField>("Name");
@@ -202,9 +227,21 @@ export default function SearchStudentPage() {
             <span className="text-slate-400">/</span>
             <span className="text-slate-800 font-semibold">9-Way Multi Search</span>
           </div>
-          <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-            Search Student Master
-          </h1>
+          <div className="flex items-center space-x-3">
+            <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+              Search Student Master
+            </h1>
+            {isLive ? (
+              <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                <Database className="w-3 h-3 text-emerald-600" />
+                <span>Supabase Live ({studentsList.length} Scholars)</span>
+              </span>
+            ) : (
+              <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-slate-100 text-slate-600 border border-slate-300">
+                <span>Demo Engine ({studentsList.length})</span>
+              </span>
+            )}
+          </div>
           <p className="text-xs text-slate-500 mt-0.5">
             Query student database instantly across 9 institutional parameters or via advanced demographic filters
           </p>
@@ -219,6 +256,14 @@ export default function SearchStudentPage() {
             accept=".xlsx, .xls, .csv"
             className="hidden"
           />
+
+          <button
+            onClick={loadStudents}
+            className="inline-flex items-center space-x-1 px-2.5 py-1.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 rounded-md text-xs font-semibold shadow-xs transition-colors"
+            title="Reload from Supabase"
+          >
+            <RefreshCw className={`w-3.5 h-3.5 text-slate-600 ${isLoading ? "animate-spin" : ""}`} />
+          </button>
 
           <button
             onClick={() => fileInputRef.current?.click()}
@@ -238,6 +283,7 @@ export default function SearchStudentPage() {
             <span>Export (.xlsx)</span>
           </button>
         </div>
+
       </div>
 
       {importNotification && (

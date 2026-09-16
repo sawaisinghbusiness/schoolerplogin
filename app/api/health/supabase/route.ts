@@ -18,39 +18,29 @@ export async function GET() {
         hasAnonKey,
         hasServiceKey,
       },
-      instructions: {
-        step1: "Create a free project at https://supabase.com",
-        step2: "Execute supabase/schema.sql and supabase/seed.sql in the Supabase SQL Editor",
-        step3: "Add NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY into .env.local",
-      },
     });
   }
 
   try {
-    // Attempt real query to test connection
-    const { count, error } = await supabase
-      .from("institution_settings")
+    // Primary query on students table (confirmed present in live database)
+    const { count: studentCount, error: studentError } = await supabase
+      .from("students")
       .select("*", { count: "exact", head: true });
 
     const latencyMs = Date.now() - startTime;
 
-    if (error) {
+    if (studentError) {
       return NextResponse.json({
         status: "connection_error",
         configured: true,
         connected: false,
         latencyMs,
-        error: error.message,
-        hint: "Database connection failed. Please verify your Project URL and Anon API key, and make sure schema.sql has been executed in the Supabase SQL Editor.",
+        error: studentError.message,
+        hint: "Database query failed. Please verify your Project URL and Anon API key.",
       }, { status: 502 });
     }
 
-    // Check student table count
-    const { count: studentCount } = await supabase
-      .from("students")
-      .select("*", { count: "exact", head: true });
-
-    // Check staff table count
+    // Optional check on staff table
     const { count: staffCount } = await supabase
       .from("staff")
       .select("*", { count: "exact", head: true });
@@ -62,7 +52,6 @@ export async function GET() {
       latencyMs,
       database: {
         projectUrl: supabaseUrl,
-        institutionSettingsRows: count ?? 0,
         studentsCount: studentCount ?? 0,
         staffCount: staffCount ?? 0,
       },

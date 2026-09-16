@@ -1,55 +1,65 @@
 import { supabase, isSupabaseConfigured } from "@/lib/supabaseClient";
 import { Student, MOCK_STUDENTS } from "@/data/mockData";
-import { DbStudent } from "@/lib/types/database";
 
 // In-memory cache/mock store for when Supabase is in demo/fallback mode
 let localStudents: Student[] = [...MOCK_STUDENTS];
 
-export function mapDbToStudent(db: DbStudent): Student {
+export function mapDbToStudent(db: any): Student {
+  const className = db.class_name || db.class || "10th";
+  const section = db.section || "A";
+  const mobile = db.contact_phone || db.mobile || db.contact || "9829012345";
+  const feesDue = db.fees_due !== undefined ? Number(db.fees_due) : Number(db.balance_fee || 0);
+
   return {
     id: db.id || db.admission_no,
     photoUrl: db.photo_url || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
-    name: db.name,
-    srNo: db.sr_no,
-    admissionNo: db.admission_no,
-    rollNo: db.roll_no || "",
-    class: db.class,
-    section: db.section,
-    classSec: db.class_sec || `${db.class} - ${db.section}`,
-    fatherName: db.father_name,
+    name: db.name || "Student",
+    srNo: db.sr_no || "",
+    admissionNo: db.admission_no || "",
+    rollNo: db.roll_no ? String(db.roll_no) : "",
+    class: className,
+    section: section,
+    classSec: db.class_sec || `${className} - ${section}`,
+    fatherName: db.father_name || "",
     motherName: db.mother_name || "",
-    guardianName: db.guardian_name || db.father_name,
-    contact: db.contact,
-    mobile: db.mobile,
-    address: db.address || "",
+    guardianName: db.guardian_name || db.father_name || "",
+    contact: mobile,
+    mobile: mobile,
+    address: db.address || "Barmer, Rajasthan",
     penNo: db.pen_no || "",
     gender: db.gender || "Male",
-    dob: db.dob || "",
+    dob: db.dob || "2010-01-01",
     category: db.category || "General",
     house: db.house || "Tagore",
-    transportOpted: Boolean(db.transport_opted),
+    transportOpted: Boolean(db.uses_transport ?? db.transport_opted),
     busRoute: db.bus_route,
     status: db.status || "Active",
-    totalFee: Number(db.total_fee || 0),
+    totalFee: Number(db.total_fee || feesDue + (db.paid_fee || 0)),
     paidFee: Number(db.paid_fee || 0),
-    balanceFee: Number(db.balance_fee || 0),
+    balanceFee: feesDue,
   };
 }
 
-export function mapStudentToDb(student: Partial<Student>): Partial<DbStudent> {
+export function mapStudentToDb(student: Partial<Student>): Record<string, any> {
+  const className = student.class || "10th";
+  const section = student.section || "A";
+  const phone = student.mobile || student.contact || "9829012345";
+
   return {
     name: student.name,
     sr_no: student.srNo,
     admission_no: student.admissionNo,
     roll_no: student.rollNo,
-    class: student.class,
-    section: student.section,
-    class_sec: student.classSec || (student.class && student.section ? `${student.class} - ${student.section}` : undefined),
+    class: className,
+    class_name: className,
+    section: section,
+    class_sec: student.classSec || `${className} - ${section}`,
     father_name: student.fatherName,
     mother_name: student.motherName,
     guardian_name: student.guardianName,
-    contact: student.contact || student.mobile,
-    mobile: student.mobile || student.contact,
+    contact: phone,
+    mobile: phone,
+    contact_phone: phone,
     address: student.address,
     pen_no: student.penNo,
     gender: student.gender,
@@ -57,12 +67,14 @@ export function mapStudentToDb(student: Partial<Student>): Partial<DbStudent> {
     category: student.category,
     house: student.house,
     transport_opted: student.transportOpted,
+    uses_transport: student.transportOpted,
     bus_route: student.busRoute,
     photo_url: student.photoUrl,
     status: student.status,
     total_fee: student.totalFee,
     paid_fee: student.paidFee,
     balance_fee: student.balanceFee,
+    fees_due: student.balanceFee,
   };
 }
 
@@ -86,16 +98,16 @@ export const studentService = {
           .order("created_at", { ascending: false });
 
         if (className) {
-          q = q.eq("class", className);
+          // Check both class and class_name
+          q = q.or(`class.eq.${className},class_name.eq.${className}`);
         }
         if (section) {
           q = q.eq("section", section);
         }
         if (query && query.trim() !== "") {
           const term = query.trim();
-          // Multi-column search supported by indexes in schema.sql
           q = q.or(
-            `name.ilike.%${term}%,sr_no.ilike.%${term}%,admission_no.ilike.%${term}%,mobile.ilike.%${term}%,father_name.ilike.%${term}%`
+            `name.ilike.%${term}%,sr_no.ilike.%${term}%,admission_no.ilike.%${term}%,father_name.ilike.%${term}%`
           );
         }
 
@@ -107,7 +119,19 @@ export const studentService = {
         }
 
         if (data && data.length > 0) {
-          return { data: data.map(mapDbToStudent), isLive: true, error: null };
+          let mapped = data.map(mapDbToStudent);
+          if (query && query.trim() !== "") {
+            const qLower = query.trim().toLowerCase();
+            mapped = mapped.filter(
+              (s) =>
+                s.name.toLowerCase().includes(qLower) ||
+                s.srNo.toLowerCase().includes(qLower) ||
+                s.admissionNo.toLowerCase().includes(qLower) ||
+                s.mobile.includes(qLower) ||
+                s.fatherName.toLowerCase().includes(qLower)
+            );
+          }
+          return { data: mapped, isLive: true, error: null };
         }
       } catch (err: any) {
         console.warn("Supabase connection exception:", err);
@@ -173,7 +197,6 @@ export const studentService = {
       }
     }
 
-    // Local store mock insert
     const mockStudent: Student = {
       id: `STU-${Date.now().toString().slice(-4)}`,
       photoUrl: newStudent.photoUrl || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
