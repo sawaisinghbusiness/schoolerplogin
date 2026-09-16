@@ -15,9 +15,12 @@ import {
   Edit2,
   Lock,
   Menu,
-  ChevronDown
+  ChevronDown,
+  Database
 } from "lucide-react";
 import { Modal } from "@/components/ui/modal";
+import DatabaseStatusModal from "@/components/database/DatabaseStatusModal";
+
 
 interface NavbarProps {
   onToggleSidebar?: () => void;
@@ -31,6 +34,7 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
   const [isSmsUsageModalOpen, setIsSmsUsageModalOpen] = useState(false);
   const [isHelpOpen, setIsHelpOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isDbModalOpen, setIsDbModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [currentTime, setCurrentTime] = useState("15-09-2026 15:34:43");
 
@@ -241,7 +245,19 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
             </span>
           </button>
 
-          {/* 6. Magnifying Search Icon */}
+          {/* 6. Database / Supabase Connection Status Button */}
+          <button
+            onClick={() => setIsDbModalOpen(true)}
+            className="h-full px-3 hover:bg-[#1b242a] flex flex-col items-center justify-center text-slate-300 hover:text-white transition-colors focus:outline-none"
+            title="Database Hub (Supabase Cloud PostgreSQL)"
+          >
+            <Database className="w-4 h-4 text-[#28d4a4]" />
+            <span className="text-[9px] font-mono leading-none mt-1 text-[#28d4a4]">
+              DB
+            </span>
+          </button>
+
+          {/* 7. Magnifying Search Icon */}
           <button
             onClick={() => setIsSearchOpen(true)}
             className="h-full px-3 hover:bg-[#1b242a] flex items-center justify-center text-slate-300 hover:text-white transition-colors"
@@ -329,6 +345,13 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
           </div>
         </div>
       </Modal>
+
+      {/* Supabase Database Connection & Setup Modal */}
+      <DatabaseStatusModal
+        isOpen={isDbModalOpen}
+        onClose={() => setIsDbModalOpen(false)}
+      />
     </header>
+
   );
 }

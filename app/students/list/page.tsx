@@ -1,14 +1,34 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { GraduationCap, Search, Phone, Eye, CreditCard, Ticket, Download } from "lucide-react";
-import { MOCK_STUDENTS } from "@/data/mockData";
+import { GraduationCap, Search, Phone, Eye, CreditCard, Ticket, Download, RefreshCw, Database } from "lucide-react";
+import { Student } from "@/data/mockData";
+import { studentService } from "@/lib/services/studentService";
 import { exportStudentsToExcel } from "@/lib/excelHelper";
 
 export default function StudentsListPage() {
+  const [students, setStudents] = useState<Student[]>([]);
   const [search, setSearch] = useState("");
-  const filtered = MOCK_STUDENTS.filter(s => s.name.toLowerCase().includes(search.toLowerCase()) || s.srNo.toLowerCase().includes(search.toLowerCase()) || s.mobile.includes(search));
+  const [loading, setLoading] = useState(true);
+  const [isLive, setIsLive] = useState(false);
+
+  const loadData = async (queryTerm = "") => {
+    setLoading(true);
+    try {
+      const res = await studentService.fetchStudents({ query: queryTerm });
+      setStudents(res.data);
+      setIsLive(res.isLive);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    loadData(search);
+  }, [search]);
 
   return (
     <div className="space-y-6 animate-fadeIn max-w-6xl pb-10">
@@ -20,9 +40,21 @@ export default function StudentsListPage() {
             <span className="text-slate-400">/</span>
             <span className="text-slate-800 font-semibold">Student Scholar Directory</span>
           </div>
-          <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-            Institutional Student Roster (1,924 Scholars)
-          </h1>
+          <div className="flex items-center space-x-3">
+            <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+              Institutional Student Roster
+            </h1>
+            {isLive ? (
+              <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                <Database className="w-3 h-3" />
+                <span>Supabase Live</span>
+              </span>
+            ) : (
+              <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-slate-100 text-slate-600 border border-slate-300">
+                <span>Demo Engine</span>
+              </span>
+            )}
+          </div>
           <p className="text-xs text-slate-500 mt-0.5">
             Active enrolled scholars across all wings (Pre-Primary, Primary, Middle, Secondary & Senior Secondary)
           </p>
@@ -30,14 +62,21 @@ export default function StudentsListPage() {
 
         <div className="flex items-center space-x-2">
           <button
-            onClick={() => exportStudentsToExcel(filtered)}
+            onClick={() => exportStudentsToExcel(students)}
             className="inline-flex items-center space-x-1 px-3 py-1.5 bg-white border border-slate-300 hover:bg-slate-50 rounded text-slate-700 text-xs font-semibold shadow-xs"
           >
             <Download className="w-3.5 h-3.5 text-emerald-600" />
             <span>Export Roster</span>
           </button>
+          <button
+            onClick={() => loadData(search)}
+            className="inline-flex items-center space-x-1 px-2.5 py-1.5 bg-white border border-slate-300 hover:bg-slate-50 rounded text-slate-700 text-xs font-semibold shadow-xs"
+            title="Refresh Data"
+          >
+            <RefreshCw className={`w-3.5 h-3.5 text-slate-600 ${loading ? "animate-spin" : ""}`} />
+          </button>
           <Link
-            href="/students/add"
+            href="/add-students"
             className="inline-flex items-center space-x-1 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded text-xs font-bold shadow-xs"
           >
             <span>+ New Admission</span>
@@ -70,34 +109,49 @@ export default function StudentsListPage() {
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-100 text-slate-700 font-medium">
-            {filtered.map((s) => (
-              <tr key={s.id} className="hover:bg-slate-50">
-                <td className="py-3 px-4 font-mono font-bold text-slate-900">{s.srNo}</td>
-                <td className="py-3 px-4 font-bold text-slate-900">{s.name}</td>
-                <td className="py-3 px-4 font-mono font-semibold text-emerald-800">{s.classSec}</td>
-                <td className="py-3 px-4">{s.fatherName}</td>
-                <td className="py-3 px-4 font-mono">{s.mobile}</td>
-                <td className="py-3 px-4">
-                  {s.balanceFee === 0 ? (
-                    <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded font-bold text-[10px]">
-                      Cleared
-                    </span>
-                  ) : (
-                    <span className="px-2 py-0.5 bg-rose-100 text-rose-800 rounded font-bold text-[10px]">
-                      Due ₹{s.balanceFee.toLocaleString()}
-                    </span>
-                  )}
-                </td>
-                <td className="py-3 px-4 text-center">
-                  <Link
-                    href="/search-student"
-                    className="px-2.5 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded text-[11px] font-semibold"
-                  >
-                    Open Master File
-                  </Link>
+            {loading && students.length === 0 ? (
+              <tr>
+                <td colSpan={7} className="py-8 text-center text-slate-400">
+                  <RefreshCw className="w-5 h-5 animate-spin mx-auto mb-2 text-emerald-600" />
+                  <span>Loading scholars directory...</span>
                 </td>
               </tr>
-            ))}
+            ) : students.length === 0 ? (
+              <tr>
+                <td colSpan={7} className="py-8 text-center text-slate-400">
+                  No scholar records found matching &ldquo;{search}&rdquo;.
+                </td>
+              </tr>
+            ) : (
+              students.map((s) => (
+                <tr key={s.id} className="hover:bg-slate-50">
+                  <td className="py-3 px-4 font-mono font-bold text-slate-900">{s.srNo}</td>
+                  <td className="py-3 px-4 font-bold text-slate-900">{s.name}</td>
+                  <td className="py-3 px-4 font-mono font-semibold text-emerald-800">{s.classSec}</td>
+                  <td className="py-3 px-4">{s.fatherName}</td>
+                  <td className="py-3 px-4 font-mono">{s.mobile}</td>
+                  <td className="py-3 px-4">
+                    {s.balanceFee === 0 ? (
+                      <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded font-bold text-[10px]">
+                        Cleared
+                      </span>
+                    ) : (
+                      <span className="px-2 py-0.5 bg-rose-100 text-rose-800 rounded font-bold text-[10px]">
+                        Due ₹{s.balanceFee?.toLocaleString() ?? "0"}
+                      </span>
+                    )}
+                  </td>
+                  <td className="py-3 px-4 text-center">
+                    <Link
+                      href="/search-student-advance"
+                      className="px-2.5 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded text-[11px] font-semibold"
+                    >
+                      Open Master File
+                    </Link>
+                  </td>
+                </tr>
+              ))
+            )}
           </tbody>
         </table>
       </div>

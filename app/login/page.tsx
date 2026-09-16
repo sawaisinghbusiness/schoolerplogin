@@ -14,8 +14,12 @@ import {
   ArrowRight,
   Sparkles,
   KeyRound,
-  CheckCircle2
+  CheckCircle2,
+  Database
 } from "lucide-react";
+import { authService } from "@/lib/services/authService";
+import DatabaseStatusModal from "@/components/database/DatabaseStatusModal";
+
 
 type UserRole = "admin" | "teacher" | "accountant" | "parent";
 
@@ -26,6 +30,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState("admin@123");
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [isDbModalOpen, setIsDbModalOpen] = useState(false);
 
   const handleRoleSelect = (role: UserRole) => {
     setSelectedRole(role);
@@ -45,7 +50,7 @@ export default function LoginPage() {
     }
   };
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!identifier || !password) {
       setErrorMessage("Please enter both login identifier and password.");
@@ -53,21 +58,32 @@ export default function LoginPage() {
     }
 
     setIsLoading(true);
-    // Simulate auth token issuance & role storage
-    setTimeout(() => {
-      try {
-        localStorage.setItem("schooldesk_user_role", selectedRole);
-        localStorage.setItem("schooldesk_user_id", identifier);
-      } catch {
-        // Ignore
-      }
+    setErrorMessage(null);
 
-      if (selectedRole === "teacher") {
-        router.push("/mentees");
+    try {
+      const res = await authService.login(identifier, password, selectedRole);
+      if (res.success && res.user) {
+        try {
+          localStorage.setItem("schooldesk_user_role", res.user.role);
+          localStorage.setItem("schooldesk_user_id", res.user.identifier);
+          localStorage.setItem("schooldesk_user_name", res.user.name);
+        } catch {
+          // Ignore storage errors
+        }
+
+        if (res.user.role === "teacher") {
+          router.push("/mentees");
+        } else {
+          router.push("/dashboard/admin");
+        }
       } else {
-        router.push("/dashboard/admin");
+        setErrorMessage(res.error || "Authentication failed. Please verify credentials.");
       }
-    }, 800);
+    } catch (err: any) {
+      setErrorMessage(err.message || "An unexpected error occurred during sign in.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -238,10 +254,24 @@ export default function LoginPage() {
           </div>
         </form>
 
-        <div className="p-3 bg-slate-100 text-center border-t border-slate-200 text-[10px] text-slate-500">
-          Mother Teresa Nobles Academy &copy; 2026. Single-Tenant Dedicated ERP.
+        <div className="p-3 bg-slate-100 border-t border-slate-200 flex items-center justify-between text-[10px] text-slate-500">
+          <span>Mother Teresa Nobles Academy &copy; 2026.</span>
+          <button
+            type="button"
+            onClick={() => setIsDbModalOpen(true)}
+            className="inline-flex items-center space-x-1 font-semibold text-emerald-700 hover:text-emerald-800 bg-white px-2 py-0.5 rounded border border-slate-200 shadow-2xs"
+          >
+            <Database className="w-3 h-3 text-emerald-600" />
+            <span>Database Hub</span>
+          </button>
         </div>
       </div>
+
+      <DatabaseStatusModal
+        isOpen={isDbModalOpen}
+        onClose={() => setIsDbModalOpen(false)}
+      />
     </div>
   );
 }
+
