@@ -159,10 +159,10 @@ export default function MarkStudentAttendancePage() {
         </div>
       </div>
 
-      {/* Form Container */}
-      <form onSubmit={handleSave} className="space-y-3">
-        {/* 2. High-Density Compact Sticky Toolbar */}
-        <div className="sticky top-0 z-20 bg-white border border-slate-200 rounded-lg p-2.5 shadow-xs flex flex-wrap items-center justify-between gap-2.5 backdrop-blur-md bg-white/95">
+      {/* Form & Table Container */}
+      <form onSubmit={handleSave} className="bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden">
+        {/* Integrated Action Toolbar */}
+        <div className="p-3 border-b border-slate-200 bg-white flex flex-wrap items-center justify-between gap-2.5">
           <div className="flex flex-wrap items-center gap-2">
             {/* Class Selector */}
             <div className="flex items-center gap-1.5">
@@ -241,13 +241,12 @@ export default function MarkStudentAttendancePage() {
           </div>
         </div>
 
-        {/* 3. Tactile Table & Attendance Controls */}
-        <div className="bg-white rounded-lg border border-slate-200 shadow-2xs overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs border-collapse">
-              {/* Soft enterprise header */}
-              <thead className="bg-slate-50 text-slate-500 uppercase text-[11px] font-semibold tracking-wider border-b border-slate-200">
-                <tr>
+        {/* Tactile Table & Attendance Controls */}
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-xs border-collapse">
+            {/* Soft enterprise header */}
+            <thead className="bg-slate-50 text-slate-500 uppercase text-[11px] font-semibold tracking-wider border-b border-slate-200">
+              <tr>
                   <th className="py-2.5 px-3 w-16 text-center">Roll</th>
                   <th className="py-2.5 px-4 min-w-[200px]">Student</th>
                   <th className="py-2.5 px-3 hidden md:table-cell min-w-[140px]">Father&apos;s Name</th>
@@ -429,7 +428,6 @@ export default function MarkStudentAttendancePage() {
               </button>
             </div>
           </div>
-        </div>
       </form>
     </div>
   );
