@@ -6,16 +6,16 @@ import { Building2, Save, CheckCircle2, Shield, School, MapPin, Phone, Mail, Glo
 export default function InstituteBasicDetailsPage() {
   const [saved, setSaved] = useState(false);
   const [formData, setFormData] = useState({
-    schoolName: "Mother Teresa Nobles Academy",
-    accountCode: "SLRJ0402749",
-    affiliationNo: "CBSE-1730045",
+    schoolName: "St. Paul's Senior Secondary School",
+    accountCode: "STP-BRM-2026",
+    affiliationNo: "CBSE-1730000",
     board: "Central Board of Secondary Education (CBSE)",
-    foundedYear: "2004",
-    principalName: "Dr. K. S. Rathore",
+    foundedYear: "2001",
+    principalName: "Fr. Principal",
     address: "Opposite Collectorate, Civil Lines, Barmer, Rajasthan - 344001",
     contactNumber: "+91 94140 12345",
-    officialEmail: "admin@motherteresa.edu.in",
-    website: "https://motherteresaschool.edu.in",
+    officialEmail: "admin@stpaulsbarmer.edu.in",
+    website: "https://stpaulsbarmer.edu.in",
     schoolType: "Co-Educational English Medium Senior Secondary",
     activeSession: "2026-27"
   });
@@ -52,12 +52,12 @@ export default function InstituteBasicDetailsPage() {
 
       <form onSubmit={handleSubmit} className="bg-white rounded-xl border border-slate-200 shadow-xs p-6 space-y-6 text-xs">
         <div className="flex items-center space-x-3 pb-4 border-b border-slate-100">
-          <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center font-bold text-emerald-700 text-xl">
-            M
+          <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center font-bold text-emerald-700 text-lg">
+            SP
           </div>
           <div>
             <h2 className="text-sm font-bold text-slate-900">{formData.schoolName}</h2>
-            <p className="text-[11px] text-slate-400">Schoollog ERP Account Code: <strong className="text-emerald-700 font-mono">{formData.accountCode}</strong></p>
+            <p className="text-xs text-slate-500">SchoolDesk ERP ID: <strong className="text-emerald-700 font-mono">{formData.accountCode}</strong></p>
           </div>
         </div>
 

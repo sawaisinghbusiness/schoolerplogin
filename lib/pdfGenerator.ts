@@ -16,15 +16,15 @@ export function generateFeeReceiptPDF(
 
   doc.setTextColor(255, 255, 255);
   doc.setFont("helvetica", "bold");
-  doc.setFontSize(16);
-  doc.text("MOTHER TERESA NOBLES ACADEMY", 105, 14, { align: "center" });
+  doc.setFontSize(15);
+  doc.text("ST. PAUL'S SENIOR SECONDARY SCHOOL", 105, 14, { align: "center" });
 
   doc.setFontSize(9);
   doc.setFont("helvetica", "normal");
-  doc.text("CBSE Affiliated Senior Secondary School | Barmer, Rajasthan", 105, 20, { align: "center" });
-  doc.setTextColor(40, 212, 164); // #28d4a4
+  doc.text("Affiliated Senior Secondary School | Barmer, Rajasthan", 105, 20, { align: "center" });
+  doc.setTextColor(5, 150, 105); // emerald-600
   doc.setFont("helvetica", "bold");
-  doc.text("INSTITUTION ACCOUNT CODE: SLRJ0402749 | SESSION 2026-27", 105, 26, { align: "center" });
+  doc.text("AFFILIATION CODE: CBSE-1730000 | ACADEMIC SESSION 2026-27", 105, 26, { align: "center" });
 
   // Receipt Title Badge
   doc.setFillColor(241, 245, 249);
@@ -150,7 +150,7 @@ export function generateGatePassPDF(
   doc.setTextColor(255, 255, 255);
   doc.setFont("helvetica", "bold");
   doc.setFontSize(13);
-  doc.text("MOTHER TERESA NOBLES ACADEMY", 74, 10, { align: "center" });
+  doc.text("ST. PAUL&apos;S SENIOR SECONDARY SCHOOL", 74, 10, { align: "center" });
   doc.setFontSize(8);
   doc.setTextColor(40, 212, 164);
   doc.text("STUDENT EARLY DEPARTURE GATE CLEARANCE SLIP", 74, 16, { align: "center" });
@@ -200,7 +200,7 @@ export function generateGatePassPDF(
 
   doc.setFontSize(7);
   doc.setTextColor(148, 163, 184);
-  doc.text("Account: SLRJ0402749 | Single-Tenant SchoolDesk Security Pass", 74, 142, { align: "center" });
+  doc.text("Account: STP-BRM-2026 | Single-Tenant SchoolDesk Security Pass", 74, 142, { align: "center" });
 
   doc.save(`GatePass_${student.name}_${passData.passId}.pdf`);
 }

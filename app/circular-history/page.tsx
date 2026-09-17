@@ -37,7 +37,7 @@ export default function CircularHistoryPage() {
   const CIRCULARS: CircularRecord[] = [
     {
       id: "CIR-104",
-      circularNo: "MTNA/CIR/2026/089",
+      circularNo: "SPSS/CIR/2026/089",
       date: "2026-09-15",
       title: "Notice: Revision Assessment Schedule for Classes 9th & 10th",
       targetAudience: "Classes: 9th, 10th",
@@ -50,7 +50,7 @@ export default function CircularHistoryPage() {
     },
     {
       id: "CIR-103",
-      circularNo: "MTNA/CIR/2026/088",
+      circularNo: "SPSS/CIR/2026/088",
       date: "2026-09-14",
       title: "School Timing Change Announcement for Winter Session",
       targetAudience: "Whole School (All Classes)",
@@ -62,7 +62,7 @@ export default function CircularHistoryPage() {
     },
     {
       id: "CIR-102",
-      circularNo: "MTNA/CIR/2026/087",
+      circularNo: "SPSS/CIR/2026/087",
       date: "2026-09-10",
       title: "Hindi Diwas & Special Assembly Program Participation",
       targetAudience: "Classes: 6th to 12th",
@@ -74,7 +74,7 @@ export default function CircularHistoryPage() {
     },
     {
       id: "CIR-101",
-      circularNo: "MTNA/CIR/2026/086",
+      circularNo: "SPSS/CIR/2026/086",
       date: "2026-09-04",
       title: "Teachers Day Program & Early Dismissal on 5th September",
       targetAudience: "Whole School (All Classes)",
@@ -86,7 +86,7 @@ export default function CircularHistoryPage() {
     },
     {
       id: "CIR-100",
-      circularNo: "MTNA/CIR/2026/085",
+      circularNo: "SPSS/CIR/2026/085",
       date: "2026-08-28",
       title: "Bus Route No. 3 Timing Adjustment Due to Road Construction",
       targetAudience: "Transport Students (Route 3)",
@@ -198,7 +198,7 @@ export default function CircularHistoryPage() {
                     <td className="p-3">
                       <div className="font-bold text-slate-900">{c.title}</div>
                       {c.attachmentName && (
-                        <div className="text-[10px] text-[#26b99a] font-semibold flex items-center space-x-1 mt-0.5">
+                        <div className="text-xs text-[#26b99a] font-semibold flex items-center space-x-1 mt-0.5">
                           <FileText className="w-3 h-3" />
                           <span>{c.attachmentName}</span>
                         </div>
@@ -214,7 +214,7 @@ export default function CircularHistoryPage() {
                         {c.channels.map((ch) => (
                           <span
                             key={ch}
-                            className={`px-1.5 py-0.2 rounded text-[10px] font-bold ${
+                            className={`px-1.5 py-0.2 rounded text-xs font-bold ${
                               ch === "App"
                                 ? "bg-emerald-100 text-emerald-800"
                                 : ch === "SMS"
@@ -237,7 +237,7 @@ export default function CircularHistoryPage() {
                         </div>
                         <span className="font-bold text-[11px] text-slate-700">{percent}%</span>
                       </div>
-                      <span className="text-[10px] text-slate-400">
+                      <span className="text-xs text-slate-400">
                         {c.readsCount}/{c.totalRecipients} read
                       </span>
                     </td>
@@ -279,7 +279,7 @@ export default function CircularHistoryPage() {
           <div className="bg-white rounded-lg max-w-lg w-full p-5 space-y-4 shadow-xl border border-slate-200">
             <div className="flex justify-between items-start border-b border-slate-200 pb-2">
               <div>
-                <span className="text-[10px] font-mono text-slate-400 block">{selectedRecord.circularNo}</span>
+                <span className="text-xs font-mono text-slate-400 block">{selectedRecord.circularNo}</span>
                 <h3 className="font-bold text-sm text-slate-900">{selectedRecord.title}</h3>
               </div>
               <button

@@ -3,8 +3,11 @@ import "./globals.css";
 import { AppShell } from "@/components/layout/AppShell";
 
 export const metadata: Metadata = {
-  title: "SchoolDesk - Mother Teresa Nobles Academy",
-  description: "Dedicated Schoollog ERP Portal for Mother Teresa Nobles Academy (Account: SLRJ0402749)",
+  title: "St. Paul's Senior Secondary School | SchoolDesk ERP",
+  description: "Official Institutional Management Portal for St. Paul's Senior Secondary School",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -13,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="antialiased text-slate-800 bg-[#f4f6f9]">
+    <html lang="en" className="h-full overflow-hidden">
+      <body className="h-full w-full overflow-hidden antialiased bg-slate-50 font-sans text-slate-900 selection:bg-emerald-500 selection:text-white">
         <AppShell>{children}</AppShell>
       </body>
     </html>

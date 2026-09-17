@@ -8,86 +8,120 @@ import {
   UserPlus,
   Gift,
   UserCheck,
+  User,
   Home,
   BookOpen,
   Bus,
-  ExternalLink
+  CreditCard,
+  CalendarCheck,
+  TrendingUp,
+  ArrowUpRight,
+  ChevronRight,
+  GraduationCap,
+  IndianRupee,
+  Receipt,
+  ClipboardCheck,
+  Send,
+  Cake,
+  Briefcase,
+  Wallet
 } from "lucide-react";
 
 interface StatCardProps {
   title: string;
   count: string | number;
   icon: string;
-  color: string;
+  color?: string;
   hasExternalLink?: boolean;
   href?: string;
   subtext?: string;
+  trend?: string;
 }
 
 const ICON_MAP: Record<string, any> = {
+  GraduationCap,
+  IndianRupee,
+  Receipt,
+  ClipboardCheck,
+  Send,
+  Cake,
+  Briefcase,
+  Bus,
   Users,
-  MessageSquare,
+  Wallet,
+  CalendarCheck,
   UserPlus,
+  MessageSquare,
   Gift,
   UserCheck,
+  User,
   Home,
   BookOpen,
-  Bus,
+  CreditCard,
+  TrendingUp,
 };
 
 export function StatCard({
   title,
   count,
   icon,
-  color,
   hasExternalLink = false,
   href = "/search-student",
-  subtext
+  subtext,
+  trend
 }: StatCardProps) {
   const IconComponent = ICON_MAP[icon] || Users;
+  const trendText = trend || subtext;
 
-  return (
-    <div
-      className="relative overflow-hidden bg-white rounded-lg shadow-sm border border-slate-200/90 hover:shadow-md transition-all duration-200 group flex flex-col justify-between"
-      style={{ borderTop: `4px solid ${color}` }}
-    >
-      <div className="p-4 sm:p-5 flex items-start justify-between">
-        <div className="space-y-1">
-          <div className="text-xs font-bold uppercase tracking-wider text-slate-500">
-            {title}
-          </div>
-          <div
-            className="text-2xl sm:text-3xl font-black tracking-tight"
-            style={{ color: color }}
-          >
-            {count}
-          </div>
-          {subtext && (
-            <p className="text-[11px] text-slate-400 font-medium">
-              {subtext}
-            </p>
-          )}
-        </div>
-
-        <div
-          className="w-12 h-12 rounded-lg flex items-center justify-center text-white shrink-0 shadow-sm group-hover:scale-105 transition-transform"
-          style={{ backgroundColor: color }}
-        >
-          <IconComponent className="w-6 h-6" />
+  const cardContent = (
+    <div className="p-5 flex flex-col justify-between h-full space-y-3">
+      {/* Top row: Label + Minimal Professional Icon */}
+      <div className="flex items-center justify-between">
+        <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 truncate">
+          {title}
+        </span>
+        <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center border border-slate-200/80 group-hover:bg-slate-900 group-hover:text-white group-hover:border-slate-900 transition-colors">
+          <IconComponent className="w-4 h-4 stroke-[1.8]" />
         </div>
       </div>
 
-      {hasExternalLink ? (
-        <Link
-          href={href}
-          className="px-4 py-2 bg-slate-50 hover:bg-slate-100 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-600 group-hover:text-slate-900 transition-colors"
-        >
-          <span>View Detailed Records</span>
-          <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-slate-600" />
-        </Link>
-      ) : (
-        <div className="h-1 bg-slate-50 border-t border-slate-100" />
-      )}
+      {/* Metric row: Bold, Crisp, Monospaced */}
+      <div>
+        <div className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 tabular-nums font-mono">
+          {count}
+        </div>
+      </div>
+
+      {/* Footer row: Clean metadata pill & optional link */}
+      <div className="flex items-center justify-between pt-2 text-xs border-t border-slate-100">
+        <span className="text-xs font-medium text-slate-500 truncate">
+          {trendText}
+        </span>
+        {hasExternalLink && (
+          <span className="inline-flex items-center space-x-0.5 text-xs font-semibold text-slate-600 group-hover:text-slate-900 transition-colors">
+            <span>View</span>
+            <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </span>
+        )}
+      </div>
+    </div>
+  );
+
+  if (hasExternalLink && href) {
+    return (
+      <Link
+        href={href}
+        className="group bg-white rounded-xl shadow-2xs border border-slate-200/90 hover:border-slate-300 hover:shadow-xs transition-all duration-150 flex flex-col justify-between"
+      >
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return (
+    <div className="group bg-white rounded-xl shadow-2xs border border-slate-200/90 hover:border-slate-300 hover:shadow-xs transition-all duration-150 flex flex-col justify-between">
+      {cardContent}
     </div>
   );
 }
+

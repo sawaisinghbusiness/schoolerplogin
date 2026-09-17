@@ -16,15 +16,15 @@ import {
 export default function SchoolDetailsPage() {
   const [saved, setSaved] = useState(false);
   const [formData, setFormData] = useState({
-    schoolName: "MOTHER TERESA NOBLES ACADEMY SR. SEC. SCHOOL",
-    accountCode: "SLRJ0402749",
+    schoolName: "ST. PAUL'S SENIOR SECONDARY SCHOOL",
+    accountCode: "STP-BRM-2026",
     schoolCode: "1040211",
-    affiliationNo: "",
-    address: "RAM NAGAR, Barmer, Rajasthan",
+    affiliationNo: "CBSE-1730000",
+    address: "Barmer, Rajasthan",
     pincode: "344001",
     contact1: "8003911792",
     contact2: "9460062543",
-    email: "mtnabarmer@gmail.com",
+    email: "stpaulsbarmer@gmail.com",
     mapsLink: "https://maps.app.goo.gl/LR2Qx9ZbiN8EYZrF6",
     logoUrl: "https://via.placeholder.com/150",
   });
@@ -48,14 +48,14 @@ export default function SchoolDetailsPage() {
           <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
             Institute Basic Details
           </h1>
-          <p className="text-slate-500 text-[11px]">
+          <p className="text-slate-500 text-xs">
             Master school profile, government code, contact numbers, and official letterhead credentials
           </p>
         </div>
 
         <button
           onClick={handleSubmit}
-          className="inline-flex items-center space-x-1.5 px-4 py-2 bg-[#26b99a] hover:bg-[#209b81] text-white rounded text-xs font-bold shadow-xs transition-colors"
+          className="inline-flex items-center space-x-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold shadow-xs transition-colors"
         >
           <Save className="w-3.5 h-3.5" />
           <span>Save Changes</span>
@@ -76,16 +76,16 @@ export default function SchoolDetailsPage() {
             <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-lg mb-1">
               MT
             </div>
-            <span className="text-[10px] text-slate-500 font-semibold">Change Logo</span>
+            <span className="text-xs text-slate-500 font-semibold">Change Logo</span>
           </div>
 
           <div className="space-y-1 text-center sm:text-left flex-1">
             <h2 className="text-base font-bold text-slate-900">{formData.schoolName}</h2>
             <div className="flex flex-wrap gap-2 pt-1 justify-center sm:justify-start">
-              <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded font-mono font-bold text-[11px]">
+              <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded font-mono font-bold text-xs">
                 ACCOUNT ID: {formData.accountCode}
               </span>
-              <span className="px-2 py-0.5 bg-blue-100 text-blue-800 rounded font-mono font-bold text-[11px]">
+              <span className="px-2 py-0.5 bg-blue-100 text-blue-800 rounded font-mono font-bold text-xs">
                 SCHOOL CODE: {formData.schoolCode}
               </span>
             </div>
@@ -100,7 +100,7 @@ export default function SchoolDetailsPage() {
               type="text"
               value={formData.schoolName}
               onChange={(e) => setFormData({ ...formData, schoolName: e.target.value })}
-              className="w-full p-2 border border-slate-300 rounded font-semibold text-xs focus:ring-1 focus:ring-[#26b99a]"
+              className="w-full p-2 border border-slate-300 rounded font-semibold text-xs focus:ring-1 focus:ring-emerald-600 focus:outline-none"
             />
           </div>
 
@@ -110,7 +110,7 @@ export default function SchoolDetailsPage() {
               type="text"
               value={formData.schoolCode}
               onChange={(e) => setFormData({ ...formData, schoolCode: e.target.value })}
-              className="w-full p-2 border border-slate-300 rounded font-mono text-xs focus:ring-1 focus:ring-[#26b99a]"
+              className="w-full p-2 border border-slate-300 rounded font-mono text-xs focus:ring-1 focus:ring-emerald-600 focus:outline-none"
             />
           </div>
 
@@ -121,7 +121,7 @@ export default function SchoolDetailsPage() {
               value={formData.affiliationNo}
               placeholder="Enter affiliation number if applicable"
               onChange={(e) => setFormData({ ...formData, affiliationNo: e.target.value })}
-              className="w-full p-2 border border-slate-300 rounded text-xs focus:ring-1 focus:ring-[#26b99a]"
+              className="w-full p-2 border border-slate-300 rounded text-xs focus:ring-1 focus:ring-emerald-600 focus:outline-none"
             />
           </div>
 
@@ -131,7 +131,7 @@ export default function SchoolDetailsPage() {
               type="text"
               value={formData.pincode}
               onChange={(e) => setFormData({ ...formData, pincode: e.target.value })}
-              className="w-full p-2 border border-slate-300 rounded font-mono text-xs focus:ring-1 focus:ring-[#26b99a]"
+              className="w-full p-2 border border-slate-300 rounded font-mono text-xs focus:ring-1 focus:ring-emerald-600 focus:outline-none"
             />
           </div>
 
@@ -141,7 +141,7 @@ export default function SchoolDetailsPage() {
               type="text"
               value={formData.contact1}
               onChange={(e) => setFormData({ ...formData, contact1: e.target.value })}
-              className="w-full p-2 border border-slate-300 rounded font-mono text-xs focus:ring-1 focus:ring-[#26b99a]"
+              className="w-full p-2 border border-slate-300 rounded font-mono text-xs focus:ring-1 focus:ring-emerald-600 focus:outline-none"
             />
           </div>
 
@@ -151,7 +151,7 @@ export default function SchoolDetailsPage() {
               type="text"
               value={formData.contact2}
               onChange={(e) => setFormData({ ...formData, contact2: e.target.value })}
-              className="w-full p-2 border border-slate-300 rounded font-mono text-xs focus:ring-1 focus:ring-[#26b99a]"
+              className="w-full p-2 border border-slate-300 rounded font-mono text-xs focus:ring-1 focus:ring-emerald-600 focus:outline-none"
             />
           </div>
 
@@ -161,7 +161,7 @@ export default function SchoolDetailsPage() {
               type="text"
               value={formData.address}
               onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-              className="w-full p-2 border border-slate-300 rounded text-xs focus:ring-1 focus:ring-[#26b99a]"
+              className="w-full p-2 border border-slate-300 rounded text-xs focus:ring-1 focus:ring-emerald-600 focus:outline-none"
             />
           </div>
 
@@ -172,7 +172,7 @@ export default function SchoolDetailsPage() {
                 type="text"
                 value={formData.mapsLink}
                 onChange={(e) => setFormData({ ...formData, mapsLink: e.target.value })}
-                className="w-full p-2 border border-slate-300 rounded text-xs font-mono focus:ring-1 focus:ring-[#26b99a]"
+                className="w-full p-2 border border-slate-300 rounded text-xs font-mono focus:ring-1 focus:ring-emerald-600 focus:outline-none"
               />
               <a
                 href={formData.mapsLink}

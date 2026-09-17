@@ -110,10 +110,10 @@ export default function DesignTemplatesPage() {
           >
             <div>
               <div className="flex items-center justify-between">
-                <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-blue-700">
+                <span className="px-2 py-0.5 rounded text-xs font-bold bg-blue-50 text-blue-700">
                   {tpl.templateType}
                 </span>
-                <span className="text-[10px] font-mono text-slate-400">{tpl.paperSize}</span>
+                <span className="text-xs font-mono text-slate-400">{tpl.paperSize}</span>
               </div>
 
               <h3 className="font-bold text-slate-900 text-sm mt-2">{tpl.templateName}</h3>
@@ -168,7 +168,7 @@ export default function DesignTemplatesPage() {
           <div className="bg-white rounded-lg max-w-xl w-full p-6 space-y-4 shadow-2xl border border-slate-200 animate-fadeIn">
             <div className="flex justify-between items-start border-b border-slate-200 pb-2">
               <div>
-                <span className="text-[10px] text-slate-400 font-mono">{activePreview.templateType}</span>
+                <span className="text-xs text-slate-400 font-mono">{activePreview.templateType}</span>
                 <h3 className="font-bold text-sm text-slate-900">{activePreview.templateName}</h3>
               </div>
               <button
@@ -183,14 +183,14 @@ export default function DesignTemplatesPage() {
             <div className="border-4 border-double border-slate-400 p-6 rounded bg-amber-50/20 text-center space-y-3 font-serif relative overflow-hidden">
               {activePreview.includeWatermark && (
                 <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none text-6xl font-black font-sans">
-                  MTNA BARMER
+                  SPSS BARMER
                 </div>
               )}
 
               <h2 className="text-base font-black uppercase text-slate-900 tracking-wider">
-                Mother Teresa Nobles Academy
+                St. Paul&apos;s Senior Secondary School
               </h2>
-              <p className="text-[10px] text-slate-500 font-sans">
+              <p className="text-xs text-slate-500 font-sans">
                 Senior Secondary English Medium Co-Educational School, Barmer (Raj.)
               </p>
               <div className="border-t border-b border-slate-300 py-1 font-bold text-xs uppercase text-slate-800 tracking-wide">
@@ -199,7 +199,7 @@ export default function DesignTemplatesPage() {
 
               <div className="text-left text-xs space-y-2 pt-2 text-slate-700 leading-relaxed font-sans">
                 <div className="flex justify-between">
-                  <span>Serial No: <strong>MTNA/TC/2026/012</strong></span>
+                  <span>Serial No: <strong>SPSS/TC/2026/012</strong></span>
                   <span>Admission No: <strong>ADM-9102</strong></span>
                 </div>
                 <p>
@@ -209,7 +209,7 @@ export default function DesignTemplatesPage() {
                 </p>
               </div>
 
-              <div className="pt-6 flex justify-between items-end text-[10px] font-sans">
+              <div className="pt-6 flex justify-between items-end text-xs font-sans">
                 {activePreview.signatures.map((sig, idx) => (
                   <div key={idx} className="text-center">
                     <div className="border-t border-slate-400 pt-1 w-24 mx-auto font-bold text-slate-800">

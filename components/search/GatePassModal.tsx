@@ -71,7 +71,7 @@ export function GatePassModal({
               <div className="flex items-center justify-between border-b border-emerald-200 pb-2">
                 <div>
                   <div className="text-xs font-black text-emerald-900 uppercase tracking-wider">
-                    Mother Teresa Nobles Academy
+                    St. Paul&apos;s Senior Secondary School
                   </div>
                   <div className="text-[10px] text-emerald-700">
                     Official Early Departure Gate Clearance Pass

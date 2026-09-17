@@ -52,8 +52,8 @@ export default function BulkCertificatesPage() {
 
         <div className="p-4 bg-emerald-50/50 border border-emerald-200 rounded-lg text-xs space-y-1 text-emerald-900">
           <div className="font-bold">CBSE Standard Institutional Watermark & Digital Stamp:</div>
-          <p className="text-[11px] text-emerald-800">
-            Mother Teresa Nobles Academy crest and affiliation details (SLRJ0402749) are embedded automatically.
+          <p className="text-xs text-emerald-800">
+            St. Paul&apos;s Senior Secondary School crest and CBSE affiliation details are embedded automatically.
           </p>
         </div>
 

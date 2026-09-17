@@ -79,15 +79,15 @@ export default function DatabaseStatusModal({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-fadeIn">
       <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-2xl overflow-hidden flex flex-col max-h-[90vh]">
         {/* Modal Header */}
-        <div className="bg-[#1e282c] px-6 py-4 flex items-center justify-between text-white border-b border-[#26b99a]/30">
+        <div className="bg-slate-900 px-6 py-4 flex items-center justify-between text-white border-b border-slate-800">
           <div className="flex items-center space-x-3">
-            <div className="w-9 h-9 rounded-xl bg-[#26b99a]/20 border border-[#26b99a]/40 flex items-center justify-center text-[#26b99a]">
+            <div className="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
               <Database className="w-5 h-5" />
             </div>
             <div>
               <h2 className="text-base font-bold tracking-tight">Supabase Database Hub</h2>
-              <p className="text-[11px] text-slate-400">
-                PostgreSQL Cloud Backend for Mother Teresa Nobles Academy (SLRJ0402749)
+              <p className="text-xs text-slate-400">
+                PostgreSQL Cloud Backend for St. Paul&apos;s Senior Secondary School
               </p>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function DatabaseStatusModal({
             onClick={() => setActiveTab("status")}
             className={`pb-2.5 border-b-2 transition-colors flex items-center space-x-1.5 ${
               activeTab === "status"
-                ? "border-[#26b99a] text-[#26b99a] font-bold"
+                ? "border-emerald-600 text-emerald-600 font-bold"
                 : "border-transparent text-slate-500 hover:text-slate-800"
             }`}
           >
@@ -116,7 +116,7 @@ export default function DatabaseStatusModal({
             onClick={() => setActiveTab("instructions")}
             className={`pb-2.5 border-b-2 transition-colors flex items-center space-x-1.5 ${
               activeTab === "instructions"
-                ? "border-[#26b99a] text-[#26b99a] font-bold"
+                ? "border-emerald-600 text-emerald-600 font-bold"
                 : "border-transparent text-slate-500 hover:text-slate-800"
             }`}
           >
@@ -127,7 +127,7 @@ export default function DatabaseStatusModal({
             onClick={() => setActiveTab("schema")}
             className={`pb-2.5 border-b-2 transition-colors flex items-center space-x-1.5 ${
               activeTab === "schema"
-                ? "border-[#26b99a] text-[#26b99a] font-bold"
+                ? "border-emerald-600 text-emerald-600 font-bold"
                 : "border-transparent text-slate-500 hover:text-slate-800"
             }`}
           >
@@ -165,7 +165,7 @@ export default function DatabaseStatusModal({
                         : "Operating in Local Mock Engine"}
                     </span>
                     {health?.latencyMs !== undefined && (
-                      <span className="text-[11px] font-mono px-2 py-0.5 bg-white/80 rounded border">
+                      <span className="text-xs font-mono px-2 py-0.5 bg-white/80 rounded border">
                         {health.latencyMs} ms
                       </span>
                     )}
@@ -180,19 +180,19 @@ export default function DatabaseStatusModal({
               {/* Stats Cards */}
               <div className="grid grid-cols-3 gap-3">
                 <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-center">
-                  <div className="text-[10px] uppercase font-bold text-slate-400">Database Engine</div>
+                  <div className="text-xs uppercase font-bold text-slate-400">Database Engine</div>
                   <div className="text-sm font-black text-slate-800 mt-1">
                     {health?.connected ? "PostgreSQL (Supabase)" : "Mock Data Engine"}
                   </div>
                 </div>
                 <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-center">
-                  <div className="text-[10px] uppercase font-bold text-slate-400">Scholars Roster</div>
+                  <div className="text-xs uppercase font-bold text-slate-400">Scholars Roster</div>
                   <div className="text-sm font-black text-slate-800 mt-1">
                     {health?.connected ? `${health.database?.studentsCount ?? 0} Students` : "1,924 Mock Scholars"}
                   </div>
                 </div>
                 <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-center">
-                  <div className="text-[10px] uppercase font-bold text-slate-400">Faculty Roster</div>
+                  <div className="text-xs uppercase font-bold text-slate-400">Faculty Roster</div>
                   <div className="text-sm font-black text-slate-800 mt-1">
                     {health?.connected ? `${health.database?.staffCount ?? 0} Staff` : "68 Faculty Members"}
                   </div>
@@ -212,7 +212,7 @@ export default function DatabaseStatusModal({
 
                 <button
                   onClick={() => setActiveTab("instructions")}
-                  className="inline-flex items-center space-x-1 px-3 py-2 text-[#26b99a] hover:underline font-bold"
+                  className="inline-flex items-center space-x-1 px-3 py-2 text-emerald-600 hover:underline font-bold"
                 >
                   <span>View Step-by-Step Setup Guide &rarr;</span>
                 </button>
@@ -227,7 +227,7 @@ export default function DatabaseStatusModal({
                   <Info className="w-4 h-4 text-emerald-600" />
                   <span>Free Tier Supabase Setup in 2 Minutes</span>
                 </div>
-                <p className="text-[11px] leading-relaxed">
+                <p className="text-xs leading-relaxed">
                   Supabase offers a 100% free PostgreSQL database with generous limits (500MB database, 50,000 monthly active users, unlimited API requests).
                 </p>
               </div>
@@ -235,7 +235,7 @@ export default function DatabaseStatusModal({
               <ol className="space-y-3 list-decimal list-inside text-xs leading-relaxed font-medium">
                 <li className="p-3 bg-slate-50 rounded-lg border border-slate-200">
                   <strong className="text-slate-900">Step 1: Create a Free Supabase Project</strong>
-                  <p className="text-slate-600 text-[11px] mt-1">
+                  <p className="text-slate-600 text-xs mt-1">
                     Go to{" "}
                     <a
                       href="https://supabase.com"
@@ -252,17 +252,17 @@ export default function DatabaseStatusModal({
 
                 <li className="p-3 bg-slate-50 rounded-lg border border-slate-200">
                   <strong className="text-slate-900">Step 2: Run SQL Schema & Seed</strong>
-                  <p className="text-slate-600 text-[11px] mt-1">
+                  <p className="text-slate-600 text-xs mt-1">
                     In your Supabase dashboard left menu, click <strong>SQL Editor</strong>. Open the <em>SQL Schema</em> tab in this modal, copy the SQL, paste it in Supabase, and click <strong>RUN</strong>.
                   </p>
                 </li>
 
                 <li className="p-3 bg-slate-50 rounded-lg border border-slate-200">
                   <strong className="text-slate-900">Step 3: Copy Keys to .env.local</strong>
-                  <p className="text-slate-600 text-[11px] mt-1">
+                  <p className="text-slate-600 text-xs mt-1">
                     In Supabase, go to <strong>Project Settings &rarr; API</strong>. Copy <strong>Project URL</strong> and <strong>anon/public key</strong> into your local project&apos;s <code className="bg-slate-200 px-1 py-0.5 rounded">.env.local</code> file:
                   </p>
-                  <pre className="mt-2 p-2.5 bg-slate-900 text-emerald-400 font-mono text-[10px] rounded-md overflow-x-auto">
+                  <pre className="mt-2 p-2.5 bg-slate-900 text-emerald-400 font-mono text-xs rounded-md overflow-x-auto">
 {`NEXT_PUBLIC_SUPABASE_URL=https://your-project-id.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here`}
                   </pre>
@@ -279,14 +279,14 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here`}
                 </span>
                 <button
                   onClick={() => copyToClipboard(`-- Run schema.sql from repo: supabase/schema.sql`, "schema_path")}
-                  className="inline-flex items-center space-x-1 px-2.5 py-1 bg-slate-100 hover:bg-slate-200 rounded text-slate-700 font-semibold text-[11px]"
+                  className="inline-flex items-center space-x-1 px-2.5 py-1 bg-slate-100 hover:bg-slate-200 rounded text-slate-700 font-semibold text-xs"
                 >
                   {copiedKey === "schema_path" ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
                   <span>{copiedKey === "schema_path" ? "Copied Path!" : "Copy File Path (supabase/schema.sql)"}</span>
                 </button>
               </div>
 
-              <div className="bg-slate-900 text-slate-200 p-3 rounded-lg font-mono text-[10px] space-y-1 max-h-60 overflow-y-auto">
+              <div className="bg-slate-900 text-slate-200 p-3 rounded-lg font-mono text-xs space-y-1 max-h-60 overflow-y-auto">
                 <div className="text-emerald-400 font-bold">-- 18 Comprehensive ERP PostgreSQL Tables Ready in supabase/schema.sql:</div>
                 <div className="text-slate-400">1. institution_settings (Master affiliation, CBSE code, SMS wallet, 2FA)</div>
                 <div className="text-slate-400">2. academic_sessions (2026-2027 active session, start & end dates)</div>
@@ -303,7 +303,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here`}
                 <div className="text-slate-400">13. biometric_logs (CEXJ232160976 punch records)</div>
               </div>
 
-              <div className="text-[11px] text-slate-500">
+              <div className="text-xs text-slate-500">
                 Both <code className="font-bold text-slate-700">supabase/schema.sql</code> and <code className="font-bold text-slate-700">supabase/seed.sql</code> are committed to the project root directory and GitHub repository.
               </div>
             </div>
@@ -312,8 +312,8 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here`}
 
         {/* Modal Footer */}
         <div className="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between">
-          <span className="text-[11px] text-slate-500 font-mono">
-            MTNA Barmer ERP &bull; Database Status Modal
+          <span className="text-xs text-slate-500 font-mono">
+            St. Paul&apos;s ERP &bull; Database Status Modal
           </span>
           <button
             onClick={onClose}

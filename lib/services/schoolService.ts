@@ -3,13 +3,13 @@ import { DbInstitutionSettings } from "@/lib/types/database";
 
 const DEFAULT_SETTINGS: DbInstitutionSettings = {
   id: "inst-default",
-  school_name: "Mother Teresa Nobles Academy Sr. Sec. School",
+  school_name: "St. Paul's Senior Secondary School",
   school_code: "1040211",
-  account_code: "SLRJ0402749",
-  affiliation_no: "CBSE-1730045",
-  address: "RAM NAGAR, Barmer, Rajasthan 344001",
+  account_code: "STP-BRM-2026",
+  affiliation_no: "CBSE-1730000",
+  address: "Barmer, Rajasthan 344001",
   contact_phone: "8769444584",
-  contact_email: "mtnabarmer@gmail.com",
+  contact_email: "stpaulsbarmer@gmail.com",
   active_session: "2026-2027",
   sms_wallet_balance: 5153,
   dlt_entity_id: "1401568294901",
@@ -43,7 +43,7 @@ export const schoolService = {
         const { error } = await supabase
           .from("institution_settings")
           .update(updates)
-          .eq("account_code", "SLRJ0402749");
+          .eq("id", "inst-default");
 
         if (error) {
           return { success: false, error: error.message };

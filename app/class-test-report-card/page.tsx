@@ -39,10 +39,10 @@ export default function ClassTestReportCardPage() {
 
         <div className="flex items-center space-x-2">
           <Link
-            href="/v2/exams"
+            href="/exam-schedule"
             className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded font-semibold border border-slate-300 transition-colors"
           >
-            ← Exams Hub
+            ← Exam Schedule
           </Link>
           <button
             onClick={() => window.print()}
@@ -94,9 +94,9 @@ export default function ClassTestReportCardPage() {
             <div className="border-b border-slate-200 pb-2 flex justify-between items-start">
               <div>
                 <h3 className="font-black text-xs uppercase text-slate-900">
-                  Mother Teresa Nobles Academy
+                  St. Paul&apos;s Senior Secondary School
                 </h3>
-                <span className="text-[10px] text-slate-500">Unit Test Scorecard • {testMonth}</span>
+                <span className="text-xs text-slate-500">Unit Test Scorecard • {testMonth}</span>
               </div>
               <span className="font-mono font-bold text-slate-700 text-xs">Roll {s.rollNo}</span>
             </div>
@@ -106,7 +106,7 @@ export default function ClassTestReportCardPage() {
               <span>Class: <strong>{s.classSec}</strong></span>
             </div>
 
-            <table className="w-full text-left border-collapse text-[10px] border border-slate-200">
+            <table className="w-full text-left border-collapse text-xs border border-slate-200">
               <thead>
                 <tr className="bg-slate-50 font-bold border-b border-slate-200">
                   <th className="p-1.5 border-r border-slate-200">Test Subject</th>
@@ -122,7 +122,7 @@ export default function ClassTestReportCardPage() {
               </tbody>
             </table>
 
-            <div className="pt-2 flex justify-between items-center text-[10px] text-slate-500">
+            <div className="pt-2 flex justify-between items-center text-xs text-slate-500">
               <span>Class Teacher Sign: ________</span>
               <span>Parent Signature: ________</span>
             </div>

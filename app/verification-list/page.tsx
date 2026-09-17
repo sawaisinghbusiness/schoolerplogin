@@ -120,12 +120,6 @@ export default function VerificationListPage() {
         </div>
 
         <div className="flex items-center space-x-2">
-          <Link
-            href="/udise-report"
-            className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded font-semibold border border-slate-300 transition-colors"
-          >
-            UDISE+ Matrix
-          </Link>
           <button className="px-3.5 py-1.5 bg-[#26b99a] hover:bg-[#209b81] text-white rounded font-bold shadow-xs transition-colors flex items-center space-x-1">
             <Download className="w-3.5 h-3.5" />
             <span>Export Defaulter List</span>

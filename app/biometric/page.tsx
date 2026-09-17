@@ -64,7 +64,7 @@ export default function BiometricDevicesPage() {
             </span>
           </div>
           <p className="text-slate-500 text-[11px]">
-            Hardware synchronization portal for biometric punch terminals (Mother Teresa Nobles Academy)
+            Hardware synchronization portal for biometric punch terminals (St. Paul&apos;s Senior Secondary School)
           </p>
         </div>
 

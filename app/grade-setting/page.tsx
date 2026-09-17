@@ -61,10 +61,10 @@ export default function GradeSettingPage() {
 
         <div className="flex items-center space-x-2">
           <Link
-            href="/v2/exams"
+            href="/exam-schedule"
             className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded font-semibold border border-slate-300 transition-colors"
           >
-            ← Exams Hub
+            ← Exam Schedule
           </Link>
           <button
             onClick={handleSave}

@@ -2,25 +2,21 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
-  Calendar,
-  Settings,
-  Mail,
-  Globe,
-  Headphones,
   Search,
-  Power,
-  RotateCw,
-  List,
-  Edit2,
-  Lock,
-  Menu,
+  Bell,
   ChevronDown,
-  Database
+  User,
+  Settings,
+  Power,
+  Menu,
+  School,
+  Calendar,
+  Database,
 } from "lucide-react";
 import { Modal } from "@/components/ui/modal";
 import DatabaseStatusModal from "@/components/database/DatabaseStatusModal";
-
 
 interface NavbarProps {
   onToggleSidebar?: () => void;
@@ -28,320 +24,328 @@ interface NavbarProps {
 }
 
 export function Navbar({ onToggleSidebar }: NavbarProps) {
-  const [isSessionOpen, setIsSessionOpen] = useState(false);
-  const [selectedSession, setSelectedSession] = useState("26-27");
-  const [isWalletOpen, setIsWalletOpen] = useState(false);
-  const [isSmsUsageModalOpen, setIsSmsUsageModalOpen] = useState(false);
-  const [isHelpOpen, setIsHelpOpen] = useState(false);
+  const router = useRouter();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+  const [isSignOutModalOpen, setIsSignOutModalOpen] = useState(false);
   const [isDbModalOpen, setIsDbModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [currentTime, setCurrentTime] = useState("15-09-2026 15:34:43");
 
-  const sessionRef = useRef<HTMLDivElement>(null);
-  const walletRef = useRef<HTMLDivElement>(null);
+  const profileRef = useRef<HTMLDivElement>(null);
+  const notifRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const now = new Date();
-    const pad = (n: number) => n.toString().padStart(2, "0");
-    const formatted = `${pad(now.getDate())}-${pad(now.getMonth() + 1)}-${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
-    setCurrentTime(formatted);
-
     const handleClickOutside = (e: MouseEvent) => {
-      if (sessionRef.current && !sessionRef.current.contains(e.target as Node)) {
-        setIsSessionOpen(false);
+      const target = e.target as Node;
+      if (profileRef.current && !profileRef.current.contains(target)) {
+        setIsProfileMenuOpen(false);
       }
-      if (walletRef.current && !walletRef.current.contains(e.target as Node)) {
-        setIsWalletOpen(false);
+      if (notifRef.current && !notifRef.current.contains(target)) {
+        setIsNotificationsOpen(false);
       }
     };
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setIsSearchOpen((prev) => !prev);
+      }
+    };
+
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
-  return (
-    <header className="sticky top-0 z-40 bg-[#222d32] text-white border-b border-[#1b242a] shadow-md select-none">
-      <div className="flex items-stretch h-14 justify-between">
-        {/* Leftmost: User Profile Chip (Exact Schoollog green chip from screenshot) */}
-        <div className="flex items-center">
-          <div className="bg-[#16a085] hover:bg-[#149077] transition-colors h-full px-3 py-1.5 flex items-center space-x-2.5 w-60 border-r border-[#138d75]">
-            <img
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
-              alt="Mahendra Parihar"
-              className="w-8 h-8 rounded object-cover border border-white/40 shadow-xs shrink-0"
-            />
-            <div className="overflow-hidden leading-tight flex-1">
-              <div className="text-xs font-bold text-white uppercase tracking-wider truncate">
-                MAHENDRA PARIHAR
-              </div>
-              <Link
-                href="/staff-profile-settings"
-                className="text-[10px] text-white/90 hover:text-white flex items-center space-x-1"
-              >
-                <span>✎ Edit Profile</span>
-                <Lock className="w-2.5 h-2.5 text-white/80 inline ml-1" />
-              </Link>
-            </div>
-          </div>
+  const handleSignOut = () => {
+    try {
+      localStorage.removeItem("schooldesk_user_role");
+      localStorage.removeItem("schooldesk_user_id");
+      localStorage.removeItem("schooldesk_user_name");
+    } catch {
+      // ignore
+    }
+    router.push("/login");
+  };
 
-          {/* Hamburger Menu Icon */}
+  return (
+    <header className="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0 z-20 shadow-xs select-none">
+      {/* Left Section: Mobile Menu Toggle + School Brand Identity & Active Session */}
+      <div className="flex items-center space-x-3 sm:space-x-4">
+        <button
+          onClick={onToggleSidebar}
+          className="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500/50 md:hidden"
+          title="Toggle Navigation Menu"
+          aria-label="Toggle Navigation Menu"
+        >
+          <Menu className="w-5 h-5" />
+        </button>
+
+        {/* Institution Brand Identity */}
+        <Link href="/dashboard" className="flex items-center space-x-3 group">
+          <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shadow-xs group-hover:bg-emerald-700 transition-colors shrink-0">
+            SP
+          </div>
+          <div className="leading-tight">
+            <div className="flex items-center space-x-2.5">
+              <span className="text-sm sm:text-base font-bold text-slate-900 tracking-tight group-hover:text-emerald-700 transition-colors">
+                St. Paul&apos;s Senior Secondary School
+              </span>
+            </div>
+            <p className="hidden sm:block text-xs text-slate-500 font-medium mt-0.5">
+              Institutional ERP & Academic Management Portal
+            </p>
+          </div>
+        </Link>
+      </div>
+
+      {/* Right Section: Modern SaaS Utility Toolbar */}
+      <div className="flex items-center space-x-2 sm:space-x-3">
+        {/* 1. Global Quick Search Pill (⌘K / Ctrl K) */}
+        <button
+          onClick={() => setIsSearchOpen(true)}
+          className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200/80 text-slate-600 hover:text-slate-900 border border-slate-200 text-xs font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+          title="Search scholars, staff, and records (Ctrl + K)"
+        >
+          <Search className="w-4 h-4 text-slate-500" />
+          <span className="hidden md:inline">Quick Search...</span>
+          <kbd className="hidden md:inline-flex items-center px-1.5 py-0.5 rounded bg-white border border-slate-300 text-[11px] font-mono text-slate-500 shadow-2xs">
+            ⌘K
+          </kbd>
+        </button>
+
+        {/* 2. Single Notification Bell with Unread Indicator */}
+        <div className="relative" ref={notifRef}>
           <button
-            onClick={onToggleSidebar}
-            className="px-3.5 hover:bg-[#1b242a] text-white/90 hover:text-white h-full flex items-center transition-colors focus:outline-none"
-            title="Toggle Navigation Menu"
+            onClick={() => setIsNotificationsOpen(!isNotificationsOpen)}
+            className="relative p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors focus:outline-none"
+            title="Institutional Notifications & Alerts"
+            aria-label="Notifications"
           >
-            <Menu className="w-5 h-5 stroke-[2.5]" />
+            <Bell className="w-4 h-4" />
+            <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-white" />
           </button>
 
-          {/* School Name & Account ID */}
-          <div className="px-3 py-1 hidden sm:block">
-            <div className="text-xs md:text-sm font-bold tracking-tight text-white uppercase">
-              MOTHER TERESA NOBLES ACADEMY SR. SEC....
+          {/* Notifications Flyout */}
+          {isNotificationsOpen && (
+            <div className="absolute right-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-slate-200 p-3 z-50 animate-fadeIn text-xs">
+              <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                <span className="font-bold text-slate-900 text-xs">Institutional Alerts</span>
+                <span className="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-semibold">
+                  3 New
+                </span>
+              </div>
+              <div className="divide-y divide-slate-100 mt-2 space-y-1 max-h-64 overflow-y-auto">
+                <div className="p-2 hover:bg-slate-50 rounded-lg transition-colors">
+                  <div className="font-semibold text-slate-800">Term 1 Exam Timetable Finalized</div>
+                  <div className="text-slate-500 text-xs mt-0.5">Examination cell published the schedules for Class 9 to 12.</div>
+                </div>
+                <div className="p-2 hover:bg-slate-50 rounded-lg transition-colors">
+                  <div className="font-semibold text-slate-800">Biometric Terminal Online</div>
+                  <div className="text-slate-500 text-xs mt-0.5">Main Gate staff biometric sync completed at 08:45 AM.</div>
+                </div>
+                <div className="p-2 hover:bg-slate-50 rounded-lg transition-colors">
+                  <div className="font-semibold text-slate-800">Daily Fee Collection Settlement</div>
+                  <div className="text-slate-500 text-xs mt-0.5">₹1,42,800 collected today across counter & online gateway.</div>
+                </div>
+              </div>
+              <div className="pt-2 border-t border-slate-100 text-center">
+                <Link
+                  href="/send-notifications"
+                  onClick={() => setIsNotificationsOpen(false)}
+                  className="text-xs font-semibold text-emerald-600 hover:text-emerald-700"
+                >
+                  View All Notifications &rarr;
+                </Link>
+              </div>
             </div>
-            <div className="text-[11px] font-mono font-bold tracking-wide text-[#28d4a4]">
-              ACCOUNT ID:SLRJ0402749
-            </div>
-          </div>
+          )}
         </div>
 
-        {/* Right Action Icons (Exact layout from Schoollog) */}
-        <div className="flex items-center">
-          {/* 1. Academic Session Calendar Icon with "26-27" */}
-          <div className="relative h-full" ref={sessionRef}>
-            <button
-              onClick={() => setIsSessionOpen(!isSessionOpen)}
-              className="h-full px-3 hover:bg-[#1b242a] flex flex-col items-center justify-center text-slate-300 hover:text-white transition-colors focus:outline-none"
-              title="Active Academic Session"
-            >
-              <Calendar className="w-4 h-4 text-slate-300" />
-              <span className="text-[10px] font-mono leading-none mt-1 text-slate-300">
-                {selectedSession}
-              </span>
-            </button>
+        {/* Divider */}
+        <div className="h-6 w-px bg-slate-200" />
 
-            {/* Session Popover (Exact match to Image 5) */}
-            {isSessionOpen && (
-              <div className="absolute right-0 mt-1 w-64 bg-white text-slate-800 rounded-md shadow-2xl border-t-4 border-[#16a085] p-4 z-50 animate-fadeIn">
-                <div className="text-center font-bold text-sm text-[#16a085] mb-3">
-                  Active Session: {selectedSession}
+        {/* 3. Administrative User Avatar Menu */}
+        <div className="relative" ref={profileRef}>
+          <button
+            onClick={() => setIsProfileMenuOpen(!isProfileMenuOpen)}
+            className="flex items-center space-x-2.5 p-1 rounded-lg hover:bg-slate-100 transition-colors focus:outline-none"
+            title="Administrator Profile"
+          >
+            <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white font-bold text-xs flex items-center justify-center shadow-xs">
+              AD
+            </div>
+            <div className="hidden lg:block text-left leading-tight pr-1">
+              <div className="text-xs font-bold text-slate-900">
+                Administrator
+              </div>
+              <div className="text-xs text-slate-500">
+                Principal Office
+              </div>
+            </div>
+            <ChevronDown className={`w-3.5 h-3.5 text-slate-400 hidden lg:block transition-transform duration-150 ${isProfileMenuOpen ? "rotate-180" : ""}`} />
+          </button>
+
+          {/* Profile Dropdown Menu */}
+          {isProfileMenuOpen && (
+            <div className="absolute right-0 mt-2 w-64 bg-white text-slate-800 rounded-xl shadow-2xl border border-slate-200 p-2 z-50 animate-fadeIn text-xs">
+              <div className="p-3 border-b border-slate-100 flex items-center space-x-3">
+                <div className="w-10 h-10 rounded-lg bg-emerald-600 text-white font-bold text-sm flex items-center justify-center shrink-0 shadow-xs">
+                  AD
                 </div>
-                <div className="relative">
-                  <select
-                    value={selectedSession}
-                    onChange={(e) => {
-                      setSelectedSession(e.target.value);
-                      setIsSessionOpen(false);
-                    }}
-                    className="w-full p-2 border border-slate-300 rounded text-xs bg-slate-50 font-semibold text-slate-800 focus:outline-none focus:ring-1 focus:ring-[#16a085]"
-                  >
-                    <option value="26-27">26-27</option>
-                    <option value="25-26">25-26</option>
-                    <option value="24-25">24-25</option>
-                    <option value="23-24">23-24</option>
-                    <option value="22-23">22-23</option>
-                  </select>
+                <div className="overflow-hidden">
+                  <div className="font-bold text-slate-900 text-sm truncate">Administrator</div>
+                  <div className="text-xs text-slate-500 truncate">St. Paul&apos;s Senior Secondary</div>
+                  <div className="text-xs text-emerald-700 font-semibold mt-0.5">Principal Office</div>
                 </div>
               </div>
-            )}
-          </div>
 
-          {/* 2. Settings Gear with Orange Badge "30" */}
-          <Link
-            href="/school-settings"
-            className="h-full px-3 hover:bg-[#1b242a] flex items-center justify-center text-slate-300 hover:text-white relative transition-colors"
-            title="Custom Settings (30 Alerts)"
-          >
-            <Settings className="w-4 h-4 text-slate-300" />
-            <span className="absolute top-2.5 right-1.5 w-4 h-4 rounded-full bg-[#e67e22] text-white text-[9px] font-bold flex items-center justify-center shadow-xs">
-              30
-            </span>
-          </Link>
-
-          {/* 3. Envelope / SMS Wallet with "5153" */}
-          <div className="relative h-full" ref={walletRef}>
-            <button
-              onClick={() => setIsWalletOpen(!isWalletOpen)}
-              className="h-full px-3 hover:bg-[#1b242a] flex flex-col items-center justify-center text-slate-300 hover:text-white transition-colors focus:outline-none"
-              title="SMS/WhatsApp Wallet Balance"
-            >
-              <Mail className="w-4 h-4 text-slate-300" />
-              <span className="text-[10px] font-mono leading-none mt-1 text-slate-300">
-                5153
-              </span>
-            </button>
-
-            {/* Exact SMS Popover matching Screenshot Image 4! */}
-            {isWalletOpen && (
-              <div className="absolute right-0 mt-1 w-72 bg-white text-slate-800 rounded-md shadow-2xl border-t-4 border-[#16a085] p-3.5 z-50 animate-fadeIn text-xs">
-                {/* Top Action Icons (Blue reload, Green list) */}
-                <div className="flex justify-end space-x-2 pb-2">
-                  <button
-                    onClick={() => {
-                      alert("SMS balance refreshed.");
-                    }}
-                    className="w-6 h-6 rounded-full bg-[#3498db] hover:bg-[#2980b9] text-white flex items-center justify-center shadow-xs transition-colors"
-                    title="Refresh Balance"
-                  >
-                    <RotateCw className="w-3 h-3" />
-                  </button>
-                  <button
-                    onClick={() => {
-                      setIsWalletOpen(false);
-                      setIsSmsUsageModalOpen(true);
-                    }}
-                    className="w-6 h-6 rounded-full bg-[#2ecc71] hover:bg-[#27ae60] text-white flex items-center justify-center shadow-xs transition-colors"
-                    title="View Transaction Logs"
-                  >
-                    <List className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-
-                <div className="space-y-2 pt-1 border-t border-slate-100">
-                  <div className="flex items-center justify-between py-1">
-                    <span className="text-slate-600 font-medium">SMS Balance</span>
-                    <span className="text-sm font-bold text-[#16a085] font-mono">5153</span>
-                  </div>
-
-                  <div className="flex items-center justify-between py-1">
-                    <span className="text-slate-600 font-medium">SMS Used</span>
-                    <button
-                      onClick={() => {
-                        setIsWalletOpen(false);
-                        setIsSmsUsageModalOpen(true);
-                      }}
-                      className="px-2.5 py-0.5 border border-[#2ecc71] text-[#27ae60] hover:bg-emerald-50 rounded-full text-[10px] font-bold uppercase transition-colors"
-                    >
-                      VIEW
-                    </button>
-                  </div>
-
-                  <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
-                    <span>Updated At</span>
-                    <span className="font-mono text-slate-700">{currentTime}</span>
-                  </div>
-                </div>
+              <div className="py-1.5 space-y-0.5">
+                <Link
+                  href="/staff-profile-settings"
+                  onClick={() => setIsProfileMenuOpen(false)}
+                  className="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors font-medium"
+                >
+                  <User className="w-4 h-4 text-slate-400" />
+                  <span>Administrative Profile</span>
+                </Link>
+                <Link
+                  href="/school-settings"
+                  onClick={() => setIsProfileMenuOpen(false)}
+                  className="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors font-medium"
+                >
+                  <Settings className="w-4 h-4 text-slate-400" />
+                  <span>Institutional Settings</span>
+                </Link>
+                <button
+                  onClick={() => {
+                    setIsProfileMenuOpen(false);
+                    setIsDbModalOpen(true);
+                  }}
+                  className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors font-medium text-left"
+                >
+                  <Database className="w-4 h-4 text-slate-400" />
+                  <span>Database Status & Sync</span>
+                </button>
               </div>
-            )}
-          </div>
 
-          {/* 4. Globe Icon */}
-          <button
-            onClick={() => alert("Multi-Language Portal selection (English / Hindi)")}
-            className="h-full px-3 hover:bg-[#1b242a] flex items-center justify-center text-slate-300 hover:text-white transition-colors"
-            title="Language & Portal"
-          >
-            <Globe className="w-4 h-4 text-slate-300" />
-          </button>
-
-          {/* 5. Headphones Help Icon with "HELP" text */}
-          <button
-            onClick={() => setIsHelpOpen(true)}
-            className="h-full px-3 hover:bg-[#1b242a] flex flex-col items-center justify-center text-slate-300 hover:text-white transition-colors"
-            title="Helpdesk Support"
-          >
-            <Headphones className="w-4 h-4 text-slate-300" />
-            <span className="text-[9px] font-bold leading-none mt-1 text-slate-300">
-              HELP
-            </span>
-          </button>
-
-          {/* 6. Database / Supabase Connection Status Button */}
-          <button
-            onClick={() => setIsDbModalOpen(true)}
-            className="h-full px-3 hover:bg-[#1b242a] flex flex-col items-center justify-center text-slate-300 hover:text-white transition-colors focus:outline-none"
-            title="Database Hub (Supabase Cloud PostgreSQL)"
-          >
-            <Database className="w-4 h-4 text-[#28d4a4]" />
-            <span className="text-[9px] font-mono leading-none mt-1 text-[#28d4a4]">
-              DB
-            </span>
-          </button>
-
-          {/* 7. Magnifying Search Icon */}
-          <button
-            onClick={() => setIsSearchOpen(true)}
-            className="h-full px-3 hover:bg-[#1b242a] flex items-center justify-center text-slate-300 hover:text-white transition-colors"
-            title="Global Quick Search"
-          >
-            <Search className="w-4 h-4 text-slate-300" />
-          </button>
-
-          {/* 7. Big Solid Teal Logout Button (Exact match from screenshot!) */}
-          <button
-            onClick={() => {
-              if (confirm("Are you sure you want to sign out of Schoollog ERP?")) {
-                window.location.href = "/login";
-              }
-            }}
-            className="h-full px-4 bg-[#16a085] hover:bg-[#149077] text-white flex items-center justify-center transition-colors"
-            title="Sign Out"
-          >
-            <Power className="w-5 h-5 stroke-[2.5]" />
-          </button>
+              <div className="pt-1.5 mt-1 border-t border-slate-100">
+                <button
+                  onClick={() => {
+                    setIsProfileMenuOpen(false);
+                    setIsSignOutModalOpen(true);
+                  }}
+                  className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg text-rose-600 hover:bg-rose-50 font-semibold transition-colors text-left"
+                >
+                  <Power className="w-4 h-4 text-rose-500" />
+                  <span>Sign Out</span>
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
-      {/* Global Search Modal */}
+      {/* Global Quick Search Modal (⌘K) */}
       <Modal
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}
-        title="Global ERP Search"
-        subtitle="Search across scholars, staff, and modules"
+        title="St. Paul's Quick Navigation"
+        subtitle="Search across scholars, faculty, fee ledgers, and attendance"
       >
         <div className="space-y-4 text-xs">
-          <input
-            type="text"
-            placeholder="Type student name, mobile or module..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full p-2.5 border border-slate-300 rounded text-xs"
-            autoFocus
-          />
-          <div className="space-y-1">
+          <div className="relative">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+            <input
+              type="text"
+              placeholder="Search by student name, roll no, mobile, or module..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-9 pr-3 py-2.5 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+              autoFocus
+            />
+          </div>
+
+          <div className="space-y-1 max-h-60 overflow-y-auto">
             <Link
               href="/search-student"
               onClick={() => setIsSearchOpen(false)}
-              className="p-2 block border rounded hover:bg-slate-50 text-slate-800 font-semibold"
+              className="flex items-center justify-between p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-800 font-semibold transition-colors"
             >
-              &rarr; 9-Way Student Search
+              <div className="flex items-center space-x-2">
+                <Search className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Student Multi-Search</span>
+              </div>
+              <span className="text-xs text-slate-400 font-mono">/search-student</span>
             </Link>
+
             <Link
-              href="/dashboard/admin"
+              href="/dashboard"
               onClick={() => setIsSearchOpen(false)}
-              className="p-2 block border rounded hover:bg-slate-50 text-slate-800 font-semibold"
+              className="flex items-center justify-between p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-800 font-semibold transition-colors"
             >
-              &rarr; Admin Dashboard
+              <div className="flex items-center space-x-2">
+                <School className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Executive Dashboard</span>
+              </div>
+              <span className="text-xs text-slate-400 font-mono">/dashboard</span>
+            </Link>
+
+            <Link
+              href="/collect-fees"
+              onClick={() => setIsSearchOpen(false)}
+              className="flex items-center justify-between p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-800 font-semibold transition-colors"
+            >
+              <div className="flex items-center space-x-2">
+                <Calendar className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Fee Collection Counter</span>
+              </div>
+              <span className="text-xs text-slate-400 font-mono">/collect-fees</span>
+            </Link>
+
+            <Link
+              href="/mark-attendance"
+              onClick={() => setIsSearchOpen(false)}
+              className="flex items-center justify-between p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-800 font-semibold transition-colors"
+            >
+              <div className="flex items-center space-x-2">
+                <Calendar className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Mark Student Attendance</span>
+              </div>
+              <span className="text-xs text-slate-400 font-mono">/mark-attendance</span>
             </Link>
           </div>
         </div>
       </Modal>
 
-      {/* Help Modal */}
+      {/* Sign Out Confirmation Modal (Clean Tailwind Modal, Zero Browser Alerts) */}
       <Modal
-        isOpen={isHelpOpen}
-        onClose={() => setIsHelpOpen(false)}
-        title="Institutional Support Desk"
-        subtitle="Mother Teresa Nobles Academy Dedicated Help"
+        isOpen={isSignOutModalOpen}
+        onClose={() => setIsSignOutModalOpen(false)}
+        title="Confirm Sign Out"
+        subtitle="End administrative session for St. Paul's Senior Secondary School"
       >
-        <div className="space-y-3 text-xs text-slate-700">
-          <p>Direct Relationship Manager: <strong>+91-8448443326</strong></p>
-          <p>Technical Escalations: <strong>info@schoollog.in</strong></p>
-          <p>AnyDesk Remote Support ID: <strong>Download AnyDesk from footer</strong></p>
-        </div>
-      </Modal>
-
-      {/* SMS Usage Modal */}
-      <Modal
-        isOpen={isSmsUsageModalOpen}
-        onClose={() => setIsSmsUsageModalOpen(false)}
-        title="SMS Transaction Ledger"
-        subtitle="Institutional quota usage history"
-      >
-        <div className="space-y-3 text-xs">
-          <div className="flex justify-between p-2 bg-slate-50 border rounded font-mono">
-            <span>Balance: 5,153</span>
-            <span>Used: 2,844</span>
-            <span>Quota: 8,000</span>
+        <div className="space-y-4 text-xs">
+          <p className="text-slate-600 leading-relaxed">
+            Are you sure you want to sign out of the St. Paul&apos;s Senior Secondary School ERP portal? Any unsaved form data will be discarded.
+          </p>
+          <div className="flex justify-end space-x-2.5 pt-2">
+            <button
+              onClick={() => setIsSignOutModalOpen(false)}
+              className="px-4 py-2 border border-slate-300 rounded-lg font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleSignOut}
+              className="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-lg transition-colors shadow-xs"
+            >
+              Sign Out Securely
+            </button>
           </div>
         </div>
       </Modal>
@@ -352,6 +356,6 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
         onClose={() => setIsDbModalOpen(false)}
       />
     </header>
-
   );
 }
+
