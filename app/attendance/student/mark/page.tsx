@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import {
   CalendarCheck,
   Save,
@@ -9,9 +9,12 @@ import {
   Search,
   Check,
   X,
-  AlertCircle
+  AlertCircle,
+  Database,
+  Loader2
 } from "lucide-react";
 import { MOCK_STUDENTS } from "@/data/mockData";
+import { attendanceService } from "@/lib/services/attendanceService";
 
 function getInitials(name: string) {
   const parts = name.trim().split(/\s+/);
@@ -36,6 +39,8 @@ export default function MarkStudentAttendancePage() {
   const [searchFilter, setSearchFilter] = useState("");
   const [notifySms, setNotifySms] = useState(true);
   const [saved, setSaved] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+  const [lastSavedInfo, setLastSavedInfo] = useState<string | null>(null);
   const [reasonMap, setReasonMap] = useState<Record<string, string>>({});
 
   // Get current section students
@@ -58,6 +63,39 @@ export default function MarkStudentAttendancePage() {
   // Student attendance statuses state (default to Present)
   const [statusMap, setStatusMap] = useState<Record<string, "Present" | "Absent" | "Leave" | "HalfDay">>({});
 
+  // Real-time Database Persistence: Load saved attendance whenever date or class changes
+  useEffect(() => {
+    let isMounted = true;
+    async function fetchSaved() {
+      try {
+        const savedData = await attendanceService.getSavedSectionAttendance(selectedClass, attendanceDate);
+        if (!isMounted) return;
+
+        if (savedData && savedData.statusMap && Object.keys(savedData.statusMap).length > 0) {
+          setStatusMap(savedData.statusMap);
+          setReasonMap(savedData.reasonMap || {});
+          const timeFormatted = new Date(savedData.savedAt).toLocaleTimeString("en-IN", {
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+          setLastSavedInfo(`Saved in Database (${timeFormatted})`);
+        } else {
+          // Fresh unmarked day: default all students to Present
+          setStatusMap({});
+          setReasonMap({});
+          setLastSavedInfo(null);
+        }
+      } catch (err) {
+        console.warn("Could not load attendance:", err);
+      }
+    }
+
+    fetchSaved();
+    return () => {
+      isMounted = false;
+    };
+  }, [selectedClass, attendanceDate]);
+
   const getStatus = (studentId: string): "Present" | "Absent" | "Leave" | "HalfDay" => {
     return statusMap[studentId] || "Present";
   };
@@ -77,10 +115,31 @@ export default function MarkStudentAttendancePage() {
     setStatusMap(updated);
   };
 
-  const handleSave = (e?: React.FormEvent) => {
+  const handleSave = async (e?: React.FormEvent) => {
     if (e) e.preventDefault();
-    setSaved(true);
-    setTimeout(() => setSaved(false), 5000);
+    setIsSaving(true);
+
+    try {
+      const res = await attendanceService.saveSectionAttendance({
+        classSec: selectedClass,
+        date: attendanceDate,
+        statusMap,
+        reasonMap,
+        students: sectionStudents,
+      });
+
+      setSaved(true);
+      const timeStr = new Date(res.savedAt).toLocaleTimeString("en-IN", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      setLastSavedInfo(`Saved in Database (${timeStr})`);
+      setTimeout(() => setSaved(false), 5000);
+    } catch (err) {
+      console.error("Save error:", err);
+    } finally {
+      setIsSaving(false);
+    }
   };
 
   // Live count computations for the current section
@@ -102,19 +161,31 @@ export default function MarkStudentAttendancePage() {
             <span className="text-slate-400">/</span>
             <span className="text-slate-700 font-medium">Daily Roll Call</span>
           </div>
-          <h1 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
-            Class {selectedClass} Attendance
-          </h1>
-          <p className="text-xs text-slate-500">
+          <div className="flex items-center gap-3">
+            <h1 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
+              Class {selectedClass} Attendance
+            </h1>
+            {lastSavedInfo ? (
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                <Database className="w-3 h-3 text-emerald-600" />
+                {lastSavedInfo}
+              </span>
+            ) : (
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-500 border border-slate-200">
+                New Sheet (Unsaved)
+              </span>
+            )}
+          </div>
+          <p className="text-xs text-slate-500 mt-0.5">
             St. Paul&apos;s Senior Secondary School &bull; Academic Session 2026-27 &bull; {totalStudents} Enrolled
           </p>
         </div>
 
         {/* Action Confirmation Banner */}
         {saved && (
-          <div className="flex items-center gap-2 px-3 py-1.5 bg-emerald-50 border border-emerald-300 text-emerald-900 rounded-lg text-xs font-medium animate-fadeIn">
+          <div className="flex items-center gap-2 px-3.5 py-2 bg-emerald-50 border border-emerald-300 text-emerald-900 rounded-lg text-xs font-medium animate-fadeIn shadow-xs">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span>Attendance saved for {selectedClass} ({presentCount} Present, {absentCount} Absent).</span>
+            <span>Attendance permanently saved for {selectedClass} on {attendanceDate} ({presentCount} Present, {absentCount} Absent).</span>
           </div>
         )}
       </div>
@@ -233,10 +304,20 @@ export default function MarkStudentAttendancePage() {
             </button>
             <button
               type="submit"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-md text-xs font-semibold shadow-xs transition-colors"
+              disabled={isSaving}
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-white rounded-md text-xs font-semibold shadow-xs transition-colors cursor-pointer"
             >
-              <Save className="w-3.5 h-3.5" />
-              <span>Save</span>
+              {isSaving ? (
+                <>
+                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                  <span>Saving...</span>
+                </>
+              ) : (
+                <>
+                  <Save className="w-3.5 h-3.5" />
+                  <span>Save</span>
+                </>
+              )}
             </button>
           </div>
         </div>
@@ -421,10 +502,20 @@ export default function MarkStudentAttendancePage() {
               </span>
               <button
                 type="submit"
-                className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-md text-xs font-semibold shadow-xs transition-colors"
+                disabled={isSaving}
+                className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-white rounded-md text-xs font-semibold shadow-xs transition-colors cursor-pointer"
               >
-                <Save className="w-3.5 h-3.5" />
-                <span>Save Attendance</span>
+                {isSaving ? (
+                  <>
+                    <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                    <span>Saving...</span>
+                  </>
+                ) : (
+                  <>
+                    <Save className="w-3.5 h-3.5" />
+                    <span>Save Attendance</span>
+                  </>
+                )}
               </button>
             </div>
           </div>
