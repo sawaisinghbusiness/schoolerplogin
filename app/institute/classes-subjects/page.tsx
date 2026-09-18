@@ -9,13 +9,13 @@ import {
   ChevronDown,
   List,
   Check,
-  CheckSquare,
-  Square,
   BookOpen,
-  Layers,
-  ArrowUpDown,
   MoveUp,
-  MoveDown
+  MoveDown,
+  Database,
+  Copy,
+  AlertTriangle,
+  RefreshCw
 } from "lucide-react";
 import { classService, ClassItem, SectionItem } from "@/lib/services/classService";
 
@@ -65,9 +65,42 @@ const COMMON_SUBJECTS = [
   "Drawing / Art",
 ];
 
+const SQL_SETUP_SCRIPT = `-- Run this in your Supabase SQL Editor:
+CREATE TABLE IF NOT EXISTS public.classes (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    name VARCHAR(100) NOT NULL UNIQUE,
+    order_seq INTEGER DEFAULT 0,
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS public.sections (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    class_id UUID REFERENCES public.classes(id) ON DELETE CASCADE,
+    name VARCHAR(50) NOT NULL,
+    subjects JSONB DEFAULT '[]'::jsonb,
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW(),
+    UNIQUE(class_id, name)
+);
+
+ALTER TABLE public.classes ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.sections ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public read classes" ON public.classes FOR SELECT USING (true);
+CREATE POLICY "Allow public write classes" ON public.classes FOR ALL USING (true);
+
+CREATE POLICY "Allow public read sections" ON public.sections FOR SELECT USING (true);
+CREATE POLICY "Allow public write sections" ON public.sections FOR ALL USING (true);
+`;
+
 export default function ClassesSubjectsPage() {
   const [classes, setClasses] = useState<ClassItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [tableMissing, setTableMissing] = useState(false);
+  const [showSqlModal, setShowSqlModal] = useState(false);
+  const [copiedSql, setCopiedSql] = useState(false);
+
   const [selectedClassIds, setSelectedClassIds] = useState<Record<string, boolean>>({});
   const [selectedSectionIds, setSelectedSectionIds] = useState<Record<string, boolean>>({});
 
@@ -94,38 +127,37 @@ export default function ClassesSubjectsPage() {
   const [editClassName, setEditClassName] = useState("");
 
   // Form states for Subjects Options
-  const [subjectSearch, setSubjectSearch] = useState("");
   const [customSubjectInput, setCustomSubjectInput] = useState("");
   const [activeSectionSubjects, setActiveSectionSubjects] = useState<string[]>([]);
 
   // Feedback banner
-  const [statusMsg, setStatusMsg] = useState<string | null>(null);
+  const [statusMsg, setStatusMsg] = useState<{ text: string; isError?: boolean } | null>(null);
+
+  const loadData = async () => {
+    setLoading(true);
+    const res = await classService.fetchClasses();
+    setTableMissing(res.tableMissing);
+    setClasses(res.data);
+    setLoading(false);
+  };
 
   useEffect(() => {
-    async function loadData() {
-      setLoading(true);
-      const res = await classService.fetchClasses();
-      setClasses(res.data);
-      setLoading(false);
-    }
     loadData();
   }, []);
 
-  const showNotification = (msg: string) => {
-    setStatusMsg(msg);
-    setTimeout(() => setStatusMsg(null), 3500);
+  const showNotification = (msg: string, isError = false) => {
+    setStatusMsg({ text: msg, isError });
+    setTimeout(() => setStatusMsg(null), 4000);
   };
 
-  const updateAndPersistClasses = async (updated: ClassItem[], notification?: string) => {
-    setClasses(updated);
-    await classService.saveClasses(updated);
-    if (notification) {
-      showNotification(notification);
-    }
+  const handleCopySql = () => {
+    navigator.clipboard.writeText(SQL_SETUP_SCRIPT);
+    setCopiedSql(true);
+    setTimeout(() => setCopiedSql(false), 2500);
   };
 
   // ----------------------------------------------------
-  // Add Class Modal handlers
+  // Add Class Modal handlers (Supabase Direct)
   // ----------------------------------------------------
   const handleOpenAddClassModal = () => {
     setSelectedStandard("");
@@ -167,28 +199,29 @@ export default function ClassesSubjectsPage() {
       defaultSubjects = ["English", "Hindi", "Mathematics", "Rhymes & Activities"];
     }
 
-    const newClass: ClassItem = {
-      id: `cls-${Date.now()}`,
-      name: finalStandard,
-      sections: sectionsToAdd.map((sec, idx) => ({
-        id: `sec-${Date.now()}-${idx}`,
-        name: sec,
-        subjects: [...defaultSubjects],
-      })),
-    };
+    const res = await classService.createClass(finalStandard, sectionsToAdd, defaultSubjects);
+    if (!res.success) {
+      showNotification("Failed to save class. Please try again.", true);
+      return;
+    }
 
-    const updated = [...classes, newClass];
-    await updateAndPersistClasses(updated, `Class "${finalStandard}" added and saved successfully!`);
+    showNotification(`Class "${finalStandard}" saved successfully!`);
     setShowAddClassModal(false);
+    await loadData();
   };
 
   // ----------------------------------------------------
   // Delete Class
   // ----------------------------------------------------
   const handleDeleteClass = async (classId: string, className: string) => {
-    if (confirm(`Are you sure you want to delete Class "${className}" and all its sections?`)) {
-      const updated = classes.filter((c) => c.id !== classId);
-      await updateAndPersistClasses(updated, `Class "${className}" deleted!`);
+    if (confirm(`Are you sure you want to delete Class "${className}"?`)) {
+      const res = await classService.deleteClass(classId);
+      if (!res.success) {
+        showNotification("Failed to delete class. Please try again.", true);
+        return;
+      }
+      showNotification(`Class "${className}" deleted successfully!`);
+      await loadData();
     }
   };
 
@@ -203,15 +236,18 @@ export default function ClassesSubjectsPage() {
 
   const handleSaveEditClass = async () => {
     if (!activeClass || !editClassName.trim()) return;
-    const updated = classes.map((c) =>
-      c.id === activeClass.id ? { ...c, name: editClassName.trim() } : c
-    );
-    await updateAndPersistClasses(updated, `Class renamed to "${editClassName.trim()}"!`);
+    const res = await classService.updateClass(activeClass.id, editClassName.trim());
+    if (!res.success) {
+      showNotification("Failed to update class. Please try again.", true);
+      return;
+    }
+    showNotification("Class updated successfully!");
     setShowEditClassModal(false);
+    await loadData();
   };
 
   // ----------------------------------------------------
-  // Add Section to specific class
+  // Add Section to class (Supabase Direct)
   // ----------------------------------------------------
   const handleOpenAddSectionModal = (cls: ClassItem) => {
     setActiveClass(cls);
@@ -242,83 +278,56 @@ export default function ClassesSubjectsPage() {
         ? [...activeClass.sections[0].subjects]
         : ["Mathematics", "English", "Hindi"];
 
-    const newSections: SectionItem[] = newSectionList.map((secName, idx) => ({
-      id: `sec-${Date.now()}-${idx}`,
-      name: secName,
-      subjects: [...defaultSubjects],
-    }));
+    const res = await classService.addSections(activeClass.id, newSectionList, defaultSubjects);
+    if (!res.success) {
+      showNotification(`Error: ${res.error}`, true);
+      return;
+    }
 
-    const updated = classes.map((c) => {
-      if (c.id === activeClass.id) {
-        return {
-          ...c,
-          sections: [...c.sections, ...newSections],
-        };
-      }
-      return c;
-    });
-
-    await updateAndPersistClasses(
-      updated,
-      `Added ${newSections.length} new section(s) to Class ${activeClass.name}!`
-    );
+    showNotification(`Sections added to Class ${activeClass.name} successfully!`);
     setShowAddSectionModal(false);
+    await loadData();
   };
 
   // ----------------------------------------------------
-  // Delete a Section
+  // Delete Section
   // ----------------------------------------------------
-  const handleDeleteSection = async (classId: string, sectionId: string, sectionName: string) => {
-    if (confirm(`Delete Section "${sectionName}"?`)) {
-      const updated = classes.map((c) => {
-        if (c.id === classId) {
-          return {
-            ...c,
-            sections: c.sections.filter((s) => s.id !== sectionId),
-          };
-        }
-        return c;
-      });
-      await updateAndPersistClasses(updated, `Section ${sectionName} deleted!`);
+  const handleDeleteSection = async (sectionId: string, sectionName: string) => {
+    if (confirm(`Are you sure you want to delete Section "${sectionName}"?`)) {
+      const res = await classService.deleteSection(sectionId);
+      if (!res.success) {
+        showNotification(`Error: ${res.error}`, true);
+        return;
+      }
+      showNotification(`Section ${sectionName} deleted successfully!`);
+      await loadData();
     }
   };
 
   // ----------------------------------------------------
-  // Remove Subject chip directly
+  // Remove Subject chip directly (Supabase Direct)
   // ----------------------------------------------------
   const handleRemoveSubjectFromSection = async (
-    classId: string,
     sectionId: string,
+    currentSubjects: string[],
     subjectToRemove: string
   ) => {
-    const updated = classes.map((c) => {
-      if (c.id === classId) {
-        return {
-          ...c,
-          sections: c.sections.map((s) => {
-            if (s.id === sectionId) {
-              return {
-                ...s,
-                subjects: s.subjects.filter((sub) => sub !== subjectToRemove),
-              };
-            }
-            return s;
-          }),
-        };
-      }
-      return c;
-    });
-    await updateAndPersistClasses(updated);
+    const updated = currentSubjects.filter((s) => s !== subjectToRemove);
+    const res = await classService.updateSectionSubjects(sectionId, updated);
+    if (!res.success) {
+      showNotification(`Error updating subjects: ${res.error}`, true);
+      return;
+    }
+    await loadData();
   };
 
   // ----------------------------------------------------
-  // Subjects Options Modal
+  // Subjects Options Modal (Supabase Direct)
   // ----------------------------------------------------
   const handleOpenSubjectModal = (cls: ClassItem, sec: SectionItem) => {
     setActiveClass(cls);
     setActiveSection(sec);
     setActiveSectionSubjects([...sec.subjects]);
-    setSubjectSearch("");
     setCustomSubjectInput("");
     setShowSubjectModal(true);
   };
@@ -340,63 +349,43 @@ export default function ClassesSubjectsPage() {
   };
 
   const handleSaveSubjectsOptions = async () => {
-    if (!activeClass || !activeSection) return;
+    if (!activeSection) return;
 
-    const updated = classes.map((c) => {
-      if (c.id === activeClass.id) {
-        return {
-          ...c,
-          sections: c.sections.map((s) => {
-            if (s.id === activeSection.id) {
-              return {
-                ...s,
-                subjects: [...activeSectionSubjects],
-              };
-            }
-            return s;
-          }),
-        };
-      }
-      return c;
-    });
+    const res = await classService.updateSectionSubjects(activeSection.id, activeSectionSubjects);
+    if (!res.success) {
+      showNotification(`Error saving subjects: ${res.error}`, true);
+      return;
+    }
 
-    await updateAndPersistClasses(
-      updated,
-      `Subjects updated for Class ${activeClass.name} - Section ${activeSection.name}!`
-    );
+    showNotification(`Subjects updated for Section ${activeSection.name}!`);
     setShowSubjectModal(false);
-  };
-
-  // ----------------------------------------------------
-  // Order Classes
-  // ----------------------------------------------------
-  const handleMoveClass = (index: number, direction: "up" | "down") => {
-    const targetIndex = direction === "up" ? index - 1 : index + 1;
-    if (targetIndex < 0 || targetIndex >= classes.length) return;
-    const reordered = [...classes];
-    const [moved] = reordered.splice(index, 1);
-    reordered.splice(targetIndex, 0, moved);
-    updateAndPersistClasses(reordered);
+    await loadData();
   };
 
   return (
     <div className="space-y-5 animate-fadeIn max-w-7xl pb-16 text-xs text-slate-800">
       {/* Toast Notification */}
       {statusMsg && (
-        <div className="fixed top-4 right-4 z-50 bg-[#26b99a] text-white font-bold py-2.5 px-4 rounded shadow-lg flex items-center space-x-2 animate-bounce">
-          <Check className="w-4 h-4" />
-          <span>{statusMsg}</span>
+        <div
+          className={`fixed top-4 right-4 z-50 text-white font-bold py-2.5 px-4 rounded shadow-lg flex items-center space-x-2 ${
+            statusMsg.isError ? "bg-rose-600" : "bg-[#26b99a]"
+          }`}
+        >
+          {statusMsg.isError ? <AlertTriangle className="w-4 h-4" /> : <Check className="w-4 h-4" />}
+          <span>{statusMsg.text}</span>
         </div>
       )}
 
       {/* Page Header */}
       <div className="pb-3 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white p-4 rounded-lg shadow-xs">
         <div>
-          <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-            Add Classes and Sections
-          </h1>
+          <div className="flex items-center space-x-2">
+            <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+              Add Classes and Sections
+            </h1>
+          </div>
           <p className="text-xs text-slate-500 mt-0.5">
-            Configure school standards, sections, and curriculum subjects saved directly to database
+            Configure school standards, sections, and curriculum subjects
           </p>
         </div>
 
@@ -421,7 +410,7 @@ export default function ClassesSubjectsPage() {
       {/* Loading state */}
       {loading ? (
         <div className="text-center py-16 bg-white rounded-lg border border-slate-200 text-slate-500 font-semibold">
-          Loading classes and curriculum data...
+          Loading classes and sections...
         </div>
       ) : classes.length === 0 ? (
         <div className="text-center py-16 bg-white rounded-lg border border-slate-200 space-y-3">
@@ -430,18 +419,18 @@ export default function ClassesSubjectsPage() {
             onClick={handleOpenAddClassModal}
             className="px-4 py-2 bg-[#26b99a] hover:bg-[#209b81] text-white rounded font-bold"
           >
-            + Add Your First Class
+            + Add New Class
           </button>
         </div>
       ) : (
         /* Classes List */
         <div className="space-y-6">
-          {classes.map((cls, classIndex) => (
+          {classes.map((cls) => (
             <div
               key={cls.id}
               className="bg-white rounded-lg border border-slate-200 shadow-xs overflow-hidden"
             >
-              {/* Class Header Bar (Greenish background matching screenshots) */}
+              {/* Class Header Bar */}
               <div className="bg-[#eafaf1] border-b border-emerald-100 px-4 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
                 <div className="flex items-center space-x-3">
                   <input
@@ -489,20 +478,6 @@ export default function ClassesSubjectsPage() {
                   >
                     <BookOpen className="w-3 h-3" />
                     <span>Edit Subjects</span>
-                  </button>
-
-                  <button
-                    onClick={() => {
-                      const newOrder = [...cls.sections].reverse();
-                      const updated = classes.map((c) =>
-                        c.id === cls.id ? { ...c, sections: newOrder } : c
-                      );
-                      updateAndPersistClasses(updated, `Reordered sections in Class ${cls.name}`);
-                    }}
-                    className="px-2.5 py-1 bg-white hover:bg-blue-50 text-[#2980b9] border border-[#2980b9] rounded text-[11px] font-bold flex items-center space-x-1 shadow-2xs transition-colors"
-                  >
-                    <List className="w-3 h-3" />
-                    <span>Section Order</span>
                   </button>
 
                   <button
@@ -567,7 +542,7 @@ export default function ClassesSubjectsPage() {
                                   <span>{subj}</span>
                                   <button
                                     onClick={() =>
-                                      handleRemoveSubjectFromSection(cls.id, sec.id, subj)
+                                      handleRemoveSubjectFromSection(sec.id, sec.subjects, subj)
                                     }
                                     title={`Remove ${subj}`}
                                     className="text-slate-400 hover:text-rose-600 transition-colors"
@@ -597,23 +572,20 @@ export default function ClassesSubjectsPage() {
                                   `Section "${sec.name}" Options:\nType "rename" to rename section\nType "delete" to delete section`
                                 );
                                 if (action?.toLowerCase() === "delete") {
-                                  handleDeleteSection(cls.id, sec.id, sec.name);
+                                  handleDeleteSection(sec.id, sec.name);
                                 } else if (action?.toLowerCase() === "rename") {
                                   const newName = prompt("Enter new section name:", sec.name);
                                   if (newName?.trim()) {
-                                    const updated = classes.map((c) =>
-                                      c.id === cls.id
-                                        ? {
-                                            ...c,
-                                            sections: c.sections.map((s) =>
-                                              s.id === sec.id
-                                                ? { ...s, name: newName.trim().toUpperCase() }
-                                                : s
-                                            ),
-                                          }
-                                        : c
-                                    );
-                                    updateAndPersistClasses(updated, `Section renamed to ${newName.trim()}`);
+                                    classService
+                                      .renameSection(sec.id, newName.trim())
+                                      .then((res) => {
+                                        if (res.success) {
+                                          showNotification("Section renamed successfully!");
+                                          loadData();
+                                        } else {
+                                          showNotification(`Error: ${res.error}`, true);
+                                        }
+                                      });
                                   }
                                 }
                               }}
@@ -758,7 +730,7 @@ export default function ClassesSubjectsPage() {
                 </p>
               </div>
 
-              {/* Save Button (Centered cyan/teal rounded button) */}
+              {/* Save Button */}
               <div className="pt-3 flex justify-center">
                 <button
                   type="button"
@@ -861,7 +833,7 @@ export default function ClassesSubjectsPage() {
                   Subjects for Class {activeClass.name} - Section {activeSection.name}
                 </h2>
                 <p className="text-[11px] text-emerald-100">
-                  Select mapped subjects or type a custom subject name
+                  Configure assigned subjects for this section
                 </p>
               </div>
               <button
@@ -1035,61 +1007,54 @@ export default function ClassesSubjectsPage() {
       )}
 
       {/* ====================================================================== */}
-      {/* 5. ORDER CLASSES MODAL                                                */}
+      {/* 5. SQL SCRIPT MODAL (For Supabase Dashboard Migration)               */}
       {/* ====================================================================== */}
-      {showOrderClassesModal && (
+      {showSqlModal && (
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4 animate-fadeIn">
-          <div className="bg-white rounded-lg shadow-2xl w-full max-w-md overflow-hidden border border-slate-200">
-            <div className="bg-[#2980b9] px-5 py-3.5 flex items-center justify-between text-white">
-              <h2 className="text-base font-bold tracking-tight">Order Classes</h2>
+          <div className="bg-white rounded-lg shadow-2xl w-full max-w-xl overflow-hidden border border-slate-200">
+            <div className="bg-slate-900 px-5 py-3.5 flex items-center justify-between text-white">
+              <div className="flex items-center space-x-2">
+                <Database className="w-4 h-4 text-emerald-400" />
+                <h2 className="text-sm font-bold tracking-tight">Supabase SQL Editor Script</h2>
+              </div>
               <button
-                onClick={() => setShowOrderClassesModal(false)}
-                className="text-white hover:text-blue-100 p-1"
+                onClick={() => setShowSqlModal(false)}
+                className="text-slate-400 hover:text-white p-1"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
-            <div className="p-6 space-y-3">
-              <p className="text-slate-500 text-xs">
-                Use arrows to adjust the sequence of classes displayed in menus, reports, and attendance:
+            <div className="p-6 space-y-4">
+              <p className="text-slate-600 text-xs leading-relaxed">
+                Supabase me backend tables create karne ke liye, neeche diya gaya SQL copy karein aur apne{" "}
+                <strong>Supabase Dashboard &gt; SQL Editor</strong> me paste karke <strong>Run</strong> button dabayein:
               </p>
-              <div className="space-y-2 max-h-72 overflow-y-auto pr-1">
-                {classes.map((cls, idx) => (
-                  <div
-                    key={cls.id}
-                    className="flex items-center justify-between p-2.5 bg-slate-50 border border-slate-200 rounded font-bold text-xs"
-                  >
-                    <span className="text-slate-800">
-                      {idx + 1}. Class {cls.name}
-                    </span>
-                    <div className="flex items-center space-x-1">
-                      <button
-                        disabled={idx === 0}
-                        onClick={() => handleMoveClass(idx, "up")}
-                        className="p-1 text-slate-600 hover:text-blue-600 disabled:opacity-30 rounded hover:bg-slate-200"
-                      >
-                        <MoveUp className="w-4 h-4" />
-                      </button>
-                      <button
-                        disabled={idx === classes.length - 1}
-                        onClick={() => handleMoveClass(idx, "down")}
-                        className="p-1 text-slate-600 hover:text-blue-600 disabled:opacity-30 rounded hover:bg-slate-200"
-                      >
-                        <MoveDown className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                ))}
+
+              <div className="relative bg-slate-900 rounded-lg p-3 text-emerald-400 font-mono text-[11px] overflow-x-auto max-h-60 border border-slate-800">
+                <pre>{SQL_SETUP_SCRIPT}</pre>
+                <button
+                  onClick={handleCopySql}
+                  className="absolute top-2 right-2 px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-white rounded text-[11px] font-bold flex items-center space-x-1 border border-slate-700"
+                >
+                  {copiedSql ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
+                  <span>{copiedSql ? "Copied!" : "Copy SQL"}</span>
+                </button>
               </div>
 
-              <div className="pt-3 flex justify-end">
+              <div className="pt-2 flex justify-end space-x-2">
                 <button
-                  type="button"
-                  onClick={() => setShowOrderClassesModal(false)}
-                  className="px-5 py-1.5 bg-[#2980b9] hover:bg-[#2471a3] text-white font-bold rounded"
+                  onClick={handleCopySql}
+                  className="px-4 py-2 bg-[#26b99a] hover:bg-[#209b81] text-white font-bold rounded text-xs flex items-center space-x-1"
                 >
-                  Done
+                  <Copy className="w-3.5 h-3.5" />
+                  <span>{copiedSql ? "Copied to Clipboard!" : "Copy SQL to Clipboard"}</span>
+                </button>
+                <button
+                  onClick={() => setShowSqlModal(false)}
+                  className="px-4 py-2 border border-slate-300 rounded font-bold text-slate-700 text-xs"
+                >
+                  Close
                 </button>
               </div>
             </div>

@@ -1,17 +1,15 @@
 "use client";
 
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import {
-  CalendarCheck,
   Save,
   CheckCircle2,
   Users,
   Search,
-  Check,
-  X,
   AlertCircle,
-  Database,
-  Loader2
+  Loader2,
+  ChevronDown,
+  MessageSquare
 } from "lucide-react";
 import { MOCK_STUDENTS } from "@/data/mockData";
 import { attendanceService } from "@/lib/services/attendanceService";
@@ -42,6 +40,24 @@ export default function MarkStudentAttendancePage() {
   const [isSaving, setIsSaving] = useState(false);
   const [lastSavedInfo, setLastSavedInfo] = useState<string | null>(null);
   const [reasonMap, setReasonMap] = useState<Record<string, string>>({});
+  const [showBatchMenu, setShowBatchMenu] = useState(false);
+  const [watiNotice, setWatiNotice] = useState<{ msg: string; type: "success" | "info" | "warning" } | null>(null);
+  const batchMenuRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (batchMenuRef.current && !batchMenuRef.current.contains(event.target as Node)) {
+        setShowBatchMenu(false);
+      }
+    }
+    if (showBatchMenu) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showBatchMenu]);
 
   // Get current section students
   const sectionStudents = useMemo(() => {
@@ -135,6 +151,45 @@ export default function MarkStudentAttendancePage() {
       });
       setLastSavedInfo(`Saved in Database (${timeStr})`);
       setTimeout(() => setSaved(false), 5000);
+
+      // Trigger WATI WhatsApp absent alerts if notification checkbox is enabled
+      if (notifySms) {
+        const absentees = sectionStudents
+          .filter((s) => (statusMap[s.id] || "Present") === "Absent")
+          .map((s) => ({
+            studentId: s.id,
+            studentName: s.name,
+            rollNo: s.rollNo,
+            classSec: s.classSec,
+            mobile: s.mobile,
+            date: attendanceDate,
+          }));
+
+        if (absentees.length > 0) {
+          try {
+            const resp = await fetch("/api/attendance/send-absent-whatsapp", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ students: absentees }),
+            });
+            const notifyRes = await resp.json();
+            if (notifyRes.success && notifyRes.successCount > 0) {
+              setWatiNotice({
+                msg: `WhatsApp alerts sent to ${notifyRes.successCount} parents via WATI!`,
+                type: "success",
+              });
+            } else if (notifyRes.results?.[0]?.error) {
+              setWatiNotice({
+                msg: `WATI: ${notifyRes.results[0].error}`,
+                type: "warning",
+              });
+            }
+            setTimeout(() => setWatiNotice(null), 8000);
+          } catch (notifErr: any) {
+            console.warn("WATI notification dispatch error:", notifErr);
+          }
+        }
+      }
     } catch (err) {
       console.error("Save error:", err);
     } finally {
@@ -152,29 +207,13 @@ export default function MarkStudentAttendancePage() {
 
   return (
     <div className="space-y-3 animate-fadeIn max-w-7xl pb-16 font-sans text-slate-800">
-      {/* Header & Breadcrumb */}
+      {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-2 border-b border-slate-200">
         <div>
-          <div className="flex items-center space-x-1.5 text-xs text-slate-500 mb-0.5">
-            <CalendarCheck className="w-3.5 h-3.5 text-slate-600" />
-            <span>Attendance</span>
-            <span className="text-slate-400">/</span>
-            <span className="text-slate-700 font-medium">Daily Roll Call</span>
-          </div>
           <div className="flex items-center gap-3">
             <h1 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
               Class {selectedClass} Attendance
             </h1>
-            {lastSavedInfo ? (
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
-                <Database className="w-3 h-3 text-emerald-600" />
-                {lastSavedInfo}
-              </span>
-            ) : (
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-500 border border-slate-200">
-                New Sheet (Unsaved)
-              </span>
-            )}
           </div>
           <p className="text-xs text-slate-500 mt-0.5">
             St. Paul&apos;s Senior Secondary School &bull; Academic Session 2026-27 &bull; {totalStudents} Enrolled
@@ -230,10 +269,35 @@ export default function MarkStudentAttendancePage() {
         </div>
       </div>
 
+      {/* WATI WhatsApp Alert Status Notice */}
+      {watiNotice && (
+        <div
+          className={`p-3 rounded-lg border text-xs flex items-center justify-between animate-fadeIn ${
+            watiNotice.type === "success"
+              ? "bg-emerald-50 border-emerald-200 text-emerald-800"
+              : watiNotice.type === "warning"
+              ? "bg-amber-50 border-amber-200 text-amber-800"
+              : "bg-blue-50 border-blue-200 text-blue-800"
+          }`}
+        >
+          <div className="flex items-center gap-2">
+            <MessageSquare className="w-4 h-4 text-emerald-600 shrink-0" />
+            <span className="font-semibold">{watiNotice.msg}</span>
+          </div>
+          <button
+            type="button"
+            onClick={() => setWatiNotice(null)}
+            className="text-slate-400 hover:text-slate-600 text-xs px-1 cursor-pointer"
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
       {/* Form & Table Container */}
-      <form onSubmit={handleSave} className="bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden">
+      <form onSubmit={handleSave} className="bg-white rounded-xl border border-slate-200 shadow-xs">
         {/* Integrated Action Toolbar */}
-        <div className="p-3 border-b border-slate-200 bg-white flex flex-wrap items-center justify-between gap-2.5">
+        <div className="p-3 border-b border-slate-200 bg-white rounded-t-xl flex flex-wrap items-center justify-between gap-2.5">
           <div className="flex flex-wrap items-center gap-2">
             {/* Class Selector */}
             <div className="flex items-center gap-1.5">
@@ -284,24 +348,53 @@ export default function MarkStudentAttendancePage() {
 
           {/* Batch Actions & Save */}
           <div className="flex items-center gap-2 ml-auto">
-            <button
-              type="button"
-              onClick={() => setAll("Present")}
-              className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 rounded-md text-xs font-semibold transition-colors"
-              title="Mark all students in this section present"
-            >
-              <Check className="w-3.5 h-3.5" />
-              <span>Mark All Present</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => setAll("Absent")}
-              className="inline-flex items-center gap-1 px-2 py-1.5 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 rounded-md text-xs font-medium transition-colors"
-              title="Reset all to absent"
-            >
-              <X className="w-3 h-3" />
-              <span className="hidden sm:inline">Clear</span>
-            </button>
+            {/* Split Button: Mark All Present with arrow for Mark All Absent */}
+            <div className="relative inline-flex items-stretch rounded-md shadow-xs bg-[#26b99a]" ref={batchMenuRef}>
+              {/* Dropdown / Popover Badge Appearing Above */}
+              {showBatchMenu && (
+                <div className="absolute bottom-full mb-1.5 left-0 right-0 z-30 flex flex-col">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setAll("Absent");
+                      setShowBatchMenu(false);
+                    }}
+                    className="w-full inline-flex items-center justify-center px-3.5 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-md text-xs font-bold shadow-md transition-colors cursor-pointer whitespace-nowrap"
+                    title="Mark all students in this section absent"
+                  >
+                    <span>Mark All Absent</span>
+                  </button>
+                </div>
+              )}
+
+              <button
+                type="button"
+                onClick={() => {
+                  setAll("Present");
+                  setShowBatchMenu(false);
+                }}
+                className="inline-flex items-center px-3.5 py-1.5 hover:bg-[#209b81] text-white rounded-l-md text-xs font-bold transition-colors cursor-pointer"
+                title="Mark all students in this section present"
+              >
+                <span>Mark All Present</span>
+              </button>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowBatchMenu((prev) => !prev);
+                }}
+                className="inline-flex items-center justify-center px-2 py-1.5 hover:bg-[#209b81] text-white border-l border-[#1fa085] rounded-r-md transition-colors cursor-pointer"
+                title="More attendance options"
+                aria-label="Attendance options"
+              >
+                <ChevronDown
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                    showBatchMenu ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+            </div>
             <button
               type="submit"
               disabled={isSaving}
@@ -397,7 +490,23 @@ export default function MarkStudentAttendancePage() {
 
                         {/* Parent Phone */}
                         <td className="py-2.5 px-3 hidden sm:table-cell font-mono text-slate-600">
-                          {student.mobile}
+                          <div className="flex items-center gap-1.5 flex-wrap">
+                            <span>{student.mobile}</span>
+                            {isAbsent && (
+                              <a
+                                href={`https://wa.me/91${student.mobile.replace(/\D/g, "")}?text=${encodeURIComponent(
+                                  `Dear Parent, your ward ${student.name} (Class: ${selectedClass}, Roll: ${student.rollNo}) is marked ABSENT today (${attendanceDate}). Mother Teresa Nobles Academy, Barmer.`
+                                )}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Open WhatsApp chat with parent"
+                                className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 px-1.5 py-0.5 rounded transition-colors"
+                              >
+                                <MessageSquare className="w-2.5 h-2.5 text-emerald-600" />
+                                <span>WhatsApp</span>
+                              </a>
+                            )}
+                          </div>
                         </td>
 
                         {/* Tactile Hardware Toggle Switches */}
@@ -492,7 +601,7 @@ export default function MarkStudentAttendancePage() {
                 className="w-3.5 h-3.5 rounded text-slate-900 focus:ring-slate-400 border-slate-300 cursor-pointer"
               />
               <label htmlFor="notifySms" className="text-slate-600 cursor-pointer select-none">
-                Send automated DLT absentee SMS alert to parents ({absentCount} marked absent)
+                Send automated WhatsApp absent alert via WATI ({absentCount} marked absent)
               </label>
             </div>
 

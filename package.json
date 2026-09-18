@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "check-tables": "node \"C:\\Users\\Shivam Singh\\.gemini\\antigravity\\brain\\0772f143-2ac0-4092-abe4-86a064a2bc7b\\scratch\\check-tables.js\""
+    "lint": "next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

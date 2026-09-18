@@ -231,16 +231,9 @@ export default function SearchStudentPage() {
             <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
               Search Student Master
             </h1>
-            {isLive ? (
-              <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
-                <Database className="w-3 h-3 text-emerald-600" />
-                <span>Supabase Live ({studentsList.length} Scholars)</span>
-              </span>
-            ) : (
-              <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-slate-100 text-slate-600 border border-slate-300">
-                <span>Demo Engine ({studentsList.length})</span>
-              </span>
-            )}
+            <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-700 border border-slate-300">
+              <span>{studentsList.length} Scholars Enrolled</span>
+            </span>
           </div>
           <p className="text-xs text-slate-500 mt-0.5">
             Query student database instantly across 9 institutional parameters or via advanced demographic filters
@@ -260,7 +253,7 @@ export default function SearchStudentPage() {
           <button
             onClick={loadStudents}
             className="inline-flex items-center space-x-1 px-2.5 py-1.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 rounded-md text-xs font-semibold shadow-xs transition-colors"
-            title="Reload from Supabase"
+            title="Refresh Records"
           >
             <RefreshCw className={`w-3.5 h-3.5 text-slate-600 ${isLoading ? "animate-spin" : ""}`} />
           </button>

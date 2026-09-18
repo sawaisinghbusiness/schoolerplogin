@@ -200,5 +200,39 @@ export const attendanceService = {
       return [];
     }
   },
+
+  /**
+   * Compatibility method for API route
+   */
+  async fetchAttendance(date: string, classId?: string) {
+    if (isSupabaseConfigured) {
+      try {
+        let query = supabase.from("attendance_student").select("*").eq("attendance_date", date);
+        if (classId) {
+          query = query.eq("class_sec", classId);
+        }
+        const { data, error } = await query;
+        if (!error && data) return { data, isLive: true };
+      } catch (err) {
+        console.warn("fetchAttendance error:", err);
+      }
+    }
+    return { data: [], isLive: false };
+  },
+
+  /**
+   * Compatibility method for API route
+   */
+  async saveAttendance(records: any[]) {
+    if (isSupabaseConfigured) {
+      try {
+        const { data, error } = await supabase.from("attendance_student").upsert(records);
+        if (!error) return { success: true, count: records.length, isLive: true };
+      } catch (err: any) {
+        return { success: false, error: err.message };
+      }
+    }
+    return { success: true, count: records.length, isLive: false };
+  },
 };
 

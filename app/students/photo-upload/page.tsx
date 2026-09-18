@@ -20,7 +20,7 @@ export default function StudentPhotoUploadPage() {
           Student Photo & ID Card Gallery
         </h1>
         <p className="text-xs text-slate-500 mt-0.5">
-          Bulk upload student passport photos named by SR Number (e.g. SR-2024-001.jpg) to Cloudflare R2 / Supabase Storage
+          Bulk upload student passport photos named by SR Number (e.g. SR-2024-001.jpg) to student records
         </p>
       </div>
 

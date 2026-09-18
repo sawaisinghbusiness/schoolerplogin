@@ -248,16 +248,6 @@ export default function CollectFeesPage() {
             <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
               Counter Fee Collection Desk
             </h1>
-            {isLiveDb ? (
-              <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
-                <Database className="w-3 h-3 text-emerald-600" />
-                <span>Supabase Live</span>
-              </span>
-            ) : (
-              <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-slate-100 text-slate-600 border border-slate-300">
-                <span>Demo Engine</span>
-              </span>
-            )}
           </div>
           <p className="text-xs text-slate-500 mt-0.5">
             Collect school fees, allocate dynamic heads, auto-decrement student balances, and generate printable receipts
@@ -755,7 +745,7 @@ export default function CollectFeesPage() {
                 className="inline-flex items-center space-x-2 px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white rounded-lg font-bold text-xs shadow-md transition-colors"
               >
                 {isSubmitting ? (
-                  <span>Recording in Supabase...</span>
+                  <span>Recording Payment...</span>
                 ) : (
                   <>
                     <Printer className="w-4 h-4" />

@@ -34,6 +34,7 @@ import {
   X,
   AlertTriangle
 } from "lucide-react";
+import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -43,6 +44,7 @@ interface SidebarProps {
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const pathname = usePathname();
   const router = useRouter();
+  const { schoolProfile } = useSchoolProfile();
   const [filterQuery, setFilterQuery] = useState("");
   const [showSignOutModal, setShowSignOutModal] = useState(false);
   const [openAccordions, setOpenAccordions] = useState<Record<string, boolean>>({
@@ -439,16 +441,32 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       >
         {/* Brand Bar in Sidebar Header */}
         <div className="flex items-center justify-between px-4 h-16 border-b border-slate-800/80 bg-slate-950 shrink-0">
-          <div className="flex items-center space-x-3 overflow-hidden">
-            <div className="w-9 h-9 rounded-xl bg-emerald-600 flex items-center justify-center text-white font-black text-sm tracking-wider shadow-xs ring-1 ring-emerald-500/30 shrink-0">
-              SP
-            </div>
-            <div className="overflow-hidden leading-tight">
-              <div className="text-sm font-bold text-white tracking-tight truncate">
-                St. Paul&apos;s SchoolDesk
+          <div className="flex items-center space-x-3 overflow-hidden flex-1 min-w-0">
+            {schoolProfile.logo_url ? (
+              <div className="w-9 h-9 rounded-xl bg-white border border-slate-700/80 p-0.5 flex items-center justify-center shrink-0 shadow-xs overflow-hidden">
+                <img
+                  src={schoolProfile.logo_url}
+                  alt="School Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <div className="text-xs text-slate-400 font-medium truncate">
-                Senior Secondary ERP
+            ) : (
+              <div className="w-9 h-9 rounded-xl bg-slate-800 border border-slate-700/80 flex items-center justify-center text-white font-black text-xs tracking-wider shadow-xs shrink-0">
+                {schoolProfile.school_name
+                  .split(" ")
+                  .filter(Boolean)
+                  .slice(0, 2)
+                  .map((w) => w[0])
+                  .join("")
+                  .toUpperCase() || "MT"}
+              </div>
+            )}
+            <div className="overflow-hidden leading-tight flex-1 min-w-0">
+              <div className="text-xs font-bold text-white tracking-tight truncate" title={schoolProfile.school_name}>
+                {schoolProfile.school_name}
+              </div>
+              <div className="text-[10px] text-slate-400 font-mono truncate">
+                Code: {schoolProfile.school_code}
               </div>
             </div>
           </div>

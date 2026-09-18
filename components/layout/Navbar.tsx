@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { Modal } from "@/components/ui/modal";
 import DatabaseStatusModal from "@/components/database/DatabaseStatusModal";
+import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
 
 interface NavbarProps {
   onToggleSidebar?: () => void;
@@ -25,6 +26,7 @@ interface NavbarProps {
 
 export function Navbar({ onToggleSidebar }: NavbarProps) {
   const router = useRouter();
+  const { schoolProfile } = useSchoolProfile();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
@@ -87,17 +89,33 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
 
         {/* Institution Brand Identity */}
         <Link href="/dashboard" className="flex items-center space-x-3 group">
-          <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shadow-xs group-hover:bg-emerald-700 transition-colors shrink-0">
-            SP
-          </div>
+          {schoolProfile.logo_url ? (
+            <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 p-0.5 flex items-center justify-center shrink-0 shadow-xs overflow-hidden">
+              <img
+                src={schoolProfile.logo_url}
+                alt="School Logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          ) : (
+            <div className="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-black text-sm shadow-xs group-hover:bg-slate-800 transition-colors shrink-0 tracking-wider">
+              {schoolProfile.school_name
+                .split(" ")
+                .filter(Boolean)
+                .slice(0, 2)
+                .map((w) => w[0])
+                .join("")
+                .toUpperCase() || "MT"}
+            </div>
+          )}
           <div className="leading-tight">
             <div className="flex items-center space-x-2.5">
-              <span className="text-sm sm:text-base font-bold text-slate-900 tracking-tight group-hover:text-emerald-700 transition-colors">
-                St. Paul&apos;s Senior Secondary School
+              <span className="text-sm sm:text-base font-bold text-slate-900 tracking-tight group-hover:text-slate-700 transition-colors line-clamp-1 max-w-[280px] sm:max-w-md">
+                {schoolProfile.school_name}
               </span>
             </div>
-            <p className="hidden sm:block text-xs text-slate-500 font-medium mt-0.5">
-              Institutional ERP & Academic Management Portal
+            <p className="hidden sm:block text-[11px] text-slate-400 font-medium mt-0.5">
+              Institutional ERP &bull; School Code: <span className="font-mono text-slate-600 font-semibold">{schoolProfile.school_code}</span>
             </p>
           </div>
         </Link>
@@ -105,20 +123,7 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
 
       {/* Right Section: Modern SaaS Utility Toolbar */}
       <div className="flex items-center space-x-2 sm:space-x-3">
-        {/* 1. Global Quick Search Pill (⌘K / Ctrl K) */}
-        <button
-          onClick={() => setIsSearchOpen(true)}
-          className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200/80 text-slate-600 hover:text-slate-900 border border-slate-200 text-xs font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
-          title="Search scholars, staff, and records (Ctrl + K)"
-        >
-          <Search className="w-4 h-4 text-slate-500" />
-          <span className="hidden md:inline">Quick Search...</span>
-          <kbd className="hidden md:inline-flex items-center px-1.5 py-0.5 rounded bg-white border border-slate-300 text-[11px] font-mono text-slate-500 shadow-2xs">
-            ⌘K
-          </kbd>
-        </button>
-
-        {/* 2. Single Notification Bell with Unread Indicator */}
+        {/* Notification Bell with Unread Indicator */}
         <div className="relative" ref={notifRef}>
           <button
             onClick={() => setIsNotificationsOpen(!isNotificationsOpen)}

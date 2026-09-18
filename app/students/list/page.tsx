@@ -44,16 +44,6 @@ export default function StudentsListPage() {
             <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
               Institutional Student Roster
             </h1>
-            {isLive ? (
-              <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
-                <Database className="w-3 h-3" />
-                <span>Supabase Live</span>
-              </span>
-            ) : (
-              <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-slate-100 text-slate-600 border border-slate-300">
-                <span>Demo Engine</span>
-              </span>
-            )}
           </div>
           <p className="text-xs text-slate-500 mt-0.5">
             Active enrolled scholars across all wings (Pre-Primary, Primary, Middle, Secondary & Senior Secondary)
