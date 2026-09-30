@@ -1,0 +1,270 @@
+/**
+ * What each planned (not yet built) screen will do, shown on its "coming soon" page.
+ * Keeps the menu complete without showing fake data. Source: the rebuild plan.
+ */
+export interface PlannedPage {
+  title: string;
+  module: string;
+  phase: number;
+  summary: string;
+  features: string[];
+  /** Live pages that cover part of this job today. */
+  meanwhile?: { label: string; href: string }[];
+}
+
+export const PHASE_NAMES: Record<number, string> = {
+  0: "Foundation",
+  1: "Fees",
+  2: "Students",
+  3: "Attendance & messages",
+  4: "Exams & report cards",
+  5: "Staff, payroll & transport",
+  6: "Academics",
+  7: "Parent app & online fees",
+};
+
+export const PLANNED: Record<string, PlannedPage> = {
+  "/fees/dues": {
+    title: "Dues & reminders",
+    module: "Fees",
+    phase: 1,
+    summary: "Every student with fees pending, class by class, with one-click reminders to parents.",
+    features: ["Pending amount by class and instalment", "Filter by class, section, instalment or amount", "Send fee reminders on SMS or WhatsApp", "Print due slips and export to Excel"],
+    meanwhile: [{ label: "Highest balances on the fee counter", href: "/fees/collect" }],
+  },
+  "/fees/receipts": {
+    title: "Receipts",
+    module: "Fees",
+    phase: 1,
+    summary: "The full receipt register: search, reprint, and cancel with a reason.",
+    features: ["Filter by date, payment mode and cashier", "Reprint any receipt", "Cancel a receipt (admin only, reason recorded)", "Cheque status: cleared or bounced"],
+    meanwhile: [{ label: "Latest receipts on the fee counter", href: "/fees/collect" }],
+  },
+  "/fees/reports": {
+    title: "Fee reports",
+    module: "Fees",
+    phase: 1,
+    summary: "Day book and collection reports that match the bank deposit.",
+    features: ["Day book by payment mode and cashier", "Monthly and head-wise collection", "Class-wise collected vs pending", "Concession and transport fee reports"],
+  },
+  "/fees/setup": {
+    title: "Fee setup",
+    module: "Fees",
+    phase: 1,
+    summary: "Fee heads, class-wise amounts, quarterly instalments, late fine and concessions.",
+    features: ["Heads: tuition, annual charges, exam, computer, transport, admission", "Class-wise amounts in one grid", "Quarterly due dates (10 Apr, 10 Jul, 10 Oct, 10 Jan)", "Late fine ₹10 a day, up to ₹500", "Sibling, staff ward and RTE concessions"],
+  },
+  "/students/enquiries": {
+    title: "Enquiries",
+    module: "Students",
+    phase: 2,
+    summary: "Admission enquiries from first call to admission, with follow-up reminders.",
+    features: ["Board: New → Follow-up → Test → Admitted or Lost", "Follow-up reminders on the dashboard", "Admission test and result", "Turn an enquiry into an admission in one click"],
+    meanwhile: [{ label: "New admission", href: "/students?new=1" }],
+  },
+  "/students/promote": {
+    title: "Promote & transfer",
+    module: "Students",
+    phase: 2,
+    summary: "Move students to the next class at year end, or between sections.",
+    features: ["Pick a class, see results, choose the next class", "Carry pending fees forward to the new session", "Section change", "Full history of every move"],
+  },
+  "/students/certificates": {
+    title: "Certificates",
+    module: "Students",
+    phase: 2,
+    summary: "TC, bonafide, character and fee certificates on the school letterhead.",
+    features: ["Preview, issue with a serial number, print", "Warning before a TC if fees are pending", "Register of every certificate issued", "Bulk issue for a class"],
+  },
+  "/students/documents": {
+    title: "Documents & photos",
+    module: "Students",
+    phase: 2,
+    summary: "Photos, Aadhaar, birth certificate, TC and marksheets for every student.",
+    features: ["Class-wise checklist with upload in each cell", "Bulk photo upload by SR number file names", "Filter students with missing documents"],
+  },
+  "/students/print": {
+    title: "ID cards & print",
+    module: "Students",
+    phase: 2,
+    summary: "ID cards, admit cards and fee slips for a whole class on A4 sheets.",
+    features: ["Photo and QR code (SR no.) on ID cards", "Templates from Settings", "Class-wise preview before printing"],
+  },
+  "/attendance/today": {
+    title: "Today",
+    module: "Attendance",
+    phase: 3,
+    summary: "Every section at a glance: marked, pending, and who is absent.",
+    features: ["All 38 sections with % present or pending", "Class teacher name on pending sections", "Remind teachers in one click", "Absent list with parents' numbers"],
+    meanwhile: [{ label: "Mark attendance", href: "/attendance/mark" }],
+  },
+  "/attendance/register": {
+    title: "Attendance register",
+    module: "Attendance",
+    phase: 3,
+    summary: "The monthly register: students × dates, totals and percentage.",
+    features: ["Month grid in register format, printable", "Below 75% highlighted", "Student-wise and class-wise"],
+  },
+  "/messages/new": {
+    title: "New message",
+    module: "Messages",
+    phase: 3,
+    summary: "SMS, WhatsApp and app notices to parents and staff, with delivery reports.",
+    features: ["Whole school, classes, sections, staff or fee defaulters", "DLT-approved SMS templates and WhatsApp templates", "Preview for one parent and the cost before sending", "Send now or schedule"],
+  },
+  "/messages": {
+    title: "Message history",
+    module: "Messages",
+    phase: 3,
+    summary: "Everything the school has sent, with delivered and failed counts.",
+    features: ["Delivery report per message", "Daily credits used", "Resend failed messages"],
+  },
+  "/calendar": {
+    title: "Calendar & holidays",
+    module: "Messages",
+    phase: 3,
+    summary: "School events and holidays. Holidays switch off attendance for the day.",
+    features: ["Month view and list", "Holiday notice to parents (optional)", "Shows in the parent app"],
+  },
+  "/birthdays": {
+    title: "Birthdays",
+    module: "Messages",
+    phase: 3,
+    summary: "Today's and this week's birthdays of students and staff.",
+    features: ["From real dates of birth", "Automatic wishes at 8 am (on/off)"],
+  },
+  "/exams/setup": {
+    title: "Exam setup",
+    module: "Exams",
+    phase: 4,
+    summary: "Terms, exams, date sheet and CBSE grading in one place.",
+    features: ["PT-1, Half-yearly, PT-2, Annual", "Subjects and maximum marks per class", "Date sheet printing", "CBSE 8-point grading (A1 to E), pass at 33%"],
+  },
+  "/exams/marks": {
+    title: "Marks entry",
+    module: "Exams",
+    phase: 4,
+    summary: "A fast, spreadsheet-like grid for teachers, on phone or computer.",
+    features: ["Keyboard entry, never above the maximum", "AB and ML codes, autosave", "Teachers see only their own subjects", "Admin locks and publishes"],
+  },
+  "/exams/report-cards": {
+    title: "Report cards",
+    module: "Exams",
+    phase: 4,
+    summary: "CBSE report cards for a whole class as one PDF.",
+    features: ["Scholastic and co-scholastic areas", "9th–10th: 80 theory + 20 internal", "Rank, percentage and attendance filled in", "Publish to the parent app"],
+  },
+  "/academics/timetable": {
+    title: "Timetable",
+    module: "Academics",
+    phase: 6,
+    summary: "Class and teacher timetables with clash checks.",
+    features: ["Days × periods grid per class", "Warning when a teacher is double-booked", "Teacher-wise view and printing", "Substitution for absent teachers"],
+  },
+  "/academics/homework": {
+    title: "Homework",
+    module: "Academics",
+    phase: 6,
+    summary: "Teachers post homework with photos or PDFs; parents see it in the app.",
+    features: ["Class and subject-wise", "Due dates", "Optional SMS to parents"],
+  },
+  "/academics/syllabus": {
+    title: "Syllabus",
+    module: "Academics",
+    phase: 6,
+    summary: "Chapters planned vs taught, class by class.",
+    features: ["Chapter plan per subject and month", "Teachers mark lessons done", "Coverage % per class"],
+  },
+  "/academics/copy-check": {
+    title: "Copy check",
+    module: "Academics",
+    phase: 6,
+    summary: "Notebook checking with ready remarks.",
+    features: ["Complete, incomplete or not submitted per student", "Preset remarks", "Reports by student and teacher"],
+  },
+  "/staff/new": {
+    title: "Add staff",
+    module: "Staff",
+    phase: 5,
+    summary: "Add a teacher or staff member and create their login.",
+    features: ["Employee code from settings", "Login with mobile and password or OTP", "Excel import for the full staff list"],
+    meanwhile: [{ label: "Staff directory", href: "/staff" }],
+  },
+  "/staff/allocation": {
+    title: "Subjects & class teachers",
+    module: "Staff",
+    phase: 5,
+    summary: "Who teaches what, and the class teacher of every section.",
+    features: ["Section × subject grid with teacher picker", "Class teacher per section", "Drives each teacher's menu and marks entry"],
+  },
+  "/staff/attendance": {
+    title: "Staff attendance",
+    module: "Staff",
+    phase: 5,
+    summary: "Daily staff attendance with late and half-day rules, feeding payroll.",
+    features: ["Mark or import from a biometric machine", "Late and half-day rules", "Monthly report for salary"],
+  },
+  "/staff/leave": {
+    title: "Leave",
+    module: "Staff",
+    phase: 5,
+    summary: "Leave requests from staff and students, approved in one place.",
+    features: ["Approve or reject", "Leave balance", "Calendar view"],
+  },
+  "/staff/payroll": {
+    title: "Payroll",
+    module: "Staff",
+    phase: 5,
+    summary: "Monthly salary from attendance, with slips and a bank sheet.",
+    features: ["Basic, DA, HRA, PF, ESI and TDS", "Loss of pay from attendance", "Salary slip PDF and bank transfer sheet"],
+  },
+  "/transport": {
+    title: "Routes & vehicles",
+    module: "Transport",
+    phase: 5,
+    summary: "The school's 8 bus routes, stops, pickup times and vehicles.",
+    features: ["Stops with pickup times", "Vehicle number, capacity, driver and conductor", "Route fee"],
+  },
+  "/transport/students": {
+    title: "Students on bus",
+    module: "Transport",
+    phase: 5,
+    summary: "Which of the 474 bus students ride which route and stop.",
+    features: ["Seats used vs capacity", "Bus-wise list for drivers", "Transport fee added to the student's fees"],
+  },
+  "/reports": {
+    title: "Reports",
+    module: "Reports",
+    phase: 2,
+    summary: "Every report in one place, each with filters, print and Excel.",
+    features: ["Students: class strength, gender, category, UDISE, siblings, bus", "Fees, attendance, exams and staff", "Gate pass log and certificate register"],
+  },
+  "/settings/users": {
+    title: "Users & roles",
+    module: "Settings",
+    phase: 0,
+    summary: "Logins for staff with Admin, Accountant, Teacher and Office roles.",
+    features: ["Mobile + password or OTP login", "Permission matrix per role", "Password reset"],
+  },
+  "/settings/messaging": {
+    title: "Messaging setup",
+    module: "Settings",
+    phase: 3,
+    summary: "SMS provider, DLT templates and the WhatsApp number.",
+    features: ["DLT entity and template IDs", "WhatsApp business number", "Credits balance"],
+  },
+  "/settings/templates": {
+    title: "Print templates",
+    module: "Settings",
+    phase: 2,
+    summary: "Header and footer for receipts, certificates, ID cards and report cards.",
+    features: ["School logo and address", "Principal's signature", "Live preview"],
+  },
+  "/settings/data": {
+    title: "Data & backup",
+    module: "Settings",
+    phase: 1,
+    summary: "Import from Excel (including a Schoollog export), export everything, and see who changed what.",
+    features: ["Excel import with checks", "Full export and backup download", "Audit log of changes"],
+  },
+};

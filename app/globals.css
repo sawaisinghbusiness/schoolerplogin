@@ -2,50 +2,515 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==========================================================================
+   SchoolDesk design tokens
+   Colors mirror tailwind.config.ts (Ink neutrals, Jade brand, Marigold accent).
+   ========================================================================== */
 :root {
-  --foreground-rgb: 15, 23, 42;
-  --background-rgb: 248, 250, 252;
+  --font-sans: "Plus Jakarta Sans Variable";
+  --font-mono: "JetBrains Mono Variable";
+  --foreground-rgb: 22, 27, 39;
+  --background-rgb: 245, 246, 250;
+
+  --background: 225 33% 98%;
+  --foreground: 222 27% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 27% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 27% 12%;
+  --primary: 167 89% 30%;
+  --primary-dark: 168 88% 24%;
+  --primary-foreground: 0 0% 100%;
+  --primary-light: 160 84% 96%;
+  --secondary: 223 27% 95%;
+  --secondary-foreground: 222 27% 12%;
+  --muted: 223 27% 95%;
+  --muted-foreground: 220 14% 47%;
+  --accent: 160 84% 96%;
+  --accent-foreground: 168 88% 24%;
+  --success: 167 89% 30%;
+  --warning: 39 89% 52%;
+  --danger: 358 75% 59%;
+  --info: 199 89% 48%;
+  --destructive: 358 75% 59%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 222 26% 91%;
+  --input: 222 26% 91%;
+  --ring: 167 89% 30%;
+  --chart-1: 167 89% 30%;
+  --chart-2: 199 89% 48%;
+  --chart-3: 39 89% 52%;
+  --chart-4: 250 60% 63%;
+  --chart-5: 358 75% 59%;
+  --radius: 1rem;
+  --sidebar-width: 272px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--background-rgb));
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Helvetica Neue", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer base {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    color: rgb(var(--foreground-rgb));
+    background-color: rgb(var(--background-rgb));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Plus Jakarta Sans has a narrow space glyph; open it a touch so words never run together. */
+    word-spacing: 0.05em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  /* Numbers line up in every table and KPI. */
+  td,
+  th,
+  .font-mono {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* One consistent, visible keyboard focus state across all pages. */
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: 2px solid rgb(52 70 209 / 0.55);
+    outline-offset: 2px;
+    border-radius: 0.5rem;
+  }
+
+  input,
+  select,
+  textarea {
+    accent-color: #3446d1;
+  }
+
+  ::placeholder {
+    color: #97a1b6;
+    opacity: 1;
+  }
+
+  ::selection {
+    background: rgb(52 70 209 / 0.18);
+    color: inherit;
+  }
+
+  /* Low-specificity table defaults: pages that style their own cells still win. */
+  :where(table) {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  :where(thead) :where(th) {
+    font-weight: 500;
+  }
+  :where(tbody tr) {
+    transition: background-color 150ms ease;
+  }
 }
 
-/* Tabular numbers for financial and numerical data */
-.tabular-nums {
-  font-variant-numeric: tabular-nums;
+/* Interactive elements: smooth colour changes and a tactile press. */
+button,
+a,
+input,
+select,
+textarea {
+  transition-property: color, background-color, border-color, box-shadow, opacity, transform;
+  transition-timing-function: var(--ease-out);
+  transition-duration: 180ms;
 }
 
-/* Custom sleek enterprise scrollbar */
+/* Slim scrollbar tinted to the Ink palette. */
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #cbd2df;
   border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #97a1b6;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.scrollbar-dark::-webkit-scrollbar-thumb {
+  background: #252c3b;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.scrollbar-dark::-webkit-scrollbar-thumb:hover {
+  background: #394153;
+  background-clip: padding-box;
+  border: 2px solid transparent;
 }
 
-/* Subtle transitions for interactive elements */
-button, a, input, select {
-  transition-property: color, background-color, border-color, box-shadow, opacity, transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+@layer components {
+  /*
+    SchoolDesk look ("Clean White", 29 Sep 2026): white cards with a hairline border and a
+    soft low shadow, 16px corners, royal-indigo actions, and colour only where it means
+    something (green paid/present, red due/absent, amber pending). No gradients or glow.
+  */
+
+  .page-enter {
+    animation: pageFade 0.18s ease-out backwards;
+  }
+
+  .surface {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-card;
+  }
+  .surface-hover {
+    @apply transition-shadow hover:shadow-card-hover;
+  }
+
+  .eyebrow {
+    @apply text-[13px] font-medium text-slate-500;
+  }
+
+  .skeleton {
+    @apply relative overflow-hidden rounded-lg bg-slate-100;
+  }
+  .skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.7), transparent);
+    animation: shimmer 1.6s infinite;
+  }
+
+  /* Page chrome */
+  .page-header {
+    @apply flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between;
+  }
+  .page-eyebrow {
+    @apply mb-1.5 flex items-center gap-1.5 text-[13px] font-medium text-slate-500;
+  }
+  .page-title {
+    @apply text-[26px] font-bold leading-tight tracking-tight text-slate-900;
+  }
+  .page-subtitle {
+    @apply mt-1 max-w-3xl text-sm text-slate-500;
+  }
+
+  /* Surfaces */
+  .card {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-card;
+  }
+  .card-hover {
+    @apply transition-shadow hover:shadow-card-hover;
+  }
+  .panel {
+    @apply rounded-xl border border-slate-200/80 bg-slate-50;
+  }
+
+  /* Forms */
+  .field-label {
+    @apply mb-1.5 block text-[13px] font-semibold text-slate-700;
+  }
+  .field {
+    @apply rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 hover:border-slate-300 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/15 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-500;
+  }
+  .field:read-only:not(select) {
+    @apply bg-slate-50 text-slate-600 focus:border-slate-200 focus:ring-0;
+  }
+  .field-sm {
+    @apply rounded-lg px-3 py-2 text-[13px];
+  }
+  select.field {
+    @apply cursor-pointer appearance-none pr-9;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23687389'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    background-position: right 0.65rem center;
+    background-repeat: no-repeat;
+    background-size: 1.05rem;
+  }
+  select.field-sm {
+    @apply pr-8;
+    background-position: right 0.5rem center;
+  }
+  textarea.field {
+    @apply min-h-[5.5rem] leading-relaxed;
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    @apply h-4 w-4 cursor-pointer border-slate-300 text-brand-600 focus:ring-brand-500;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors disabled:pointer-events-none disabled:opacity-50;
+  }
+  .btn-sm {
+    @apply gap-1.5 rounded-lg px-3 py-1.5 text-[13px];
+  }
+  .btn-icon {
+    @apply p-2;
+  }
+  .btn-primary {
+    @apply bg-brand-600 text-white shadow-sm hover:bg-brand-700;
+  }
+  .btn-dark {
+    @apply bg-slate-900 text-white shadow-sm hover:bg-slate-800;
+  }
+  .btn-secondary {
+    @apply border border-slate-200 bg-white text-slate-700 shadow-2xs hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900;
+  }
+  .btn-soft {
+    @apply bg-brand-50 text-brand-700 hover:bg-brand-100;
+  }
+  .btn-danger {
+    @apply bg-rose-600 text-white shadow-sm hover:bg-rose-700;
+  }
+
+  /* Tables */
+  .table-head {
+    @apply bg-slate-50 text-xs font-semibold text-slate-500;
+  }
+  .table-head th {
+    @apply border-b border-slate-200;
+  }
+  :where(table) tbody tr:hover {
+    @apply bg-slate-50/70;
+  }
+
+  /* Badges & alerts */
+  .badge {
+    @apply inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+  .alert {
+    @apply flex items-start gap-2.5 rounded-xl border px-4 py-3 text-sm;
+  }
+
+  .badge-emerald { @apply bg-emerald-50 text-emerald-700; }
+  .badge-amber { @apply bg-marigold-50 text-marigold-800; }
+  .badge-orange { @apply bg-orange-50 text-orange-700; }
+  .badge-rose { @apply bg-rose-50 text-rose-700; }
+  .badge-sky { @apply bg-sky-50 text-sky-700; }
+  .badge-violet { @apply bg-violet-50 text-violet-700; }
+  .badge-pink { @apply bg-pink-50 text-pink-700; }
+  .badge-slate { @apply bg-slate-100 text-slate-700; }
+  .badge-brand { @apply bg-brand-50 text-brand-700; }
+
+  .alert-emerald { @apply border-emerald-200 bg-emerald-50 text-emerald-900; }
+  .alert-amber { @apply border-marigold-200 bg-marigold-50 text-marigold-900; }
+  .alert-orange { @apply border-orange-200 bg-orange-50 text-orange-900; }
+  .alert-rose { @apply border-rose-200 bg-rose-50 text-rose-900; }
+  .alert-sky { @apply border-sky-200 bg-sky-50 text-sky-900; }
+  .alert-violet { @apply border-violet-200 bg-violet-50 text-violet-900; }
+  .alert-pink { @apply border-pink-200 bg-pink-50 text-pink-900; }
+  .alert-slate { @apply border-slate-200 bg-slate-50 text-slate-700; }
+  .alert-brand { @apply border-brand-200 bg-brand-50 text-brand-900; }
+
+  /* Soft dotted backdrop used behind hero areas. */
+  .bg-grid {
+    background-image: radial-gradient(rgb(12 16 25 / 0.07) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+  .bg-grid-dark {
+    background-image: radial-gradient(rgb(255 255 255 / 0.07) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+}
+
+/* Staggered entrance helper: set --i on children. */
+
+/* Conic Gradient for ShineBorder effect */
+.bg-conic {
+  background-image: conic-gradient(var(--tw-gradient-stops));
+}
+
+@keyframes border-beam {
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+[style*="--border-width"] {
+  -webkit-mask: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  -webkit-mask-clip: padding-box, border-box;
+  -webkit-mask-composite: source-out;
+}
+
+/* Keyframes referenced from plain CSS (Tailwind defines its own copies). */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes pageFade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes toastBar {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+/* ==========================================================================
+   Legacy MTNA utility classes (still referenced by pages)
+   ========================================================================== */
+.mtna-card {
+  background-color: hsl(var(--card));
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgb(12 16 25 / 0.04), 0 0 0 1px rgb(12 16 25 / 0.06);
+}
+
+.mtna-page-title {
+  color: hsl(var(--foreground));
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 2.25rem;
+}
+
+.mtna-label {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+
+.mtna-kpi-number {
+  color: hsl(var(--foreground));
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+.mtna-nav-item {
+  align-items: center;
+  border-radius: var(--radius);
+  color: hsl(var(--muted-foreground));
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 500;
+  gap: 0.625rem;
+  line-height: 1.25rem;
+  padding: 0.5rem 0.75rem;
+  min-height: 40px;
+  transition-property: color, background-color, border-color;
   transition-duration: 150ms;
 }
 
+.mtna-nav-item:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+.mtna-nav-item-active {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.mtna-nav-item-active:hover {
+  background-color: hsl(var(--primary-dark));
+  color: hsl(var(--primary-foreground));
+}
+
+.mtna-table-wrap {
+  background-color: hsl(var(--card));
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgb(12 16 25 / 0.04), 0 0 0 1px rgb(12 16 25 / 0.06);
+  overflow: hidden;
+}
+
+.mtna-enter {
+  animation: fadeUp 0.3s var(--ease-out) both;
+}
+
+/* Smooth Accordion Unfold Animation for Timetable */
+.smooth-accordion-enter {
+  display: grid;
+  grid-template-rows: 0fr;
+  animation: smoothGridOpen 0.38s var(--ease-out) forwards;
+}
+
+.smooth-accordion-enter > div {
+  overflow: hidden;
+}
+
+@keyframes smoothGridOpen {
+  0% {
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  40% {
+    opacity: 0.7;
+  }
+  100% {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slot-glide-enter {
+  animation: slotGlideIn 0.32s var(--ease-out) both;
+}
+
+@keyframes slotGlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Respect users who ask for less motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*
+  Horizontal scrollers must be the containing block for anything absolutely positioned
+  inside them (e.g. `sr-only` table headings). Otherwise those escape the scroller and
+  widen the whole page, which then slides left and right on narrow screens.
+*/
+.overflow-x-auto {
+  position: relative;
+}

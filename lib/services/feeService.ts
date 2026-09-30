@@ -1,10 +1,24 @@
 import { supabase, isSupabaseConfigured } from "@/lib/supabaseClient";
+import { api, usingRemoteBackend } from "@/lib/apiClient";
+import type { Student } from "@/data/mockData";
+import type { FeeConfig } from "@/lib/feeEngine";
 
-export interface FeeHeads {
-  tuition_fee: number;
-  exam_fee: number;
-  transport_fee: number;
-  late_fine?: number;
+export interface DaySummary {
+  date: string;
+  count: number;
+  total: number;
+  byMode: { Cash: number; UPI: number; Cheque: number; Other: number };
+}
+
+/** Receipt heads: tuition_fee, annual_fee, exam_fee, computer_fee, transport_fee, admission_fee, other_fee, late_fine… */
+export type FeeHeads = Record<string, number>;
+
+export interface FeePosition {
+  asOf: string;
+  config: FeeConfig;
+  input: { cls: string; bus: boolean; newAdmission: boolean; concession: string | null };
+  ledger: { total: number; discount: number; paid: number; finePaid: number; net: number; balance: number };
+  fineSupported: boolean;
 }
 
 export interface FeeTransaction {
@@ -18,6 +32,9 @@ export interface FeeTransaction {
   collected_by: string;
   payment_date: string;
   remarks?: string | null;
+  /** Set on cancelled receipts: they stay in the register but are not money collected. */
+  cancelled?: boolean;
+  cancel_reason?: string | null;
   student?: {
     name: string;
     sr_no: string;
@@ -31,7 +48,6 @@ export interface FeeTransaction {
 
 // In-memory transactions cache for fallback
 let localTransactions: FeeTransaction[] = [];
-let localReceiptCounter = 1001;
 
 /**
  * Convert numeric Indian currency to English words
@@ -109,134 +125,59 @@ export function numberToWordsIndian(num: number): string {
 
 export const feeService = {
   /**
-   * Record a new fee payment transaction in Supabase and update student balance
+   * Takes a payment at the counter. The backend decides where the money goes and what
+   * late fine applies; the counter sends the fee part and the fine collected separately.
    */
-  async recordPayment(params: {
+  async collect(params: {
     studentId: string;
-    studentDetails: {
-      name: string;
-      sr_no: string;
-      admission_no?: string;
-      class_name?: string;
-      section?: string;
-      father_name?: string;
-      contact_phone?: string;
-    };
-    amountPaid: number;
-    feeHeads: FeeHeads;
+    amount: number;
+    fine: number;
+    waiveReason?: string;
     paymentMode: "Cash" | "UPI" | "Cheque" | "Net Banking";
     transactionId?: string;
-    currentDue: number;
-    collectedBy?: string;
     remarks?: string;
-  }): Promise<{
-    success: boolean;
-    transaction?: FeeTransaction;
-    newDue: number;
-    error?: string;
-  }> {
-    const {
-      studentId,
-      studentDetails,
-      amountPaid,
-      feeHeads,
-      paymentMode,
-      transactionId,
-      currentDue,
-      collectedBy = "Admin Office",
-      remarks = "",
-    } = params;
+  }): Promise<{ success: boolean; transaction?: FeeTransaction; newDue?: number; error?: string }> {
+    const res = await api.post<{ success: boolean; transaction?: FeeTransaction; newDue: number; error?: string }>("/api/fees/pay", params);
+    if (res.ok && res.data?.success && res.data.transaction) return { success: true, transaction: res.data.transaction, newDue: res.data.newDue };
+    return { success: false, newDue: res.data?.newDue, error: res.data?.error || res.error || "The payment was not saved." };
+  },
 
-    const newDue = Math.max(0, currentDue - amountPaid);
+  /** Fee setup + ledger for one student: the counter works out instalments and fine from it. */
+  async fetchPosition(studentId: string): Promise<{ data?: FeePosition; error?: string }> {
+    const res = await api.get<FeePosition & { error?: string }>(`/api/fees/position/${studentId}`);
+    return res.ok && res.data ? { data: res.data } : { error: res.data?.error || res.error || "Could not load the fee details." };
+  },
 
-    if (isSupabaseConfigured) {
-      try {
-        // 1. Insert transaction into Supabase fee_transactions table
-        const insertPayload = {
-          student_id: studentId,
-          amount_paid: amountPaid,
-          payment_mode: paymentMode,
-          transaction_id: transactionId || null,
-          fee_heads: feeHeads,
-          collected_by: collectedBy,
-          remarks: remarks || null,
-        };
+  /** Receipts for one student, newest first (backend only). */
+  async fetchStudentTransactions(studentId: string, limit = 20): Promise<FeeTransaction[]> {
+    if (!usingRemoteBackend) return localTransactions.filter((t) => t.student_id === studentId).slice(0, limit);
+    const res = await api.get<{ data: FeeTransaction[] }>(`/api/fees/transactions?limit=${limit}&studentId=${encodeURIComponent(studentId)}`);
+    return res.ok && res.data ? res.data.data : [];
+  },
 
-        const { data, error } = await supabase
-          .from("fee_transactions")
-          .insert([insertPayload])
-          .select()
-          .single();
+  /** What was collected on a day (defaults to today, India time), split by mode. */
+  async fetchDaySummary(date?: string): Promise<DaySummary | null> {
+    if (!usingRemoteBackend) return null;
+    const res = await api.get<{ data: DaySummary }>(`/api/fees/summary${date ? `?date=${date}` : ""}`);
+    return res.ok && res.data ? res.data.data : null;
+  },
 
-        if (error) {
-          console.error("Failed to insert fee transaction:", error);
-          return {
-            success: false,
-            newDue: currentDue,
-            error: error.message || "Failed to record transaction in database.",
-          };
-        }
-
-        // 2. Decrement student's fees_due in Supabase
-        const { error: updateError } = await supabase
-          .from("students")
-          .update({ fees_due: newDue })
-          .eq("id", studentId);
-
-        if (updateError) {
-          console.warn("Could not update fees_due column:", updateError.message);
-          // Try fallback balance_fee column
-          await supabase
-            .from("students")
-            .update({ balance_fee: newDue })
-            .eq("id", studentId);
-        }
-
-        const transaction: FeeTransaction = {
-          id: data.id,
-          receipt_no: data.receipt_no,
-          student_id: data.student_id,
-          amount_paid: Number(data.amount_paid),
-          payment_mode: data.payment_mode,
-          transaction_id: data.transaction_id,
-          fee_heads: data.fee_heads,
-          collected_by: data.collected_by || collectedBy,
-          payment_date: data.payment_date || new Date().toISOString(),
-          remarks: data.remarks,
-          student: studentDetails,
-        };
-
-        localTransactions.unshift(transaction);
-        return { success: true, transaction, newDue };
-      } catch (err: any) {
-        console.error("Supabase record payment exception:", err);
-        return { success: false, newDue: currentDue, error: err.message };
-      }
-    }
-
-    // Local fallback
-    const mockTx: FeeTransaction = {
-      id: `tx-${Date.now()}`,
-      receipt_no: localReceiptCounter++,
-      student_id: studentId,
-      amount_paid: amountPaid,
-      payment_mode: paymentMode,
-      transaction_id: transactionId || null,
-      fee_heads: feeHeads,
-      collected_by: collectedBy,
-      payment_date: new Date().toISOString(),
-      remarks: remarks || null,
-      student: studentDetails,
-    };
-
-    localTransactions.unshift(mockTx);
-    return { success: true, transaction: mockTx, newDue };
+  /** Students with the largest pending balance. */
+  async fetchTopDues(limit = 6): Promise<Student[]> {
+    if (!usingRemoteBackend) return [];
+    const res = await api.get<{ data: Student[] }>(`/api/fees/top-dues?limit=${limit}`);
+    return res.ok && res.data ? res.data.data : [];
   },
 
   /**
    * Fetch recent fee transactions (for audit & reprinting)
    */
   async fetchRecentTransactions(limit = 10): Promise<FeeTransaction[]> {
+    if (usingRemoteBackend) {
+      const res = await api.get<{ data: FeeTransaction[] }>(`/api/fees/transactions?limit=${limit}`);
+      return res.ok && res.data ? res.data.data : [];
+    }
+
     if (isSupabaseConfigured) {
       try {
         const { data, error } = await supabase
@@ -247,10 +188,10 @@ export const feeService = {
               name,
               sr_no,
               admission_no,
-              class_name,
+              class,
               section,
               father_name,
-              contact_phone
+              mobile
             )
           `)
           .order("payment_date", { ascending: false })
@@ -261,14 +202,24 @@ export const feeService = {
             id: d.id,
             receipt_no: d.receipt_no,
             student_id: d.student_id,
-            amount_paid: Number(d.amount_paid),
+            amount_paid: Number(d.amount),
             payment_mode: d.payment_mode,
-            transaction_id: d.transaction_id,
-            fee_heads: d.fee_heads,
+            transaction_id: d.transaction_ref,
+            fee_heads: { tuition_fee: Number(d.amount), exam_fee: 0, transport_fee: 0 },
             collected_by: d.collected_by,
             payment_date: d.payment_date,
-            remarks: d.remarks,
-            student: d.students || undefined,
+            remarks: d.installment_name,
+            student: d.students
+              ? {
+                  name: d.students.name,
+                  sr_no: d.students.sr_no,
+                  admission_no: d.students.admission_no,
+                  class_name: d.students.class,
+                  section: d.students.section,
+                  father_name: d.students.father_name,
+                  contact_phone: d.students.mobile,
+                }
+              : undefined,
           }));
         }
       } catch (err) {

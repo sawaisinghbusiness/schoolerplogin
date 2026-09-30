@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useRef } from "react";
-import { Printer, X, CheckCircle2, Download, School } from "lucide-react";
+import React, { useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
+import { CheckCircle2, Printer, X } from "lucide-react";
 import { FeeTransaction, numberToWordsIndian } from "@/lib/services/feeService";
+import { headRows } from "@/lib/feeHeads";
 
 interface FeeReceiptModalProps {
   isOpen: boolean;
@@ -11,356 +13,220 @@ interface FeeReceiptModalProps {
   schoolName?: string;
 }
 
-export function FeeReceiptModal({
-  isOpen,
-  onClose,
-  transaction,
-  schoolName = "St. Paul's Senior Secondary School",
-}: FeeReceiptModalProps) {
-  if (!isOpen || !transaction) return null;
+const inr = (n: number) => "₹" + Number(n || 0).toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
-  const handlePrint = () => {
-    window.print();
-  };
+export function FeeReceiptModal({ isOpen, onClose, transaction, schoolName = "St. Paul School" }: FeeReceiptModalProps) {
+  const printRef = useRef<HTMLButtonElement>(null);
 
-  const student = transaction.student;
-  const heads = transaction.fee_heads || {
-    tuition_fee: transaction.amount_paid,
-    exam_fee: 0,
-    transport_fee: 0,
-    late_fine: 0,
-  };
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", onKey);
+    printRef.current?.focus();
+    return () => window.removeEventListener("keydown", onKey);
+  }, [isOpen, onClose]);
 
-  const formattedDate = new Date(transaction.payment_date).toLocaleDateString("en-IN", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  });
+  if (!isOpen || !transaction || typeof document === "undefined") return null;
 
-  const formattedTime = new Date(transaction.payment_date).toLocaleTimeString("en-IN", {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: true,
-  });
-
-  const words = numberToWordsIndian(transaction.amount_paid);
-
-  return (
-    <>
-      {/* Dedicated Print Stylesheet: Ensures ONLY the receipt container prints cleanly */}
+  // Portal to <body> so no page wrapper (animations, overflow) can offset or clip it,
+  // and so print CSS can drop everything else with `body > *:not(#receipt-portal)`.
+  return createPortal(
+    <div id="receipt-portal">
+      {/*
+        Print: the app shell is h-screen + overflow-hidden, so merely hiding it (visibility)
+        still clips the page to one screen. Remove it from layout instead, and let the
+        receipt flow at natural height on A4 with both copies.
+      */}
       <style jsx global>{`
         @media print {
-          body * {
-            visibility: hidden !important;
+          @page {
+            size: A4 portrait;
+            margin: 10mm;
           }
-          #printable-fee-receipt,
-          #printable-fee-receipt * {
-            visibility: visible !important;
+          html,
+          body {
+            height: auto !important;
+            overflow: visible !important;
+            background: #fff !important;
           }
-          #printable-fee-receipt {
-            position: absolute !important;
-            left: 0 !important;
-            top: 0 !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            background: white !important;
-            box-shadow: none !important;
-            border: none !important;
-          }
-          .no-print {
+          body > *:not(#receipt-portal) {
             display: none !important;
+          }
+          #receipt-portal * {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+          }
+          #receipt-portal .receipt-overlay,
+          #receipt-portal .receipt-dialog,
+          #receipt-portal .receipt-body {
+            position: static !important;
+            display: block !important;
+            max-height: none !important;
+            max-width: none !important;
+            overflow: visible !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: #fff !important;
+            box-shadow: none !important;
+            border: 0 !important;
+            backdrop-filter: none !important;
+            animation: none !important;
+          }
+          #receipt-portal .no-print {
+            display: none !important;
+          }
+          #receipt-portal .print-only {
+            display: block !important;
+          }
+          #receipt-portal .receipt-slip {
+            break-inside: avoid;
           }
         }
       `}</style>
 
-      {/* Screen Modal Overlay */}
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-xs animate-fadeIn overflow-y-auto">
-        <div className="bg-white rounded-xl shadow-2xl border border-slate-300 w-full max-w-3xl overflow-hidden flex flex-col my-4 max-h-[92vh]">
-          {/* Modal Toolbar (hidden on print) */}
-          <div className="no-print bg-[#1e282c] text-white px-5 py-3.5 flex items-center justify-between border-b border-[#26b99a]/30">
-            <div className="flex items-center space-x-2.5">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 flex items-center justify-center">
-                <CheckCircle2 className="w-5 h-5" />
-              </div>
-              <div>
-                <h2 className="text-sm font-bold tracking-tight">
-                  Fee Payment Successfully Recorded
-                </h2>
-                <p className="text-[11px] text-slate-400">
-                  Official Receipt #{transaction.receipt_no} &bull; St. Paul&apos;s Senior Secondary School
+      <div
+        className="receipt-overlay fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-slate-950/50 p-3 animate-fadeIn sm:items-center sm:p-6"
+        onClick={onClose}
+      >
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="receipt-title"
+          onClick={(e) => e.stopPropagation()}
+          className="receipt-dialog my-4 flex max-h-[94vh] w-full max-w-2xl flex-col overflow-hidden rounded-lg bg-white shadow-xl animate-scaleUp"
+        >
+          <header className="no-print flex items-center gap-3 border-b border-slate-200 px-5 py-3.5">
+            <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-700" />
+            <div className="min-w-0 flex-1">
+              <h2 id="receipt-title" className="text-[15px] font-semibold text-slate-900">
+                Receipt {transaction.receipt_no}
+              </h2>
+              <p className="truncate text-[13px] text-slate-500">
+                {inr(transaction.amount_paid).replace(".00", "")}
+                {transaction.student?.name ? ` from ${transaction.student.name}` : ""}
+              </p>
+            </div>
+            <button type="button" onClick={onClose} className="rounded p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-700" aria-label="Close">
+              <X className="h-5 w-5" />
+            </button>
+          </header>
+
+          <div className="receipt-body flex-1 overflow-y-auto bg-slate-100 p-4 sm:p-6">
+            <div id="printable-fee-receipt" className="mx-auto max-w-xl">
+              <ReceiptSlip copy="Parent copy" schoolName={schoolName} t={transaction} />
+              <div className="print-only hidden">
+                <p className="my-5 flex items-center gap-2 text-[10px] text-slate-400">
+                  <span className="h-px flex-1 border-t border-dashed border-slate-400" />
+                  cut here
+                  <span className="h-px flex-1 border-t border-dashed border-slate-400" />
                 </p>
+                <ReceiptSlip copy="School copy" schoolName={schoolName} t={transaction} />
               </div>
             </div>
-
-            <div className="flex items-center space-x-2">
-              <button
-                type="button"
-                onClick={handlePrint}
-                className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 bg-[#26b99a] hover:bg-[#209e83] text-white rounded-lg font-bold text-xs shadow-xs transition-colors"
-                title="Print Receipt via System Dialog"
-              >
-                <Printer className="w-4 h-4" />
-                <span>Print Receipt</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={onClose}
-                className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-                title="Close"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
           </div>
 
-          {/* Printable Receipt Body */}
-          <div className="p-4 sm:p-6 overflow-y-auto bg-slate-100 flex-1">
-            <div
-              id="printable-fee-receipt"
-              className="bg-white p-5 sm:p-7 rounded-lg shadow-sm border border-slate-300 text-slate-900 space-y-6 max-w-2xl mx-auto font-sans"
-            >
-              {/* SLIP 1: PARENT / STUDENT COPY */}
-              <ReceiptSlip
-                copyType="PARENT / STUDENT COPY"
-                schoolName={schoolName}
-                transaction={transaction}
-                student={student}
-                heads={heads}
-                formattedDate={formattedDate}
-                formattedTime={formattedTime}
-                words={words}
-              />
-
-              {/* Perforation Line for dual copy */}
-              <div className="border-t-2 border-dashed border-slate-400 my-4 relative text-center">
-                <span className="bg-white px-3 text-[10px] text-slate-600 font-mono absolute -top-2.5 left-1/2 -translate-x-1/2 uppercase tracking-wider">
-                  ✂ Tear along perforation &bull; School Office Copy below
-                </span>
-              </div>
-
-              {/* SLIP 2: SCHOOL OFFICE COPY */}
-              <ReceiptSlip
-                copyType="SCHOOL OFFICE COPY"
-                schoolName={schoolName}
-                transaction={transaction}
-                student={student}
-                heads={heads}
-                formattedDate={formattedDate}
-                formattedTime={formattedTime}
-                words={words}
-              />
-            </div>
-          </div>
-
-          {/* Screen Footer Buttons */}
-          <div className="no-print bg-slate-50 px-5 py-3 border-t border-slate-200 flex items-center justify-between text-xs text-slate-600">
-            <span>
-              Receipt #{transaction.receipt_no} stored permanently in database.
-            </span>
-            <div className="flex items-center space-x-2">
-              <button
-                type="button"
-                onClick={handlePrint}
-                className="inline-flex items-center space-x-1 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded font-bold text-xs shadow-xs"
-              >
-                <Printer className="w-3.5 h-3.5" />
-                <span>Print (A4/Thermal)</span>
+          <footer className="no-print flex flex-col-reverse gap-2 border-t border-slate-200 bg-slate-50 px-5 py-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-xs text-slate-500">Prints the parent copy and school copy on one A4 sheet.</p>
+            <div className="flex gap-2">
+              <button type="button" onClick={onClose} className="btn btn-secondary flex-1 sm:flex-none">
+                Next student
               </button>
-              <button
-                type="button"
-                onClick={onClose}
-                className="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded font-semibold text-xs"
-              >
-                Close & Next Student
+              <button ref={printRef} type="button" onClick={() => window.print()} className="btn btn-primary flex-1 sm:flex-none">
+                <Printer className="h-4 w-4" />
+                Print receipt
               </button>
             </div>
-          </div>
+          </footer>
         </div>
       </div>
-    </>
+    </div>,
+    document.body
   );
 }
 
-interface SlipProps {
-  copyType: string;
-  schoolName: string;
-  transaction: FeeTransaction;
-  student?: any;
-  heads: any;
-  formattedDate: string;
-  formattedTime: string;
-  words: string;
-}
+function ReceiptSlip({ copy, schoolName, t }: { copy: string; schoolName: string; t: FeeTransaction }) {
+  const s = t.student;
+  const rows: { key: string; label: string; amount: number }[] = headRows(t.fee_heads);
+  if (!rows.length) rows.push({ key: "fee", label: "Fee payment", amount: Number(t.amount_paid) || 0 });
 
-function ReceiptSlip({
-  copyType,
-  schoolName,
-  transaction,
-  student,
-  heads,
-  formattedDate,
-  formattedTime,
-  words,
-}: SlipProps) {
+  const paid = new Date(String(t.payment_date).length <= 10 ? String(t.payment_date) + "T00:00:00" : t.payment_date);
+  const date = paid.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" });
+
+  const meta: [string, React.ReactNode][] = [
+    ["Student", <span key="n" className="font-semibold text-slate-900">{s?.name || "—"}</span>],
+    ["Class", s?.class_name ? `${s.class_name}${s.section ? " - " + s.section : ""}` : "—"],
+    ["Father", s?.father_name || "—"],
+    ["SR no.", s?.sr_no || "—"],
+    ["Paid by", `${t.payment_mode}${t.transaction_id ? ` · ${t.transaction_id}` : ""}`],
+    ["Received by", t.collected_by || "Fee counter"],
+  ];
+
   return (
-    <div className="border border-slate-800 p-4 sm:p-5 rounded space-y-4">
-      {/* Header Banner */}
-      <div className="text-center border-b border-slate-700 pb-3 relative">
-        <div className="absolute top-0 right-0 text-[10px] font-mono font-bold px-2 py-0.5 border border-slate-800 rounded bg-slate-50 uppercase tracking-wide">
-          {copyType}
+    <article className="receipt-slip relative overflow-hidden border border-slate-800 bg-white px-6 py-5 text-[13px] text-slate-900">
+      {t.cancelled && (
+        // A cancelled receipt can still be reprinted for the file, but must never pass as proof of payment.
+        <div aria-label="Cancelled receipt" className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center">
+          <span className="-rotate-[18deg] rounded border-[5px] border-rose-600 px-6 py-1 text-5xl font-black tracking-[0.2em] text-rose-600 opacity-80">CANCELLED</span>
+          {t.cancel_reason && <span className="mt-6 -rotate-[18deg] bg-white/80 px-2 text-xs font-semibold text-rose-700">{t.cancel_reason}</span>}
         </div>
-        <h1 className="text-lg sm:text-xl font-black tracking-tight text-slate-900 uppercase">
-          {schoolName}
-        </h1>
-        <p className="text-[11px] text-slate-600 font-medium">
-          CBSE Affiliated Sr. Sec. Institution &bull; Ram Nagar, Barmer (Raj.) &bull; Phone: 8769444584
-        </p>
-        <div className="inline-block mt-1 px-3 py-0.5 text-xs font-black tracking-wider uppercase border-y border-slate-800 bg-slate-100">
-          OFFICIAL FEE RECEIPT
-        </div>
+      )}
+      <header className="relative border-b border-slate-800 pb-3 text-center">
+        <span className="absolute right-0 top-0 text-[11px] text-slate-600">{copy}</span>
+        <p className="text-base font-bold uppercase tracking-wide">{schoolName}</p>
+        <p className="text-xs text-slate-600">Barmer (Rajasthan)</p>
+        <p className="mt-2 inline-block border border-slate-800 px-3 py-0.5 text-xs font-semibold">FEE RECEIPT</p>
+      </header>
+
+      <div className="flex justify-between py-2.5">
+        <span>
+          Receipt no. <span className="font-mono font-semibold">{t.receipt_no}</span>
+        </span>
+        <span>
+          Date <span className="font-semibold">{date}</span>
+        </span>
       </div>
 
-      {/* Meta Grid: Receipt No, Date, Student info */}
-      <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs border-b border-slate-200 pb-3">
-        <div className="flex">
-          <span className="w-28 font-bold text-slate-700">Receipt No:</span>
-          <span className="font-mono font-black text-slate-900">
-            #{transaction.receipt_no}
-          </span>
-        </div>
-        <div className="flex">
-          <span className="w-28 font-bold text-slate-700">Date & Time:</span>
-          <span className="font-medium text-slate-900">
-            {formattedDate} {formattedTime}
-          </span>
-        </div>
-        <div className="flex">
-          <span className="w-28 font-bold text-slate-700">Student Name:</span>
-          <span className="font-bold text-slate-900 uppercase">
-            {student?.name || "Student"}
-          </span>
-        </div>
-        <div className="flex">
-          <span className="w-28 font-bold text-slate-700">Father&apos;s Name:</span>
-          <span className="font-medium text-slate-900">
-            {student?.father_name || "—"}
-          </span>
-        </div>
-        <div className="flex">
-          <span className="w-28 font-bold text-slate-700">SR Number:</span>
-          <span className="font-mono font-bold text-slate-900">
-            {student?.sr_no || "—"}
-          </span>
-        </div>
-        <div className="flex">
-          <span className="w-28 font-bold text-slate-700">Class & Section:</span>
-          <span className="font-bold text-slate-900">
-            {student?.class_name || "Class"} - {student?.section || "A"}
-          </span>
-        </div>
-        <div className="flex">
-          <span className="w-28 font-bold text-slate-700">Payment Mode:</span>
-          <span className="font-bold text-emerald-800">
-            {transaction.payment_mode}
-            {transaction.transaction_id ? ` (Ref: ${transaction.transaction_id})` : ""}
-          </span>
-        </div>
-        <div className="flex">
-          <span className="w-28 font-bold text-slate-700">Cashier:</span>
-          <span className="text-slate-800">{transaction.collected_by}</span>
-        </div>
-      </div>
-
-      {/* Itemized Fee Breakdown Table */}
-      <div className="overflow-x-auto">
-        <table className="w-full text-xs text-left border-collapse border border-slate-300">
-          <thead>
-            <tr className="bg-slate-100 border-b border-slate-300 font-bold text-slate-800">
-              <th className="py-1.5 px-3 border-r border-slate-300 w-12 text-center">S.N.</th>
-              <th className="py-1.5 px-3 border-r border-slate-300">Fee Head / Description</th>
-              <th className="py-1.5 px-3 text-right w-32">Amount (₹)</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-slate-200">
-            {heads.tuition_fee > 0 && (
-              <tr>
-                <td className="py-1 px-3 text-center border-r border-slate-300 font-mono">1</td>
-                <td className="py-1 px-3 border-r border-slate-300 font-medium">
-                  Tuition Fee / Composite Academic Fee
-                </td>
-                <td className="py-1 px-3 text-right font-mono font-semibold">
-                  ₹{Number(heads.tuition_fee).toLocaleString("en-IN", { minimumFractionDigits: 2 })}
-                </td>
-              </tr>
-            )}
-            {heads.exam_fee > 0 && (
-              <tr>
-                <td className="py-1 px-3 text-center border-r border-slate-300 font-mono">2</td>
-                <td className="py-1 px-3 border-r border-slate-300 font-medium">
-                  Examination Fee & Term Assessment
-                </td>
-                <td className="py-1 px-3 text-right font-mono font-semibold">
-                  ₹{Number(heads.exam_fee).toLocaleString("en-IN", { minimumFractionDigits: 2 })}
-                </td>
-              </tr>
-            )}
-            {heads.transport_fee > 0 && (
-              <tr>
-                <td className="py-1 px-3 text-center border-r border-slate-300 font-mono">3</td>
-                <td className="py-1 px-3 border-r border-slate-300 font-medium">
-                  School Bus / Transportation Charges
-                </td>
-                <td className="py-1 px-3 text-right font-mono font-semibold">
-                  ₹{Number(heads.transport_fee).toLocaleString("en-IN", { minimumFractionDigits: 2 })}
-                </td>
-              </tr>
-            )}
-            {heads.late_fine && heads.late_fine > 0 ? (
-              <tr>
-                <td className="py-1 px-3 text-center border-r border-slate-300 font-mono">4</td>
-                <td className="py-1 px-3 border-r border-slate-300 font-medium">
-                  Late Fine / Other Charges
-                </td>
-                <td className="py-1 px-3 text-right font-mono font-semibold">
-                  ₹{Number(heads.late_fine).toLocaleString("en-IN", { minimumFractionDigits: 2 })}
-                </td>
-              </tr>
-            ) : null}
-            <tr className="bg-slate-100 font-black text-slate-900 border-t-2 border-slate-400">
-              <td colSpan={2} className="py-2 px-3 text-right uppercase border-r border-slate-300">
-                Total Amount Paid
-              </td>
-              <td className="py-2 px-3 text-right font-mono text-sm">
-                ₹{Number(transaction.amount_paid).toLocaleString("en-IN", { minimumFractionDigits: 2 })}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      {/* Amount in words */}
-      <div className="p-2 bg-slate-50 border border-slate-200 rounded text-xs">
-        <span className="font-bold text-slate-700">Amount in Words: </span>
-        <span className="font-semibold italic text-slate-900">{words}</span>
-      </div>
-
-      {/* Footer Signatures */}
-      <div className="pt-6 flex items-end justify-between text-xs text-slate-700">
-        <div className="text-center">
-          <div className="w-32 border-t border-slate-800 pt-1 font-semibold">
-            Parent / Depositor
+      <dl className="grid grid-cols-2 gap-x-6 gap-y-1 border-y border-slate-300 py-2.5">
+        {meta.map(([k, v]) => (
+          <div key={k} className="flex gap-2">
+            <dt className="w-24 shrink-0 text-slate-600">{k}</dt>
+            <dd className="min-w-0 break-words">{v}</dd>
           </div>
-        </div>
-        <div className="text-center">
-          <div className="w-40 border-t border-slate-800 pt-1 font-bold text-slate-900">
-            Cashier / Authorized Signatory
-          </div>
-          <span className="text-[9px] text-slate-500">School Office Seal</span>
-        </div>
+        ))}
+      </dl>
+
+      <table className="mt-3 w-full border-collapse border border-slate-400">
+        <thead>
+          <tr className="border-b border-slate-400 bg-slate-50 text-left text-xs">
+            <th className="w-10 border-r border-slate-400 px-2 py-1.5 text-center font-semibold">S.No.</th>
+            <th className="border-r border-slate-400 px-2 py-1.5 font-semibold">Particulars</th>
+            <th className="w-32 px-2 py-1.5 text-right font-semibold">Amount (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r, i) => (
+            <tr key={r.label} className="border-b border-slate-200 hover:bg-transparent">
+              <td className="border-r border-slate-400 px-2 py-1.5 text-center">{i + 1}</td>
+              <td className="border-r border-slate-400 px-2 py-1.5">{r.label}</td>
+              <td className="px-2 py-1.5 text-right tabular-nums">{inr(r.amount).slice(1)}</td>
+            </tr>
+          ))}
+          <tr className="border-t border-slate-800 font-semibold hover:bg-transparent">
+            <td colSpan={2} className="border-r border-slate-400 px-2 py-1.5 text-right">Total</td>
+            <td className="px-2 py-1.5 text-right tabular-nums">{inr(t.amount_paid).slice(1)}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p className="mt-2">
+        <span className="text-slate-600">Rupees in words: </span>
+        <span className="font-medium">{numberToWordsIndian(Number(t.amount_paid) || 0)}</span>
+      </p>
+
+      <div className="mt-10 flex items-end justify-between text-xs text-slate-600">
+        <span className="border-t border-slate-500 px-4 pt-1">Depositor&apos;s signature</span>
+        <span className="border-t border-slate-500 px-4 pt-1">Cashier (signature &amp; seal)</span>
       </div>
-    </div>
+    </article>
   );
 }

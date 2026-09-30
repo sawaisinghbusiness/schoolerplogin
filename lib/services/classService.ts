@@ -1,4 +1,9 @@
-import { supabase, isSupabaseConfigured } from "@/lib/supabaseClient";
+import { api } from "@/lib/apiClient";
+
+/**
+ * Classes, sections and their subjects. Talks only to the backend (/api/classes).
+ * Writes are admin-only on the server; its error messages are friendly and shown as-is.
+ */
 
 export interface SectionItem {
   id: string;
@@ -10,276 +15,93 @@ export interface ClassItem {
   id: string;
   name: string;
   orderSeq?: number;
+  wing?: string | null;
   sections: SectionItem[];
 }
 
+export type Result<T = undefined> = { success: boolean; data?: T; error?: string; needsSetup?: boolean };
+
+/** Fallback text when subjects cannot be saved because the database is missing the column. */
+export const SUBJECTS_SETUP_MESSAGE =
+  "Subjects cannot be saved yet: the database needs a one-time update (sections.subjects column). Classes and sections still work.";
+
+/** The backend explains a missing subjects column with a "one-time database update" message. */
+const isSetupMessage = (msg?: string) => !!msg && /one-time database update|sections\.subjects/i.test(msg);
+
+function done<T>(res: { ok: boolean; data?: any; error?: string }, fallback: string, pick?: (body: any) => T): Result<T> {
+  if (res.ok) return { success: true, data: pick ? pick(res.data) : undefined };
+  const error = res.data?.error || res.error || fallback;
+  return { success: false, error, needsSetup: isSetupMessage(error) };
+}
+
+const enc = encodeURIComponent;
+
 export const classService = {
-  /**
-   * Fetch all classes and their sections directly from Supabase
-   */
-  async fetchClasses(): Promise<{
-    data: ClassItem[];
-    tableMissing: boolean;
-    error?: string;
-  }> {
-    if (!isSupabaseConfigured) {
-      return {
-        data: [],
-        tableMissing: true,
-        error: "Supabase credentials are not configured in .env.local",
-      };
-    }
+  /** All classes in order, each with its sections and subjects. */
+  async fetchClasses(): Promise<{ data: ClassItem[]; tableMissing: boolean; error?: string }> {
+    const res = await api.get<{ data: ClassItem[] }>("/api/classes");
+    if (!res.ok) return { data: [], tableMissing: false, error: res.error || "Could not load classes." };
+    const list = Array.isArray(res.data?.data) ? res.data!.data : [];
+    return {
+      data: list.map((c) => ({
+        id: c.id,
+        name: c.name,
+        orderSeq: c.orderSeq,
+        wing: c.wing ?? null,
+        sections: (c.sections || []).map((s) => ({ id: s.id, name: s.name, subjects: Array.isArray(s.subjects) ? s.subjects : [] })),
+      })),
+      tableMissing: false,
+    };
+  },
 
-    try {
-      // 1. Fetch classes ordered by sequence
-      const { data: dbClasses, error: clsErr } = await supabase
-        .from("classes")
-        .select("id, name, order_seq")
-        .order("order_seq", { ascending: true });
+  /** Class and its sections, all or nothing. */
+  async createClass(name: string, sections: string[], subjects: string[], wing?: string | null): Promise<Result<ClassItem>> {
+    const res = await api.post<{ data: ClassItem }>("/api/classes", { name: name.trim(), sections, subjects, ...(wing ? { wing } : {}) });
+    return done(res, "Could not add the class.", (b) => b?.data);
+  },
 
-      if (clsErr) {
-        const isMissing =
-          clsErr.code === "PGRST205" ||
-          clsErr.message.includes("does not exist") ||
-          clsErr.message.includes("schema cache");
-        return { data: [], tableMissing: isMissing, error: clsErr.message };
-      }
+  /** Renames the class; the backend moves its students to the new name too. */
+  async updateClass(classId: string, name: string): Promise<Result> {
+    return done(await api.patch(`/api/classes/${enc(classId)}`, { name: name.trim() }), "Could not rename the class.");
+  },
 
-      if (!dbClasses || dbClasses.length === 0) {
-        return { data: [], tableMissing: false };
-      }
+  /** Refused by the backend while the class has students. */
+  async deleteClass(classId: string): Promise<Result> {
+    return done(await api.del(`/api/classes/${enc(classId)}`), "Could not delete the class.");
+  },
 
-      // 2. Fetch sections for these classes
-      const { data: dbSections, error: secErr } = await supabase
-        .from("sections")
-        .select("id, class_id, name, subjects")
-        .order("name", { ascending: true });
+  async addSections(classId: string, names: string[], subjects: string[]): Promise<Result<SectionItem[]>> {
+    const res = await api.post<{ data: SectionItem[] }>(`/api/classes/${enc(classId)}/sections`, { names, subjects });
+    return done(res, "Could not add the section.", (b) => b?.data || []);
+  },
 
-      if (secErr) {
-        return { data: [], tableMissing: false, error: secErr.message };
-      }
+  /** Renames the section; its students move with it. */
+  async renameSection(sectionId: string, name: string): Promise<Result> {
+    return done(await api.patch(`/api/classes/sections/${enc(sectionId)}`, { name: name.trim() }), "Could not rename the section.");
+  },
 
-      // 3. Map into nested ClassItem structure
-      const mapped: ClassItem[] = dbClasses.map((c: any) => {
-        const classSections = (dbSections || [])
-          .filter((s: any) => s.class_id === c.id)
-          .map((s: any) => ({
-            id: s.id,
-            name: s.name,
-            subjects: Array.isArray(s.subjects) ? s.subjects : [],
-          }));
+  async updateSectionSubjects(sectionId: string, subjects: string[]): Promise<Result> {
+    return done(await api.patch(`/api/classes/sections/${enc(sectionId)}`, { subjects }), "Could not save the subjects.");
+  },
 
-        return {
-          id: c.id,
-          name: c.name,
-          orderSeq: c.order_seq,
-          sections: classSections,
-        };
-      });
+  /** Refused by the backend while the section has students. */
+  async deleteSection(sectionId: string): Promise<Result> {
+    return done(await api.del(`/api/classes/sections/${enc(sectionId)}`), "Could not delete the section.");
+  },
 
-      return { data: mapped, tableMissing: false };
-    } catch (err: any) {
-      return {
-        data: [],
-        tableMissing: false,
-        error: err.message || "Failed to fetch classes from Supabase",
-      };
-    }
+  async reorderClasses(order: { id: string; orderSeq: number }[]): Promise<Result> {
+    return done(await api.put("/api/classes/order", { order }), "Could not save the new order.");
   },
 
   /**
-   * Insert a new class and its default sections in Supabase
+   * Active students per class and section, keyed "class|section" (read-only, from the
+   * attendance day summary). Includes sections that are not set up as classes yet.
    */
-  async createClass(
-    className: string,
-    sectionNames: string[],
-    defaultSubjects: string[]
-  ): Promise<{ success: boolean; data?: ClassItem; error?: string }> {
-    try {
-      // Insert class
-      const { data: insertedClass, error: clsErr } = await supabase
-        .from("classes")
-        .insert({
-          name: className.trim(),
-          order_seq: Date.now() % 100000,
-        })
-        .select()
-        .single();
-
-      if (clsErr) {
-        return { success: false, error: clsErr.message };
-      }
-
-      const sectionsToInsert = (sectionNames.length > 0 ? sectionNames : ["A"]).map(
-        (sec) => ({
-          class_id: insertedClass.id,
-          name: sec.trim().toUpperCase(),
-          subjects: defaultSubjects,
-        })
-      );
-
-      const { data: insertedSections, error: secErr } = await supabase
-        .from("sections")
-        .insert(sectionsToInsert)
-        .select();
-
-      if (secErr) {
-        return { success: false, error: secErr.message };
-      }
-
-      const newClassItem: ClassItem = {
-        id: insertedClass.id,
-        name: insertedClass.name,
-        orderSeq: insertedClass.order_seq,
-        sections: (insertedSections || []).map((s: any) => ({
-          id: s.id,
-          name: s.name,
-          subjects: s.subjects || [],
-        })),
-      };
-
-      return { success: true, data: newClassItem };
-    } catch (err: any) {
-      return { success: false, error: err.message };
-    }
-  },
-
-  /**
-   * Rename a class in Supabase
-   */
-  async updateClass(
-    classId: string,
-    newName: string
-  ): Promise<{ success: boolean; error?: string }> {
-    try {
-      const { error } = await supabase
-        .from("classes")
-        .update({ name: newName.trim() })
-        .eq("id", classId);
-
-      if (error) return { success: false, error: error.message };
-      return { success: true };
-    } catch (err: any) {
-      return { success: false, error: err.message };
-    }
-  },
-
-  /**
-   * Delete class and cascade delete sections in Supabase
-   */
-  async deleteClass(classId: string): Promise<{ success: boolean; error?: string }> {
-    try {
-      const { error } = await supabase.from("classes").delete().eq("id", classId);
-      if (error) return { success: false, error: error.message };
-      return { success: true };
-    } catch (err: any) {
-      return { success: false, error: err.message };
-    }
-  },
-
-  /**
-   * Add new sections to an existing class
-   */
-  async addSections(
-    classId: string,
-    sectionNames: string[],
-    defaultSubjects: string[]
-  ): Promise<{ success: boolean; data?: SectionItem[]; error?: string }> {
-    try {
-      const sectionsToInsert = sectionNames.map((sec) => ({
-        class_id: classId,
-        name: sec.trim().toUpperCase(),
-        subjects: defaultSubjects,
-      }));
-
-      const { data, error } = await supabase
-        .from("sections")
-        .insert(sectionsToInsert)
-        .select();
-
-      if (error) return { success: false, error: error.message };
-
-      return {
-        success: true,
-        data: (data || []).map((s: any) => ({
-          id: s.id,
-          name: s.name,
-          subjects: s.subjects || [],
-        })),
-      };
-    } catch (err: any) {
-      return { success: false, error: err.message };
-    }
-  },
-
-  /**
-   * Delete a section from Supabase
-   */
-  async deleteSection(sectionId: string): Promise<{ success: boolean; error?: string }> {
-    try {
-      const { error } = await supabase.from("sections").delete().eq("id", sectionId);
-      if (error) return { success: false, error: error.message };
-      return { success: true };
-    } catch (err: any) {
-      return { success: false, error: err.message };
-    }
-  },
-
-  /**
-   * Rename a section
-   */
-  async renameSection(
-    sectionId: string,
-    newName: string
-  ): Promise<{ success: boolean; error?: string }> {
-    try {
-      const { error } = await supabase
-        .from("sections")
-        .update({ name: newName.trim().toUpperCase() })
-        .eq("id", sectionId);
-
-      if (error) return { success: false, error: error.message };
-      return { success: true };
-    } catch (err: any) {
-      return { success: false, error: err.message };
-    }
-  },
-
-  /**
-   * Update subjects list for a section directly in Supabase
-   */
-  async updateSectionSubjects(
-    sectionId: string,
-    subjects: string[]
-  ): Promise<{ success: boolean; error?: string }> {
-    try {
-      const { error } = await supabase
-        .from("sections")
-        .update({ subjects })
-        .eq("id", sectionId);
-
-      if (error) return { success: false, error: error.message };
-      return { success: true };
-    } catch (err: any) {
-      return { success: false, error: err.message };
-    }
-  },
-
-  /**
-   * Reorder classes
-   */
-  async reorderClasses(
-    orderedClasses: { id: string; orderSeq: number }[]
-  ): Promise<void> {
-    try {
-      for (const item of orderedClasses) {
-        await supabase
-          .from("classes")
-          .update({ order_seq: item.orderSeq })
-          .eq("id", item.id);
-      }
-    } catch (err) {
-      console.warn("Error reordering classes in Supabase:", err);
-    }
+  async studentCounts(): Promise<{ data: Record<string, number>; error?: string }> {
+    const res = await api.get<{ sections?: { class: string; section: string; students: number }[] }>("/api/attendance/day");
+    if (!res.ok) return { data: {}, error: res.error || "Could not load student counts." };
+    const data: Record<string, number> = {};
+    for (const s of res.data?.sections || []) data[`${s.class}|${s.section}`] = (data[`${s.class}|${s.section}`] || 0) + (s.students || 0);
+    return { data };
   },
 };

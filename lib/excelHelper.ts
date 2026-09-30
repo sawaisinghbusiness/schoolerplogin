@@ -50,34 +50,42 @@ export function importStudentsFromExcel(
         const worksheet = workbook.Sheets[firstSheetName];
         const jsonData: any[] = XLSX.utils.sheet_to_json(worksheet);
 
-        const parsedStudents: Partial<Student>[] = jsonData.map((row, idx) => ({
-          id: `STU-IMP-${Date.now()}-${idx}`,
-          srNo: row["SR Number"] || row["srNo"] || `SR-2026-${100 + idx}`,
-          admissionNo: row["Admission No"] || row["admissionNo"] || `ADM-${9500 + idx}`,
-          name: row["Student Name"] || row["name"] || "Imported Student",
-          classSec: row["Class - Sec"] || row["classSec"] || "10th - A",
-          class: (row["Class - Sec"] || "10th").split("-")[0].trim(),
-          section: (row["Class - Sec"] || "A").split("-")[1]?.trim() || "A",
-          rollNo: String(row["Roll No"] || idx + 1),
-          fatherName: row["Father Name"] || row["fatherName"] || "Father Name",
-          motherName: row["Mother Name"] || row["motherName"] || "Mother Name",
-          guardianName: row["Father Name"] || "Guardian",
-          contact: String(row["Mobile"] || row["contact"] || "9876543210"),
-          mobile: String(row["Mobile"] || "9876543210"),
-          address: row["Address"] || "Barmer, Rajasthan",
-          penNo: row["PEN No"] || `PEN-RJ-2026-${100 + idx}`,
-          gender: (row["Gender"] || "Male") as any,
-          dob: row["DOB"] || "2010-01-01",
-          category: (row["Category"] || "General") as any,
-          house: (row["House"] || "Tagore") as any,
-          transportOpted: row["Transport Opted"] === "Yes",
-          busRoute: row["Bus Route"] || undefined,
-          status: "Active",
-          totalFee: Number(row["Total Fee (INR)"] || 40000),
-          paidFee: Number(row["Paid Fee (INR)"] || 20000),
-          balanceFee: Number(row["Balance Fee (INR)"] || 20000),
-          photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80"
-        }));
+        // No invented values: a missing field stays empty so the server can reject
+        // incomplete rows instead of saving a fake phone number or fee.
+        const text = (v: unknown) => (v === undefined || v === null ? "" : String(v).trim());
+        const parsedStudents: Partial<Student>[] = jsonData.map((row) => {
+          // "11th - Science-Bio" -> class "11th", section "Science-Bio" (split on " - " only).
+          const classSec = text(row["Class - Sec"] || row["classSec"]);
+          const [cls, ...rest] = classSec.split(/\s+-\s+/);
+          const mobile = text(row["Mobile"] || row["Guardian Contact"] || row["contact"]);
+          const gender = text(row["Gender"]);
+          const category = text(row["Category"]);
+          return {
+            srNo: text(row["SR Number"] || row["srNo"]),
+            admissionNo: text(row["Admission No"] || row["admissionNo"]) || undefined,
+            name: text(row["Student Name"] || row["name"]),
+            classSec,
+            class: text(cls),
+            section: text(rest.join(" - ")) || "A",
+            rollNo: text(row["Roll No"]) || undefined,
+            fatherName: text(row["Father Name"] || row["fatherName"]),
+            motherName: text(row["Mother Name"] || row["motherName"]) || undefined,
+            guardianName: text(row["Father Name"] || row["fatherName"]) || undefined,
+            contact: mobile,
+            mobile,
+            address: text(row["Address"]) || undefined,
+            penNo: text(row["PEN No"]) && text(row["PEN No"]) !== "N/A" ? text(row["PEN No"]) : undefined,
+            gender: (["Male", "Female", "Other"].includes(gender) ? gender : undefined) as any,
+            dob: text(row["DOB"]) || undefined,
+            category: (["General", "OBC", "SC", "ST"].includes(category) ? category : "General") as any,
+            house: (text(row["House"]) || undefined) as any,
+            transportOpted: /^y(es)?$/i.test(text(row["Transport Opted"])),
+            busRoute: text(row["Bus Route"]) && text(row["Bus Route"]) !== "N/A" ? text(row["Bus Route"]) : undefined,
+            status: "Active",
+            totalFee: Number(row["Total Fee (INR)"]) || 0,
+            paidFee: Number(row["Paid Fee (INR)"]) || 0,
+          };
+        });
 
         resolve(parsedStudents);
       } catch (err) {

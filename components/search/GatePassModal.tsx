@@ -1,226 +1,183 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { AlertCircle, Loader2 } from "lucide-react";
 import { Modal } from "@/components/ui/modal";
 import { Student } from "@/data/mockData";
-import {
-  Ticket,
-  Clock,
-  Printer,
-  CheckCircle2,
-  AlertTriangle,
-  Download
-} from "lucide-react";
+import { gatePassService, GatePass } from "@/lib/services/gatePassService";
 import { generateGatePassPDF } from "@/lib/pdfGenerator";
 
 interface GatePassModalProps {
   student: Student | null;
   isOpen: boolean;
   onClose: () => void;
+  onIssued?: (pass: GatePass) => void;
 }
 
-export function GatePassModal({
-  student,
-  isOpen,
-  onClose
-}: GatePassModalProps) {
-  const [reason, setReason] = useState("Medical indisposition / clinic visit");
-  const [escortedBy, setEscortedBy] = useState("Father (Rajesh Sharma)");
-  const [customEscort, setCustomEscort] = useState("");
-  const [issuedPass, setIssuedPass] = useState<any | null>(null);
+const REASONS = ["Not feeling well", "Doctor / hospital visit", "Family emergency", "Family function or travel", "Sports or school event", "Principal's permission"];
+
+const when = (iso: string) => new Date(iso).toLocaleString("en-IN", { day: "numeric", month: "short", hour: "numeric", minute: "2-digit", hour12: true });
+
+/** Issues a gate pass, saves it in the database, and prints the slip. */
+export function GatePassModal({ student, isOpen, onClose, onIssued }: GatePassModalProps) {
+  const [reason, setReason] = useState(REASONS[0]);
+  const [otherReason, setOtherReason] = useState("");
+  const [escort, setEscort] = useState("father");
+  const [otherEscort, setOtherEscort] = useState("");
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [issued, setIssued] = useState<GatePass | null>(null);
+  const [previous, setPrevious] = useState<GatePass[] | null>(null);
+
+  useEffect(() => {
+    if (!isOpen || !student) return;
+    setReason(REASONS[0]);
+    setOtherReason("");
+    setEscort("father");
+    setOtherEscort("");
+    setError(null);
+    setIssued(null);
+    setPrevious(null);
+    gatePassService.list({ studentId: student.id, limit: 5 }).then((r) => setPrevious(r.error ? [] : r.data));
+  }, [isOpen, student?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!student) return null;
+  const s = student;
 
-  const handleIssue = (e: React.FormEvent) => {
+  const escortText = escort === "father" ? `Father (${s.fatherName})` : escort === "mother" ? `Mother (${s.motherName})` : otherEscort.trim();
+  const reasonText = reason === "other" ? otherReason.trim() : reason;
+
+  const issue = async (e: React.FormEvent) => {
     e.preventDefault();
-    const passData = {
-      passId: `GP-${Math.floor(100000 + Math.random() * 900000)}`,
-      time: new Date().toLocaleTimeString("en-IN", {
-        hour: "2-digit",
-        minute: "2-digit"
-      }),
-      date: new Date().toLocaleDateString("en-IN", {
-        day: "numeric",
-        month: "short",
-        year: "numeric"
-      }),
-      reason,
-      escort: escortedBy === "Other" ? customEscort : escortedBy
-    };
-    setIssuedPass(passData);
-    // Auto generate Gate Pass PDF
-    generateGatePassPDF(student, passData);
+    if (!reasonText) return setError("Write the reason for leaving.");
+    if (!escortText) return setError("Write who is taking the student, with their relation.");
+    setSaving(true);
+    setError(null);
+    const res = await gatePassService.issue({ studentId: s.id, reason: reasonText, escort: escortText });
+    setSaving(false);
+    if (!res.success || !res.data) return setError(res.error || "Could not issue the gate pass.");
+    setIssued(res.data);
+    setPrevious((p) => [res.data!, ...(p || [])]);
+    onIssued?.(res.data);
   };
 
+  const print = (p: GatePass) => {
+    const d = new Date(p.issued_at);
+    generateGatePassPDF(s, {
+      passId: p.pass_no,
+      time: d.toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" }),
+      date: d.toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" }),
+      reason: p.reason,
+      escort: p.escort,
+    });
+  };
+
+  const earlier = (previous || []).filter((p) => p.id !== issued?.id);
+
   return (
-    <Modal
-      isOpen={isOpen}
-      onClose={() => {
-        setIssuedPass(null);
-        onClose();
-      }}
-      title="Institutional Gate Pass Dispatch"
-      subtitle={`Security Clearance for Early Student Exit - ${student.name}`}
-      maxWidth="max-w-xl"
-    >
-      <div className="space-y-4 text-xs sm:text-sm">
-        {issuedPass ? (
-          /* Issued Pass Printable Card View */
-          <div className="space-y-4 animate-fadeIn">
-            <div className="p-4 bg-emerald-50/80 border-2 border-dashed border-emerald-400 rounded-xl space-y-3">
-              <div className="flex items-center justify-between border-b border-emerald-200 pb-2">
-                <div>
-                  <div className="text-xs font-black text-emerald-900 uppercase tracking-wider">
-                    St. Paul&apos;s Senior Secondary School
-                  </div>
-                  <div className="text-[10px] text-emerald-700">
-                    Official Early Departure Gate Clearance Pass
-                  </div>
-                </div>
-                <div className="px-2 py-0.5 bg-emerald-700 text-white rounded font-mono font-bold text-xs">
-                  {issuedPass.passId}
-                </div>
+    <Modal isOpen={isOpen} onClose={onClose} title="Gate pass" subtitle={`${s.name} · ${s.classSec} · ${s.mobile}`} maxWidth="max-w-lg">
+      <div className="space-y-4 text-sm">
+        {issued ? (
+          <>
+            <div className="rounded-md border border-slate-300">
+              <div className="flex items-center justify-between border-b border-slate-200 bg-slate-50 px-3 py-2">
+                <span className="font-medium text-emerald-800">Gate pass issued</span>
+                <span className="font-mono font-semibold">{issued.pass_no}</span>
               </div>
-
-              <div className="grid grid-cols-2 gap-3 text-xs">
-                <div>
-                  <span className="text-slate-500 block text-[10px]">Student Name:</span>
-                  <strong className="text-slate-900">{student.name}</strong>
-                </div>
-                <div>
-                  <span className="text-slate-500 block text-[10px]">Class & Section:</span>
-                  <strong className="text-slate-900">{student.classSec} (Roll {student.rollNo})</strong>
-                </div>
-                <div>
-                  <span className="text-slate-500 block text-[10px]">Departure Time:</span>
-                  <span className="font-mono font-bold text-slate-800">{issuedPass.time} ({issuedPass.date})</span>
-                </div>
-                <div>
-                  <span className="text-slate-500 block text-[10px]">Escorted By:</span>
-                  <strong className="text-slate-900">{issuedPass.escort || student.fatherName}</strong>
-                </div>
-                <div className="col-span-2">
-                  <span className="text-slate-500 block text-[10px]">Reason for Departure:</span>
-                  <span className="italic text-slate-800">{issuedPass.reason}</span>
-                </div>
-              </div>
-
-              <div className="pt-2 border-t border-emerald-200 flex items-center justify-between text-[10px] text-emerald-800">
-                <span>Security Gate Verification: <strong>APPROVED</strong></span>
-                <span>SMS Alert: Sent to {student.mobile}</span>
-              </div>
+              <dl className="divide-y divide-slate-100 px-3">
+                <Line label="Time" value={when(issued.issued_at)} />
+                <Line label="Going with" value={issued.escort} />
+                <Line label="Reason" value={issued.reason} />
+                <Line label="Issued by" value={issued.issued_by_name || "Office"} />
+              </dl>
             </div>
-
-            <div className="flex items-center justify-end space-x-2 pt-2">
-              <button
-                onClick={() => generateGatePassPDF(student, issuedPass)}
-                className="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded text-xs font-bold shadow-xs transition-colors"
-              >
-                <Download className="w-3.5 h-3.5" />
-                <span>Download Gate Slip PDF</span>
-              </button>
-              <button
-                onClick={() => {
-                  setIssuedPass(null);
-                  onClose();
-                }}
-                className="px-3 py-1.5 bg-slate-800 hover:bg-slate-900 text-white rounded text-xs font-semibold"
-              >
+            <div className="flex justify-end gap-2">
+              <button type="button" onClick={onClose} className="btn btn-secondary btn-sm">
                 Done
               </button>
+              <button type="button" onClick={() => print(issued)} className="btn btn-primary btn-sm">
+                Print slip
+              </button>
             </div>
-          </div>
+          </>
         ) : (
-          /* Issuance Form */
-          <form onSubmit={handleIssue} className="space-y-3.5">
-            <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 flex items-center justify-between">
-              <div>
-                <span className="text-[11px] text-slate-400 block">Student Selected:</span>
-                <span className="font-bold text-slate-800 text-sm">{student.name}</span>
-                <span className="text-xs text-slate-500 ml-1">({student.classSec})</span>
-              </div>
-              <div className="text-right">
-                <span className="text-[11px] text-slate-400 block">Parent Phone:</span>
-                <span className="font-mono font-bold text-slate-700">{student.mobile}</span>
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1">
-                Reason for Early Exit *
-              </label>
-              <select
-                value={reason}
-                onChange={(e) => setReason(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-300 rounded text-xs bg-white focus:ring-1 focus:ring-emerald-500 focus:outline-none"
-              >
-                <option value="Medical indisposition / clinic visit">Medical indisposition / clinic visit</option>
-                <option value="Parent emergency request">Parent emergency request</option>
-                <option value="Interschool sports / cultural event participation">Interschool sports / cultural event</option>
-                <option value="Family function / scheduled travel">Family function / scheduled travel</option>
-                <option value="Special permission from Principal">Special permission from Principal</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1">
-                Accompanied / Escorted By *
-              </label>
-              <select
-                value={escortedBy}
-                onChange={(e) => setEscortedBy(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-300 rounded text-xs bg-white focus:ring-1 focus:ring-emerald-500 focus:outline-none"
-              >
-                <option value={`Father (${student.fatherName})`}>Father ({student.fatherName})</option>
-                <option value={`Mother (${student.motherName})`}>Mother ({student.motherName})</option>
-                <option value={`Guardian (${student.guardianName})`}>Guardian ({student.guardianName})</option>
-                <option value="Self (Senior student with parent phone consent)">Self (Authorized exit)</option>
-                <option value="Other">Other Escort Person</option>
-              </select>
-            </div>
-
-            {escortedBy === "Other" && (
-              <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Specify Escort Person Name & Relation *
-                </label>
-                <input
-                  type="text"
-                  placeholder="e.g. Uncle / Driver with ID proof"
-                  value={customEscort}
-                  onChange={(e) => setCustomEscort(e.target.value)}
-                  className="w-full px-3 py-2 border border-slate-300 rounded text-xs focus:ring-1 focus:ring-emerald-500 focus:outline-none"
-                  required
-                />
+          <form onSubmit={issue} className="space-y-4">
+            {error && (
+              <div className="alert alert-rose" role="alert">
+                <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+                <span>{error}</span>
               </div>
             )}
-
-            <div className="p-2.5 bg-amber-50 rounded border border-amber-200 text-[11px] text-amber-800 flex items-center space-x-2">
-              <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
-              <span>
-                Automatic instant SMS notification will be dispatched to <strong>{student.mobile}</strong> upon generating gate pass.
-              </span>
+            <div>
+              <label htmlFor="gp-reason" className="field-label">
+                Reason
+              </label>
+              <select id="gp-reason" value={reason} onChange={(e) => setReason(e.target.value)} className="field w-full">
+                {REASONS.map((r) => (
+                  <option key={r} value={r}>
+                    {r}
+                  </option>
+                ))}
+                <option value="other">Other…</option>
+              </select>
+              {reason === "other" && <input value={otherReason} onChange={(e) => setOtherReason(e.target.value)} placeholder="Write the reason" className="field mt-2 w-full" autoFocus />}
             </div>
-
-            <div className="flex justify-end space-x-2 pt-2">
-              <button
-                type="button"
-                onClick={onClose}
-                className="px-3 py-1.5 border border-slate-300 text-slate-600 hover:bg-slate-100 rounded text-xs font-semibold"
-              >
+            <div>
+              <label htmlFor="gp-escort" className="field-label">
+                Going with
+              </label>
+              <select id="gp-escort" value={escort} onChange={(e) => setEscort(e.target.value)} className="field w-full">
+                <option value="father">Father{s.fatherName ? ` (${s.fatherName})` : ""}</option>
+                {s.motherName && <option value="mother">Mother ({s.motherName})</option>}
+                <option value="other">Someone else…</option>
+              </select>
+              {escort === "other" && (
+                <input value={otherEscort} onChange={(e) => setOtherEscort(e.target.value)} placeholder="Name and relation, e.g. Suresh Jain (uncle)" className="field mt-2 w-full" />
+              )}
+            </div>
+            <div className="flex justify-end gap-2 border-t border-slate-200 pt-4">
+              <button type="button" onClick={onClose} className="btn btn-secondary btn-sm">
                 Cancel
               </button>
-              <button
-                type="submit"
-                className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded text-xs font-bold shadow-xs transition-colors flex items-center space-x-1.5"
-              >
-                <Ticket className="w-3.5 h-3.5" />
-                <span>Authorize, Download PDF & Send SMS</span>
+              <button type="submit" disabled={saving} className="btn btn-primary btn-sm">
+                {saving && <Loader2 className="h-4 w-4 animate-spin" />}
+                {saving ? "Saving…" : "Issue gate pass"}
               </button>
             </div>
           </form>
         )}
+
+        {earlier.length > 0 && (
+          <div>
+            <h3 className="mb-1.5 text-xs font-medium text-slate-500">Earlier passes</h3>
+            <table className="w-full border-t border-slate-200 text-[13px]">
+              <tbody className="divide-y divide-slate-100">
+                {earlier.map((p) => (
+                  <tr key={p.id}>
+                    <td className="py-1.5 pr-3 font-mono">{p.pass_no}</td>
+                    <td className="py-1.5 pr-3 text-slate-600">{p.reason}</td>
+                    <td className="whitespace-nowrap py-1.5 pr-3 text-slate-500">{when(p.issued_at)}</td>
+                    <td className="py-1.5 text-right">
+                      <button type="button" onClick={() => print(p)} className="text-brand-700 hover:underline">
+                        Print
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
       </div>
     </Modal>
+  );
+}
+
+function Line({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex gap-3 py-1.5">
+      <dt className="w-24 shrink-0 text-slate-500">{label}</dt>
+      <dd>{value}</dd>
+    </div>
   );
 }

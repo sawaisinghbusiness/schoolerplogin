@@ -1,84 +1,38 @@
-import { supabase, isSupabaseConfigured } from "@/lib/supabaseClient";
+import { api } from "@/lib/apiClient";
 
 export interface AuthenticatedUser {
   id: string;
   name: string;
-  role: "admin" | "teacher" | "accountant" | "parent" | "student";
+  role: "admin" | "teacher" | "exam_cell" | "accountant" | "parent" | "student";
   identifier: string;
-  isLive: boolean;
 }
 
-const MOCK_USERS = [
-  { identifier: "9414012345", role: "admin", name: "Mahendra Parihar (Director/Admin)", password: "admin@123" },
-  { identifier: "8769444584", role: "admin", name: "Mahendra Parihar (Director/Admin)", password: "admin@123" },
-  { identifier: "9829055443", role: "teacher", name: "Sunita Sharma (Senior PGT)", password: "teacher@123" },
-  { identifier: "9460199887", role: "accountant", name: "Ramesh Bhati (Accounts)", password: "accounts@123" },
-  { identifier: "ADM-9102", role: "parent", name: "Rajesh Sharma (Parent - Aarav)", password: "student@123" },
-];
-
+/**
+ * Auth goes through the backend (/api/auth/*), which verifies the bcrypt
+ * password hash and sets an httpOnly session cookie. The base URL is controlled
+ * by NEXT_PUBLIC_API_URL (falls back to same-origin Next.js routes when unset).
+ */
 export const authService = {
   async login(
     identifier: string,
-    passwordAttempt: string,
-    role: "admin" | "teacher" | "accountant" | "parent" | "student"
+    passwordAttempt: string
   ): Promise<{ success: boolean; user?: AuthenticatedUser; error?: string }> {
-    const trimmedId = identifier.trim();
-
-    if (isSupabaseConfigured) {
-      try {
-        // Query users table for phone_number or admission_no or employee_code
-        const { data, error } = await supabase
-          .from("users")
-          .select("*")
-          .or(`phone_number.eq.${trimmedId},admission_no.eq.${trimmedId},employee_code.eq.${trimmedId}`)
-          .maybeSingle();
-
-        if (data && !error) {
-          // For demo simplicity, verify password hash or plaintext demo
-          return {
-            success: true,
-            user: {
-              id: data.id,
-              name: data.full_name,
-              role: data.role as any,
-              identifier: trimmedId,
-              isLive: true,
-            },
-          };
-        }
-      } catch (err: any) {
-        console.warn("Supabase auth error:", err);
-      }
-    }
-
-    // Mock fallback check
-    const matched = MOCK_USERS.find(
-      (u) => (u.identifier === trimmedId || trimmedId.endsWith(u.identifier.slice(-4))) && (u.role === role || role === "admin")
+    const res = await api.post<{ success: boolean; user?: AuthenticatedUser; error?: string }>(
+      "/api/auth/login",
+      { identifier, password: passwordAttempt }
     );
-
-    if (matched) {
-      return {
-        success: true,
-        user: {
-          id: matched.identifier,
-          name: matched.name,
-          role: matched.role as any,
-          identifier: matched.identifier,
-          isLive: false,
-        },
-      };
+    if (!res.ok || !res.data?.success) {
+      return { success: false, error: res.error || res.data?.error || "Invalid credentials." };
     }
+    return { success: true, user: res.data.user };
+  },
 
-    // If identifier provided, allow demo login with assigned role
-    return {
-      success: true,
-      user: {
-        id: trimmedId,
-        name: `${role.toUpperCase()} User (${trimmedId})`,
-        role,
-        identifier: trimmedId,
-        isLive: false,
-      },
-    };
+  async logout(): Promise<void> {
+    await api.post("/api/auth/logout");
+  },
+
+  async currentUser(): Promise<AuthenticatedUser | null> {
+    const res = await api.get<{ authenticated: boolean; user?: AuthenticatedUser }>("/api/auth/me");
+    return res.ok && res.data?.authenticated ? res.data.user ?? null : null;
   },
 };

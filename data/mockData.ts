@@ -31,11 +31,13 @@ import STUDENTS_1500 from "./students_1500.json";
 
 export const MOCK_STUDENTS: Student[] = STUDENTS_1500 as Student[];
 
+// Order + colors validated for colour-blind separation (dataviz validator, light mode):
+// keep Half Day between Present and On Leave so the orange never sits next to the red.
 export const STAFF_ATTENDANCE_DATA = [
-  { name: "Present", value: 61, percentage: "89.7%", color: "#10b981", count: 61 },
-  { name: "On Leave", value: 4, percentage: "5.9%", color: "#0ea5e9", count: 4 },
-  { name: "Half Day", value: 1, percentage: "1.5%", color: "#f59e0b", count: 1 },
-  { name: "Absent", value: 2, percentage: "2.9%", color: "#f43f5e", count: 2 },
+  { name: "Present", value: 61, percentage: "89.7%", color: "#089173", count: 61 },
+  { name: "Half Day", value: 1, percentage: "1.5%", color: "#D67C07", count: 1 },
+  { name: "On Leave", value: 4, percentage: "5.9%", color: "#0284C7", count: 4 },
+  { name: "Absent", value: 2, percentage: "2.9%", color: "#E5484D", count: 2 },
 ];
 
 

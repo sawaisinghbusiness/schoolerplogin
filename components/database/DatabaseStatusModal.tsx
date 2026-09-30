@@ -87,7 +87,7 @@ export default function DatabaseStatusModal({
             <div>
               <h2 className="text-base font-bold tracking-tight">Supabase Database Hub</h2>
               <p className="text-xs text-slate-400">
-                PostgreSQL Cloud Backend for St. Paul&apos;s Senior Secondary School
+                PostgreSQL Cloud Backend for St. Paul School
               </p>
             </div>
           </div>
@@ -179,19 +179,19 @@ export default function DatabaseStatusModal({
 
               {/* Stats Cards */}
               <div className="grid grid-cols-3 gap-3">
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-center">
+                <div className="panel p-3 text-center">
                   <div className="text-xs uppercase font-bold text-slate-400">Database Engine</div>
                   <div className="text-sm font-black text-slate-800 mt-1">
                     {health?.connected ? "PostgreSQL (Supabase)" : "Mock Data Engine"}
                   </div>
                 </div>
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-center">
+                <div className="panel p-3 text-center">
                   <div className="text-xs uppercase font-bold text-slate-400">Scholars Roster</div>
                   <div className="text-sm font-black text-slate-800 mt-1">
                     {health?.connected ? `${health.database?.studentsCount ?? 0} Students` : "1,924 Mock Scholars"}
                   </div>
                 </div>
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-center">
+                <div className="panel p-3 text-center">
                   <div className="text-xs uppercase font-bold text-slate-400">Faculty Roster</div>
                   <div className="text-sm font-black text-slate-800 mt-1">
                     {health?.connected ? `${health.database?.staffCount ?? 0} Staff` : "68 Faculty Members"}
@@ -204,7 +204,7 @@ export default function DatabaseStatusModal({
                 <button
                   onClick={checkHealth}
                   disabled={loading}
-                  className="inline-flex items-center space-x-1.5 px-3.5 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-lg font-bold text-xs shadow-xs transition-colors disabled:opacity-50"
+                  className="btn btn-dark disabled:opacity-50"
                 >
                   <RefreshCw className={`w-3.5 h-3.5 ${loading ? "animate-spin" : ""}`} />
                   <span>{loading ? "Testing Connection..." : "Test Connection Live"}</span>
@@ -313,7 +313,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here`}
         {/* Modal Footer */}
         <div className="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between">
           <span className="text-xs text-slate-500 font-mono">
-            St. Paul&apos;s ERP &bull; Database Status Modal
+            SchoolDesk ERP &bull; Database Status Modal
           </span>
           <button
             onClick={onClose}

@@ -17,7 +17,7 @@ export function generateFeeReceiptPDF(
   doc.setTextColor(255, 255, 255);
   doc.setFont("helvetica", "bold");
   doc.setFontSize(15);
-  doc.text("ST. PAUL'S SENIOR SECONDARY SCHOOL", 105, 14, { align: "center" });
+  doc.text("ST. PAUL SCHOOL, BARMER", 105, 14, { align: "center" });
 
   doc.setFontSize(9);
   doc.setFont("helvetica", "normal");
@@ -150,7 +150,7 @@ export function generateGatePassPDF(
   doc.setTextColor(255, 255, 255);
   doc.setFont("helvetica", "bold");
   doc.setFontSize(13);
-  doc.text("ST. PAUL&apos;S SENIOR SECONDARY SCHOOL", 74, 10, { align: "center" });
+  doc.text("ST. PAUL SCHOOL, BARMER", 74, 10, { align: "center" });
   doc.setFontSize(8);
   doc.setTextColor(40, 212, 164);
   doc.text("STUDENT EARLY DEPARTURE GATE CLEARANCE SLIP", 74, 16, { align: "center" });

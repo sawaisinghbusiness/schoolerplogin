@@ -1,162 +1,118 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import {
-  PieChart,
-  Pie,
-  Cell,
-  ResponsiveContainer,
-  Tooltip
-} from "recharts";
-import { Briefcase, ExternalLink, Clock, Wifi, ArrowRight } from "lucide-react";
+import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
+import { Briefcase, Fingerprint } from "lucide-react";
 import { STAFF_ATTENDANCE_DATA } from "@/data/mockData";
 
-export function StaffAttendanceCard() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const totalStaff = STAFF_ATTENDANCE_DATA.reduce((acc, curr) => acc + curr.count, 0);
-  const presentCount = STAFF_ATTENDANCE_DATA.find((s) => s.name === "Present")?.count || 0;
-  const presentPercent = Math.round((presentCount / totalStaff) * 100);
-
-  const currentDate = new Date().toLocaleDateString("en-IN", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric"
-  });
-
+function StaffTooltip({ active, payload }: any) {
+  if (!active || !payload?.length) return null;
+  const d = payload[0].payload;
   return (
-    <div className="bg-white rounded-xl shadow-xs border border-slate-200/80 overflow-hidden flex flex-col justify-between h-full hover:border-slate-300 transition-all">
-      {/* Header */}
-      <div className="p-4 sm:p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/40">
-        <div className="flex items-center space-x-3">
-          <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center border border-slate-200/80">
-            <Briefcase className="w-4 h-4 stroke-[1.8]" />
-          </div>
-          <div>
-            <div className="flex items-center space-x-2">
-              <h3 className="text-sm font-bold text-slate-900 tracking-tight">
-                Faculty & Staff Attendance
-              </h3>
-              <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100/80 text-emerald-800">
-                {presentPercent}% Present
-              </span>
-            </div>
-            <div className="flex items-center space-x-1.5 text-xs text-slate-400 mt-0.5">
-              <Clock className="w-3 h-3 text-slate-400" />
-              <span>{currentDate}</span>
-            </div>
-          </div>
-        </div>
-
-        <Link
-          href="/daily-staff-attendance"
-          className="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
-          title="Open Staff Attendance Module"
-        >
-          <ExternalLink className="w-4 h-4" />
-        </Link>
-      </div>
-
-      {/* Main Content: Chart + Legend */}
-      <div className="p-4 sm:p-6 flex-1 flex flex-col md:flex-row items-center justify-between gap-6">
-        {/* Donut Chart */}
-        <div className="w-full md:w-1/2 h-48 relative flex items-center justify-center">
-          {mounted ? (
-            <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
-                <Pie
-                  data={STAFF_ATTENDANCE_DATA}
-                  cx="50%"
-                  cy="50%"
-                  innerRadius={52}
-                  outerRadius={74}
-                  paddingAngle={3}
-                  dataKey="value"
-                >
-                  {STAFF_ATTENDANCE_DATA.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} strokeWidth={0} />
-                  ))}
-                </Pie>
-                <Tooltip
-                  formatter={(val: number, name: string) => [
-                    `${val} staff members`,
-                    name
-                  ]}
-                  contentStyle={{
-                    backgroundColor: "#0f172a",
-                    borderRadius: "8px",
-                    border: "none",
-                    color: "#fff",
-                    fontSize: "12px",
-                    padding: "8px 12px",
-                    boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)"
-                  }}
-                  itemStyle={{ color: "#fff" }}
-                />
-              </PieChart>
-            </ResponsiveContainer>
-          ) : (
-            <div className="w-36 h-36 rounded-full border-4 border-slate-100 animate-pulse" />
-          )}
-
-          {/* Center text inside Donut */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-            <span className="text-2xl font-bold text-slate-900 font-mono tracking-tight">
-              {presentCount}/{totalStaff}
-            </span>
-            <span className="text-xs text-slate-400 font-medium uppercase tracking-wider">
-              On Duty Today
-            </span>
-          </div>
-        </div>
-
-        {/* Detailed Legend alongside chart */}
-        <div className="w-full md:w-1/2 space-y-2">
-          {STAFF_ATTENDANCE_DATA.map((item, idx) => (
-            <div
-              key={idx}
-              className="flex items-center justify-between p-2 rounded-lg hover:bg-slate-50 transition-colors text-xs border border-transparent hover:border-slate-100"
-            >
-              <div className="flex items-center space-x-2.5">
-                <span
-                  className="w-2.5 h-2.5 rounded-full shrink-0"
-                  style={{ backgroundColor: item.color }}
-                />
-                <span className="font-medium text-slate-700">{item.name}</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="font-mono font-bold text-slate-900">
-                  {item.count}
-                </span>
-                <span className="text-xs text-slate-400 font-medium min-w-[45px] text-right">
-                  ({item.percentage})
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Footer */}
-      <div className="p-3.5 bg-slate-50/60 border-t border-slate-100 flex items-center justify-between text-xs">
-        <div className="flex items-center space-x-2 text-slate-500">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="text-xs font-medium">Biometric Terminal Online (SPSS Main Gate)</span>
-        </div>
-        <Link
-          href="/daily-staff-attendance"
-          className="text-xs font-semibold text-blue-600 hover:text-blue-800 transition-colors"
-        >
-          Staff Roster &rarr;
-        </Link>
+    <div className="rounded-xl bg-slate-900 px-3 py-2 text-xs text-white shadow-lg">
+      <div className="text-slate-400">{d.name}</div>
+      <div className="mt-0.5 font-mono text-sm font-semibold">
+        {d.count} staff · {d.percentage}
       </div>
     </div>
   );
 }
 
+export function StaffAttendanceCard() {
+  const [mounted, setMounted] = useState(false);
+  const [active, setActive] = useState<number | null>(null);
+  useEffect(() => setMounted(true), []);
+
+  const total = STAFF_ATTENDANCE_DATA.reduce((a, c) => a + c.count, 0);
+  const present = STAFF_ATTENDANCE_DATA.find((s) => s.name === "Present")?.count || 0;
+
+  return (
+    <section className="flex h-full flex-col rounded-2xl bg-white shadow-card">
+      <header className="flex items-start justify-between gap-4 p-5 sm:p-6">
+        <div className="flex items-center gap-3">
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-50 text-sky-700 ring-1 ring-sky-100">
+            <Briefcase className="h-5 w-5" strokeWidth={1.9} />
+          </span>
+          <div>
+            <h3 className="text-[15px] font-bold text-slate-900">Staff attendance</h3>
+            <p className="mt-0.5 text-xs text-slate-500">Teaching and non-teaching staff</p>
+          </div>
+        </div>
+        <span className="rounded-full bg-slate-100 px-2.5 py-1 font-mono text-[11.5px] font-semibold text-slate-700">
+          {Math.round((present / total) * 100)}% on duty
+        </span>
+      </header>
+
+      <div className="flex flex-1 flex-col items-center gap-6 px-5 sm:flex-row sm:px-6">
+        <div className="relative h-48 w-48 shrink-0" role="img" aria-label={STAFF_ATTENDANCE_DATA.map((d) => `${d.name} ${d.count}`).join(", ")}>
+          {mounted ? (
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={STAFF_ATTENDANCE_DATA}
+                  dataKey="value"
+                  innerRadius={62}
+                  outerRadius={88}
+                  paddingAngle={2}
+                  cornerRadius={2}
+                  stroke="#fff"
+                  strokeWidth={2}
+                  startAngle={90}
+                  endAngle={-270}
+                  onMouseEnter={(_, i) => setActive(i)}
+                  onMouseLeave={() => setActive(null)}
+                  animationDuration={900}
+                >
+                  {STAFF_ATTENDANCE_DATA.map((entry, i) => (
+                    <Cell key={entry.name} fill={entry.color} opacity={active === null || active === i ? 1 : 0.35} />
+                  ))}
+                </Pie>
+                <Tooltip content={<StaffTooltip />} />
+              </PieChart>
+            </ResponsiveContainer>
+          ) : (
+            <div className="skeleton h-full w-full rounded-full" />
+          )}
+          <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
+            <span className="text-3xl font-bold tracking-tight tabular-nums text-slate-900">
+              {present}
+              <span className="text-lg text-slate-400">/{total}</span>
+            </span>
+            <span className="text-[11px] font-medium uppercase tracking-wider text-slate-500">on duty</span>
+          </div>
+        </div>
+
+        <ul className="w-full space-y-1.5">
+          {STAFF_ATTENDANCE_DATA.map((item, i) => (
+            <li
+              key={item.name}
+              onMouseEnter={() => setActive(i)}
+              onMouseLeave={() => setActive(null)}
+              className={`flex items-center justify-between rounded-xl px-3 py-2.5 text-sm ${active === i ? "bg-slate-50" : ""}`}
+            >
+              <span className="flex items-center gap-2.5">
+                <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: item.color }} />
+                <span className="font-medium text-slate-700">{item.name}</span>
+              </span>
+              <span className="flex items-baseline gap-2">
+                <span className="font-mono font-bold text-slate-900">{item.count}</span>
+                <span className="w-12 text-right font-mono text-xs text-slate-400">{item.percentage}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <footer className="mt-5 flex items-center justify-between border-t border-slate-100 px-5 py-3.5 sm:px-6">
+        <span className="flex items-center gap-2 text-xs text-slate-500">
+          <Fingerprint className="h-4 w-4 text-emerald-600" />
+          Main gate biometric online
+        </span>
+        <Link href="/staff/attendance" className="text-xs font-semibold text-emerald-700 hover:text-emerald-800">
+          Staff roster
+        </Link>
+      </footer>
+    </section>
+  );
+}

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 import {
   Users,
   MessageSquare,
@@ -36,6 +37,7 @@ interface StatCardProps {
   href?: string;
   subtext?: string;
   trend?: string;
+  className?: string;
 }
 
 const ICON_MAP: Record<string, any> = {
@@ -66,9 +68,10 @@ export function StatCard({
   count,
   icon,
   hasExternalLink = false,
-  href = "/search-student",
+  href = "/students",
   subtext,
-  trend
+  trend,
+  className,
 }: StatCardProps) {
   const IconComponent = ICON_MAP[icon] || Users;
   const trendText = trend || subtext;
@@ -107,11 +110,16 @@ export function StatCard({
     </div>
   );
 
+  const cardClasses = cn(
+    "group bg-white rounded-xl shadow-2xs border border-slate-200/90 hover:border-slate-300 hover:shadow-xs transition-all duration-150 flex flex-col justify-between h-full",
+    className
+  );
+
   if (hasExternalLink && href) {
     return (
       <Link
         href={href}
-        className="group bg-white rounded-xl shadow-2xs border border-slate-200/90 hover:border-slate-300 hover:shadow-xs transition-all duration-150 flex flex-col justify-between"
+        className={cardClasses}
       >
         {cardContent}
       </Link>
@@ -119,7 +127,7 @@ export function StatCard({
   }
 
   return (
-    <div className="group bg-white rounded-xl shadow-2xs border border-slate-200/90 hover:border-slate-300 hover:shadow-xs transition-all duration-150 flex flex-col justify-between">
+    <div className={cardClasses}>
       {cardContent}
     </div>
   );
