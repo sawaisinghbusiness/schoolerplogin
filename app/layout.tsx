@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 // Self-hosted variable fonts (bundled from npm, so builds never depend on Google Fonts).
 import "@fontsource-variable/plus-jakarta-sans";
 import "@fontsource-variable/jetbrains-mono";
+import "@fontsource-variable/fraunces";
 import "./globals.css";
 import { AppShell } from "@/components/layout/AppShell";
 

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { SESSION_COOKIE } from "@/lib/sessionConstants";
+import { isPublicPage } from "@/lib/publicRoutes";
 
 /**
  * Page-level guard. Data/auth now live on the backend server, which is the real
@@ -11,12 +12,11 @@ import { SESSION_COOKIE } from "@/lib/sessionConstants";
  * domain (or gate purely client-side) so the cookie is readable.
  */
 
-const PUBLIC_PAGES = ["/login"];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  if (PUBLIC_PAGES.includes(pathname)) {
+  if (isPublicPage(pathname)) {
     return NextResponse.next();
   }
 

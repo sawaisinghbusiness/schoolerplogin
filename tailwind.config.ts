@@ -90,6 +90,8 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    // Services hold some badge class names (e.g. role colours).
+    "./lib/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -133,6 +135,8 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "Segoe UI", "Roboto", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+        // Public website headings: a warm serif, like a printed school prospectus.
+        display: ["'Fraunces Variable'", "Georgia", "serif"],
       },
       fontSize: {
         // Nudge the smallest step up: the app leans on text-xs everywhere and 12px read cramped.

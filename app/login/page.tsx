@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
+  ArrowLeft,
   ArrowRight,
   BookOpenCheck,
   Briefcase,
@@ -127,6 +129,10 @@ export default function LoginPage() {
 
       {/* ── Sign-in form ──────────────────────────────────────────── */}
       <main className="relative flex flex-1 items-center justify-center px-5 py-12 sm:px-10">
+        <Link href="/" className="absolute left-5 top-5 inline-flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-sm font-semibold text-slate-500 hover:bg-slate-100 hover:text-slate-900 sm:left-8 sm:top-6">
+          <ArrowLeft className="h-4 w-4" />
+          Back to website
+        </Link>
 
         <div className="relative w-full max-w-[26rem]">
           {/* Compact brand for small screens */}

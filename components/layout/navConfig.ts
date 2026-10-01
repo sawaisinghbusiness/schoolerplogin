@@ -112,7 +112,7 @@ export const NAV_GROUPS: NavGroup[] = [
         children: [
           { title: "School & sessions", href: "/settings" },
           { title: "Classes & subjects", href: "/settings/classes" },
-          { title: "Users & roles", href: "/settings/users", soon: true },
+          { title: "Users & roles", href: "/settings/users" },
           { title: "Messaging & print", href: "/settings/messaging", soon: true },
         ],
       },

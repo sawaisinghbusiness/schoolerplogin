@@ -4,7 +4,6 @@ const nextConfig = {
   async redirects() {
     // Old URLs from before the Phase 0 restructure (29 Sep 2026) keep working.
     return [
-      { source: "/", destination: "/dashboard", permanent: false },
       { source: "/dashboard/admin", destination: "/dashboard", permanent: false },
       { source: "/collect-fees", destination: "/fees/collect", permanent: false },
       { source: "/search-student", destination: "/students", permanent: false },

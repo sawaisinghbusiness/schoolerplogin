@@ -6,6 +6,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { SchoolProfileProvider } from "@/components/providers/SchoolProfileProvider";
 import { Toaster } from "@/components/ui/Toaster";
+import { isPublicPage } from "@/lib/publicRoutes";
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -14,7 +15,8 @@ interface AppShellProps {
 export function AppShell({ children }: AppShellProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const pathname = usePathname();
-  const isAuthPage = pathname === "/login";
+  // The public website and the login page have their own full-page layout.
+  const isAuthPage = isPublicPage(pathname || "/");
 
   if (isAuthPage) {
     return (

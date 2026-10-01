@@ -9,15 +9,17 @@ import {
   ChevronDown,
   ChevronRight,
   Database,
+  KeyRound,
   LogOut,
   Menu,
   Search,
   Settings,
-  User,
+  Users,
 } from "lucide-react";
 import DatabaseStatusModal from "@/components/database/DatabaseStatusModal";
 import { CommandPalette } from "@/components/layout/CommandPalette";
 import { SignOutDialog } from "@/components/layout/SignOutDialog";
+import { ChangePasswordModal } from "@/components/layout/ChangePasswordModal";
 import { titleForPath } from "@/components/layout/navConfig";
 import { useCurrentUser } from "@/components/layout/useCurrentUser";
 
@@ -34,6 +36,7 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
   const [profileOpen, setProfileOpen] = useState(false);
   const [signOutOpen, setSignOutOpen] = useState(false);
   const [dbOpen, setDbOpen] = useState(false);
+  const [passwordOpen, setPasswordOpen] = useState(false);
   const [isMac, setIsMac] = useState(false);
 
   const profileRef = useRef<HTMLDivElement>(null);
@@ -171,8 +174,8 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
             </div>
             <div className="py-1.5">
               {[
-                { href: "/settings/users", icon: User, label: "My profile" },
                 { href: "/settings", icon: Settings, label: "School settings" },
+                ...(user.role === "Administrator" ? [{ href: "/settings/users", icon: Users, label: "Users & roles" }] : []),
               ].map((l) => (
                 <Link
                   key={l.href}
@@ -184,6 +187,16 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
                   {l.label}
                 </Link>
               ))}
+              <button
+                onClick={() => {
+                  setProfileOpen(false);
+                  setPasswordOpen(true);
+                }}
+                className="flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-left text-[13px] font-medium text-slate-700 hover:bg-slate-50 hover:text-slate-900"
+              >
+                <KeyRound className="h-4 w-4 text-slate-400" />
+                Change password
+              </button>
               <button
                 onClick={() => {
                   setProfileOpen(false);
@@ -216,6 +229,7 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
     {/* Rendered outside <header>: its backdrop-filter would otherwise trap these fixed overlays. */}
     <CommandPalette open={paletteOpen} onClose={() => setPaletteOpen(false)} />
     <SignOutDialog open={signOutOpen} onClose={() => setSignOutOpen(false)} />
+    <ChangePasswordModal open={passwordOpen} onClose={() => setPasswordOpen(false)} />
     <DatabaseStatusModal isOpen={dbOpen} onClose={() => setDbOpen(false)} />
     </>
   );
