@@ -45,29 +45,32 @@ export default function DashboardPage() {
   const paidPct = f && f.sessionTotal > 0 ? Math.round((f.sessionPaid / f.sessionTotal) * 100) : 0;
 
   return (
-    <div className="space-y-6 pb-12">
+    <div className="space-y-4 pb-12 sm:space-y-6">
       {/* Greeting + actions */}
       <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <h1 className="text-[26px] font-bold tracking-tight text-slate-900">
+          <h1 className="text-[21px] font-bold tracking-tight text-slate-900 sm:text-[26px]">
             {hello}, {user.name.split(" ")[0]}
           </h1>
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-0.5 text-[13px] text-slate-500 sm:mt-1 sm:text-sm">
             {today}
             {data && ` · ${fmt(data.students.total)} students · ${data.attention.sectionsTotal} sections`}
           </p>
         </div>
-        <div className="flex flex-wrap gap-2">
-          <Link href="/attendance/mark" className="btn btn-secondary">
-            <CalendarCheck className="h-4 w-4" />
-            Mark attendance
+        {/* Phones: three equal quick actions; desktop: a row of buttons. */}
+        <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-wrap">
+          <Link href="/attendance/mark" className="btn btn-secondary h-auto flex-col gap-1 px-1 py-2.5 text-[12.5px] sm:flex-row sm:gap-2 sm:px-4 sm:text-sm">
+            <CalendarCheck className="h-[18px] w-[18px] sm:h-4 sm:w-4" />
+            <span className="sm:hidden">Attendance</span>
+            <span className="hidden sm:inline">Mark attendance</span>
           </Link>
-          <Link href="/students?new=1" className="btn btn-secondary">
-            <Plus className="h-4 w-4" />
-            New admission
+          <Link href="/students?new=1" className="btn btn-secondary h-auto flex-col gap-1 px-1 py-2.5 text-[12.5px] sm:flex-row sm:gap-2 sm:px-4 sm:text-sm">
+            <Plus className="h-[18px] w-[18px] sm:h-4 sm:w-4" />
+            <span className="sm:hidden">Admission</span>
+            <span className="hidden sm:inline">New admission</span>
           </Link>
-          <Link href="/fees/collect" className="btn btn-primary">
-            <IndianRupee className="h-4 w-4" />
+          <Link href="/fees/collect" className="btn btn-primary h-auto flex-col gap-1 px-1 py-2.5 text-[12.5px] sm:flex-row sm:gap-2 sm:px-4 sm:text-sm">
+            <IndianRupee className="h-[18px] w-[18px] sm:h-4 sm:w-4" />
             Collect fee
           </Link>
         </div>
@@ -83,8 +86,54 @@ export default function DashboardPage() {
         </div>
       )}
 
+      {/* Phones: one summary card — the month figure, then three rows that open their lists. */}
+      <section className="card overflow-hidden sm:hidden" aria-label="Fees and students at a glance">
+        {!f || !data ? (
+          <div className="space-y-3 p-4">
+            <div className="skeleton h-14 w-full" />
+            <div className="skeleton h-10 w-full" />
+            <div className="skeleton h-10 w-full" />
+          </div>
+        ) : (
+          <>
+            <div className="px-4 pb-3.5 pt-4">
+              <p className="text-[13px] font-semibold text-slate-600">Collected this month</p>
+              <p className="mt-1 text-[26px] font-bold leading-tight tracking-tight tabular-nums text-slate-900">{money(f.thisMonth)}</p>
+              <p className="mt-0.5 text-[13px] text-slate-500">
+                {MONTHS[new Date().getMonth()]} so far
+                {change !== null && (
+                  <span className={change >= 0 ? "font-semibold text-emerald-700" : "font-semibold text-rose-600"}>
+                    {" · "}
+                    {change >= 0 ? "+" : "−"}
+                    {Math.abs(change).toFixed(0)}% vs last month
+                  </span>
+                )}
+              </p>
+            </div>
+            <ul className="divide-y divide-slate-100 border-t border-slate-100">
+              {[
+                { href: "/fees/reports", title: "Collected this session", meta: `${paidPct}% of ${money(f.sessionTotal)}`, value: money(f.sessionPaid), tone: "text-slate-900" },
+                { href: "/fees/dues", title: "Fees pending", meta: `${fmt(f.dueStudents)} students`, value: money(f.sessionDue), tone: "text-rose-600" },
+                { href: "/students", title: "Students", meta: `${fmt(data.students.boys)} boys · ${fmt(data.students.girls)} girls · ${fmt(data.students.bus)} by bus`, value: fmt(data.students.total), tone: "text-slate-900" },
+              ].map((r) => (
+                <li key={r.title}>
+                  <Link href={r.href} className="m-row min-h-[56px] active:bg-slate-50">
+                    <span className="m-row-main">
+                      <span className="m-row-title text-[14px]">{r.title}</span>
+                      <span className="m-row-meta">{r.meta}</span>
+                    </span>
+                    <span className={`m-row-value ${r.tone}`}>{r.value}</span>
+                    <ChevronRight className="h-4 w-4 shrink-0 text-slate-300" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </section>
+
       {/* KPIs */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="hidden grid-cols-1 gap-4 sm:grid sm:grid-cols-2 xl:grid-cols-4">
         <Kpi label="Collected this month" loading={loading}>
           {f && (
             <>

@@ -1,5 +1,6 @@
-import { ComingSoon } from "@/components/ui/ComingSoon";
+import { redirect } from "next/navigation";
 
+// Staff leave lives on the Staff attendance page.
 export default function Page() {
-  return <ComingSoon route="/staff/leave" />;
+  redirect("/staff/attendance?tab=leave");
 }

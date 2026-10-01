@@ -232,17 +232,25 @@ export default function StudentsPage() {
       <header className="page-header">
         <div>
           <h1 className="page-title">Students</h1>
-          <p className="page-subtitle">{loaded ? `Session 2026-27 · ${classes.length} classes · ${sectionCount} sections` : "Loading…"}</p>
+          <p className="page-subtitle">
+            {loaded ? (
+              <>
+                {fmt(stats.all)} students · {fmt(stats.boys)} boys · {fmt(stats.girls)} girls · <span className="font-semibold text-rose-600">{lakh(stats.dueAmount)}</span> due
+              </>
+            ) : (
+              "Loading…"
+            )}
+          </p>
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex gap-2">
           <input ref={fileRef} type="file" accept=".xlsx,.xls,.csv" onChange={onImport} className="hidden" />
-          <button type="button" onClick={() => fileRef.current?.click()} disabled={importing} className="btn btn-secondary">
+          <button type="button" onClick={() => fileRef.current?.click()} disabled={importing} className="btn btn-secondary px-3 sm:px-4" aria-label="Import from Excel">
             {importing ? <Loader2 className="h-4 w-4 animate-spin" /> : <Upload className="h-4 w-4" />}
-            {importing ? "Importing…" : "Import"}
+            <span className="hidden sm:inline">{importing ? "Importing…" : "Import"}</span>
           </button>
-          <button type="button" onClick={() => exportStudentsToExcel(filtered)} disabled={!filtered.length} className="btn btn-secondary">
+          <button type="button" onClick={() => exportStudentsToExcel(filtered)} disabled={!filtered.length} className="btn btn-secondary px-3 sm:px-4" aria-label="Export to Excel">
             <Download className="h-4 w-4" />
-            Export
+            <span className="hidden sm:inline">Export</span>
           </button>
           <button type="button" onClick={() => setAdmitOpen(true)} disabled={!loaded} className="btn btn-primary">
             <Plus className="h-4 w-4" />
@@ -251,44 +259,41 @@ export default function StudentsPage() {
         </div>
       </header>
 
-      {/* Views as figures: each tile is a filter and tells you the number behind it */}
-      <div className="grid grid-cols-2 gap-3 lg:grid-cols-4" role="tablist" aria-label="Views">
-        <ViewTile on={view === "all"} onClick={() => setView("all")} label="All students" value={loaded ? fmt(stats.all) : "…"}>
-          {loaded && stats.all > 0 && (
-            <>
-              <div className="mt-3 flex h-1.5 gap-0.5 overflow-hidden rounded-full">
-                <span className="rounded-full bg-brand-500" style={{ width: `${(stats.boys / stats.all) * 100}%` }} />
-                <span className="flex-1 rounded-full bg-marigold-400" />
-              </div>
-              <div className="mt-1.5 flex justify-between text-xs text-slate-500">
-                <span className="inline-flex items-center gap-1.5">
-                  <i className="h-2 w-2 rounded-full bg-brand-500" />
-                  {fmt(stats.boys)} boys
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <i className="h-2 w-2 rounded-full bg-marigold-400" />
-                  {fmt(stats.girls)} girls
-                </span>
-              </div>
-            </>
-          )}
-        </ViewTile>
-        <ViewTile on={view === "due"} onClick={() => setView("due")} label="Fees pending" value={loaded ? fmt(stats.due) : "…"} tone="rose">
-          {loaded && <p className="mt-3 text-[13px] text-slate-500"><span className="font-semibold text-rose-600">{lakh(stats.dueAmount)}</span> still to collect</p>}
-        </ViewTile>
-        <ViewTile on={view === "bus"} onClick={() => setView("bus")} label="School bus" value={loaded ? fmt(stats.bus) : "…"}>
-          {loaded && <p className="mt-3 text-[13px] text-slate-500">on {stats.routes} routes</p>}
-        </ViewTile>
-        <ViewTile on={view === "paid"} onClick={() => setView("paid")} label="Fees fully paid" value={loaded ? fmt(stats.paid) : "…"} tone="emerald">
-          {loaded && stats.all > 0 && <p className="mt-3 text-[13px] text-slate-500"><span className="font-semibold text-emerald-700">{Math.round((stats.paid / stats.all) * 100)}%</span> of students</p>}
-        </ViewTile>
-      </div>
-
       {/* Search, filters and the list in one card */}
       <section className="card overflow-hidden" aria-label="Students">
-        <div className="flex flex-wrap items-center gap-2 border-b border-slate-200/80 p-3 sm:p-4">
-          <div className="flex min-w-[260px] flex-[1_1_320px] overflow-hidden rounded-xl border border-slate-200 bg-slate-50/70 focus-within:border-brand-500 focus-within:bg-white focus-within:ring-4 focus-within:ring-brand-500/15">
-            <select aria-label="Search in" value={field} onChange={(e) => setField(e.target.value as Field)} className="border-r border-slate-200 bg-transparent px-3 text-[13px] font-medium text-slate-600 outline-none">
+        <div className="flex items-center gap-2 border-b border-slate-200/80 px-3 pt-3 sm:px-4">
+          <div className="scroll-row -mb-px min-w-0 flex-1 gap-0" role="tablist" aria-label="Views">
+            {(
+              [
+                ["all", "All", stats.all],
+                ["due", "Fees pending", stats.due],
+                ["paid", "Fully paid", stats.paid],
+                ["bus", "By bus", stats.bus],
+              ] as [View, string, number][]
+            ).map(([k, label, n]) => {
+              const on = view === k;
+              return (
+                <button
+                  key={k}
+                  type="button"
+                  role="tab"
+                  aria-selected={on}
+                  onClick={() => setView(k)}
+                  className={`flex shrink-0 items-center gap-1.5 border-b-2 px-3 pb-2.5 pt-1.5 text-[13.5px] font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 ${on ? "border-brand-600 text-slate-900" : "border-transparent text-slate-500 hover:text-slate-800"}`}
+                >
+                  {label}
+                  <span className={`rounded-full px-1.5 text-xs tabular-nums ${on ? (k === "due" ? "bg-rose-50 text-rose-700" : "bg-brand-50 text-brand-700") : "bg-slate-100 text-slate-500"}`}>{loaded ? fmt(n) : "…"}</span>
+                </button>
+              );
+            })}
+          </div>
+          <button type="button" onClick={() => load(true)} className="mb-2 shrink-0 rounded-lg p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-700" title="Reload" aria-label="Reload">
+            <RefreshCw className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`} />
+          </button>
+        </div>
+        <div className="flex flex-wrap items-center gap-2 border-b border-slate-200/80 p-3 sm:px-4">
+          <div className="flex w-full overflow-hidden rounded-xl border lg:w-auto lg:min-w-[320px] lg:flex-1 border-slate-200 bg-slate-50/70 focus-within:border-brand-500 focus-within:bg-white focus-within:ring-4 focus-within:ring-brand-500/15">
+            <select aria-label="Search in" value={field} onChange={(e) => setField(e.target.value as Field)} className="max-w-[7.5rem] border-r border-slate-200 bg-transparent px-3 text-base font-medium text-slate-600 outline-none sm:max-w-none sm:text-[13px]">
               {FIELDS.map((f) => (
                 <option key={f.key} value={f.key}>
                   {f.label}
@@ -304,32 +309,29 @@ export default function StudentsPage() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search name, SR no., father or mobile"
-                className="h-10 w-full bg-transparent pl-9 pr-14 text-sm text-slate-900 outline-none placeholder:text-slate-400"
+                className="h-11 w-full bg-transparent pl-9 pr-10 text-base text-slate-900 outline-none placeholder:text-slate-400 sm:h-10 sm:pr-14 sm:text-sm"
               />
               {query ? (
                 <button type="button" onClick={() => setQuery("")} className="absolute right-2 top-1/2 -translate-y-1/2 rounded p-0.5 text-slate-400 hover:text-slate-600" aria-label="Clear search">
                   <X className="h-4 w-4" />
                 </button>
               ) : (
-                <kbd className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 rounded border border-slate-200 bg-white px-1.5 font-mono text-[11px] text-slate-400">/</kbd>
+                <kbd className="pointer-events-none absolute right-2.5 top-1/2 hidden -translate-y-1/2 rounded border sm:block border-slate-200 bg-white px-1.5 font-mono text-[11px] text-slate-400">/</kbd>
               )}
             </div>
           </div>
+          <div className="scroll-row -mx-3 w-[calc(100%+1.5rem)] px-3 sm:mx-0 sm:w-auto sm:flex-wrap sm:overflow-visible sm:px-0">
           <Chip label="Class" value={cls} onChange={(v) => { setCls(v); setSection("all"); }} options={classes.map((c) => [c, c])} />
           <Chip label="Section" value={section} onChange={setSection} options={sections.map((s) => [s, s])} />
           <Chip label="Gender" value={gender} onChange={setGender} options={[["Male", "Boys"], ["Female", "Girls"]]} />
           <Chip label="Category" value={category} onChange={setCategory} options={["General", "OBC", "SC", "ST"].map((c) => [c, c])} />
           {filtersOn && (
-            <button type="button" onClick={reset} className="px-1 text-[13px] font-semibold text-brand-700 hover:underline">
+            <button type="button" onClick={reset} className="shrink-0 px-2 py-2 text-[13px] font-semibold text-brand-700 hover:underline">
               Clear
             </button>
           )}
-          <span className="ml-auto flex items-center gap-1 text-[13px] text-slate-500">
-            {loaded && <span className="tabular-nums">{fmt(filtered.length)} shown</span>}
-            <button type="button" onClick={() => load(true)} className="rounded-lg p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-700" title="Reload" aria-label="Reload">
-              <RefreshCw className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`} />
-            </button>
-          </span>
+          </div>
+
         </div>
 
         {loadError ? (
@@ -362,15 +364,14 @@ export default function StudentsPage() {
               <table className="w-full text-sm">
                 <thead className="table-head">
                   <tr>
-                    <th className="w-12 py-3 pl-5 pr-2 text-left">
+                    <th className="hidden w-12 py-3 pl-5 pr-2 text-left lg:table-cell">
                       <Checkbox on={allShownSelected} onClick={toggleShown} label="Select all on this page" />
                     </th>
-                    <th className="px-3 py-3 text-left">Student</th>
-                    <th className="px-3 py-3 text-left">Class</th>
+                    <th className="py-3 pl-5 pr-3 text-left lg:pl-3">Student</th>
+                    <th className="hidden px-3 py-3 text-left xl:table-cell">Class</th>
                     <th className="px-3 py-3 text-left">Parent</th>
-                    <th className="px-3 py-3 text-left">Bus</th>
                     <th className="px-3 py-3 text-left">Fees 2026-27</th>
-                    <th className="px-5 py-3 text-right">
+                    <th className="py-3 pl-2 pr-4 text-right">
                       <span className="sr-only">Actions</span>
                     </th>
                   </tr>
@@ -380,50 +381,54 @@ export default function StudentsPage() {
                     const on = selected.has(s.id);
                     return (
                       <tr key={s.id} onClick={() => open(s, "profile")} className={`group cursor-pointer ${on ? "bg-brand-50/60 hover:bg-brand-50" : ""}`}>
-                        <td className="py-2.5 pl-5 pr-2" onClick={(e) => e.stopPropagation()}>
+                        <td className="hidden py-2.5 pl-5 pr-2 lg:table-cell" onClick={(e) => e.stopPropagation()}>
                           <Checkbox on={on} onClick={() => toggle(s.id)} label={`Select ${s.name}`} />
                         </td>
-                        <td className="px-3 py-2.5">
+                        <td className="max-w-[13rem] py-2.5 pl-5 pr-3 lg:pl-3 xl:max-w-[15rem]">
                           <div className="flex items-center gap-3">
-                            <Avatar name={s.name} id={s.id} photoUrl={s.photoUrl} size="sm" />
+                            <Avatar name={s.name} id={s.id} photoUrl={s.photoUrl} size="sm" neutral className="hidden xl:flex" />
                             <span className="min-w-0">
                               <span className="flex items-center gap-2 font-semibold text-slate-900 group-hover:text-brand-700">
-                                {s.name}
-                                {s.status === "Inactive" && <span className="badge badge-slate py-0 text-[11px]">Left</span>}
+                                <span className="truncate" title={s.name}>{s.name}</span>
+                                {s.status === "Inactive" && <span className="badge badge-slate shrink-0 py-0 text-[11px]">Left</span>}
                               </span>
-                              <span className="block text-xs tabular-nums text-slate-500">{s.srNo}</span>
+                              <span className="block whitespace-nowrap text-xs tabular-nums text-slate-500">
+                                <span className="xl:hidden">{s.classSec}</span>
+                                <span className="hidden xl:inline">{s.srNo}</span>
+                                {s.rollNo && ` · Roll ${s.rollNo}`}
+                              </span>
                             </span>
                           </div>
                         </td>
-                        <td className="whitespace-nowrap px-3 py-2.5">
+                        <td className="hidden whitespace-nowrap px-3 py-2.5 xl:table-cell">
                           <span className="rounded-md bg-slate-100 px-2 py-0.5 text-[13px] font-semibold text-slate-700">{s.classSec}</span>
-                          {s.rollNo && <span className="ml-2 text-xs text-slate-400">Roll {s.rollNo}</span>}
-                        </td>
-                        <td className="px-3 py-2.5">
-                          <span className="block text-slate-800">{s.fatherName}</span>
-                          <a href={`tel:${s.mobile}`} onClick={(e) => e.stopPropagation()} className="text-xs tabular-nums text-slate-500 hover:text-brand-700 hover:underline">
-                            {s.mobile}
-                          </a>
-                        </td>
-                        <td className="px-3 py-2.5">
-                          {s.transportOpted ? (
-                            <span className="inline-flex items-center gap-1.5 text-[13px] text-slate-700" title={s.busRoute || ""}>
-                              <Bus className="h-3.5 w-3.5 text-slate-400" />
-                              {(s.busRoute || "Bus").split(" (")[0]}
+                          {s.transportOpted && (
+                            <span className="mt-1 flex max-w-[9rem] items-center gap-1 truncate text-xs text-slate-500" title={s.busRoute || "School bus"}>
+                              <Bus className="h-3 w-3 shrink-0 text-slate-400" />
+                              <span className="truncate">{(s.busRoute || "Bus").split(" (")[0]}</span>
                             </span>
-                          ) : (
-                            <span className="text-slate-300">—</span>
                           )}
+                        </td>
+                        <td className="max-w-[11rem] px-3 py-2.5 xl:max-w-[13rem]">
+                          <span className="block truncate text-slate-800" title={s.fatherName}>{s.fatherName}</span>
+                          <a href={`tel:${s.mobile}`} onClick={(e) => e.stopPropagation()} className="whitespace-nowrap text-xs tabular-nums text-slate-500 hover:text-brand-700 hover:underline">
+                            {/^\d{10}$/.test(s.mobile) ? `${s.mobile.slice(0, 5)} ${s.mobile.slice(5)}` : s.mobile}
+                          </a>
                         </td>
                         <td className="px-3 py-2.5">
                           <FeeCell s={s} />
                         </td>
-                        <td className="whitespace-nowrap px-5 py-2.5 text-right" onClick={(e) => e.stopPropagation()}>
-                          <div className="inline-flex gap-1">
-                            <Link href={`/fees/collect?student=${s.id}`} title="Collect fee" aria-label={`Collect fee from ${s.name}`} className="rounded-lg p-2 text-slate-400 hover:bg-emerald-50 hover:text-emerald-700">
-                              <IndianRupee className="h-4 w-4" />
-                            </Link>
-                            <button type="button" onClick={() => open(s, "gate")} title="Gate pass" aria-label={`Gate pass for ${s.name}`} className="rounded-lg p-2 text-slate-400 hover:bg-brand-50 hover:text-brand-700">
+                        <td className="whitespace-nowrap py-2.5 pl-2 pr-4 text-right" onClick={(e) => e.stopPropagation()}>
+                          <div className="inline-flex gap-0.5">
+                            {s.balanceFee > 0 ? (
+                              <Link href={`/fees/collect?student=${s.id}`} aria-label={`Collect fee from ${s.name}`} className="inline-flex h-8 items-center gap-1 rounded-lg px-2.5 text-[13px] font-semibold text-brand-700 ring-1 ring-brand-200 hover:bg-brand-50">
+                                <IndianRupee className="h-3.5 w-3.5" />
+                                Collect
+                              </Link>
+                            ) : (
+                              <span className="inline-block w-[84px]" aria-hidden />
+                            )}
+                            <button type="button" onClick={() => open(s, "gate")} title="Gate pass" aria-label={`Gate pass for ${s.name}`} className="hidden rounded-lg p-2 text-slate-400 hover:bg-brand-50 hover:text-brand-700 xl:inline-flex">
                               <Ticket className="h-4 w-4" />
                             </button>
                           </div>
@@ -439,11 +444,11 @@ export default function StudentsPage() {
             <ul className="divide-y divide-slate-100 md:hidden">
               {shown.map((s) => (
                 <li key={s.id}>
-                  <button type="button" onClick={() => open(s, "profile")} className="flex w-full items-center gap-3 px-4 py-3 text-left">
-                    <Avatar name={s.name} id={s.id} photoUrl={s.photoUrl} size="sm" />
-                    <span className="min-w-0 flex-1">
-                      <span className="block truncate font-semibold text-slate-900">{s.name}</span>
-                      <span className="block truncate text-xs text-slate-500">
+                  <button type="button" onClick={() => open(s, "profile")} className="m-row active:bg-slate-50">
+                    <Avatar name={s.name} id={s.id} photoUrl={s.photoUrl} size="sm" neutral />
+                    <span className="m-row-main">
+                      <span className="m-row-title">{s.name}</span>
+                      <span className="m-row-meta">
                         {s.classSec} · {s.fatherName}
                       </span>
                     </span>
@@ -530,29 +535,6 @@ export default function StudentsPage() {
 }
 
 /** A figure that doubles as a filter tab. */
-function ViewTile({ on, onClick, label, value, tone, children }: { on: boolean; onClick: () => void; label: string; value: string; tone?: "rose" | "emerald"; children?: React.ReactNode }) {
-  const dot = tone === "rose" ? "bg-rose-500" : tone === "emerald" ? "bg-emerald-500" : "bg-slate-300";
-  return (
-    <button
-      type="button"
-      role="tab"
-      aria-selected={on}
-      onClick={onClick}
-      className={`relative rounded-2xl border bg-white p-4 text-left shadow-card transition sm:p-5 ${
-        on ? "border-brand-500 ring-4 ring-brand-500/10" : "border-slate-200/80 hover:border-slate-300 hover:shadow-card-hover"
-      }`}
-    >
-      <span className="flex items-center gap-2 text-[13px] font-semibold text-slate-600">
-        <i className={`h-2 w-2 rounded-full ${dot}`} />
-        {label}
-        {on && <Check className="ml-auto h-4 w-4 text-brand-600" strokeWidth={2.5} />}
-      </span>
-      <span className="mt-1.5 block text-[28px] font-bold leading-none tracking-tight tabular-nums text-slate-900">{value}</span>
-      {children}
-    </button>
-  );
-}
-
 /** Paid share as a small meter, then the amount still due. */
 function FeeCell({ s }: { s: Student }) {
   const total = s.totalFee || s.paidFee + s.balanceFee;
@@ -565,12 +547,12 @@ function FeeCell({ s }: { s: Student }) {
       </span>
     );
   return (
-    <div className="w-36">
-      <div className="flex items-baseline justify-between text-xs">
+    <div className="xl:w-32">
+      <div className="flex items-baseline justify-between gap-2 whitespace-nowrap text-xs">
         <span className="font-semibold tabular-nums text-rose-600">{inr(s.balanceFee)} due</span>
-        <span className="tabular-nums text-slate-400">{pct}%</span>
+        <span className="hidden tabular-nums text-slate-500 xl:inline">{pct}% paid</span>
       </div>
-      <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-slate-100">
+      <div className="mt-1 hidden h-1.5 overflow-hidden rounded-full bg-slate-100 xl:block">
         <div className="h-full rounded-full bg-emerald-500" style={{ width: `${pct}%` }} />
       </div>
     </div>
@@ -596,12 +578,12 @@ function Chip({ label, value, onChange, options }: { label: string; value: strin
   const on = value !== "all";
   return (
     <label
-      className={`relative flex h-10 items-center gap-1 rounded-xl border pl-3 pr-8 text-[13px] font-semibold transition ${
+      className={`relative flex h-10 shrink-0 items-center gap-1 rounded-xl border pl-3 pr-8 text-[13px] font-semibold transition ${
         on ? "border-brand-300 bg-brand-50 text-brand-700" : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"
       }`}
     >
       <span className={on ? "text-brand-600" : "text-slate-400"}>{label}</span>
-      <select value={value} onChange={(e) => onChange(e.target.value)} className="absolute inset-0 cursor-pointer appearance-none opacity-0" aria-label={label}>
+      <select value={value} onChange={(e) => onChange(e.target.value)} className="absolute inset-0 cursor-pointer appearance-none text-base opacity-0" aria-label={label}>
         <option value="all">All</option>
         {options.map(([v, t]) => (
           <option key={v} value={v}>

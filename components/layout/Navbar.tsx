@@ -67,10 +67,10 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
 
   return (
     <>
-    <header className="relative z-20 flex h-16 shrink-0 select-none items-center gap-3 border-b border-slate-300/40 bg-canvas px-4 sm:px-6 lg:px-8">
+    <header className="relative z-20 flex h-14 shrink-0 select-none items-center gap-2 border-b border-slate-300/40 bg-canvas pl-4 pr-3 pt-[env(safe-area-inset-top)] sm:gap-3 sm:px-6 md:h-16 lg:px-8">
       <button
         onClick={onToggleSidebar}
-        className="-ml-1 rounded-lg p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-900 md:hidden"
+        className="-ml-1 hidden rounded-lg p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-900"
         aria-label="Open menu"
       >
         <Menu className="h-5 w-5" />
@@ -86,11 +86,11 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
           {section !== "Overview" && (
             <>
               <ChevronRight className="hidden h-3.5 w-3.5 text-slate-400 sm:block" />
-              <span className="truncate">{section}</span>
+              <span className="hidden truncate sm:inline">{section}</span>
             </>
           )}
           <ChevronRight className="hidden h-3.5 w-3.5 text-slate-400 sm:block" />
-          <span className="truncate font-semibold text-slate-900">{title}</span>
+          <span className="truncate text-[15px] font-semibold text-slate-900 sm:text-[13.5px]">{title}</span>
         </nav>
       </div>
 
@@ -120,7 +120,7 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
       </div>
 
       {/* Notifications */}
-      <div className="relative" ref={notifRef}>
+      <div className="relative hidden sm:block" ref={notifRef}>
         <button
           onClick={() => setNotifOpen((v) => !v)}
           aria-label="Notifications"

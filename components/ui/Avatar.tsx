@@ -9,13 +9,13 @@ const TINTS = [
   "bg-rose-50 text-rose-700 ring-rose-100",
 ];
 
-export const initials = (name: string) =>
-  name
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((w) => w[0]!.toUpperCase())
-    .join("");
+/** First and last word: "Jagdish Prasad Garg" → "JG". */
+export const initials = (name: string) => {
+  const w = name.replace(/\(.*?\)/g, "").split(/\s+/).filter(Boolean);
+  return ((w[0]?.[0] || "") + (w.length > 1 ? w[w.length - 1][0] : "")).toUpperCase();
+};
+
+const NEUTRAL = "bg-slate-100 text-slate-600 ring-slate-200";
 
 export const tintFor = (key: string) => TINTS[key.split("").reduce((a, c) => a + c.charCodeAt(0), 0) % TINTS.length];
 
@@ -32,12 +32,15 @@ export function Avatar({
   photoUrl,
   size = "md",
   className = "",
+  neutral = false,
 }: {
   name: string;
   id?: string;
   photoUrl?: string | null;
   size?: keyof typeof SIZES;
   className?: string;
+  /** One quiet colour instead of a per-person tint (where colour should carry meaning). */
+  neutral?: boolean;
 }) {
   if (photoUrl) {
     return <img src={photoUrl} alt="" className={`${SIZES[size]} shrink-0 object-cover ring-1 ring-slate-200 ${className}`} />;
@@ -45,7 +48,7 @@ export function Avatar({
   return (
     <span
       aria-hidden
-      className={`${SIZES[size]} flex shrink-0 items-center justify-center font-bold ring-1 ${tintFor(id || name)} ${className}`}
+      className={`${SIZES[size]} flex shrink-0 items-center justify-center font-bold ring-1 ${neutral ? NEUTRAL : tintFor(id || name)} ${className}`}
     >
       {initials(name)}
     </span>

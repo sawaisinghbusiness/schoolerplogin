@@ -113,7 +113,28 @@ export default function FeeSetupPage() {
           <h2 className="text-sm font-semibold text-slate-900">Fee by class</h2>
           <p className="text-xs text-slate-500">Yearly amount of each head. Click a group to change amounts or classes.</p>
         </div>
-        <div className="overflow-x-auto">
+        {/* Phones: one row per class group — tap to change it */}
+        <ul className="divide-y divide-slate-100 border-t border-slate-100 sm:hidden">
+          {cfg.bands.map((b, i) => {
+            const year = cfg.heads.reduce((t, h) => t + sum(b.amounts[h.key] || []), 0);
+            return (
+              <li key={b.key}>
+                <button type="button" onClick={() => setEditing(i)} className="m-row active:bg-slate-50">
+                  <span className="m-row-main">
+                    <span className="m-row-title">{b.name}</span>
+                    <span className="m-row-meta">{b.classes.join(", ") || "No classes"}</span>
+                  </span>
+                  <span className="m-row-value">
+                    {inr(year)}
+                    <span className="block text-xs font-medium text-slate-500">{inr(year + busYear)} with bus</span>
+                  </span>
+                  <ChevronRight className="h-4 w-4 shrink-0 text-slate-300" />
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+        <div className="hidden overflow-x-auto sm:block">
           <table className="w-full text-sm">
             <thead className="table-head">
               <tr>

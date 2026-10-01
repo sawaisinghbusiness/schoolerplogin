@@ -76,7 +76,7 @@ export const NAV_GROUPS: NavGroup[] = [
           { title: "Register & reports", href: "/attendance/register" },
         ],
       },
-      { title: "Messages", href: "/messages", icon: MessageSquareText, soon: true },
+      { title: "Messages", href: "/messages", icon: MessageSquareText },
     ],
   },
   {
@@ -86,9 +86,9 @@ export const NAV_GROUPS: NavGroup[] = [
         title: "Exams",
         icon: Trophy,
         children: [
-          { title: "Marks entry", href: "/exams/marks", soon: true },
-          { title: "Report cards", href: "/exams/report-cards", soon: true },
-          { title: "Exam setup", href: "/exams/setup", soon: true },
+          { title: "Marks entry", href: "/exams/marks" },
+          { title: "Report cards", href: "/exams/report-cards" },
+          { title: "Exam setup", href: "/exams/setup" },
         ],
       },
     ],
@@ -101,7 +101,7 @@ export const NAV_GROUPS: NavGroup[] = [
         icon: Briefcase,
         children: [
           { title: "Directory", href: "/staff" },
-          { title: "Attendance & leave", href: "/staff/attendance", soon: true },
+          { title: "Attendance & leave", href: "/staff/attendance" },
           { title: "Payroll", href: "/staff/payroll", soon: true },
         ],
       },

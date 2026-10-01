@@ -15,7 +15,11 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#FFFFFF",
+  width: "device-width",
+  initialScale: 1,
+  // Lets the app draw under the iPhone notch/home bar; padding uses env(safe-area-inset-*).
+  viewportFit: "cover",
+  themeColor: "#ECEEF3",
 };
 
 export default function RootLayout({

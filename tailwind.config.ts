@@ -190,6 +190,10 @@ const config: Config = {
           from: { transform: "translateX(100%)" },
           to: { transform: "none" },
         },
+        slideUp: {
+          from: { transform: "translateY(100%)" },
+          to: { transform: "none" },
+        },
         float: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-6px)" },
@@ -214,6 +218,8 @@ const config: Config = {
         "slide-in-left": "slideInLeft 0.3s cubic-bezier(0.16, 1, 0.3, 1) both",
         shimmer: "shimmer 1.6s infinite",
         "slide-in-right": "slideInRight 0.28s cubic-bezier(0.16, 1, 0.3, 1) both",
+        // Bottom sheets on phones.
+        "slide-up": "slideUp 0.26s cubic-bezier(0.16, 1, 0.3, 1) both",
         float: "none",
         grow: "grow 0.9s cubic-bezier(0.16, 1, 0.3, 1) both",
         shake: "shake 0.4s ease-in-out",

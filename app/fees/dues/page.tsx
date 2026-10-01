@@ -32,6 +32,8 @@ export default function DuesPage() {
   const [sort, setSort] = useState<Sort>("amount");
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [remindOpen, setRemindOpen] = useState(false);
+  // Phones show the list 50 at a time.
+  const [phoneLimit, setPhoneLimit] = useState(50);
 
   const load = async () => {
     setLoading(true);
@@ -127,9 +129,9 @@ export default function DuesPage() {
           <button type="button" onClick={load} disabled={loading} className="btn btn-secondary" aria-label="Recalculate">
             <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
           </button>
-          <button type="button" onClick={() => exportExcel(shown)} disabled={!shown.length} className="btn btn-secondary">
+          <button type="button" onClick={() => exportExcel(shown)} disabled={!shown.length} className="btn btn-secondary px-3 sm:px-4" aria-label="Export to Excel">
             <Download className="h-4 w-4" />
-            Export
+            <span className="hidden sm:inline">Export</span>
           </button>
         </div>
       </header>
@@ -140,7 +142,7 @@ export default function DuesPage() {
         </div>
       )}
 
-      <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+      <div className="kpi-grid">
         <Figure label="Overdue now" value={s ? lakh(s.dueNow) : "…"} note={s ? `${s.withDues.toLocaleString("en-IN")} students` : ""} dot="bg-rose-500" />
         <Figure label="Late fine so far" value={s ? lakh(s.fine) : "…"} note="As per fee setup" dot="bg-marigold-400" />
         <Figure
@@ -175,26 +177,28 @@ export default function DuesPage() {
           </div>
           {tab === "students" && (
             <>
-              <div className="relative min-w-[160px] flex-1">
+              <div className="relative w-full sm:w-auto sm:min-w-[160px] sm:flex-1">
                 <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
                 <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Name, SR no., father or mobile" aria-label="Search" className="field field-sm w-full pl-9" />
               </div>
-              <select value={cls} onChange={(e) => setCls(e.target.value)} aria-label="Class" className="field field-sm">
+              <div className="scroll-row w-full sm:w-auto sm:overflow-visible">
+              <select value={cls} onChange={(e) => setCls(e.target.value)} aria-label="Class" className="field field-sm shrink-0">
                 <option value="all">All classes</option>
                 {classes.map((c) => (
                   <option key={c}>{c}</option>
                 ))}
               </select>
-              <select value={filter} onChange={(e) => setFilter(e.target.value as Filter)} aria-label="Overdue" className="field field-sm">
+              <select value={filter} onChange={(e) => setFilter(e.target.value as Filter)} aria-label="Overdue" className="field field-sm shrink-0">
                 <option value="all">Any overdue</option>
                 <option value="one">1 instalment</option>
                 <option value="two">2 or more</option>
               </select>
-              <select value={sort} onChange={(e) => setSort(e.target.value as Sort)} aria-label="Sort" className="field field-sm">
+              <select value={sort} onChange={(e) => setSort(e.target.value as Sort)} aria-label="Sort" className="field field-sm shrink-0">
                 <option value="amount">Most due first</option>
                 <option value="oldest">Longest overdue</option>
                 <option value="class">Class order</option>
               </select>
+              </div>
             </>
           )}
         </div>
@@ -210,7 +214,54 @@ export default function DuesPage() {
         ) : shown.length === 0 ? (
           <p className="px-6 py-14 text-center text-sm text-slate-500">{rows.length ? "Nobody matches these filters." : "Nobody has an overdue instalment. 🎉"}</p>
         ) : (
-          <div className="overflow-x-auto">
+          <>
+          {/* Phones: one row per student — tap to collect, WhatsApp on the right */}
+          <ul className="divide-y divide-slate-100 sm:hidden">
+            {shown.slice(0, phoneLimit).map((r) => {
+              const on = selected.has(r.studentId);
+              const wa = whatsappLink(r.mobile, fillTemplate(DEFAULT_TEMPLATES.hi, r, school, "hi"));
+              return (
+                <li key={r.studentId} className={`flex items-center ${on ? "bg-brand-50/60" : ""}`}>
+                  {/* The whole 44px strip ticks the box */}
+                  <button type="button" role="checkbox" aria-checked={on} aria-label={`Select ${r.name}`} onClick={() => toggle(r.studentId)} className="flex h-[64px] w-11 shrink-0 items-center justify-center pl-1">
+                    <span className={`flex h-[18px] w-[18px] items-center justify-center rounded-[5px] border-[1.5px] ${on ? "border-brand-600 bg-brand-600 text-white" : "border-slate-300 bg-white"}`}>
+                      {on && <Check className="h-3 w-3" strokeWidth={3.5} />}
+                    </span>
+                  </button>
+                  <Link href={`/fees/collect?student=${r.studentId}`} className="flex min-h-[64px] min-w-0 flex-1 items-center gap-3 py-2.5 pr-1 active:bg-slate-50">
+                    <span className="m-row-main">
+                      <span className="m-row-title">{r.name}</span>
+                      <span className="m-row-meta">
+                        {r.classSec} · {r.fatherName}
+                      </span>
+                      <span className="mt-0.5 block truncate text-xs font-medium text-rose-600">
+                        {r.overdue.map((o) => `${o.name.replace(/^Quarter\s*/i, "Q")} ${o.daysLate}d late`).join(" · ")}
+                      </span>
+                    </span>
+                    <span className="m-row-value">
+                      {inr(r.dueNow)}
+                      {r.fine > 0 && <span className="block text-xs font-medium text-marigold-700">+{inr(r.fine)} fine</span>}
+                    </span>
+                  </Link>
+                  {wa ? (
+                    <a href={wa} target="_blank" rel="noreferrer" aria-label={`WhatsApp reminder to the parent of ${r.name}`} className="flex h-11 w-11 shrink-0 items-center justify-center text-emerald-600 active:bg-emerald-50">
+                      <MessageCircle className="h-5 w-5" />
+                    </a>
+                  ) : (
+                    <span className="w-11 shrink-0" />
+                  )}
+                </li>
+              );
+            })}
+            {shown.length > phoneLimit && (
+              <li className="p-3">
+                <button type="button" onClick={() => setPhoneLimit((n) => n + 50)} className="btn btn-secondary w-full">
+                  Show {Math.min(50, shown.length - phoneLimit)} more · {(shown.length - phoneLimit).toLocaleString("en-IN")} left
+                </button>
+              </li>
+            )}
+          </ul>
+          <div className="hidden overflow-x-auto sm:block">
             <table className="w-full text-sm">
               <thead className="table-head">
                 <tr className="[&>th]:whitespace-nowrap">
@@ -279,7 +330,8 @@ export default function DuesPage() {
                 })}
               </tbody>
             </table>
-            <div className="flex items-center justify-between border-t border-slate-100 bg-slate-50/60 px-5 py-3 text-[13px] text-slate-500">
+          </div>
+            <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t border-slate-100 bg-slate-50/60 px-4 py-3 text-[13px] text-slate-500 sm:px-5">
               <span>
                 {shown.length > 300 ? `Showing 300 of ${shown.length.toLocaleString("en-IN")}. Filter by class to see the rest.` : `${shown.length.toLocaleString("en-IN")} students`}
               </span>
@@ -287,21 +339,21 @@ export default function DuesPage() {
                 Total <b className="text-slate-900">{inr(shown.reduce((a, r) => a + r.dueNow, 0))}</b> + fine {inr(shown.reduce((a, r) => a + r.fine, 0))}
               </span>
             </div>
-          </div>
+          </>
         )}
       </section>
 
       {picked.length > 0 && (
-        <div className="fixed inset-x-0 bottom-5 z-30 flex justify-center px-4 md:pl-[272px]">
+        <div className="fixed inset-x-0 bottom-[calc(4.25rem+env(safe-area-inset-bottom))] z-30 flex justify-center px-3 md:bottom-5 md:px-4 md:pl-[272px]">
           <div className="flex w-full max-w-2xl flex-wrap items-center gap-3 rounded-2xl bg-night-900 px-4 py-3 text-sm text-white shadow-2xl ring-1 ring-white/5 animate-scaleUp">
             <span className="flex h-7 min-w-[28px] items-center justify-center rounded-lg bg-marigold-400 px-2 text-[13px] font-bold text-night-950">{picked.length}</span>
             <span className="text-night-300">
-              selected · <b className="text-white">{inr(picked.reduce((a, r) => a + r.dueNow, 0))}</b> due
+              <span className="hidden sm:inline">selected · </span><b className="text-white">{inr(picked.reduce((a, r) => a + r.dueNow, 0))}</b> due
             </span>
             <span className="ml-auto flex gap-2">
               <button type="button" onClick={() => exportExcel(picked)} className="btn btn-sm bg-white/10 text-white hover:bg-white/20">
                 <Download className="h-3.5 w-3.5" />
-                Excel
+                <span className="hidden sm:inline">Excel</span>
               </button>
               <button type="button" onClick={() => setRemindOpen(true)} className="btn btn-sm bg-marigold-400 font-bold text-night-950 hover:bg-marigold-300">
                 <Send className="h-3.5 w-3.5" />
@@ -322,13 +374,13 @@ export default function DuesPage() {
 
 function Figure({ label, value, note, dot }: { label: string; value: string; note: string; dot: string }) {
   return (
-    <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5">
-      <span className="flex items-center gap-2 text-[13px] font-semibold text-slate-600">
+    <div className="kpi rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5">
+      <span className="kpi-label">
         <i className={`h-2 w-2 shrink-0 rounded-full ${dot}`} />
         <span className="truncate">{label}</span>
       </span>
-      <span className="mt-1.5 block text-[26px] font-bold leading-none tracking-tight tabular-nums text-slate-900">{value}</span>
-      <span className="mt-2 block text-[13px] text-slate-500">{note}</span>
+      <span className="kpi-value">{value}</span>
+      <span className="kpi-note">{note}</span>
     </div>
   );
 }

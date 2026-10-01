@@ -120,17 +120,17 @@ export default function ReceiptsPage() {
           <button type="button" onClick={load} disabled={loading} className="btn btn-secondary" aria-label="Reload">
             <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
           </button>
-          <button type="button" onClick={exportExcel} disabled={!shown.length} className="btn btn-secondary">
+          <button type="button" onClick={exportExcel} disabled={!shown.length} className="btn btn-secondary px-3 sm:px-4" aria-label="Export to Excel">
             <Download className="h-4 w-4" />
-            Export
+            <span className="hidden sm:inline">Export</span>
           </button>
         </div>
       </header>
 
       <div className="flex flex-wrap items-center gap-2">
-        <div className="flex gap-1 rounded-xl bg-slate-200/60 p-1" role="tablist" aria-label="Date range">
+        <div className="scroll-row max-w-full gap-1 rounded-xl bg-slate-200/60 p-1" role="tablist" aria-label="Date range">
           {RANGES.map(([k, l]) => (
-            <button key={k} type="button" role="tab" aria-selected={range === k} onClick={() => setRange(k)} className={`whitespace-nowrap rounded-lg px-3 py-1.5 text-[13px] font-semibold ${range === k ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}>
+            <button key={k} type="button" role="tab" aria-selected={range === k} onClick={() => setRange(k)} className={`shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-[13px] font-semibold sm:py-1.5 ${range === k ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}>
               {l}
             </button>
           ))}
@@ -154,16 +154,17 @@ export default function ReceiptsPage() {
         </div>
       )}
 
-      <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+      <div className="kpi-grid">
         <Tile label="Collected" value={t ? lakh(t.total) : "…"} note={t ? `${t.count.toLocaleString("en-IN")} receipts` : ""} dot="bg-emerald-500" />
-        <div className="col-span-2 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5">
-          <span className="text-[13px] font-semibold text-slate-600">How parents paid</span>
-          <div className="mt-3 flex h-2.5 gap-0.5 overflow-hidden rounded-full bg-slate-100">
+        <div className="kpi col-span-2 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5">
+          <span className="kpi-label">How parents paid</span>
+          <span className="kpi-note sm:hidden">{split.map((s) => `${s.k} ${inr(s.v)}`).join(" · ")}</span>
+          <div className="kpi-desktop mt-3 flex h-2.5 gap-0.5 overflow-hidden rounded-full bg-slate-100">
             {split.map((s) => (
               <span key={s.k} style={{ width: `${s.pct}%`, background: s.k === "Cash" ? "#2a78d6" : s.k === "UPI" ? "#eb6834" : "#1baf7a" }} />
             ))}
           </div>
-          <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-[13px]">
+          <div className="kpi-desktop mt-2 flex flex-wrap gap-x-5 gap-y-1 text-[13px]">
             {split.map((s) => (
               <span key={s.k} className="inline-flex items-center gap-1.5 text-slate-600">
                 <i className="h-2 w-2 rounded-full" style={{ background: s.k === "Cash" ? "#2a78d6" : s.k === "UPI" ? "#eb6834" : "#1baf7a" }} />
@@ -178,7 +179,7 @@ export default function ReceiptsPage() {
 
       <section className="card overflow-hidden">
         <div className="flex flex-wrap items-center gap-2 border-b border-slate-200/80 p-3 sm:p-4 lg:flex-nowrap">
-          <div className="relative min-w-[180px] flex-1">
+          <div className="relative w-full sm:w-auto sm:min-w-[180px] sm:flex-1">
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
             <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Receipt no., student, SR no. or UTR" aria-label="Search receipts" className="field field-sm w-full pl-9" />
           </div>
@@ -189,7 +190,7 @@ export default function ReceiptsPage() {
             <option>Cheque</option>
             <option>Other</option>
           </select>
-          <label className="flex shrink-0 cursor-pointer items-center gap-2 text-[13px] text-slate-600">
+          <label className="flex min-h-[40px] shrink-0 cursor-pointer items-center gap-2 text-[13px] text-slate-600">
             <input type="checkbox" checked={showCancelled} onChange={(e) => setShowCancelled(e.target.checked)} className="h-4 w-4 accent-brand-600" />
             Show cancelled
           </label>
@@ -204,7 +205,36 @@ export default function ReceiptsPage() {
         ) : shown.length === 0 ? (
           <p className="px-6 py-14 text-center text-sm text-slate-500">{list.receipts.length ? "No receipt matches." : "No receipt in these dates."}</p>
         ) : (
-          <div className="overflow-x-auto">
+          <>
+          {/* Phones: one row per receipt — tap to print */}
+          <ul className="divide-y divide-slate-100 sm:hidden">
+            {shown.slice(0, limit).map((r) => (
+              <li key={r.id} className={`flex items-center ${r.cancelled ? "bg-rose-50/40" : ""}`}>
+                <button type="button" onClick={() => setPrinting(r)} className="m-row min-h-[64px] flex-1 active:bg-slate-50" aria-label={`Print ${r.receiptNo}`}>
+                  <span className="m-row-main">
+                    <span className="m-row-title">{r.student?.name || "—"}</span>
+                    <span className="m-row-meta">
+                      <span className={`font-mono ${r.cancelled ? "line-through" : ""}`}>{r.receiptNo}</span> · {r.student?.classSec} · {modeKey(r.mode)}
+                    </span>
+                    <span className="mt-0.5 block text-xs text-slate-400">
+                      {day(r.date)}
+                      {r.createdAt && r.createdAt.slice(0, 10) === r.date ? ` · ${time(r.createdAt)}` : ""}
+                    </span>
+                  </span>
+                  <span className="m-row-value">
+                    <span className={r.cancelled ? "text-slate-400 line-through" : ""}>{inr(r.amount)}</span>
+                    {r.cancelled && <span className="block text-xs font-semibold text-rose-600">Cancelled</span>}
+                  </span>
+                </button>
+                {isAdmin && !r.cancelled && list.canCancel && (
+                  <button type="button" onClick={() => setCancelling(r)} aria-label={`Cancel ${r.receiptNo}`} className="flex h-11 w-11 shrink-0 items-center justify-center text-slate-400 active:bg-rose-50 active:text-rose-600">
+                    <Ban className="h-4 w-4" />
+                  </button>
+                )}
+              </li>
+            ))}
+          </ul>
+          <div className="hidden overflow-x-auto sm:block">
             <table className="w-full text-sm">
               <thead className="table-head">
                 <tr className="[&>th]:whitespace-nowrap">
@@ -263,7 +293,8 @@ export default function ReceiptsPage() {
                 ))}
               </tbody>
             </table>
-            <div className="flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 bg-slate-50/60 px-5 py-3 text-[13px] text-slate-500">
+          </div>
+            <div className="flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 bg-slate-50/60 px-4 py-3 text-[13px] text-slate-500 sm:px-5">
               <span>
                 {Math.min(limit, shown.length).toLocaleString("en-IN")} of {shown.length.toLocaleString("en-IN")} shown
                 {shown.length > limit && (
@@ -277,7 +308,7 @@ export default function ReceiptsPage() {
                 {shown.length !== shownLive.length && " (cancelled not counted)"}
               </span>
             </div>
-          </div>
+          </>
         )}
         {list && !list.canCancel && isAdmin && (
           <p className="flex items-center gap-2 border-t border-slate-100 bg-marigold-50 px-5 py-2.5 text-[13px] text-marigold-900">
@@ -302,13 +333,13 @@ export default function ReceiptsPage() {
 
 function Tile({ label, value, note, dot }: { label: string; value: string; note: string; dot: string }) {
   return (
-    <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5">
-      <span className="flex items-center gap-2 text-[13px] font-semibold text-slate-600">
+    <div className="kpi rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5">
+      <span className="kpi-label">
         <i className={`h-2 w-2 rounded-full ${dot}`} />
         {label}
       </span>
-      <span className="mt-1.5 block text-[26px] font-bold leading-none tracking-tight tabular-nums text-slate-900">{value}</span>
-      <span className="mt-2 block text-[13px] text-slate-500">{note}</span>
+      <span className="kpi-value">{value}</span>
+      <span className="kpi-note">{note}</span>
     </div>
   );
 }

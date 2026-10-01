@@ -317,6 +317,54 @@ textarea {
   .alert-slate { @apply border-slate-200 bg-slate-50 text-slate-700; }
   .alert-brand { @apply border-brand-200 bg-brand-50 text-brand-900; }
 
+  /* ── Phone patterns (see docs/mobile-ui.md) ─────────────────────────────── */
+
+  /* Headline numbers: a row of tiles on desktop, ONE compact card of rows on phones.
+     Markup: .kpi-grid > .kpi > (.kpi-label, .kpi-value, .kpi-note) */
+  .kpi-grid {
+    @apply grid grid-cols-2 gap-3 lg:grid-cols-4;
+  }
+  /* Tiles are often <button>s, which centre their content; keep every label on the same top line. */
+  .kpi {
+    @apply flex flex-col items-stretch justify-start;
+  }
+  .kpi-label {
+    @apply flex items-center gap-2 text-[13px] font-semibold text-slate-600;
+  }
+  /* 24px: never bigger than the 26px page title. */
+  .kpi-value {
+    @apply mt-1.5 block text-2xl font-bold leading-none tracking-tight tabular-nums text-slate-900;
+  }
+  .kpi-note {
+    @apply mt-2 block text-[13px] text-slate-500;
+  }
+
+  /* A row that scrolls sideways on phones instead of wrapping (tabs, chips, filters). */
+  .scroll-row {
+    @apply flex items-center gap-2 overflow-x-auto;
+    scrollbar-width: none;
+  }
+  .scroll-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* One tappable list row for phones: primary + meta on the left, value/status on the right. */
+  .m-row {
+    @apply flex min-h-[60px] w-full items-center gap-3 px-4 py-2.5 text-left;
+  }
+  .m-row-main {
+    @apply min-w-0 flex-1;
+  }
+  .m-row-title {
+    @apply block truncate text-[15px] font-semibold text-slate-900;
+  }
+  .m-row-meta {
+    @apply mt-0.5 block truncate text-[13px] text-slate-500;
+  }
+  .m-row-value {
+    @apply shrink-0 text-right text-[15px] font-semibold tabular-nums text-slate-900;
+  }
+
   /* Soft dotted backdrop used behind hero areas. */
   .bg-grid {
     background-image: radial-gradient(rgb(12 16 25 / 0.07) 1px, transparent 1px);
@@ -513,4 +561,62 @@ textarea {
 */
 .overflow-x-auto {
   position: relative;
+}
+
+/* ── Phones (below 640px). Numbers from docs/mobile-ui.md ─────────────────── */
+@media (max-width: 639px) {
+  .page-header {
+    @apply gap-3;
+  }
+  .page-title {
+    @apply text-[21px] leading-tight;
+  }
+  .page-subtitle {
+    @apply mt-0.5 text-[13px];
+  }
+  /* iOS zooms into any field with text under 16px. */
+  .field,
+  .field-sm {
+    @apply text-base;
+  }
+  .field {
+    @apply min-h-[44px];
+  }
+  .field-sm {
+    @apply min-h-[40px];
+  }
+  .btn {
+    @apply min-h-[44px];
+  }
+  .btn-sm {
+    @apply min-h-[36px];
+  }
+
+  /* Headline numbers: one card, one row each (label left, number right). */
+  .kpi-grid {
+    @apply block overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-card;
+  }
+  .kpi-grid > .kpi {
+    @apply grid w-full min-h-[52px] grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 rounded-none border-0 bg-transparent px-4 py-2.5 text-left shadow-none;
+  }
+  .kpi-grid > .kpi + .kpi {
+    @apply border-t border-slate-100;
+  }
+  .kpi-grid > .kpi .kpi-label {
+    @apply col-start-1 row-start-1 text-sm text-slate-700;
+  }
+  .kpi-grid > .kpi .kpi-value {
+    @apply col-start-2 row-span-2 row-start-1 mt-0 text-right text-[17px] font-semibold;
+  }
+  .kpi-grid > .kpi .kpi-note {
+    @apply col-start-1 row-start-2 mt-0.5 truncate text-xs;
+  }
+  .kpi-grid > .kpi[aria-selected="true"] {
+    @apply bg-brand-50/70;
+    box-shadow: inset 3px 0 0 theme("colors.brand.600");
+  }
+  /* The tick and chevrons used on desktop tiles aren't needed in the row layout. */
+  .kpi-grid > .kpi .kpi-desktop {
+    @apply hidden;
+  }
 }

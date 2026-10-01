@@ -102,7 +102,7 @@ export default function MarkAttendancePage() {
         </div>
       )}
 
-      <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+      <div className="kpi-grid">
         <Figure label="Present" value={t ? t.present + t.half : null} note={t && t.marked ? `${pct(t.present + t.half * 0.5, t.marked)}% of those marked` : "Nobody marked yet"} dot="bg-emerald-500" />
         <Figure label="Absent" value={t ? t.absent : null} note={t && t.absent ? "Parents can be told on WhatsApp" : "—"} dot="bg-rose-500" />
         <Figure label="On leave" value={t ? t.leave : null} note={t && t.half ? `${t.half} half day` : "—"} dot="bg-marigold-400" />
@@ -110,7 +110,7 @@ export default function MarkAttendancePage() {
       </div>
 
       <section className="card overflow-hidden">
-        <div className="flex items-center justify-between border-b border-slate-100 px-5 py-3">
+        <div className="flex items-center justify-between border-b border-slate-100 px-4 py-3 sm:px-5">
           <h2 className="text-sm font-semibold text-slate-900">Sections</h2>
           <span className="flex items-center gap-3 text-xs text-slate-500">
             <span className="inline-flex items-center gap-1.5">
@@ -130,9 +130,9 @@ export default function MarkAttendancePage() {
         ) : (
           <div className="divide-y divide-slate-100">
             {byClass.map(([cls, secs]) => (
-              <div key={cls} className="flex flex-col gap-2 px-5 py-3 sm:flex-row sm:items-start">
-                <span className="w-20 shrink-0 pt-2 text-[13px] font-semibold text-slate-700">{cls}</span>
-                <div className="grid flex-1 grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-4">
+              <div key={cls} className="flex items-center gap-3 px-4 py-2.5 sm:items-start sm:px-5 sm:py-3">
+                <span className="w-16 shrink-0 text-[13px] font-semibold text-slate-700 sm:w-20 sm:pt-2">{cls}</span>
+                <div className="flex flex-1 flex-wrap gap-2 sm:grid sm:grid-cols-3 xl:grid-cols-4">
                   {secs.map((s) => (
                     <SectionTile key={s.classSec} s={s} onClick={() => setOpen(s)} />
                   ))}
@@ -160,13 +160,13 @@ export default function MarkAttendancePage() {
 
 function Figure({ label, value, note, dot }: { label: string; value: number | null; note: string; dot: string }) {
   return (
-    <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5">
-      <span className="flex items-center gap-2 text-[13px] font-semibold text-slate-600">
+    <div className="kpi rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5">
+      <span className="kpi-label">
         <i className={`h-2 w-2 rounded-full ${dot}`} />
         {label}
       </span>
-      <span className="mt-1.5 block text-[28px] font-bold leading-none tracking-tight tabular-nums text-slate-900">{value === null ? "…" : value.toLocaleString("en-IN")}</span>
-      <span className="mt-2 block truncate text-[13px] text-slate-500">{note}</span>
+      <span className="kpi-value">{value === null ? "…" : value.toLocaleString("en-IN")}</span>
+      <span className="kpi-note truncate">{note}</span>
     </div>
   );
 }
@@ -179,14 +179,25 @@ function SectionTile({ s, onClick }: { s: SectionDay; onClick: () => void }) {
     <button
       type="button"
       onClick={onClick}
-      className={`group rounded-xl px-3 py-2.5 text-left transition ${done ? "border border-slate-200 bg-white hover:border-slate-300 hover:shadow-card" : "border border-dashed border-slate-300 bg-slate-50/60 hover:border-brand-400 hover:bg-white"}`}
+      className={`group min-h-[44px] min-w-[60px] rounded-xl px-2.5 py-1.5 text-left transition sm:min-w-0 sm:py-2.5 ${done ? "border border-slate-200 bg-white hover:border-slate-300 hover:shadow-card" : "border border-dashed border-slate-300 bg-slate-50/60 hover:border-brand-400 hover:bg-white"}`}
     >
       <span className="flex items-center justify-between gap-1">
         <span className="truncate text-[13.5px] font-semibold text-slate-900">{s.section}</span>
-        {done ? <Check className="h-4 w-4 shrink-0 text-emerald-600" strokeWidth={3} /> : <span className="text-[11.5px] font-semibold text-brand-700 opacity-0 transition group-hover:opacity-100">Mark →</span>}
+        {done ? <Check className="h-4 w-4 shrink-0 text-emerald-600" strokeWidth={3} /> : <span className="hidden text-[11.5px] font-semibold text-brand-700 opacity-0 transition group-hover:opacity-100 sm:inline">Mark →</span>}
+      </span>
+      {/* Phones: just the count */}
+      <span className="block text-xs tabular-nums text-slate-500 sm:hidden">
+        {done ? (
+          <>
+            {s.present + s.half}/{s.students}
+            {s.absent ? <span className="ml-1 font-semibold text-rose-600">−{s.absent}</span> : null}
+          </>
+        ) : (
+          String(s.students)
+        )}
       </span>
       {done ? (
-        <>
+        <span className="hidden sm:block">
           <span className="mt-1 flex items-baseline justify-between text-xs">
             <span className="tabular-nums text-slate-600">
               {s.present + s.half}/{s.students}
@@ -197,9 +208,9 @@ function SectionTile({ s, onClick }: { s: SectionDay; onClick: () => void }) {
           <span className="mt-1.5 block h-1 overflow-hidden rounded-full bg-slate-100">
             <span className="block h-full rounded-full bg-emerald-500" style={{ width: `${p}%` }} />
           </span>
-        </>
+        </span>
       ) : (
-        <span className="mt-1 block text-xs text-slate-500">{s.students} students · not marked</span>
+        <span className="mt-1 hidden text-xs text-slate-500 sm:block">{s.students} students · not marked</span>
       )}
     </button>
   );
@@ -384,12 +395,12 @@ function MarkDrawer({ date, section, onClose, onSaved, onNext }: { date: string;
                 <li key={s.id} className={`px-4 py-2 ${m === "Absent" ? "bg-rose-50/50" : m === "Leave" ? "bg-marigold-50/50" : ""}`}>
                   <div className="flex items-center gap-3">
                     <span className="w-7 shrink-0 text-right text-[13px] font-semibold tabular-nums text-slate-400">{s.rollNo || "—"}</span>
-                    <Avatar name={s.name} id={s.id} photoUrl={s.photoUrl} size="sm" />
+                    <Avatar name={s.name} id={s.id} photoUrl={s.photoUrl} size="sm" className="hidden sm:flex" />
                     <span className="min-w-0 flex-1">
-                      <span className="block truncate text-sm font-semibold text-slate-900">{s.name}</span>
+                      <span className="block truncate text-[15px] font-semibold text-slate-900 sm:text-sm">{s.name}</span>
                       <span className="block truncate text-xs text-slate-500">{s.fatherName}</span>
                     </span>
-                    <div className="flex shrink-0 gap-0.5 rounded-lg bg-slate-100 p-0.5" role="radiogroup" aria-label={`Attendance for ${s.name}`}>
+                    <div className="flex shrink-0 gap-1 rounded-lg bg-slate-100 p-0.5 sm:gap-0.5" role="radiogroup" aria-label={`Attendance for ${s.name}`}>
                       {STATUS.map((o) => (
                         <button
                           key={o.key}
@@ -398,7 +409,7 @@ function MarkDrawer({ date, section, onClose, onSaved, onNext }: { date: string;
                           aria-checked={m === o.key}
                           title={o.label}
                           onClick={() => setMarks({ ...marks, [s.id]: o.key })}
-                          className={`h-8 w-8 rounded-md text-[13px] font-bold transition ${m === o.key ? o.on : "text-slate-500 hover:bg-white hover:text-slate-800"}`}
+                          className={`h-10 w-10 rounded-md text-sm font-bold transition sm:h-8 sm:w-8 sm:text-[13px] ${m === o.key ? o.on : "text-slate-500 hover:bg-white hover:text-slate-800"}`}
                         >
                           {o.short}
                         </button>
@@ -411,7 +422,7 @@ function MarkDrawer({ date, section, onClose, onSaved, onNext }: { date: string;
                       onChange={(e) => setRemarks({ ...remarks, [s.id]: e.target.value })}
                       placeholder={m === "Leave" ? "Reason for leave (optional)" : "Note (optional), e.g. fever"}
                       aria-label={`Note for ${s.name}`}
-                      className="field field-sm ml-[4.75rem] mt-1.5 w-[calc(100%-4.75rem)]"
+                      className="field field-sm ml-10 mt-1.5 w-[calc(100%-2.5rem)] sm:ml-[4.75rem] sm:w-[calc(100%-4.75rem)]"
                     />
                   )}
                 </li>

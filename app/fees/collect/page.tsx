@@ -306,7 +306,7 @@ export default function CollectFeesPage() {
               onFocus={() => results.length > 0 && setOpen(true)}
               onKeyDown={onSearchKey}
               placeholder={student ? "Collect from another student…" : "Search by name, SR no., father's name or mobile"}
-              className="h-[52px] w-full rounded-2xl border-2 border-slate-200 bg-white pl-12 pr-16 text-[15px] text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/15"
+              className="h-[52px] w-full rounded-2xl border-2 border-slate-200 bg-white pl-12 pr-12 text-base text-slate-900 sm:pr-16 sm:text-[15px] shadow-sm outline-none transition placeholder:text-slate-400 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/15"
             />
             <span className="absolute right-4 top-1/2 flex -translate-y-1/2 items-center gap-2 text-slate-400">
               {searching && <Loader2 className="h-4 w-4 animate-spin text-brand-600" />}
@@ -351,11 +351,12 @@ export default function CollectFeesPage() {
           {student ? (
             <>
               {/* Selected student */}
-              <section className="card p-5 sm:p-6 animate-fadeIn" aria-label="Selected student">
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                  <Avatar name={student.name} id={student.id} photoUrl={student.photoUrl} size="lg" />
+              <section className="card p-4 sm:p-6 animate-fadeIn" aria-label="Selected student">
+                <div className="flex items-start gap-3 sm:items-center sm:gap-4">
+                  <Avatar name={student.name} id={student.id} photoUrl={student.photoUrl} size="lg" className="hidden sm:flex" />
+                  <Avatar name={student.name} id={student.id} photoUrl={student.photoUrl} className="sm:hidden" />
                   <div className="min-w-0 flex-1">
-                    <h2 className="text-xl font-bold tracking-tight text-slate-900">{student.name}</h2>
+                    <h2 className="truncate text-lg font-bold tracking-tight text-slate-900 sm:text-xl">{student.name}</h2>
                     <div className="mt-1.5 flex flex-wrap gap-1.5">
                       <span className="badge badge-brand">Class {student.classSec}</span>
                       {student.rollNo && <span className="badge badge-slate">Roll {student.rollNo}</span>}
@@ -377,13 +378,13 @@ export default function CollectFeesPage() {
                       </a>
                     </p>
                   </div>
-                  <button type="button" onClick={clearStudent} className="btn btn-secondary btn-sm self-start">
+                  <button type="button" onClick={clearStudent} className="btn btn-secondary btn-sm shrink-0 self-start">
                     Change
                   </button>
                 </div>
 
-                <div className="mt-5 grid grid-cols-3 gap-3">
-                  <Figure label="Fee for session" value={inr(net)} />
+                <div className="mt-4 grid grid-cols-3 gap-2 sm:mt-5 sm:gap-3">
+                  <Figure label="Session fee" value={inr(net)} />
                   <Figure label="Paid" value={inr(paid)} />
                   <Figure label={balance > 0 ? "Still due" : "Balance"} value={balance > 0 ? inr(balance) : "Nil"} due={balance > 0} />
                 </div>
@@ -622,9 +623,9 @@ function Chip({ on, onClick, label }: { on: boolean; onClick: () => void; label:
 
 function Figure({ label, value, due }: { label: string; value: string; due?: boolean }) {
   return (
-    <div className={`rounded-xl px-4 py-3 ${due ? "bg-rose-50" : "bg-slate-50"}`}>
+    <div className={`rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 ${due ? "bg-rose-50" : "bg-slate-50"}`}>
       <p className={`text-xs font-semibold ${due ? "text-rose-600" : "text-slate-500"}`}>{label}</p>
-      <p className={`mt-0.5 text-lg font-extrabold tabular-nums ${due ? "text-rose-700" : "text-slate-900"}`}>{value}</p>
+      <p className={`mt-0.5 truncate text-base font-extrabold tabular-nums sm:text-lg ${due ? "text-rose-700" : "text-slate-900"}`}>{value}</p>
     </div>
   );
 }

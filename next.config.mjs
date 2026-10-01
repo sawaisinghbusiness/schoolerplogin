@@ -1,6 +1,19 @@
 /** @type {import('next').NextConfig} */
+const BACKEND_URL = (process.env.BACKEND_URL || "").replace(/\/+$/, "");
+
 const nextConfig = {
   reactStrictMode: true,
+  // Lets a production build run in its own folder while `next dev` keeps using .next
+  distDir: process.env.NEXT_DIST_DIR || ".next",
+  /**
+   * In production the browser talks only to this site: /api/* is passed on to the backend.
+   * The login cookie is then first-party, so phones (Safari) keep it. Set BACKEND_URL on the host,
+   * and leave NEXT_PUBLIC_API_URL empty there.
+   */
+  async rewrites() {
+    if (!BACKEND_URL) return [];
+    return { beforeFiles: [{ source: "/api/:path*", destination: `${BACKEND_URL}/api/:path*` }] };
+  },
   async redirects() {
     // Old URLs from before the Phase 0 restructure (29 Sep 2026) keep working.
     return [

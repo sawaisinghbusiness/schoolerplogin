@@ -35,3 +35,6 @@ next-env.d.ts
 
 # old code kept locally for reference only
 /_archive/
+
+# production build test folder
+/.next-build/

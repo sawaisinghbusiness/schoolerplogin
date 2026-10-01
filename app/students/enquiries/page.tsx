@@ -137,7 +137,7 @@ export default function EnquiriesPage() {
         </div>
       ) : (
         <>
-          <div className="grid grid-cols-2 gap-3 lg:grid-cols-4" role="tablist" aria-label="Views">
+          <div className="kpi-grid" role="tablist" aria-label="Views">
             <Tile on={view === "due"} onClick={() => setView("due")} label="Call back today" value={stats.due} dot="bg-rose-500" note={stats.due ? "Due today or overdue" : "Nobody waiting"} />
             <Tile on={view === "open"} onClick={() => setView("open")} label="Open enquiries" value={stats.open} dot="bg-brand-500" note="New and visited" />
             <Tile on={view === "admitted"} onClick={() => setView("admitted")} label="Admitted" value={stats.admitted} dot="bg-emerald-500" note={`${stats.conversion}% of closed enquiries`} />
@@ -172,7 +172,29 @@ export default function EnquiriesPage() {
                 )}
               </div>
             ) : (
-              <div className="overflow-x-auto">
+              <>
+              <ul className="divide-y divide-slate-100 sm:hidden">
+                {shown.map((e) => {
+                  const f = followUp(e);
+                  return (
+                    <li key={e.id}>
+                      <button type="button" onClick={() => setActive(e)} className="m-row active:bg-slate-50">
+                        <span className="m-row-main">
+                          <span className="m-row-title">{e.student_name}</span>
+                          <span className="m-row-meta">
+                            for {e.class_wanted} · {e.father_name || e.mother_name || "—"} · <span className="tabular-nums">{e.mobile}</span>
+                          </span>
+                        </span>
+                        <span className="shrink-0 text-right">
+                          <span className={`badge ${STATUS_BADGE[e.status]}`}>{STATUS_LABEL[e.status]}</span>
+                          <span className={`mt-1 block text-xs ${f.tone === "rose" ? "font-semibold text-rose-600" : f.tone === "amber" ? "font-semibold text-marigold-700" : "text-slate-500"}`}>{f.text}</span>
+                        </span>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+              <div className="hidden overflow-x-auto sm:block">
                 <table className="w-full text-sm">
                   <thead className="table-head">
                     <tr>
@@ -228,6 +250,7 @@ export default function EnquiriesPage() {
                   </tbody>
                 </table>
               </div>
+              </>
             )}
           </section>
         </>
@@ -271,15 +294,15 @@ function Tile({ on, onClick, label, value, dot, note }: { on: boolean; onClick: 
       role="tab"
       aria-selected={on}
       onClick={onClick}
-      className={`rounded-2xl border bg-white p-4 text-left shadow-card transition sm:p-5 ${on ? "border-brand-500 ring-4 ring-brand-500/10" : "border-slate-200/80 hover:border-slate-300 hover:shadow-card-hover"}`}
+      className={`kpi rounded-2xl border bg-white p-4 text-left shadow-card transition sm:p-5 ${on ? "border-brand-500 ring-4 ring-brand-500/10" : "border-slate-200/80 hover:border-slate-300 hover:shadow-card-hover"}`}
     >
-      <span className="flex items-center gap-2 text-[13px] font-semibold text-slate-600">
+      <span className="kpi-label">
         <i className={`h-2 w-2 rounded-full ${dot}`} />
         {label}
-        {on && <Check className="ml-auto h-4 w-4 text-brand-600" strokeWidth={2.5} />}
+        {on && <Check className="kpi-desktop ml-auto h-4 w-4 text-brand-600" strokeWidth={2.5} />}
       </span>
-      <span className="mt-1.5 block text-[28px] font-bold leading-none tracking-tight tabular-nums text-slate-900">{value}</span>
-      <span className="mt-2 block text-[13px] text-slate-500">{note}</span>
+      <span className="kpi-value">{value}</span>
+      <span className="kpi-note">{note}</span>
     </button>
   );
 }

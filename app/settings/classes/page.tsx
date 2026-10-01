@@ -326,7 +326,8 @@ function ClassRow({
   onDelete: () => void;
 }) {
   const subjects = Array.from(new Set(cls.sections.reduce<string[]>((all, s) => all.concat(s.subjects), [])));
-  const iconBtn = "rounded-md p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-800 disabled:pointer-events-none disabled:opacity-30";
+  // 40px on phones (thumb), compact on desktop.
+  const iconBtn = "flex h-10 w-10 items-center justify-center rounded-md text-slate-400 hover:bg-slate-100 hover:text-slate-800 disabled:pointer-events-none disabled:opacity-30 sm:h-auto sm:w-auto sm:p-1.5";
 
   return (
     <li className="flex flex-wrap items-start gap-x-3 gap-y-2 px-4 py-3 hover:bg-slate-50/50 sm:flex-nowrap sm:px-5">

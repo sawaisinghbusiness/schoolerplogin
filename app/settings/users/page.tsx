@@ -109,7 +109,27 @@ export default function UsersPage() {
       </header>
 
       {/* What each staff role can do, with how many people have it */}
-      <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4" aria-label="Roles">
+      {/* Phones: the role guide folds away so the list of people comes first */}
+      <details className="card group sm:hidden">
+        <summary className="flex min-h-[48px] cursor-pointer list-none items-center justify-between gap-3 px-4 text-sm font-semibold text-slate-900">
+          What each role can open
+          <span className="text-xs font-medium text-slate-500 group-open:hidden">Show</span>
+          <span className="hidden text-xs font-medium text-slate-500 group-open:inline">Hide</span>
+        </summary>
+        <ul className="divide-y divide-slate-100 border-t border-slate-100">
+          {STAFF_ROLES.map((r) => (
+            <li key={r} className="px-4 py-3">
+              <div className="flex items-center justify-between gap-2">
+                <span className={`badge ${ROLE_INFO[r].badge}`}>{ROLE_INFO[r].label}</span>
+                <span className="text-xs tabular-nums text-slate-500">{users ? `${counts[r] || 0} active` : "…"}</span>
+              </div>
+              <p className="mt-1.5 text-[13px] leading-snug text-slate-600">{ROLE_INFO[r].can}</p>
+            </li>
+          ))}
+        </ul>
+      </details>
+
+      <section className="hidden gap-3 sm:grid sm:grid-cols-2 xl:grid-cols-4" aria-label="Roles">
         {STAFF_ROLES.map((r) => (
           <div key={r} className="card p-4">
             <div className="flex items-center justify-between gap-2">
@@ -167,7 +187,30 @@ export default function UsersPage() {
               <p className="mt-1 text-sm text-slate-500">{query ? "Try another name or number." : tab === "family" ? "Parent logins will be used by the parent app." : "Add one for each person who uses the software."}</p>
             </div>
           ) : (
-            <div className="overflow-x-auto">
+            <>
+            <ul className="divide-y divide-slate-100 sm:hidden">
+              {shown.map((u) => (
+                <li key={u.id} className={`flex items-center ${u.is_active ? "" : "bg-slate-50/60"}`}>
+                  <button type="button" onClick={() => setDrawer({ user: u })} className="m-row flex-1 active:bg-slate-50">
+                    <span className="m-row-main">
+                      <span className={`m-row-title ${u.is_active ? "" : "text-slate-500"}`}>
+                        {plainName(u.full_name)}
+                        {u.id === meId && <span className="ml-2 rounded bg-slate-100 px-1.5 py-0.5 text-[11px] font-semibold text-slate-500">You</span>}
+                      </span>
+                      <span className="m-row-meta font-mono">{[u.phone_number, u.employee_code, u.admission_no].filter(Boolean).join(" · ")}</span>
+                    </span>
+                    <span className="shrink-0 text-right">
+                      <span className={`badge ${ROLE_INFO[u.role]?.badge || "badge-slate"}`}>{ROLE_INFO[u.role]?.label || u.role}</span>
+                      {!u.is_active && <span className="mt-1 block text-xs text-slate-500">Switched off</span>}
+                    </span>
+                  </button>
+                  <button type="button" onClick={() => setResetting(u)} aria-label={`Set a new password for ${plainName(u.full_name)}`} className="flex h-11 w-11 shrink-0 items-center justify-center text-slate-400 active:bg-slate-100">
+                    <KeyRound className="h-4 w-4" />
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <div className="hidden overflow-x-auto sm:block">
               <table className="w-full text-sm">
                 <thead className="table-head">
                   <tr>
@@ -222,6 +265,7 @@ export default function UsersPage() {
                 </tbody>
               </table>
             </div>
+            </>
           )}
         </section>
       )}

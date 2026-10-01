@@ -263,7 +263,7 @@ export default function AttendanceRegisterPage() {
         </div>
       )}
 
-      <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+      <div className="kpi-grid">
         <Figure label="Days marked" title="Working days marked" value={ready ? num(wd) : "…"} note={ready ? `of ${schoolDaysSoFar} school day${schoolDaysSoFar === 1 ? "" : "s"}` : ""} dot="bg-brand-500" />
         <Figure label="Attendance" title="Average attendance" value={ready ? (avg === null ? "—" : `${avg}%`) : "…"} note={ready ? (wd ? `average of ${num(marked.length)}` : "Nothing marked yet") : ""} dot="bg-emerald-500" />
         <Figure label="Absent days" title="Absent-days total" value={ready ? num(absentDays) : "…"} note={ready ? `${num(leaveDays)} leave · ${num(halfDays)} half` : ""} dot="bg-rose-500" />
@@ -272,7 +272,7 @@ export default function AttendanceRegisterPage() {
 
       <section className="card overflow-hidden">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 border-b border-slate-200/80 p-3 sm:p-4">
-          <div className="flex max-w-full gap-1 overflow-x-auto rounded-xl bg-slate-100 p-1" role="tablist">
+          <div className="scroll-row max-w-full gap-1 rounded-xl bg-slate-100 p-1" role="tablist">
             {(
               [
                 ["register", "Register"],
@@ -348,13 +348,13 @@ export default function AttendanceRegisterPage() {
 
 function Figure({ label, value, note, dot, title }: { label: string; value: string; note: string; dot: string; title?: string }) {
   return (
-    <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5" title={title}>
-      <span className="flex items-center gap-2 text-[13px] font-semibold text-slate-600">
+    <div className="kpi rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5" title={title}>
+      <span className="kpi-label">
         <i className={`h-2 w-2 shrink-0 rounded-full ${dot}`} />
         <span className="truncate">{label}</span>
       </span>
-      <span className="mt-1.5 block text-[26px] font-bold leading-none tracking-tight tabular-nums text-slate-900">{value}</span>
-      <span className="mt-2 block min-h-[1.25rem] truncate text-[13px] text-slate-500">{note}</span>
+      <span className="kpi-value">{value}</span>
+      <span className="kpi-note sm:min-h-[1.25rem] sm:truncate">{note}</span>
     </div>
   );
 }

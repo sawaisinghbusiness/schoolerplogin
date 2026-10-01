@@ -143,7 +143,26 @@ export default function CertificatesPage() {
               )}
             </div>
           ) : (
-            <div className="overflow-x-auto">
+            <>
+            <ul className="divide-y divide-slate-100 sm:hidden">
+              {shown.map((c) => (
+                <li key={c.id}>
+                  <button type="button" onClick={() => setPrinting(c)} className="m-row active:bg-slate-50" aria-label={`Print ${c.serial_no}`}>
+                    <span className="m-row-main">
+                      <span className="m-row-title">{c.details.name || c.student?.name}</span>
+                      <span className="m-row-meta">
+                        <span className="font-mono">{c.serial_no}</span> · {c.details.classSec || c.student?.class_sec}
+                      </span>
+                    </span>
+                    <span className="shrink-0 text-right">
+                      <span className={`badge ${TYPE_BADGE[c.type]}`}>{TYPE_SHORT[c.type]}</span>
+                      <span className="mt-1 block text-xs text-slate-500">{when(c.issued_at)}</span>
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <div className="hidden overflow-x-auto sm:block">
               <table className="w-full text-sm">
                 <thead className="table-head">
                   <tr>
@@ -185,6 +204,7 @@ export default function CertificatesPage() {
                 </tbody>
               </table>
             </div>
+            </>
           )}
         </section>
       )}

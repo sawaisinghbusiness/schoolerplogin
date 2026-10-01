@@ -1,5 +1,6 @@
-import { ComingSoon } from "@/components/ui/ComingSoon";
+import { redirect } from "next/navigation";
 
+// Writing a message happens in a drawer on /messages.
 export default function Page() {
-  return <ComingSoon route="/messages/new" />;
+  redirect("/messages?new=1");
 }
