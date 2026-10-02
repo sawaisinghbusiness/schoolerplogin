@@ -315,16 +315,42 @@ textarea {
     @apply flex items-start gap-2.5 rounded-xl border px-4 py-3 text-sm;
   }
 
-  /* Light tint, thin border of the same hue, text two steps darker so it never blends into the fill. */
-  .badge-emerald { @apply bg-emerald-50 text-emerald-800 ring-1 ring-inset ring-emerald-200; }
-  .badge-amber { @apply bg-marigold-50 text-marigold-900 ring-1 ring-inset ring-marigold-200; }
-  .badge-orange { @apply bg-orange-50 text-orange-800 ring-1 ring-inset ring-orange-200; }
-  .badge-rose { @apply bg-rose-50 text-rose-800 ring-1 ring-inset ring-rose-200; }
-  .badge-sky { @apply bg-sky-50 text-sky-800 ring-1 ring-inset ring-sky-200; }
-  .badge-violet { @apply bg-violet-50 text-violet-800 ring-1 ring-inset ring-violet-200; }
-  .badge-pink { @apply bg-pink-50 text-pink-800 ring-1 ring-inset ring-pink-200; }
-  .badge-slate { @apply bg-slate-50 text-slate-700 ring-1 ring-inset ring-slate-200; }
-  .badge-brand { @apply bg-brand-50 text-brand-800 ring-1 ring-inset ring-brand-200; }
+  /*
+   * Status badges: a neutral chip (white, thin grey border, dark grey text) and the meaning
+   * carried by a small coloured dot. The fill and the text are never the same hue.
+   */
+  .badge-emerald,
+  .badge-amber,
+  .badge-orange,
+  .badge-rose,
+  .badge-sky,
+  .badge-violet,
+  .badge-pink,
+  .badge-slate,
+  .badge-brand {
+    @apply bg-white text-slate-700 ring-1 ring-inset ring-slate-200;
+  }
+  .badge-emerald::before,
+  .badge-amber::before,
+  .badge-orange::before,
+  .badge-rose::before,
+  .badge-sky::before,
+  .badge-violet::before,
+  .badge-pink::before,
+  .badge-slate::before,
+  .badge-brand::before {
+    content: "";
+    @apply h-1.5 w-1.5 shrink-0 rounded-full;
+  }
+  .badge-emerald::before { @apply bg-emerald-500; }
+  .badge-amber::before { @apply bg-marigold-500; }
+  .badge-orange::before { @apply bg-orange-500; }
+  .badge-rose::before { @apply bg-rose-500; }
+  .badge-sky::before { @apply bg-sky-500; }
+  .badge-violet::before { @apply bg-violet-500; }
+  .badge-pink::before { @apply bg-pink-500; }
+  .badge-slate::before { @apply bg-slate-400; }
+  .badge-brand::before { @apply bg-brand-500; }
   /* Status without a fill: a small dot and coloured text (paid / due in lists). */
   .status-dot {
     @apply inline-flex items-center gap-1.5 whitespace-nowrap text-xs font-semibold;

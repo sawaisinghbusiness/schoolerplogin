@@ -103,10 +103,10 @@ export const NAV_GROUPS: NavGroup[] = [
         children: [
           { title: "Directory", href: "/staff" },
           { title: "Attendance & leave", href: "/staff/attendance" },
-          { title: "Payroll", href: "/staff/payroll", soon: true },
+          { title: "Payroll", href: "/staff/payroll" },
         ],
       },
-      { title: "Transport", href: "/transport", icon: Bus, soon: true },
+      { title: "Transport", href: "/transport", icon: Bus },
       {
         title: "Settings",
         icon: Settings2,

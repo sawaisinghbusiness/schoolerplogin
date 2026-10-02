@@ -1,5 +1,6 @@
-import { ComingSoon } from "@/components/ui/ComingSoon";
+import { redirect } from "next/navigation";
 
+/** Students on each route now live inside the Transport page (open a route). */
 export default function Page() {
-  return <ComingSoon route="/transport/students" />;
+  redirect("/transport");
 }
