@@ -62,5 +62,10 @@ export const api = {
   del: <T>(path: string) => request<T>(path, { method: "DELETE" }),
 };
 
-/** True once a backend URL is configured. */
-export const usingRemoteBackend = Boolean(BASE);
+/**
+ * Data always comes from the backend: straight to NEXT_PUBLIC_API_URL in development, or
+ * through this site's /api pass-through (BACKEND_URL rewrite) in production, where
+ * NEXT_PUBLIC_API_URL is left empty on purpose. Tying this to BASE sent the live site to
+ * the browser Supabase / demo-data path (students with "STU-1001" ids the backend rejects).
+ */
+export const usingRemoteBackend = true;

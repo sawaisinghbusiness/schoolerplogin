@@ -1,6 +1,9 @@
 import { api } from "@/lib/apiClient";
 import type { ExamPart } from "@/lib/grading";
 
+/** Per class: the sections and subjects that sit the exam (empty or missing = all), and the units each subject covers. */
+export type ExamScope = Record<string, { sections?: string[]; subjects?: string[]; units?: Record<string, string> }>;
+
 export interface Exam {
   id: string;
   title: string;
@@ -12,6 +15,7 @@ export interface Exam {
   order_seq: number;
   locked: boolean;
   session: string;
+  scope: ExamScope;
 }
 
 export interface ExamInput {
@@ -21,6 +25,7 @@ export interface ExamInput {
   end_date: string | null;
   components: ExamPart[];
   order_seq: number;
+  scope: ExamScope;
 }
 
 export interface SectionProgress {

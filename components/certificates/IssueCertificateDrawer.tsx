@@ -177,7 +177,7 @@ export function IssueCertificateDrawer({ isOpen, onClose, students, school, onIs
         <header className="flex h-16 shrink-0 items-center justify-between border-b border-slate-300/50 bg-white px-5 sm:px-6">
           <div>
             <h2 className="text-lg font-bold text-slate-900">{issued ? `${issued.serial_no} issued` : "Issue a certificate"}</h2>
-            <p className="text-xs text-slate-500">{issued ? `${CERT_LABEL[issued.type]} for ${student?.name}` : "Details from the student's record are filled in; check them before issuing"}</p>
+            {issued && <p className="text-xs text-slate-500">{`${CERT_LABEL[issued.type]} for ${student?.name}`}</p>}
           </div>
           <button type="button" onClick={onClose} disabled={saving} className="rounded-lg p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-900" aria-label="Close">
             <X className="h-5 w-5" />
@@ -223,10 +223,9 @@ export function IssueCertificateDrawer({ isOpen, onClose, students, school, onIs
                       role="radio"
                       aria-checked={type === t.key}
                       onClick={() => choose(t.key, student)}
-                      className={`rounded-xl border bg-white px-3 py-2.5 text-left transition ${type === t.key ? "border-brand-500 ring-4 ring-brand-500/10" : "border-slate-200 hover:border-slate-300"}`}
+                      className={`flex min-h-[44px] items-center justify-center rounded-xl border bg-white px-2 text-center text-[13px] font-semibold transition ${type === t.key ? "border-brand-500 text-slate-900 ring-4 ring-brand-500/10" : "border-slate-200 text-slate-700 hover:border-slate-300"}`}
                     >
-                      <span className="block text-[13px] font-semibold text-slate-900">{t.label}</span>
-                      <span className="block text-[11.5px] text-slate-500">{t.note}</span>
+                      {t.label}
                     </button>
                   ))}
                 </div>
@@ -291,12 +290,10 @@ export function IssueCertificateDrawer({ isOpen, onClose, students, school, onIs
                 </section>
 
                 {student && type === "tc" && student.balanceFee > 0 && (
-                  <div className="alert alert-amber">
-                    <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
-                    <span>
-                      {inr(student.balanceFee)} fee is still due. Schools usually clear dues before giving a TC.
-                    </span>
-                  </div>
+                  <p className="flex items-center gap-2 rounded-lg bg-marigold-50 px-3 py-2 text-[13px] font-semibold text-marigold-900 ring-1 ring-inset ring-marigold-200">
+                    <AlertTriangle className="h-4 w-4 shrink-0 text-marigold-600" />
+                    {inr(student.balanceFee)} fee due
+                  </p>
                 )}
 
                 {student && (

@@ -208,6 +208,24 @@ textarea {
   .page-subtitle {
     @apply mt-1 max-w-3xl text-sm text-slate-500;
   }
+  /*
+   * The top bar already names the page, so inside a page header the big title is kept only
+   * for screen readers and the subtitle is dropped. The header then just holds the actions,
+   * on the right; with no actions it takes no space at all.
+   */
+  .page-header {
+    @apply sm:items-center sm:justify-end;
+  }
+  .page-header .page-title {
+    @apply sr-only;
+  }
+  .page-header .page-subtitle,
+  .page-header .page-eyebrow {
+    @apply hidden;
+  }
+  .page-header:not(:has(button, a, select, input, [role="tablist"])) {
+    @apply hidden;
+  }
 
   /* Surfaces */
   .card {
@@ -297,15 +315,29 @@ textarea {
     @apply flex items-start gap-2.5 rounded-xl border px-4 py-3 text-sm;
   }
 
-  .badge-emerald { @apply bg-emerald-50 text-emerald-700; }
-  .badge-amber { @apply bg-marigold-50 text-marigold-800; }
-  .badge-orange { @apply bg-orange-50 text-orange-700; }
-  .badge-rose { @apply bg-rose-50 text-rose-700; }
-  .badge-sky { @apply bg-sky-50 text-sky-700; }
-  .badge-violet { @apply bg-violet-50 text-violet-700; }
-  .badge-pink { @apply bg-pink-50 text-pink-700; }
-  .badge-slate { @apply bg-slate-100 text-slate-700; }
-  .badge-brand { @apply bg-brand-50 text-brand-700; }
+  /* Light tint, thin border of the same hue, text two steps darker so it never blends into the fill. */
+  .badge-emerald { @apply bg-emerald-50 text-emerald-800 ring-1 ring-inset ring-emerald-200; }
+  .badge-amber { @apply bg-marigold-50 text-marigold-900 ring-1 ring-inset ring-marigold-200; }
+  .badge-orange { @apply bg-orange-50 text-orange-800 ring-1 ring-inset ring-orange-200; }
+  .badge-rose { @apply bg-rose-50 text-rose-800 ring-1 ring-inset ring-rose-200; }
+  .badge-sky { @apply bg-sky-50 text-sky-800 ring-1 ring-inset ring-sky-200; }
+  .badge-violet { @apply bg-violet-50 text-violet-800 ring-1 ring-inset ring-violet-200; }
+  .badge-pink { @apply bg-pink-50 text-pink-800 ring-1 ring-inset ring-pink-200; }
+  .badge-slate { @apply bg-slate-50 text-slate-700 ring-1 ring-inset ring-slate-200; }
+  .badge-brand { @apply bg-brand-50 text-brand-800 ring-1 ring-inset ring-brand-200; }
+  /* Status without a fill: a small dot and coloured text (paid / due in lists). */
+  .status-dot {
+    @apply inline-flex items-center gap-1.5 whitespace-nowrap text-xs font-semibold;
+  }
+  .status-dot::before {
+    content: "";
+    @apply h-1.5 w-1.5 shrink-0 rounded-full bg-current;
+  }
+
+  /* Small descriptions under figures are dropped everywhere; the label and number say enough. */
+  .kpi-note {
+    display: none !important;
+  }
 
   .alert-emerald { @apply border-emerald-200 bg-emerald-50 text-emerald-900; }
   .alert-amber { @apply border-marigold-200 bg-marigold-50 text-marigold-900; }

@@ -47,15 +47,11 @@ export default function DashboardPage() {
   return (
     <div className="space-y-4 pb-12 sm:space-y-6">
       {/* Greeting + actions */}
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+      <div className="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
         <div>
           <h1 className="text-[21px] font-bold tracking-tight text-slate-900 sm:text-[26px]">
             {hello}, {user.name.split(" ")[0]}
           </h1>
-          <p className="mt-0.5 text-[13px] text-slate-500 sm:mt-1 sm:text-sm">
-            {today}
-            {data && ` · ${fmt(data.students.total)} students · ${data.attention.sectionsTotal} sections`}
-          </p>
         </div>
         {/* Phones: three equal quick actions; desktop: a row of buttons. */}
         <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-wrap">
@@ -99,16 +95,6 @@ export default function DashboardPage() {
             <div className="px-4 pb-3.5 pt-4">
               <p className="text-[13px] font-semibold text-slate-600">Collected this month</p>
               <p className="mt-1 text-[26px] font-bold leading-tight tracking-tight tabular-nums text-slate-900">{money(f.thisMonth)}</p>
-              <p className="mt-0.5 text-[13px] text-slate-500">
-                {MONTHS[new Date().getMonth()]} so far
-                {change !== null && (
-                  <span className={change >= 0 ? "font-semibold text-emerald-700" : "font-semibold text-rose-600"}>
-                    {" · "}
-                    {change >= 0 ? "+" : "−"}
-                    {Math.abs(change).toFixed(0)}% vs last month
-                  </span>
-                )}
-              </p>
             </div>
             <ul className="divide-y divide-slate-100 border-t border-slate-100">
               {[
@@ -139,15 +125,7 @@ export default function DashboardPage() {
             <>
               <p className="whitespace-nowrap text-[28px] font-extrabold leading-tight tracking-tight text-slate-900">{money(f.thisMonth)}</p>
               <div className="mt-2 flex items-end justify-between gap-3">
-                <div className="min-w-0">
-                  {change !== null && (
-                    <span className={`badge ${change >= 0 ? "badge-emerald" : "badge-rose"}`}>
-                      {change >= 0 ? "+" : "−"}
-                      {Math.abs(change).toFixed(1)}% vs last month
-                    </span>
-                  )}
-                  <p className="mt-1 text-[13px] text-slate-500">{MONTHS[new Date().getMonth()]} so far</p>
-                </div>
+                <span />
                 <Sparkline values={f.byMonth.map((m) => m.amount)} />
               </div>
             </>
@@ -403,11 +381,11 @@ function Attention({
   href?: string;
   action?: string;
 }) {
-  const tint = { warn: "bg-marigold-50 text-marigold-700", brand: "bg-brand-50 text-brand-700", bad: "bg-rose-50 text-rose-600", good: "bg-emerald-50 text-emerald-700" }[tone];
+  const tint = { warn: "text-marigold-600", brand: "text-brand-600", bad: "text-rose-600", good: "text-emerald-600" }[tone];
   return (
     <li className="flex items-center gap-3 py-3">
-      <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${tint}`}>
-        <Icon className="h-[18px] w-[18px]" />
+      <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-white shadow-[0_1px_1px_rgba(16,24,40,0.04)] ${tint}`}>
+        <Icon className="h-4 w-4" strokeWidth={2.2} />
       </span>
       <span className="min-w-0 flex-1">
         <span className="block text-sm font-semibold text-slate-900">{title}</span>

@@ -13,7 +13,7 @@ import { IssueCertificateDrawer } from "@/components/certificates/IssueCertifica
 type Filter = "all" | CertificateType;
 
 const when = (iso: string) => new Date(iso).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
-const TYPE_BADGE: Record<CertificateType, string> = { tc: "badge-rose", bonafide: "badge-brand", character: "badge-emerald" };
+const TYPE_BADGE: Record<CertificateType, string> = { tc: "badge-rose", bonafide: "badge-sky", character: "badge-emerald" };
 const TYPE_SHORT: Record<CertificateType, string> = { tc: "TC", bonafide: "Bonafide", character: "Character" };
 
 export default function CertificatesPage() {
@@ -82,7 +82,6 @@ export default function CertificatesPage() {
       <header className="page-header">
         <div>
           <h1 className="page-title">Certificates</h1>
-          <p className="page-subtitle">Transfer, bonafide and character certificates, with a numbered register of every one issued</p>
         </div>
         <button type="button" onClick={() => setIssueOpen(true)} className="btn btn-primary">
           <Plus className="h-4 w-4" />
@@ -151,7 +150,7 @@ export default function CertificatesPage() {
                     <span className="m-row-main">
                       <span className="m-row-title">{c.details.name || c.student?.name}</span>
                       <span className="m-row-meta">
-                        <span className="font-mono">{c.serial_no}</span> · {c.details.classSec || c.student?.class_sec}
+                        {c.details.father || c.student?.father_name || "—"} · {c.details.classSec || c.student?.class_sec}
                       </span>
                     </span>
                     <span className="shrink-0 text-right">

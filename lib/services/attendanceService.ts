@@ -60,7 +60,7 @@ export const attendanceService = {
     return res.ok && res.data ? { data: res.data } : { error: res.data?.error || res.error || "Could not load the section." };
   },
   async save(date: string, cls: string, sec: string, marks: { studentId: string; status: AttStatus; remark?: string }[]) {
-    const res = await api.post<{ success: boolean; data?: { saved: number; present: number; absent: number; leave: number; half: number }; error?: string }>("/api/attendance/section", {
+    const res = await api.post<{ success: boolean; data?: { saved: number; present: number; absent: number; leave: number; half: number; whatsappQueued?: number | null }; error?: string }>("/api/attendance/section", {
       date,
       class: cls,
       section: sec,
@@ -73,7 +73,7 @@ export const attendanceService = {
 /** wa.me link with the absence note typed in (sent from the office phone). */
 export function absenceWhatsApp(mobile: string, name: string, classSec: string, dateLabel: string, school: string): string | null {
   const d = (mobile || "").replace(/\D/g, "").slice(-10);
-  if (!/^[6-9]\d{9}$/.test(d)) return null;
+  if (!/^[6-9]\d{9}$/.test(d) || /^(\d)\1{9}$/.test(d)) return null; // 9999999999 etc. are placeholders, not parents
   const text = `प्रिय अभिभावक, आज (${dateLabel}) ${name} (कक्षा ${classSec.replace(/\s*-\s*/, "-")}) स्कूल में अनुपस्थित है। कृपया कारण बताएं। – ${school}`;
   return `https://wa.me/91${d}?text=${encodeURIComponent(text)}`;
 }

@@ -24,6 +24,14 @@ function classRange(picked: string[], all: string[]) {
   return picked.join(", ");
 }
 
+/** "12th: Sec A, C Physics, Chemistry" for classes that sit only part of the exam. */
+function scopeNote(e: Exam): string {
+  return Object.entries(e.scope || {})
+    .filter(([cls, v]) => e.classes.includes(cls) && (v.sections?.length || v.subjects?.length))
+    .map(([cls, v]) => [cls + ":", v.sections?.length ? "Sec " + v.sections.join(", ") : "", v.subjects?.length ? v.subjects.join(", ") : ""].filter(Boolean).join(" "))
+    .join(" · ");
+}
+
 function role(): string {
   try {
     return localStorage.getItem("schooldesk_user_role") || "";
@@ -143,7 +151,7 @@ export default function ExamSetupPage() {
                   <button type="button" onClick={() => canEdit && !e.locked && setDrawer({ exam: e })} className="m-row flex-1 active:bg-slate-50">
                     <span className="m-row-main">
                       <span className="m-row-title">{e.title}</span>
-                      <span className="m-row-meta">{classRange(e.classes, classNames)} · {dates(e)}</span>
+                      <span className="m-row-meta">{classRange(e.classes, classNames)}{scopeNote(e) ? ` (${scopeNote(e)})` : ""} · {dates(e)}</span>
                     </span>
                     <span className="shrink-0 text-right">
                       <span className="block text-[13px] font-semibold tabular-nums text-slate-700">{pattern(e)}</span>
@@ -176,7 +184,14 @@ export default function ExamSetupPage() {
                         <span className="block font-semibold text-slate-900">{e.title}</span>
                         <span className="block text-xs text-slate-500">{dates(e)}</span>
                       </td>
-                      <td className="max-w-[16rem] px-3 py-3 text-slate-700">{classRange(e.classes, classNames)}</td>
+                      <td className="max-w-[16rem] px-3 py-3 text-slate-700">
+                        {classRange(e.classes, classNames)}
+                        {scopeNote(e) && (
+                          <span className="block truncate text-xs text-slate-500" title={scopeNote(e)}>
+                            {scopeNote(e)}
+                          </span>
+                        )}
+                      </td>
                       <td className="whitespace-nowrap px-3 py-3 tabular-nums text-slate-700">{pattern(e)}</td>
                       <td className="px-3 py-3">
                         {e.locked ? <span className="badge badge-slate"><Lock className="h-3 w-3" />Locked</span> : <span className="badge badge-emerald">Open for marks</span>}
@@ -252,7 +267,7 @@ export default function ExamSetupPage() {
       <ExamDrawer
         isOpen={!!drawer}
         exam={drawer?.exam || null}
-        classes={classNames}
+        classes={classes.filter((c) => c.sections.length)}
         nextOrder={(exams || []).length}
         onClose={() => setDrawer(null)}
         onSaved={(saved) => {

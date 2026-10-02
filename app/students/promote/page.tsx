@@ -42,7 +42,7 @@ export default function PromotePage() {
   }, [students]);
 
   return (
-    <div className="space-y-5 pb-28">
+    <div className="space-y-5 pb-44 md:pb-28">
       <header className="page-header">
         <div>
           <h1 className="page-title">Promote &amp; transfer</h1>
@@ -177,11 +177,6 @@ function PromoteTab({ students, structure, onDone }: { students: Student[]; stru
               </select>
             </label>
           )}
-          <div className="flex gap-2 text-[13px]">
-            <Pill tone="brand" n={count("promote")} label={passOut ? "pass out" : "promote"} />
-            <Pill tone="amber" n={count("detain")} label="detain" />
-            <Pill tone="slate" n={count("left")} label="left" />
-          </div>
         </div>
       </section>
 
@@ -206,20 +201,23 @@ function PromoteTab({ students, structure, onDone }: { students: Student[]; stru
         {list.length === 0 ? (
           <p className="px-5 py-12 text-center text-sm text-slate-500">No active students in this section.</p>
         ) : (
-          <ul className="divide-y divide-slate-100">
+          <ul className="grid gap-2.5 bg-slate-50/60 p-3 sm:p-4">
             {list.map((s) => {
               const d = decisions[s.id] || "promote";
               return (
-                <li key={s.id} className="flex flex-wrap items-center gap-3 px-5 py-2.5">
-                  <span className="w-8 shrink-0 text-right text-[13px] tabular-nums text-slate-400">{s.rollNo || "—"}</span>
-                  <Avatar name={s.name} id={s.id} photoUrl={s.photoUrl} size="sm" />
-                  <span className="min-w-[140px] flex-1">
-                    <span className="block text-sm font-semibold text-slate-900">{s.name}</span>
-                    <span className="block text-xs text-slate-500">
-                      {s.srNo} · {s.fatherName}
+                <li key={s.id} className="grid grid-cols-1 items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 sm:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
+                  <span className="flex min-w-0 items-center gap-3">
+                    <span className="w-6 shrink-0 text-right text-[13px] tabular-nums text-slate-400">{s.rollNo || "—"}</span>
+                    <Avatar name={s.name} id={s.id} photoUrl={s.photoUrl} size="sm" neutral />
+                    <span className="min-w-0 flex-1">
+                      <span className="flex items-baseline gap-2">
+                        <span className="truncate text-sm font-semibold text-slate-900">{s.name}</span>
+                        {s.balanceFee > 0 && <span className="ml-auto shrink-0 text-xs font-semibold tabular-nums text-rose-600 sm:hidden">{inr(s.balanceFee)} due</span>}
+                      </span>
+                      <span className="block truncate text-xs text-slate-500">{s.fatherName || "—"}</span>
                     </span>
                   </span>
-                  {s.balanceFee > 0 && <span className="badge badge-rose tabular-nums">{inr(s.balanceFee)} due</span>}
+                  <span className="flex justify-center">
                   <Segmented
                     value={d}
                     onChange={(v) => setDecisions({ ...decisions, [s.id]: v })}
@@ -230,6 +228,8 @@ function PromoteTab({ students, structure, onDone }: { students: Student[]; stru
                     ]}
                     name={s.name}
                   />
+                  </span>
+                  <span className="hidden text-right text-xs font-semibold tabular-nums text-rose-600 sm:block">{s.balanceFee > 0 ? `${inr(s.balanceFee)} due` : ""}</span>
                 </li>
               );
             })}
@@ -392,9 +392,7 @@ function SectionTab({ students, structure, onDone }: { students: Student[]; stru
                   <Avatar name={s.name} id={s.id} photoUrl={s.photoUrl} size="sm" />
                   <span className="min-w-0 flex-1">
                     <span className="block text-sm font-semibold text-slate-900">{s.name}</span>
-                    <span className="block text-xs text-slate-500">
-                      {s.srNo} · {s.fatherName}
-                    </span>
+                    <span className="block text-xs text-slate-500">{s.fatherName || "—"}</span>
                   </span>
                 </button>
               </li>
@@ -439,18 +437,9 @@ function Segmented<T extends string>({ value, onChange, options, name }: { value
   );
 }
 
-function Pill({ n, label, tone }: { n: number; label: string; tone: "brand" | "amber" | "slate" }) {
-  const cls = tone === "brand" ? "bg-brand-50 text-brand-700" : tone === "amber" ? "bg-marigold-50 text-marigold-800" : "bg-slate-100 text-slate-700";
-  return (
-    <span className={`inline-flex items-center gap-1 rounded-lg px-2.5 py-2 font-semibold ${cls}`}>
-      <span className="tabular-nums">{n}</span> {label}
-    </span>
-  );
-}
-
 function ActionBar({ children }: { children: React.ReactNode }) {
   return (
-    <div className="fixed inset-x-0 bottom-5 z-30 flex justify-center px-4 md:pl-[272px]">
+    <div className="fixed inset-x-0 bottom-[calc(4.25rem+env(safe-area-inset-bottom))] z-40 flex justify-center px-4 md:bottom-5 md:pl-[272px]">
       <div className="flex w-full max-w-2xl items-center gap-3 rounded-2xl bg-night-900 px-4 py-3 shadow-2xl ring-1 ring-white/5 animate-scaleUp">
         <Users className="h-4 w-4 shrink-0 text-marigold-400" />
         {children}

@@ -3,10 +3,12 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import * as XLSX from "xlsx";
-import { AlertTriangle, Check, Download, IndianRupee, MessageCircle, RefreshCw, Search, Send, X } from "lucide-react";
+import { AlertTriangle, Check, Download, IndianRupee, Loader2, MessageCircle, RefreshCw, Search, Send, X } from "lucide-react";
 import { duesService, DuesReport, StudentDues, DEFAULT_TEMPLATES, fillTemplate, whatsappLink, ReminderLang } from "@/lib/services/duesService";
 import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
 import { Modal } from "@/components/ui/modal";
+import { toast } from "@/components/ui/Toaster";
+import { WaStatus, whatsappService } from "@/lib/services/whatsappService";
 
 type Tab = "students" | "classes";
 type Filter = "all" | "one" | "two";
@@ -444,10 +446,15 @@ function ReminderModal({ isOpen, onClose, students, school }: { isOpen: boolean;
   const [lang, setLang] = useState<ReminderLang>("hi");
   const [tpl, setTpl] = useState(DEFAULT_TEMPLATES.hi);
   const [opened, setOpened] = useState<Set<string>>(new Set());
+  const [wa, setWa] = useState<WaStatus | null>(null);
+  const [queueing, setQueueing] = useState(false);
+  const [queued, setQueued] = useState<number | null>(null);
 
   useEffect(() => {
     if (!isOpen) return;
     setOpened(new Set());
+    setQueued(null);
+    whatsappService.status().then(setWa);
     try {
       const saved = JSON.parse(localStorage.getItem(TPL_KEY) || "null");
       if (saved?.lang && saved?.tpl) {
@@ -474,6 +481,23 @@ function ReminderModal({ isOpen, onClose, students, school }: { isOpen: boolean;
 
   const first = students[0];
   const noPhone = students.filter((s) => !whatsappLink(s.mobile, "x")).length;
+  const linked = wa?.state === "open" && !wa.setupNeeded;
+
+  /** Hands every message to the backend, which sends them from the school's number a few seconds apart. */
+  const sendAll = async () => {
+    setQueueing(true);
+    const r = await whatsappService.queue(
+      "dues",
+      students.filter((s) => whatsappLink(s.mobile, "x")).map((s) => ({ studentId: s.studentId, text: fillTemplate(tpl, s, school, lang) }))
+    );
+    setQueueing(false);
+    if (!r.success) return toast(r.error || "Could not queue the reminders.", "error");
+    setQueued(r.queued || 0);
+    toast(
+      `${r.queued} reminder${r.queued === 1 ? "" : "s"} queued${r.alreadyQueued ? `; ${r.alreadyQueued} already reminded today` : ""}.`,
+      "success"
+    );
+  };
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} title={`Remind ${students.length} parent${students.length === 1 ? "" : "s"}`} maxWidth="max-w-2xl">
@@ -550,15 +574,38 @@ function ReminderModal({ isOpen, onClose, students, school }: { isOpen: boolean;
 
         <p className="flex gap-2 rounded-lg bg-slate-50 p-3 text-xs leading-relaxed text-slate-600">
           <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-marigold-600" />
-          <span>
-            Each button opens WhatsApp on this computer or phone with the message typed in; press send there. Send a few at a time, spread over the day, so WhatsApp does not flag the number.
-            {noPhone ? ` ${noPhone} parent${noPhone > 1 ? "s have" : " has"} no valid mobile.` : ""} Bulk SMS will be added once the school is registered on DLT.
-          </span>
+          {linked ? (
+            <span>
+              &ldquo;Send to all&rdquo; sends from the school&apos;s WhatsApp (+{wa!.me?.number}), one message every few seconds; a parent already reminded today is skipped. The buttons above still open WhatsApp on this device instead.
+              {noPhone ? ` ${noPhone} parent${noPhone > 1 ? "s have" : " has"} no valid mobile.` : ""}
+            </span>
+          ) : (
+            <span>
+              Each button opens WhatsApp on this computer or phone with the message typed in; press send there. Send a few at a time, spread over the day, so WhatsApp does not flag the number.
+              {noPhone ? ` ${noPhone} parent${noPhone > 1 ? "s have" : " has"} no valid mobile.` : ""}
+              {wa && !wa.setupNeeded ? (
+                <>
+                  {" "}
+                  To send them all at once,{" "}
+                  <Link href="/settings/messaging" className="font-semibold text-brand-700 hover:underline">
+                    connect the school&apos;s WhatsApp
+                  </Link>
+                  .
+                </>
+              ) : null}
+            </span>
+          )}
         </p>
-        <div className="flex justify-end border-t border-slate-200 pt-4">
+        <div className="flex flex-wrap items-center justify-end gap-2 border-t border-slate-200 pt-4">
           <button type="button" onClick={onClose} className="btn btn-secondary btn-sm">
-            Done ({opened.size} of {students.length} opened)
+            {queued !== null ? "Close" : `Done (${opened.size} of ${students.length} opened)`}
           </button>
+          {linked && (
+            <button type="button" onClick={sendAll} disabled={queueing || queued !== null || students.length === noPhone} className="btn btn-primary btn-sm">
+              {queueing ? <Loader2 className="h-4 w-4 animate-spin" /> : queued !== null ? <Check className="h-4 w-4" /> : <Send className="h-4 w-4" />}
+              {queued !== null ? `${queued} queued` : `Send to all ${students.length - noPhone}`}
+            </button>
+          )}
         </div>
       </div>
     </Modal>

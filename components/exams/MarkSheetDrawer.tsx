@@ -164,7 +164,10 @@ export function MarkSheetDrawer({ target, onClose, onSaved }: {
       busy={busy}
       width="max-w-[780px]"
       title={target ? `${target.subject} · ${target.section}` : "Marks"}
-      subtitle={sheet ? `${sheet.exam.title} · out of ${max}${sheet.lastSaved ? ` · last saved ${when(sheet.lastSaved.at)}${sheet.lastSaved.by ? ` by ${sheet.lastSaved.by.split(" (")[0]}` : ""}` : ""}` : ""}
+      subtitle={sheet ? `${sheet.exam.title} · out of ${max}${(() => {
+        const u = target && sheet.exam.scope?.[target.section.split(" - ")[0]]?.units?.[target.subject];
+        return u ? ` · ${u}` : "";
+      })()}${sheet.lastSaved ? ` · last saved ${when(sheet.lastSaved.at)}${sheet.lastSaved.by ? ` by ${sheet.lastSaved.by.split(" (")[0]}` : ""}` : ""}` : ""}
       footer={
         sheet &&
         (confirmClose ? (

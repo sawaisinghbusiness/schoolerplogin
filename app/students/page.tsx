@@ -232,15 +232,6 @@ export default function StudentsPage() {
       <header className="page-header">
         <div>
           <h1 className="page-title">Students</h1>
-          <p className="page-subtitle">
-            {loaded ? (
-              <>
-                {fmt(stats.all)} students · {fmt(stats.boys)} boys · {fmt(stats.girls)} girls · <span className="font-semibold text-rose-600">{lakh(stats.dueAmount)}</span> due
-              </>
-            ) : (
-              "Loading…"
-            )}
-          </p>
         </div>
         <div className="flex gap-2">
           <input ref={fileRef} type="file" accept=".xlsx,.xls,.csv" onChange={onImport} className="hidden" />
@@ -392,11 +383,7 @@ export default function StudentsPage() {
                                 <span className="truncate" title={s.name}>{s.name}</span>
                                 {s.status === "Inactive" && <span className="badge badge-slate shrink-0 py-0 text-[11px]">Left</span>}
                               </span>
-                              <span className="block whitespace-nowrap text-xs tabular-nums text-slate-500">
-                                <span className="xl:hidden">{s.classSec}</span>
-                                <span className="hidden xl:inline">{s.srNo}</span>
-                                {s.rollNo && ` · Roll ${s.rollNo}`}
-                              </span>
+                              <span className="block truncate text-xs text-slate-500">{parentLine(s)}</span>
                             </span>
                           </div>
                         </td>
@@ -448,11 +435,9 @@ export default function StudentsPage() {
                     <Avatar name={s.name} id={s.id} photoUrl={s.photoUrl} size="sm" neutral />
                     <span className="m-row-main">
                       <span className="m-row-title">{s.name}</span>
-                      <span className="m-row-meta">
-                        {s.classSec} · {s.fatherName}
-                      </span>
+                      <span className="m-row-meta">{parentLine(s)}</span>
                     </span>
-                    {s.balanceFee > 0 ? <span className="badge badge-rose tabular-nums">{inr(s.balanceFee)}</span> : <span className="badge badge-emerald">Paid</span>}
+                    {s.balanceFee > 0 ? <span className="status-dot tabular-nums text-rose-600">{inr(s.balanceFee)} due</span> : <span className="status-dot text-emerald-700">Paid</span>}
                   </button>
                 </li>
               ))}
@@ -482,7 +467,7 @@ export default function StudentsPage() {
 
       {/* Bulk actions: sits at the bottom of the screen while students are selected */}
       {selected.size > 0 && (
-        <div className="fixed inset-x-0 bottom-5 z-30 flex justify-center px-4 md:pl-[272px]">
+        <div className="fixed inset-x-0 bottom-[calc(4.25rem+env(safe-area-inset-bottom))] z-40 flex justify-center px-4 md:bottom-5 md:pl-[272px]">
           <div className="flex w-full max-w-2xl flex-wrap items-center gap-3 rounded-2xl bg-night-900 px-4 py-3 text-sm text-white shadow-2xl ring-1 ring-white/5 animate-scaleUp">
             <span className="flex h-7 min-w-[28px] items-center justify-center rounded-lg bg-marigold-400 px-2 text-[13px] font-bold text-night-950">{selected.size}</span>
             <span className="font-semibold">selected</span>
@@ -534,6 +519,9 @@ export default function StudentsPage() {
   );
 }
 
+/** "S/o Ramesh Kumar" or "D/o …" from the gender on record. */
+const parentLine = (s: Student) => (s.fatherName ? `${s.gender === "Female" ? "D/o" : "S/o"} ${s.fatherName}` : "—");
+
 /** A figure that doubles as a filter tab. */
 /** Paid share as a small meter, then the amount still due. */
 function FeeCell({ s }: { s: Student }) {
@@ -541,15 +529,12 @@ function FeeCell({ s }: { s: Student }) {
   const pct = total > 0 ? Math.min(100, Math.round((s.paidFee / total) * 100)) : 100;
   if (s.balanceFee <= 0)
     return (
-      <span className="badge badge-emerald">
-        <Check className="h-3 w-3" strokeWidth={3} />
-        Paid
-      </span>
+      <span className="status-dot text-emerald-700">Paid</span>
     );
   return (
     <div className="xl:w-32">
       <div className="flex items-baseline justify-between gap-2 whitespace-nowrap text-xs">
-        <span className="font-semibold tabular-nums text-rose-600">{inr(s.balanceFee)} due</span>
+        <span className="status-dot tabular-nums text-rose-600">{inr(s.balanceFee)} due</span>
         <span className="hidden tabular-nums text-slate-500 xl:inline">{pct}% paid</span>
       </div>
       <div className="mt-1 hidden h-1.5 overflow-hidden rounded-full bg-slate-100 xl:block">

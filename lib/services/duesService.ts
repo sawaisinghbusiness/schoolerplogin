@@ -79,6 +79,6 @@ export function fillTemplate(tpl: string, s: StudentDues, school: string, lang: 
 /** wa.me link that opens WhatsApp with the message typed in, for the office phone to send. */
 export function whatsappLink(mobile: string, text: string): string | null {
   const digits = (mobile || "").replace(/\D/g, "").slice(-10);
-  if (!/^[6-9]\d{9}$/.test(digits)) return null;
+  if (!/^[6-9]\d{9}$/.test(digits) || /^(\d)\1{9}$/.test(digits)) return null; // 9999999999 etc. are placeholders, not parents
   return `https://wa.me/91${digits}?text=${encodeURIComponent(text)}`;
 }

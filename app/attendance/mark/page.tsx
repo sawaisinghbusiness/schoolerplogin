@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { AlertTriangle, ArrowRight, Check, ChevronLeft, ChevronRight, Loader2, MessageCircle, RefreshCw } from "lucide-react";
 import { attendanceService, AttendanceDay, AttStatus, SectionDay, SectionRoster, absenceWhatsApp } from "@/lib/services/attendanceService";
@@ -225,7 +226,8 @@ function MarkDrawer({ date, section, onClose, onSaved, onNext }: { date: string;
   const [remarks, setRemarks] = useState<Record<string, string>>({});
   const [rolls, setRolls] = useState("");
   const [saving, setSaving] = useState(false);
-  const [done, setDone] = useState<{ absent: SectionRoster["students"] } | null>(null);
+  // auto: null when the school sends absent alerts by hand, else how many were just queued
+  const [done, setDone] = useState<{ absent: SectionRoster["students"]; auto: number | null } | null>(null);
 
   useEffect(() => {
     if (!section) return;
@@ -275,7 +277,7 @@ function MarkDrawer({ date, section, onClose, onSaved, onNext }: { date: string;
     setSaving(false);
     if (!res.success) return setError(res.error || "Could not save.");
     onSaved();
-    setDone({ absent: roster.students.filter((s) => marks[s.id] === "Absent") });
+    setDone({ absent: roster.students.filter((s) => marks[s.id] === "Absent"), auto: res.data.whatsappQueued ?? null });
     toast(`${section.classSec}: ${res.data.present + res.data.half} present, ${res.data.absent} absent.`, "success");
   };
 
@@ -331,8 +333,22 @@ function MarkDrawer({ date, section, onClose, onSaved, onNext }: { date: string;
           {done.absent.length > 0 && (
             <section className="card overflow-hidden">
               <div className="border-b border-slate-100 px-4 py-3">
-                <h3 className="text-sm font-semibold text-slate-900">Tell parents of absent students</h3>
-                <p className="text-xs text-slate-500">Opens WhatsApp with a Hindi message; press send there.</p>
+                {done.auto === null ? (
+                  <>
+                    <h3 className="text-sm font-semibold text-slate-900">Tell parents of absent students</h3>
+                    <p className="text-xs text-slate-500">Opens WhatsApp with a Hindi message; press send there.</p>
+                  </>
+                ) : (
+                  <>
+                    <h3 className="text-sm font-semibold text-slate-900">Parents are being told on WhatsApp</h3>
+                    <p className="text-xs text-slate-500">
+                      {done.auto > 0 ? `${done.auto} new message${done.auto === 1 ? "" : "s"} queued` : "Already queued earlier"} from the school&apos;s number.{" "}
+                      <Link href="/settings/messaging" className="font-semibold text-brand-700 hover:underline">
+                        See the outbox
+                      </Link>
+                    </p>
+                  </>
+                )}
               </div>
               <ul className="divide-y divide-slate-100">
                 {done.absent.map((s) => {
@@ -345,7 +361,7 @@ function MarkDrawer({ date, section, onClose, onSaved, onNext }: { date: string;
                           Roll {s.rollNo} · {s.fatherName} · {s.mobile}
                         </span>
                       </span>
-                      {link ? (
+                      {done.auto !== null ? null : link ? (
                         <a href={link} target="_blank" rel="noreferrer" className="btn btn-sm bg-emerald-600 text-white hover:bg-emerald-700">
                           <MessageCircle className="h-3.5 w-3.5" />
                           WhatsApp

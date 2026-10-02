@@ -117,7 +117,6 @@ export default function EnquiriesPage() {
       <header className="page-header">
         <div>
           <h1 className="page-title">Enquiries</h1>
-          <p className="page-subtitle">Parents who asked about admission, and when to call them back</p>
         </div>
         <button type="button" onClick={() => setFormOpen(true)} className="btn btn-primary">
           <Plus className="h-4 w-4" />
@@ -138,10 +137,10 @@ export default function EnquiriesPage() {
       ) : (
         <>
           <div className="kpi-grid" role="tablist" aria-label="Views">
-            <Tile on={view === "due"} onClick={() => setView("due")} label="Call back today" value={stats.due} dot="bg-rose-500" note={stats.due ? "Due today or overdue" : "Nobody waiting"} />
-            <Tile on={view === "open"} onClick={() => setView("open")} label="Open enquiries" value={stats.open} dot="bg-brand-500" note="New and visited" />
-            <Tile on={view === "admitted"} onClick={() => setView("admitted")} label="Admitted" value={stats.admitted} dot="bg-emerald-500" note={`${stats.conversion}% of closed enquiries`} />
-            <Tile on={view === "dropped"} onClick={() => setView("dropped")} label="Not interested" value={stats.dropped} dot="bg-slate-400" note="Closed without admission" />
+            <Tile on={view === "due"} onClick={() => setView("due")} label="Call back today" value={stats.due} dot="bg-rose-500" />
+            <Tile on={view === "open"} onClick={() => setView("open")} label="Open enquiries" value={stats.open} dot="bg-brand-500" />
+            <Tile on={view === "admitted"} onClick={() => setView("admitted")} label="Admitted" value={stats.admitted} dot="bg-emerald-500" />
+            <Tile on={view === "dropped"} onClick={() => setView("dropped")} label="Not interested" value={stats.dropped} dot="bg-slate-400" />
           </div>
 
           <section className="card overflow-hidden" aria-label="Enquiries">
@@ -181,9 +180,6 @@ export default function EnquiriesPage() {
                       <button type="button" onClick={() => setActive(e)} className="m-row active:bg-slate-50">
                         <span className="m-row-main">
                           <span className="m-row-title">{e.student_name}</span>
-                          <span className="m-row-meta">
-                            for {e.class_wanted} · {e.father_name || e.mother_name || "—"} · <span className="tabular-nums">{e.mobile}</span>
-                          </span>
                         </span>
                         <span className="shrink-0 text-right">
                           <span className={`badge ${STATUS_BADGE[e.status]}`}>{STATUS_LABEL[e.status]}</span>
@@ -287,7 +283,7 @@ export default function EnquiriesPage() {
   );
 }
 
-function Tile({ on, onClick, label, value, dot, note }: { on: boolean; onClick: () => void; label: string; value: number; dot: string; note: string }) {
+function Tile({ on, onClick, label, value, dot }: { on: boolean; onClick: () => void; label: string; value: number; dot: string }) {
   return (
     <button
       type="button"
@@ -302,7 +298,6 @@ function Tile({ on, onClick, label, value, dot, note }: { on: boolean; onClick: 
         {on && <Check className="kpi-desktop ml-auto h-4 w-4 text-brand-600" strokeWidth={2.5} />}
       </span>
       <span className="kpi-value">{value}</span>
-      <span className="kpi-note">{note}</span>
     </button>
   );
 }
