@@ -2,6 +2,7 @@ import {
   Briefcase,
   Bus,
   CalendarCheck,
+  CalendarDays,
   IndianRupee,
   LayoutDashboard,
   MessageSquareText,
@@ -93,6 +94,7 @@ export const NAV_GROUPS: NavGroup[] = [
           { title: "Exam setup", href: "/exams/setup" },
         ],
       },
+      { title: "Timetable", href: "/academics/timetable", icon: CalendarDays },
     ],
   },
   {

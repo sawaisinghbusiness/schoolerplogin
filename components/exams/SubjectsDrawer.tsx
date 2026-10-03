@@ -64,7 +64,7 @@ export function SubjectsDrawer({ cls, onClose, onSaved }: { cls: ClassItem | nul
     >
       {cls && (
         <div className="space-y-4 p-5">
-          {error && <p role="alert" className="rounded-lg bg-rose-50 px-3 py-2 text-sm text-rose-700 ring-1 ring-rose-100">{error}</p>}
+          {error && <p role="alert" className="rounded-lg bg-white px-3 py-2 text-sm font-medium text-slate-800 ring-1 ring-rose-300">{error}</p>}
           {cls.sections.length > 1 && (
             <label className="card flex cursor-pointer items-center gap-3 p-4">
               <input type="checkbox" checked={same} onChange={(e) => setSame(e.target.checked)} className="h-4 w-4 accent-brand-600" />

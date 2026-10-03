@@ -269,6 +269,7 @@ export default function ExamSetupPage() {
         exam={drawer?.exam || null}
         classes={classes.filter((c) => c.sections.length)}
         nextOrder={(exams || []).length}
+        onSetSubjects={(id) => setSubjectsFor(classes.find((c) => c.id === id) || null)}
         onClose={() => setDrawer(null)}
         onSaved={(saved) => {
           setExams((prev) => (prev?.some((x) => x.id === saved.id) ? prev.map((x) => (x.id === saved.id ? saved : x)) : [...(prev || []), saved]));

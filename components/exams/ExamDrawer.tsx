@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { ChevronDown, Loader2, Plus, X } from "lucide-react";
+import { Check, ChevronDown, Loader2, Plus, X } from "lucide-react";
 import { SideDrawer } from "@/components/ui/SideDrawer";
 import { ExamPart, PART_PRESETS, maxOf, partsProblem } from "@/lib/grading";
 import { Exam, ExamInput, ExamScope, examService } from "@/lib/services/examService";
@@ -23,13 +23,15 @@ const flip = (list: string[], v: string) => (list.includes(v) ? list.filter((x) 
  * Add or change an exam: its name, dates, the parts marks are entered in, and for each class
  * which sections and subjects sit it (default: all) and the units each subject covers.
  */
-export function ExamDrawer({ isOpen, exam, classes, nextOrder, onClose, onSaved }: {
+export function ExamDrawer({ isOpen, exam, classes, nextOrder, onClose, onSaved, onSetSubjects }: {
   isOpen: boolean;
   exam: Exam | null;
   classes: ClassItem[];
   nextOrder: number;
   onClose: () => void;
   onSaved: (e: Exam) => void;
+  /** Opens the subjects form of a class, right from here, when it has none yet. */
+  onSetSubjects?: (classId: string) => void;
 }) {
   const [title, setTitle] = useState("");
   const [picked, setPicked] = useState<string[]>([]);
@@ -135,7 +137,7 @@ export function ExamDrawer({ isOpen, exam, classes, nextOrder, onClose, onSaved 
       subtitle="Session 2026-27"
       footer={
         <>
-          <span className="text-[13px] text-slate-500">Out of {maxOf(parts)} in each subject</span>
+          <span className="hidden text-[13px] text-slate-500 sm:inline">Out of {maxOf(parts)} in each subject</span>
           <button type="button" onClick={onClose} disabled={busy} className="btn btn-secondary ml-auto">Cancel</button>
           <button type="button" onClick={save} disabled={busy} className="btn btn-primary">
             {busy && <Loader2 className="h-4 w-4 animate-spin" />}
@@ -145,7 +147,7 @@ export function ExamDrawer({ isOpen, exam, classes, nextOrder, onClose, onSaved 
       }
     >
       <div className="space-y-4 p-5">
-        {error && <p role="alert" className="rounded-lg bg-rose-50 px-3 py-2 text-sm text-rose-700 ring-1 ring-rose-100">{error}</p>}
+        {error && <p role="alert" className="rounded-lg bg-white px-3 py-2 text-sm font-medium text-slate-800 ring-1 ring-rose-300">{error}</p>}
 
         <section className="card space-y-3 p-4">
           <div>
@@ -249,7 +251,14 @@ export function ExamDrawer({ isOpen, exam, classes, nextOrder, onClose, onSaved 
                                 ))}
                               </div>
                             ) : (
-                              <p className="text-xs text-marigold-800">Set this class&apos;s subjects under &ldquo;Subjects by class&rdquo; first.</p>
+                              <div className="flex flex-wrap items-center gap-3">
+                                <p className="text-[13px] text-slate-700">No subjects set for {cls} yet.</p>
+                                {onSetSubjects && (
+                                  <button type="button" onClick={() => onSetSubjects(classes.find((c) => c.name === cls)!.id)} className="btn btn-secondary btn-sm">
+                                    Set subjects
+                                  </button>
+                                )}
+                              </div>
                             )}
                           </div>
                           {csub.length > 0 && (
@@ -325,8 +334,9 @@ function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; chi
       type="button"
       aria-pressed={on}
       onClick={onClick}
-      className={`min-h-[32px] rounded-md px-2.5 py-1 text-[13px] font-semibold ring-1 transition ${on ? "bg-brand-50 text-brand-800 ring-brand-300" : "bg-white text-slate-500 ring-slate-200 hover:ring-slate-300"}`}
+      className={`inline-flex min-h-[32px] items-center gap-1.5 rounded-md bg-white px-2.5 py-1 text-[13px] font-semibold transition ${on ? "text-slate-900 ring-2 ring-brand-500" : "text-slate-500 ring-1 ring-slate-200 hover:ring-slate-300"}`}
     >
+      {on && <Check className="h-3.5 w-3.5 text-brand-600" strokeWidth={3} />}
       {children}
     </button>
   );
