@@ -6,6 +6,7 @@ import {
   IndianRupee,
   LayoutDashboard,
   MessageSquareText,
+  NotebookPen,
   Settings2,
   Trophy,
   Users,
@@ -95,6 +96,7 @@ export const NAV_GROUPS: NavGroup[] = [
         ],
       },
       { title: "Timetable", href: "/academics/timetable", icon: CalendarDays },
+      { title: "Homework", href: "/academics/homework", icon: NotebookPen },
     ],
   },
   {
