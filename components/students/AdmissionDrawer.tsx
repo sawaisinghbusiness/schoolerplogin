@@ -3,9 +3,12 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import { CheckCircle2, Circle, IndianRupee, Loader2, Phone, Plus, X } from "lucide-react";
+import { Camera, CheckCircle2, Circle, IndianRupee, Loader2, Phone, Plus, X } from "lucide-react";
 import { Student } from "@/data/mockData";
 import { studentService } from "@/lib/services/studentService";
+import { photoService } from "@/lib/services/photoService";
+import { shrinkPhoto } from "@/lib/shrinkPhoto";
+import { toast } from "@/components/ui/Toaster";
 import { planFor } from "@/lib/feeEngine";
 import { useFeeConfig } from "@/lib/services/feeSetupService";
 import { Field } from "@/components/ui/kit";
@@ -113,6 +116,10 @@ export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProf
   const [saved, setSaved] = useState<Student | null>(null);
   const [mounted, setMounted] = useState(false);
   const firstRef = useRef<HTMLInputElement>(null);
+  // The photo is picked here and saved together with the student: `data` is a new photo waiting to be
+  // saved, `removed` means the current photo should be taken off.
+  const [photo, setPhoto] = useState<{ data: string | null; removed: boolean }>({ data: null, removed: false });
+  const photoRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => setMounted(true), []);
 
@@ -149,6 +156,7 @@ export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProf
     setTried(false);
     setServerError(null);
     setSaved(null);
+    setPhoto({ data: null, removed: false });
     setTimeout(() => firstRef.current?.focus(), 50);
   };
 
@@ -192,7 +200,7 @@ export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProf
 
   const preview: Student = {
     id: "new",
-    photoUrl: "",
+    photoUrl: photo.data || (photo.removed ? "" : editing?.photoUrl || ""),
     name: form.name.trim() || "New student",
     srNo: form.srNo,
     admissionNo: form.admissionNo,
@@ -220,6 +228,33 @@ export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProf
   };
   // An edit never rewrites the fee; say so when a change would normally affect it.
   const feeAffectingChange = !!editing && (editing.class !== form.class || !!editing.transportOpted !== form.transport);
+
+  const shownPhoto = photo.data || (photo.removed ? "" : editing?.photoUrl || "");
+
+  const onPhotoFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    if (!file) return;
+    try {
+      setPhoto({ data: await shrinkPhoto(file), removed: false });
+    } catch (err: any) {
+      toast(err?.message || "Could not use this photo.", "error");
+    }
+  };
+
+  /** After the student is saved: store a new photo, or take the old one off. A photo problem never undoes the save. */
+  const withPhoto = async (st: Student): Promise<Student> => {
+    if (photo.data) {
+      const r = await photoService.set(st.id, photo.data);
+      if (r.url) return { ...st, photoUrl: r.url };
+      toast(st.name + " is saved, but the photo was not: " + (r.error || "try again from Students > Photos."), "error");
+    } else if (editing && photo.removed && editing.photoUrl) {
+      const r = await photoService.remove(st.id);
+      if (!r.error) return { ...st, photoUrl: "" };
+      toast(st.name + " is saved, but the photo could not be removed.", "error");
+    }
+    return st;
+  };
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -256,12 +291,13 @@ export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProf
         transportOpted: form.transport,
         busRoute: form.transport ? form.busRoute : undefined,
       });
+      const done = res.success && res.data ? await withPhoto(res.data) : null;
       setSaving(false);
-      if (!res.success || !res.data) {
+      if (!done) {
         setServerError(res.error || "Could not save the changes.");
         return;
       }
-      onUpdated?.(res.data);
+      onUpdated?.(done);
       return;
     }
 
@@ -288,13 +324,14 @@ export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProf
       busRoute: form.transport ? form.busRoute : undefined,
       status: "Active",
     });
+    const done = res.success && res.data ? await withPhoto(res.data) : null;
     setSaving(false);
-    if (!res.success || !res.data) {
+    if (!done) {
       setServerError(res.error || "Could not save the admission.");
       return;
     }
-    setSaved(res.data);
-    onSaved(res.data);
+    setSaved(done);
+    onSaved(done);
   };
 
   if (!mounted || !isOpen) return null;
@@ -365,6 +402,27 @@ export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProf
                   )}
 
                   <Section title="Student" note="As on the birth certificate">
+                    <div className="flex items-center gap-4 sm:col-span-2">
+                      <button
+                        type="button"
+                        onClick={() => photoRef.current?.click()}
+                        aria-label={shownPhoto ? "Change photo" : "Add photo"}
+                        className="flex h-24 w-[72px] shrink-0 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-slate-50 text-slate-400 hover:border-slate-300"
+                      >
+                        {shownPhoto ? <img src={shownPhoto} alt="" className="h-full w-full object-cover" /> : <Camera className="h-6 w-6" />}
+                      </button>
+                      <div className="flex flex-col items-start gap-1.5">
+                        <button type="button" onClick={() => photoRef.current?.click()} className="btn btn-secondary btn-sm">
+                          {shownPhoto ? "Change photo" : "Add photo"}
+                        </button>
+                        {shownPhoto && (
+                          <button type="button" onClick={() => setPhoto({ data: null, removed: !!editing?.photoUrl })} className="text-[13px] font-semibold text-slate-600 hover:text-rose-600">
+                            Remove
+                          </button>
+                        )}
+                      </div>
+                      <input ref={photoRef} type="file" accept="image/*" onChange={onPhotoFile} className="hidden" />
+                    </div>
                     <Field id="adm-name" label="Full name" required error={errors.name} className="sm:col-span-2">
                       <input ref={firstRef} id="adm-name" value={form.name} onChange={(e) => set("name", e.target.value)} placeholder="e.g. Aryan Singh Rathore" className={`field w-full ${err("name")}`} />
                     </Field>
