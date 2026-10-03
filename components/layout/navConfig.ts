@@ -55,6 +55,7 @@ export const NAV_GROUPS: NavGroup[] = [
           { title: "Enquiries", href: "/students/enquiries" },
           { title: "Promote & transfer", href: "/students/promote" },
           { title: "Certificates", href: "/students/certificates" },
+          { title: "Photos", href: "/students/documents" },
           { title: "ID cards", href: "/students/print" },
         ],
       },
