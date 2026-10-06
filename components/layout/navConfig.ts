@@ -67,6 +67,7 @@ export const NAV_GROUPS: NavGroup[] = [
         children: [
           { title: "Collect fee", href: "/fees/collect" },
           { title: "Dues & reminders", href: "/fees/dues" },
+          { title: "Online payments", href: "/fees/online" },
           { title: "Receipts", href: "/fees/receipts" },
           { title: "Reports", href: "/fees/reports" },
           { title: "Fee setup", href: "/fees/setup" },
@@ -78,6 +79,7 @@ export const NAV_GROUPS: NavGroup[] = [
         children: [
           { title: "Mark attendance", href: "/attendance/mark" },
           { title: "Register & reports", href: "/attendance/register" },
+          { title: "Leave requests", href: "/attendance/leave" },
         ],
       },
       { title: "Messages", href: "/messages", icon: MessageSquareText },
