@@ -6,7 +6,7 @@ import { AlertTriangle, FileText, Printer, RefreshCw } from "lucide-react";
 import { examService, Exam, Report, ReportCard, SectionProgress } from "@/lib/services/examService";
 import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
 import { SheetPreview } from "@/components/certificates/SheetPreview";
-import { ReportCardDocument, ReportSchool } from "@/components/exams/report/ReportCardDocument";
+import { ReportCardBack, ReportCardDocument, ReportSchool } from "@/components/exams/report/ReportCardDocument";
 import { PrintReportCards } from "@/components/exams/report/PrintReportCards";
 
 const SETUP_FILE = "sms backend/supabase/migrations/20261001_exams.sql";
@@ -64,6 +64,7 @@ export default function ReportCardsPage() {
     schoolCode: schoolProfile.school_code,
     place: [schoolProfile.address, schoolProfile.city || "Barmer", schoolProfile.state || "Rajasthan"].filter(Boolean).join(", "),
     pincode: schoolProfile.pincode,
+    city: schoolProfile.city || "Barmer",
     phone: [schoolProfile.contact1, schoolProfile.contact2].filter(Boolean).join(", "),
     email: schoolProfile.email,
     logoUrl: schoolProfile.logo_url || undefined,
@@ -321,9 +322,14 @@ export default function ReportCardsPage() {
               </div>
             )}
             {card && exam && report && (
-              <SheetPreview>
-                <ReportCardDocument exam={report.exam} classSec={report.classSec} card={card} school={school} />
-              </SheetPreview>
+              <div className="space-y-4">
+                <SheetPreview>
+                  <ReportCardDocument exam={report.exam} classSec={report.classSec} card={card} school={school} />
+                </SheetPreview>
+                <SheetPreview>
+                  <ReportCardBack card={card} school={school} />
+                </SheetPreview>
+              </div>
             )}
           </section>
         </div>
@@ -332,7 +338,10 @@ export default function ReportCardsPage() {
       {printing && report && (
         <PrintReportCards onDone={() => setPrinting(null)}>
           {printing.map((c) => (
-            <ReportCardDocument key={c.studentId} exam={report.exam} classSec={report.classSec} card={c} school={school} />
+            <React.Fragment key={c.studentId}>
+              <ReportCardDocument exam={report.exam} classSec={report.classSec} card={c} school={school} />
+              <ReportCardBack card={c} school={school} />
+            </React.Fragment>
           ))}
         </PrintReportCards>
       )}

@@ -5,6 +5,8 @@ import { GRADES, PASS_PERCENT } from "@/lib/grading";
 
 export interface ReportSchool extends SchoolInfo {
   principal?: string;
+  /** Town for "Place:" under the signatures (else the first part of `place`). */
+  city?: string;
 }
 
 /** Same printing ink as the certificates, so the school's papers look like one set. */
@@ -30,15 +32,17 @@ const SCALE = GRADES.map((g, i) => ({
 }));
 
 /**
- * One student's report card on an A4 sheet (794 × 1123 px), drawn like the
- * printed CBSE report cards schools hand out: letterhead, title band, the
- * pupil's particulars on dotted lines, a ruled marks table, the result, the
- * grading key and three signatures. Prints only what the report data holds.
+ * One student's report card on two A4 sheets (794 × 1123 px each), drawn like the
+ * printed CBSE report cards schools hand out. Front: letterhead, title band, the
+ * pupil's particulars on dotted lines, a ruled marks table, the result and three
+ * signatures. Back (ReportCardBack): grading key, attendance, remarks, a note to
+ * parents and the signatures. Prints only what the report data holds. The parent
+ * app draws the same two sheets (components/report/ReportSheets.tsx there).
  */
 export function ReportCardDocument({ exam, classSec, card, school }: { exam: Exam; classSec: string; card: ReportCard; school: ReportSchool }) {
   const parts = exam.components || [];
   const split = parts.length > 1;
-  const many = card.subjects.length > 9;
+  const many = card.subjects.length > 11;
   const cell = many ? "px-2 py-[3px]" : "px-2 py-[6px]";
   const missing = card.subjects.filter((s) => !s.entered).map((s) => s.subject);
   const session = exam.session || "2026-27";
@@ -174,50 +178,89 @@ export function ReportCardDocument({ exam, classSec, card, school }: { exam: Exa
           {!card.complete && missing.length > 0 && <span className="text-[12.5px]">(marks not entered: {missing.join(", ")})</span>}
         </div>
 
-        {/* Grading key */}
-        <div className="mt-4 text-[11.5px]">
-          <div className="mb-1 font-bold uppercase tracking-[0.1em]" style={{ color: INK }}>
-            Grading Scale (8-point, in % of marks)
-          </div>
-          <table className="w-full border-collapse text-center">
-            <tbody>
-              <tr style={{ backgroundColor: TINT, color: INK }} className="font-bold">
-                <Td className="w-[70px] px-1.5 py-[3px] text-left">Grade</Td>
-                {SCALE.map((g) => (
-                  <Td key={g.grade} className="px-1 py-[3px]">
-                    {g.grade}
-                  </Td>
-                ))}
-              </tr>
-              <tr>
-                <Td className="px-1.5 py-[3px] text-left font-bold">Marks %</Td>
-                {SCALE.map((g) => (
-                  <Td key={g.grade} className="px-1 py-[3px] tabular-nums">
-                    {g.range}
-                  </Td>
-                ))}
-              </tr>
-            </tbody>
-          </table>
-          <p className="mt-1">AB = Absent. A pupil needs at least {PASS_PERCENT}% marks in each subject. Attendance is days present out of school days marked this session.</p>
-        </div>
+        {/* Signatures */}
+        <footer className="mt-auto grid grid-cols-3 items-end gap-10 text-center text-[12.5px]">
+          <Sign label="Class Teacher" />
+          <Sign label="Exam In-charge" />
+          <Sign label="Principal" sub={school.principal || "(Signature with seal)"} />
+        </footer>
+      </div>
+    </div>
+  );
+}
+
+/** The back of the card: grading key, attendance, remarks left blank for the teacher, a note to parents. */
+export function ReportCardBack({ card, school }: { card: ReportCard; school: ReportSchool }) {
+  const att = card.attendance && card.attendance.days > 0 ? card.attendance : null;
+  return (
+    <div className="report-sheet relative mx-auto h-[1123px] w-[794px] overflow-hidden bg-white text-black" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
+      <div aria-hidden className="absolute inset-[18px] border-[3px]" style={{ borderColor: INK }} />
+      <div aria-hidden className="absolute inset-[24px] border" style={{ borderColor: INK }} />
+
+      <div className="relative flex h-full flex-col px-[50px] pb-[44px] pt-[50px]">
+        <BackHead>Grading Scale (8-point, in % of marks)</BackHead>
+        <table className="w-full border-collapse text-center text-[12.5px]">
+          <tbody>
+            <tr style={{ backgroundColor: TINT, color: INK }} className="font-bold">
+              <Td className="w-[80px] px-1.5 py-[4px] text-left">Grade</Td>
+              {SCALE.map((g) => (
+                <Td key={g.grade} className="px-1 py-[4px]">
+                  {g.grade}
+                </Td>
+              ))}
+            </tr>
+            <tr>
+              <Td className="px-1.5 py-[4px] text-left font-bold">Marks %</Td>
+              {SCALE.map((g) => (
+                <Td key={g.grade} className="px-1 py-[4px] tabular-nums">
+                  {g.range}
+                </Td>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+        <p className="mt-1.5 text-[12px]">AB = Absent. A pupil needs at least {PASS_PERCENT}% marks in each subject. Attendance is days present out of school days marked this session.</p>
+
+        <BackHead>Attendance</BackHead>
+        <table className="w-full border-collapse text-center text-[13.5px]">
+          <thead>
+            <tr style={{ backgroundColor: TINT, color: INK }} className="text-[12.5px] font-bold">
+              <Th>Working Days</Th>
+              <Th>Days Present</Th>
+              <Th>Percentage</Th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="font-bold tabular-nums">
+              <Td className="py-[7px]">{att ? att.days : "—"}</Td>
+              <Td className="py-[7px]">{att ? num(att.present) : "—"}</Td>
+              <Td className="py-[7px]">{att ? `${((att.present / att.days) * 100).toFixed(1)}%` : "—"}</Td>
+            </tr>
+          </tbody>
+        </table>
 
         {/* Left blank for the class teacher to write by hand */}
-        {!many && (
-          <div className="mt-5 space-y-[18px] text-[13px]">
-            <div className="flex items-end gap-2">
-              <span className="shrink-0 font-bold">Class Teacher&apos;s Remarks:</span>
-              <span className="flex-1 border-b-[1.5px] border-dotted border-black/70">&nbsp;</span>
-            </div>
-            <div className="border-b-[1.5px] border-dotted border-black/70">&nbsp;</div>
-          </div>
-        )}
+        <BackHead>Class Teacher&apos;s Remarks</BackHead>
+        <div className="space-y-[22px] text-[13.5px]">
+          <div className="border-b-[1.5px] border-dotted border-black/70">&nbsp;</div>
+          <div className="border-b-[1.5px] border-dotted border-black/70">&nbsp;</div>
+          <div className="border-b-[1.5px] border-dotted border-black/70">&nbsp;</div>
+        </div>
 
-        {/* Signatures */}
+        <BackHead>Instructions to Parents</BackHead>
+        <ol className="list-decimal space-y-1 pl-5 text-[13.5px] leading-snug">
+          <li>Please go through the report card and discuss it with your ward.</li>
+          <li>The parent-teacher meeting will be held on the date given by the school.</li>
+          <li>Please tell the school office about any change of address or mobile number.</li>
+        </ol>
+
+        <BackHead>Parent&apos;s Signature</BackHead>
+        <div className="w-1/2 border-b-[1.5px] border-dotted border-black/70 text-[13.5px]">&nbsp;</div>
+
         <footer className="mt-auto">
           <div className="mb-1 flex gap-10 text-[13px]">
             <span>
-              Place: <b>{up(school.place.split(",").filter((x) => x.trim())[0] || "")}</b>
+              Place: <b>{up(school.city || school.place.split(",").filter((x) => x.trim())[0] || "")}</b>
             </span>
             <span>
               Date: <b>{today()}</b>
@@ -230,6 +273,14 @@ export function ReportCardDocument({ exam, classSec, card, school }: { exam: Exa
           </div>
         </footer>
       </div>
+    </div>
+  );
+}
+
+function BackHead({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mb-1.5 mt-7 text-[12.5px] font-bold uppercase tracking-[0.12em] first:mt-0" style={{ color: INK }}>
+      {children}
     </div>
   );
 }
