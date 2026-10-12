@@ -1,4 +1,5 @@
 import {
+  CalendarClock,
   Briefcase,
   Bus,
   CalendarCheck,
@@ -83,6 +84,7 @@ export const NAV_GROUPS: NavGroup[] = [
         ],
       },
       { title: "Messages", href: "/messages", icon: MessageSquareText },
+      { title: "Meetings & PTM", href: "/meetings", icon: CalendarClock },
     ],
   },
   {
