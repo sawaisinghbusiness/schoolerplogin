@@ -22,6 +22,22 @@ import {
   Wallet,
 } from "lucide-react";
 import { authService } from "@/lib/services/authService";
+import { usePublicSite } from "@/components/site/usePublicSite";
+
+/** The school's own logo from Settings; its short name on a tile until one is uploaded. */
+function SchoolLogo({ url, short, size, dark }: { url: string; short: string; size: number; dark?: boolean }) {
+  return url ? (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src={url} alt="" className="shrink-0 rounded-xl bg-white object-contain p-1" style={{ width: size, height: size }} />
+  ) : (
+    <div
+      className={`flex shrink-0 items-center justify-center rounded-xl font-extrabold ${dark ? "bg-marigold-400 text-night-950" : "bg-night-900 text-marigold-400"}`}
+      style={{ width: size, height: size, fontSize: size * 0.32 }}
+    >
+      {short.slice(0, 3)}
+    </div>
+  );
+}
 
 type UserRole = "admin" | "teacher" | "accountant" | "parent";
 
@@ -40,6 +56,9 @@ const FEATURES = [
 
 export default function LoginPage() {
   const router = useRouter();
+  const { site } = usePublicSite();
+  const school = site.school;
+  const place = [school.city, school.state].filter(Boolean).join(", ");
   const [role, setRole] = useState<UserRole>("admin");
   const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
@@ -101,10 +120,10 @@ export default function LoginPage() {
       {/* ── Brand panel ───────────────────────────────────────────── */}
       <aside className="hidden w-[44%] flex-col justify-between bg-night-900 p-12 text-white lg:flex xl:p-14">
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-marigold-400 text-[15px] font-extrabold text-night-950">SP</div>
+          <SchoolLogo url={school.logo_url} short={school.short} size={48} dark />
           <div className="leading-tight">
-            <div className="text-[15px] font-bold">St. Paul School</div>
-            <div className="text-[13px] text-night-400">Barmer, Rajasthan</div>
+            <div className="text-[15px] font-bold">{school.name}</div>
+            <div className="text-[13px] text-night-400">{place}</div>
           </div>
         </div>
 
@@ -137,10 +156,10 @@ export default function LoginPage() {
         <div className="relative w-full max-w-[26rem]">
           {/* Compact brand for small screens */}
           <div className="mb-10 flex items-center gap-3 lg:hidden">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-night-900 text-sm font-extrabold text-marigold-400">SP</div>
+            <SchoolLogo url={school.logo_url} short={school.short} size={44} />
             <div className="leading-tight">
-              <div className="text-sm font-bold text-slate-900">St. Paul School</div>
-              <div className="text-xs text-slate-500">SchoolDesk ERP · Barmer</div>
+              <div className="text-sm font-bold text-slate-900">{school.name}</div>
+              <div className="text-xs text-slate-500">SchoolDesk ERP{school.city ? ` · ${school.city}` : ""}</div>
             </div>
           </div>
 
