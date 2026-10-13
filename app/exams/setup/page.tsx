@@ -2,7 +2,7 @@
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { AlertTriangle, ClipboardCheck, Lock, LockOpen, Pencil, Plus, RefreshCw, Trash2 } from "lucide-react";
+import { AlertTriangle, ClipboardCheck, Lock, LockOpen, Pencil, Plus, RefreshCw, Send, Trash2 } from "lucide-react";
 import { toast } from "@/components/ui/Toaster";
 import { Exam, examService } from "@/lib/services/examService";
 import { ClassItem, classService } from "@/lib/services/classService";
@@ -78,7 +78,7 @@ export default function ExamSetupPage() {
     const r = await examService.setLocked(e.id, !e.locked);
     if (r.error) return toast(r.error, "error");
     setExams((prev) => (prev || []).map((x) => (x.id === e.id ? { ...x, locked: !e.locked } : x)));
-    toast(e.locked ? `${e.title} is open for marks again.` : `${e.title} is locked. Marks can no longer be changed.`, "success");
+    toast(e.locked ? `${e.title} is open for marks again and hidden from the parent app.` : `${e.title} is locked and its report cards are now in the parent app.`, "success");
   };
 
   const remove = async () => {
@@ -120,7 +120,10 @@ export default function ExamSetupPage() {
       ) : (
         <section className="card overflow-hidden" aria-label="Exams">
           <div className="flex items-center justify-between border-b border-slate-200/80 px-5 py-3.5">
+            <div>
             <h2 className="text-[15px] font-bold text-slate-900">Exams · 2026-27</h2>
+            <p className="text-[12.5px] text-slate-500">Parents see an exam&apos;s report card in their app only after it is locked.</p>
+          </div>
             {exams && exams.length > 0 && (
               <Link href="/exams/marks" className="text-[13px] font-semibold text-brand-700 hover:underline">Enter marks →</Link>
             )}
@@ -155,11 +158,11 @@ export default function ExamSetupPage() {
                     </span>
                     <span className="shrink-0 text-right">
                       <span className="block text-[13px] font-semibold tabular-nums text-slate-700">{pattern(e)}</span>
-                      <span className={`mt-0.5 block text-xs ${e.locked ? "text-slate-500" : "text-emerald-700"}`}>{e.locked ? "Locked" : "Open for marks"}</span>
+                      <span className={`mt-0.5 block text-xs ${e.locked ? "text-emerald-700" : "text-slate-500"}`}>{e.locked ? "Locked · in parent app" : "Open · not in parent app"}</span>
                     </span>
                   </button>
                   {canEdit && (
-                    <button type="button" onClick={() => lock(e)} aria-label={e.locked ? `Unlock ${e.title}` : `Lock ${e.title}`} className="flex h-11 w-11 shrink-0 items-center justify-center text-slate-400 active:bg-slate-100">
+                    <button type="button" onClick={() => lock(e)} aria-label={e.locked ? `Unlock ${e.title} and hide it from parents` : `Lock ${e.title} and send it to parents`} className="flex h-11 w-11 shrink-0 items-center justify-center text-slate-400 active:bg-slate-100">
                       {e.locked ? <LockOpen className="h-4 w-4" /> : <Lock className="h-4 w-4" />}
                     </button>
                   )}
@@ -194,14 +197,31 @@ export default function ExamSetupPage() {
                       </td>
                       <td className="whitespace-nowrap px-3 py-3 tabular-nums text-slate-700">{pattern(e)}</td>
                       <td className="px-3 py-3">
-                        {e.locked ? <span className="badge badge-slate"><Lock className="h-3 w-3" />Locked</span> : <span className="badge badge-emerald">Open for marks</span>}
+                        {e.locked ? (
+                          <>
+                            <span className="badge badge-emerald"><Lock className="h-3 w-3" />Locked</span>
+                            <span className="mt-0.5 block text-xs text-emerald-700">In parent app</span>
+                          </>
+                        ) : (
+                          <>
+                            <span className="badge badge-slate">Open for marks</span>
+                            <span className="mt-0.5 block text-xs text-slate-500">Not in parent app yet</span>
+                          </>
+                        )}
                       </td>
                       <td className="whitespace-nowrap px-5 py-3 text-right">
                         {canEdit && (
                           <>
-                            <button type="button" onClick={() => lock(e)} title={e.locked ? "Unlock" : "Lock marks"} aria-label={e.locked ? `Unlock ${e.title}` : `Lock ${e.title}`} className="rounded-lg p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-800">
-                              {e.locked ? <LockOpen className="h-4 w-4" /> : <Lock className="h-4 w-4" />}
-                            </button>
+                            {e.locked ? (
+                              <button type="button" onClick={() => lock(e)} title="Unlock (hides it from parents)" aria-label={`Unlock ${e.title} and hide it from parents`} className="rounded-lg p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-800">
+                                <LockOpen className="h-4 w-4" />
+                              </button>
+                            ) : (
+                              <button type="button" onClick={() => lock(e)} title="Marks can't be changed after this" className="btn btn-secondary btn-sm mr-1">
+                                <Send className="h-3.5 w-3.5" />
+                                Lock &amp; send to parents
+                              </button>
+                            )}
                             {!e.locked && (
                               <button type="button" onClick={() => setDrawer({ exam: e })} title="Edit" aria-label={`Edit ${e.title}`} className="rounded-lg p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-800">
                                 <Pencil className="h-4 w-4" />
