@@ -5,7 +5,7 @@ import { AlertTriangle, Loader2, Trash2 } from "lucide-react";
 import { SideDrawer } from "@/components/ui/SideDrawer";
 import { toast } from "@/components/ui/Toaster";
 import { classService, ClassItem, SectionItem, SUBJECTS_SETUP_MESSAGE } from "@/lib/services/classService";
-import { ChipInput, ConfirmModal, SubjectSuggestions, WithTip, cleanSection, cleanSubject, plural } from "./shared";
+import { ChipInput, ConfirmModal, StreamPicker, SubjectSuggestions, WithTip, cleanSection, cleanSubject, plural, takesStream } from "./shared";
 
 const same = (a: string[], b: string[]) => a.length === b.length && a.every((x, i) => x === b[i]);
 
@@ -14,6 +14,7 @@ export function SectionDrawer({
   cls,
   section,
   students,
+  streams,
   setupNotice,
   onSetupNotice,
   onClose,
@@ -22,6 +23,8 @@ export function SectionDrawer({
   cls: ClassItem | null;
   section: SectionItem | null;
   students: number;
+  /** Streams to offer (11th–12th). */
+  streams: string[];
   setupNotice: string | null;
   onSetupNotice: (msg: string) => void;
   onClose: () => void;
@@ -81,6 +84,17 @@ export function SectionDrawer({
     toast(allSections ? `Subjects saved for all ${targets.length} sections of ${cls.name}.` : `Subjects saved for ${label}.`, "success");
   };
 
+  /** Saved as soon as it is picked. */
+  const saveStream = async (v: string) => {
+    if (v === (section.stream || "")) return;
+    setBusy(true);
+    const res = await classService.updateSectionStream(section.id, v);
+    if (res.success) await onChanged();
+    setBusy(false);
+    if (!res.success) return toast(res.error || "Could not save the stream.", "error");
+    toast(v ? `${label} is now ${v}.` : `Stream removed from ${label}.`, "success");
+  };
+
   const remove = async () => {
     setBusy(true);
     const res = await classService.deleteSection(section.id);
@@ -135,6 +149,16 @@ export function SectionDrawer({
               {clash ? `${cls.name} already has section ${newName}.` : students ? `Its ${plural(students, "student")} move to the new name.` : "No students in this section yet."}
             </p>
           </section>
+
+          {takesStream(cls) && (
+            <section className="card p-4">
+              <label htmlFor="section-stream" className="field-label">
+                Stream
+              </label>
+              <StreamPicker id="section-stream" value={section.stream || ""} onChange={saveStream} streams={streams} />
+              <p className="mt-1.5 text-xs text-slate-500">Saved as soon as you pick it.</p>
+            </section>
+          )}
 
           <section className="card p-4">
             <div className="mb-2 flex items-baseline justify-between gap-2">

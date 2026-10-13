@@ -9,6 +9,8 @@ export interface SectionItem {
   id: string;
   name: string;
   subjects: string[];
+  /** 11th–12th: Science, Commerce, Arts… */
+  stream?: string | null;
 }
 
 export interface ClassItem {
@@ -70,9 +72,14 @@ export const classService = {
     return done(await api.del(`/api/classes/${enc(classId)}`), "Could not delete the class.");
   },
 
-  async addSections(classId: string, names: string[], subjects: string[]): Promise<Result<SectionItem[]>> {
-    const res = await api.post<{ data: SectionItem[] }>(`/api/classes/${enc(classId)}/sections`, { names, subjects });
+  async addSections(classId: string, names: string[], subjects: string[], stream?: string | null): Promise<Result<SectionItem[]>> {
+    const res = await api.post<{ data: SectionItem[] }>(`/api/classes/${enc(classId)}/sections`, { names, subjects, ...(stream ? { stream } : {}) });
     return done(res, "Could not add the section.", (b) => b?.data || []);
+  },
+
+  /** Sets a section's stream (11th–12th); "" clears it. */
+  async updateSectionStream(sectionId: string, stream: string): Promise<Result> {
+    return done(await api.patch(`/api/classes/sections/${enc(sectionId)}`, { stream }), "Could not save the stream.");
   },
 
   /** Renames the section; its students move with it. */

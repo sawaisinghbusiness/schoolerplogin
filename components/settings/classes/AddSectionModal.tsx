@@ -5,7 +5,7 @@ import { Loader2 } from "lucide-react";
 import { Modal } from "@/components/ui/modal";
 import { toast } from "@/components/ui/Toaster";
 import { classService, ClassItem } from "@/lib/services/classService";
-import { ChipInput, SubjectSuggestions, cleanSection, cleanSubject, plural } from "./shared";
+import { ChipInput, StreamPicker, SubjectSuggestions, cleanSection, cleanSubject, plural, takesStream } from "./shared";
 
 const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
@@ -13,16 +13,20 @@ const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
 export function AddSectionModal({
   cls,
   prefill,
+  streams,
   onClose,
   onAdded,
 }: {
   cls: ClassItem | null;
   prefill: string[] | null;
+  /** Streams to offer (11th–12th). */
+  streams: string[];
   onClose: () => void;
   onAdded: () => void;
 }) {
   const [names, setNames] = useState<string[]>([]);
   const [subjects, setSubjects] = useState<string[]>([]);
+  const [stream, setStream] = useState("");
   const [saving, setSaving] = useState(false);
 
   const have = new Set((cls?.sections || []).map((s) => s.name.toLowerCase()));
@@ -33,6 +37,7 @@ export function AddSectionModal({
     if (!cls) return;
     setNames(prefill?.length ? prefill : nextLetters.slice(0, 1));
     setSubjects(from ? from.subjects.slice() : []);
+    setStream(cls.sections.find((s) => s.stream)?.stream || (takesStream(cls) ? "Science" : ""));
   }, [cls?.id, prefill]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const dupes = names.filter((n) => have.has(n.toLowerCase()));
@@ -42,7 +47,7 @@ export function AddSectionModal({
     if (!names.length) return toast("Enter at least one section name.", "error");
     if (dupes.length) return toast(`${cls.name} already has section ${dupes.join(", ")}.`, "error");
     setSaving(true);
-    const res = await classService.addSections(cls.id, names, subjects);
+    const res = await classService.addSections(cls.id, names, subjects, stream || null);
     setSaving(false);
     if (!res.success) return toast(res.error || "Could not add the section.", "error");
     toast(`${plural(names.length, "section")} added to ${cls.name}.`, "success");
@@ -77,6 +82,15 @@ export function AddSectionModal({
           <ChipInput values={names} onChange={setNames} clean={cleanSection} max={20} maxLength={30} placeholder="Or type a name, e.g. Science-Bio" label="Section name" chipClass="bg-brand-50 text-brand-800" />
           {dupes.length > 0 && <p className="mt-1.5 text-[13px] text-rose-700">Already in {cls?.name}: {dupes.join(", ")}</p>}
         </div>
+
+        {cls && takesStream(cls) && (
+          <div>
+            <label htmlFor="new-section-stream" className="field-label">
+              Stream
+            </label>
+            <StreamPicker id="new-section-stream" value={stream} onChange={setStream} streams={streams} />
+          </div>
+        )}
 
         <div>
           <span className="field-label">

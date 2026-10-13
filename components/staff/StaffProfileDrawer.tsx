@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { KeyRound, Loader2, Pencil, Phone, UserX } from "lucide-react";
+import { Camera, KeyRound, Loader2, Pencil, Phone, UserX } from "lucide-react";
+import { photoService } from "@/lib/services/photoService";
+import { shrinkPhoto } from "@/lib/shrinkPhoto";
 import { SideDrawer } from "@/components/ui/SideDrawer";
 import { Avatar } from "@/components/ui/Avatar";
 import { toast } from "@/components/ui/Toaster";
@@ -25,6 +27,62 @@ function Row({ label, children }: { label: string; children: React.ReactNode }) 
     <div className="grid grid-cols-[9rem_1fr] gap-3 py-2 text-sm">
       <dt className="text-slate-500">{label}</dt>
       <dd className="text-slate-900">{children}</dd>
+    </div>
+  );
+}
+
+/** The photo, with Change / Remove under it for the admin. The browser shrinks it before upload. */
+function StaffPhoto({ staff, canEdit, onChanged }: { staff: StaffMember; canEdit: boolean; onChanged: (s: StaffMember) => void }) {
+  const input = useRef<HTMLInputElement>(null);
+  const [busy, setBusy] = useState(false);
+
+  const pick = async (file: File | undefined) => {
+    if (!file) return;
+    setBusy(true);
+    try {
+      const r = await photoService.setStaff(staff.id, await shrinkPhoto(file));
+      if (r.error) return toast(r.error, "error");
+      onChanged({ ...staff, photoUrl: r.url });
+      toast("Photo saved.", "success");
+    } catch (e: any) {
+      toast(e?.message || "That file could not be read as a photo.", "error");
+    } finally {
+      setBusy(false);
+      if (input.current) input.current.value = "";
+    }
+  };
+  const remove = async () => {
+    setBusy(true);
+    const r = await photoService.removeStaff(staff.id);
+    setBusy(false);
+    if (r.error) return toast(r.error, "error");
+    onChanged({ ...staff, photoUrl: null });
+  };
+
+  return (
+    <div className="flex shrink-0 flex-col items-center gap-1">
+      <div className="relative">
+        <Avatar name={staff.name} id={staff.id} photoUrl={staff.photoUrl} size="lg" className="!h-[72px] !w-[72px]" />
+        {busy && (
+          <span className="absolute inset-0 grid place-items-center rounded-2xl bg-white/70">
+            <Loader2 className="h-5 w-5 animate-spin text-slate-500" />
+          </span>
+        )}
+      </div>
+      {canEdit && (
+        <span className="flex gap-2 text-[12px] font-semibold">
+          <button type="button" disabled={busy} onClick={() => input.current?.click()} className="inline-flex items-center gap-1 text-brand-700 hover:underline">
+            <Camera className="h-3.5 w-3.5" />
+            {staff.photoUrl ? "Change" : "Add photo"}
+          </button>
+          {staff.photoUrl && (
+            <button type="button" disabled={busy} onClick={remove} className="text-slate-500 hover:underline">
+              Remove
+            </button>
+          )}
+          <input ref={input} type="file" accept="image/jpeg,image/png,image/webp" className="hidden" onChange={(e) => pick(e.target.files?.[0])} />
+        </span>
+      )}
     </div>
   );
 }
@@ -153,7 +211,7 @@ export function StaffProfileDrawer({ staff, classes, all, me, focus = null, onCl
     >
       <div className="space-y-4 p-5">
         <section className="card flex items-center gap-4 p-4">
-          <Avatar name={staff.name} id={staff.id} size="lg" />
+          <StaffPhoto staff={staff} canEdit={me === "admin"} onChanged={onChanged} />
           <div className="min-w-0 flex-1">
             <p className="truncate text-lg font-bold text-slate-900">{staff.name}</p>
             <p className="text-sm text-slate-600">{staff.designation}{staff.staffType === "non_teaching" ? " · non-teaching" : ""}</p>

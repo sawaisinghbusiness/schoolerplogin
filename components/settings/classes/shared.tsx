@@ -191,3 +191,65 @@ export function WithTip({ tip, children }: { tip?: string; children: React.React
     <>{children}</>
   );
 }
+
+/** Streams offered for 11th–12th; any stream already used on a section is offered too. */
+export const DEFAULT_STREAMS = ["Science", "Commerce", "Arts"];
+export const streamsOf = (classes: { sections: { stream?: string | null }[] }[]) =>
+  Array.from(new Set([...DEFAULT_STREAMS, ...classes.flatMap((c) => c.sections.map((s) => s.stream || "").filter(Boolean))]));
+/** 11th and 12th take a stream. */
+export const takesStream = (cls: { name: string; sections: { stream?: string | null }[] }) => /^1[12]/.test(cls.name.trim()) || cls.sections.some((s) => !!s.stream);
+
+/** Pick a stream, or type a new one ("+ New stream…"). */
+export function StreamPicker({ id, value, onChange, streams }: { id: string; value: string; onChange: (v: string) => void; streams: string[] }) {
+  const [adding, setAdding] = React.useState(false);
+  const [draft, setDraft] = React.useState("");
+  const list = value && !streams.includes(value) ? streams.concat(value) : streams;
+  if (adding)
+    return (
+      <div className="flex gap-2">
+        <input
+          id={id}
+          autoFocus
+          value={draft}
+          maxLength={30}
+          onChange={(e) => setDraft(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && draft.trim()) {
+              e.preventDefault();
+              onChange(draft.trim().replace(/\s+/g, " "));
+              setAdding(false);
+            }
+          }}
+          placeholder="e.g. Agriculture"
+          className="field field-sm min-w-0 flex-1"
+        />
+        <button type="button" disabled={!draft.trim()} onClick={() => { onChange(draft.trim().replace(/\s+/g, " ")); setAdding(false); }} className="btn btn-primary btn-sm shrink-0">
+          Use
+        </button>
+        <button type="button" onClick={() => setAdding(false)} className="btn btn-secondary btn-sm shrink-0">
+          Cancel
+        </button>
+      </div>
+    );
+  return (
+    <select
+      id={id}
+      value={value}
+      onChange={(e) => {
+        if (e.target.value === "__new") {
+          setDraft("");
+          setAdding(true);
+        } else onChange(e.target.value);
+      }}
+      className="field field-sm"
+    >
+      <option value="">No stream</option>
+      {list.map((s) => (
+        <option key={s} value={s}>
+          {s}
+        </option>
+      ))}
+      <option value="__new">+ New stream…</option>
+    </select>
+  );
+}

@@ -16,6 +16,14 @@ export const photoService = {
     const r = await api.del<{ success: boolean; error?: string }>(`/api/student-photos/${studentId}`);
     return r.ok && r.data?.success ? {} : { error: r.data?.error || r.error || "Could not remove the photo." };
   },
+  async setStaff(staffId: string, image: string): Promise<{ url?: string; error?: string }> {
+    const r = await api.post<{ success: boolean; url?: string; error?: string }>(`/api/staff/${staffId}/photo`, { image });
+    return r.ok && r.data?.success ? { url: r.data.url } : { error: r.data?.error || r.error || "Could not save the photo." };
+  },
+  async removeStaff(staffId: string): Promise<{ error?: string }> {
+    const r = await api.del<{ success: boolean; error?: string }>(`/api/staff/${staffId}/photo`);
+    return r.ok && r.data?.success ? {} : { error: r.data?.error || r.error || "Could not remove the photo." };
+  },
   /** At most 12 at a time. */
   async bulk(items: { srNo: string; image: string }[]): Promise<{ results?: BulkResult[]; error?: string }> {
     const r = await api.post<{ success: boolean; results?: BulkResult[]; error?: string }>("/api/student-photos/bulk", { items });

@@ -8,7 +8,7 @@ import { Modal } from "@/components/ui/modal";
 import { AddClassModal, AddClassPrefill } from "@/components/settings/classes/AddClassModal";
 import { AddSectionModal } from "@/components/settings/classes/AddSectionModal";
 import { SectionDrawer } from "@/components/settings/classes/SectionDrawer";
-import { ConfirmModal, WINGS, WithTip, plural } from "@/components/settings/classes/shared";
+import { ConfirmModal, WINGS, WithTip, plural, streamsOf } from "@/components/settings/classes/shared";
 
 type Counts = Record<string, number>;
 
@@ -263,6 +263,7 @@ export default function ClassesPage() {
       <AddSectionModal
         cls={addSectionClass}
         prefill={addSection?.names || null}
+        streams={streamsOf(classes || [])}
         onClose={() => setAddSection(null)}
         onAdded={async () => {
           setAddSection(null);
@@ -285,6 +286,7 @@ export default function ClassesPage() {
         cls={drawerClass}
         section={drawerSection}
         students={drawerClass && drawerSection ? secCount(drawerClass.name, drawerSection.name) : 0}
+        streams={streamsOf(classes || [])}
         setupNotice={setupNotice}
         onSetupNotice={setSetupNotice}
         onClose={() => setOpen(null)}
@@ -353,6 +355,7 @@ function ClassRow({
                 className="inline-flex max-w-full items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-2.5 py-1 text-[13px] shadow-2xs transition hover:border-brand-400 hover:bg-brand-50/60"
               >
                 <span className="truncate font-semibold text-slate-800">{s.name}</span>
+                {s.stream && !s.name.toLowerCase().startsWith(s.stream.toLowerCase()) && <span className="text-slate-500">{s.stream}</span>}
                 {counts && <span className="tabular-nums text-slate-500">{n}</span>}
               </button>
             );
@@ -369,9 +372,9 @@ function ClassRow({
               <span className="tabular-nums opacity-70">{s.students}</span>
             </button>
           ))}
-          <button type="button" onClick={() => onAddSection(null)} className="inline-flex items-center gap-1 rounded-lg border border-dashed border-slate-300 px-2.5 py-1 text-[13px] font-medium text-slate-500 hover:border-brand-400 hover:text-brand-700">
+          <button type="button" onClick={() => onAddSection(null)} className="inline-flex items-center gap-1 rounded-lg border border-brand-200 bg-brand-50 px-2.5 py-1 text-[13px] font-semibold text-brand-700 hover:border-brand-400 hover:bg-brand-100">
             <Plus className="h-3.5 w-3.5" />
-            Section
+            Add section
           </button>
         </div>
         {!cls.sections.length ? (

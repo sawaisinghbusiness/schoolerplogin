@@ -28,12 +28,13 @@ export interface StaffMember {
   status: "Active" | "On Leave" | "Relieved";
   relievedOn: string;
   notes: string;
-  login: { userId: string; role: string; active: boolean } | null;
+  photoUrl?: string | null;
+  login:{ userId: string; role: string; active: boolean } | null;
   classTeacherOf: string | null;
   subjects: Assignment[];
 }
 
-export type StaffInput = Partial<Omit<StaffMember, "id" | "status" | "relievedOn" | "login" | "classTeacherOf" | "subjects">>;
+export type StaffInput = Partial<Omit<StaffMember, "id" | "status" | "relievedOn" | "login" | "classTeacherOf" | "subjects" | "photoUrl">>;
 
 export const DESIGNATIONS: Record<StaffType, string[]> = {
   teaching: ["Principal", "Vice Principal", "PGT", "TGT", "PRT", "NTT", "Teacher", "Sports Teacher", "Music Teacher", "Librarian", "Counsellor"],

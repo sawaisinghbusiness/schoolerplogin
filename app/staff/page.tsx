@@ -196,7 +196,7 @@ export default function StaffPage() {
                   {shown.map((s) => (
                     <li key={s.id}>
                       <button type="button" onClick={() => setOpen({ id: s.id, focus: null })} className="m-row active:bg-slate-50">
-                        <Avatar name={s.name} id={s.id} size="sm" neutral />
+                        <Avatar name={s.name} id={s.id} photoUrl={s.photoUrl} size="sm" neutral />
                         <span className="m-row-main">
                           <span className="m-row-title">{s.name}</span>
                           <span className="m-row-meta">
@@ -242,7 +242,7 @@ export default function StaffPage() {
                           >
                             <td className="px-5 py-3">
                               <span className="flex items-center gap-3">
-                                <Avatar name={s.name} id={s.id} size="sm" neutral />
+                                <Avatar name={s.name} id={s.id} photoUrl={s.photoUrl} size="sm" neutral />
                                 <span className="min-w-0">
                                   <span className="block truncate font-semibold text-slate-900 group-hover:text-brand-700">{s.name}</span>
                                   <span className="block text-xs tabular-nums text-slate-500">
