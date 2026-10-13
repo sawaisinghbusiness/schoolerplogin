@@ -6,6 +6,7 @@ import { Student } from "@/data/mockData";
 import { studentService } from "@/lib/services/studentService";
 import { BulkResult, photoService } from "@/lib/services/photoService";
 import { shrinkPhoto } from "@/lib/shrinkPhoto";
+import { cropPhoto } from "@/components/ui/PhotoCropper";
 import { initials } from "@/components/ui/Avatar";
 import { Modal } from "@/components/ui/modal";
 import { toast } from "@/components/ui/Toaster";
@@ -79,9 +80,10 @@ export default function PhotosPage() {
     const id = target.current;
     e.target.value = "";
     if (!file || !id) return;
-    mark(id, true);
     try {
-      const image = await shrinkPhoto(file);
+      const image = await cropPhoto(file);
+      if (!image) return; // cancelled
+      mark(id, true);
       const r = await photoService.set(id, image);
       if (r.error || !r.url) toast(r.error || "Could not save the photo.", "error");
       else setPhoto(id, r.url);

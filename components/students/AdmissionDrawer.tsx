@@ -7,7 +7,7 @@ import { Camera, CheckCircle2, Circle, IndianRupee, Loader2, Phone, Plus, X } fr
 import { Student } from "@/data/mockData";
 import { studentService } from "@/lib/services/studentService";
 import { photoService } from "@/lib/services/photoService";
-import { shrinkPhoto } from "@/lib/shrinkPhoto";
+import { cropPhoto } from "@/components/ui/PhotoCropper";
 import { toast } from "@/components/ui/Toaster";
 import { planFor } from "@/lib/feeEngine";
 import { useFeeConfig } from "@/lib/services/feeSetupService";
@@ -236,7 +236,8 @@ export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProf
     e.target.value = "";
     if (!file) return;
     try {
-      setPhoto({ data: await shrinkPhoto(file), removed: false });
+      const data = await cropPhoto(file);
+      if (data) setPhoto({ data, removed: false });
     } catch (err: any) {
       toast(err?.message || "Could not use this photo.", "error");
     }

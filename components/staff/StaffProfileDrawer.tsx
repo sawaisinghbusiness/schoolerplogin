@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Camera, KeyRound, Loader2, Pencil, Phone, UserX } from "lucide-react";
 import { photoService } from "@/lib/services/photoService";
-import { shrinkPhoto } from "@/lib/shrinkPhoto";
+import { cropPhoto } from "@/components/ui/PhotoCropper";
 import { SideDrawer } from "@/components/ui/SideDrawer";
 import { Avatar } from "@/components/ui/Avatar";
 import { toast } from "@/components/ui/Toaster";
@@ -40,7 +40,9 @@ function StaffPhoto({ staff, canEdit, onChanged }: { staff: StaffMember; canEdit
     if (!file) return;
     setBusy(true);
     try {
-      const r = await photoService.setStaff(staff.id, await shrinkPhoto(file));
+      const image = await cropPhoto(file);
+      if (!image) return; // cancelled
+      const r = await photoService.setStaff(staff.id, image);
       if (r.error) return toast(r.error, "error");
       onChanged({ ...staff, photoUrl: r.url });
       toast("Photo saved.", "success");

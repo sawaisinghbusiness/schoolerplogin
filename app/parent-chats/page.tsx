@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { Lock, MessagesSquare, RefreshCw, Search } from "lucide-react";
+import { Lock, MessagesSquare, RefreshCw, Search, X } from "lucide-react";
 import { api } from "@/lib/apiClient";
 import { toast } from "@/components/ui/Toaster";
 
@@ -64,6 +64,14 @@ export default function ParentChatsPage() {
     if (!r.ok || !r.data) return toast(r.error || "Could not open this chat.", "error");
     setOpen(r.data);
   };
+
+  // Esc closes the open chat.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(null);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
 
   const shown = useMemo(() => {
     const s = q.trim().toLowerCase();
@@ -143,11 +151,17 @@ export default function ParentChatsPage() {
             </div>
           ) : (
             <>
-              <div className="border-b border-slate-100 px-5 py-3">
-                <p className="text-[15px] font-bold text-slate-900">
-                  {open.student} <span className="font-normal text-slate-500">· {open.classSec}</span>
-                </p>
-                <p className="text-[13px] text-slate-500">Parent and {open.teacher}</p>
+              <div className="flex items-center gap-3 border-b border-slate-100 py-3 pl-5 pr-3">
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-[15px] font-bold text-slate-900">
+                    {open.student} <span className="font-normal text-slate-500">· {open.classSec}</span>
+                  </p>
+                  <p className="truncate text-[13px] text-slate-500">Parent and {open.teacher}</p>
+                </div>
+                <button type="button" onClick={() => setOpen(null)} aria-label="Close chat" title="Close (Esc)" className="btn btn-secondary btn-sm min-h-[40px] min-w-[40px] shrink-0">
+                  <X className="h-4 w-4" />
+                  <span className="hidden sm:inline">Close</span>
+                </button>
               </div>
               <div className="flex max-h-[62vh] flex-1 flex-col gap-2 overflow-y-auto bg-slate-50 px-5 py-4">
                 {open.messages.map((m) => {

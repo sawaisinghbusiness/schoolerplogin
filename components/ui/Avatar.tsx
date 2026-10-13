@@ -43,7 +43,7 @@ export function Avatar({
   neutral?: boolean;
 }) {
   if (photoUrl) {
-    return <img src={photoUrl} alt="" className={`${SIZES[size]} shrink-0 object-cover ring-1 ring-slate-200 ${className}`} />;
+    return <img src={photoUrl} alt="" className={`${SIZES[size]} shrink-0 object-cover object-[50%_22%] ring-1 ring-slate-200 ${className}`} />;
   }
   return (
     <span
