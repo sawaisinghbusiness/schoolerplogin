@@ -7,6 +7,7 @@ import {
   IndianRupee,
   LayoutDashboard,
   MessageSquareText,
+  MessagesSquare,
   NotebookPen,
   Settings2,
   Trophy,
@@ -85,6 +86,7 @@ export const NAV_GROUPS: NavGroup[] = [
       },
       { title: "Messages", href: "/messages", icon: MessageSquareText },
       { title: "Meetings & PTM", href: "/meetings", icon: CalendarClock },
+      { title: "Parent–teacher chats", href: "/parent-chats", icon: MessagesSquare },
     ],
   },
   {
