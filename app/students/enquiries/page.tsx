@@ -94,8 +94,9 @@ export default function EnquiriesPage() {
         fatherName: admitFrom.father_name || "",
         motherName: admitFrom.mother_name || "",
         mobile: admitFrom.mobile,
-        altMobile: admitFrom.alt_mobile || "",
+        motherMobile: admitFrom.alt_mobile || "",
         address: admitFrom.area || "",
+        prevSchool: admitFrom.previous_school || "",
       }
     : null;
 

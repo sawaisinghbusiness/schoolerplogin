@@ -17,7 +17,7 @@ export interface Student {
   penNo: string;
   gender: 'Male' | 'Female' | 'Other';
   dob: string;
-  category: 'General' | 'OBC' | 'SC' | 'ST';
+  category: 'General' | 'OBC' | 'MBC' | 'SC' | 'ST' | 'EWS';
   house: 'Tagore' | 'Ashoka' | 'Shivaji' | 'Raman';
   transportOpted: boolean;
   busRoute?: string;
@@ -25,7 +25,82 @@ export interface Student {
   totalFee: number;
   paidFee: number;
   balanceFee: number;
+  /** Bus stop and sibling family come with the list too. */
+  busStop?: string;
+  siblingFamilyId?: string;
 }
+
+/**
+ * The full admission form (backend migration 20261020). Only GET /api/students/:id returns these;
+ * the list leaves them out. Aadhaar, Jan Aadhaar and bank details come back only for admin/accountant.
+ * Same keys and option values as the staff app's admission form.
+ */
+export interface StudentDetails {
+  nameHi?: string;
+  birthPlace?: string;
+  aadhaarNo?: string;
+  religion?: string;
+  caste?: string;
+  nationality?: string;
+  motherTongue?: string;
+  bloodGroup?: string;
+  healthNotes?: string;
+  cwsn?: boolean;
+  idMark?: string;
+  medium?: string;
+  admissionDate?: string;
+  shalaDarpanId?: string;
+  admissionType?: string;
+  rte?: boolean;
+  prevSchool?: string;
+  prevBoard?: string;
+  prevClass?: string;
+  prevYear?: string;
+  prevResult?: string;
+  tcNo?: string;
+  tcDate?: string;
+  leavingReason?: string;
+  fatherOccupation?: string;
+  fatherEducation?: string;
+  fatherAadhaar?: string;
+  fatherEmail?: string;
+  motherMobile?: string;
+  motherOccupation?: string;
+  motherEducation?: string;
+  motherAadhaar?: string;
+  whatsappTo?: string;
+  familyIncome?: string;
+  janAadhaar?: string;
+  bpl?: boolean;
+  guardianRelation?: string;
+  guardianMobile?: string;
+  city?: string;
+  tehsil?: string;
+  district?: string;
+  pincode?: string;
+  lettersAddress?: string;
+  emergencyName?: string;
+  emergencyRelation?: string;
+  emergencyMobile?: string;
+  documents?: Record<string, boolean>;
+  bankHolder?: string;
+  bankAccount?: string;
+  bankIfsc?: string;
+}
+
+export interface SiblingRef {
+  id: string;
+  name: string;
+  classSec: string;
+  fatherName: string;
+  srNo: string;
+}
+
+/** One student as GET /api/students/:id returns it. */
+export type StudentFull = Student & StudentDetails & { siblings?: SiblingRef[]; /** Document keys that have a scan on file. */ documentScans?: string[] };
+
+/** What a save returns; `detailsSaved: false` means the server has not run the 20261020 SQL yet. */
+export type SavedStudent = StudentFull & { detailsSaved?: boolean };
 
 import STUDENTS_1500 from "./students_1500.json";
 

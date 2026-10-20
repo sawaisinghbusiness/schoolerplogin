@@ -44,3 +44,39 @@ export async function shrinkPhoto(file: File): Promise<string> {
   }
   return out;
 }
+
+/**
+ * A scan of a paper (birth certificate, TC, Aadhaar…) as a JPEG no longer than `long` px on its
+ * longest side, kept readable but small enough for the backend's 1.5 MB limit.
+ */
+export async function shrinkDocument(file: File, long = 1600): Promise<string> {
+  if (!file.type.startsWith("image/")) throw new Error("Choose a photo or scan (JPG or PNG). PDFs can't be added here.");
+  if (file.size > 25 * 1024 * 1024) throw new Error("This file is too big (over 25 MB).");
+  let bmp: ImageBitmap;
+  try {
+    bmp = await createImageBitmap(file);
+  } catch {
+    throw new Error("This picture format can't be used. Save it as JPG or PNG.");
+  }
+  const scale = Math.min(1, long / Math.max(bmp.width, bmp.height));
+  const w = Math.max(1, Math.round(bmp.width * scale));
+  const h = Math.max(1, Math.round(bmp.height * scale));
+  const canvas = document.createElement("canvas");
+  canvas.width = w;
+  canvas.height = h;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) throw new Error("Could not process the picture on this device.");
+  ctx.fillStyle = "#fff";
+  ctx.fillRect(0, 0, w, h);
+  ctx.drawImage(bmp, 0, 0, w, h);
+  bmp.close();
+  let q = 0.82;
+  let out = canvas.toDataURL("image/jpeg", q);
+  // A data URL is ~4/3 of the bytes; stay well under 1.5 MB.
+  while (out.length > 1_400_000 && q > 0.35) {
+    q -= 0.12;
+    out = canvas.toDataURL("image/jpeg", q);
+  }
+  if (out.length > 1_950_000) throw new Error("This scan is still too big. Take the photo a little further away.");
+  return out;
+}

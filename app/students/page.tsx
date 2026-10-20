@@ -315,7 +315,7 @@ export default function StudentsPage() {
           <Chip label="Class" value={cls} onChange={(v) => { setCls(v); setSection("all"); }} options={classes.map((c) => [c, c])} />
           <Chip label="Section" value={section} onChange={setSection} options={sections.map((s) => [s, s])} />
           <Chip label="Gender" value={gender} onChange={setGender} options={[["Male", "Boys"], ["Female", "Girls"]]} />
-          <Chip label="Category" value={category} onChange={setCategory} options={["General", "OBC", "SC", "ST"].map((c) => [c, c])} />
+          <Chip label="Category" value={category} onChange={setCategory} options={["General", "OBC", "MBC", "SC", "ST", "EWS"].map((c) => [c, c])} />
           {filtersOn && (
             <button type="button" onClick={reset} className="shrink-0 px-2 py-2 text-[13px] font-semibold text-brand-700 hover:underline">
               Clear

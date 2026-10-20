@@ -1,5 +1,8 @@
 import { supabase, isSupabaseConfigured } from "@/lib/supabaseClient";
-import { Student, MOCK_STUDENTS } from "@/data/mockData";
+import { Student, MOCK_STUDENTS, SavedStudent, StudentFull } from "@/data/mockData";
+
+/** What the admission form sends: the student, the full-form details, and (optionally) the brothers/sisters to link. */
+export type StudentInput = Partial<StudentFull> & { siblingIds?: string[] };
 import { api, usingRemoteBackend } from "@/lib/apiClient";
 
 // In-memory cache/mock store for when Supabase is in demo/fallback mode
@@ -175,6 +178,16 @@ export const studentService = {
   },
 
   /**
+   * One student with the full admission form and siblings (backend only). The list leaves these out,
+   * so the edit form and the profile load them from here.
+   */
+  async fetchStudentFull(id: string): Promise<{ data: StudentFull | null; error: string | null }> {
+    const res = await api.get<{ data: StudentFull }>(`/api/students/${encodeURIComponent(id)}`);
+    if (res.ok && res.data?.data) return { data: res.data.data, error: null };
+    return { data: null, error: res.status === 404 ? "This student is no longer in the register." : res.error || "Could not load the student." };
+  },
+
+  /**
    * Fetch single student by ID, admission number, or SR number
    */
   async fetchStudentById(id: string): Promise<{ data: Student | null; isLive: boolean; error: string | null }> {
@@ -218,9 +231,9 @@ export const studentService = {
   /**
    * Insert new student
    */
-  async createStudent(newStudent: Partial<Student>): Promise<{ success: boolean; data?: Student; error?: string }> {
+  async createStudent(newStudent: StudentInput): Promise<{ success: boolean; data?: SavedStudent; error?: string }> {
     if (usingRemoteBackend) {
-      const res = await api.post<{ success: boolean; data: Student }>("/api/students", newStudent);
+      const res = await api.post<{ success: boolean; data: SavedStudent }>("/api/students", newStudent);
       if (res.ok && res.data?.data) {
         localStudents.unshift(res.data.data);
         return { success: true, data: res.data.data };
@@ -292,9 +305,9 @@ export const studentService = {
     return { success: false, error: res.data?.error || res.error || "Could not move the students." };
   },
 
-  async updateStudent(id: string, updates: Partial<Student>): Promise<{ success: boolean; data?: Student; error?: string }> {
+  async updateStudent(id: string, updates: StudentInput): Promise<{ success: boolean; data?: SavedStudent; error?: string }> {
     if (usingRemoteBackend) {
-      const res = await api.patch<{ success: boolean; data?: Student }>(`/api/students/${encodeURIComponent(id)}`, updates);
+      const res = await api.patch<{ success: boolean; data?: SavedStudent }>(`/api/students/${encodeURIComponent(id)}`, updates);
       if (res.ok) {
         const idx = localStudents.findIndex((s) => s.id === id || s.admissionNo === id);
         if (idx !== -1) localStudents[idx] = res.data?.data || { ...localStudents[idx], ...updates };
@@ -382,3 +395,21 @@ function filterLocalStudents(query?: string, className?: string, section?: strin
 
   return result;
 }
+
+/** Scans of admission documents (office only: admin, accountant). Needs the 20261020 SQL on the server. */
+export const studentDocumentService = {
+  /** Signed links (valid ~30 min) for each document key that has a scan. */
+  async list(id: string): Promise<{ files: Record<string, string>; error?: string }> {
+    const r = await api.get<{ files: Record<string, string> }>(`/api/student-documents/${encodeURIComponent(id)}`);
+    return r.ok && r.data ? { files: r.data.files || {} } : { files: {}, error: r.error || "Could not open the scans." };
+  },
+  /** `image` is a JPEG/PNG/WebP data URL (max 1.5 MB). Saving also ticks documents[key]. */
+  async set(id: string, key: string, image: string): Promise<{ success: boolean; error?: string }> {
+    const r = await api.post<{ success: boolean; error?: string }>(`/api/student-documents/${encodeURIComponent(id)}`, { key, image });
+    return r.ok && r.data?.success ? { success: true } : { success: false, error: r.data?.error || r.error || "Could not save the scan." };
+  },
+  async remove(id: string, key: string): Promise<{ success: boolean; error?: string }> {
+    const r = await api.del<{ success: boolean; error?: string }>(`/api/student-documents/${encodeURIComponent(id)}/${encodeURIComponent(key)}`);
+    return r.ok && r.data?.success ? { success: true } : { success: false, error: r.data?.error || r.error || "Could not remove the scan." };
+  },
+};

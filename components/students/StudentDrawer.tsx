@@ -4,7 +4,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { IndianRupee, Pencil, Printer, Ticket, X } from "lucide-react";
-import { Student } from "@/data/mockData";
+import { Student, StudentFull } from "@/data/mockData";
+import { studentService } from "@/lib/services/studentService";
 import { feeService, FeeTransaction } from "@/lib/services/feeService";
 import { gatePassService, GatePass } from "@/lib/services/gatePassService";
 import { generateGatePassPDF } from "@/lib/pdfGenerator";
@@ -38,6 +39,8 @@ export function StudentDrawer({ student, isOpen, onClose, onIssueGatePass, onEdi
   const [receipts, setReceipts] = useState<FeeTransaction[] | null>(null);
   const [passes, setPasses] = useState<GatePass[] | null>(null);
   const [receipt, setReceipt] = useState<FeeTransaction | null>(null);
+  // The list has no admission-form details; load the full record for the Details tab.
+  const [full, setFull] = useState<StudentFull | null | false>(null); // false: could not load
   const [mounted, setMounted] = useState(false);
   const closeRef = useRef<HTMLButtonElement>(null);
 
@@ -51,6 +54,16 @@ export function StudentDrawer({ student, isOpen, onClose, onIssueGatePass, onEdi
     setPasses(null);
     closeRef.current?.focus();
   }, [isOpen, student?.id]);
+
+  useEffect(() => {
+    setFull(null);
+    if (!isOpen || !student) return;
+    let live = true;
+    studentService.fetchStudentFull(student.id).then((r) => live && setFull(r.data || false));
+    return () => {
+      live = false;
+    };
+  }, [isOpen, student]);
 
   useEffect(() => {
     if (!isOpen || !student || tab !== "fees" || receipts) return;
@@ -141,7 +154,8 @@ export function StudentDrawer({ student, isOpen, onClose, onIssueGatePass, onEdi
                 <>
                   <InfoCard title="Student">
                     <Info label="Gender" value={s.gender} />
-                    <Info label="Category" value={s.category} />
+                    <Info label="Date of birth" value={s.dob ? day(s.dob) : undefined} />
+                    <Info label="Category" value={[s.category, full ? full.caste : ""].filter(Boolean).join(" · ")} />
                     <Info label="House" value={s.house} />
                     <Info label="PEN" value={s.penNo} />
                     <Info label="Status" value={s.status || "Active"} />
@@ -164,8 +178,10 @@ export function StudentDrawer({ student, isOpen, onClose, onIssueGatePass, onEdi
                     <Info label="Address" value={s.address} wide />
                   </InfoCard>
                   <InfoCard title="School bus">
-                    <Info label="Route" value={s.transportOpted ? s.busRoute || "School bus" : "Not using the bus"} wide />
+                    <Info label="Route" value={s.transportOpted ? s.busRoute || "School bus" : "Not using the bus"} wide={!s.transportOpted} />
+                    {s.transportOpted && <Info label="Stop" value={(full && full.busStop) || s.busStop} />}
                   </InfoCard>
+                  {full === null ? <div className="skeleton h-24 w-full" /> : full ? <AdmissionDetails f={full} /> : null}
                 </>
               )}
 
@@ -266,6 +282,87 @@ export function StudentDrawer({ student, isOpen, onClose, onIssueGatePass, onEdi
       <FeeReceiptModal isOpen={!!receipt} onClose={() => setReceipt(null)} transaction={receipt} schoolName={schoolName} />
     </>,
     document.body
+  );
+}
+
+const DOC_COUNT = 9; // birth, aadhaar, tc, marksheet, caste, jan_aadhaar, parent_aadhaar, income, photos
+
+/** The rest of the admission form, read-only; only what has been filled in is shown. */
+function AdmissionDetails({ f }: { f: StudentFull }) {
+  const join = (...v: (string | undefined | false)[]) => v.filter(Boolean).join(" · ");
+  const docsGiven = Object.values(f.documents || {}).filter(Boolean).length;
+  const groups: { title: string; rows: [string, string | undefined, boolean?][] }[] = [
+    {
+      title: "Admission",
+      rows: [
+        ["Admission date", f.admissionDate ? day(f.admissionDate) : undefined],
+        ["Type", join(f.admissionType, f.rte && "RTE")],
+        ["Medium", f.medium],
+        ["Shala Darpan ID", f.shalaDarpanId],
+        ["Last school", join(f.prevSchool, f.prevBoard && f.prevSchool ? f.prevBoard : "", f.prevClass && `passed ${f.prevClass}`, f.prevYear, f.prevResult), true],
+        ["TC", join(f.tcNo, f.tcDate && day(f.tcDate))],
+        ["Reason for leaving", f.leavingReason, true],
+      ],
+    },
+    {
+      title: "Identity and health",
+      rows: [
+        ["Name in Hindi", f.nameHi],
+        ["Place of birth", f.birthPlace],
+        ["Aadhaar", f.aadhaarNo],
+        ["Religion", f.religion],
+        ["Mother tongue", f.motherTongue],
+        ["Nationality", f.nationality],
+        ["Blood group", f.bloodGroup],
+        ["Special needs", f.cwsn ? "Yes (CWSN)" : undefined],
+        ["Health", f.healthNotes, true],
+        ["Identification mark", f.idMark, true],
+      ],
+    },
+    {
+      title: "Family details",
+      rows: [
+        ["Father", join(f.fatherOccupation, f.fatherEducation)],
+        ["Mother", join(f.motherOccupation, f.motherEducation)],
+        ["Mother's mobile", f.motherMobile],
+        ["WhatsApp to", f.whatsappTo],
+        ["Father's email", f.fatherEmail],
+        ["Yearly income", join(f.familyIncome, f.bpl && "BPL")],
+        ["Jan Aadhaar", f.janAadhaar],
+        ["Guardian", join(f.guardianRelation, f.guardianMobile)],
+        ["Brothers and sisters", (f.siblings || []).map((x) => `${x.name} (${x.classSec})`).join(", "), true],
+      ],
+    },
+    {
+      title: "Address and emergency",
+      rows: [
+        ["Village / city", join(f.city, f.tehsil && `Tehsil ${f.tehsil}`)],
+        ["District, PIN", join(f.district, f.pincode)],
+        ["Address for letters", f.lettersAddress, true],
+        ["Emergency contact", join(f.emergencyName, f.emergencyRelation, f.emergencyMobile), true],
+      ],
+    },
+    {
+      title: "Documents and bank",
+      rows: [
+        ["Papers received", docsGiven ? `${docsGiven} of ${DOC_COUNT}` : undefined],
+        ["Scans on file", f.documentScans?.length ? String(f.documentScans.length) : undefined],
+        ["Scholarship account", join(f.bankHolder, f.bankAccount, f.bankIfsc), true],
+      ],
+    },
+  ];
+  const shown = groups.map((g) => ({ ...g, rows: g.rows.filter(([, v]) => !!v) })).filter((g) => g.rows.length);
+  if (!shown.length) return <p className="px-1 text-[13px] text-slate-500">No admission-form details yet. Use Edit to add them.</p>;
+  return (
+    <>
+      {shown.map((g) => (
+        <InfoCard key={g.title} title={g.title}>
+          {g.rows.map(([label, value, wide]) => (
+            <Info key={label} label={label} value={value} wide={wide} />
+          ))}
+        </InfoCard>
+      ))}
+    </>
   );
 }
 
