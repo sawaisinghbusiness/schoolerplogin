@@ -56,7 +56,9 @@ export function ExamDrawer({ isOpen, exam, classes, nextOrder, onClose, onSaved,
     setError(null);
   }, [isOpen, exam, classes]);
 
-  const preset = PART_PRESETS.find((p) => JSON.stringify(p.parts) === JSON.stringify(parts))?.key || "custom";
+  // Saved parts come back from the database with their keys in another order, so compare the values.
+  const shape = (ps: ExamPart[]) => JSON.stringify(ps.map((p) => [p.key, p.name, p.max]));
+  const preset = PART_PRESETS.find((p) => shape(p.parts) === shape(parts))?.key || "custom";
   const toggle = (c: string) => {
     const on = !picked.includes(c);
     setPicked((p) => (on ? [...p, c] : p.filter((x) => x !== c)));
