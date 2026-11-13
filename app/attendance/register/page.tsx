@@ -8,13 +8,13 @@ import { attendanceRegisterService, LowReport, MonthRegister, RegisterSection } 
 import { RegisterGrid, Legend, isOff } from "@/components/attendance/register/RegisterGrid";
 import { LowList } from "@/components/attendance/register/LowList";
 import { PrintRegister } from "@/components/attendance/register/PrintRegister";
+import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
 
 type Tab = "register" | "low";
 
 const BELOW = 75;
 const SESSION_START_MONTH = "2026-04";
 const SEC_KEY = "att.register.sec";
-const SCHOOL = "St. Paul School, Barmer";
 
 const todayIST = () => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata" }).format(new Date());
 const shiftMonth = (m: string, by: number) => {
@@ -27,6 +27,9 @@ const secKey = (s: { class: string; section: string }) => `${s.class}|${s.sectio
 const num = (n: number) => n.toLocaleString("en-IN");
 
 export default function AttendanceRegisterPage() {
+  // The school's name and town from ERP Settings, on the printed and downloaded register.
+  const { schoolProfile } = useSchoolProfile();
+  const SCHOOL = [schoolProfile.school_name, schoolProfile.city].filter(Boolean).join(", ");
   const today = todayIST();
   const thisMonth = today.slice(0, 7);
 

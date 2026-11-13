@@ -37,7 +37,7 @@ export interface PublicSite {
 }
 
 export const FALLBACK_SITE: PublicSite = {
-  school: { name: "St. Paul School", short: "SPS", board: "CBSE", affiliation_no: "", school_code: "", udise_code: "", principal: "", address: "", city: "Barmer", district: "Barmer", state: "Rajasthan", pincode: "344001", phone: [], email: "", website: "", logo_url: "" },
+  school: { name: "School", short: "", board: "CBSE", affiliation_no: "", school_code: "", udise_code: "", principal: "", address: "", city: "Barmer", district: "Barmer", state: "Rajasthan", pincode: "344001", phone: [], email: "", website: "", logo_url: "" },
   stats: { students: 0, families: 0, teachers: 0, classes: 0, sections: 0 },
   events: [],
   classes: [],

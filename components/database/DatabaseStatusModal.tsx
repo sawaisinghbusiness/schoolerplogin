@@ -87,7 +87,7 @@ export default function DatabaseStatusModal({
             <div>
               <h2 className="text-base font-bold tracking-tight">Supabase Database Hub</h2>
               <p className="text-xs text-slate-400">
-                PostgreSQL Cloud Backend for St. Paul School
+                PostgreSQL Cloud Backend for the school
               </p>
             </div>
           </div>

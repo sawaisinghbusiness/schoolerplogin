@@ -5,6 +5,7 @@ import { Check, Copy, Loader2, RefreshCw } from "lucide-react";
 import { Modal } from "@/components/ui/modal";
 import { AppUser, passwordProblem, suggestPassword, userService } from "@/lib/services/userService";
 import { IssuedLogin } from "./UserDrawer";
+import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
 
 /** Set a new password for someone who forgot theirs. */
 export function ResetPasswordModal({ user, onClose, onDone }: { user: AppUser | null; onClose: () => void; onDone: (issued: IssuedLogin) => void }) {
@@ -59,10 +60,11 @@ export function ResetPasswordModal({ user, onClose, onDone }: { user: AppUser | 
 
 /** Shown once after creating a login or resetting a password, so the office can hand it over. */
 export function IssuedLoginModal({ issued, onClose }: { issued: IssuedLogin | null; onClose: () => void }) {
+  const { schoolProfile } = useSchoolProfile();
   const [copied, setCopied] = useState(false);
   useEffect(() => setCopied(false), [issued]);
   if (!issued) return null;
-  const text = `St. Paul School login\nID: ${issued.loginId}\nPassword: ${issued.password}\nPlease change the password after signing in.`;
+  const text = `${schoolProfile.school_name || "School"} login\nID: ${issued.loginId}\nPassword: ${issued.password}\nPlease change the password after signing in.`;
   const copy = async () => {
     try {
       await navigator.clipboard.writeText(text);

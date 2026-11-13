@@ -7,8 +7,8 @@ import "./globals.css";
 import { AppShell } from "@/components/layout/AppShell";
 
 export const metadata: Metadata = {
-  title: "St. Paul School | SchoolDesk ERP",
-  description: "School management portal for St. Paul School, Barmer",
+  title: "SchoolDesk ERP",
+  description: "School management portal",
   icons: {
     icon: "/favicon.ico",
   },
