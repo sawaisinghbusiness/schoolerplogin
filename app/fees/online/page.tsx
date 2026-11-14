@@ -11,7 +11,7 @@ import { Modal } from "@/components/ui/modal";
 import { toast } from "@/components/ui/Toaster";
 
 /**
- * Online payments: parents pay the school's UPI ID from the parent app and send the UTR.
+ * Online payments: parents scan the school's payment QR in the parent app and send the UTR.
  * Nothing is money until someone here finds that UTR in the bank statement and presses Verify,
  * which makes a normal receipt dated the day the parent paid.
  */
@@ -40,7 +40,7 @@ interface Claim {
 }
 interface Settings {
   setupNeeded: boolean;
-  upiId?: string;
+  qrImage?: string;
   upiName?: string;
   officePhone?: string;
   updatedBy?: string | null;
@@ -105,19 +105,19 @@ export default function OnlinePaymentsPage() {
           <button type="button" onClick={load} disabled={loading} className="btn btn-secondary" aria-label="Reload">
             <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
           </button>
-          <button type="button" onClick={() => setSettingsOpen(true)} className="btn btn-secondary px-3 sm:px-4" aria-label="UPI settings">
+          <button type="button" onClick={() => setSettingsOpen(true)} className="btn btn-secondary px-3 sm:px-4" aria-label="Payment QR settings">
             <Settings2 className="h-4 w-4" />
-            <span className="hidden sm:inline">UPI settings</span>
+            <span className="hidden sm:inline">Payment QR & contact</span>
           </button>
         </div>
       </header>
 
-      {settings && !settings.setupNeeded && !settings.upiId && (
+      {settings && !settings.setupNeeded && !settings.qrImage && (
         <div className="alert alert-amber">
           <span>
-            Parents can&rsquo;t pay online yet: the school&rsquo;s UPI ID is not set.{" "}
+            Parents can&rsquo;t pay online yet: the school&rsquo;s payment QR is not uploaded.{" "}
             <button type="button" onClick={() => setSettingsOpen(true)} className="font-semibold underline">
-              Set it now
+              Upload it now
             </button>
           </span>
         </div>
@@ -379,22 +379,39 @@ function RejectModal({ claim, onClose, onDone }: { claim: Claim | null; onClose:
 }
 
 function SettingsModal({ open, isAdmin, settings, onClose, onSaved }: { open: boolean; isAdmin: boolean; settings: Settings | null; onClose: () => void; onSaved: (s: Settings) => void }) {
-  const [upiId, setUpiId] = useState("");
-  const [upiName, setUpiName] = useState("");
+  const [qr, setQr] = useState(""); // what the preview shows: the saved QR, or the one just picked
+  const [picked, setPicked] = useState(false); // a new picture was chosen and is not saved yet
+  const [removed, setRemoved] = useState(false);
   const [officePhone, setOfficePhone] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     if (!open) return;
-    setUpiId(settings?.upiId || "");
-    setUpiName(settings?.upiName || "");
+    setQr(settings?.qrImage || "");
+    setPicked(false);
+    setRemoved(false);
     setOfficePhone(settings?.officePhone || "");
     setError(null);
   }, [open, settings]);
 
+  const pick = (file: File | undefined) => {
+    if (!file) return;
+    if (!/^image\/(png|jpeg|webp)$/.test(file.type)) return setError("Choose a PNG, JPG or WebP picture of the QR.");
+    if (file.size > 1_000_000) return setError("The picture is too large. Use one under 1 MB.");
+    const reader = new FileReader();
+    reader.onload = () => {
+      setQr(String(reader.result || ""));
+      setPicked(true);
+      setRemoved(false);
+      setError(null);
+    };
+    reader.onerror = () => setError("Could not read that picture.");
+    reader.readAsDataURL(file);
+  };
+
   const save = async () => {
     setBusy(true);
-    const r = await api.put<Settings>("/api/fee-claims/settings", { upiId, upiName, officePhone });
+    const r = await api.put<Settings>("/api/fee-claims/settings", { ...(picked ? { qrImage: qr } : {}), ...(removed ? { removeQr: true } : {}), upiName: settings?.upiName || "", officePhone });
     setBusy(false);
     if (!r.ok || !r.data) return setError(r.error || "Could not save.");
     onSaved(r.data);
@@ -403,17 +420,30 @@ function SettingsModal({ open, isAdmin, settings, onClose, onSaved }: { open: bo
   };
 
   return (
-    <Modal isOpen={open} onClose={() => !busy && onClose()} title="Parent app: payment & contact" maxWidth="max-w-md">
+    <Modal isOpen={open} onClose={() => !busy && onClose()} title="Parent app: payment QR & contact" maxWidth="max-w-md">
       <div className="space-y-4 text-sm">
-        <label className="block">
-          <span className="field-label">School&rsquo;s UPI ID</span>
-          <input value={upiId} onChange={(e) => setUpiId(e.target.value.trim())} placeholder="schoolname@sbi" disabled={!isAdmin} className="field w-full" />
-          <span className="mt-1 block text-xs text-slate-500">Use the school&rsquo;s own bank account. Parents pay this ID. Leave empty to switch online payment off.</span>
-        </label>
-        <label className="block">
-          <span className="field-label">Name shown on UPI</span>
-          <input value={upiName} onChange={(e) => setUpiName(e.target.value)} placeholder="As the bank shows it" disabled={!isAdmin} className="field w-full" />
-        </label>
+        <div>
+          <span className="field-label">School&rsquo;s payment QR</span>
+          <div className="mt-1 flex items-start gap-4">
+            <div className="flex h-36 w-36 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white">
+              {qr ? <img src={qr} alt="Payment QR" className="h-full w-full object-contain" /> : <span className="px-2 text-center text-xs text-slate-400">No QR uploaded</span>}
+            </div>
+            {isAdmin && (
+              <div className="flex flex-col items-start gap-2">
+                <label className="btn btn-secondary btn-sm cursor-pointer">
+                  {qr ? "Change QR" : "Upload QR"}
+                  <input type="file" accept="image/png,image/jpeg,image/webp" className="sr-only" onChange={(e) => { pick(e.target.files?.[0]); e.target.value = ""; }} />
+                </label>
+                {qr && (
+                  <button type="button" onClick={() => { setQr(""); setPicked(false); setRemoved(true); }} className="text-xs font-semibold text-rose-600 underline">
+                    Remove QR
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
+          <span className="mt-1 block text-xs text-slate-500">Upload the QR of the school&rsquo;s own bank account (PNG, JPG or WebP, under 1 MB). Parents scan it from the Fees screen. Remove it to switch online payment off.</span>
+        </div>
         <label className="block">
           <span className="field-label">Office phone for parents</span>
           <input value={officePhone} onChange={(e) => setOfficePhone(e.target.value)} placeholder="94600 62543" inputMode="tel" disabled={!isAdmin} className="field w-full" />
