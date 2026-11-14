@@ -41,6 +41,7 @@ function role(): string {
 }
 
 export default function ExamSetupPage() {
+  const [loadError, setLoadError] = useState<string | null>(null);
   const [exams, setExams] = useState<Exam[] | null>(null);
   const [classes, setClasses] = useState<ClassItem[]>([]);
   const [setupNeeded, setSetupNeeded] = useState(false);
@@ -58,10 +59,11 @@ export default function ExamSetupPage() {
 
   const load = useCallback(async () => {
     setRefreshing(true);
+    setLoadError(null);
     const [r] = await Promise.all([examService.list(), loadClasses()]);
     setRefreshing(false);
     setSetupNeeded(r.setupNeeded);
-    if (r.error) toast(r.error, "error");
+    if (r.error) { setLoadError(r.error); return; }
     setExams(r.data);
   }, [loadClasses]);
 
@@ -107,11 +109,11 @@ export default function ExamSetupPage() {
         )}
       </header>
 
-      {setupNeeded ? (
+      {loadError ? <div role="alert" className="alert alert-rose"><span className="flex-1">Could not load exams: {loadError}</span><button type="button" onClick={load} className="btn btn-secondary btn-sm">Try again</button></div> : setupNeeded ? (
         <div className="card p-8 text-center">
           <ClipboardCheck className="mx-auto h-8 w-8 text-slate-300" />
           <p className="mt-3 font-semibold text-slate-900">Exams need a one-time database setup</p>
-          <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">Run sms backend/supabase/migrations/20261001_exams.sql in the Supabase SQL editor, then check again.</p>
+          <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">Ask your school administrator to enable this module, then check again.</p>
           <button type="button" onClick={load} className="btn btn-secondary btn-sm mt-4">
             <RefreshCw className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`} />
             Check again

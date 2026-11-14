@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import { CheckCircle2, Printer, X } from "lucide-react";
 import { FeeTransaction, numberToWordsIndian } from "@/lib/services/feeService";
 import { headRows } from "@/lib/feeHeads";
+import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
 
 interface FeeReceiptModalProps {
   isOpen: boolean;
@@ -15,7 +16,10 @@ interface FeeReceiptModalProps {
 
 const inr = (n: number) => "₹" + Number(n || 0).toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
-export function FeeReceiptModal({ isOpen, onClose, transaction, schoolName = "St. Paul School" }: FeeReceiptModalProps) {
+export function FeeReceiptModal({ isOpen, onClose, transaction, schoolName: given }: FeeReceiptModalProps) {
+  // The name from ERP Settings unless the page passes one.
+  const { schoolProfile } = useSchoolProfile();
+  const schoolName = given || schoolProfile.school_name || "School";
   const printRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {

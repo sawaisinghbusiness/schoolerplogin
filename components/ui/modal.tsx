@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useId, useRef } from "react";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
+import { useDialog } from "./useDialog";
 
 interface ModalProps {
   isOpen: boolean;
@@ -14,19 +15,9 @@ interface ModalProps {
 }
 
 export function Modal({ isOpen, onClose, title, subtitle, children, maxWidth = "max-w-2xl" }: ModalProps) {
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-      window.addEventListener("keydown", handleKeyDown);
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [isOpen, onClose]);
+  const dialog = useRef<HTMLDivElement>(null);
+  const titleId = useId();
+  useDialog(isOpen, dialog, onClose);
 
   if (!isOpen || typeof document === "undefined") return null;
 
@@ -35,13 +26,16 @@ export function Modal({ isOpen, onClose, title, subtitle, children, maxWidth = "
     <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4">
       <div className="fixed inset-0 bg-slate-950/50 animate-fadeIn" onClick={onClose} aria-hidden="true" />
       <div
+        ref={dialog}
+        tabIndex={-1}
+        aria-labelledby={titleId}
         role="dialog"
         aria-modal="true"
-        className={`relative z-10 flex max-h-[92dvh] w-full ${maxWidth} flex-col overflow-hidden rounded-t-2xl bg-white pb-[env(safe-area-inset-bottom)] shadow-xl animate-slide-up sm:max-h-[90vh] sm:rounded-lg sm:pb-0 sm:animate-scaleUp`}
+        className={`erp-dialog relative z-10 flex max-h-[92dvh] w-full ${maxWidth} flex-col overflow-hidden rounded-t-2xl bg-white pb-[env(safe-area-inset-bottom)] shadow-xl animate-slide-up sm:max-h-[90vh] sm:rounded-lg sm:pb-0 sm:animate-scaleUp`}
       >
         <div className="flex items-start justify-between gap-4 border-b border-slate-200 px-4 py-3 sm:px-5 sm:py-3.5">
           <div className="min-w-0">
-            <h3 className="text-base font-semibold text-slate-900">{title}</h3>
+            <h3 id={titleId} className="text-base font-semibold text-slate-900">{title}</h3>
             {subtitle && <p className="mt-0.5 text-sm text-slate-500">{subtitle}</p>}
           </div>
           <button

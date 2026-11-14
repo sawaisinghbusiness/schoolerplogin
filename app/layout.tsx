@@ -4,11 +4,12 @@ import "@fontsource-variable/plus-jakarta-sans";
 import "@fontsource-variable/jetbrains-mono";
 import "@fontsource-variable/fraunces";
 import "./globals.css";
+import "./erp.css";
 import { AppShell } from "@/components/layout/AppShell";
 
 export const metadata: Metadata = {
-  title: "St. Paul School | SchoolDesk ERP",
-  description: "School management portal for St. Paul School, Barmer",
+  title: "SchoolDesk ERP",
+  description: "School management portal",
   icons: {
     icon: "/favicon.ico",
   },
@@ -17,9 +18,6 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  // Fixed scale like a native app: no pinch or double-tap zoom on phones.
-  maximumScale: 1,
-  userScalable: false,
   // Lets the app draw under the iPhone notch/home bar; padding uses env(safe-area-inset-*).
   viewportFit: "cover",
   themeColor: "#ECEEF3",

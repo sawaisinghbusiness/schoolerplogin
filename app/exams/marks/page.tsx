@@ -10,6 +10,7 @@ import { MarkSheetDrawer } from "@/components/exams/MarkSheetDrawer";
 const examFromUrl = () => (typeof window === "undefined" ? "" : new URLSearchParams(window.location.search).get("exam") || "");
 
 export default function MarksEntryPage() {
+  const [error, setError] = useState<string | null>(null);
   const [exams, setExams] = useState<Exam[] | null>(null);
   const [setupNeeded, setSetupNeeded] = useState(false);
   const [examId, setExamId] = useState("");
@@ -19,7 +20,9 @@ export default function MarksEntryPage() {
   const [open, setOpen] = useState<{ examId: string; section: string; subject: string } | null>(null);
 
   const loadExams = useCallback(async () => {
+    setError(null);
     const r = await examService.list();
+    if (r.error) { setError(r.error); return; }
     setSetupNeeded(r.setupNeeded);
     setExams(r.data);
     const wanted = examFromUrl();
@@ -35,6 +38,8 @@ export default function MarksEntryPage() {
     setLoadingGrid(true);
     const r = await examService.progress(id);
     setLoadingGrid(false);
+    if (r.error) { setError(r.error); return; }
+    setError(null);
     setSections(r.data?.sections || []);
   }, []);
 
@@ -82,12 +87,12 @@ export default function MarksEntryPage() {
         )}
       </header>
 
-      {setupNeeded || (exams && exams.length === 0) ? (
+      {error ? <div role="alert" className="alert alert-rose"><span className="flex-1">Could not load marks entry: {error}</span><button type="button" className="btn btn-secondary btn-sm" onClick={() => examId ? loadGrid(examId) : loadExams()}>Try again</button></div> : setupNeeded || (exams && exams.length === 0) ? (
         <div className="card p-8 text-center">
           <ClipboardCheck className="mx-auto h-8 w-8 text-slate-300" />
           <p className="mt-3 font-semibold text-slate-900">{setupNeeded ? "Exams need a one-time database setup" : "No exam has been set up yet"}</p>
           <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">
-            {setupNeeded ? "Run sms backend/supabase/migrations/20261001_exams.sql in the Supabase SQL editor." : "Add this session's exams first, with the subjects for each class."}
+            {setupNeeded ? "Ask your school administrator to enable exams, then check again." : "Add this session's exams first, with the subjects for each class."}
           </p>
           {setupNeeded ? (
             <button type="button" onClick={loadExams} className="btn btn-secondary btn-sm mt-4">
@@ -148,11 +153,11 @@ export default function MarksEntryPage() {
                             type="button"
                             onClick={() => setOpen({ examId, section: s.classSec, subject: sub.name })}
                             className={`group flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-[13px] font-semibold ring-1 transition hover:shadow-sm ${
-                              full ? "bg-emerald-50 text-emerald-800 ring-emerald-200" : some ? "bg-marigold-50 text-marigold-900 ring-marigold-200" : "bg-white text-slate-700 ring-slate-200 hover:ring-slate-300"
+                              full ? "bg-emerald-50 text-emerald-800 ring-emerald-200" : some ? "bg-slate-50 text-slate-800 ring-slate-300" : "bg-white text-slate-700 ring-slate-200 hover:ring-slate-300"
                             }`}
                           >
                             {sub.name}
-                            <span className={`tabular-nums text-[12px] font-medium ${full ? "text-emerald-600" : some ? "text-marigold-700" : "text-slate-400"}`}>
+                            <span className={`tabular-nums text-[12px] font-medium ${full ? "text-emerald-600" : some ? "text-slate-600" : "text-slate-400"}`}>
                               {sub.entered}/{s.students}
                             </span>
                           </button>

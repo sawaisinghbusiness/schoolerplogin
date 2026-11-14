@@ -98,6 +98,7 @@ function SchoolTab() {
           <In label="Short name" hint="Shown in the logo tile and crest, e.g. SPS" value={form.short_name} onChange={(v) => set("short_name", v.toUpperCase().slice(0, 5))} />
           <In label="Principal's name" hint="Printed under the signature line" value={form.principal_name} onChange={(v) => set("principal_name", v)} />
           <LogoUpload value={form.logo_url} short={form.short_name} onChange={(v) => set("logo_url", v)} />
+          <HeroUpload value={form.hero_url} onChange={(v) => set("hero_url", v)} />
         </Card>
 
         <Card title="Board and registration">
@@ -236,6 +237,73 @@ function LogoUpload({ value, short, onChange }: { value: string; short: string; 
           <button type="button" onClick={() => inputRef.current?.click()} disabled={busy} className="btn btn-secondary btn-sm">
             {busy && <Loader2 className="h-3.5 w-3.5 animate-spin" />}
             {value ? "Change" : "Upload logo"}
+          </button>
+          {value && (
+            <button type="button" onClick={() => onChange("")} className="btn btn-sm text-rose-600 hover:bg-rose-50">
+              Remove
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * The school building photo shown at the top of the parent and staff apps' Home. Shrunk in the browser
+ * to 1200px wide JPEG (about 100-300 KB) before it is saved, like the logo.
+ */
+function HeroUpload({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  const inputRef = React.useRef<HTMLInputElement>(null);
+  const [busy, setBusy] = useState(false);
+
+  const pick = async (file?: File) => {
+    if (!file) return;
+    if (!/^image\/(png|jpeg|webp)$/.test(file.type)) return toast("Choose a PNG or JPG image.", "error");
+    if (file.size > 15 * 1024 * 1024) return toast("That picture is too big (over 15 MB).", "error");
+    setBusy(true);
+    try {
+      const url = URL.createObjectURL(file);
+      const img = await new Promise<HTMLImageElement>((ok, bad) => {
+        const i = new Image();
+        i.onload = () => ok(i);
+        i.onerror = bad;
+        i.src = url;
+      });
+      const scale = Math.min(1, 1200 / img.width);
+      const canvas = document.createElement("canvas");
+      canvas.width = Math.max(1, Math.round(img.width * scale));
+      canvas.height = Math.max(1, Math.round(img.height * scale));
+      canvas.getContext("2d")!.drawImage(img, 0, 0, canvas.width, canvas.height);
+      URL.revokeObjectURL(url);
+      let data = canvas.toDataURL("image/jpeg", 0.82);
+      if (data.length > 1_400_000) data = canvas.toDataURL("image/jpeg", 0.6);
+      if (data.length > 1_400_000) return toast("That picture is too detailed. Try another photo.", "error");
+      onChange(data);
+    } catch {
+      toast("Could not read that picture. Try another file.", "error");
+    } finally {
+      setBusy(false);
+      if (inputRef.current) inputRef.current.value = "";
+    }
+  };
+
+  return (
+    <div className="sm:col-span-2">
+      <span className="field-label">School photo (apps&apos; Home)</span>
+      <div className="flex items-center gap-4 rounded-xl border border-dashed border-slate-300 bg-slate-50/60 p-3">
+        <div className="flex h-16 w-28 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white">
+          {value ? <img src={value} alt="School photo" className="h-full w-full object-cover" /> : <span className="text-xs text-slate-400">No photo</span>}
+        </div>
+        <div className="min-w-0 flex-1">
+          <p className="text-[13px] text-slate-700">{value ? "Photo uploaded" : "No photo yet: the apps use their built-in picture"}</p>
+          <p className="text-xs text-slate-500">A wide photo of the school building (landscape). Shown at the top of the parent and staff apps.</p>
+        </div>
+        <input ref={inputRef} type="file" accept="image/png,image/jpeg,image/webp" className="hidden" onChange={(e) => pick(e.target.files?.[0])} />
+        <div className="flex shrink-0 flex-col gap-1.5 sm:flex-row">
+          <button type="button" onClick={() => inputRef.current?.click()} disabled={busy} className="btn btn-secondary btn-sm">
+            {busy && <Loader2 className="h-3.5 w-3.5 animate-spin" />}
+            {value ? "Change" : "Upload photo"}
           </button>
           {value && (
             <button type="button" onClick={() => onChange("")} className="btn btn-sm text-rose-600 hover:bg-rose-50">

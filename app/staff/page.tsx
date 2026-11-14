@@ -119,7 +119,7 @@ export default function StaffPage() {
         <div className="card p-8 text-center">
           <Briefcase className="mx-auto h-8 w-8 text-slate-300" />
           <p className="mt-3 font-semibold text-slate-900">{setupNeeded ? "Staff needs a one-time database setup" : "Couldn't load staff"}</p>
-          <p className="mx-auto mt-1 max-w-md text-sm text-slate-600">{setupNeeded ? "Run sms backend/supabase/migrations/20261002_staff.sql in the Supabase SQL editor, then check again." : loadError}</p>
+          <p className="mx-auto mt-1 max-w-md text-sm text-slate-600">{setupNeeded ? "Ask your school administrator to enable this module, then check again." : loadError}</p>
           <button type="button" onClick={load} className="btn btn-secondary btn-sm mt-4">
             <RefreshCw className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`} />
             Check again

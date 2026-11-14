@@ -20,9 +20,16 @@ const byRoll = (a: Student, b: Student) => (a.rollNo || "").localeCompare(b.roll
 export default function PromotePage() {
   const [students, setStudents] = useState<Student[] | null>(null);
   const [tab, setTab] = useState<Tab>("promote");
+  const [error, setError] = useState<string | null>(null);
 
   const load = async () => {
+    setStudents(null);
+    setError(null);
     const res = await studentService.fetchStudents();
+    if (res.error) {
+      setError(res.error);
+      return;
+    }
     setStudents(res.data.filter((s) => s.status !== "Inactive"));
   };
   useEffect(() => {
@@ -68,7 +75,12 @@ export default function PromotePage() {
         ))}
       </div>
 
-      {students === null ? (
+      {error ? (
+        <div role="alert" className="alert alert-rose">
+          <span className="flex-1">Could not load students: {error}</span>
+          <button type="button" onClick={load} className="btn btn-secondary btn-sm">Try again</button>
+        </div>
+      ) : students === null ? (
         <div className="card space-y-3 p-5">
           {Array.from({ length: 6 }).map((_, i) => (
             <div key={i} className="skeleton h-11 w-full" />

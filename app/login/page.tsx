@@ -21,6 +21,7 @@ import {
   Users,
   Wallet,
 } from "lucide-react";
+import { InteractiveField } from "@/components/login/InteractiveField";
 import { authService } from "@/lib/services/authService";
 import { usePublicSite } from "@/components/site/usePublicSite";
 
@@ -118,8 +119,9 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen bg-white">
       {/* ── Brand panel ───────────────────────────────────────────── */}
-      <aside className="hidden w-[44%] flex-col justify-between bg-night-900 p-12 text-white lg:flex xl:p-14">
-        <div className="flex items-center gap-3">
+      <aside className="relative isolate hidden w-[44%] flex-col justify-between overflow-hidden bg-night-900 p-12 text-white lg:flex xl:p-14">
+        <InteractiveField />
+        <div className="relative z-10 flex items-center gap-3">
           <SchoolLogo url={school.logo_url} short={school.short} size={48} dark />
           <div className="leading-tight">
             <div className="text-[15px] font-bold">{school.name}</div>
@@ -127,7 +129,7 @@ export default function LoginPage() {
           </div>
         </div>
 
-        <div className="max-w-md">
+        <div className="relative z-10 max-w-md">
           <h1 className="text-4xl font-bold leading-[1.15] tracking-tight xl:text-[2.6rem]">
             Fees, students and attendance <span className="text-marigold-400">in one place.</span>
           </h1>
@@ -143,7 +145,7 @@ export default function LoginPage() {
           </ul>
         </div>
 
-        <p className="text-[13px] text-night-500">Sessions are encrypted and expire after 12 hours</p>
+        <p className="relative z-10 text-[13px] text-night-500">Sessions are encrypted and expire after 12 hours</p>
       </aside>
 
       {/* ── Sign-in form ──────────────────────────────────────────── */}

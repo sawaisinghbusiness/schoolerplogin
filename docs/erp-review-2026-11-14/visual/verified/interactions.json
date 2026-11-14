@@ -1,0 +1,14 @@
+[
+  {
+    "check": "admission drawer opens",
+    "pass": true
+  },
+  {
+    "check": "focus inside drawer",
+    "pass": true
+  },
+  {
+    "check": "Escape closes admission drawer",
+    "pass": true
+  }
+]

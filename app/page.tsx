@@ -62,7 +62,7 @@ function Hero({ phone }: { phone?: string }) {
         </div>
         <Image
           src="/images/hero-student.png"
-          alt="A St. Paul School student holding her notebooks"
+          alt="A student holding her notebooks"
           width={1406}
           height={1422}
           priority

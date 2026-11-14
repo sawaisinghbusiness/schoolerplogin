@@ -17,14 +17,16 @@ export interface SchoolProfile {
   email: string;
   website: string;
   logo_url: string;
+  /** School photo for the parent and staff apps' Home header (data URL). */
+  hero_url: string;
   principal_name: string;
   updated_at?: string | null;
 }
 
 /** Shown until the backend answers, and when nothing is saved yet (the numbers are demo placeholders). */
 export const DEFAULT_SCHOOL_PROFILE: SchoolProfile = {
-  school_name: "St. Paul School",
-  short_name: "SPS",
+  school_name: "School",
+  short_name: "",
   board: "CBSE",
   affiliation_no: "1730512",
   school_code: "10492",
@@ -39,6 +41,7 @@ export const DEFAULT_SCHOOL_PROFILE: SchoolProfile = {
   email: "",
   website: "",
   logo_url: "",
+  hero_url: "",
   principal_name: "",
 };
 

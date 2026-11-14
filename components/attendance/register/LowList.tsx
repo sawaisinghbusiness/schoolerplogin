@@ -3,10 +3,13 @@
 import React from "react";
 import { MessageCircle } from "lucide-react";
 import { LowReport, lowAttendanceMessage, whatsappLink } from "@/lib/services/attendanceRegisterService";
+import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
 import { Meter } from "./RegisterGrid";
 
 /** School-wide students below the threshold for the month, lowest first, with a WhatsApp nudge to the parent. */
 export function LowList({ report, highlight }: { report: LowReport; highlight?: string }) {
+  const { schoolProfile } = useSchoolProfile();
+  const schoolSign = [schoolProfile.school_name, schoolProfile.city].filter(Boolean).join(", ");
   return (
     <div className="overflow-x-auto">
       <table className="w-full text-[13px]">
@@ -27,7 +30,7 @@ export function LowList({ report, highlight }: { report: LowReport; highlight?: 
         </thead>
         <tbody className="divide-y divide-slate-100">
           {report.students.map((s) => {
-            const wa = whatsappLink(s.mobile, lowAttendanceMessage(s));
+            const wa = whatsappLink(s.mobile, lowAttendanceMessage(s, schoolSign));
             return (
               <tr key={s.id} className={highlight === s.classSec ? "bg-brand-50/40" : ""}>
                 <td className="px-4 py-2">

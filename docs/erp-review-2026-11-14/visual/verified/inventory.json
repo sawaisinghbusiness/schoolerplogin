@@ -1,0 +1,30 @@
+[
+  {
+    "route": "fees/online",
+    "url": "http://127.0.0.1:3007/fees/online",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nFees\nOnline payments\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nOnline payments\n\nUPI payments parents reported in the parent app. Find the UTR in the bank statement, then verify.\n\nUPI settings\nTo check\nVerified\nRejected\nThis state has no review fixture.\n\nPayment claims are unavailable\n\nTry again",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "parent-chats",
+    "url": "http://127.0.0.1:3007/parent-chats",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nDaily work\nParent–teacher chats\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nParent–teacher chats\n\nWhat parents ask teachers in the app. You can read every chat; only the teacher and the family can write.\n\nRefresh\nSearch chats\n\nCould not load chats: This state has no review fixture.\n\nTry again\n\nPick a chat on the left to read it.",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "staff/payroll",
+    "url": "http://127.0.0.1:3007/staff/payroll",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nStaff\nPayroll\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nPayroll\nBank sheet\nRun payroll\nNovember 2026\nNet salary\n₹0\nPaid\n₹0\nTo pay\n₹0\nSalary not set\n2\n\tStaff\tDays paid\tGross\tDeductions\tNet\tStatus\t\nActions\n\n\t\nNeha Sharma\nTeacher\n\tNot worked out yet\tSalary\n\t\nRakesh Mehta\nTeacher\n\tNot worked out yet\tSalary\n\t\nKamla Devi\nTeacher\n\tNot worked out yet\tSalary\n\t\nManish Singh\nTeacher\n\tNot worked out yet\tSalary\n\t\nNeha Sharma\nTeacher\n\tNot worked out yet\tSalary\n\t\nRakesh Mehta\nTeacher\n\tNot worked out yet\tSalary\n\t\nKamla Devi\nOffice Clerk\n\tSalary not set\tSet salary\n\t\nManish Singh\nOffice Clerk\n\tSalary not set\tSet salary",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "exams/marks",
+    "url": "http://127.0.0.1:3007/exams/marks?exam=exam-review",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nExams\nMarks entry\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nMarks entry\n\nPick a section and subject, then type the marks down the list\n\nTerm I examination · out of 100\n47% entered · 408 of 864 marks\n\n6th - A\n\n36 students\n\nEnglish\n0/36\nHindi\n3/36\nMathematics\n6/36\nScience\n9/36\n\n6th - B\n\n36 students\n\nEnglish\n5/36\nHindi\n8/36\nMathematics\n11/36\nScience\n14/36\n\n7th - A\n\n36 students\n\nEnglish\n10/36\nHindi\n13/36\nMathematics\n16/36\nScience\n19/36\n\n7th - B\n\n36 students\n\nEnglish\n15/36\nHindi\n18/36\nMathematics\n21/36\nScience\n24/36\n\n8th - A\n\n36 students\n\nEnglish\n20/36\nHindi\n23/36\nMathematics\n26/36\nScience\n29/36\n\n8th - B\n\n36 students\n\nEnglish\n25/36\nHindi\n28/36\nMathematics\n31/36\nScience\n34/36",
+    "width": 1440,
+    "scrollWidth": 1440
+  }
+]

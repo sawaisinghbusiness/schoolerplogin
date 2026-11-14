@@ -1,0 +1,51 @@
+[
+  {
+    "route": "transport",
+    "url": "http://127.0.0.1:3007/transport",
+    "text": "S\nSchool\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nYour account\nLoading account\nHome\nSchool\nTransport\nSearch pages…\nCtrl K\nYour account\nLoading account\nTransport\nStudents on bus\n…\nRoutes\n…\nSeats\n…\nWithout a route\n…",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "attendance/register",
+    "url": "http://127.0.0.1:3007/attendance/register",
+    "text": "S\nSchool\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nYour account\nLoading account\nHome\nAttendance\nRegister & reports\nSearch pages…\nCtrl K\nYour account\nLoading account\nAttendance register\n\nNovember 2026\n\nPrint\nExport\nLoading classes…\nNovember 2026\nDays marked\n…\nAttendance\n…\nAbsent days\n…\nBelow 75%\n…\nRegister\nBelow 75%",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "attendance/leave",
+    "url": "http://127.0.0.1:3007/attendance/leave",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nAttendance\nLeave requests\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nLeave requests\n\nSent by parents from the parent app. Approving does not mark attendance; mark the day as Leave in the register as usual.\n\nRefresh\nWaiting\nAnswered\nCould not load leave requests: This state has no review fixture.\nTry again",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "fees/dues",
+    "url": "http://127.0.0.1:3007/fees/dues",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nFees\nDues & reminders\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nDues & reminders\n\nWorking out every student's dues…\n\nExport\nThis state has no review fixture.\nOverdue now\n…\nLate fine so far\n…\nNext instalment\n—\nUp to date\n…\nStudents\nBy class\nAll classes\nAny overdue\n1 instalment\n2 or more\nMost due first\nLongest overdue\nClass order\n\nDues are unavailable. Use the retry action above to reload.",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "exams/setup",
+    "url": "http://127.0.0.1:3007/exams/setup",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nExams\nExam setup\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nExam setup\n\nThis session's exams, the marks for each, and the subjects every class is examined in\n\nExams · 2026-27\n\nParents see an exam's report card in their app only after it is locked.\n\nEnter marks →\nExam\tClasses\tMarks\tStatus\t\nActions\n\n\nTerm I examination\n16 Nov – 21 Nov\n\tAll classes\t80 written + 20 internal\tOpen for marks\nNot in parent app yet\n\t\nSubjects by class\n6th\nEnglish, Hindi, Maths, Science\n7th\nEnglish, Hindi, Maths, Science\n8th\nEnglish, Hindi, Maths, Science",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "academics/syllabus",
+    "url": "http://127.0.0.1:3007/academics/syllabus",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSchoolDesk\nSyllabus\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nSyllabus\n\nChapters planned vs taught, class by class.\n\nNot available yet\n\nThis module is planned and is not available for school work yet.\n\nPlanned capabilities\nChapter plan per subject and month\nTeachers mark lessons done\nCoverage % per class",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "academics/timetable",
+    "url": "http://127.0.0.1:3007/academics/timetable",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nAcademics\nTimetable\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nTimetable\nPrint\nClass\nTeacher\n6th\n7th\n8th\nSection A\nSection B\n\nCould not load this timetable: This state has no review fixture.\n\nTry again",
+    "width": 1440,
+    "scrollWidth": 1440
+  }
+]

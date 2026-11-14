@@ -36,11 +36,26 @@ export const ROLE_INFO: Record<UserRole, { label: string; badge: string; can: st
 
 export const ROLE_ORDER: UserRole[] = ["admin", "accountant", "teacher", "exam_cell", "parent", "student"];
 
-/** A password that is easy to read out over the phone: Word + 4 digits + word. */
+/** A cryptographically random password, grouped to make transcription easier. */
 export function suggestPassword(): string {
-  const words = ["Thar", "Barmer", "Desert", "Camel", "Marigold", "Sunrise", "Peacock", "Mango", "River", "Lotus", "Banyan", "Kesar"];
-  const pick = () => words[Math.floor(Math.random() * words.length)];
-  return `${pick()}${Math.floor(1000 + Math.random() * 9000)}${pick().toLowerCase()}`;
+  const random = (max: number) => {
+    const values = new Uint32Array(1);
+    const ceiling = Math.floor(0x100000000 / max) * max;
+    do { crypto.getRandomValues(values); } while (values[0] >= ceiling);
+    return values[0] % max;
+  };
+  const upper = "ABCDEFGHJKLMNPQRSTUVWXYZ";
+  const lower = "abcdefghijkmnopqrstuvwxyz";
+  const digits = "23456789";
+  const alphabet = upper + lower + digits;
+  const pick = (chars: string) => chars[random(chars.length)];
+  const chars = [pick(upper), pick(lower), pick(digits)];
+  while (chars.length < 16) chars.push(pick(alphabet));
+  for (let i = chars.length - 1; i > 0; i--) {
+    const j = random(i + 1);
+    [chars[i], chars[j]] = [chars[j], chars[i]];
+  }
+  return chars.join("").match(/.{4}/g)!.join("-");
 }
 
 /** Same rules as the backend; returns a message when too weak. */

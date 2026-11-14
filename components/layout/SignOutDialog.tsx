@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { LogOut, Loader2 } from "lucide-react";
 import { authService } from "@/lib/services/authService";
+import { useDialog } from "@/components/ui/useDialog";
 
 interface SignOutDialogProps {
   open: boolean;
@@ -13,20 +14,23 @@ interface SignOutDialogProps {
 export function SignOutDialog({ open, onClose }: SignOutDialogProps) {
   const router = useRouter();
   const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    if (!open) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && !busy && onClose();
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [open, busy, onClose]);
+  const dialog = useRef<HTMLDivElement>(null);
+  useDialog(open, dialog, onClose, busy);
 
   if (!open) return null;
 
   const signOut = async () => {
     setBusy(true);
+    setError(null);
     // Clear the httpOnly session cookie on the backend, then local display data.
-    await authService.logout();
+    const result = await authService.logout();
+    if (!result.success) {
+      setError(result.error || "Could not sign out. Please try again.");
+      setBusy(false);
+      return;
+    }
     try {
       localStorage.removeItem("schooldesk_user_role");
       localStorage.removeItem("schooldesk_user_id");
@@ -44,6 +48,8 @@ export function SignOutDialog({ open, onClose }: SignOutDialogProps) {
       <div className="absolute inset-0 bg-slate-950/50 animate-fadeIn" onClick={() => !busy && onClose()} />
       <div
         role="dialog"
+        ref={dialog}
+        tabIndex={-1}
         aria-modal="true"
         aria-labelledby="signout-title"
         className="relative w-full max-w-sm rounded-2xl bg-white p-6 shadow-2xl animate-scaleUp"
@@ -57,6 +63,7 @@ export function SignOutDialog({ open, onClose }: SignOutDialogProps) {
         <p className="mt-1.5 text-sm leading-relaxed text-slate-500">
           You&apos;ll need your mobile number and password to sign back in. Unsaved changes on this page will be lost.
         </p>
+        {error && <p role="alert" className="mt-3 text-sm text-rose-700">{error}</p>}
         <div className="mt-6 flex gap-2.5">
           <button
             onClick={onClose}

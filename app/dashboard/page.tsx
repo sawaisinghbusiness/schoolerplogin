@@ -49,9 +49,10 @@ export default function DashboardPage() {
       {/* Greeting + actions */}
       <div className="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
         <div>
-          <h1 className="text-[21px] font-bold tracking-tight text-slate-900 sm:text-[26px]">
-            {hello}, {user.name.split(" ")[0]}
+          <h1 className="page-title">
+            Dashboard
           </h1>
+          <p className="page-subtitle">{today} &middot; {hello}, {user.name.split(" ")[0]}</p>
         </div>
         {/* Phones: three equal quick actions; desktop: a row of buttons. */}
         <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-wrap">
@@ -119,22 +120,18 @@ export default function DashboardPage() {
       </section>
 
       {/* KPIs */}
-      <div className="hidden grid-cols-1 gap-4 sm:grid sm:grid-cols-2 xl:grid-cols-4">
+      <div className="erp-summary hidden grid-cols-1 sm:grid sm:grid-cols-2 xl:grid-cols-4">
         <Kpi label="Collected this month" loading={loading}>
           {f && (
             <>
-              <p className="whitespace-nowrap text-[28px] font-extrabold leading-tight tracking-tight text-slate-900">{money(f.thisMonth)}</p>
-              <div className="mt-2 flex items-end justify-between gap-3">
-                <span />
-                <Sparkline values={f.byMonth.map((m) => m.amount)} />
-              </div>
+              <p className="whitespace-nowrap tabular-nums text-[27px] font-semibold leading-tight tracking-tight text-slate-900">{money(f.thisMonth)}</p>
             </>
           )}
         </Kpi>
         <Kpi label="Collected this session" loading={loading}>
           {f && (
             <>
-              <p className="text-[28px] font-extrabold leading-tight tracking-tight text-slate-900">{money(f.sessionPaid)}</p>
+              <p className="tabular-nums text-[27px] font-semibold leading-tight tracking-tight text-slate-900">{money(f.sessionPaid)}</p>
               <div className="mt-3 h-2 overflow-hidden rounded-full bg-brand-50" role="img" aria-label={`${paidPct}% of ${money(f.sessionTotal)} collected`}>
                 <div className="h-full rounded-full bg-brand-600" style={{ width: `${paidPct}%` }} />
               </div>
@@ -147,7 +144,7 @@ export default function DashboardPage() {
         <Kpi label="Fees pending" loading={loading}>
           {f && (
             <>
-              <p className="text-[28px] font-extrabold leading-tight tracking-tight text-slate-900">{money(f.sessionDue)}</p>
+              <p className="tabular-nums text-[27px] font-semibold leading-tight tracking-tight text-slate-900">{money(f.sessionDue)}</p>
               <div className="mt-2 flex items-center justify-between text-[13px]">
                 <span className="text-slate-500">{fmt(f.dueStudents)} students</span>
                 <Link href="/fees/collect" className="inline-flex items-center gap-0.5 font-semibold text-brand-700 hover:underline">
@@ -161,7 +158,7 @@ export default function DashboardPage() {
         <Kpi label="Students" loading={loading}>
           {data && (
             <>
-              <p className="text-[28px] font-extrabold leading-tight tracking-tight text-slate-900">{fmt(data.students.total)}</p>
+              <p className="tabular-nums text-[27px] font-semibold leading-tight tracking-tight text-slate-900">{fmt(data.students.total)}</p>
               <div className="mt-2 flex items-center justify-between gap-2 text-[13px] text-slate-500">
                 <span>
                   {fmt(data.students.boys)} boys · {fmt(data.students.girls)} girls
@@ -179,7 +176,7 @@ export default function DashboardPage() {
           <div className="mb-4 flex items-start justify-between gap-3">
             <div>
               <h2 className="text-[15px] font-bold text-slate-900">Fee collection by month</h2>
-              <p className="text-[13px] text-slate-500">Session 2026-27 · ₹ in lakh</p>
+              <p className="text-[13px] text-slate-500">Monthly totals · ₹ in lakh</p>
             </div>
           </div>
           {f ? <MonthChart data={f.byMonth} /> : <div className="skeleton h-56 w-full" />}
@@ -293,26 +290,10 @@ export default function DashboardPage() {
 
 function Kpi({ label, loading, children }: { label: string; loading: boolean; children: React.ReactNode }) {
   return (
-    <section className="card p-5">
+    <section>
       <p className="text-[13px] font-semibold text-slate-600">{label}</p>
-      <div className="mt-2">{loading && !children ? <div className="skeleton h-14 w-full" /> : children || <div className="skeleton h-14 w-full" />}</div>
+      <div className="mt-2">{loading && !children ? <div className="skeleton h-14 w-full" /> : children || <p className="text-sm text-slate-500">Unavailable</p>}</div>
     </section>
-  );
-}
-
-function Sparkline({ values }: { values: number[] }) {
-  if (values.length < 2) return null;
-  const w = 96, h = 32, max = Math.max(...values), min = Math.min(...values);
-  const pts = values.map((v, i) => [(i / (values.length - 1)) * (w - 4) + 1, h - 3 - ((v - min) / (max - min || 1)) * (h - 8)]);
-  const line = pts.map((p, i) => `${i ? "L" : "M"}${p[0].toFixed(1)} ${p[1].toFixed(1)}`).join(" ");
-  const last = pts[pts.length - 1];
-  return (
-    <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} aria-hidden="true" className="shrink-0">
-      <path d={`${line} L${last[0]} ${h} L1 ${h} Z`} fill="rgb(52 70 209 / 0.10)" />
-      <path d={line} fill="none" stroke="#3446D1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx={last[0]} cy={last[1]} r="4" fill="#fff" />
-      <circle cx={last[0]} cy={last[1]} r="3" fill="#3446D1" />
-    </svg>
   );
 }
 
@@ -348,7 +329,7 @@ function MonthChart({ data }: { data: { month: string; amount: number }[] }) {
             {v > 0 && (
               <path
                 d={`M${x} ${T + plotH} V${top + r} Q${x} ${top} ${x + r} ${top} H${x + bw - r} Q${x + bw} ${top} ${x + bw} ${top + r} V${T + plotH} Z`}
-                fill={hover === i ? "#2B38AE" : "#3446D1"}
+                fill={hover === i ? "#2B38AE" : i === data.length - 1 ? "#3446D1" : "#aeb9cc"}
               />
             )}
             <text x={x + bw / 2} y={H - 8} textAnchor="middle" fontSize="11.5" fill="#7B80A2">

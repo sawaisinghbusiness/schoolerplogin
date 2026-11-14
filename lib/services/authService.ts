@@ -27,8 +27,9 @@ export const authService = {
     return { success: true, user: res.data.user };
   },
 
-  async logout(): Promise<void> {
-    await api.post("/api/auth/logout");
+  async logout(): Promise<{ success: boolean; error?: string }> {
+    const result = await api.post("/api/auth/logout");
+    return { success: result.ok || result.status === 401, error: result.error };
   },
 
   async currentUser(): Promise<AuthenticatedUser | null> {

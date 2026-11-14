@@ -4,7 +4,7 @@
 
 /* ==========================================================================
    SchoolDesk design tokens
-   Colors mirror tailwind.config.ts (Ink neutrals, Jade brand, Marigold accent).
+   Colors mirror tailwind.config.ts (Ink neutrals, Indigo actions, Jade success).
    ========================================================================== */
 :root {
   --font-sans: "Plus Jakarta Sans Variable";
@@ -18,16 +18,16 @@
   --card-foreground: 222 27% 12%;
   --popover: 0 0% 100%;
   --popover-foreground: 222 27% 12%;
-  --primary: 167 89% 30%;
-  --primary-dark: 168 88% 24%;
+  --primary: 233 62% 51%;
+  --primary-dark: 234 60% 43%;
   --primary-foreground: 0 0% 100%;
-  --primary-light: 160 84% 96%;
+  --primary-light: 233 100% 97%;
   --secondary: 223 27% 95%;
   --secondary-foreground: 222 27% 12%;
   --muted: 223 27% 95%;
   --muted-foreground: 220 14% 47%;
-  --accent: 160 84% 96%;
-  --accent-foreground: 168 88% 24%;
+  --accent: 233 100% 97%;
+  --accent-foreground: 234 60% 43%;
   --success: 167 89% 30%;
   --warning: 39 89% 52%;
   --danger: 358 75% 59%;
@@ -36,7 +36,7 @@
   --destructive-foreground: 0 0% 100%;
   --border: 222 26% 91%;
   --input: 222 26% 91%;
-  --ring: 167 89% 30%;
+  --ring: 233 62% 51%;
   --chart-1: 167 89% 30%;
   --chart-2: 199 89% 48%;
   --chart-3: 39 89% 52%;
@@ -208,25 +208,6 @@ textarea {
   .page-subtitle {
     @apply mt-1 max-w-3xl text-sm text-slate-500;
   }
-  /*
-   * The top bar already names the page, so inside a page header the big title is kept only
-   * for screen readers and the subtitle is dropped. The header then just holds the actions,
-   * on the right; with no actions it takes no space at all.
-   */
-  .page-header {
-    @apply sm:items-center sm:justify-end;
-  }
-  .page-header .page-title {
-    @apply sr-only;
-  }
-  .page-header .page-subtitle,
-  .page-header .page-eyebrow {
-    @apply hidden;
-  }
-  .page-header:not(:has(button, a, select, input, [role="tablist"])) {
-    @apply hidden;
-  }
-
   /* Surfaces */
   .card {
     @apply rounded-2xl border border-slate-200/80 bg-white shadow-card;

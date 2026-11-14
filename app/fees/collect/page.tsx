@@ -279,7 +279,7 @@ export default function CollectFeesPage() {
       <header className="page-header">
         <div>
           <h1 className="page-title">Collect fee</h1>
-          <p className="page-subtitle">Fee counter · Session 2026-27</p>
+          <p className="page-subtitle">Find a student, review dues and record a payment</p>
         </div>
       </header>
 
@@ -300,13 +300,12 @@ export default function CollectFeesPage() {
               aria-controls="fee-search-results"
               aria-autocomplete="list"
               autoComplete="off"
-              autoFocus
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               onFocus={() => results.length > 0 && setOpen(true)}
               onKeyDown={onSearchKey}
               placeholder={student ? "Collect from another student…" : "Search by name, SR no., father's name or mobile"}
-              className="h-[52px] w-full rounded-2xl border-2 border-slate-200 bg-white pl-12 pr-12 text-base text-slate-900 sm:pr-16 sm:text-[15px] shadow-sm outline-none transition placeholder:text-slate-400 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/15"
+              className="h-12 w-full rounded-lg border border-slate-200 bg-white pl-12 pr-12 text-base text-slate-900 sm:pr-16 sm:text-[15px] shadow-sm outline-none transition placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/10"
             />
             <span className="absolute right-4 top-1/2 flex -translate-y-1/2 items-center gap-2 text-slate-400">
               {searching && <Loader2 className="h-4 w-4 animate-spin text-brand-600" />}

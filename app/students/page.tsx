@@ -283,7 +283,7 @@ export default function StudentsPage() {
           </button>
         </div>
         <div className="flex flex-wrap items-center gap-2 border-b border-slate-200/80 p-3 sm:px-4">
-          <div className="flex w-full overflow-hidden rounded-xl border lg:w-auto lg:min-w-[320px] lg:flex-1 border-slate-200 bg-slate-50/70 focus-within:border-brand-500 focus-within:bg-white focus-within:ring-4 focus-within:ring-brand-500/15">
+          <div className="erp-search flex w-full overflow-hidden rounded-lg border lg:w-auto lg:min-w-[320px] lg:flex-1 border-slate-200 bg-slate-50/70 focus-within:border-brand-500 focus-within:bg-white focus-within:ring-4 focus-within:ring-brand-500/15">
             <select aria-label="Search in" value={field} onChange={(e) => setField(e.target.value as Field)} className="max-w-[7.5rem] border-r border-slate-200 bg-transparent px-3 text-base font-medium text-slate-600 outline-none sm:max-w-none sm:text-[13px]">
               {FIELDS.map((f) => (
                 <option key={f.key} value={f.key}>
@@ -383,7 +383,7 @@ export default function StudentsPage() {
                                 <span className="truncate" title={s.name}>{s.name}</span>
                                 {s.status === "Inactive" && <span className="badge badge-slate shrink-0 py-0 text-[11px]">Left</span>}
                               </span>
-                              <span className="block truncate text-xs text-slate-500">{parentLine(s)}</span>
+                              <span className="block truncate text-xs text-slate-500">{s.srNo || s.admissionNo}</span>
                             </span>
                           </div>
                         </td>
@@ -536,9 +536,6 @@ function FeeCell({ s }: { s: Student }) {
       <div className="flex items-baseline justify-between gap-2 whitespace-nowrap text-xs">
         <span className="status-dot tabular-nums text-rose-600">{inr(s.balanceFee)} due</span>
         <span className="hidden tabular-nums text-slate-500 xl:inline">{pct}% paid</span>
-      </div>
-      <div className="mt-1 hidden h-1.5 overflow-hidden rounded-full bg-slate-100 xl:block">
-        <div className="h-full rounded-full bg-emerald-500" style={{ width: `${pct}%` }} />
       </div>
     </div>
   );

@@ -18,6 +18,7 @@ const role = () => {
 
 export default function TransportPage() {
   const { schoolProfile } = useSchoolProfile();
+  const [loadError, setLoadError] = useState<string | null>(null);
   const [routes, setRoutes] = useState<BusRoute[] | null>(null);
   const [total, setTotal] = useState(0);
   const [unassigned, setUnassigned] = useState(0);
@@ -26,8 +27,9 @@ export default function TransportPage() {
   const [me, setMe] = useState("");
 
   const load = useCallback(async () => {
+    setLoadError(null);
     const r = await transportService.list();
-    if (r.error) toast(r.error, "error");
+    if (r.error) { setLoadError(r.error); return; }
     setSetupNeeded(r.setupNeeded);
     setTotal(r.total);
     setUnassigned(r.unassigned);
@@ -57,11 +59,11 @@ export default function TransportPage() {
         )}
       </header>
 
-      {setupNeeded ? (
+      {loadError ? <div role="alert" className="alert alert-rose"><span className="flex-1">Could not load transport: {loadError}</span><button type="button" onClick={load} className="btn btn-secondary btn-sm">Try again</button></div> : setupNeeded ? (
         <div className="card p-8 text-center">
           <Bus className="mx-auto h-8 w-8 text-slate-300" />
           <p className="mt-3 font-semibold text-slate-900">Transport needs a one-time database setup</p>
-          <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">Run sms backend/supabase/migrations/20261002_payroll_transport.sql in the Supabase SQL editor.</p>
+          <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">Ask your school administrator to enable this module, then check again.</p>
           <button type="button" onClick={load} className="btn btn-secondary btn-sm mt-4">
             <RefreshCw className="h-4 w-4" />
             Check again

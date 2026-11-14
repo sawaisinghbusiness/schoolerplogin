@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  Bell,
   CalendarRange,
   ChevronDown,
   ChevronRight,
@@ -21,6 +20,7 @@ import { CommandPalette } from "@/components/layout/CommandPalette";
 import { SignOutDialog } from "@/components/layout/SignOutDialog";
 import { ChangePasswordModal } from "@/components/layout/ChangePasswordModal";
 import { titleForPath } from "@/components/layout/navConfig";
+import { schoolProfileService } from "@/lib/services/schoolProfileService";
 import { useCurrentUser } from "@/components/layout/useCurrentUser";
 
 interface NavbarProps {
@@ -32,7 +32,7 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
   const pathname = usePathname();
   const user = useCurrentUser();
   const [paletteOpen, setPaletteOpen] = useState(false);
-  const [notifOpen, setNotifOpen] = useState(false);
+  const [sessionLabel, setSessionLabel] = useState("");
   const [profileOpen, setProfileOpen] = useState(false);
   const [signOutOpen, setSignOutOpen] = useState(false);
   const [dbOpen, setDbOpen] = useState(false);
@@ -40,16 +40,18 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
   const [isMac, setIsMac] = useState(false);
 
   const profileRef = useRef<HTMLDivElement>(null);
-  const notifRef = useRef<HTMLDivElement>(null);
+
   const { title, section } = titleForPath(pathname);
 
   useEffect(() => {
     setIsMac(/Mac|iPhone|iPad/.test(navigator.platform));
+    let active = true;
+    schoolProfileService.session().then(result => { if (active && !result.error) setSessionLabel(result.session.label); });
 
     const onClickOutside = (e: MouseEvent) => {
       const target = e.target as Node;
       if (profileRef.current && !profileRef.current.contains(target)) setProfileOpen(false);
-      if (notifRef.current && !notifRef.current.contains(target)) setNotifOpen(false);
+
     };
     const onKey = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
@@ -60,6 +62,7 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
     document.addEventListener("mousedown", onClickOutside);
     window.addEventListener("keydown", onKey);
     return () => {
+      active = false;
       document.removeEventListener("mousedown", onClickOutside);
       window.removeEventListener("keydown", onKey);
     };
@@ -67,7 +70,7 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
 
   return (
     <>
-    <header className="relative z-20 flex h-14 shrink-0 select-none items-center gap-2 border-b border-slate-300/40 bg-canvas pl-4 pr-3 pt-[env(safe-area-inset-top)] sm:gap-3 sm:px-6 md:h-16 lg:px-8">
+    <header className="erp-topbar relative z-20 flex h-14 shrink-0 select-none items-center gap-2 border-b border-slate-300/40 bg-canvas pl-4 pr-3 pt-[env(safe-area-inset-top)] sm:gap-3 sm:px-6 md:h-16 lg:px-8">
       <button
         onClick={onToggleSidebar}
         className="-ml-1 hidden rounded-lg p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-900"
@@ -97,7 +100,7 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
       {/* Command palette trigger */}
       <button
         onClick={() => setPaletteOpen(true)}
-        className="group hidden h-10 w-72 items-center gap-2.5 rounded-xl bg-slate-100/80 px-3 text-left text-sm text-slate-500 ring-1 ring-transparent hover:bg-white hover:ring-slate-200 hover:shadow-sm xl:flex"
+        className="group hidden h-10 w-72 items-center gap-2.5 rounded-md border border-slate-200 bg-slate-50 px-3 text-left text-sm text-slate-500 ring-1 ring-transparent hover:bg-white hover:ring-slate-200 hover:shadow-sm xl:flex"
       >
         <Search className="h-4 w-4 text-slate-400 group-hover:text-brand-600" />
         <span className="flex-1">Search pages…</span>
@@ -114,33 +117,10 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
       </button>
 
       {/* Academic session */}
-      <div className="hidden items-center gap-2 rounded-md border border-slate-200 px-2.5 py-1.5 text-xs font-medium text-slate-600 xl:flex">
+      {sessionLabel && <div className="hidden items-center gap-2 text-xs font-medium text-slate-600 xl:flex">
         <CalendarRange className="h-4 w-4 text-brand-600" />
-        Session 2026–27
-      </div>
-
-      {/* Notifications */}
-      <div className="relative hidden sm:block" ref={notifRef}>
-        <button
-          onClick={() => setNotifOpen((v) => !v)}
-          aria-label="Notifications"
-          aria-expanded={notifOpen}
-          className={`relative rounded-xl p-2.5 text-slate-500 hover:bg-slate-100 hover:text-slate-900 ${notifOpen ? "bg-slate-100 text-slate-900" : ""}`}
-        >
-          <Bell className="h-[18px] w-[18px]" />
-        </button>
-
-        {notifOpen && (
-          <div className="absolute right-0 mt-2 w-80 origin-top-right overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-900/5 animate-scaleUp">
-            <div className="border-b border-slate-100 px-4 py-3 text-sm font-bold text-slate-900">Notifications</div>
-            <div className="px-4 py-8 text-center">
-              <Bell className="mx-auto h-6 w-6 text-slate-300" />
-              <p className="mt-2 text-[13px] font-medium text-slate-700">You&rsquo;re all caught up</p>
-              <p className="mt-0.5 text-xs text-slate-500">Cheque clearances and fee alerts will show here.</p>
-            </div>
-          </div>
-        )}
-      </div>
+        Session {sessionLabel}
+      </div>}
 
       {/* Profile */}
       <div className="relative" ref={profileRef}>

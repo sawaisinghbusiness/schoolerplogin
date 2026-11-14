@@ -72,7 +72,7 @@ export default function MessagesPage() {
           <MessageSquareText className="mx-auto h-8 w-8 text-slate-300" />
           <p className="mt-3 font-semibold text-slate-900">{setupNeeded ? "Messages need a one-time database setup" : "Couldn't load messages"}</p>
           <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">
-            {setupNeeded ? "Run sms backend/supabase/migrations/20261001_messages.sql in the Supabase SQL editor, then check again." : loadError}
+            {setupNeeded ? "Ask your school administrator to enable this module, then check again." : loadError}
           </p>
           <button type="button" onClick={load} className="btn btn-secondary btn-sm mt-4">
             <RefreshCw className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`} />

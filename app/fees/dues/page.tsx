@@ -205,7 +205,7 @@ export default function DuesPage() {
           )}
         </div>
 
-        {!report ? (
+        {error && !report ? <p className="p-6 text-sm text-slate-600">Dues are unavailable. Use the retry action above to reload.</p> : !report ? (
           <div className="space-y-3 p-5">
             {Array.from({ length: 6 }).map((_, i) => (
               <div key={i} className="skeleton h-11 w-full" />

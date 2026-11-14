@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { authService } from "@/lib/services/authService";
 
 export interface CurrentUser {
   name: string;
   role: string;
   initials: string;
+  roleKey: string;
 }
 
 const ROLE_LABELS: Record<string, string> = {
@@ -24,21 +26,21 @@ function initialsOf(name: string): string {
 }
 
 /**
- * Display-only user info saved at login. Auth itself lives in the backend's
- * httpOnly cookie; this is just for greeting and avatars.
+ * Server-confirmed user metadata for greetings and role-specific presentation.
+ * Authorization itself remains enforced by the backend httpOnly session.
  */
 export function useCurrentUser(): CurrentUser {
-  const [user, setUser] = useState<CurrentUser>({ name: "Administrator", role: "Administrator", initials: "AD" });
+  const [user, setUser] = useState<CurrentUser>({ name: "Your account", role: "Loading account", initials: "", roleKey: "" });
 
   useEffect(() => {
-    try {
-      const rawName = localStorage.getItem("schooldesk_user_name") || "Administrator";
-      const rawRole = localStorage.getItem("schooldesk_user_role") || "admin";
-      const name = rawName.replace(/\s*\(.*?\)\s*/g, "").trim() || rawName;
-      setUser({ name, role: ROLE_LABELS[rawRole] || rawRole, initials: initialsOf(name) });
-    } catch {
-      // storage unavailable — keep defaults
-    }
+    let active = true;
+    authService.currentUser().then(account => {
+      if (!active) return;
+      if (!account) { setUser({ name: "Your account", role: "Account unavailable", initials: "", roleKey: "" }); return; }
+      const name = account.name.replace(/\s*\(.*?\)\s*/g, "").trim() || account.name;
+      setUser({ name, role: ROLE_LABELS[account.role] || account.role, initials: initialsOf(name), roleKey: account.role });
+    });
+    return () => { active = false; };
   }, []);
 
   return user;

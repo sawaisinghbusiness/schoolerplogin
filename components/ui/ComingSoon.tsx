@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Check, Clock } from "lucide-react";
-import { PLANNED, PHASE_NAMES } from "@/lib/roadmap";
+import { ArrowRight, Clock } from "lucide-react";
+import { PLANNED } from "@/lib/roadmap";
 
 /**
  * Honest placeholder for a planned screen: what it will do and when,
@@ -24,18 +24,16 @@ export function ComingSoon({ route }: { route: string }) {
             <Clock className="h-[18px] w-[18px]" />
           </span>
           <div>
-            <p className="text-[15px] font-semibold text-slate-900">Coming in phase {p.phase}</p>
-            <p className="text-[13px] text-slate-500">{PHASE_NAMES[p.phase]} · This page is planned and not built yet, so it shows no sample data.</p>
+            <p className="text-[15px] font-semibold text-slate-900">Not available yet</p>
+            <p className="text-[13px] text-slate-500">This module is planned and is not available for school work yet.</p>
           </div>
         </div>
         <div className="px-6 py-5">
-          <h2 className="text-sm font-semibold text-slate-900">What this page will do</h2>
+          <h2 className="text-sm font-semibold text-slate-900">Planned capabilities</h2>
           <ul className="mt-3 space-y-2.5">
             {p.features.map((f) => (
               <li key={f} className="flex items-start gap-2.5 text-sm text-slate-700">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
-                  <Check className="h-3 w-3" strokeWidth={3} />
-                </span>
+                <span aria-hidden="true" className="mt-2 h-1 w-1 shrink-0 rounded-full bg-slate-400" />
                 {f}
               </li>
             ))}

@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useId, useRef } from "react";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
+import { useDialog } from "./useDialog";
 
 /**
  * Right-hand panel over the page: title bar, scrolling body, fixed footer.
@@ -31,25 +32,18 @@ export function SideDrawer({
 }) {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
-  useEffect(() => {
-    if (!isOpen) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key !== "Escape") return;
-      e.stopPropagation();
-      if (!busy) onClose();
-    };
-    window.addEventListener("keydown", onKey, true);
-    return () => window.removeEventListener("keydown", onKey, true);
-  }, [isOpen, busy, onClose]);
+  const dialog = useRef<HTMLElement>(null);
+  const titleId = useId();
+  useDialog(mounted && isOpen, dialog, onClose, busy);
 
   if (!mounted || !isOpen) return null;
   return createPortal(
     <div className="fixed inset-0 z-40 flex justify-end">
       <div className="absolute inset-0 bg-night-950/40 animate-fadeIn" onClick={() => !busy && onClose()} />
-      <aside role="dialog" aria-modal="true" className={`relative flex h-[100dvh] w-full ${width} flex-col bg-canvas shadow-2xl animate-slide-in-right`}>
+      <aside ref={dialog} tabIndex={-1} aria-labelledby={titleId} role="dialog" aria-modal="true" className={`erp-dialog relative flex h-[100dvh] w-full ${width} flex-col bg-[#f6f7f9] shadow-2xl animate-slide-in-right`}>
         <header className="flex min-h-[3.5rem] shrink-0 items-center gap-3 border-b border-slate-300/50 bg-white px-4 pb-2.5 pt-[calc(0.625rem+env(safe-area-inset-top))] sm:min-h-[4rem] sm:px-5 sm:py-3">
           <div className="min-w-0 flex-1">
-            <h2 className="truncate text-lg font-bold text-slate-900">{title}</h2>
+            <h2 id={titleId} className="truncate text-lg font-bold text-slate-900">{title}</h2>
             {subtitle && <p className="truncate text-xs text-slate-500">{subtitle}</p>}
           </div>
           {headerExtra}

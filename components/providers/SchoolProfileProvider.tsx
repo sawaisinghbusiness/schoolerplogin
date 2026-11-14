@@ -40,6 +40,11 @@ export function SchoolProfileProvider({ children }: { children: React.ReactNode 
     refreshProfile();
   }, [refreshProfile]);
 
+  // The browser tab carries the name from ERP Settings ("St. Paul School | SchoolDesk ERP").
+  useEffect(() => {
+    if (!isLoading && schoolProfile.school_name) document.title = `${schoolProfile.school_name} | SchoolDesk ERP`;
+  }, [isLoading, schoolProfile.school_name]);
+
   const updateProfile = async (newProfile: SchoolProfile) => {
     const res = await schoolProfileService.updateProfile(newProfile);
     if (res.success && res.data) {

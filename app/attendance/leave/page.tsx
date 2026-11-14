@@ -51,6 +51,7 @@ const sentAgo = (iso: string) => {
 const phone = (p: string) => (p.length === 10 ? `${p.slice(0, 5)} ${p.slice(5)}` : p);
 
 export default function LeaveRequestsPage() {
+  const [loadError, setLoadError] = useState<string | null>(null);
   const [filter, setFilter] = useState<Filter>("pending");
   const [res, setRes] = useState<ListResult | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
@@ -66,8 +67,9 @@ export default function LeaveRequestsPage() {
 
   const load = useCallback(async () => {
     setRes(null);
+    setLoadError(null);
     const r = await api.get<ListResult>(`/api/leave-requests?filter=${filter}`);
-    if (!r.ok) toast(r.error || "Could not load leave requests.", "error");
+    if (!r.ok) { setLoadError(r.error || "Could not load leave requests."); return; }
     setRes(r.data && Array.isArray(r.data.data) ? r.data : { setupNeeded: false, pending: 0, data: [] });
   }, [filter]);
   useEffect(() => {
@@ -94,7 +96,7 @@ export default function LeaveRequestsPage() {
       <div className="card mx-auto mt-6 max-w-lg p-8 text-center">
         <CalendarOff className="mx-auto h-8 w-8 text-slate-300" />
         <p className="mt-3 font-semibold text-slate-900">Leave requests need a one-time database setup</p>
-        <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">Run sms backend/supabase/migrations/20261006_parent_app.sql in the Supabase SQL editor.</p>
+        <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">Ask your school administrator to enable this module, then check again.</p>
         <button type="button" onClick={load} className="btn btn-secondary btn-sm mt-4">
           <RefreshCw className="h-4 w-4" />
           Check again
@@ -153,7 +155,7 @@ export default function LeaveRequestsPage() {
         ))}
       </div>
 
-      {!res ? (
+      {loadError ? <div role="alert" className="alert alert-rose"><span className="flex-1">Could not load leave requests: {loadError}</span><button type="button" onClick={load} className="btn btn-secondary btn-sm">Try again</button></div> : !res ? (
         <div className="card space-y-3 p-5">
           {Array.from({ length: 4 }).map((_, i) => (
             <div key={i} className="skeleton h-14 w-full" />

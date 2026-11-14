@@ -38,7 +38,6 @@ const titleCase = (s: string) => s.toLowerCase().replace(/(^|[\s.(-])([a-z])/g, 
 const SoonTag = () => <span className="ml-auto shrink-0 rounded px-1.5 py-px text-[10.5px] font-semibold text-night-500 ring-1 ring-night-700">Soon</span>;
 
 /** The marigold marker on the active row. */
-const ActiveBar = () => <span aria-hidden className="absolute -left-3 top-1/2 h-6 w-[3px] -translate-y-1/2 rounded-r-full bg-marigold-400" />;
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const pathname = usePathname();
@@ -96,8 +95,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               : "font-medium text-night-300 hover:bg-white/[0.04] hover:text-white"
         }`}
       >
-        {active && <ActiveBar />}
-        <Icon className={`h-[18px] w-[18px] shrink-0 ${active ? "text-marigold-400" : item.soon ? "text-night-600" : "text-night-400 group-hover:text-night-200"}`} strokeWidth={1.9} />
+
+        <Icon className={`h-[18px] w-[18px] shrink-0 ${active ? "text-brand-200" : item.soon ? "text-night-600" : "text-night-400 group-hover:text-night-200"}`} strokeWidth={1.9} />
         <span className="truncate">{item.title}</span>
         {item.soon && !active && <SoonTag />}
       </Link>
@@ -124,7 +123,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 : "font-medium text-night-300 hover:bg-white/[0.04] hover:text-white"
           }`}
         >
-          <Icon className={`h-[18px] w-[18px] shrink-0 ${hasActiveChild ? "text-marigold-400" : item.soon ? "text-night-600" : "text-night-400 group-hover:text-night-200"}`} strokeWidth={1.9} />
+          <Icon className={`h-[18px] w-[18px] shrink-0 ${hasActiveChild ? "text-brand-200" : item.soon ? "text-night-600" : "text-night-400 group-hover:text-night-200"}`} strokeWidth={1.9} />
           <span className="flex-1 truncate">{item.title}</span>
           {item.soon && <SoonTag />}
           <ChevronRight className={`h-4 w-4 shrink-0 text-night-500 transition-transform duration-200 ${expanded ? "rotate-90" : ""}`} />
@@ -150,7 +149,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                           : "text-night-300 hover:bg-white/[0.04] hover:text-white"
                     }`}
                   >
-                    {active && <span aria-hidden className="absolute -left-[13px] top-1/2 h-5 w-[3px] -translate-y-1/2 rounded-r-full bg-marigold-400" />}
+
                     <span className="truncate">{child.title}</span>
                     {child.soon && !active && !item.soon && <SoonTag />}
                   </Link>
@@ -168,7 +167,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       {isOpen && <div onClick={onClose} className="fixed inset-0 z-30 bg-night-950/50 md:hidden" />}
 
       <aside
-        className={`fixed inset-y-0 left-0 z-40 flex h-full w-[256px] shrink-0 select-none flex-col overflow-hidden bg-night-900 text-night-200 transition-transform duration-300 ease-out md:static md:z-20 md:translate-x-0 ${
+        className={`erp-sidebar fixed inset-y-0 left-0 z-40 flex h-full w-[244px] shrink-0 select-none flex-col overflow-hidden bg-night-900 text-night-200 transition-transform duration-300 ease-out md:static md:z-20 md:translate-x-0 ${
           isOpen ? "translate-x-0 shadow-2xl" : "-translate-x-full"
         }`}
       >
@@ -179,7 +178,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               <img src={schoolProfile.logo_url} alt="" className="h-full w-full object-contain" />
             </div>
           ) : (
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-marigold-400 text-[13px] font-extrabold text-night-950">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-600 text-[13px] font-semibold text-white">
               {schoolInitials(schoolProfile.school_name)}
             </div>
           )}
@@ -187,7 +186,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <div className="line-clamp-2 text-[13px] font-bold text-white" title={schoolProfile.school_name}>
               {titleCase(schoolProfile.school_name)}
             </div>
-            <div className="mt-0.5 text-xs text-night-400">Barmer · 2026-27</div>
+            <div className="mt-0.5 text-xs text-night-400">{schoolProfile.city || "School office"}</div>
           </div>
           {onClose && (
             <button onClick={onClose} className="rounded-md p-1.5 text-night-400 hover:bg-white/5 hover:text-white md:hidden" aria-label="Close menu">
@@ -201,10 +200,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           <Search className="pointer-events-none absolute left-6 top-1/2 h-4 w-4 -translate-y-[calc(50%+4px)] text-night-500" />
           <input
             type="text"
-            placeholder="Find a page"
+            placeholder="Filter menu"
+            aria-label="Filter navigation menu"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full rounded-lg border border-night-700 bg-night-850 py-2 pl-9 pr-8 text-[13.5px] text-white placeholder:text-night-500 focus:border-marigold-400/60 focus:outline-none focus:ring-2 focus:ring-marigold-400/20"
+            className="w-full rounded-lg border border-night-700 bg-night-850 py-2 pl-9 pr-8 text-[13.5px] text-white placeholder:text-night-500 focus:border-brand-300 focus:outline-none focus:ring-2 focus:ring-brand-300/20"
           />
           {query && (
             <button onClick={() => setQuery("")} className="absolute right-5 top-1/2 -translate-y-[calc(50%+4px)] rounded p-0.5 text-night-400 hover:text-white" aria-label="Clear">

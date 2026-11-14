@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CalendarCheck2, ClipboardList, Home, IndianRupee, LayoutGrid, ReceiptText, Users } from "lucide-react";
+import { useCurrentUser } from "./useCurrentUser";
 
 type Tab = { href: string; label: string; icon: typeof Home; match: string };
 
@@ -37,15 +38,8 @@ const TABS: Record<string, Tab[]> = {
 
 export function MobileTabBar({ onMenu, menuOpen }: { onMenu: () => void; menuOpen: boolean }) {
   const pathname = usePathname() || "";
-  const [role, setRole] = useState("admin");
-  useEffect(() => {
-    try {
-      setRole(localStorage.getItem("schooldesk_user_role") || "admin");
-    } catch {
-      // keep the default
-    }
-  }, []);
-  const tabs = TABS[role] || TABS.admin;
+  const { roleKey } = useCurrentUser();
+  const tabs = TABS[roleKey] || [];
   const activeTab = tabs
     .filter((t) => pathname === t.match || pathname.startsWith(t.match + "/"))
     .sort((a, b) => b.match.length - a.match.length)[0];

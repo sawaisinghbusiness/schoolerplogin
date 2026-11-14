@@ -19,6 +19,7 @@ const todayCol = () => {
 export default function TimetablePage() {
   const { schoolProfile } = useSchoolProfile();
   const [ov, setOv] = useState<Overview | null>(null);
+  const [gridError, setGridError] = useState<string | null>(null);
   const [failed, setFailed] = useState<string | null>(null);
   const [tab, setTab] = useState<Tab>("class");
   const [classId, setClassId] = useState("");
@@ -66,8 +67,9 @@ export default function TimetablePage() {
 
   const loadSection = useCallback(async () => {
     if (!sectionId) return;
+    setGridError(null);
     const r = await timetableService.section(sectionId);
-    if (r.error) toast(r.error, "error");
+    if (r.error) { setGridError(r.error); return; }
     setEntries(r.entries);
     setBusy(r.busy);
   }, [sectionId]);
@@ -80,8 +82,9 @@ export default function TimetablePage() {
   useEffect(() => {
     if (tab !== "teacher" || !teacherId) return;
     setTEntries(null);
+    setGridError(null);
     timetableService.teacher(teacherId).then((r) => {
-      if (r.error) toast(r.error, "error");
+      if (r.error) { setGridError(r.error); return; }
       setTEntries(r.entries);
     });
   }, [tab, teacherId]);
@@ -98,7 +101,7 @@ export default function TimetablePage() {
       <div className="card mx-auto mt-6 max-w-lg p-8 text-center">
         <CalendarDays className="mx-auto h-8 w-8 text-slate-300" />
         <p className="mt-3 font-semibold text-slate-900">{ov?.setupNeeded ? "Timetable needs a one-time database setup" : "Could not load the timetable"}</p>
-        {ov?.setupNeeded && <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">Run sms backend/supabase/migrations/20261003_timetable.sql in the Supabase SQL editor.</p>}
+        {ov?.setupNeeded && <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">Ask your school administrator to enable this module, then check again.</p>}
         <button type="button" onClick={loadOverview} className="btn btn-secondary btn-sm mt-4">
           <RefreshCw className="h-4 w-4" />
           Try again
@@ -114,7 +117,7 @@ export default function TimetablePage() {
         {ov && (
           <div className="flex justify-end gap-2">
             {tab === "class" && section && (
-              <button type="button" onClick={() => setPrinting(true)} className="btn btn-secondary px-3 sm:px-4" aria-label="Print timetable">
+              <button type="button" disabled={!!gridError} onClick={() => setPrinting(true)} className="btn btn-secondary px-3 sm:px-4" aria-label="Print timetable">
                 <Printer className="h-4 w-4" />
                 <span className="hidden sm:inline">Print</span>
               </button>
@@ -197,7 +200,7 @@ export default function TimetablePage() {
             <div className="card px-6 py-14 text-center text-sm text-slate-600">No teachers on the staff list yet.</div>
           ) : (
             <section className="card overflow-hidden" aria-label={tab === "class" ? `Timetable of ${classSec}` : "Teacher timetable"}>
-              {(tab === "class" ? entries === null : tEntries === null) ? (
+              {gridError ? <div role="alert" className="p-6 text-sm text-rose-700"><p>Could not load this timetable: {gridError}</p><button type="button" className="btn btn-secondary btn-sm mt-3" onClick={() => { if (tab === "class") loadSection(); else { setGridError(null); setTEntries(null); timetableService.teacher(teacherId).then(r => { if (r.error) setGridError(r.error); else setTEntries(r.entries); }); } }}>Try again</button></div> : (tab === "class" ? entries === null : tEntries === null) ? (
                 <div className="space-y-3 p-5">
                   {Array.from({ length: 6 }).map((_, i) => (
                     <div key={i} className="skeleton h-14 w-full" />

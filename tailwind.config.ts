@@ -8,7 +8,7 @@ import type { Config } from "tailwindcss";
  *  - slate   -> "Ink": a cool neutral with a slight indigo bias (authority, calm)
  *  - emerald -> "Jade": the brand green (growth/learning, and still reads as
  *               "success" wherever pages use it for Present/Paid states)
- * `brand` aliases Jade for new code; `marigold` is a warm accent used sparingly.
+ * `brand` aliases royal indigo for actions; Jade is reserved for positive status.
  */
 
 const ink = {

@@ -40,6 +40,7 @@ const stamp = (iso: string) => new Date(iso).toLocaleString("en-IN", { day: "num
 const STATUS = { waiting: "Waiting for the parent", yes: "Parent said Okay", other: "Parent asked for another time" } as const;
 
 export default function ParentChatsPage() {
+  const [loadError, setLoadError] = useState<string | null>(null);
   const [rows, setRows] = useState<Row[] | null>(null);
   const [setup, setSetup] = useState(false);
   const [q, setQ] = useState("");
@@ -48,8 +49,9 @@ export default function ParentChatsPage() {
 
   const load = useCallback(async () => {
     setRows(null);
+    setLoadError(null);
     const r = await api.get<{ setupNeeded: boolean; data: Row[]; error?: string }>("/api/teacher-chats");
-    if (!r.ok) toast(r.error || "Could not load chats.", "error");
+    if (!r.ok) { setLoadError(r.error || "Could not load chats."); return; }
     setSetup(!!r.data?.setupNeeded);
     setRows(Array.isArray(r.data?.data) ? r.data!.data : []);
   }, []);
@@ -83,7 +85,7 @@ export default function ParentChatsPage() {
       <div className="card mx-auto mt-6 max-w-lg p-8 text-center">
         <MessagesSquare className="mx-auto h-8 w-8 text-slate-300" />
         <p className="mt-3 font-semibold text-slate-900">Parent–teacher chats need a one-time database setup</p>
-        <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">Run sms backend/supabase/migrations/20261013_teacher_chat.sql in the Supabase SQL editor.</p>
+        <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">Ask your school administrator to enable this module, then check again.</p>
         <button type="button" onClick={load} className="btn btn-secondary btn-sm mt-4">
           <RefreshCw className="h-4 w-4" />
           Check again
@@ -113,7 +115,7 @@ export default function ParentChatsPage() {
               <input className="field pl-9" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Student, class or teacher" />
             </label>
           </div>
-          {rows === null ? (
+          {loadError ? <div role="alert" className="p-5 text-sm text-rose-700"><p>Could not load chats: {loadError}</p><button type="button" onClick={load} className="btn btn-secondary btn-sm mt-3">Try again</button></div> : rows === null ? (
             <p className="p-5 text-sm text-slate-500">Loading…</p>
           ) : shown.length === 0 ? (
             <p className="p-5 text-sm text-slate-500">{rows.length ? "No chat matches this search." : "No parent has written to a teacher yet."}</p>

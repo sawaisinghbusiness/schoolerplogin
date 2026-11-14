@@ -68,6 +68,8 @@ export default function OnlinePaymentsPage() {
 
   const load = async () => {
     setLoading(true);
+    setRows(null);
+    setError(null);
     const r = await api.get<{ setupNeeded: boolean; data: Claim[] }>(`/api/fee-claims?status=${status}`);
     setLoading(false);
     if (!r.ok || !r.data) return setError(r.error || "Could not load.");
@@ -142,7 +144,7 @@ export default function OnlinePaymentsPage() {
       )}
 
       <section className="card overflow-hidden">
-        {!rows ? (
+        {error && !rows ? <div className="p-8 text-center"><p className="text-sm text-slate-600">Payment claims are unavailable</p><button type="button" onClick={load} className="btn btn-secondary btn-sm mt-3">Try again</button></div> : !rows ? (
           <div className="flex items-center justify-center gap-2 p-10 text-sm text-slate-500">
             <Loader2 className="h-4 w-4 animate-spin" /> Loading…
           </div>

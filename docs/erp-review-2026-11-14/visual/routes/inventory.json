@@ -1,0 +1,191 @@
+[
+  {
+    "route": "transport/students",
+    "url": "http://127.0.0.1:3007/transport",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSchool\nTransport\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nTransport\nStudents on bus\n0\nRoutes\n0\nSeats\n—\nWithout a route\n0\n\nNo bus route yet",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "students/enquiries",
+    "url": "http://127.0.0.1:3007/students/enquiries",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nStudents\nEnquiries\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nEnquiries\nNew enquiry\n\nEnquiries need a one-time database setup\n\nThis state has no review fixture.\n\nCheck again",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "students/documents",
+    "url": "http://127.0.0.1:3007/students/documents",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nStudents\nPhotos\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nPhotos\n6th\n7th\n8th\nAll sections\nSection A\nSection B\nAll 8\nNo photo 8\nAS\nAarav Sharma\nRoll 1\nAS\nAarav Sharma\nRoll 7\nAS\nAarav Sharma\nRoll 13\nAS\nAarav Sharma\nRoll 19\nVS\nVihaan Singh\nRoll 4\nVS\nVihaan Singh\nRoll 10\nVS\nVihaan Singh\nRoll 16\nVS\nVihaan Singh\nRoll 22",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "students/certificates",
+    "url": "http://127.0.0.1:3007/students/certificates",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nStudents\nCertificates\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nCertificates\nIssue certificate\n\nThe certificate register needs a one-time database setup\n\nThis state has no review fixture.\n\nCheck again",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "staff/new",
+    "url": "http://127.0.0.1:3007/staff?new=1",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nStaff\nDirectory\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nStaff directory\n\n8 on staff · 0 with a login\n\n6 of 6 sections have no class teacher\n\nAll\n8\nTeaching\n6\nNon-teaching\n2\nLeft\n0\nStaff\tMobile\tClass teacher\tLogin\t\n\nNS\nNeha Sharma\nEMP-100 · Teacher\n\t\t—\tNo login\t\n\n\nRM\nRakesh Mehta\nEMP-101 · Teacher\n\t\t—\tNo login\t\n\n\nKD\nKamla Devi\nEMP-102 · Teacher\n\t\t—\tNo login\t\n\n\nMS\nManish Singh\nEMP-103 · Teacher\n\t\t—\tNo login\t\n\n\nNS\nNeha Sharma\nEMP-104 · Teacher\n\t\t—\tNo login\t\n\n\nRM\nRakesh Mehta\nEMP-105 · Teacher\n\t\t—\tNo login\t\n\n\nKD\nKamla Devi\nEMP-106 · Office Clerk\n\t\tOffice\tNo login\t\n\n\nMS\nManish Singh\nEMP-107 · Office Clerk\n\t\tOffice\tNo login\t\n\n8 people\n\nAdd staff\n\nTeachers and office staff\n\nTeaching\nNon-teaching\nFull name\nEmployee code\nDesignation\nDepartment\n\ne.g. Science, Primary wing\n\nMobile\nOther mobile (optional)\nEmail (optional)\nGender\n—\nFemale\nMale\nOther\nDate of birth\nJoined on\nQualification\nExperience before joining (years)\nAddress\nNotes (office only)\nCancel\nAdd staff",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "staff/leave",
+    "url": "http://127.0.0.1:3007/staff/attendance?tab=leave",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nStaff\nAttendance & leave\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nStaff attendance & leave\n\nMark the whole staff for a day, see the month, and record leave · view only\n\nToday\nRegister\nLeave\nAll\nPending\nApproved\nRejected\n\nThis state has no review fixture.\n\nTry again",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "staff/attendance",
+    "url": "http://127.0.0.1:3007/staff/attendance",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nStaff\nAttendance & leave\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nStaff attendance & leave\n\nMark the whole staff for a day, see the month, and record leave · view only\n\nToday\nRegister\nLeave\n\nThis state has no review fixture.\n\nTry again",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "staff/allocation",
+    "url": "http://127.0.0.1:3007/staff/allocation",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSchoolDesk\nAllocation\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nSubjects & class teachers\n\nWho teaches what, and the class teacher of every section.\n\nComing in phase 5\n\nStaff, payroll & transport · This page is planned and not built yet, so it shows no sample data.\n\nWhat this page will do\nSection × subject grid with teacher picker\nClass teacher per section\nDrives each teacher's menu and marks entry",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "settings/templates",
+    "url": "http://127.0.0.1:3007/settings/templates",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSchoolDesk\nTemplates\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nPrint templates\n\nHeader and footer for receipts, certificates, ID cards and report cards.\n\nComing in phase 2\n\nStudents · This page is planned and not built yet, so it shows no sample data.\n\nWhat this page will do\nSchool logo and address\nPrincipal's signature\nLive preview",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "settings/messaging",
+    "url": "http://127.0.0.1:3007/settings/messaging",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSettings\nWhatsApp\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nWhatsApp\n\nAbsent alerts, fee receipts and reminders go to parents from the school's own WhatsApp number\n\nCould not reach the server\n\nTry again",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "settings/data",
+    "url": "http://127.0.0.1:3007/settings/data",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSchoolDesk\nData\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nData & backup\n\nImport from Excel (including a Schoollog export), export everything, and see who changed what.\n\nComing in phase 1\n\nFees · This page is planned and not built yet, so it shows no sample data.\n\nWhat this page will do\nExcel import with checks\nFull export and backup download\nAudit log of changes",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "settings/classes",
+    "url": "http://127.0.0.1:3007/settings/classes",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSettings\nClasses & subjects\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nClasses & subjects\n\n3 classes · 6 sections · 216 students. Click a section to rename it or set its subjects.\n\nAdd class\nOther\n3 classes · 216 students\n6th\n72 students\nA\n36\nB\n36\nAdd section\n\nEnglish · Hindi · Maths · Science\n\n7th\n72 students\nA\n36\nB\n36\nAdd section\n\nEnglish · Hindi · Maths · Science\n\n8th\n72 students\nA\n36\nB\n36\nAdd section\n\nEnglish · Hindi · Maths · Science",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "reports",
+    "url": "http://127.0.0.1:3007/reports",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSchoolDesk\nReports\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nReports\n\nEvery report in one place, each with filters, print and Excel.\n\nComing in phase 2\n\nStudents · This page is planned and not built yet, so it shows no sample data.\n\nWhat this page will do\nStudents: class strength, gender, category, UDISE, siblings, bus\nFees, attendance, exams and staff\nGate pass log and certificate register",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "messages/new",
+    "url": "http://127.0.0.1:3007/messages?new=1",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nDaily work\nMessages\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nMessages\n\nNotices and reminders to parents on WhatsApp, and who has received them\n\nCouldn't load messages\n\nThis state has no review fixture.\n\nCheck again\nNew message\n\nGoes to parents on WhatsApp, each with their child's name filled in\n\nTo\nWhole school\nClasses\nSections\nFees due\nMessage\nहिंदी\nEnglish\nHoliday\nParent-teacher meeting\nExam\nFee reminder\nBlank\nTitle (for your register)\nText\n0/1000\nFill in for each parent:\n{name}\n{class}\n{father}\n{school}\nHow the first parent gets it\nAlso show on the website notice board\nOnly the title is shown, at the top of the school website.\nCancel\nSave and start sending",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "fees/setup",
+    "url": "http://127.0.0.1:3007/fees/setup",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nFees\nFee setup\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nThis state has no review fixture.",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "fees/reports",
+    "url": "http://127.0.0.1:3007/fees/reports",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nFees\nReports\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nFee reports\n\n1–14 Nov 2026 · cancelled receipts not counted\n\nExport\nToday\nThis week\nThis month\nThis session\nCustom\nCollected\n—\nCash\n—\nUPI\n—\nCheque / DD\n—\nDay book\nHead-wise\nBy collector\nClass-wise\n\nThis state has no review fixture.\n\nTry again",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "calendar",
+    "url": "http://127.0.0.1:3007/calendar",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSchoolDesk\nCalendar\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nCalendar & holidays\n\nSchool events and holidays. Holidays switch off attendance for the day.\n\nComing in phase 3\n\nAttendance & messages · This page is planned and not built yet, so it shows no sample data.\n\nWhat this page will do\nMonth view and list\nHoliday notice to parents (optional)\nShows in the parent app",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "birthdays",
+    "url": "http://127.0.0.1:3007/birthdays",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSchoolDesk\nBirthdays\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nBirthdays\n\nToday's and this week's birthdays of students and staff.\n\nComing in phase 3\n\nAttendance & messages · This page is planned and not built yet, so it shows no sample data.\n\nWhat this page will do\nFrom real dates of birth\nAutomatic wishes at 8 am (on/off)",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "fees/dues",
+    "url": "http://127.0.0.1:3007/fees/dues",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nFees\nDues & reminders\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nDues & reminders\n\nWorking out every student's dues…\n\nExport\nThis state has no review fixture.\nOverdue now\n…\nLate fine so far\n…\nNext instalment\n—\nUp to date\n…\nStudents\nBy class\nAll classes\nAny overdue\n1 instalment\n2 or more\nMost due first\nLongest overdue\nClass order",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "attendance/today",
+    "url": "http://127.0.0.1:3007/attendance/today",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSchoolDesk\nToday\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nToday\n\nEvery section at a glance: marked, pending, and who is absent.\n\nComing in phase 3\n\nAttendance & messages · This page is planned and not built yet, so it shows no sample data.\n\nWhat this page will do\nAll 38 sections with % present or pending\nClass teacher name on pending sections\nRemind teachers in one click\nAbsent list with parents' numbers\n\nAvailable today\n\nMark attendance",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "exams/setup",
+    "url": "http://127.0.0.1:3007/exams/setup",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nExams\nExam setup\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nExam setup\n\nThis session's exams, the marks for each, and the subjects every class is examined in\n\nExams · 2026-27\n\nParents see an exam's report card in their app only after it is locked.\n\nNo exam added yet\n\nAdd the exams for this session — Periodic Test 1, Half Yearly, Periodic Test 2, Annual — then teachers can enter marks.\n\nSubjects by class\n6th\nEnglish, Hindi, Maths, Science\n7th\nEnglish, Hindi, Maths, Science\n8th\nEnglish, Hindi, Maths, Science\n\nThis state has no review fixture.",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "attendance/register",
+    "url": "http://127.0.0.1:3007/attendance/register",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nAttendance\nRegister & reports\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nAttendance register\n\nNovember 2026\n\nPrint\nExport\nClasses not loaded\nNovember 2026\nThis state has no review fixture.\nTry again\nDays marked\n…\nAttendance\n…\nAbsent days\n…\nBelow 75%\n…\nRegister\nBelow 75%",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "exams/report-cards",
+    "url": "http://127.0.0.1:3007/exams/report-cards",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nExams\nReport cards\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nReport cards\n\nEach student's card for an exam, ready to print on A4.\n\nThis state has no review fixture.\nTry again",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "attendance/leave",
+    "url": "http://127.0.0.1:3007/attendance/leave",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nAttendance\nLeave requests\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nLeave requests\n\nSent by parents from the parent app. Approving does not mark attendance; mark the day as Leave in the register as usual.\n\nRefresh\nWaiting\nAnswered\n\nNo leave requests waiting\n\nParents apply for leave from the parent app.\n\nThis state has no review fixture.",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "academics/syllabus",
+    "url": "http://127.0.0.1:3007/academics/syllabus",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSchoolDesk\nSyllabus\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nSyllabus\n\nChapters planned vs taught, class by class.\n\nComing in phase 6\n\nAcademics · This page is planned and not built yet, so it shows no sample data.\n\nWhat this page will do\nChapter plan per subject and month\nTeachers mark lessons done\nCoverage % per class",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "academics",
+    "url": "http://127.0.0.1:3007/academics",
+    "text": "SP\nSchool\nBarmer, Rajasthan\nHome\nAcademics\nAdmission\nContact\nDashboard\n\nHome/Academics\n\nAcademics\n\nSchool follows the CBSE curriculum from Pre-Nursery to Class XII. Here is every class we run, stage by stage.\n\n01\nPre-primary\n\nPre-Nursery, Nursery, LKG, UKG · Ages 3 to 6\n\nPre-Nursery, Nursery, LKG, UKG.\n\n02\nPrimary\n\nClasses I to V · Ages 6 to 11\n\nClasses I to V.\n\n03\nMiddle\n\nClasses VI to VIII · Ages 11 to 14\n\nClasses VI to VIII.\n\n04\nSecondary\n\nClasses IX and X · Class X board exams\n\nClasses IX and X.\n\n05\nSenior Secondary\n\nClasses XI and XII · Class XII board exams\n\nClasses XI and XII.\n\nLooking for a seat in one of these classes?\n\nHow to apply\n\nSchool\n\nAffiliated to CBSE\n\nBarmer, Rajasthan, 344001\nAcademics\nAdmission\nContact\nMandatory Public Disclosure\nStaff & parent login\n\n© 2026 School, Barmer",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "academics/copy-check",
+    "url": "http://127.0.0.1:3007/academics/copy-check",
+    "text": "SS\nSample School ? Ui Review\nBarmer\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSchoolDesk\nCopy Check\nSearch pages…\nCtrl K\nSession 2026?27\nRO\nReview Operator\nAdministrator\nCopy check\n\nNotebook checking with ready remarks.\n\nComing in phase 6\n\nAcademics · This page is planned and not built yet, so it shows no sample data.\n\nWhat this page will do\nComplete, incomplete or not submitted per student\nPreset remarks\nReports by student and teacher",
+    "width": 1440,
+    "scrollWidth": 1440
+  }
+]

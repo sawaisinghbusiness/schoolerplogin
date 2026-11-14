@@ -1,0 +1,62 @@
+/* Office UI. Public website, login and official document layouts keep their own identity. */
+.erp-shell {
+  --erp-canvas: #f6f7f9;
+  --erp-line: #dfe3e9;
+  background: var(--erp-canvas);
+  color: #202630;
+  font-family: "Segoe UI", "Nirmala UI", Arial, sans-serif;
+}
+.erp-dialog { font-family: "Segoe UI", "Nirmala UI", Arial, sans-serif; }
+.erp-shell .erp-content { max-width: 1440px; }
+.erp-shell .erp-topbar { background: #fff; border-bottom-color: var(--erp-line); }
+.erp-shell .page-header { align-items: flex-start; justify-content: space-between; gap: 16px; }
+.erp-shell .page-title { font-size: 24px; font-weight: 650; line-height: 1.3; letter-spacing: -.025em; }
+.erp-shell .page-subtitle { max-width: 65ch; margin-top: 5px; font-size: 13px; line-height: 1.6; color: #596477; }
+.erp-shell .card, .erp-shell .surface { border-color: var(--erp-line); border-radius: 10px; box-shadow: none; }
+.erp-shell .card-hover:hover, .erp-shell .surface-hover:hover { border-color: #bac5d4; box-shadow: none; }
+.erp-shell .panel { border-radius: 8px; background: #f8f9fb; border-color: var(--erp-line); }
+.erp-shell .field { min-height: 40px; border-radius: 7px; border-color: #cbd2dc; padding-block: 9px; box-shadow: none; }
+.erp-shell .field:focus { border-color: #3446d1; box-shadow: 0 0 0 2px rgb(52 70 209 / .12); }
+.erp-shell .field-sm { min-height: 34px; padding-block: 6px; }
+.erp-shell .field-label { font-weight: 550; color: #3b4657; }
+.erp-shell .btn { min-height: 38px; border-radius: 7px; padding: 8px 13px; font-size: 13px; font-weight: 600; box-shadow: none; }
+.erp-shell .btn-sm { min-height: 32px; padding: 5px 10px; font-size: 12px; }
+.erp-shell .btn-secondary { border-color: #cfd6e0; background: #fff; }
+.erp-shell .btn-secondary:hover { background: #f6f8fb; border-color: #aebaca; }
+.erp-shell .badge { border-radius: 5px; padding: 3px 7px; font-size: 11px; font-weight: 550; line-height: 1.3; }
+.erp-shell .alert { border-radius: 8px; }
+.erp-shell .table-head { background: #f8f9fb; color: #526075; }
+.erp-shell .table-head th { height: 42px; font-size: 12px; font-weight: 600; border-bottom-color: var(--erp-line); }
+.erp-shell table:has(.table-head) { font-size: 13px; }
+.erp-shell .page-enter { animation: none; }
+.erp-shell .erp-sidebar { background: #171b23; width: 244px; }
+.erp-shell .erp-sidebar nav > div > p { color: #9ba7ba; }
+.erp-shell .erp-sidebar a[aria-current="page"] { background: #2c354a; color: #fff; }
+.erp-shell .erp-sidebar input { border-radius: 6px; }
+.erp-shell .erp-summary { overflow: hidden; border: 1px solid var(--erp-line); border-radius: 10px; background: #fff; }
+.erp-shell .erp-summary > section { min-width: 0; padding: 19px 22px; }
+.erp-shell .erp-summary > section + section { border-left: 1px solid var(--erp-line); }
+.erp-shell .erp-summary p.tabular-nums { font-size: 27px; font-weight: 650; }
+.erp-shell .erp-search:focus-within { box-shadow: 0 0 0 2px rgb(52 70 209 / .1); }
+.erp-shell .kpi { border-radius: 10px; border-color: var(--erp-line); box-shadow: none; }
+.erp-shell .kpi-note { display: block; margin-top: 4px; font-size: 12px; color: #596477; }
+.erp-shell :is(h2,h3).font-bold { font-weight: 600; }
+.erp-shell .erp-sidebar svg { stroke-width: 1.65; }
+.erp-shell ::selection, .erp-dialog ::selection { background: #dfe5ff; color: #19254b; }
+.erp-shell :focus-visible, .erp-dialog :focus-visible { outline: 2px solid #3446d1; outline-offset: 2px; }
+.erp-dialog .field { border-radius: 7px; border-color: #cbd2dc; box-shadow: none; }
+.erp-dialog .btn { border-radius: 7px; box-shadow: none; }
+.erp-dialog .card { border-radius: 10px; box-shadow: none; }
+.erp-dialog:focus-visible { outline: none; }
+@media (min-width: 640px) and (max-width: 1279px) {
+  .erp-shell .erp-summary > section:nth-child(3) { border-left: 0; }
+  .erp-shell .erp-summary > section:nth-child(n+3) { border-top: 1px solid var(--erp-line); }
+}
+@media (max-width: 639px) {
+  .erp-shell .page-header { flex-direction: column; gap: 12px; }
+  .erp-shell .page-title { font-size: 21px; }
+  .erp-shell .page-header > div:last-child { max-width: 100%; }
+  .erp-shell .btn { min-height: 44px; font-size: 13px; }
+  .erp-shell .btn-sm { min-height: 36px; }
+  .erp-shell .field, .erp-shell .field-sm { min-height: 44px; font-size: 16px; }
+}

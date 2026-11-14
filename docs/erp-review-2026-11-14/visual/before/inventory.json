@@ -1,0 +1,128 @@
+[
+  {
+    "route": "dashboard",
+    "url": "http://127.0.0.1:3007/dashboard",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nDashboard\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\nGood afternoon, Review\nMark attendance\nNew admission\nCollect fee\n\nCollected this month\n\n₹18.6 L\n\nCollected this session\n\n₹1.84 Cr\n\n69% of ₹2.65 Cr\n\nFees pending\n\n₹81.0 L\n\n243 students\nCollect\n\nStudents\n\n1,248\n\n674 boys · 574 girls\n320 by bus\nFee collection by month\n\nSession 2026-27 · ₹ in lakh\n\n0\n10\n20\n30\n40\nApr\nMay\nJun\nJul\n32.0\nAug\nSep\nOct\nNov\n18.6\nHow parents paid\n\nThis session · ₹1.84 Cr\n\nCash\n₹90.0 L\n49%\nUPI\n₹79.0 L\n43%\nCheque\n₹15.0 L\n8%\nClasses with most fees pending\n\n₹ in lakh\n\n6th\n8.5\n7th\n7.2\n8th\n6.5\nNeeds attention today\n3 of 6 sections haven't marked attendance\n3 marked so far today\nMark\n3 cheques received this week\n₹45,000 to deposit in the bank\n243 students have fees pending\n₹81.0 L in total\nCollect\nNo birthdays today\nFrom students' dates of birth",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "students",
+    "url": "http://127.0.0.1:3007/students",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nStudents\nAll students\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\nStudents\nImport\nExport\nNew admission\nAll\n24\nFees pending\n24\nFully paid\n0\nBy bus\n8\nAny field\nName\nSR no.\nParent's name\nMobile\nAdmission no.\nRoll no.\nAddress\nPEN\n/\nClass\nAll\n6th\n7th\n8th\nAll\nSection\nAll\nA\nB\nAll\nGender\nAll\nBoys\nGirls\nAll\nCategory\nAll\nGeneral\nOBC\nMBC\nSC\nST\nEWS\nAll\n\tStudent\tClass\tParent\tFees 2026-27\t\nActions\n\n\n\t\nAS\nAarav Sharma\nS/o Sample Parent 1\n\t6th - A\nBus\n\t\nSample Parent 1\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nAS\nAarav Sharma\nS/o Sample Parent 7\n\t6th - A\nBus\n\t\nSample Parent 7\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nAS\nAarav Sharma\nS/o Sample Parent 13\n\t6th - A\nBus\n\t\nSample Parent 13\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nAS\nAarav Sharma\nS/o Sample Parent 19\n\t6th - A\nBus\n\t\nSample Parent 19\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nVS\nVihaan Singh\nD/o Sample Parent 4\n\t6th - B\nBus\n\t\nSample Parent 4\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nVS\nVihaan Singh\nD/o Sample Parent 10\n\t6th - B\nBus\n\t\nSample Parent 10\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nVS\nVihaan Singh\nD/o Sample Parent 16\n\t6th - B\nBus\n\t\nSample Parent 16\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nVS\nVihaan Singh\nD/o Sample Parent 22\n\t6th - B\nBus\n\t\nSample Parent 22\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nIM\nIshita Mehta\nS/o Sample Parent 5\n\t7th - A\t\nSample Parent 5\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nIM\nIshita Mehta\nS/o Sample Parent 11\n\t7th - A\t\nSample Parent 11\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nIM\nIshita Mehta\nS/o Sample Parent 17\n\t7th - A\t\nSample Parent 17\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nIM\nIshita Mehta\nS/o Sample Parent 23\n\t7th - A\t\nSample Parent 23\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nPJ\nPrisha Joshi\nD/o Sample Parent 2\n\t7th - B\t\nSample Parent 2\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nPJ\nPrisha Joshi\nD/o Sample Parent 8\n\t7th - B\t\nSample Parent 8\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nPJ\nPrisha Joshi\nD/o Sample Parent 14\n\t7th - B\t\nSample Parent 14\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nPJ\nPrisha Joshi\nD/o Sample Parent 20\n\t7th - B\t\nSample Parent 20\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nAR\nAnanya Rathore\nS/o Sample Parent 3\n\t8th - A\t\nSample Parent 3\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nAR\nAnanya Rathore\nS/o Sample Parent 9\n\t8th - A\t\nSample Parent 9\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nAR\nAnanya Rathore\nS/o Sample Parent 15\n\t8th - A\t\nSample Parent 15\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nAR\nAnanya Rathore\nS/o Sample Parent 21\n\t8th - A\t\nSample Parent 21\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nDC\nDev Choudhary\nD/o Sample Parent 6\n\t8th - B\t\nSample Parent 6\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nDC\nDev Choudhary\nD/o Sample Parent 12\n\t8th - B\t\nSample Parent 12\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nDC\nDev Choudhary\nD/o Sample Parent 18\n\t8th - B\t\nSample Parent 18\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nDC\nDev Choudhary\nD/o Sample Parent 24\n\t8th - B\t\nSample Parent 24\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n1–24 of 24",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "fees/collect",
+    "url": "http://127.0.0.1:3007/fees/collect",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nFees\nCollect fee\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\nFind student\n/\nHighest balances\n\nStudents with the most fee pending. Click one to collect.\n\nAS\nAarav Sharma\n6th - A · Sample Parent 1 · 57% paid\n₹18,000\nCollect →\nPJ\nPrisha Joshi\n7th - B · Sample Parent 2 · 57% paid\n₹18,000\nCollect →\nAR\nAnanya Rathore\n8th - A · Sample Parent 3 · 57% paid\n₹18,000\nCollect →\nVS\nVihaan Singh\n6th - B · Sample Parent 4 · 57% paid\n₹18,000\nCollect →\nIM\nIshita Mehta\n7th - A · Sample Parent 5 · 57% paid\n₹18,000\nCollect →\nDC\nDev Choudhary\n8th - B · Sample Parent 6 · 57% paid\n₹18,000\nCollect →\n\nCollected today\n\n₹95,000\n\n18 receipts\n\nCash\n₹40,000\nUPI\n₹50,000\nCheque\n₹5,000\nLatest receipts\n\nNo receipts yet.",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "attendance/mark",
+    "url": "http://127.0.0.1:3007/attendance/mark",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nAttendance\nMark attendance\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\nAttendance\nPresent\n99\nAbsent\n6\nOn leave\n3\nSections left\n3\nSections\nMarked\nNot yet\n6th\nA\n33/362 absent\n92%\nB\nMark →\n36 students · not marked\n7th\nA\n33/362 absent\n92%\nB\nMark →\n36 students · not marked\n8th\nA\n33/362 absent\n92%\nB\nMark →\n36 students · not marked",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "staff",
+    "url": "http://127.0.0.1:3007/staff",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nStaff\nDirectory\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\n\n6 of 6 sections have no class teacher\n\nAll\n8\nTeaching\n6\nNon-teaching\n2\nLeft\n0\nStaff\tMobile\tClass teacher\tLogin\t\n\nNS\nNeha Sharma\nEMP-100 · Teacher\n\t\t—\tNo login\t\n\n\nRM\nRakesh Mehta\nEMP-101 · Teacher\n\t\t—\tNo login\t\n\n\nKD\nKamla Devi\nEMP-102 · Teacher\n\t\t—\tNo login\t\n\n\nMS\nManish Singh\nEMP-103 · Teacher\n\t\t—\tNo login\t\n\n\nNS\nNeha Sharma\nEMP-104 · Teacher\n\t\t—\tNo login\t\n\n\nRM\nRakesh Mehta\nEMP-105 · Teacher\n\t\t—\tNo login\t\n\n\nKD\nKamla Devi\nEMP-106 · Office Clerk\n\t\tOffice\tNo login\t\n\n\nMS\nManish Singh\nEMP-107 · Office Clerk\n\t\tOffice\tNo login\t\n\n8 people",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "settings",
+    "url": "http://127.0.0.1:3007/settings",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSettings\nSchool & sessions\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\nSchool\nSession & holidays\nSchool\nSchool name*\nShort name\nShown in the logo tile and crest, e.g. SPS\nPrincipal's name\nPrinted under the signature line\nLogo\nSS\n\nNo logo yet: the crest with your short name is used\n\nPNG or JPG. A square logo on a white or clear background looks best.\n\nUpload logo\nSchool photo (apps' Home)\nNo photo\n\nNo photo yet: the apps use their built-in picture\n\nA wide photo of the school building (landscape). Shown at the top of the parent and staff apps.\n\nUpload photo\nBoard and registration\nBoard\nCBSE\nRBSE\nICSE\nOther\nAffiliation no.\nSchool no. / code\nUDISE+ code\n11 digits\nAddress and contact\nAddress\nStreet / area\nCity\nDistrict\nState\nPIN code\nOffice phone\nSecond phone\nE-mail\nWebsite\nHow it prints\nSS\n\nSAMPLE SCHOOL ? UI REVIEW\n\nBARMER, RAJASTHAN – 344001\n\nAffiliated to C.B.S.E., New Delhi\n\nAffiliation No. — · School No. —\n\nUsed on fee receipts, TC, bonafide and character certificates, gate passes and the sidebar.",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "exams/marks",
+    "url": "http://127.0.0.1:3007/exams/marks",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nExams\nMarks entry\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\n\nNo exam has been set up yet\n\nAdd this session's exams first, with the subjects for each class.\n\nGo to exam setup",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "fees/online",
+    "url": "http://127.0.0.1:3007/fees/online",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nFees\nOnline payments\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\nOnline payments\nUPI settings\nTo check\nVerified\nRejected\nThis state has no review fixture.\nLoading…",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "fees/receipts",
+    "url": "http://127.0.0.1:3007/fees/receipts",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nFees\nReceipts\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\nReceipts\nExport\nToday\nThis week\nThis month\nThis session\nCustom\n1 Nov 2026 – 14 Nov 2026\nThis state has no review fixture.\nCollected\n…\nHow parents paid\nCancelled\n…\nAll modes\nCash\nUPI\nCheque\nOther\nShow cancelled",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "students/promote",
+    "url": "http://127.0.0.1:3007/students/promote",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nStudents\nPromote & transfer\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\nPromote to next class\nChange section\nFrom\nChoose class and section\n6th - A\n6th - B\n7th - A\n7th - B\n8th - A\n8th - B\nTo (session 2027-28)\n—\nChoose the class and section to promote. Nothing moves until you confirm.",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "messages",
+    "url": "http://127.0.0.1:3007/messages",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nDaily work\nMessages\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\n\nCouldn't load messages\n\nThis state has no review fixture.\n\nCheck again",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "meetings",
+    "url": "http://127.0.0.1:3007/meetings",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nDaily work\nMeetings & PTM\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\nMeetings & PTM\nNew meeting\n\nNo meetings yet\n\nMake a PTM or a meeting; parents see it in their app.\n\nThis state has no review fixture.",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "parent-chats",
+    "url": "http://127.0.0.1:3007/parent-chats",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nDaily work\nParent–teacher chats\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\nParent–teacher chats\nRefresh\nSearch chats\n\nNo parent has written to a teacher yet.\n\nPick a chat on the left to read it.\n\nThis state has no review fixture.",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "academics/homework",
+    "url": "http://127.0.0.1:3007/academics/homework",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nAcademics\nHomework\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\n\nThis state has no review fixture.",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "academics/timetable",
+    "url": "http://127.0.0.1:3007/academics/timetable",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nAcademics\nTimetable\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\n\nCould not load the timetable\n\nTry again",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "staff/payroll",
+    "url": "http://127.0.0.1:3007/staff/payroll",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nStaff\nPayroll\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\nPayroll\nBank sheet\nRun payroll\nNovember 2026\nNet salary\n₹0\nPaid\n₹0\nTo pay\n₹0\nSalary not set\n0\n\nNo staff on the rolls in November 2026\n\nAdd staff\n\nThis state has no review fixture.",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "transport",
+    "url": "http://127.0.0.1:3007/transport",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSchool\nTransport\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\nStudents on bus\n0\nRoutes\n0\nSeats\n—\nWithout a route\n0\n\nNo bus route yet\n\nThis state has no review fixture.",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "route": "settings/users",
+    "url": "http://127.0.0.1:3007/settings/users",
+    "text": "SS\nSample School ? Ui Review\nBarmer · 2026-27\nDashboard\nDaily work\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nAcademics\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\nSchool\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\nReview Operator\nAdministrator\nHome\nSettings\nUsers & roles\nSearch pages…\nCtrl K\nSession 2026–27\nRO\nReview Operator\nAdministrator\nUsers & roles\nMy password\nAdd user\nAdmin\n…\n\nEverything: students, fees, fee setup, settings and these user accounts.\n\nAccounts\n…\n\nCollects fees and prints receipts, handles enquiries. Sees students and reports.\n\nTeacher\n…\n\nMarks attendance and issues gate passes. Sees students and reports.\n\nExam cell\n…\n\nSees students and reports. Marks entry will open for them with Exams.\n\nCouldn't load users\n\nThis state has no review fixture.\n\nTry again",
+    "width": 1440,
+    "scrollWidth": 1440
+  }
+]

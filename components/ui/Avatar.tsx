@@ -20,8 +20,8 @@ const NEUTRAL = "bg-slate-100 text-slate-600 ring-slate-200";
 export const tintFor = (key: string) => TINTS[key.split("").reduce((a, c) => a + c.charCodeAt(0), 0) % TINTS.length];
 
 const SIZES = {
-  sm: "h-8 w-8 rounded-lg text-[11px]",
-  md: "h-10 w-10 rounded-xl text-[13px]",
+  sm: "h-8 w-8 rounded-md text-[11px]",
+  md: "h-10 w-10 rounded-lg text-[13px]",
   lg: "h-14 w-14 rounded-2xl text-base",
 };
 
@@ -32,7 +32,7 @@ export function Avatar({
   photoUrl,
   size = "md",
   className = "",
-  neutral = false,
+  neutral = true,
 }: {
   name: string;
   id?: string;
