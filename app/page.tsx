@@ -4,15 +4,9 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
-import { SiteShell, type SiteTheme } from "@/components/site/SiteShell";
+import { INK, INK_DEEP, MARIGOLD, SiteShell } from "@/components/site/SiteShell";
 import { PublicClass, usePublicSite } from "@/components/site/usePublicSite";
 import { STAGES, plural } from "@/components/site/stages";
-
-/** The Home page keeps its original look (1 Oct 2026): school blue, sky wash with doodles, marigold accents. */
-const INK = "#17507A";
-const INK_DEEP = "#0F3A59";
-const MARIGOLD = "#E9A23B";
-const HOME_THEME: SiteTheme = { ink: INK, inkDeep: INK_DEEP, sky: "#E9F0FB", marigold: MARIGOLD, doodles: true };
 
 /** Hand-drawn marigold stroke under a word in the headline. */
 function Swash() {
@@ -179,7 +173,7 @@ export default function HomePage() {
   const { site, loaded, signedIn } = usePublicSite();
   const { school, stats } = site;
   return (
-    <SiteShell site={site} signedIn={signedIn} theme={HOME_THEME} banner={<Hero phone={school.phone[0]} />}>
+    <SiteShell site={site} signedIn={signedIn} banner={<Hero phone={school.phone[0]} />}>
       <Facts loaded={loaded} students={stats.students} classes={stats.classes} sections={stats.sections} board={school.board} aff={school.affiliation_no} />
       <Stages classes={site.classes} />
       <AdmissionBand phone={school.phone[0]} />

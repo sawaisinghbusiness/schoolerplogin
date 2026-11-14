@@ -6,10 +6,11 @@ import { usePathname } from "next/navigation";
 import { LayoutDashboard, LogIn, Mail, MapPin, Menu, Phone, X } from "lucide-react";
 import { PublicSite, dayLabel, placeOf } from "./usePublicSite";
 
-export const INK = "#183C40"; // school blue: headings, buttons
-export const INK_DEEP = "#14282C"; // footer
-export const SKY = "#F2F4EE"; // page wash behind the header
-export const MARIGOLD = "#B27D3C"; // small accents only
+// The website's look (the Home page's original, used on every public page since 14 Nov 2026).
+export const INK = "#17507A"; // school blue: headings, buttons
+export const INK_DEEP = "#0F3A59"; // footer
+export const SKY = "#E9F0FB"; // page wash behind the header
+export const MARIGOLD = "#E9A23B"; // small accents only
 const BASE_INK = INK;
 const BASE_INK_DEEP = INK_DEEP;
 const BASE_MARIGOLD = MARIGOLD;
@@ -70,7 +71,7 @@ export function SiteShell({ site, signedIn, banner, theme, children }: { site: P
   return (
     <div className="public-school-site min-h-screen bg-white text-slate-800">
       <div className="relative overflow-hidden" style={{ background: theme?.sky ?? SKY }}>
-        {theme?.doodles && <div aria-hidden className="pointer-events-none absolute inset-0 opacity-60" style={{ backgroundImage: DOODLES, backgroundSize: "260px 220px" }} />}
+        {(theme?.doodles ?? true) && <div aria-hidden className="pointer-events-none absolute inset-0 opacity-60" style={{ backgroundImage: DOODLES, backgroundSize: "260px 220px" }} />}
 
         {site.events.length > 0 && (
           <div className="relative z-20 text-white" style={{ background: INK }}>
