@@ -134,7 +134,7 @@ export default function WhatsAppSettingsPage() {
           <Smartphone className="mx-auto h-8 w-8 text-slate-300" />
           <p className="mt-3 font-semibold text-slate-900">WhatsApp needs a one-time database setup</p>
           <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">
-            Run <span className="font-mono text-[13px]">supabase/migrations/20261002_whatsapp.sql</span> (in the backend folder) in the Supabase SQL editor, then check again.
+            Ask your school administrator to enable WhatsApp messaging, then try again.
           </p>
           <button type="button" onClick={loadStatus} className="btn btn-secondary btn-sm mt-4">
             <RefreshCw className="h-4 w-4" />
@@ -219,7 +219,7 @@ export default function WhatsAppSettingsPage() {
           </div>
 
           {/* ── Outbox ── */}
-          <section className="card overflow-hidden" aria-label="Outbox">
+          <section className="card register-table overflow-hidden" aria-label="Outbox">
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2 border-b border-slate-200/80 px-4 py-3 sm:px-5">
               <h2 className="text-[15px] font-semibold text-slate-900">Outbox</h2>
               <span className="text-[13px] tabular-nums text-slate-600">
@@ -245,7 +245,7 @@ export default function WhatsAppSettingsPage() {
               )}
             </div>
             <div className="scroll-row border-b border-slate-100 px-4 py-2 sm:px-5">
-              <div className="flex w-max gap-1 rounded-xl bg-slate-100 p-1" role="tablist" aria-label="Status">
+              <div className="module-tabs flex w-max" role="tablist" aria-label="Status">
                 {FILTERS.map((f) => (
                   <button
                     key={f.key}
@@ -376,7 +376,7 @@ function Toggle({ title, note, sample, on, onChange }: { title: string; note: st
         onClick={() => onChange(!on)}
         className={`relative mt-0.5 h-6 w-11 shrink-0 rounded-full transition ${on ? "bg-emerald-600" : "bg-slate-300"}`}
       >
-        <span className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-all ${on ? "left-[22px]" : "left-0.5"}`} />
+        <span className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-colors ${on ? "left-[22px]" : "left-0.5"}`} />
       </button>
     </div>
   );

@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
-import { Globe, MessageSquareText, Plus, RefreshCw } from "lucide-react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { Globe, MessageSquareText, Plus, RefreshCw, Search } from "lucide-react";
 import { Message, messageService } from "@/lib/services/messageService";
 import { ComposeDrawer } from "@/components/messages/ComposeDrawer";
 import { SendDrawer } from "@/components/messages/SendDrawer";
@@ -30,6 +30,8 @@ export default function MessagesPage() {
   const [composeOpen, setComposeOpen] = useState(false);
   const [openId, setOpenId] = useState<string | null>(null);
   const [me, setMe] = useState("");
+  const [query, setQuery] = useState("");
+  const [status, setStatus] = useState<"all" | "pending" | "sent">("all");
 
   const load = useCallback(async () => {
     setRefreshing(true);
@@ -51,20 +53,22 @@ export default function MessagesPage() {
   }, [load]);
 
   const canWrite = me === "admin" || me === "accountant";
+  const shown = useMemo(() => (list || []).filter(m => {
+    const done = m.total > 0 && m.sent >= m.total;
+    return (status === "all" || (status === "sent" ? done : !done)) && (!query.trim() || `${m.title} ${m.body} ${m.audience_label}`.toLowerCase().includes(query.trim().toLowerCase()));
+  }), [list, query, status]);
 
   return (
     <div className="space-y-5 pb-12">
       <header className="page-header">
         <div>
           <h1 className="page-title">Messages</h1>
-          <p className="page-subtitle">Notices and reminders to parents on WhatsApp, and who has received them</p>
+          <p className="page-subtitle">Notices, reminders and the sending progress for each audience</p>
         </div>
-        {canWrite && !setupNeeded && (
-          <button type="button" onClick={() => setComposeOpen(true)} className="btn btn-primary">
-            <Plus className="h-4 w-4" />
-            New message
-          </button>
-        )}
+        <div className="flex items-center gap-2">
+          <button type="button" onClick={load} disabled={refreshing} className="btn btn-secondary"><RefreshCw className={refreshing ? 'h-4 w-4 animate-spin' : 'h-4 w-4'} /><span>Refresh</span></button>
+          {canWrite && !setupNeeded && <button type="button" onClick={() => setComposeOpen(true)} className="btn btn-primary"><Plus className="h-4 w-4" />New message</button>}
+        </div>
       </header>
 
       {setupNeeded || loadError ? (
@@ -80,19 +84,23 @@ export default function MessagesPage() {
           </button>
         </div>
       ) : (
-        <section className="card overflow-hidden" aria-label="Messages sent">
+        <section className="card workspace-section overflow-hidden" aria-label="Messages sent">
+          <div className="workspace-toolbar flex flex-wrap items-center justify-between gap-3 border-x-0 border-t-0 px-4 py-3 sm:px-5">
+            <div className="module-tabs flex gap-1" aria-label="Message delivery status">{([['all','All messages'],['pending','To send'],['sent','Sent']] as const).map(([key,label]) => <button key={key} type="button" onClick={() => setStatus(key)} aria-pressed={status === key} className={status === key ? 'is-active' : ''}>{label}</button>)}</div>
+            <div className="relative w-full sm:w-72"><Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" /><input type="search" value={query} onChange={e => setQuery(e.target.value)} className="field field-sm w-full pl-9" placeholder="Search title, message or audience" aria-label="Search messages" /></div>
+          </div>
           {list === null ? (
             <div className="space-y-3 p-5">
               {Array.from({ length: 5 }).map((_, i) => (
                 <div key={i} className="skeleton h-11 w-full" />
               ))}
             </div>
-          ) : list.length === 0 ? (
+          ) : shown.length === 0 ? (
             <div className="px-6 py-16 text-center">
               <MessageSquareText className="mx-auto h-8 w-8 text-slate-300" />
-              <p className="mt-3 font-semibold text-slate-800">No message sent yet</p>
-              <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">Holiday notices, meeting dates, exam reminders and fee reminders — written once, sent to every parent with their child&apos;s name.</p>
-              {canWrite && (
+              <p className="mt-3 font-semibold text-slate-800">{list.length ? "No messages match these filters" : "No message sent yet"}</p>
+              <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">{list.length ? "Clear the search or choose another sending status." : "Write a school notice or reminder, then review the audience before sending it to parents."}</p>
+              {canWrite && list.length === 0 && (
                 <button type="button" onClick={() => setComposeOpen(true)} className="btn btn-primary btn-sm mt-4">
                   <Plus className="h-4 w-4" />
                   Write the first message
@@ -102,7 +110,7 @@ export default function MessagesPage() {
           ) : (
             <>
             <ul className="divide-y divide-slate-100 sm:hidden">
-              {list.map((m) => {
+              {shown.map((m) => {
                 const w = when(m.created_at);
                 const done = m.total > 0 && m.sent >= m.total;
                 return (
@@ -124,7 +132,7 @@ export default function MessagesPage() {
               })}
             </ul>
             <div className="hidden overflow-x-auto sm:block">
-              <table className="w-full text-sm">
+              <table className="register-table w-full text-sm">
                 <thead className="table-head">
                   <tr>
                     <th className="px-5 py-3 text-left">Message</th>
@@ -137,7 +145,6 @@ export default function MessagesPage() {
                   {list.map((m) => {
                     const w = when(m.created_at);
                     const done = m.total > 0 && m.sent >= m.total;
-                    const pct = m.total ? Math.round((m.sent / m.total) * 100) : 0;
                     return (
                       <tr key={m.id} onClick={() => setOpenId(m.id)} className="group cursor-pointer">
                         <td className="max-w-[26rem] px-5 py-3">
@@ -152,9 +159,7 @@ export default function MessagesPage() {
                           <span className={`text-[13px] font-semibold tabular-nums ${done ? "text-emerald-700" : "text-slate-800"}`}>
                             {m.sent.toLocaleString("en-IN")} / {m.total.toLocaleString("en-IN")}
                           </span>
-                          <span className="mt-1 block h-1 w-24 overflow-hidden rounded-full bg-slate-100">
-                            <span className={`block h-full rounded-full ${done ? "bg-emerald-500" : "bg-brand-500"}`} style={{ width: `${pct}%` }} />
-                          </span>
+                          <span className="mt-0.5 block text-xs text-slate-500">{done ? "Sent" : "To send"}</span>
                         </td>
                         <td className="hidden whitespace-nowrap px-5 py-3 lg:table-cell">
                           <span className="block text-slate-800">{w.day}</span>

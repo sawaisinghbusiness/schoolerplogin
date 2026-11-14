@@ -30,6 +30,7 @@ function role(): string {
 export default function StaffPage() {
   const [list, setList] = useState<StaffMember[] | null>(null);
   const [classes, setClasses] = useState<ClassItem[]>([]);
+  const [classesError, setClassesError] = useState<string | null>(null);
   const [setupNeeded, setSetupNeeded] = useState(false);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [refreshing, setRefreshing] = useState(false);
@@ -48,6 +49,7 @@ export default function StaffPage() {
     setSetupNeeded(r.setupNeeded);
     setLoadError(r.error || null);
     setList(r.data);
+    setClassesError(c.error || null);
     setClasses(c.data || []);
   }, []);
 
@@ -105,14 +107,13 @@ export default function StaffPage() {
       <header className="page-header sm:items-center">
         <div>
           <h1 className="page-title">Staff directory</h1>
-          <p className="page-subtitle">{list ? `${counts.all} on staff · ${withLogin} with a login` : "Loading…"}</p>
+          <p className="page-subtitle">{loadError ? "Staff records are unavailable" : list ? `${counts.all} on staff · ${withLogin} with a login` : "Loading…"}</p>
         </div>
-        {isAdmin && !setupNeeded && (
-          <button type="button" onClick={() => setForm({ staff: null })} className="btn btn-primary">
-            <Plus className="h-4 w-4" />
-            Add staff
-          </button>
-        )}
+        <div className="flex flex-wrap items-center gap-2">
+          <button type="button" onClick={load} disabled={refreshing} className="btn btn-secondary" aria-label="Refresh staff register"><RefreshCw className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`} /></button>
+          {canAssign && list && !setupNeeded && <button type="button" onClick={() => setCtOpen(true)} disabled={!!classesError} className="btn btn-secondary">Class teachers</button>}
+          {isAdmin && !setupNeeded && <button type="button" onClick={() => setForm({ staff: null })} className="btn btn-primary"><Plus className="h-4 w-4" />Add staff</button>}
+        </div>
       </header>
 
       {setupNeeded || loadError ? (
@@ -127,6 +128,7 @@ export default function StaffPage() {
         </div>
       ) : (
         <>
+          {classesError && <div role="alert" className="alert alert-amber"><span className="flex-1">Staff records loaded, but class assignments are unavailable: {classesError}</span><button type="button" onClick={load} className="btn btn-secondary btn-sm">Retry assignments</button></div>}
           {/* The one thing to act on, when there is something */}
           {list && teachers.length > 0 && sectionsWithoutCT > 0 && (
             <div className="flex items-center gap-3 rounded-xl border border-marigold-200 bg-marigold-50 px-4 py-3 sm:gap-4">
@@ -142,9 +144,9 @@ export default function StaffPage() {
             </div>
           )}
 
-          <section className="card overflow-hidden" aria-label="Staff list">
-            <div className="flex flex-wrap items-center gap-3 border-b border-slate-200/80 px-4 py-3 sm:px-5">
-              <div className="scroll-row max-w-full gap-1 rounded-xl bg-slate-100 p-1" role="tablist" aria-label="Show">
+          <section className="card register-table overflow-hidden" aria-label="Staff list">
+            <div className="workspace-toolbar !rounded-none !border-x-0 !border-t-0 !shadow-none">
+              <div className="module-tabs scroll-row max-w-full" role="tablist" aria-label="Show">
                 {TABS.map((t) => {
                   const on = view === t.key;
                   const n = counts[t.key];
@@ -163,7 +165,7 @@ export default function StaffPage() {
                   );
                 })}
               </div>
-              <div className="relative w-full sm:w-auto sm:max-w-[420px] sm:flex-1">
+              <div className="relative w-full sm:ml-auto sm:w-80">
                 <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
                 <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search name, code, mobile or class" aria-label="Search staff" className="field field-sm w-full pl-9 placeholder:text-slate-500" />
               </div>
@@ -222,7 +224,7 @@ export default function StaffPage() {
                   <table className="w-full text-sm">
                     <thead className="table-head">
                       <tr>
-                        <th className="px-5 py-3 text-left">Staff</th>
+                        <th className="px-5 py-3 text-left">Employee</th>
                         <th className="px-3 py-3 text-left">Mobile</th>
                         <th className="px-3 py-3 text-left">{showCtColumn ? "Class teacher" : view === "left" ? "Left on" : "Department"}</th>
                         <th className="px-3 py-3 text-left">Login</th>

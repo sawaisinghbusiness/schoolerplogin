@@ -176,7 +176,7 @@ export default function FeeReportsPage() {
   const fig = (v: number | undefined) => (loading ? "…" : v === undefined ? "—" : lakh(v));
 
   return (
-    <div className="space-y-5 pb-24">
+    <div className="workspace-page space-y-5 pb-24">
       <header className="page-header">
         <div>
           <h1 className="page-title">Fee reports</h1>
@@ -198,7 +198,7 @@ export default function FeeReportsPage() {
       </header>
 
       <div className="flex flex-wrap items-center gap-2">
-        <div className="scroll-row max-w-full gap-1 rounded-xl bg-slate-100 p-1" role="radiogroup" aria-label="Date range">
+        <div className="module-tabs scroll-row max-w-full gap-1 rounded-xl bg-slate-100 p-1" role="radiogroup" aria-label="Date range">
           {PRESETS.map(([k, l]) => (
             <button
               key={k}
@@ -222,16 +222,16 @@ export default function FeeReportsPage() {
         )}
       </div>
 
-      <div className="kpi-grid">
+      <div className="summary-strip">
         <Figure label="Collected" value={fig(t?.total)} title={t ? inr(t.total) : undefined} note={t && !loading ? `${t.receipts.toLocaleString("en-IN")} receipt${t.receipts === 1 ? "" : "s"}${t.byMode.Other ? ` · ${inr(t.byMode.Other)} other` : ""}` : ""} dot="bg-emerald-500" />
         <Figure label="Cash" value={fig(t?.byMode.Cash)} title={t ? inr(t.byMode.Cash) : undefined} note={t && !loading ? share(t.byMode.Cash) : ""} dot="bg-marigold-400" />
         <Figure label="UPI" value={fig(t?.byMode.UPI)} title={t ? inr(t.byMode.UPI) : undefined} note={t && !loading ? share(t.byMode.UPI) : ""} dot="bg-brand-500" />
         <Figure label="Cheque / DD" value={fig(t?.byMode.Cheque)} title={t ? inr(t.byMode.Cheque) : undefined} note={t && !loading ? share(t.byMode.Cheque) : ""} dot="bg-slate-400" />
       </div>
 
-      <section className="card overflow-hidden">
+      <section className="card workspace-section overflow-hidden">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 border-b border-slate-200/80 p-3 sm:p-4">
-          <div className="scroll-row max-w-full gap-1 rounded-xl bg-slate-100 p-1" role="tablist">
+          <div className="module-tabs scroll-row max-w-full gap-1 rounded-xl bg-slate-100 p-1" role="tablist">
             {TABS.map(([k, l]) => (
               <button
                 key={k}
@@ -303,7 +303,7 @@ export default function FeeReportsPage() {
 
 function Figure({ label, value, note, dot, title }: { label: string; value: string; note: string; dot: string; title?: string }) {
   return (
-    <div className="kpi rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5" title={title}>
+    <div className="kpi p-4 sm:p-5" title={title}>
       <span className="kpi-label">
         <i className={`h-2 w-2 shrink-0 rounded-full ${dot}`} />
         <span className="truncate">{label}</span>

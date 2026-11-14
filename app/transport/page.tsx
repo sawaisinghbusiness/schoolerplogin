@@ -50,7 +50,7 @@ export default function TransportPage() {
   return (
     <div className="space-y-5 pb-12">
       <header className="page-header">
-        <h1 className="page-title">Transport</h1>
+        <div><h1 className="page-title">Transport</h1><p className="page-subtitle">Routes, vehicles, drivers and student allocations</p></div>
         {isAdmin && !setupNeeded && (
           <button type="button" onClick={() => setOpen("new")} className="btn btn-primary">
             <Plus className="h-4 w-4" />
@@ -71,7 +71,7 @@ export default function TransportPage() {
         </div>
       ) : (
         <>
-          <div className="kpi-grid">
+          <div className="summary-strip">
             <Figure label="Students on bus" value={routes ? total.toLocaleString("en-IN") : "…"} dot="bg-brand-500" />
             <Figure label="Routes" value={routes ? String(routes.length) : "…"} dot="bg-slate-400" />
             <Figure label="Seats" value={routes ? (seats ? seats.toLocaleString("en-IN") : "—") : "…"} dot="bg-emerald-500" />
@@ -83,7 +83,8 @@ export default function TransportPage() {
             />
           </div>
 
-          <section className="card overflow-hidden" aria-label="Routes">
+          <section className="card register-table overflow-hidden" aria-label="Routes">
+            <div className="workspace-toolbar !rounded-none !border-x-0 !border-t-0 !shadow-none"><div className="min-w-0 flex-1"><h2 className="text-sm font-semibold text-slate-900">Route register</h2><p className="mt-1 text-xs text-slate-500">Open a route to manage its stops and riders</p></div><button type="button" onClick={load} className="btn btn-secondary btn-sm" aria-label="Refresh routes"><RefreshCw className="h-4 w-4" /></button></div>
             {routes === null ? (
               <div className="space-y-3 p-5">
                 {Array.from({ length: 6 }).map((_, i) => (
@@ -109,6 +110,7 @@ export default function TransportPage() {
                     {noBus === routes.length ? "Add the bus number and driver to each route." : `${noBus} routes still need a bus number or driver.`}
                   </p>
                 )}
+                <div className="hidden grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)_minmax(0,1fr)_auto] gap-4 border-b border-slate-200 bg-slate-50 px-5 py-3 text-xs font-medium text-slate-600 sm:grid"><span>Route / area</span><span>Vehicle / driver</span><span>Occupancy</span><span className="w-4" /></div>
                 <ul className="divide-y divide-slate-100">
                   {routes.map((r) => {
                     const [no, area] = splitName(r.name);
@@ -135,6 +137,7 @@ export default function TransportPage() {
                                 <span className={`block h-full rounded-full ${over ? "bg-rose-500" : "bg-brand-500"}`} style={{ width: `${Math.min(100, full)}%` }} />
                               </span>
                             )}
+                            {over && <span className="mt-1 block text-xs font-medium text-rose-700">{r.students - (r.capacity || 0)} above capacity</span>}
                           </span>
                           <ChevronRight className="h-4 w-4 text-slate-300" />
                         </button>
@@ -160,7 +163,7 @@ function splitName(name: string): [string, string] {
 }
 
 function Figure({ label, value, dot, onClick }: { label: string; value: string; dot: string; onClick?: () => void }) {
-  const cls = "kpi rounded-2xl border border-slate-200/80 bg-white p-4 text-left shadow-card sm:p-5";
+  const cls = "kpi p-4 text-left sm:p-5";
   const inner = (
     <>
       <span className="kpi-label">

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 // Self-hosted variable fonts (bundled from npm, so builds never depend on Google Fonts).
 import "@fontsource-variable/plus-jakarta-sans";
+import "@fontsource-variable/ibm-plex-sans";
 import "@fontsource-variable/jetbrains-mono";
 import "@fontsource-variable/fraunces";
 import "./globals.css";
@@ -20,7 +21,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   // Lets the app draw under the iPhone notch/home bar; padding uses env(safe-area-inset-*).
   viewportFit: "cover",
-  themeColor: "#ECEEF3",
+  themeColor: "#F4F5F7",
 };
 
 export default function RootLayout({

@@ -61,6 +61,7 @@ export default function ParentChatsPage() {
 
   const show = async (id: string) => {
     setLoadingId(id);
+    setOpen(null);
     const r = await api.get<Thread & { error?: string }>(`/api/teacher-chats/${id}`);
     setLoadingId(null);
     if (!r.ok || !r.data) return toast(r.error || "Could not open this chat.", "error");
@@ -98,7 +99,7 @@ export default function ParentChatsPage() {
       <header className="page-header">
         <div>
           <h1 className="page-title">Parent–teacher chats</h1>
-          <p className="page-subtitle">What parents ask teachers in the app. You can read every chat; only the teacher and the family can write.</p>
+          <p className="page-subtitle">Read conversations between families and teachers. Replies are sent from the parent and staff apps.</p>
         </div>
         <button type="button" onClick={load} className="btn btn-secondary min-h-[44px]">
           <RefreshCw className="h-4 w-4" />
@@ -107,12 +108,12 @@ export default function ParentChatsPage() {
       </header>
 
       <div className="grid gap-4 lg:grid-cols-[minmax(0,380px)_minmax(0,1fr)]">
-        <section className="card overflow-hidden">
-          <div className="border-b border-slate-100 p-3">
+        <section className={`card workspace-section overflow-hidden ${open ? "hidden lg:block" : ""}`}>
+          <div className="workspace-toolbar border-x-0 border-t-0 p-3">
             <label className="relative block">
               <span className="sr-only">Search chats</span>
               <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
-              <input className="field pl-9" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Student, class or teacher" />
+              <input className="field w-full pl-9" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Student, class or teacher" />
             </label>
           </div>
           {loadError ? <div role="alert" className="p-5 text-sm text-rose-700"><p>Could not load chats: {loadError}</p><button type="button" onClick={load} className="btn btn-secondary btn-sm mt-3">Try again</button></div> : rows === null ? (
@@ -145,7 +146,7 @@ export default function ParentChatsPage() {
           )}
         </section>
 
-        <section className="card flex min-h-[420px] flex-col overflow-hidden">
+        <section className={`card workspace-section min-h-[420px] flex-col overflow-hidden ${open ? "flex" : "hidden lg:flex"}`}>
           {!open ? (
             <div className="m-auto p-8 text-center">
               <MessagesSquare className="mx-auto h-8 w-8 text-slate-300" />
@@ -169,7 +170,7 @@ export default function ParentChatsPage() {
                 {open.messages.map((m) => {
                   const teacher = m.from === "teacher";
                   return (
-                    <div key={m.id} className={`max-w-[75%] rounded-xl border px-3 py-2 text-[14px] ${teacher ? "self-end border-emerald-100 bg-emerald-50" : "self-start border-slate-200 bg-white"}`}>
+                    <div key={m.id} className={`max-w-[88%] rounded-lg sm:max-w-[75%] border px-3 py-2 text-[14px] ${teacher ? "self-end border-slate-200 bg-slate-100" : "self-start border-slate-200 bg-white"}`}>
                       <p className="text-[11.5px] font-semibold text-slate-500">{teacher ? open.teacher : "Parent"}</p>
                       {m.meeting ? (
                         <p className="text-slate-800">

@@ -180,7 +180,7 @@ export default function ReportCardsPage() {
           <FileText className="mx-auto h-8 w-8 text-slate-300" />
           <p className="mt-3 font-semibold text-slate-900">Exams need a one-time database setup</p>
           <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">
-            Run <code className="rounded bg-slate-100 px-1.5 py-0.5 text-[12px] text-slate-700">{SETUP_FILE}</code> in the Supabase SQL editor, then check again.
+            Ask your school administrator to enable report cards, then check again.
           </p>
           <button type="button" onClick={loadExams} className="btn btn-secondary btn-sm mt-4">
             <RefreshCw className={`h-4 w-4 ${checking ? "animate-spin" : ""}`} />
@@ -254,7 +254,7 @@ export default function ReportCardsPage() {
       ) : (
         <div className="grid items-start gap-5 lg:grid-cols-[280px_minmax(0,1fr)]">
           {/* Students */}
-          <section className="card overflow-hidden" aria-label="Students">
+          <section className="card workspace-section overflow-hidden" aria-label="Students">
             <div className="flex items-center justify-between border-b border-slate-200/80 px-4 py-2.5 text-[13px]">
               <span className="font-semibold text-slate-800">{section}</span>
               <span className="tabular-nums text-slate-500">

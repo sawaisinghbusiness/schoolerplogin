@@ -1,0 +1,17 @@
+[
+  {
+    "route": "attendance/mark",
+    "file": "attendance-mark.png",
+    "url": "http://127.0.0.1:3007/attendance/mark",
+    "title": "SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nFees\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nTimetable\nHomework\n\nSchool\n\nStaff\nTransport\nSettings\nRO\n\nReview Operator\n\nAdministrator\n\nMark attendance\nRO\nDaily attendance\n\nSaturday, 14 November · 3 of 6 sections marked\n\nPresent\n9\nAbsent\n3\nOn leave\n0\nSections left\n3\nAll sections\nNot marked\nMarked\nOpen register\nMark next section\nClass 6th\n2 sections\n6th - A\nMarked by Review operator · 4 students\nReview\n6th - B\nAwaiting attendance · 4 students\nMark\nClass 7th\n2 sections\n7th - A\nMarked by Review operator · 4 students\nReview\n7th - B\nAwaiting attendance · 4 students\nMark\nClass 8th\n2 sections\n8th - A\nMarked by Review operator · 4 students\nReview\n8th - B\nAwaiting attendance · 4 students\nMark\nHome\nStudents\nFees\nAttendance\nMenu",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Daily attendance"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  }
+]

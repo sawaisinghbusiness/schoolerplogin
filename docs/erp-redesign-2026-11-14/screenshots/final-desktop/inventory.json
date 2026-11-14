@@ -1,0 +1,78 @@
+[
+  {
+    "route": "fees/receipts",
+    "file": "fees-receipts.png",
+    "url": "http://127.0.0.1:3007/fees/receipts",
+    "title": "SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nTimetable\nHomework\n\nSchool\n\nStaff\nTransport\nSettings\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nFees\nReceipts\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nReceipts\n\nEvery receipt issued, by number. A cancelled receipt stays in the register, marked cancelled.\n\nExport\nToday\nThis week\nThis month\nThis session\nCustom\n1 Nov 2026 – 14 Nov 2026\nCollected\n₹34,000\nHow parents paid\nCash\n₹16,000\n47%\nUPI\n₹18,000\n53%\nCheque\n₹0\n0%\nCancelled\n0\nAll modes\nCash\nUPI\nCheque\nOther\nShow cancelled\nReceipt\tStudent\tMode\tAmount\tReceived by\t\nActions\n\n\n1024\n14 Nov 2026 · 11:30 am\n\t\nAarav Sharma\n6th - A · SR-1200\n\t\nCash\n\t\n₹2,500\n\tReview Operator\t\n\n\n1025\n13 Nov 2026 · 11:30 am\n\t\nPrisha Joshi\n7th - B · SR-1201\n\t\nUPI\nREVIEW-UTR-1\n\t\n₹3,000\n\tReview Operator\t\n\n\n1026\n12 Nov 2026 · 11:30 am\n\t\nAnanya Rathore\n8th - A · SR-1202\n\t\nCash\n\t\n₹3,500\n\tReview Operator\t\n\n\n1027\n11 Nov 2026 · 11:30 am\n\t\nVihaan Singh\n6th - B · SR-1203\n\t\nUPI\nREVIEW-UTR-3\n\t\n₹4,000\n\tReview Operator\t\n\n\n1028\n14 Nov 2026 · 11:30 am\n\t\nIshita Mehta\n7th - A · SR-1204\n\t\nCash\n\t\n₹4,500\n\tReview Operator\t\n\n\n1029\n13 Nov 2026 · 11:30 am\n\t\nDev Choudhary\n8th - B · SR-1205\n\t\nUPI\nREVIEW-UTR-5\n\t\n₹5,000\n\tReview Operator\t\n\n\n1030\n12 Nov 2026 · 11:30 am\n\t\nAditi Soni\n6th - A · SR-1206\n\t\nCash\n\t\n₹5,500\n\tReview Operator\t\n\n\n1031\n11 Nov 2026 · 11:30 am\n\t\nKabir Jain\n7th - B · SR-1207\n\t\nUPI\nREVIEW-UTR-7\n\t\n₹6,000\n\tReview Operator\t\n8 of 8 shown\nTotal of these ₹34,000",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Receipts"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  },
+  {
+    "route": "staff/new",
+    "file": "staff-new.png",
+    "url": "http://127.0.0.1:3007/staff",
+    "title": "SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nTimetable\nHomework\n\nSchool\n\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nStaff\nDirectory\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nStaff directory\n\n8 on staff · 0 with a login\n\nClass teachers\nAdd staff\nAll\n8\nTeaching\n6\nNon-teaching\n2\nLeft\n0\nEmployee\tMobile\tClass teacher\tLogin\t\n\nNS\nNeha Sharma\nEMP-100 · Teacher\n\t\t6th - A\t\nCreate login\t\n\n\nRM\nRakesh Mehta\nEMP-101 · Teacher\n\t\t6th - B\t\nCreate login\t\n\n\nKD\nKamla Devi\nEMP-102 · Teacher\n\t\t7th - A\t\nCreate login\t\n\n\nMS\nManish Singh\nEMP-103 · Teacher\n\t\t7th - B\t\nCreate login\t\n\n\nPV\nPooja Verma\nEMP-104 · Teacher\n\t\t8th - A\t\nCreate login\t\n\n\nSS\nSanjay Soni\nEMP-105 · Teacher\n\t\t8th - B\t\nCreate login\t\n\n\nSR\nSunita Rao\nEMP-106 · Office Clerk\n\t\tOffice\t\nCreate login\t\n\n\nML\nMohan Lal\nEMP-107 · Office Clerk\n\t\tOffice\t\nCreate login\t\n\n8 people\n\nAdd staff\n\nTeachers and office staff\n\nTeaching\nNon-teaching\nFull name\nEmployee code\nDesignation\nDepartment\n\ne.g. Science, Primary wing\n\nMobile\nOther mobile (optional)\nEmail (optional)\nGender\n—\nFemale\nMale\nOther\nDate of birth\nJoined on\nQualification\nExperience before joining (years)\nAddress\nNotes (office only)\nCancel\nAdd staff",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Staff directory",
+      "Add staff"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  },
+  {
+    "route": "attendance/mark",
+    "file": "attendance-mark.png",
+    "url": "http://127.0.0.1:3007/attendance/mark",
+    "title": "SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nFees\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nTimetable\nHomework\n\nSchool\n\nStaff\nTransport\nSettings\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nAttendance\nMark attendance\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nDaily attendance\n\nSaturday, 14 November · 3 of 6 sections marked\n\nPresent\n9\nAbsent\n3\nOn leave\n0\nSections left\n3\nAll sections\nNot marked\nMarked\nOpen register\nMark next section\nClass / section\nStudents\nPresent\nAbsent\nRegister\nClass 6th\n2 sections\n6th - A\nMarked by Review operator\n4\n3\n1\nReview\n6th - B\nAwaiting attendance\n4\n-\n-\nMark\nClass 7th\n2 sections\n7th - A\nMarked by Review operator\n4\n3\n1\nReview\n7th - B\nAwaiting attendance\n4\n-\n-\nMark\nClass 8th\n2 sections\n8th - A\nMarked by Review operator\n4\n3\n1\nReview\n8th - B\nAwaiting attendance\n4\n-\n-\nMark",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Daily attendance"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  },
+  {
+    "route": "exams/marks",
+    "file": "exams-marks.png",
+    "url": "http://127.0.0.1:3007/exams/marks?exam=exam-review",
+    "title": "SMS Barmer Review School | SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\n\nSchool\n\nStaff\nTransport\nSettings\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nExams\nMarks entry\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nMarks entry\n\nChoose an exam, then open the class and subject register you need to complete\n\nTerm I examination · out of 100\n47% entered · 408 of 864 marks\nMarks entry by class, section and subject\nClass / section\tSubject\tMarks entered\tStatus\tRegister\n\n\n6th - A\n\n36 students\n\n\tEnglish\t0 / 36\tNot started\tEnter marks\nHindi\t3 / 36\tIn progress\tEnter marks\nMathematics\t6 / 36\tIn progress\tEnter marks\nScience\t9 / 36\tIn progress\tEnter marks\n\n\n6th - B\n\n36 students\n\n\tEnglish\t5 / 36\tIn progress\tEnter marks\nHindi\t8 / 36\tIn progress\tEnter marks\nMathematics\t11 / 36\tIn progress\tEnter marks\nScience\t14 / 36\tIn progress\tEnter marks\n\n\n7th - A\n\n36 students\n\n\tEnglish\t10 / 36\tIn progress\tEnter marks\nHindi\t13 / 36\tIn progress\tEnter marks\nMathematics\t16 / 36\tIn progress\tEnter marks\nScience\t19 / 36\tIn progress\tEnter marks\n\n\n7th - B\n\n36 students\n\n\tEnglish\t15 / 36\tIn progress\tEnter marks\nHindi\t18 / 36\tIn progress\tEnter marks\nMathematics\t21 / 36\tIn progress\tEnter marks\nScience\t24 / 36\tIn progress\tEnter marks\n\n\n8th - A\n\n36 students\n\n\tEnglish\t20 / 36\tIn progress\tEnter marks\nHindi\t23 / 36\tIn progress\tEnter marks\nMathematics\t26 / 36\tIn progress\tEnter marks\nScience\t29 / 36\tIn progress\tEnter marks\n\n\n8th - B\n\n36 students\n\n\tEnglish\t25 / 36\tIn progress\tEnter marks\nHindi\t28 / 36\tIn progress\tEnter marks\nMathematics\t31 / 36\tIn progress\tEnter marks\nScience\t34 / 36\tIn progress\tEnter marks",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Marks entry"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  },
+  {
+    "route": "students/enquiries",
+    "file": "students-enquiries.png",
+    "url": "http://127.0.0.1:3007/students/enquiries",
+    "title": "SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nTimetable\nHomework\n\nSchool\n\nStaff\nTransport\nSettings\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nStudents\nEnquiries\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nAdmission enquiries\n\nFollow up with families and move confirmed enquiries into admissions.\n\nNew enquiry\nCall back today\n0\nOpen enquiries\n4\nAdmitted\n0\nNot interested\n0\n4 shown\nChild\tParent\tHeard of us\tCall back\tStatus\t\nAdmit\n\n\nAarav Sharma\nfor 6th · ENQ-0400 · 12 Nov\n\t\nRajesh Sharma\n\tSchool visit\t16 Nov\tNew\t\nAdmit\n\nPrisha Joshi\nfor 7th · ENQ-0401 · 12 Nov\n\t\nMahesh Joshi\n\tSchool visit\t16 Nov\tVisited school\t\nAdmit\n\nAnanya Rathore\nfor 8th · ENQ-0402 · 12 Nov\n\t\nSuresh Rathore\n\tSchool visit\t16 Nov\tVisited school\t\nAdmit\n\nVihaan Singh\nfor 6th · ENQ-0403 · 12 Nov\n\t\nVikram Singh\n\tSchool visit\t16 Nov\tVisited school\t\nAdmit",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Admission enquiries"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  }
+]

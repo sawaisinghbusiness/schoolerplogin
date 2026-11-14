@@ -12,13 +12,13 @@ export function ComingSoon({ route }: { route: string }) {
   if (!p) return null;
 
   return (
-    <div className="mx-auto max-w-3xl space-y-6 pb-12">
-      <header>
+    <div className="space-y-6 pb-12">
+      <header className="page-header">
         <h1 className="page-title">{p.title}</h1>
         <p className="page-subtitle">{p.summary}</p>
       </header>
 
-      <section className="card overflow-hidden">
+      <section className="card max-w-3xl overflow-hidden">
         <div className="flex flex-wrap items-center gap-3 border-b border-slate-100 bg-slate-50/60 px-6 py-4">
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
             <Clock className="h-[18px] w-[18px]" />
@@ -28,8 +28,8 @@ export function ComingSoon({ route }: { route: string }) {
             <p className="text-[13px] text-slate-500">This module is planned and is not available for school work yet.</p>
           </div>
         </div>
-        <div className="px-6 py-5">
-          <h2 className="text-sm font-semibold text-slate-900">Planned capabilities</h2>
+        <details className="px-6 py-4">
+          <summary className="cursor-pointer text-sm font-medium text-slate-700">Planned capabilities</summary>
           <ul className="mt-3 space-y-2.5">
             {p.features.map((f) => (
               <li key={f} className="flex items-start gap-2.5 text-sm text-slate-700">
@@ -38,7 +38,7 @@ export function ComingSoon({ route }: { route: string }) {
               </li>
             ))}
           </ul>
-        </div>
+        </details>
         {p.meanwhile && p.meanwhile.length > 0 && (
           <div className="border-t border-slate-100 px-6 py-4">
             <p className="text-[13px] font-medium text-slate-500">Available today</p>

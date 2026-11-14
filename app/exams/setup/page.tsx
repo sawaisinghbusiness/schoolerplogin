@@ -120,7 +120,7 @@ export default function ExamSetupPage() {
           </button>
         </div>
       ) : (
-        <section className="card overflow-hidden" aria-label="Exams">
+        <section className="card workspace-section overflow-hidden" aria-label="Exams">
           <div className="flex items-center justify-between border-b border-slate-200/80 px-5 py-3.5">
             <div>
             <h2 className="text-[15px] font-bold text-slate-900">Exams · 2026-27</h2>
@@ -172,7 +172,7 @@ export default function ExamSetupPage() {
               ))}
             </ul>
             <div className="hidden overflow-x-auto sm:block">
-              <table className="w-full text-sm">
+              <table className="register-table w-full text-sm">
                 <thead className="table-head">
                   <tr>
                     <th className="px-5 py-3 text-left">Exam</th>

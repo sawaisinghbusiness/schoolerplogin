@@ -25,7 +25,7 @@ export function SetupNeeded({ onRetry }: { onRetry: () => void }) {
     <div className="card p-8 text-center">
       <UserCheck className="mx-auto h-8 w-8 text-slate-300" />
       <p className="mt-3 font-semibold text-slate-900">Staff attendance needs a one-time database setup</p>
-      <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">Run sms backend/supabase/migrations/20261002_staff.sql in the Supabase SQL editor.</p>
+      <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">Ask your school administrator to enable this module, then try again.</p>
       <button type="button" onClick={onRetry} className="btn btn-secondary btn-sm mt-4">
         <RefreshCw className="h-4 w-4" />
         Check again

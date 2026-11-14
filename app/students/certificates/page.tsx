@@ -78,10 +78,11 @@ export default function CertificatesPage() {
   ];
 
   return (
-    <div className="space-y-5 pb-12">
+    <div className="workspace-page space-y-5 pb-12">
       <header className="page-header">
         <div>
-          <h1 className="page-title">Certificates</h1>
+          <h1 className="page-title">Certificate register</h1>
+          <p className="page-subtitle">Issue, find and reprint student certificates from one register.</p>
         </div>
         <button type="button" onClick={() => setIssueOpen(true)} className="btn btn-primary">
           <Plus className="h-4 w-4" />
@@ -90,7 +91,7 @@ export default function CertificatesPage() {
       </header>
 
       {setupError ? (
-        <div className="card p-8 text-center">
+        <div className="card workspace-section p-8 text-center">
           <FileBadge2 className="mx-auto h-8 w-8 text-slate-300" />
           <p className="mt-3 font-semibold text-slate-900">The certificate register needs a one-time database setup</p>
           <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">{setupError}</p>
@@ -100,9 +101,9 @@ export default function CertificatesPage() {
           </button>
         </div>
       ) : (
-        <section className="card overflow-hidden" aria-label="Certificate register">
-          <div className="flex flex-wrap items-center gap-2 border-b border-slate-200/80 p-3 sm:p-4">
-            <div className="flex gap-1 rounded-xl bg-slate-100 p-1" role="tablist" aria-label="Type">
+        <section className="card workspace-section overflow-hidden" aria-label="Certificate register">
+          <div className="workspace-toolbar flex flex-wrap items-center gap-2 border-b border-slate-200/80 p-3 sm:p-4">
+            <div className="module-tabs flex gap-1 rounded-xl bg-slate-100 p-1" role="tablist" aria-label="Type">
               {FILTERS.map((f) => (
                 <button
                   key={f.key}
@@ -162,7 +163,7 @@ export default function CertificatesPage() {
               ))}
             </ul>
             <div className="hidden overflow-x-auto sm:block">
-              <table className="w-full text-sm">
+              <table className="register-table w-full text-sm">
                 <thead className="table-head">
                   <tr>
                     <th className="px-5 py-3 text-left">Serial no.</th>

@@ -55,18 +55,9 @@ const marigold = {
 
 // Brand: royal indigo. Primary actions, active navigation, links and focus.
 // (emerald stays green and means paid / present / success.)
-const indigo = {
-  50: "#EEF0FF",
-  100: "#E0E4FF",
-  200: "#C7CDFE",
-  300: "#A3ACFB",
-  400: "#7C87F4",
-  500: "#5A66E8",
-  600: "#3446D1",
-  700: "#2B38AE",
-  800: "#252F8C",
-  900: "#232B6F",
-  950: "#161A43",
+const officeTeal = {
+  50: "#EFF8F5", 100: "#DCEFE9", 200: "#B8DDD2", 300: "#8EC6B7", 400: "#55A28E",
+  500: "#27836E", 600: "#12665E", 700: "#0E554F", 800: "#104640", 900: "#113B37", 950: "#082824",
 };
 
 // "Kajal": the near-black of the sidebar and other dark surfaces.
@@ -99,11 +90,11 @@ const config: Config = {
         slate: ink,
         emerald: jade,
         ink,
-        brand: indigo,
+        brand: officeTeal,
         marigold,
         night,
         // App background behind the white cards: tinted, so screens are never all-white.
-        canvas: "#ECEEF3",
+        canvas: "#F4F5F7",
         // shadcn-style semantic tokens backed by the CSS variables in globals.css
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

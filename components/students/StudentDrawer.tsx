@@ -111,7 +111,7 @@ export function StudentDrawer({ student, isOpen, onClose, onIssueGatePass, onEdi
       <div className="fixed inset-0 z-40 flex justify-end">
         <div className="absolute inset-0 bg-night-950/40 animate-fadeIn" onClick={onClose} />
 
-        <aside role="dialog" aria-modal="true" aria-label={`${s.name}, student profile`} className="relative flex h-full w-full max-w-[540px] flex-col bg-canvas shadow-2xl animate-slide-in-right">
+        <aside role="dialog" aria-modal="true" aria-label={`${s.name}, student profile`} className="erp-dialog relative flex h-full w-full max-w-[540px] flex-col bg-[#F4F5F7] shadow-2xl animate-slide-in-right">
           <header className="flex h-14 shrink-0 items-center justify-between border-b border-slate-300/50 px-5">
             <span className="text-sm font-semibold text-slate-600">Student profile</span>
             <span className="flex items-center gap-1">
@@ -132,8 +132,8 @@ export function StudentDrawer({ student, isOpen, onClose, onIssueGatePass, onEdi
               <StudentCard student={s} schoolName={schoolName} schoolShort={schoolShort} />
             </div>
 
-            <div className="sticky top-0 z-10 bg-canvas px-5 pt-3">
-              <div className="flex gap-1 rounded-xl bg-slate-200/60 p-1" role="tablist" aria-label="Profile sections">
+            <div className="sticky top-0 z-10 bg-[#F4F5F7] px-5 pt-3">
+              <div className="module-tabs flex gap-1 rounded-lg bg-slate-100 p-1" role="tablist" aria-label="Profile sections">
                 {TABS.map((t) => (
                   <button
                     key={t.key}
@@ -188,7 +188,7 @@ export function StudentDrawer({ student, isOpen, onClose, onIssueGatePass, onEdi
               {tab === "fees" && (
                 <>
                   <div className="card p-4">
-                    <div className="grid grid-cols-3 gap-3">
+                    <div className="summary-strip summary-three grid grid-cols-3">
                       <Figure label="Total fee" value={inr(total)} />
                       <Figure label="Paid" value={inr(s.paidFee)} tone="emerald" />
                       <Figure label="Due" value={s.balanceFee > 0 ? inr(s.balanceFee) : "Nil"} tone={s.balanceFee > 0 ? "rose" : undefined} />
@@ -388,7 +388,7 @@ function Figure({ label, value, tone }: { label: string; value: string; tone?: "
   return (
     <div>
       <div className="text-xs text-slate-500">{label}</div>
-      <div className={`mt-0.5 text-lg font-bold tabular-nums ${tone === "rose" ? "text-rose-600" : tone === "emerald" ? "text-emerald-700" : "text-slate-900"}`}>{value}</div>
+      <div className={`mt-0.5 text-lg font-semibold tabular-nums ${tone === "rose" ? "text-rose-600" : tone === "emerald" ? "text-emerald-700" : "text-slate-900"}`}>{value}</div>
     </div>
   );
 }

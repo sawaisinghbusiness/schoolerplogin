@@ -51,7 +51,7 @@ export default function StaffAttendancePage() {
         </div>
       </header>
 
-      <div className="flex max-w-full gap-1 self-start overflow-x-auto rounded-xl bg-slate-100 p-1 sm:inline-flex" role="tablist" aria-label="Staff attendance">
+      <div className="module-tabs flex max-w-full self-start overflow-x-auto sm:inline-flex" role="tablist" aria-label="Staff attendance">
         {TABS.map(([k, l]) => (
           <button
             key={k}

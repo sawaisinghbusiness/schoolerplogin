@@ -140,8 +140,8 @@ export function DayTab({ canWrite }: { canWrite: boolean }) {
     : `Saved ${day.markedAt ? clock(day.markedAt) : ""}${day.markedBy ? ` by ${firstName(day.markedBy)}` : ""}`;
 
   return (
-    <section className="card">
-      <div className="flex flex-wrap items-center gap-2 border-b border-slate-200/80 p-3 sm:px-4">
+    <section className="card register-table overflow-hidden">
+      <div className="workspace-toolbar !rounded-none !border-x-0 !border-t-0 !shadow-none">
         <div className="flex items-center gap-1.5">
           <button type="button" onClick={() => changeDate(shiftDate(date, -1))} className="btn btn-secondary btn-sm px-2" aria-label="Previous day">
             <ChevronLeft className="h-4 w-4" />

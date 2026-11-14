@@ -16,9 +16,9 @@ type Mode = "Cash" | "UPI" | "Cheque";
 
 // Payment-mode colours: validated categorical trio (colour-blind safe, labels always shown).
 const MODES: { key: Mode; icon: typeof Banknote; color: string }[] = [
-  { key: "Cash", icon: Banknote, color: "#2a78d6" },
-  { key: "UPI", icon: QrCode, color: "#eb6834" },
-  { key: "Cheque", icon: Landmark, color: "#1baf7a" },
+  { key: "Cash", icon: Banknote, color: "#12665E" },
+  { key: "UPI", icon: QrCode, color: "#65758B" },
+  { key: "Cheque", icon: Landmark, color: "#B88436" },
 ];
 const MODE_ICON: Record<Mode, typeof Banknote> = { Cash: Banknote, UPI: QrCode, Cheque: Landmark };
 
@@ -275,10 +275,10 @@ export default function CollectFeesPage() {
   const paidPct = net > 0 ? Math.min(100, Math.round((paid / net) * 100)) : 0;
 
   return (
-    <div className="space-y-6 pb-12">
+    <div className="workspace-page space-y-6 pb-12">
       <header className="page-header">
         <div>
-          <h1 className="page-title">Collect fee</h1>
+          <h1 className="page-title">Fee counter</h1>
           <p className="page-subtitle">Find a student, review dues and record a payment</p>
         </div>
       </header>
@@ -286,6 +286,8 @@ export default function CollectFeesPage() {
       <div className="grid grid-cols-1 items-start gap-6 xl:grid-cols-[minmax(0,1fr)_340px]">
         <div className="min-w-0 space-y-5">
           {/* Student search */}
+          <section className="workspace-section card p-4 sm:p-5" aria-label="Find a student">
+            <div className="mb-3 flex items-baseline justify-between gap-3"><h2 className="text-sm font-semibold text-slate-900">Find a student</h2><span className="hidden text-xs text-slate-500 sm:inline">Name, register number or parent mobile</span></div>
           <div ref={boxRef} className="relative">
             <label htmlFor="fee-search" className="sr-only">
               Find student
@@ -305,7 +307,7 @@ export default function CollectFeesPage() {
               onFocus={() => results.length > 0 && setOpen(true)}
               onKeyDown={onSearchKey}
               placeholder={student ? "Collect from another student…" : "Search by name, SR no., father's name or mobile"}
-              className="h-12 w-full rounded-lg border border-slate-200 bg-white pl-12 pr-12 text-base text-slate-900 sm:pr-16 sm:text-[15px] shadow-sm outline-none transition placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/10"
+              className="h-11 w-full rounded-md border border-slate-300 bg-white pl-12 pr-12 text-base text-slate-900 sm:pr-16 sm:text-[14px] outline-none transition-colors placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/10"
             />
             <span className="absolute right-4 top-1/2 flex -translate-y-1/2 items-center gap-2 text-slate-400">
               {searching && <Loader2 className="h-4 w-4 animate-spin text-brand-600" />}
@@ -347,10 +349,12 @@ export default function CollectFeesPage() {
             )}
           </div>
 
+          </section>
+
           {student ? (
             <>
               {/* Selected student */}
-              <section className="card p-4 sm:p-6 animate-fadeIn" aria-label="Selected student">
+              <section className="card workspace-section p-4 sm:p-5" aria-label="Selected student">
                 <div className="flex items-start gap-3 sm:items-center sm:gap-4">
                   <Avatar name={student.name} id={student.id} photoUrl={student.photoUrl} size="lg" className="hidden sm:flex" />
                   <Avatar name={student.name} id={student.id} photoUrl={student.photoUrl} className="sm:hidden" />
@@ -382,7 +386,7 @@ export default function CollectFeesPage() {
                   </button>
                 </div>
 
-                <div className="mt-4 grid grid-cols-3 gap-2 sm:mt-5 sm:gap-3">
+                <div className="summary-strip summary-three mt-4 grid grid-cols-3 sm:mt-5">
                   <Figure label="Session fee" value={inr(net)} />
                   <Figure label="Paid" value={inr(paid)} />
                   <Figure label={balance > 0 ? "Still due" : "Balance"} value={balance > 0 ? inr(balance) : "Nil"} due={balance > 0} />
@@ -441,7 +445,7 @@ export default function CollectFeesPage() {
 
               {/* Payment */}
               {calc && balance > 0 && (
-                <form onSubmit={submit} onKeyDown={onFormKey} className="card overflow-hidden animate-fadeIn" aria-label="Payment">
+                <form onSubmit={submit} onKeyDown={onFormKey} className="card workspace-section overflow-hidden" aria-label="Payment">
                   <div className="space-y-5 p-5 sm:p-6">
                     {error && (
                       <div className="alert alert-rose" role="alert">
@@ -452,7 +456,7 @@ export default function CollectFeesPage() {
 
                     <div>
                       <div className="flex flex-wrap items-end justify-between gap-3">
-                        <label htmlFor="fee-amount" className="text-[15px] font-bold text-slate-900">
+                        <label htmlFor="fee-amount" className="text-[15px] font-semibold text-slate-900">
                           Fee being paid
                         </label>
                         <div className="flex flex-wrap gap-1.5">
@@ -471,7 +475,7 @@ export default function CollectFeesPage() {
                           value={amount ? Number(digits(amount)).toLocaleString("en-IN") : ""}
                           onChange={(e) => setAmount(String(digits(e.target.value)))}
                           placeholder="0"
-                          className={`field h-14 w-full pl-9 text-2xl font-extrabold tabular-nums ${over ? "border-rose-300 focus:border-rose-500 focus:ring-rose-500/15" : ""}`}
+                          className={`field h-14 w-full pl-9 text-2xl font-semibold tabular-nums ${over ? "border-rose-300 focus:border-rose-500 focus:ring-rose-500/15" : ""}`}
                         />
                       </div>
                       {over && <p className="mt-1.5 text-[13px] font-medium text-rose-600">Only {inr(balance)} is due for the session.</p>}
@@ -529,7 +533,7 @@ export default function CollectFeesPage() {
                           <span className="block text-sm font-bold text-slate-900">Total to collect</span>
                           <span className="block truncate text-xs text-brand-800/80">{total > 0 ? numberToWordsIndian(total) : "Enter the fee amount above"}</span>
                         </div>
-                        <span className="text-2xl font-extrabold tabular-nums text-brand-700">{inr(total)}</span>
+                        <span className="text-2xl font-semibold tabular-nums text-brand-700">{inr(total)}</span>
                       </div>
                     </div>
 
@@ -580,7 +584,7 @@ export default function CollectFeesPage() {
                 </form>
               )}
               {calc && balance <= 0 && (
-                <div className="card flex items-center gap-3 p-5 text-sm text-emerald-800">
+                <div className="card workspace-section flex items-center gap-3 p-5 text-sm text-emerald-800">
                   <Check className="h-5 w-5 text-emerald-600" strokeWidth={3} />
                   The whole session&rsquo;s fee is paid. Nothing to collect.
                 </div>
@@ -592,7 +596,7 @@ export default function CollectFeesPage() {
         </div>
 
         {/* Right column */}
-        <aside className="space-y-5">
+        <aside className="space-y-5 xl:sticky xl:top-5" aria-label="Counter activity">
           <TodayCard summary={summary} />
           {student && <ReceiptList title={`${student.name.split(" ")[0]}'s receipts`} list={history} onOpen={setReceipt} showStudent={false} />}
           <ReceiptList title="Latest receipts" list={recent} onOpen={setReceipt} />
@@ -622,9 +626,9 @@ function Chip({ on, onClick, label }: { on: boolean; onClick: () => void; label:
 
 function Figure({ label, value, due }: { label: string; value: string; due?: boolean }) {
   return (
-    <div className={`rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 ${due ? "bg-rose-50" : "bg-slate-50"}`}>
+    <div className="px-3 py-3 sm:px-4">
       <p className={`text-xs font-semibold ${due ? "text-rose-600" : "text-slate-500"}`}>{label}</p>
-      <p className={`mt-0.5 truncate text-base font-extrabold tabular-nums sm:text-lg ${due ? "text-rose-700" : "text-slate-900"}`}>{value}</p>
+      <p className={`mt-1 truncate text-lg font-semibold tabular-nums sm:text-xl ${due ? "text-rose-700" : "text-slate-900"}`}>{value}</p>
     </div>
   );
 }
@@ -632,15 +636,15 @@ function Figure({ label, value, due }: { label: string; value: string; due?: boo
 function TodayCard({ summary }: { summary: DaySummary | null }) {
   const total = summary?.total ?? 0;
   return (
-    <section className="card p-5" aria-label="Today at the counter">
+    <section className="card workspace-section p-5" aria-label="Today at the counter">
       <p className="text-[13px] font-semibold text-slate-600">Collected today</p>
       {summary ? (
         <>
-          <p className="mt-1 text-[30px] font-extrabold leading-tight tracking-tight text-slate-900">{inr(total)}</p>
+          <p className="mt-1 text-[30px] font-semibold leading-tight tracking-tight text-slate-900">{inr(total)}</p>
           <p className="text-[13px] text-slate-500">
             {summary.count} {summary.count === 1 ? "receipt" : "receipts"}
           </p>
-          <div className="mt-4 flex h-3 gap-[2px] overflow-hidden rounded bg-slate-100" role="img" aria-label="Split by payment mode">
+          <div className="mt-4 flex h-1.5 gap-px overflow-hidden rounded-sm bg-slate-100" role="img" aria-label="Split by payment mode">
             {total > 0 &&
               MODES.map((m) => (summary.byMode[m.key] > 0 ? <span key={m.key} style={{ width: `${(summary.byMode[m.key] / total) * 100}%`, background: m.color }} title={`${m.key} ${inr(summary.byMode[m.key])}`} /> : null))}
           </div>
@@ -666,10 +670,10 @@ function TodayCard({ summary }: { summary: DaySummary | null }) {
 
 function TopDues({ list, onPick }: { list: Student[] | null; onPick: (s: Student) => void }) {
   return (
-    <section className="card overflow-hidden" aria-label="Highest balances">
+    <section className="card workspace-section overflow-hidden" aria-label="Outstanding balances">
       <div className="px-5 pb-3 pt-5 sm:px-6">
-        <h2 className="text-[15px] font-bold text-slate-900">Highest balances</h2>
-        <p className="text-[13px] text-slate-500">Students with the most fee pending. Click one to collect.</p>
+        <h2 className="text-[15px] font-semibold text-slate-900">Outstanding balances</h2>
+        <p className="text-[13px] text-slate-500">Select a record to review its ledger and collect payment.</p>
       </div>
       {list === null ? (
         <div className="space-y-3 px-6 pb-6">
@@ -682,7 +686,6 @@ function TopDues({ list, onPick }: { list: Student[] | null; onPick: (s: Student
       ) : (
         <ul className="divide-y divide-slate-100 border-t border-slate-100">
           {list.map((s) => {
-            const pct = s.totalFee > 0 ? Math.round((s.paidFee / s.totalFee) * 100) : 0;
             return (
               <li key={s.id}>
                 <button type="button" onClick={() => onPick(s)} className="group flex w-full items-center gap-3 px-5 py-3 text-left transition-colors hover:bg-slate-50 sm:px-6">
@@ -690,11 +693,11 @@ function TopDues({ list, onPick }: { list: Student[] | null; onPick: (s: Student
                   <span className="min-w-0 flex-1">
                     <span className="block truncate text-sm font-semibold text-slate-900">{s.name}</span>
                     <span className="block truncate text-xs text-slate-500">
-                      {s.classSec} · {s.fatherName} · {pct}% paid
+                      {s.classSec} · {s.srNo || s.admissionNo}
                     </span>
                   </span>
-                  <span className="badge badge-rose tabular-nums">{inr(s.balanceFee)}</span>
-                  <span className="hidden text-xs font-semibold text-brand-700 opacity-0 transition group-hover:opacity-100 sm:inline">Collect →</span>
+                  <span className="min-w-[90px] text-right text-sm font-semibold tabular-nums text-slate-900">{inr(s.balanceFee)}<span className="block text-[11px] font-normal text-slate-500">outstanding</span></span>
+                  <span className="ml-2 text-xs font-semibold text-brand-700">Collect</span>
                 </button>
               </li>
             );
@@ -707,7 +710,7 @@ function TopDues({ list, onPick }: { list: Student[] | null; onPick: (s: Student
 
 function ReceiptList({ title, list, onOpen, showStudent = true }: { title: string; list: FeeTransaction[] | null; onOpen: (t: FeeTransaction) => void; showStudent?: boolean }) {
   return (
-    <section className="card overflow-hidden" aria-label={title}>
+    <section className="card workspace-section overflow-hidden" aria-label={title}>
       <h2 className="px-5 pb-2 pt-4 text-[15px] font-bold text-slate-900">{title}</h2>
       {list === null ? (
         <div className="space-y-2 px-5 pb-5">

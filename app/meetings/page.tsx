@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
-import { CalendarClock, Plus, RefreshCw, Trash2, Video, X } from "lucide-react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { CalendarClock, Plus, RefreshCw, Search, Trash2, Video, X } from "lucide-react";
 import { api } from "@/lib/apiClient";
 import { toast } from "@/components/ui/Toaster";
 import { classService, type ClassItem } from "@/lib/services/classService";
@@ -44,6 +44,9 @@ const dayLong = (iso: string) => new Date(iso + "T00:00:00").toLocaleDateString(
 const EMPTY = { title: "", kind: "ptm" as "ptm" | "general", className: "", section: "", host: "", date: "", start: "10:00", end: "12:00", slotMinutes: "10", place: "", onlineUrl: "", agenda: "" };
 
 export default function MeetingsPage() {
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [query, setQuery] = useState("");
+  const [period, setPeriod] = useState<"all" | "upcoming" | "past">("all");
   const [rows, setRows] = useState<Meeting[] | null>(null);
   const [setup, setSetup] = useState(false);
   const [classes, setClasses] = useState<ClassItem[]>([]);
@@ -53,8 +56,9 @@ export default function MeetingsPage() {
 
   const load = useCallback(async () => {
     setRows(null);
+    setLoadError(null);
     const r = await api.get<{ setupNeeded: boolean; data: Meeting[]; error?: string }>("/api/meetings");
-    if (!r.ok) toast(r.error || "Could not load meetings.", "error");
+    if (!r.ok) { setLoadError(r.error || "Could not load meetings."); return; }
     setSetup(!!r.data?.setupNeeded);
     setRows(Array.isArray(r.data?.data) ? r.data!.data : []);
   }, []);
@@ -87,6 +91,7 @@ export default function MeetingsPage() {
 
   const sections = classes.find((c) => c.name === form?.className)?.sections || [];
   const t = today();
+  const shown = useMemo(() => (rows || []).filter(m => (period === "all" || (period === "upcoming" ? m.date >= t : m.date < t)) && (!query.trim() || `${m.title} ${m.audience} ${m.host || ""}`.toLowerCase().includes(query.trim().toLowerCase()))), [rows, period, query, t]);
 
   if (setup)
     return (
@@ -117,14 +122,14 @@ export default function MeetingsPage() {
       </header>
 
       {form && (
-        <form onSubmit={save} className="card space-y-4 p-5">
+        <form onSubmit={save} className="card workspace-section space-y-5 p-5">
           <div className="flex items-center justify-between">
             <h2 className="text-[15px] font-bold text-slate-900">New meeting</h2>
             <button type="button" onClick={() => setForm(null)} aria-label="Close" className="btn btn-secondary btn-sm min-h-[36px]">
               <X className="h-4 w-4" />
             </button>
           </div>
-          <div className="flex w-fit gap-1 rounded-xl bg-slate-100 p-1" role="radiogroup" aria-label="Type">
+          <div className="module-tabs flex w-fit gap-1" role="radiogroup" aria-label="Type">
             {(
               [
                 ["ptm", "PTM · parents pick a time"],
@@ -212,21 +217,25 @@ export default function MeetingsPage() {
         </form>
       )}
 
-      {!rows ? (
+      <div className="workspace-toolbar flex flex-wrap items-center justify-between gap-3 p-4">
+        <div className="module-tabs flex gap-1" aria-label="Meeting dates">{([['all','All meetings'],['upcoming','Upcoming'],['past','Past']] as const).map(([key,label]) => <button key={key} type="button" aria-pressed={period === key} onClick={() => setPeriod(key)} className={period === key ? 'is-active' : ''}>{label}</button>)}</div>
+        <div className="flex w-full items-center gap-2 sm:w-auto"><div className="relative min-w-0 flex-1 sm:w-64"><Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"/><input type="search" value={query} onChange={e => setQuery(e.target.value)} placeholder="Search meeting or class" aria-label="Search meetings" className="field field-sm w-full pl-9" /></div><button type="button" onClick={load} className="btn btn-secondary btn-sm" aria-label="Refresh meetings"><RefreshCw className="h-4 w-4"/></button></div>
+      </div>
+      {loadError ? <div role="alert" className="alert alert-rose"><span className="flex-1">Could not load meetings: {loadError}</span><button type="button" onClick={load} className="btn btn-secondary btn-sm">Try again</button></div> : !rows ? (
         <div className="card space-y-3 p-5">
           {Array.from({ length: 3 }).map((_, i) => (
             <div key={i} className="skeleton h-14 w-full" />
           ))}
         </div>
-      ) : rows.length === 0 ? (
+      ) : shown.length === 0 ? (
         <div className="card px-6 py-16 text-center">
           <CalendarClock className="mx-auto h-8 w-8 text-slate-300" />
-          <p className="mt-3 font-semibold text-slate-800">No meetings yet</p>
+          <p className="mt-3 font-semibold text-slate-800">{rows.length ? "No meetings match these filters" : "No meetings yet"}</p>
           <p className="mt-1 text-sm text-slate-500">Make a PTM or a meeting; parents see it in their app.</p>
         </div>
       ) : (
-        <div className="card divide-y divide-slate-100 overflow-hidden">
-          {rows.map((m) => (
+        <div className="card workspace-section divide-y divide-slate-100 overflow-hidden">
+          {shown.map((m) => (
             <div key={m.id} className="px-5 py-4">
               <div className="flex flex-wrap items-start gap-3">
                 <div className="min-w-0 flex-1">

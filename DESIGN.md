@@ -12,11 +12,11 @@ Signature: persistent student register numbers and aligned Indian-currency amoun
 
 ## Working rules
 
-- Neutral canvas `#f6f7f9`, white work surfaces, dividers `#dfe3e9`, dark navigation `#171b23`.
-- Indigo identifies actions, focus and selection. Green means paid/present/completed; amber means a real warning; red means due/error/absence. A person's initials do not need a random colour.
-- Use the operating-system UI face (Segoe UI on Windows, with Nirmala UI for Hindi). Keep the public-site type and official document typography separate.
-- Titles name the task and remain visible. Desktop title 24px, mobile 21px; supporting text 13px. Avoid shouting weights and widely tracked capitals.
-- Sidebar 244px; content fluid, capped at 1440px; desktop gutters 24–28px and mobile 16px. Keep natural vertical scrolling.
+- Neutral canvas `#F4F5F7`, white work surfaces, dividers `#DCE2E7`, ink `#18252F`. Light navigation with dark ink active rows.
+- Deep teal `#12665E` identifies actions, focus and selection. Green means paid/present/completed; amber means a real warning; red means due/error/absence. A person's initials do not need a random colour.
+- Use self-hosted IBM Plex Sans Variable in the ERP, with system fallbacks for Hindi. Keep the public-site type and official document typography separate.
+- Titles name the task and remain visible. Desktop title 27px, mobile 24px; supporting text 13px. Avoid shouting weights and widely tracked capitals.
+- Sidebar 236px; content fluid, capped at 1600px; desktop gutters 24–28px and mobile 16px. Keep natural vertical scrolling.
 - Controls use compact corners, bordered surfaces and visible keyboard focus. Fields are at least 40px on desktop and 44px with 16px text on phones. Preserve icon padding when applying field rules.
 - Tables are registers: quiet headers, stable row dividers, clear selected/focused states, identity first, amounts aligned. On phones retain the essential record and action; allow local scrolling for genuinely wide grids.
 - Use drawers for editing a record while keeping list context. Keep the title and close control visible and the footer actions available. Trap and restore focus, handle the topmost Escape, and preserve nested scroll locks.

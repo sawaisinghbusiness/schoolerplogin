@@ -18,6 +18,8 @@ const dayLabel = (iso: string) => {
 const dueLabel = (iso: string) => (iso === todayStr() ? "Due today" : "Due " + new Date(iso + "T00:00:00").toLocaleDateString("en-IN", { weekday: "short", day: "numeric", month: "short" }));
 
 export default function HomeworkPage() {
+  const [optionsError, setOptionsError] = useState<string | null>(null);
+  const [listError, setListError] = useState<string | null>(null);
   const [classes, setClasses] = useState<HwClass[] | null>(null);
   const [options, setOptions] = useState<PostOption[]>([]);
   const [setupNeeded, setSetupNeeded] = useState(false);
@@ -32,11 +34,16 @@ export default function HomeworkPage() {
   const [role, setRole] = useState("");
 
   const loadOptions = useCallback(async () => {
+    setOptionsError(null);
     const r = await homeworkService.options();
-    if (r.error) toast(r.error, "error");
+    if (r.error) { setOptionsError(r.error); return r; }
     setSetupNeeded(r.setupNeeded);
     setOptions(r.options);
     setClasses(r.classes);
+    const mine = r.options[0];
+    const first = (mine && r.classes.find(c => c.sections.some(s => s.id === mine.sectionId))) || r.classes[0];
+    setClassId(old => r.classes.some(c => c.id === old) ? old : first?.id || "");
+    setSectionId(old => r.classes.some(c => c.sections.some(s => s.id === old)) ? old : mine?.sectionId || first?.sections[0]?.id || "");
     return r;
   }, []);
 
@@ -46,13 +53,7 @@ export default function HomeworkPage() {
     } catch {
       /* display only */
     }
-    loadOptions().then((r) => {
-      // Start on the first class the viewer can post for (a teacher's own), else the first class.
-      const mine = r.options[0];
-      const cls = (mine && r.classes.find((c) => c.sections.some((s) => s.id === mine.sectionId))) || r.classes[0];
-      setClassId(cls?.id || "");
-      setSectionId(mine?.sectionId || cls?.sections[0]?.id || "");
-    });
+    loadOptions();
   }, [loadOptions]);
 
   const cls = classes?.find((c) => c.id === classId);
@@ -61,8 +62,9 @@ export default function HomeworkPage() {
   const load = useCallback(async () => {
     if (!sectionId) return;
     setItems(null);
+    setListError(null);
     const r = await homeworkService.list(sectionId, subject);
-    if (r.error) toast(r.error, "error");
+    if (r.error) { setListError(r.error); return; }
     setItems(r.data);
   }, [sectionId, subject]);
   useEffect(() => {
@@ -106,7 +108,7 @@ export default function HomeworkPage() {
   return (
     <div className="space-y-5 pb-12">
       <header className="page-header">
-        <h1 className="page-title">Homework</h1>
+        <div><h1 className="page-title">Homework register</h1><p className="page-subtitle">Class assignments, due dates and the work sent to families</p></div>
         {canPost && (
           <button type="button" onClick={() => setDrawer({ item: null })} className="btn btn-primary">
             <Plus className="h-4 w-4" />
@@ -116,7 +118,7 @@ export default function HomeworkPage() {
       </header>
 
       {classes && classes.length > 0 && (
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="workspace-toolbar flex flex-wrap items-end gap-3 p-4">
           <select
             value={classId}
             onChange={(e) => {
@@ -152,7 +154,7 @@ export default function HomeworkPage() {
         <div className="card p-4 text-sm text-slate-700">Your classes are not set up yet. Ask the admin to give you your subjects under Staff, then you can post homework here.</div>
       )}
 
-      {classes === null || items === null ? (
+      {optionsError || listError ? <div role="alert" className="alert alert-rose"><span className="flex-1">Could not load homework: {optionsError || listError}</span><button type="button" onClick={() => optionsError ? loadOptions() : load()} className="btn btn-secondary btn-sm">Try again</button></div> : classes === null || (classes.length > 0 && !!sectionId && items === null) ? (
         <div className="card space-y-3 p-5">
           {Array.from({ length: 4 }).map((_, i) => (
             <div key={i} className="skeleton h-16 w-full" />
@@ -174,9 +176,9 @@ export default function HomeworkPage() {
       ) : (
         <div className="space-y-5">
           {groups.map(([day, list]) => (
-            <section key={day} aria-label={dayLabel(day)}>
-              <h2 className="mb-2 px-1 text-[13px] font-semibold text-slate-600">{dayLabel(day)}</h2>
-              <ul className="card divide-y divide-slate-100 overflow-hidden">
+            <section key={day} className="workspace-section card overflow-hidden" aria-label={dayLabel(day)}>
+              <div className="flex items-center justify-between border-b border-slate-200 bg-slate-50 px-5 py-3"><h2 className="text-[13px] font-semibold text-slate-700">{dayLabel(day)}</h2><span className="text-xs text-slate-500">{list.length} {list.length === 1 ? "assignment" : "assignments"}</span></div>
+              <ul className="divide-y divide-slate-100">
                 {list.map((h) => {
                   const long = h.details.length > 160 || h.details.split("\n").length > 3;
                   const expanded = open.has(h.id);
@@ -185,7 +187,7 @@ export default function HomeworkPage() {
                       <div className="flex items-start gap-3">
                         <div className="min-w-0 flex-1">
                           <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                            <span className="badge badge-brand">{h.subject}</span>
+                            <span className="text-xs font-semibold text-slate-600">{h.subject}</span>
                             {h.dueDate && <span className="text-xs font-medium text-slate-600">{dueLabel(h.dueDate)}</span>}
                           </div>
                           <p className="mt-1.5 text-[15px] font-semibold text-slate-900">{h.title}</p>

@@ -26,15 +26,15 @@ export default function SettingsPage() {
     <div className="space-y-5 pb-28">
       <header className="page-header">
         <div>
-          <h1 className="page-title">School &amp; session</h1>
-          <p className="page-subtitle">What prints on receipts and certificates, and the days school is closed</p>
+          <h1 className="page-title">School settings</h1>
+          <p className="page-subtitle">School identity, official records and the academic calendar</p>
         </div>
       </header>
-      <div className="flex w-fit gap-1 rounded-xl bg-slate-200/60 p-1" role="tablist">
+      <div className="module-tabs flex w-fit" role="tablist" aria-label="School settings">
         {(
           [
-            ["school", "School"],
-            ["session", "Session & holidays"],
+            ["school", "School profile"],
+            ["session", "Academic session"],
           ] as [Tab, string][]
         ).map(([k, l]) => (
           <button key={k} type="button" role="tab" aria-selected={tab === k} onClick={() => setTab(k)} className={`rounded-lg px-4 py-2 text-[13.5px] font-semibold ${tab === k ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}>
@@ -79,8 +79,13 @@ function SchoolTab() {
   const place = [form.city, form.state].filter(Boolean).join(", ");
 
   return (
-    <div className="grid items-start gap-5 xl:grid-cols-[minmax(0,1fr)_340px]">
-      <div className="space-y-5">
+    <div className="grid items-start gap-5 xl:grid-cols-[minmax(0,1fr)_320px]">
+      <div className="workspace-toolbar sticky top-0 z-10 xl:col-span-2">
+        <div className="w-full min-w-0 sm:w-auto sm:flex-1"><h2 className="text-sm font-semibold text-slate-900">School profile</h2><p className="mt-1 text-xs text-slate-500">{dirty ? "Changes have not been saved" : "Details used across the school system"}</p></div>
+        <button type="button" onClick={() => setForm(schoolProfile)} disabled={!dirty || saving} className="btn btn-secondary"><RotateCcw className="h-4 w-4" />Undo</button>
+        <button type="button" onClick={save} disabled={!dirty || saving} className="btn btn-primary">{saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}Save changes</button>
+      </div>
+      <div className="card overflow-hidden">
         {setupNeeded && (
           <div className="alert alert-amber">
             <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
@@ -93,7 +98,7 @@ function SchoolTab() {
           </div>
         )}
 
-        <Card title="School">
+        <Card title="School identity">
           <In label="School name" required value={form.school_name} onChange={(v) => set("school_name", v)} wide />
           <In label="Short name" hint="Shown in the logo tile and crest, e.g. SPS" value={form.short_name} onChange={(v) => set("short_name", v.toUpperCase().slice(0, 5))} />
           <In label="Principal's name" hint="Printed under the signature line" value={form.principal_name} onChange={(v) => set("principal_name", v)} />
@@ -153,29 +158,14 @@ function SchoolTab() {
         <p className="px-1 text-xs leading-relaxed text-slate-500">Used on fee receipts, TC, bonafide and character certificates, gate passes and the sidebar.</p>
       </aside>
 
-      {dirty && (
-        <div className="fixed inset-x-0 bottom-5 z-30 flex justify-center px-4 md:pl-[272px]">
-          <div className="flex w-full max-w-xl items-center gap-3 rounded-2xl bg-night-900 px-4 py-3 text-sm text-white shadow-2xl ring-1 ring-white/5 animate-scaleUp">
-            <span className="h-2 w-2 shrink-0 rounded-full bg-marigold-400" />
-            <span className="flex-1 text-night-200">You have unsaved changes</span>
-            <button type="button" onClick={() => setForm(schoolProfile)} className="btn btn-sm text-night-300 hover:text-white">
-              <RotateCcw className="h-3.5 w-3.5" />
-              Undo
-            </button>
-            <button type="button" onClick={save} disabled={saving} className="btn btn-sm bg-marigold-400 font-bold text-night-950 hover:bg-marigold-300">
-              {saving ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Save className="h-3.5 w-3.5" />}
-              Save
-            </button>
-          </div>
-        </div>
-      )}
+
     </div>
   );
 }
 
 function Card({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="card p-5">
+    <section className="border-b border-slate-200/80 p-5 last:border-b-0">
       <h2 className="mb-4 text-sm font-semibold text-slate-900">{title}</h2>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">{children}</div>
     </section>
@@ -364,6 +354,7 @@ function SessionTab() {
   };
 
   if (!data) return <div className="skeleton h-72 w-full" />;
+  if (data.error) return <div role="alert" className="card p-6"><h2 className="text-sm font-semibold text-slate-900">Academic session unavailable</h2><p className="mt-2 text-sm text-slate-600">{data.error}</p><button type="button" onClick={load} className="btn btn-secondary btn-sm mt-4">Try again</button></div>;
   const s = data.session;
   const today = todayIso();
   const total = daysBetween(s.start, s.end);
@@ -385,7 +376,7 @@ function SessionTab() {
         <p className="mt-1.5 text-xs text-slate-500">
           {Math.round((gone / total) * 100)}% of the session gone · {holidayDays} holiday day{holidayDays === 1 ? "" : "s"} listed · Sundays are always off
         </p>
-        <p className="mt-4 rounded-lg bg-slate-50 p-3 text-xs leading-relaxed text-slate-600">The next session (2027-28) starts at the end of March, together with promoting classes from Students → Promote &amp; transfer.</p>
+        <p className="mt-4 rounded-lg bg-slate-50 p-3 text-xs leading-relaxed text-slate-600">Start a new academic session through Students → Promote &amp; transfer.</p>
       </section>
 
       <section className="card overflow-hidden">
@@ -393,7 +384,7 @@ function SessionTab() {
           <h2 className="text-sm font-semibold text-slate-900">Holidays</h2>
           <p className="text-xs text-slate-500">Attendance treats these days as closed, and the register greys them out</p>
         </div>
-        <div className="flex flex-wrap items-end gap-2 border-b border-slate-100 bg-slate-50/60 px-5 py-3">
+        <div className="workspace-toolbar !rounded-none !border-x-0 !border-t-0 !shadow-none">
           <label className="min-w-[160px] flex-1">
             <span className="mb-1 block text-xs font-semibold text-slate-600">Holiday</span>
             <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="e.g. Diwali vacation" className="field field-sm w-full" />

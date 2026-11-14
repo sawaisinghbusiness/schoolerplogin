@@ -110,7 +110,7 @@ export default function ReceiptsPage() {
   ];
 
   return (
-    <div className="space-y-5 pb-12">
+    <div className="workspace-page space-y-5 pb-12">
       <header className="page-header">
         <div>
           <h1 className="page-title">Receipts</h1>
@@ -128,7 +128,7 @@ export default function ReceiptsPage() {
       </header>
 
       <div className="flex flex-wrap items-center gap-2">
-        <div className="scroll-row max-w-full gap-1 rounded-xl bg-slate-200/60 p-1" role="tablist" aria-label="Date range">
+        <div className="module-tabs scroll-row max-w-full gap-1 rounded-xl bg-slate-200/60 p-1" role="tablist" aria-label="Date range">
           {RANGES.map(([k, l]) => (
             <button key={k} type="button" role="tab" aria-selected={range === k} onClick={() => setRange(k)} className={`shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-[13px] font-semibold sm:py-1.5 ${range === k ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}>
               {l}
@@ -154,20 +154,20 @@ export default function ReceiptsPage() {
         </div>
       )}
 
-      <div className="kpi-grid">
+      <div className="summary-strip">
         <Tile label="Collected" value={t ? lakh(t.total) : "…"} note={t ? `${t.count.toLocaleString("en-IN")} receipts` : ""} dot="bg-emerald-500" />
-        <div className="kpi col-span-2 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5">
+        <div className="kpi col-span-2 p-4 sm:p-5">
           <span className="kpi-label">How parents paid</span>
           <span className="kpi-note sm:hidden">{split.map((s) => `${s.k} ${inr(s.v)}`).join(" · ")}</span>
           <div className="kpi-desktop mt-3 flex h-2.5 gap-0.5 overflow-hidden rounded-full bg-slate-100">
             {split.map((s) => (
-              <span key={s.k} style={{ width: `${s.pct}%`, background: s.k === "Cash" ? "#2a78d6" : s.k === "UPI" ? "#eb6834" : "#1baf7a" }} />
+              <span key={s.k} style={{ width: `${s.pct}%`, background: s.k === "Cash" ? "#12665E" : s.k === "UPI" ? "#65758B" : "#B88436" }} />
             ))}
           </div>
           <div className="kpi-desktop mt-2 flex flex-wrap gap-x-5 gap-y-1 text-[13px]">
             {split.map((s) => (
               <span key={s.k} className="inline-flex items-center gap-1.5 text-slate-600">
-                <i className="h-2 w-2 rounded-full" style={{ background: s.k === "Cash" ? "#2a78d6" : s.k === "UPI" ? "#eb6834" : "#1baf7a" }} />
+                <i className="h-2 w-2 rounded-full" style={{ background: s.k === "Cash" ? "#12665E" : s.k === "UPI" ? "#65758B" : "#B88436" }} />
                 {s.k} <b className="tabular-nums text-slate-900">{inr(s.v)}</b>
                 <span className="tabular-nums text-slate-400">{Math.round(s.pct)}%</span>
               </span>
@@ -177,7 +177,7 @@ export default function ReceiptsPage() {
         <Tile label="Cancelled" value={t ? String(t.cancelledCount) : "…"} note={t ? `${inr(t.cancelledAmount)} not counted` : ""} dot="bg-rose-500" />
       </div>
 
-      <section className="card overflow-hidden">
+      <section className="card workspace-section overflow-hidden">
         <div className="flex flex-wrap items-center gap-2 border-b border-slate-200/80 p-3 sm:p-4 lg:flex-nowrap">
           <div className="relative w-full sm:w-auto sm:min-w-[180px] sm:flex-1">
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
@@ -196,7 +196,7 @@ export default function ReceiptsPage() {
           </label>
         </div>
 
-        {!list ? (
+        {!list && error ? <p className="px-6 py-10 text-sm text-slate-500">The receipt register is unavailable. Use Reload to try again.</p> : !list ? (
           <div className="space-y-3 p-5">
             {Array.from({ length: 6 }).map((_, i) => (
               <div key={i} className="skeleton h-11 w-full" />
@@ -235,7 +235,7 @@ export default function ReceiptsPage() {
             ))}
           </ul>
           <div className="hidden overflow-x-auto sm:block">
-            <table className="w-full text-sm">
+            <table className="register-table w-full text-sm">
               <thead className="table-head">
                 <tr className="[&>th]:whitespace-nowrap">
                   <th className="px-5 py-2.5 text-left">Receipt</th>
@@ -333,7 +333,7 @@ export default function ReceiptsPage() {
 
 function Tile({ label, value, note, dot }: { label: string; value: string; note: string; dot: string }) {
   return (
-    <div className="kpi rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5">
+    <div className="kpi p-4 sm:p-5">
       <span className="kpi-label">
         <i className={`h-2 w-2 rounded-full ${dot}`} />
         {label}

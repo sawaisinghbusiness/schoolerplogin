@@ -127,8 +127,8 @@ export function SectionDrawer({
           </>
         }
       >
-        <div className="space-y-4 p-5">
-          <section className="card p-4">
+        <div className="bg-white">
+          <section className="workspace-section border-b border-slate-200 p-5 last:border-b-0">
             <label htmlFor="section-name" className="field-label">
               Section name
             </label>
@@ -151,7 +151,7 @@ export function SectionDrawer({
           </section>
 
           {takesStream(cls) && (
-            <section className="card p-4">
+            <section className="workspace-section border-b border-slate-200 p-5 last:border-b-0">
               <label htmlFor="section-stream" className="field-label">
                 Stream
               </label>
@@ -160,7 +160,7 @@ export function SectionDrawer({
             </section>
           )}
 
-          <section className="card p-4">
+          <section className="workspace-section border-b border-slate-200 p-5 last:border-b-0">
             <div className="mb-2 flex items-baseline justify-between gap-2">
               <h3 className="text-[13px] font-semibold text-slate-700">Subjects</h3>
               <span className="text-xs text-slate-500">{subjects.length ? plural(subjects.length, "subject") : "None yet"}</span>
@@ -181,7 +181,7 @@ export function SectionDrawer({
             )}
           </section>
 
-          <section className="card flex flex-wrap items-center gap-3 p-4">
+          <section className="workspace-section flex flex-wrap items-center gap-3 border-b border-slate-200 p-5 last:border-b-0">
             <div className="min-w-0 flex-1">
               <h3 className="text-[13px] font-semibold text-slate-700">Delete section</h3>
               <p className="text-xs text-slate-500">{students ? `${plural(students, "student")} ${students === 1 ? "is" : "are"} in ${label}. Move them from Promote & transfer first.` : "Removes the section. This cannot be undone."}</p>

@@ -58,7 +58,7 @@ export default function FeeSetupPage() {
     toast("Fee setup saved. Use “Apply to students” to update their fees.", "success");
   };
 
-  if (loadError) return <div className="card p-8 text-center text-sm text-slate-600">{loadError}</div>;
+  if (loadError) return <div className="card workspace-section p-8 text-center text-sm text-slate-600">{loadError}</div>;
   if (!cfg) {
     return (
       <div className="space-y-4">
@@ -72,7 +72,7 @@ export default function FeeSetupPage() {
   const busYear = sum(cfg.transport.amounts);
 
   return (
-    <div className="space-y-5 pb-28">
+    <div className="workspace-page space-y-5 pb-28">
       <header className="page-header">
         <div>
           <h1 className="page-title">Fee setup</h1>
@@ -103,12 +103,12 @@ export default function FeeSetupPage() {
       {meta.setupMissing && (
         <div className="alert alert-amber">
           <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
-          <span>Fee setup needs a one-time database update before it can be saved. Run the fee setup SQL in Supabase, then reload this page.</span>
+          <span>Fee setup is not enabled yet. Ask your school administrator to enable this module, then reload.</span>
         </div>
       )}
 
       {/* ── Fee by class ── */}
-      <section className="card overflow-hidden">
+      <section className="card workspace-section overflow-hidden">
         <div className="border-b border-slate-100 px-5 py-3">
           <h2 className="text-sm font-semibold text-slate-900">Fee by class</h2>
           <p className="text-xs text-slate-500">Yearly amount of each head. Click a group to change amounts or classes.</p>
@@ -135,7 +135,7 @@ export default function FeeSetupPage() {
           })}
         </ul>
         <div className="hidden overflow-x-auto sm:block">
-          <table className="w-full text-sm">
+          <table className="register-table w-full text-sm">
             <thead className="table-head">
               <tr>
                 <th className="px-5 py-2.5 text-left">Class group</th>
@@ -181,7 +181,7 @@ export default function FeeSetupPage() {
 
       <div className="grid gap-5 xl:grid-cols-2">
         {/* ── Instalments & fine ── */}
-        <section className="card overflow-hidden">
+        <section className="card workspace-section overflow-hidden">
           <div className="border-b border-slate-100 px-5 py-3">
             <h2 className="text-sm font-semibold text-slate-900">Instalments and late fine</h2>
             <p className="text-xs text-slate-500">When each part of the fee is due</p>
@@ -222,7 +222,7 @@ export default function FeeSetupPage() {
         </section>
 
         {/* ── Transport & admission ── */}
-        <section className="card overflow-hidden">
+        <section className="card workspace-section overflow-hidden">
           <div className="border-b border-slate-100 px-5 py-3">
             <h2 className="text-sm font-semibold text-slate-900">Transport and admission fee</h2>
             <p className="text-xs text-slate-500">Added on top of the class fee</p>
@@ -343,7 +343,7 @@ function FeeCheck({ cfg }: { cfg: FeeConfig }) {
   const plan = planFor(cfg, { cls, bus, newAdmission: newAdm, concession: con || null });
 
   return (
-    <section className="card overflow-hidden">
+    <section className="card workspace-section overflow-hidden">
       <div className="flex flex-wrap items-center gap-2 border-b border-slate-100 px-5 py-3">
         <div className="mr-auto">
           <h2 className="text-sm font-semibold text-slate-900">Check a student&rsquo;s fee</h2>
@@ -368,7 +368,7 @@ function FeeCheck({ cfg }: { cfg: FeeConfig }) {
         </select>
       </div>
       <div className="overflow-x-auto">
-        <table className="w-full text-sm">
+        <table className="register-table w-full text-sm">
           <thead className="table-head">
             <tr>
               <th className="px-5 py-2.5 text-left">

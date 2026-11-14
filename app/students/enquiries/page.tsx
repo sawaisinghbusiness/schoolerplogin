@@ -114,10 +114,11 @@ export default function EnquiriesPage() {
   };
 
   return (
-    <div className="space-y-5 pb-12">
+    <div className="workspace-page space-y-5 pb-12">
       <header className="page-header">
         <div>
-          <h1 className="page-title">Enquiries</h1>
+          <h1 className="page-title">Admission enquiries</h1>
+          <p className="page-subtitle">Follow up with families and move confirmed enquiries into admissions.</p>
         </div>
         <button type="button" onClick={() => setFormOpen(true)} className="btn btn-primary">
           <Plus className="h-4 w-4" />
@@ -126,7 +127,7 @@ export default function EnquiriesPage() {
       </header>
 
       {setupError ? (
-        <div className="card p-8 text-center">
+        <div className="card workspace-section p-8 text-center">
           <ClipboardList className="mx-auto h-8 w-8 text-slate-300" />
           <p className="mt-3 font-semibold text-slate-900">Enquiries need a one-time database setup</p>
           <p className="mx-auto mt-1 max-w-md text-sm text-slate-500">{setupError}</p>
@@ -137,15 +138,15 @@ export default function EnquiriesPage() {
         </div>
       ) : (
         <>
-          <div className="kpi-grid" role="tablist" aria-label="Views">
+          <div className="module-tabs" role="tablist" aria-label="Views">
             <Tile on={view === "due"} onClick={() => setView("due")} label="Call back today" value={stats.due} dot="bg-rose-500" />
             <Tile on={view === "open"} onClick={() => setView("open")} label="Open enquiries" value={stats.open} dot="bg-brand-500" />
             <Tile on={view === "admitted"} onClick={() => setView("admitted")} label="Admitted" value={stats.admitted} dot="bg-emerald-500" />
             <Tile on={view === "dropped"} onClick={() => setView("dropped")} label="Not interested" value={stats.dropped} dot="bg-slate-400" />
           </div>
 
-          <section className="card overflow-hidden" aria-label="Enquiries">
-            <div className="flex flex-wrap items-center gap-2 border-b border-slate-200/80 p-3 sm:p-4">
+          <section className="card workspace-section overflow-hidden" aria-label="Enquiries">
+            <div className="workspace-toolbar flex flex-wrap items-center gap-2 border-b border-slate-200/80 p-3 sm:p-4">
               <div className="relative w-full sm:w-80">
                 <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
                 <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Child, parent, mobile or area" aria-label="Search enquiries" className="field field-sm w-full pl-9" />
@@ -192,7 +193,7 @@ export default function EnquiriesPage() {
                 })}
               </ul>
               <div className="hidden overflow-x-auto sm:block">
-                <table className="w-full text-sm">
+                <table className="register-table w-full text-sm">
                   <thead className="table-head">
                     <tr>
                       <th className="px-5 py-3 text-left">Child</th>
@@ -291,7 +292,7 @@ function Tile({ on, onClick, label, value, dot }: { on: boolean; onClick: () => 
       role="tab"
       aria-selected={on}
       onClick={onClick}
-      className={`kpi rounded-2xl border bg-white p-4 text-left shadow-card transition sm:p-5 ${on ? "border-brand-500 ring-4 ring-brand-500/10" : "border-slate-200/80 hover:border-slate-300 hover:shadow-card-hover"}`}
+      className={`kpi px-4 py-3 text-left transition-colors ${on ? "bg-brand-50 text-brand-900" : "bg-white hover:bg-slate-50"}`}
     >
       <span className="kpi-label">
         <i className={`h-2 w-2 rounded-full ${dot}`} />

@@ -266,16 +266,16 @@ export default function AttendanceRegisterPage() {
         </div>
       )}
 
-      <div className="kpi-grid">
+      <div className="summary-strip">
         <Figure label="Days marked" title="Working days marked" value={ready ? num(wd) : "…"} note={ready ? `of ${schoolDaysSoFar} school day${schoolDaysSoFar === 1 ? "" : "s"}` : ""} dot="bg-brand-500" />
         <Figure label="Attendance" title="Average attendance" value={ready ? (avg === null ? "—" : `${avg}%`) : "…"} note={ready ? (wd ? `average of ${num(marked.length)}` : "Nothing marked yet") : ""} dot="bg-emerald-500" />
         <Figure label="Absent days" title="Absent-days total" value={ready ? num(absentDays) : "…"} note={ready ? `${num(leaveDays)} leave · ${num(halfDays)} half` : ""} dot="bg-rose-500" />
         <Figure label={`Below ${BELOW}%`} value={ready ? num(belowHere) : "…"} note={low && !lowLoading ? `${num(low.students.length)} across the school` : ""} dot="bg-marigold-400" />
       </div>
 
-      <section className="card overflow-hidden">
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 border-b border-slate-200/80 p-3 sm:p-4">
-          <div className="scroll-row max-w-full gap-1 rounded-xl bg-slate-100 p-1" role="tablist">
+      <section className="card workspace-section overflow-hidden">
+        <div className="workspace-toolbar flex flex-wrap items-center gap-x-3 gap-y-2 border-x-0 border-t-0 p-3 sm:p-4">
+          <div className="module-tabs scroll-row max-w-full gap-1" role="tablist">
             {(
               [
                 ["register", "Register"],
@@ -351,7 +351,7 @@ export default function AttendanceRegisterPage() {
 
 function Figure({ label, value, note, dot, title }: { label: string; value: string; note: string; dot: string; title?: string }) {
   return (
-    <div className="kpi rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5" title={title}>
+    <div className="min-w-0 p-4 sm:px-5" title={title}>
       <span className="kpi-label">
         <i className={`h-2 w-2 shrink-0 rounded-full ${dot}`} />
         <span className="truncate">{label}</span>

@@ -1075,11 +1075,11 @@ export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProf
         role="dialog"
         aria-modal="true"
         aria-label={editing ? `Edit ${editing.name}` : "New admission"}
-        className="relative flex h-full w-full max-w-[1000px] flex-col bg-canvas shadow-2xl animate-slide-in-right"
+        className="erp-dialog relative flex h-full w-full max-w-[1000px] flex-col bg-[#F4F5F7] shadow-2xl animate-slide-in-right"
       >
         <header className="flex h-16 shrink-0 items-center justify-between border-b border-slate-300/50 bg-white px-5 sm:px-6">
           <div>
-            <h2 className="text-lg font-bold text-slate-900">{editing ? "Edit student" : saved ? "Admission saved" : "New admission"}</h2>
+            <h2 className="text-lg font-semibold text-slate-900">{editing ? "Edit student" : saved ? "Admission saved" : "New admission"}</h2>
             <p className="text-xs text-slate-500">{editing ? `${editing.name} · ${editing.srNo}` : "Session 2026-27"}</p>
           </div>
           <button type="button" onClick={onClose} disabled={saving} className="rounded-lg p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-900" aria-label="Close">

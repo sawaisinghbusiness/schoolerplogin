@@ -96,18 +96,18 @@ export function UserDrawer({
         </>
       }
     >
-      <div className="space-y-5 p-5">
+      <div className="bg-white">
         {error && <p role="alert" className="rounded-lg bg-rose-50 px-3 py-2 text-sm text-rose-700 ring-1 ring-rose-100">{error}</p>}
 
-        <section className="card space-y-4 p-4">
+        <section className="workspace-section space-y-4 border-b border-slate-200 p-5 last:border-b-0">
           <div>
             <label htmlFor="u-name" className="field-label">Full name</label>
             <input id="u-name" value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Sunita Sharma" className="field w-full" />
           </div>
         </section>
 
-        <section className="card p-4">
-          <h3 className="text-sm font-bold text-slate-900">Role</h3>
+        <section className="workspace-section border-b border-slate-200 p-5 last:border-b-0">
+          <h3 className="text-sm font-semibold text-slate-900">Role</h3>
           <p className="mb-3 text-xs text-slate-500">{isMe ? "You can't change your own role. Another admin can." : "Decides which screens they can open."}</p>
           <div className="space-y-2" role="radiogroup" aria-label="Role">
             {ROLE_ORDER.map((r) => {
@@ -131,9 +131,9 @@ export function UserDrawer({
           </div>
         </section>
 
-        <section className="card space-y-4 p-4">
+        <section className="workspace-section space-y-4 border-b border-slate-200 p-5 last:border-b-0">
           <div>
-            <h3 className="text-sm font-bold text-slate-900">Sign-in ID</h3>
+            <h3 className="text-sm font-semibold text-slate-900">Sign-in ID</h3>
             <p className="text-xs text-slate-500">They can sign in with any one of these.</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -156,7 +156,7 @@ export function UserDrawer({
         </section>
 
         {isNew ? (
-          <section className="card p-4">
+          <section className="workspace-section border-b border-slate-200 p-5 last:border-b-0">
             <label htmlFor="u-pass" className="field-label">First password</label>
             <div className="flex gap-2">
               <input id="u-pass" value={password} onChange={(e) => setPassword(e.target.value)} className="field w-full font-mono" autoComplete="off" />
@@ -168,9 +168,9 @@ export function UserDrawer({
             <p className="mt-1.5 text-xs text-slate-500">Tell them this password; they can change it from their profile menu.</p>
           </section>
         ) : (
-          <section className="card flex items-start gap-3 p-4">
+          <section className="workspace-section flex items-start gap-3 border-b border-slate-200 p-5 last:border-b-0">
             <div className="min-w-0 flex-1">
-              <h3 className="text-sm font-bold text-slate-900">Can sign in</h3>
+              <h3 className="text-sm font-semibold text-slate-900">Can sign in</h3>
               <p className="text-xs text-slate-500">
                 {isMe ? "You can't switch off your own account." : active ? "Switch off when someone leaves; their records stay." : "Switched off: they cannot sign in, and any open session stops."}
               </p>
@@ -184,7 +184,7 @@ export function UserDrawer({
               onClick={() => setActive((v) => !v)}
               className={`relative h-6 w-11 shrink-0 rounded-full transition ${active ? "bg-emerald-600" : "bg-slate-300"} disabled:opacity-50`}
             >
-              <span className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-all ${active ? "left-[22px]" : "left-0.5"}`} />
+              <span className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-colors ${active ? "left-[22px]" : "left-0.5"}`} />
             </button>
           </section>
         )}

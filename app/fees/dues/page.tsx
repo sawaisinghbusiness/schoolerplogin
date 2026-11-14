@@ -113,7 +113,7 @@ export default function DuesPage() {
   const dueNames = report ? report.instalments.filter((i) => i.due <= report.asOf).map((i) => i.name) : [];
 
   return (
-    <div className="space-y-5 pb-24">
+    <div className="workspace-page space-y-5 pb-24">
       <header className="page-header">
         <div>
           <h1 className="page-title">Dues &amp; reminders</h1>
@@ -123,7 +123,7 @@ export default function DuesPage() {
                 As on {day(report.asOf)} · {dueNames.length ? `${dueNames.join(" and ")} ${dueNames.length > 1 ? "are" : "is"} due` : "no instalment is due yet"}
               </>
             ) : (
-              "Working out every student's dues…"
+              error ? "Dues are unavailable. Reload to try again." : "Calculating outstanding balances"
             )}
           </p>
         </div>
@@ -144,7 +144,7 @@ export default function DuesPage() {
         </div>
       )}
 
-      <div className="kpi-grid">
+      <div className="summary-strip">
         <Figure label="Overdue now" value={s ? lakh(s.dueNow) : "…"} note={s ? `${s.withDues.toLocaleString("en-IN")} students` : ""} dot="bg-rose-500" />
         <Figure label="Late fine so far" value={s ? lakh(s.fine) : "…"} note="As per fee setup" dot="bg-marigold-400" />
         <Figure
@@ -156,9 +156,9 @@ export default function DuesPage() {
         <Figure label="Up to date" value={s ? s.upToDate.toLocaleString("en-IN") : "…"} note={s ? `of ${s.active.toLocaleString("en-IN")} students` : ""} dot="bg-emerald-500" />
       </div>
 
-      <section className="card overflow-hidden">
+      <section className="card workspace-section overflow-hidden">
         <div className="flex flex-wrap items-center gap-2 border-b border-slate-200/80 p-3 sm:p-4 lg:flex-nowrap">
-          <div className="flex shrink-0 gap-1 rounded-xl bg-slate-100 p-1" role="tablist">
+          <div className="module-tabs flex shrink-0 gap-1 rounded-xl bg-slate-100 p-1" role="tablist">
             {(
               [
                 ["students", "Students"],
@@ -264,7 +264,7 @@ export default function DuesPage() {
             )}
           </ul>
           <div className="hidden overflow-x-auto sm:block">
-            <table className="w-full text-sm">
+            <table className="register-table w-full text-sm">
               <thead className="table-head">
                 <tr className="[&>th]:whitespace-nowrap">
                   <th className="w-10 py-2.5 pl-4 pr-1 text-left">
@@ -376,7 +376,7 @@ export default function DuesPage() {
 
 function Figure({ label, value, note, dot }: { label: string; value: string; note: string; dot: string }) {
   return (
-    <div className="kpi rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5">
+    <div className="kpi p-4 sm:p-5">
       <span className="kpi-label">
         <i className={`h-2 w-2 shrink-0 rounded-full ${dot}`} />
         <span className="truncate">{label}</span>
@@ -391,7 +391,7 @@ function ClassTable({ rows, onPick }: { rows: { cls: string; students: number; d
   const max = Math.max(1, ...rows.map((r) => r.due));
   return (
     <div className="overflow-x-auto">
-      <table className="w-full text-sm">
+      <table className="register-table w-full text-sm">
         <thead className="table-head">
           <tr>
             <th className="px-5 py-2.5 text-left">Class</th>

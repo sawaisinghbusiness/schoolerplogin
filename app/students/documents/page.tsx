@@ -106,9 +106,9 @@ export default function PhotosPage() {
   };
 
   return (
-    <div className="space-y-5 pb-12">
+    <div className="workspace-page space-y-5 pb-12">
       <header className="page-header">
-        <h1 className="page-title">Photos</h1>
+        <div><h1 className="page-title">Student photos</h1><p className="page-subtitle">Review missing photographs and manage student profile images.</p></div>
         {canEdit && (
           <div className="flex justify-end">
             <button type="button" onClick={() => setBulkOpen(true)} className="btn btn-secondary px-3 sm:px-4" aria-label="Upload many photos">
@@ -120,7 +120,7 @@ export default function PhotosPage() {
       </header>
 
       {me && !canEdit && (
-        <div className="card flex items-center gap-3 p-4 text-sm text-slate-700">
+        <div className="card workspace-section flex items-center gap-3 p-4 text-sm text-slate-700">
           <Lock className="h-4 w-4 shrink-0 text-slate-400" />
           Only the admin and the accountant can add photos.
         </div>
@@ -129,7 +129,7 @@ export default function PhotosPage() {
       <input ref={fileRef} type="file" accept="image/*" onChange={onFile} className="hidden" />
 
       {students === null ? (
-        <div className="card skeleton h-72" />
+        <div className="card workspace-section skeleton h-72" />
       ) : (
         <>
           <div className="flex flex-wrap items-center gap-2">
@@ -154,7 +154,7 @@ export default function PhotosPage() {
                 </option>
               ))}
             </select>
-            <div className="flex gap-1 rounded-xl bg-slate-100 p-1" role="tablist" aria-label="Show">
+            <div className="module-tabs flex gap-1 rounded-xl bg-slate-100 p-1" role="tablist" aria-label="Show">
               {(
                 [
                   ["all", `All ${inClass.length}`],
@@ -176,7 +176,7 @@ export default function PhotosPage() {
           </div>
 
           {shown.length === 0 ? (
-            <div className="card px-6 py-16 text-center text-sm text-slate-600">
+            <div className="card workspace-section px-6 py-16 text-center text-sm text-slate-600">
               {inClass.length ? (
                 <>
                   <Check className="mx-auto h-8 w-8 text-emerald-600" strokeWidth={2.5} />

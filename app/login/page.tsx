@@ -32,7 +32,7 @@ function SchoolLogo({ url, short, size, dark }: { url: string; short: string; si
     <img src={url} alt="" className="shrink-0 rounded-xl bg-white object-contain p-1" style={{ width: size, height: size }} />
   ) : (
     <div
-      className={`flex shrink-0 items-center justify-center rounded-xl font-extrabold ${dark ? "bg-marigold-400 text-night-950" : "bg-night-900 text-marigold-400"}`}
+      className={`flex shrink-0 items-center justify-center rounded-xl font-extrabold ${dark ? "bg-marigold-400 text-night-950" : "bg-night-900 text-[#A8D9CC]"}`}
       style={{ width: size, height: size, fontSize: size * 0.32 }}
     >
       {short.slice(0, 3)}
@@ -117,9 +117,9 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex min-h-screen bg-white">
+    <div className="erp-login flex min-h-screen bg-white">
       {/* ── Brand panel ───────────────────────────────────────────── */}
-      <aside className="relative isolate hidden w-[44%] flex-col justify-between overflow-hidden bg-night-900 p-12 text-white lg:flex xl:p-14">
+      <aside className="login-workspace-panel relative isolate hidden w-[46%] flex-col justify-between overflow-hidden bg-night-900 p-12 text-white lg:flex xl:p-14">
         <InteractiveField />
         <div className="relative z-10 flex items-center gap-3">
           <SchoolLogo url={school.logo_url} short={school.short} size={48} dark />
@@ -130,13 +130,13 @@ export default function LoginPage() {
         </div>
 
         <div className="relative z-10 max-w-md">
-          <h1 className="text-4xl font-bold leading-[1.15] tracking-tight xl:text-[2.6rem]">
-            Fees, students and attendance <span className="text-marigold-400">in one place.</span>
+          <h1 className="text-4xl font-medium leading-[1.15] tracking-tight xl:text-[2.8rem]">
+            Your school office, <span className="text-[#A8D9CC]">in order.</span>
           </h1>
           <ul className="mt-8 space-y-4">
             {FEATURES.map((f) => (
               <li key={f.text} className="flex items-center gap-3 text-[15px] text-night-200">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/[0.06] text-marigold-400">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/[0.06] text-[#A8D9CC]">
                   <f.icon className="h-[18px] w-[18px]" />
                 </span>
                 {f.text}
@@ -145,11 +145,11 @@ export default function LoginPage() {
           </ul>
         </div>
 
-        <p className="relative z-10 text-[13px] text-night-500">Sessions are encrypted and expire after 12 hours</p>
+        <p className="relative z-10 text-[13px] text-night-500">SchoolDesk &middot; School administration</p>
       </aside>
 
       {/* ── Sign-in form ──────────────────────────────────────────── */}
-      <main className="relative flex flex-1 items-center justify-center px-5 py-12 sm:px-10">
+      <main className="login-form-panel relative flex flex-1 items-center justify-center px-5 py-12 sm:px-10">
         <Link href="/" className="absolute left-5 top-5 inline-flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-sm font-semibold text-slate-500 hover:bg-slate-100 hover:text-slate-900 sm:left-8 sm:top-6">
           <ArrowLeft className="h-4 w-4" />
           Back to website
@@ -166,20 +166,20 @@ export default function LoginPage() {
           </div>
 
           <div className="animate-fade-up">
-            <h2 className="text-[1.75rem] font-extrabold tracking-tight text-slate-900">Welcome back</h2>
-            <p className="mt-1.5 text-[15px] text-slate-500">Choose who you are, then sign in with your registered details.</p>
+            <h2 className="text-[1.9rem] font-semibold tracking-tight text-slate-900">Sign in to your school</h2>
+            <p className="mt-1.5 text-[15px] text-slate-500">Select your role and enter your registered details.</p>
           </div>
 
           {/* Role switcher with sliding highlight */}
           <div
             role="tablist"
             aria-label="Sign in as"
-            className="relative mt-8 grid grid-cols-4 rounded-2xl bg-slate-100 p-1"
+            className="relative mt-8 grid grid-cols-4 rounded-lg border border-slate-200 bg-slate-50 p-1"
             style={{ animationDelay: "60ms" }}
           >
             <span
               aria-hidden="true"
-              className="absolute bottom-1 top-1 w-[calc((100%-0.5rem)/4)] rounded-xl bg-white shadow-sm ring-1 ring-slate-900/5 transition-transform duration-300 ease-out"
+              className="absolute bottom-1 top-1 w-[calc((100%-0.5rem)/4)] rounded-md bg-white shadow-sm ring-1 ring-slate-200 transition-transform duration-300 ease-out"
               style={{ transform: `translateX(${roleIndex * 100}%)`, left: "0.25rem" }}
             />
             {ROLES.map((r) => {
@@ -191,7 +191,7 @@ export default function LoginPage() {
                   role="tab"
                   aria-selected={active}
                   onClick={() => selectRole(r)}
-                  className={`relative z-10 flex flex-col items-center gap-1 rounded-xl py-2.5 text-xs font-semibold ${
+                  className={`relative z-10 flex flex-col items-center gap-1 rounded-md py-2.5 text-xs font-semibold ${
                     active ? "text-brand-700" : "text-slate-500 hover:text-slate-800"
                   }`}
                 >
@@ -234,7 +234,7 @@ export default function LoginPage() {
                   value={identifier}
                   onChange={(e) => setIdentifier(e.target.value)}
                   placeholder={role === "parent" ? "e.g. ADM-9102" : "10-digit mobile number"}
-                  className="h-12 w-full rounded-xl border border-slate-200 bg-white pl-11 pr-4 text-[15px] font-medium text-slate-900 shadow-2xs focus:border-brand-500 focus:outline-none focus:ring-4 focus:ring-brand-500/15"
+                  className="h-12 w-full rounded-md border border-slate-200 bg-white pl-11 pr-4 text-[15px] font-medium text-slate-900 shadow-2xs focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/10"
                 />
               </div>
             </div>
@@ -261,7 +261,7 @@ export default function LoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Your password"
-                  className="h-12 w-full rounded-xl border border-slate-200 bg-white pl-11 pr-12 text-[15px] font-medium text-slate-900 shadow-2xs focus:border-brand-500 focus:outline-none focus:ring-4 focus:ring-brand-500/15"
+                  className="h-12 w-full rounded-md border border-slate-200 bg-white pl-11 pr-12 text-[15px] font-medium text-slate-900 shadow-2xs focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/10"
                 />
                 <button
                   type="button"
@@ -277,7 +277,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading || success}
-              className={`group relative flex h-12 w-full items-center justify-center gap-2 overflow-hidden rounded-xl text-[15px] font-bold text-white shadow-glow transition-all ${
+              className={`group relative flex h-12 w-full items-center justify-center gap-2 overflow-hidden rounded-md text-[15px] font-medium text-white transition-colors ${
                 success ? "bg-brand-500" : "bg-brand-600 hover:bg-brand-700"
               } disabled:cursor-not-allowed`}
             >

@@ -228,10 +228,11 @@ export default function StudentsPage() {
   const loaded = students !== null;
 
   return (
-    <div className="space-y-5 pb-24">
+    <div className="workspace-page space-y-5 pb-24">
       <header className="page-header">
         <div>
-          <h1 className="page-title">Students</h1>
+          <h1 className="page-title">Student register</h1>
+          <p className="page-subtitle">Find student records, manage admissions and review fee balances.</p>
         </div>
         <div className="flex gap-2">
           <input ref={fileRef} type="file" accept=".xlsx,.xls,.csv" onChange={onImport} className="hidden" />
@@ -251,9 +252,9 @@ export default function StudentsPage() {
       </header>
 
       {/* Search, filters and the list in one card */}
-      <section className="card overflow-hidden" aria-label="Students">
+      <section className="card workspace-section overflow-hidden" aria-label="Students">
         <div className="flex items-center gap-2 border-b border-slate-200/80 px-3 pt-3 sm:px-4">
-          <div className="scroll-row -mb-px min-w-0 flex-1 gap-0" role="tablist" aria-label="Views">
+          <div className="module-tabs scroll-row -mb-px min-w-0 flex-1 gap-0" role="tablist" aria-label="Views">
             {(
               [
                 ["all", "All", stats.all],
@@ -282,8 +283,8 @@ export default function StudentsPage() {
             <RefreshCw className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`} />
           </button>
         </div>
-        <div className="flex flex-wrap items-center gap-2 border-b border-slate-200/80 p-3 sm:px-4">
-          <div className="erp-search flex w-full overflow-hidden rounded-lg border lg:w-auto lg:min-w-[320px] lg:flex-1 border-slate-200 bg-slate-50/70 focus-within:border-brand-500 focus-within:bg-white focus-within:ring-4 focus-within:ring-brand-500/15">
+        <div className="workspace-toolbar flex flex-col gap-3 border-b border-slate-200/80 p-3 sm:p-4">
+          <div className="erp-search flex w-full overflow-hidden rounded-lg border lg:max-w-[640px] border-slate-200 bg-slate-50/70 focus-within:border-brand-500 focus-within:bg-white focus-within:ring-2 focus-within:ring-brand-500/10">
             <select aria-label="Search in" value={field} onChange={(e) => setField(e.target.value as Field)} className="max-w-[7.5rem] border-r border-slate-200 bg-transparent px-3 text-base font-medium text-slate-600 outline-none sm:max-w-none sm:text-[13px]">
               {FIELDS.map((f) => (
                 <option key={f.key} value={f.key}>
@@ -311,6 +312,7 @@ export default function StudentsPage() {
               )}
             </div>
           </div>
+          <div className="flex w-full flex-wrap items-center gap-2">
           <div className="scroll-row -mx-3 w-[calc(100%+1.5rem)] px-3 sm:mx-0 sm:w-auto sm:flex-wrap sm:overflow-visible sm:px-0">
           <Chip label="Class" value={cls} onChange={(v) => { setCls(v); setSection("all"); }} options={classes.map((c) => [c, c])} />
           <Chip label="Section" value={section} onChange={setSection} options={sections.map((s) => [s, s])} />
@@ -322,7 +324,8 @@ export default function StudentsPage() {
             </button>
           )}
           </div>
-
+          <span className="ml-auto text-xs tabular-nums text-slate-500">{loaded ? `${fmt(filtered.length)} ${filtered.length === 1 ? "record" : "records"}` : "Loading records"}</span>
+          </div>
         </div>
 
         {loadError ? (
@@ -341,8 +344,8 @@ export default function StudentsPage() {
           </div>
         ) : filtered.length === 0 ? (
           <div className="px-6 py-16 text-center text-sm">
-            <p className="font-semibold text-slate-800">No student found</p>
-            <p className="mt-1 text-slate-500">Check the spelling, or search in &ldquo;Any field&rdquo;.</p>
+            <p className="font-semibold text-slate-800">{all.length ? "No records match these filters" : "Start your student register"}</p>
+            <p className="mt-1 text-slate-500">{all.length ? "Try a student name, register number or parent mobile." : "Add a new admission or import your existing student list."}</p>
             {filtersOn && (
               <button onClick={reset} className="btn btn-secondary btn-sm mt-3">
                 Clear search and filters
@@ -352,7 +355,7 @@ export default function StudentsPage() {
         ) : (
           <>
             <div className="hidden overflow-x-auto md:block">
-              <table className="w-full text-sm">
+              <table className="register-table w-full text-sm">
                 <thead className="table-head">
                   <tr>
                     <th className="hidden w-12 py-3 pl-5 pr-2 text-left lg:table-cell">
@@ -361,7 +364,7 @@ export default function StudentsPage() {
                     <th className="py-3 pl-5 pr-3 text-left lg:pl-3">Student</th>
                     <th className="hidden px-3 py-3 text-left xl:table-cell">Class</th>
                     <th className="px-3 py-3 text-left">Parent</th>
-                    <th className="px-3 py-3 text-left">Fees 2026-27</th>
+                    <th className="px-3 py-3 text-right">Fee balance</th>
                     <th className="py-3 pl-2 pr-4 text-right">
                       <span className="sr-only">Actions</span>
                     </th>
@@ -379,16 +382,16 @@ export default function StudentsPage() {
                           <div className="flex items-center gap-3">
                             <Avatar name={s.name} id={s.id} photoUrl={s.photoUrl} size="sm" neutral className="hidden xl:flex" />
                             <span className="min-w-0">
-                              <span className="flex items-center gap-2 font-semibold text-slate-900 group-hover:text-brand-700">
+                              <button type="button" onClick={(event) => { event.stopPropagation(); open(s, "profile"); }} aria-label={`Open ${s.name}, register ${s.srNo || s.admissionNo}`} className="flex max-w-full items-center gap-2 text-left font-semibold text-slate-900 hover:text-brand-700 focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600">
                                 <span className="truncate" title={s.name}>{s.name}</span>
                                 {s.status === "Inactive" && <span className="badge badge-slate shrink-0 py-0 text-[11px]">Left</span>}
-                              </span>
+                              </button>
                               <span className="block truncate text-xs text-slate-500">{s.srNo || s.admissionNo}</span>
                             </span>
                           </div>
                         </td>
                         <td className="hidden whitespace-nowrap px-3 py-2.5 xl:table-cell">
-                          <span className="rounded-md bg-slate-100 px-2 py-0.5 text-[13px] font-semibold text-slate-700">{s.classSec}</span>
+                          <span className="text-[13px] font-medium text-slate-700">{s.classSec}</span>
                           {s.transportOpted && (
                             <span className="mt-1 flex max-w-[9rem] items-center gap-1 truncate text-xs text-slate-500" title={s.busRoute || "School bus"}>
                               <Bus className="h-3 w-3 shrink-0 text-slate-400" />
@@ -435,9 +438,9 @@ export default function StudentsPage() {
                     <Avatar name={s.name} id={s.id} photoUrl={s.photoUrl} size="sm" neutral />
                     <span className="m-row-main">
                       <span className="m-row-title">{s.name}</span>
-                      <span className="m-row-meta">{parentLine(s)}</span>
+                      <span className="m-row-meta">{s.classSec} · {s.srNo || s.admissionNo} · {parentLine(s)}</span>
                     </span>
-                    {s.balanceFee > 0 ? <span className="status-dot tabular-nums text-rose-600">{inr(s.balanceFee)} due</span> : <span className="status-dot text-emerald-700">Paid</span>}
+                    {s.balanceFee > 0 ? <span className="block font-semibold tabular-nums text-rose-700">{inr(s.balanceFee)} due</span> : <span className="status-dot text-emerald-700">Paid</span>}
                   </button>
                 </li>
               ))}
@@ -522,8 +525,7 @@ export default function StudentsPage() {
 /** "S/o Ramesh Kumar" or "D/o …" from the gender on record. */
 const parentLine = (s: Student) => (s.fatherName ? `${s.gender === "Female" ? "D/o" : "S/o"} ${s.fatherName}` : "—");
 
-/** A figure that doubles as a filter tab. */
-/** Paid share as a small meter, then the amount still due. */
+/** Outstanding amount leads; the paid share stays secondary. */
 function FeeCell({ s }: { s: Student }) {
   const total = s.totalFee || s.paidFee + s.balanceFee;
   const pct = total > 0 ? Math.min(100, Math.round((s.paidFee / total) * 100)) : 100;
@@ -532,10 +534,10 @@ function FeeCell({ s }: { s: Student }) {
       <span className="status-dot text-emerald-700">Paid</span>
     );
   return (
-    <div className="xl:w-32">
-      <div className="flex items-baseline justify-between gap-2 whitespace-nowrap text-xs">
+    <div className="min-w-[130px] text-right">
+      <div className="space-y-0.5 whitespace-nowrap text-xs">
         <span className="status-dot tabular-nums text-rose-600">{inr(s.balanceFee)} due</span>
-        <span className="hidden tabular-nums text-slate-500 xl:inline">{pct}% paid</span>
+        <span className="hidden text-[11px] tabular-nums text-slate-500 xl:block">{pct}% paid</span>
       </div>
     </div>
   );

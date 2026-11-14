@@ -71,11 +71,11 @@ export function SalaryDrawer({ row, onClose, onSaved }: { row: PayrollRow | null
         </>
       }
     >
-      <div className="space-y-4 p-5">
+      <div className="bg-white">
         {error && <p role="alert" className="rounded-lg bg-white px-3 py-2 text-sm font-medium text-slate-800 ring-1 ring-rose-300">{error}</p>}
 
-        <section className="card p-4">
-          <h3 className="mb-3 text-sm font-bold text-slate-900">Earnings</h3>
+        <section className="workspace-section border-b border-slate-200 p-5 last:border-b-0">
+          <h3 className="mb-3 text-sm font-semibold text-slate-900">Earnings</h3>
           <div className="grid gap-3 sm:grid-cols-2">
             {money("basic", "Basic")}
             {money("hra", "HRA")}
@@ -84,8 +84,8 @@ export function SalaryDrawer({ row, onClose, onSaved }: { row: PayrollRow | null
           </div>
         </section>
 
-        <section className="card p-4">
-          <h3 className="mb-3 text-sm font-bold text-slate-900">Deductions</h3>
+        <section className="workspace-section border-b border-slate-200 p-5 last:border-b-0">
+          <h3 className="mb-3 text-sm font-semibold text-slate-900">Deductions</h3>
           <div className="space-y-2">
             <Toggle on={!!f.pf} onChange={(v) => set("pf", v)} label="Provident fund" value={f.pf ? inr(pf) : ""} />
             <Toggle on={!!f.esi} onChange={(v) => set("esi", v)} label="ESI" value={f.esi ? (gross > 21000 ? "Not due above ₹21,000" : inr(esi)) : ""} />
@@ -96,8 +96,8 @@ export function SalaryDrawer({ row, onClose, onSaved }: { row: PayrollRow | null
           </div>
         </section>
 
-        <section className="card p-4">
-          <h3 className="mb-3 text-sm font-bold text-slate-900">Bank</h3>
+        <section className="workspace-section border-b border-slate-200 p-5 last:border-b-0">
+          <h3 className="mb-3 text-sm font-semibold text-slate-900">Bank</h3>
           <div className="grid gap-3 sm:grid-cols-2">
             <label className="block sm:col-span-2">
               <span className="field-label">Bank name</span>
@@ -133,7 +133,7 @@ function Toggle({ on, onChange, label, value }: { on: boolean; onChange: (v: boo
         onClick={() => onChange(!on)}
         className={`relative h-6 w-11 shrink-0 rounded-full transition ${on ? "bg-brand-600" : "bg-slate-300"}`}
       >
-        <span className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-all ${on ? "left-[22px]" : "left-0.5"}`} />
+        <span className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-colors ${on ? "left-[22px]" : "left-0.5"}`} />
       </button>
       <span className="text-sm font-medium text-slate-800">{label}</span>
       <span className="ml-auto text-sm tabular-nums text-slate-600">{value}</span>

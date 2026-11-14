@@ -1,0 +1,51 @@
+[
+  {
+    "route": "attendance/mark",
+    "file": "attendance-mark.png",
+    "url": "http://127.0.0.1:3007/attendance/mark",
+    "title": "SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nFees\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nTimetable\nHomework\n\nSchool\n\nStaff\nTransport\nSettings\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nAttendance\nMark attendance\nRO\nDaily attendance\n\nSaturday, 14 November · 3 of 6 sections marked\n\nPresent\n9\nAbsent\n3\nOn leave\n0\nSections left\n3\nAll sections\nNot marked\nMarked\nOpen register\nMark next section\nClass 6th\n2 sections\n6th - A\nMarked by Review operator · 4 students\nReview\n6th - B\nAwaiting attendance · 4 students\nMark\nClass 7th\n2 sections\n7th - A\nMarked by Review operator · 4 students\nReview\n7th - B\nAwaiting attendance · 4 students\nMark\nClass 8th\n2 sections\n8th - A\nMarked by Review operator · 4 students\nReview\n8th - B\nAwaiting attendance · 4 students\nMark",
+    "width": 768,
+    "scrollWidth": 768,
+    "headings": [
+      "Daily attendance"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  },
+  {
+    "route": "students",
+    "file": "students.png",
+    "url": "http://127.0.0.1:3007/students",
+    "title": "SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nTimetable\nHomework\n\nSchool\n\nStaff\nTransport\nSettings\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nStudents\nAll students\nRO\nStudent register\n\nFind student records, manage admissions and review fee balances.\n\nImport\nExport\nNew admission\nAll\n24\nFees pending\n20\nFully paid\n4\nBy bus\n8\nAny field\nName\nSR no.\nParent's name\nMobile\nAdmission no.\nRoll no.\nAddress\nPEN\n/\nClass\nAll\n6th\n7th\n8th\nAll\nSection\nAll\nA\nB\nAll\nGender\nAll\nBoys\nGirls\nAll\nCategory\nAll\nGeneral\nOBC\nMBC\nSC\nST\nEWS\nAll\n24 records\nStudent\tParent\tFee balance\t\nActions\n\n\nAarav Sharma\nSR-1200\n\t\nRajesh Sharma\n\tPaid\t\n\n\nAditi Soni\nSR-1206\n\t\nSuresh Rathore\n\t\n₹10,000 due\n\t\nCollect\n\n\nDiya Singh\nSR-1212\n\t\nRajesh Sharma\n\t\n₹14,000 due\n\t\nCollect\n\n\nTara Desai\nSR-1218\n\t\nSuresh Rathore\n\t\n₹18,000 due\n\t\nCollect\n\n\nVihaan Singh\nSR-1203\n\t\nVikram Singh\n\t\n₹18,000 due\n\t\nCollect\n\n\nArjun Joshi\nSR-1209\n\t\nMahesh Joshi\n\t\n₹22,000 due\n\t\nCollect\n\n\nAditya Bhat\nSR-1215\n\t\nVikram Singh\n\t\n₹6,000 due\n\t\nCollect\n\n\nYash Verma\nSR-1221\n\t\nMahesh Joshi\n\tPaid\t\n\n\nIshita Mehta\nSR-1204\n\t\nRajesh Sharma\n\t\n₹22,000 due\n\t\nCollect\n\n\nKavya Patel\nSR-1210\n\t\nSuresh Rathore\n\t\n₹6,000 due\n\t\nCollect\n\n\nSiya Agarwal\nSR-1216\n\t\nRajesh Sharma\n\t\n₹10,000 due\n\t\nCollect\n\n\nRiya Saxena\nSR-1222\n\t\nSuresh Rathore\n\t\n₹14,000 due\n\t\nCollect\n\n\nPrisha Joshi\nSR-1201\n\t\nMahesh Joshi\n\t\n₹10,000 due\n\t\nCollect\n\n\nKabir Jain\nSR-1207\n\t\nVikram Singh\n\tPaid\t\n\n\nShaurya Rao\nSR-1213\n\t\nMahesh Joshi\n\t\n₹18,000 due\n\t\nCollect\n\n\nVivaan Shah\nSR-1219\n\t\nVikram Singh\n\t\n₹22,000 due\n\t\nCollect\n\n\nAnanya Rathore\nSR-1202\n\t\nSuresh Rathore\n\t\n₹14,000 due\n\t\nCollect\n\n\nMeera Vyas\nSR-1208\n\t\nRajesh Sharma\n\t\n₹18,000 due\n\t\nCollect\n\n\nNisha Kumari\nSR-1214\n\t\nSuresh Rathore\n\tPaid\t\n\n\nAvni Gupta\nSR-1220\n\t\nRajesh Sharma\n\t\n₹6,000 due\n\t\nCollect\n\n\nDev Choudhary\nSR-1205\n\t\nMahesh Joshi\n\t\n₹6,000 due\n\t\nCollect\n\n\nRohan Mehta\nSR-1211\n\t\nVikram Singh\n\t\n₹10,000 due\n\t\nCollect\n\n\nReyansh Das\nSR-1217\n\t\nMahesh Joshi\n\t\n₹14,000 due\n\t\nCollect\n\n\nDhruv Shah\nSR-1223\n\t\nVikram Singh\n\t\n₹18,000 due\n\t\nCollect\n1–24 of 24",
+    "width": 768,
+    "scrollWidth": 768,
+    "headings": [
+      "Student register"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  },
+  {
+    "route": "settings",
+    "file": "settings.png",
+    "url": "http://127.0.0.1:3007/settings",
+    "title": "SMS Barmer Review School | SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nTimetable\nHomework\n\nSchool\n\nStaff\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nSettings\nSchool & sessions\nRO\nSchool settings\n\nSchool identity, official records and the academic calendar\n\nSchool profile\nAcademic session\nSchool profile\n\nDetails used across the school system\n\nUndo\nSave changes\nSchool identity\nSchool name*\nShort name\nShown in the logo tile and crest, e.g. SPS\nPrincipal's name\nPrinted under the signature line\nLogo\nSB\n\nNo logo yet: the crest with your short name is used\n\nPNG or JPG. A square logo on a white or clear background looks best.\n\nUpload logo\nSchool photo (apps' Home)\nNo photo\n\nNo photo yet: the apps use their built-in picture\n\nA wide photo of the school building (landscape). Shown at the top of the parent and staff apps.\n\nUpload photo\nBoard and registration\nBoard\nCBSE\nRBSE\nICSE\nOther\nAffiliation no.\nSchool no. / code\nUDISE+ code\n11 digits\nAddress and contact\nAddress\nStreet / area\nCity\nDistrict\nState\nPIN code\nOffice phone\nSecond phone\nE-mail\nWebsite\nHow it prints\nSB\n\nSMS BARMER REVIEW SCHOOL\n\nBARMER, RAJASTHAN – 344001\n\nAffiliated to C.B.S.E., New Delhi\n\nAffiliation No. — · School No. —\n\nUsed on fee receipts, TC, bonafide and character certificates, gate passes and the sidebar.",
+    "width": 768,
+    "scrollWidth": 768,
+    "headings": [
+      "School settings",
+      "School profile",
+      "School identity",
+      "Board and registration",
+      "Address and contact"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  }
+]

@@ -46,9 +46,9 @@ export function LeaveTab({ canWrite, onPending }: { canWrite: boolean; onPending
   const thisYear = list ? year(list.today) : "";
 
   return (
-    <section className="card overflow-hidden">
-      <div className="flex flex-wrap items-center gap-2 border-b border-slate-200/80 p-3 sm:px-4">
-        <div className="flex max-w-full gap-1 overflow-x-auto rounded-lg bg-slate-100 p-0.5" role="tablist" aria-label="Show">
+    <section className="card register-table overflow-hidden">
+      <div className="workspace-toolbar !rounded-none !border-x-0 !border-t-0 !shadow-none">
+        <div className="module-tabs flex max-w-full overflow-x-auto" role="tablist" aria-label="Show">
           {(
             [
               ["all", "All"],

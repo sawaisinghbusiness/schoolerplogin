@@ -46,7 +46,7 @@ export function MobileTabBar({ onMenu, menuOpen }: { onMenu: () => void; menuOpe
 
   const item = "flex min-w-0 flex-1 flex-col items-center justify-center gap-1 pt-1.5 text-[11px] font-semibold leading-none";
   return (
-    <nav aria-label="Main" className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-sm md:hidden">
+    <nav aria-label="Main" className="erp-mobile-nav fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-sm md:hidden">
       <div className="flex h-14">
         {tabs.map((t) => {
           const on = !menuOpen && activeTab?.href === t.href;

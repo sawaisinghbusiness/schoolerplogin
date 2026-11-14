@@ -123,7 +123,7 @@ export default function PayrollPage() {
   return (
     <div className="space-y-5 pb-28">
       <header className="page-header">
-        <h1 className="page-title">Payroll</h1>
+        <div><h1 className="page-title">Payroll</h1><p className="page-subtitle">Monthly salary preparation, payslips and payment records</p></div>
         {!setupNeeded && (
           <div className="flex gap-2">
             <button type="button" onClick={bankSheet} disabled={!stats.made} className="btn btn-secondary px-3 sm:px-4" aria-label="Download bank sheet">
@@ -151,7 +151,7 @@ export default function PayrollPage() {
       ) : (
         <>
           {/* Month */}
-          <div className="flex items-center gap-2">
+          <div className="workspace-toolbar">
             <button type="button" onClick={() => setMonth((m) => shift(m, -1))} className="btn btn-secondary h-10 w-10 p-0" aria-label="Previous month">
               <ChevronLeft className="h-4 w-4" />
             </button>
@@ -159,10 +159,11 @@ export default function PayrollPage() {
             <button type="button" onClick={() => setMonth((m) => shift(m, 1))} disabled={month >= nowMonth()} className="btn btn-secondary h-10 w-10 p-0" aria-label="Next month">
               <ChevronRight className="h-4 w-4" />
             </button>
+            <span className="text-xs text-slate-500 sm:ml-auto">{rows ? `${stats.made} of ${rows.length} payslips prepared` : "Loading salary register"}</span>
           </div>
 
           {/* Figures */}
-          <div className="kpi-grid">
+          <div className="summary-strip">
             <Figure label="Net salary" value={rows ? inr(stats.net) : "…"} dot="bg-slate-400" />
             <Figure label="Paid" value={rows ? inr(stats.paid) : "…"} dot="bg-emerald-500" />
             <Figure label="To pay" value={rows ? inr(stats.due) : "…"} dot="bg-marigold-500" />
@@ -170,7 +171,8 @@ export default function PayrollPage() {
           </div>
 
           {/* Staff */}
-          <section className="card overflow-hidden" aria-label="Staff salaries">
+          <section className="card register-table overflow-hidden" aria-label="Staff salaries">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 px-5 py-4"><div><h2 className="text-sm font-semibold text-slate-900">Salary register</h2><p className="mt-1 text-xs text-slate-500">Review each payslip before recording payment</p></div><span className="text-xs tabular-nums text-slate-600">{rows ? `${rows.length} employees` : "Loading register"}</span></div>
             {rows === null ? (
               <div className="space-y-3 p-5">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -236,13 +238,13 @@ export default function PayrollPage() {
                       {rows.map((r) => {
                         const s = r.slip;
                         return (
-                          <tr key={r.staffId} className={s ? "cursor-pointer hover:bg-slate-50/70" : ""} onClick={() => s && setSlipFor(r.staffId)}>
+                          <tr key={r.staffId} tabIndex={s ? 0 : undefined} onKeyDown={(event) => { if (s && event.target === event.currentTarget && (event.key === "Enter" || event.key === " ")) { event.preventDefault(); setSlipFor(r.staffId); } }} className={s ? "cursor-pointer hover:bg-slate-50/70 focus-visible:bg-brand-50 focus-visible:outline-none" : ""} onClick={() => s && setSlipFor(r.staffId)}>
                             <td className="py-3 pl-5 pr-2" onClick={(e) => e.stopPropagation()}>
                               {s?.status === "draft" && <input type="checkbox" checked={picked.has(s.id)} onChange={() => toggle(s.id)} aria-label={`Select ${r.name}`} className="h-4 w-4 accent-brand-600" />}
                             </td>
                             <td className="px-3 py-3">
                               <span className="block font-semibold text-slate-900">{r.name}</span>
-                              <span className="block text-xs text-slate-500">{r.designation}</span>
+                              <span className="block text-xs text-slate-500">{[r.empCode, r.designation].filter(Boolean).join(" / ")}</span>
                             </td>
                             {s ? (
                               <>
@@ -259,7 +261,7 @@ export default function PayrollPage() {
                               </>
                             ) : (
                               <td colSpan={5} className="px-3 py-3 text-[13px] text-slate-500">
-                                {r.structure ? "Not worked out yet" : "Salary not set"}
+                                {r.structure ? "Payroll not calculated" : "Salary not set"}
                               </td>
                             )}
                             <td className="whitespace-nowrap py-3 pl-2 pr-5 text-right" onClick={(e) => e.stopPropagation()}>
@@ -288,7 +290,7 @@ export default function PayrollPage() {
             <button type="button" onClick={() => setPicked(new Set())} className="btn btn-sm ml-auto text-night-300 hover:text-white">
               Clear
             </button>
-            <button type="button" onClick={() => setPayOpen(true)} className="btn btn-sm bg-marigold-400 font-bold text-night-950 hover:bg-marigold-300">
+            <button type="button" onClick={() => setPayOpen(true)} className="btn btn-sm bg-brand-600 font-semibold text-white hover:bg-brand-700">
               Mark paid
             </button>
           </div>
@@ -325,7 +327,7 @@ export default function PayrollPage() {
 
 function Figure({ label, value, dot }: { label: string; value: string; dot: string }) {
   return (
-    <div className="kpi rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5">
+    <div className="kpi p-4 sm:p-5">
       <span className="kpi-label">
         <i className={`h-2 w-2 rounded-full ${dot}`} />
         {label}

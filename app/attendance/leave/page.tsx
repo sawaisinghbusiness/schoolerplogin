@@ -134,7 +134,7 @@ export default function LeaveRequestsPage() {
         </button>
       </header>
 
-      <div className="flex w-fit gap-1 rounded-xl bg-slate-100 p-1" role="tablist" aria-label="Show">
+      <div className="module-tabs flex w-fit gap-1" role="tablist" aria-label="Show">
         {(
           [
             ["pending", "Waiting"],
@@ -171,7 +171,7 @@ export default function LeaveRequestsPage() {
         <>
           {/* Desktop */}
           <div className="card hidden overflow-hidden sm:block">
-            <table className="w-full text-sm">
+            <table className="register-table w-full text-sm">
               <thead className="table-head">
                 <tr>
                   <th className="px-5 py-3 text-left">Student</th>

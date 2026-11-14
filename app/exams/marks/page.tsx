@@ -74,7 +74,7 @@ export default function MarksEntryPage() {
       <header className="page-header">
         <div>
           <h1 className="page-title">Marks entry</h1>
-          <p className="page-subtitle">Pick a section and subject, then type the marks down the list</p>
+          <p className="page-subtitle">Choose an exam, then open the class and subject register you need to complete</p>
         </div>
         {exams && exams.length > 0 && (
           <select value={examId} onChange={(e) => setExamId(e.target.value)} aria-label="Exam" className="field min-w-[14rem]">
@@ -104,8 +104,8 @@ export default function MarksEntryPage() {
           )}
         </div>
       ) : (
-        <section className="card overflow-hidden" aria-label="Marks entered">
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 border-b border-slate-200/80 p-3 sm:px-5">
+        <section className="card workspace-section overflow-hidden" aria-label="Marks entered">
+          <div className="workspace-toolbar flex flex-wrap items-center gap-x-5 gap-y-2 border-x-0 border-t-0 p-3 sm:px-5">
             {exam?.locked && (
               <span className="badge badge-slate"><Lock className="h-3 w-3" />Locked — marks can be viewed, not changed</span>
             )}
@@ -133,41 +133,25 @@ export default function MarksEntryPage() {
           ) : shown.length === 0 ? (
             <p className="px-6 py-14 text-center text-sm text-slate-500">{query ? "Nothing matches." : "No sections sit this exam."}</p>
           ) : (
-            <ul className="divide-y divide-slate-100">
-              {shown.map((s) => (
-                <li key={s.classSec} className="flex flex-col gap-2 px-5 py-3 sm:flex-row sm:items-center sm:gap-4">
-                  <div className="w-32 shrink-0">
-                    <p className="font-semibold text-slate-900">{s.classSec}</p>
-                    <p className="text-xs tabular-nums text-slate-500">{s.students} students</p>
-                  </div>
-                  {s.subjects.length === 0 ? (
-                    <span className="text-[13px] text-marigold-800">No subjects set</span>
-                  ) : (
-                    <div className="flex flex-wrap gap-1.5">
-                      {s.subjects.map((sub) => {
-                        const full = s.students > 0 && sub.entered >= s.students;
-                        const some = sub.entered > 0 && !full;
-                        return (
-                          <button
-                            key={sub.name}
-                            type="button"
-                            onClick={() => setOpen({ examId, section: s.classSec, subject: sub.name })}
-                            className={`group flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-[13px] font-semibold ring-1 transition hover:shadow-sm ${
-                              full ? "bg-emerald-50 text-emerald-800 ring-emerald-200" : some ? "bg-slate-50 text-slate-800 ring-slate-300" : "bg-white text-slate-700 ring-slate-200 hover:ring-slate-300"
-                            }`}
-                          >
-                            {sub.name}
-                            <span className={`tabular-nums text-[12px] font-medium ${full ? "text-emerald-600" : some ? "text-slate-600" : "text-slate-400"}`}>
-                              {sub.entered}/{s.students}
-                            </span>
-                          </button>
-                        );
-                      })}
-                    </div>
-                  )}
-                </li>
-              ))}
-            </ul>
+            <div className="overflow-x-auto">
+              <div className="divide-y divide-slate-200 sm:hidden">{shown.map(s => <section key={s.classSec} className="p-4"><h3 className="text-sm font-semibold">{s.classSec}<span className="ml-2 text-xs font-normal text-slate-500">{s.students} students</span></h3>{s.subjects.length === 0 ? <Link href="/exams/setup" className="mt-3 block text-sm text-brand-700">Set up subjects</Link> : s.subjects.map(sub => <div key={sub.name} className="flex items-center justify-between gap-3 border-b border-slate-100 py-3 last:border-0"><div className="min-w-0"><p className="text-sm font-medium">{sub.name}</p><p className="mt-1 text-xs text-slate-500">{sub.entered} / {s.students} marks entered</p></div><button type="button" onClick={() => setOpen({examId,section:s.classSec,subject:sub.name})} className="btn btn-secondary btn-sm shrink-0">{exam?.locked ? 'View marks' : 'Enter marks'}</button></div>)}</section>)}</div>
+              <table className="register-table hidden w-full min-w-[620px] text-sm sm:table">
+                <caption className="sr-only">Marks entry by class, section and subject</caption>
+                <thead className="table-head"><tr><th className="px-5 py-3 text-left">Class / section</th><th className="px-4 py-3 text-left">Subject</th><th className="px-4 py-3 text-right">Marks entered</th><th className="px-4 py-3 text-left">Status</th><th className="px-5 py-3 text-right">Register</th></tr></thead>
+                {shown.map(s => <tbody key={s.classSec} className="divide-y divide-slate-100 border-b border-slate-200 last:border-b-0">
+                  {s.subjects.length === 0 ? <tr><td className="px-5 py-4 font-semibold text-slate-900">{s.classSec}</td><td colSpan={4} className="px-4 py-4"><Link href="/exams/setup" className="text-brand-700 hover:underline">Set up subjects for this section</Link></td></tr> : s.subjects.map((sub,i) => {
+                    const full = s.students > 0 && sub.entered >= s.students;
+                    return <tr key={sub.name} className="hover:bg-slate-50/70">
+                      {i === 0 && <td rowSpan={s.subjects.length} className="w-40 px-5 py-4 align-top"><p className="font-semibold text-slate-900">{s.classSec}</p><p className="mt-1 text-xs tabular-nums text-slate-500">{s.students} students</p></td>}
+                      <td className="px-4 py-3 font-medium text-slate-800">{sub.name}</td>
+                      <td className="px-4 py-3 text-right tabular-nums text-slate-700">{sub.entered} <span className="text-slate-400">/ {s.students}</span></td>
+                      <td className="px-4 py-3"><span className={full ? 'badge badge-emerald' : 'text-xs text-slate-500'}>{full ? 'Complete' : sub.entered > 0 ? 'In progress' : 'Not started'}</span></td>
+                      <td className="px-5 py-3 text-right"><button type="button" onClick={() => setOpen({ examId, section: s.classSec, subject: sub.name })} className="btn btn-secondary btn-sm">{exam?.locked ? 'View marks' : full ? 'Review marks' : 'Enter marks'}</button></td>
+                    </tr>;
+                  })}
+                </tbody>)}
+              </table>
+            </div>
           )}
         </section>
       )}

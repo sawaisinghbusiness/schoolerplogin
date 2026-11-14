@@ -29,6 +29,7 @@ export function RouteDrawer({ route, routes, school, isAdmin, onClose, onChanged
   const r = route && typeof route === "object" ? route : null;
   const [tab, setTab] = useState<Tab>("students");
   const [riders, setRiders] = useState<Rider[] | null>(null);
+  const [riderError, setRiderError] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [picked, setPicked] = useState<Set<string>>(new Set());
   const [moveTo, setMoveTo] = useState("");
@@ -41,8 +42,9 @@ export function RouteDrawer({ route, routes, school, isAdmin, onClose, onChanged
   const loadRiders = async () => {
     if (!route || isNew) return;
     setRiders(null);
+    setRiderError(null);
     const res = await transportService.riders(isUnassigned ? "unassigned" : r!.id);
-    if (res.error) toast(res.error, "error");
+    if (res.error) { setRiderError(res.error); return; }
     setRiders(res.data);
   };
 
@@ -171,8 +173,8 @@ export function RouteDrawer({ route, routes, school, isAdmin, onClose, onChanged
         }
       >
         {TABS.length > 0 && (
-          <div className="sticky top-0 z-10 bg-canvas px-5 pt-4">
-            <div className="flex gap-1 rounded-xl bg-slate-200/60 p-1" role="tablist">
+          <div className="sticky top-0 z-10 border-b border-slate-200 bg-white px-5">
+            <div className="module-tabs flex" role="tablist" aria-label="Route details">
               {TABS.map((t) => (
                 <button key={t.key} type="button" role="tab" aria-selected={tab === t.key} onClick={() => setTab(t.key)} className={`flex-1 rounded-lg px-3 py-2 text-[13px] font-semibold transition ${tab === t.key ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}>
                   {t.label}
@@ -186,14 +188,14 @@ export function RouteDrawer({ route, routes, school, isAdmin, onClose, onChanged
           {error && <p role="alert" className="rounded-lg bg-white px-3 py-2 text-sm font-medium text-slate-800 ring-1 ring-rose-300">{error}</p>}
 
           {tab === "students" && !isNew && (
-            <section className="card overflow-hidden">
+            <section className="card register-table overflow-hidden">
               <div className="border-b border-slate-100 p-3">
                 <div className="relative">
                   <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
                   <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Name, class or stop" aria-label="Find a student" className="field field-sm w-full pl-9" />
                 </div>
               </div>
-              {riders === null ? (
+              {riderError ? <div role="alert" className="px-5 py-8"><p className="text-sm text-rose-700">Could not load route students: {riderError}</p><button type="button" onClick={loadRiders} className="btn btn-secondary btn-sm mt-3">Try again</button></div> : riders === null ? (
                 <div className="space-y-2 p-4">
                   {Array.from({ length: 6 }).map((_, i) => (
                     <div key={i} className="skeleton h-10 w-full" />

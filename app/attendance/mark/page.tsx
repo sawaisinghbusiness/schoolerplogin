@@ -34,187 +34,72 @@ export default function MarkAttendancePage() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState<SectionDay | null>(null);
-
+  const [filter, setFilter] = useState<"all" | "pending" | "marked">("all");
   const load = useCallback(async () => {
     setLoading(true);
     const r = await attendanceService.day(date);
     setLoading(false);
-    if (!r.data) return setError(r.error || "Could not load.");
-    setError(null);
-    setDay(r.data);
+    if (!r.data) return setError(r.error || "Could not load attendance.");
+    setError(null); setDay(r.data);
   }, [date]);
-  useEffect(() => {
-    setDay(null);
-    load();
-  }, [load]);
-
+  useEffect(() => { setDay(null); setError(null); load(); }, [load]);
   const t = day?.totals;
   const isToday = date === todayIso();
   const byClass = useMemo(() => {
-    const m = new Map<string, SectionDay[]>();
-    for (const s of day?.sections || []) m.set(s.class, [...(m.get(s.class) || []), s]);
-    return Array.from(m.entries());
-  }, [day]);
-
+    const groups = new Map<string, SectionDay[]>();
+    for (const section of day?.sections || []) {
+      if (filter === "pending" && section.marked > 0 || filter === "marked" && section.marked === 0) continue;
+      groups.set(section.class, [...(groups.get(section.class) || []), section]);
+    }
+    return Array.from(groups.entries());
+  }, [day, filter]);
   const nextUnmarked = (after: SectionDay) => {
-    const list = day?.sections || [];
-    const i = list.findIndex((s) => s.classSec === after.classSec);
-    return list.slice(i + 1).concat(list.slice(0, i)).find((s) => s.marked === 0) || null;
+    const list = day?.sections || [], index = list.findIndex(s => s.classSec === after.classSec);
+    return list.slice(index + 1).concat(list.slice(0, index)).find(s => s.marked === 0) || null;
   };
-
-  return (
-    <div className="space-y-5 pb-12">
-      <header className="page-header">
-        <div>
-          <h1 className="page-title">Attendance</h1>
-          <p className="page-subtitle">
-            {longDate(date)}
-            {t ? ` · ${t.sectionsMarked} of ${t.sections} sections marked` : ""}
-          </p>
-        </div>
-        <div className="flex shrink-0 items-center gap-2">
-          <button type="button" onClick={() => setDate(shift(date, -1))} className="btn btn-secondary px-2.5" aria-label="Previous day">
-            <ChevronLeft className="h-4 w-4" />
-          </button>
-          <input type="date" value={date} max={todayIso()} onChange={(e) => e.target.value && setDate(e.target.value)} aria-label="Date" className="field field-sm h-10" />
-          <button type="button" onClick={() => setDate(shift(date, 1))} disabled={isToday} className="btn btn-secondary px-2.5" aria-label="Next day">
-            <ChevronRight className="h-4 w-4" />
-          </button>
-          {!isToday && (
-            <button type="button" onClick={() => setDate(todayIso())} className="btn btn-soft btn-sm">
-              Today
-            </button>
-          )}
-          <button type="button" onClick={load} disabled={loading} className="btn btn-secondary px-2.5" aria-label="Reload">
-            <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
-          </button>
-        </div>
-      </header>
-
-      {day && (day.sunday || day.holiday) && (
-        <div className="alert alert-amber">
-          <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
-          <span>{day.holiday ? `${shortDate(date)} is a holiday (${day.holiday}).` : `${shortDate(date)} is a Sunday.`} You can still mark attendance if school was open.</span>
-        </div>
-      )}
-      {error && (
-        <div className="alert alert-rose">
-          <span>{error}</span>
-        </div>
-      )}
-
-      <div className="kpi-grid">
-        <Figure label="Present" value={t ? t.present + t.half : null} note={t && t.marked ? `${pct(t.present + t.half * 0.5, t.marked)}% of those marked` : "Nobody marked yet"} dot="bg-emerald-500" />
-        <Figure label="Absent" value={t ? t.absent : null} note={t && t.absent ? "Parents can be told on WhatsApp" : "—"} dot="bg-rose-500" />
-        <Figure label="On leave" value={t ? t.leave : null} note={t && t.half ? `${t.half} half day` : "—"} dot="bg-marigold-400" />
-        <Figure label="Sections left" value={t ? t.sections - t.sectionsMarked : null} note={t ? `${t.marked.toLocaleString("en-IN")} of ${t.students.toLocaleString("en-IN")} students marked` : ""} dot="bg-slate-400" />
+  const nextSection = day?.sections.find(s => s.marked === 0);
+  return <div className="space-y-5 pb-12">
+    <header className="page-header">
+      <div><h1 className="page-title">Daily attendance</h1><p className="page-subtitle">{longDate(date)}{t ? ' · ' + t.sectionsMarked + ' of ' + t.sections + ' sections marked' : ''}</p></div>
+      <div className="flex flex-wrap items-center gap-2">
+        <button type="button" onClick={() => setDate(shift(date, -1))} className="btn btn-secondary px-2.5" aria-label="Previous day"><ChevronLeft className="h-4 w-4" /></button>
+        <input type="date" value={date} max={todayIso()} onChange={e => e.target.value && setDate(e.target.value)} aria-label="Date" className="field field-sm h-10" />
+        <button type="button" onClick={() => setDate(shift(date, 1))} disabled={isToday} className="btn btn-secondary px-2.5" aria-label="Next day"><ChevronRight className="h-4 w-4" /></button>
+        {!isToday && <button type="button" onClick={() => setDate(todayIso())} className="btn btn-secondary btn-sm">Today</button>}
+        <button type="button" onClick={load} disabled={loading} className="btn btn-secondary px-2.5" aria-label="Reload"><RefreshCw className={loading ? 'h-4 w-4 animate-spin' : 'h-4 w-4'} /></button>
       </div>
-
-      <section className="card overflow-hidden">
-        <div className="flex items-center justify-between border-b border-slate-100 px-4 py-3 sm:px-5">
-          <h2 className="text-sm font-semibold text-slate-900">Sections</h2>
-          <span className="flex items-center gap-3 text-xs text-slate-500">
-            <span className="inline-flex items-center gap-1.5">
-              <i className="h-2.5 w-2.5 rounded-sm bg-emerald-500" /> Marked
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <i className="h-2.5 w-2.5 rounded-sm border border-dashed border-slate-400" /> Not yet
-            </span>
-          </span>
-        </div>
-        {!day ? (
-          <div className="grid grid-cols-2 gap-3 p-5 sm:grid-cols-3 lg:grid-cols-4">
-            {Array.from({ length: 12 }).map((_, i) => (
-              <div key={i} className="skeleton h-[74px]" />
-            ))}
-          </div>
-        ) : (
-          <div className="divide-y divide-slate-100">
-            {byClass.map(([cls, secs]) => (
-              <div key={cls} className="flex items-center gap-3 px-4 py-2.5 sm:items-start sm:px-5 sm:py-3">
-                <span className="w-16 shrink-0 text-[13px] font-semibold text-slate-700 sm:w-20 sm:pt-2">{cls}</span>
-                <div className="flex flex-1 flex-wrap gap-2 sm:grid sm:grid-cols-3 xl:grid-cols-4">
-                  {secs.map((s) => (
-                    <SectionTile key={s.classSec} s={s} onClick={() => setOpen(s)} />
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </section>
-
-      <MarkDrawer
-        date={date}
-        section={open}
-        onClose={() => setOpen(null)}
-        onSaved={load}
-        onNext={(s) => {
-          const n = nextUnmarked(s);
-          setOpen(n);
-          if (!n) toast("Every section is marked for this day.", "success");
-        }}
-      />
-    </div>
-  );
+    </header>
+    {day && (day.sunday || day.holiday) && <div className="alert alert-amber"><AlertTriangle className="h-4 w-4 shrink-0" /><span>{day.holiday ? shortDate(date) + ' is a holiday (' + day.holiday + ').' : shortDate(date) + ' is a Sunday.'} You can still mark attendance if school was open.</span></div>}
+    {error && <div role="alert" className="alert alert-rose"><span className="flex-1">Could not load attendance: {error}</span><button type="button" onClick={load} className="btn btn-secondary btn-sm">Try again</button></div>}
+    {(!error || day) && <div className="summary-strip">
+      <Figure label="Present" value={t ? t.present + t.half : null} note={t && t.marked ? pct(t.present + t.half * .5, t.marked) + '% of those marked' : 'No attendance marked'} dot="bg-emerald-500" />
+      <Figure label="Absent" value={t ? t.absent : null} note="Students marked absent" dot="bg-rose-500" />
+      <Figure label="On leave" value={t ? t.leave : null} note={t?.half ? t.half + ' half day' : 'Approved and recorded leave'} dot="bg-marigold-400" />
+      <Figure label="Sections left" value={t ? t.sections - t.sectionsMarked : null} note={t ? t.marked.toLocaleString('en-IN') + ' of ' + t.students.toLocaleString('en-IN') + ' students marked' : ''} dot="bg-slate-400" />
+    </div>}
+    <section className="card workspace-section overflow-hidden">
+      <div className="workspace-toolbar flex flex-wrap items-center justify-between gap-3 border-x-0 border-t-0 px-4 py-3 sm:px-5">
+        <div className="module-tabs flex flex-wrap gap-1" aria-label="Section status">{([['all','All sections'],['pending','Not marked'],['marked','Marked']] as const).map(([key,label]) => <button key={key} type="button" aria-pressed={filter === key} onClick={() => setFilter(key)} className={filter === key ? 'is-active' : ''}>{label}</button>)}</div>
+        <div className="flex items-center gap-3"><Link href="/attendance/register" className="text-[13px] font-medium text-slate-600 hover:text-brand-700">Open register</Link>{nextSection && <button type="button" onClick={() => setOpen(nextSection)} className="btn btn-primary btn-sm">Mark next section <ArrowRight className="h-3.5 w-3.5" /></button>}</div>
+      </div>
+      <div className="hidden grid-cols-[1fr_100px_120px_120px_100px] gap-4 border-b border-slate-200 bg-slate-50 px-5 py-2.5 text-xs font-medium text-slate-500 xl:grid"><span>Class / section</span><span className="text-right">Students</span><span className="text-right">Present</span><span className="text-right">Absent</span><span className="text-right">Register</span></div>
+      {error && !day ? <div className="p-8 text-sm text-slate-600">Attendance is unavailable. Retry to load the section register.</div> : !day ? <div className="space-y-3 p-5">{Array.from({length:6},(_,i) => <div key={i} className="skeleton h-12 w-full" />)}</div> : <div className="divide-y divide-slate-200">
+        {byClass.length === 0 ? <p className="px-5 py-10 text-sm text-slate-500">No sections match this status.</p> : byClass.map(([cls, sections]) => <div key={cls}><div className="flex items-center justify-between border-b border-slate-100 bg-slate-50/60 px-5 py-2 text-xs font-semibold text-slate-600"><span>Class {cls}</span><span>{sections.length} {sections.length === 1 ? 'section' : 'sections'}</span></div><div className="divide-y divide-slate-100">{sections.map(s => <SectionTile key={s.classSec} s={s} onClick={() => setOpen(s)} />)}</div></div>)}
+      </div>}
+    </section>
+    <MarkDrawer date={date} section={open} onClose={() => setOpen(null)} onSaved={load} onNext={s => { const next = nextUnmarked(s); setOpen(next); if (!next) toast('Every section is marked for this day.', 'success'); }} />
+  </div>;
 }
-
-function Figure({ label, value, note, dot }: { label: string; value: number | null; note: string; dot: string }) {
-  return (
-    <div className="kpi rounded-2xl border border-slate-200/80 bg-white p-4 shadow-card sm:p-5">
-      <span className="kpi-label">
-        <i className={`h-2 w-2 rounded-full ${dot}`} />
-        {label}
-      </span>
-      <span className="kpi-value">{value === null ? "…" : value.toLocaleString("en-IN")}</span>
-      <span className="kpi-note truncate">{note}</span>
-    </div>
-  );
+function Figure({label,value,note,dot}:{label:string;value:number|null;note:string;dot:string}) {
+  return <div className="min-w-0 p-4 sm:px-5"><span className="kpi-label"><i className={'h-2 w-2 rounded-full ' + dot}/>{label}</span><span className="kpi-value">{value === null ? '...' : value.toLocaleString('en-IN')}</span><span className="kpi-note">{note}</span></div>;
 }
-
-function SectionTile({ s, onClick }: { s: SectionDay; onClick: () => void }) {
-  const done = s.marked > 0;
-  const present = s.present + s.half * 0.5;
-  const p = pct(present, s.marked);
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={`group min-h-[44px] min-w-[60px] rounded-xl px-2.5 py-1.5 text-left transition sm:min-w-0 sm:py-2.5 ${done ? "border border-slate-200 bg-white hover:border-slate-300 hover:shadow-card" : "border border-dashed border-slate-300 bg-slate-50/60 hover:border-brand-400 hover:bg-white"}`}
-    >
-      <span className="flex items-center justify-between gap-1">
-        <span className="truncate text-[13.5px] font-semibold text-slate-900">{s.section}</span>
-        {done ? <Check className="h-4 w-4 shrink-0 text-emerald-600" strokeWidth={3} /> : <span className="hidden text-[11.5px] font-semibold text-brand-700 opacity-0 transition group-hover:opacity-100 sm:inline">Mark →</span>}
-      </span>
-      {/* Phones: just the count */}
-      <span className="block text-xs tabular-nums text-slate-500 sm:hidden">
-        {done ? (
-          <>
-            {s.present + s.half}/{s.students}
-            {s.absent ? <span className="ml-1 font-semibold text-rose-600">−{s.absent}</span> : null}
-          </>
-        ) : (
-          String(s.students)
-        )}
-      </span>
-      {done ? (
-        <span className="hidden sm:block">
-          <span className="mt-1 flex items-baseline justify-between text-xs">
-            <span className="tabular-nums text-slate-600">
-              {s.present + s.half}/{s.students}
-              {s.absent ? <span className="ml-1.5 font-semibold text-rose-600">{s.absent} absent</span> : null}
-            </span>
-            <span className="tabular-nums text-slate-400">{p}%</span>
-          </span>
-          <span className="mt-1.5 block h-1 overflow-hidden rounded-full bg-slate-100">
-            <span className="block h-full rounded-full bg-emerald-500" style={{ width: `${p}%` }} />
-          </span>
-        </span>
-      ) : (
-        <span className="mt-1 hidden text-xs text-slate-500 sm:block">{s.students} students · not marked</span>
-      )}
-    </button>
-  );
+function SectionTile({s,onClick}:{s:SectionDay;onClick:()=>void}) {
+  const done=s.marked>0;
+  return <button type="button" onClick={onClick} className="grid w-full grid-cols-[1fr_auto] items-center gap-4 px-4 py-3 text-left transition-colors hover:bg-slate-50 focus-visible:bg-brand-50 xl:grid-cols-[1fr_100px_120px_120px_100px] sm:px-5">
+    <span className="min-w-0"><span className="block text-sm font-semibold text-slate-900">{s.classSec}</span><span className="mt-0.5 block text-xs text-slate-500">{done ? s.markedBy ? 'Marked by ' + s.markedBy : 'Attendance recorded' : 'Awaiting attendance'}<span className="xl:hidden"> &middot; {s.students} students</span></span></span>
+    <span className="hidden text-right text-sm tabular-nums text-slate-600 xl:block">{s.students}</span><span className="hidden text-right text-sm tabular-nums text-slate-800 xl:block">{done ? s.present+s.half : '-'}</span><span className="hidden text-right text-sm tabular-nums xl:block">{done ? <span className={s.absent ? 'text-rose-700' : 'text-slate-500'}>{s.absent}</span> : '-'}</span>
+    <span className="inline-flex items-center justify-end gap-1.5 text-[13px] font-semibold text-brand-700">{done ? 'Review' : 'Mark'}<ChevronRight className="h-4 w-4" /></span>
+  </button>;
 }
 
 /** One section: everyone starts Present; change the few who are not, then save. */

@@ -23,6 +23,7 @@ export default function ClassesPage() {
   const [classes, setClasses] = useState<ClassItem[] | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [counts, setCounts] = useState<Counts | null>(null);
+  const [countsError, setCountsError] = useState<string | null>(null);
   const [setupNotice, setSetupNotice] = useState<string | null>(null);
 
   const [addOpen, setAddOpen] = useState(false);
@@ -46,7 +47,8 @@ export default function ClassesPage() {
 
   const loadCounts = useCallback(async () => {
     const res = await classService.studentCounts();
-    setCounts(res.error ? {} : res.data);
+    setCountsError(res.error || null);
+    setCounts(res.error ? null : res.data);
   }, []);
 
   const reload = useCallback(async () => {
@@ -158,6 +160,8 @@ export default function ClassesPage() {
         </button>
       </header>
 
+      {countsError && <div role="alert" className="alert alert-amber"><span className="flex-1">Class structure is available, but student counts could not be loaded: {countsError}</span><button type="button" onClick={loadCounts} className="btn btn-secondary btn-sm">Retry counts</button></div>}
+
       {setupNotice && (
         <div className="alert alert-amber">
           <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
@@ -190,7 +194,7 @@ export default function ClassesPage() {
           </button>
         </div>
       ) : (
-        <section className="card overflow-hidden">
+        <section className="card register-table overflow-hidden">
           {groups.map((g, gi) => {
             const wingStudents = g.classes.reduce((t, c) => t + classCount(c.name), 0);
             return (
@@ -351,8 +355,8 @@ function ClassRow({
                 key={s.id}
                 type="button"
                 onClick={() => onOpenSection(s.id)}
-                title={`${cls.name} - ${s.name}: ${plural(n, "student")}, ${s.subjects.length ? plural(s.subjects.length, "subject") : "no subjects yet"}. Click to edit.`}
-                className="inline-flex max-w-full items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-2.5 py-1 text-[13px] shadow-2xs transition hover:border-brand-400 hover:bg-brand-50/60"
+                title={`${cls.name} - ${s.name}: ${counts ? plural(n, "student") : "student count unavailable"}, ${s.subjects.length ? plural(s.subjects.length, "subject") : "no subjects yet"}. Click to edit.`}
+                className="inline-flex min-h-[36px] max-w-full items-center gap-2 rounded-md border border-slate-200 bg-white px-3 py-1.5 text-[13px] transition-colors hover:border-brand-400 hover:bg-brand-50/60"
               >
                 <span className="truncate font-semibold text-slate-800">{s.name}</span>
                 {s.stream && !s.name.toLowerCase().startsWith(s.stream.toLowerCase()) && <span className="text-slate-500">{s.stream}</span>}
@@ -372,7 +376,7 @@ function ClassRow({
               <span className="tabular-nums opacity-70">{s.students}</span>
             </button>
           ))}
-          <button type="button" onClick={() => onAddSection(null)} className="inline-flex items-center gap-1 rounded-lg border border-brand-200 bg-brand-50 px-2.5 py-1 text-[13px] font-semibold text-brand-700 hover:border-brand-400 hover:bg-brand-100">
+          <button type="button" onClick={() => onAddSection(null)} className="inline-flex min-h-[36px] items-center gap-1 rounded-md px-2.5 py-1.5 text-[13px] font-semibold text-brand-700 hover:bg-brand-50">
             <Plus className="h-3.5 w-3.5" />
             Add section
           </button>

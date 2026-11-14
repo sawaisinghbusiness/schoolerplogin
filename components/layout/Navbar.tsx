@@ -70,19 +70,19 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
 
   return (
     <>
-    <header className="erp-topbar relative z-20 flex h-14 shrink-0 select-none items-center gap-2 border-b border-slate-300/40 bg-canvas pl-4 pr-3 pt-[env(safe-area-inset-top)] sm:gap-3 sm:px-6 md:h-16 lg:px-8">
+    <header className="erp-topbar relative z-20 flex h-14 shrink-0 select-none items-center gap-2 border-b border-slate-300/40 bg-canvas pl-4 pr-3 pt-[env(safe-area-inset-top)] sm:gap-3 sm:px-6 md:h-[60px] lg:px-8">
       <button
         onClick={onToggleSidebar}
-        className="-ml-1 hidden rounded-lg p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-900"
+        className="-ml-1 shrink-0 rounded-md p-2 md:hidden text-slate-500 hover:bg-slate-100 hover:text-slate-900"
         aria-label="Open menu"
       >
         <Menu className="h-5 w-5" />
       </button>
 
       {/* Where am I */}
-      <div className="min-w-0 flex-1">
+      <div className="min-w-0 flex-1 overflow-hidden">
         {/* The page carries its own big title; this is just the trail. */}
-        <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-[13.5px] text-slate-500">
+        <nav aria-label="Breadcrumb" className="flex min-w-0 items-center gap-1.5 text-[13.5px] text-slate-500">
           <Link href="/dashboard" className="hidden hover:text-slate-800 sm:inline">
             Home
           </Link>
@@ -100,7 +100,7 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
       {/* Command palette trigger */}
       <button
         onClick={() => setPaletteOpen(true)}
-        className="group hidden h-10 w-72 items-center gap-2.5 rounded-md border border-slate-200 bg-slate-50 px-3 text-left text-sm text-slate-500 ring-1 ring-transparent hover:bg-white hover:ring-slate-200 hover:shadow-sm xl:flex"
+        className="group hidden h-9 w-60 items-center gap-2.5 rounded-md border border-slate-200 bg-slate-50 px-3 text-left text-sm text-slate-500 ring-1 ring-transparent hover:bg-white hover:ring-slate-200 hover:shadow-sm xl:flex"
       >
         <Search className="h-4 w-4 text-slate-400 group-hover:text-brand-600" />
         <span className="flex-1">Search pages…</span>
@@ -127,7 +127,7 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
         <button
           onClick={() => setProfileOpen((v) => !v)}
           aria-expanded={profileOpen}
-          className={`flex items-center gap-2.5 rounded-xl p-1 pr-1.5 hover:bg-slate-100 ${profileOpen ? "bg-slate-100" : ""}`}
+          className={`flex items-center gap-2.5 rounded-md p-1 pr-1.5 hover:bg-slate-100 ${profileOpen ? "bg-slate-100" : ""}`}
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-md bg-slate-700 text-[12px] font-semibold text-white">
             {user.initials}
@@ -155,7 +155,7 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
             <div className="py-1.5">
               {[
                 { href: "/settings", icon: Settings, label: "School settings" },
-                ...(user.role === "Administrator" ? [{ href: "/settings/users", icon: Users, label: "Users & roles" }] : []),
+                ...(user.roleKey === "admin" ? [{ href: "/settings/users", icon: Users, label: "Users & roles" }] : []),
               ].map((l) => (
                 <Link
                   key={l.href}

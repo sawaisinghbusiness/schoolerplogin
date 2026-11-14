@@ -38,6 +38,10 @@ export default function TimetablePage() {
     if (!r.data) return setFailed(r.error || "Could not load the timetable.");
     setFailed(null);
     setOv(r.data);
+    const first = r.data.classes[0];
+    setClassId(old => r.data!.classes.some(c => c.id === old) ? old : first?.id || "");
+    setSectionId(old => r.data!.classes.some(c => c.sections.some(s => s.id === old)) ? old : first?.sections[0]?.id || "");
+    setTeacherId(old => r.data!.teachers.some(t => t.id === old) ? old : r.data!.teachers.find(t => t.teaching)?.id || "");
     return r.data;
   }, []);
 
@@ -113,7 +117,7 @@ export default function TimetablePage() {
   return (
     <div className="space-y-5 pb-12">
       <header className="page-header">
-        <h1 className="page-title">Timetable</h1>
+        <div><h1 className="page-title">Timetable</h1><p className="page-subtitle">Weekly teaching periods by class, section and teacher</p></div>
         {ov && (
           <div className="flex justify-end gap-2">
             {tab === "class" && section && (
@@ -136,8 +140,8 @@ export default function TimetablePage() {
         <div className="card skeleton h-96" />
       ) : (
         <>
-          <div className="flex flex-wrap items-center gap-2">
-            <div className="flex gap-1 rounded-xl bg-slate-100 p-1" role="tablist" aria-label="View">
+          <div className="workspace-toolbar flex flex-wrap items-center gap-3 p-4">
+            <div className="module-tabs flex gap-1" role="tablist" aria-label="View">
               {(
                 [
                   ["class", "Class"],
@@ -199,7 +203,7 @@ export default function TimetablePage() {
           {tab === "teacher" && !teachers.length ? (
             <div className="card px-6 py-14 text-center text-sm text-slate-600">No teachers on the staff list yet.</div>
           ) : (
-            <section className="card overflow-hidden" aria-label={tab === "class" ? `Timetable of ${classSec}` : "Teacher timetable"}>
+            <section className="card workspace-section overflow-hidden" aria-label={tab === "class" ? `Timetable of ${classSec}` : "Teacher timetable"}>
               {gridError ? <div role="alert" className="p-6 text-sm text-rose-700"><p>Could not load this timetable: {gridError}</p><button type="button" className="btn btn-secondary btn-sm mt-3" onClick={() => { if (tab === "class") loadSection(); else { setGridError(null); setTEntries(null); timetableService.teacher(teacherId).then(r => { if (r.error) setGridError(r.error); else setTEntries(r.entries); }); } }}>Try again</button></div> : (tab === "class" ? entries === null : tEntries === null) ? (
                 <div className="space-y-3 p-5">
                   {Array.from({ length: 6 }).map((_, i) => (
@@ -208,7 +212,7 @@ export default function TimetablePage() {
                 </div>
               ) : (
                 <div className="overflow-x-auto">
-                  <table className="w-full min-w-[680px] border-separate border-spacing-0 text-sm">
+                  <table className="register-table w-full min-w-[680px] border-separate border-spacing-0 text-sm">
                     <thead>
                       <tr>
                         <th className="sticky left-0 z-10 w-28 border-b border-slate-200 bg-slate-50 px-3 py-2.5 text-left text-xs font-semibold text-slate-500">Period</th>

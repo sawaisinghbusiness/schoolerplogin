@@ -100,10 +100,10 @@ export function StaffFormDrawer({ isOpen, staff, onClose, onSaved }: { isOpen: b
         </>
       }
     >
-      <div className="space-y-4 p-5">
+      <div className="bg-white">
         {error && <p role="alert" className="rounded-lg bg-rose-50 px-3 py-2 text-sm text-rose-700 ring-1 ring-rose-100">{error}</p>}
 
-        <section className="card space-y-4 p-4">
+        <section className="workspace-section space-y-4 border-b border-slate-200 p-5 last:border-b-0">
           <div className="flex gap-1 rounded-xl bg-slate-100 p-1" role="radiogroup" aria-label="Staff type">
             {([["teaching", "Teaching"], ["non_teaching", "Non-teaching"]] as [StaffType, string][]).map(([t, label]) => (
               <button key={t} type="button" role="radio" aria-checked={f.staffType === t} onClick={() => setType(t)} className={`flex-1 rounded-lg px-3 py-1.5 text-[13px] font-semibold ${f.staffType === t ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}>
@@ -134,7 +134,7 @@ export function StaffFormDrawer({ isOpen, staff, onClose, onSaved }: { isOpen: b
           </div>
         </section>
 
-        <section className="card grid gap-4 p-4 sm:grid-cols-2">
+        <section className="workspace-section grid gap-4 border-b border-slate-200 p-5 last:border-b-0 sm:grid-cols-2">
           <Field id="st-mobile" label="Mobile">
             <input id="st-mobile" inputMode="numeric" maxLength={10} value={f.mobile} onChange={(e) => setF((x) => ({ ...x, mobile: e.target.value.replace(/\D/g, "") }))} className="field w-full tabular-nums" />
           </Field>

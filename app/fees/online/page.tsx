@@ -95,7 +95,7 @@ export default function OnlinePaymentsPage() {
   ];
 
   return (
-    <div className="space-y-5 pb-12">
+    <div className="workspace-page space-y-5 pb-12">
       <header className="page-header">
         <div>
           <h1 className="page-title">Online payments</h1>
@@ -124,11 +124,11 @@ export default function OnlinePaymentsPage() {
       )}
       {setupNeeded && (
         <div className="alert alert-amber">
-          <span>Online payments need a one-time database update: run supabase/migrations/20261006_parent_app.sql in Supabase.</span>
+          <span>Online payments are not enabled yet. Ask your school administrator to complete setup.</span>
         </div>
       )}
 
-      <div className="scroll-row max-w-full gap-1 rounded-xl bg-slate-200/60 p-1 sm:w-fit" role="tablist" aria-label="Status">
+      <div className="module-tabs scroll-row max-w-full gap-1 rounded-xl bg-slate-200/60 p-1 sm:w-fit" role="tablist" aria-label="Status">
         {TABS.map(([k, l]) => (
           <button key={k} type="button" role="tab" aria-selected={status === k} onClick={() => setStatus(k)} className={`shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-[13px] font-semibold sm:py-1.5 ${status === k ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}>
             {l}
@@ -143,7 +143,8 @@ export default function OnlinePaymentsPage() {
         </div>
       )}
 
-      <section className="card overflow-hidden">
+      <section className="card workspace-section overflow-hidden">
+        <div className="workspace-toolbar flex items-center justify-between border-b border-slate-200 px-4 py-3"><h2 className="text-sm font-semibold text-slate-900">{status === "pending" ? "Payment claims to verify" : status === "verified" ? "Verified payment claims" : "Rejected payment claims"}</h2><span className="text-xs tabular-nums text-slate-500">{rows ? `${rows.length} records` : loading ? "Loading" : "Unavailable"}</span></div>
         {error && !rows ? <div className="p-8 text-center"><p className="text-sm text-slate-600">Payment claims are unavailable</p><button type="button" onClick={load} className="btn btn-secondary btn-sm mt-3">Try again</button></div> : !rows ? (
           <div className="flex items-center justify-center gap-2 p-10 text-sm text-slate-500">
             <Loader2 className="h-4 w-4 animate-spin" /> Loading…
@@ -151,7 +152,7 @@ export default function OnlinePaymentsPage() {
         ) : rows.length === 0 ? (
           <p className="p-10 text-center text-sm text-slate-500">{status === "pending" ? "Nothing to check. New payments from parents will show here." : "None yet."}</p>
         ) : (
-          <table className="w-full text-sm">
+          <table className="register-table w-full text-sm">
             <thead className="table-head hidden md:table-header-group">
               <tr>
                 <th className="px-4 py-2.5 text-left">Student</th>
@@ -171,7 +172,7 @@ export default function OnlinePaymentsPage() {
                     </p>
                   </td>
                   <td className="px-4 py-3">
-                    <p className="font-mono text-[13px] font-semibold tracking-wide text-slate-900">{c.utr}</p>
+                    <p className="font-mono text-[13px] font-semibold text-slate-900">{c.utr}</p>
                     <p className="text-xs text-slate-500">sent {when(c.sentAt)}</p>
                   </td>
                   <td className="px-4 py-3 text-slate-700">{day(c.paidOn)}</td>

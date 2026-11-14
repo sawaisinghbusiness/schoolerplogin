@@ -1,0 +1,150 @@
+[
+  {
+    "route": "dashboard",
+    "file": "dashboard.png",
+    "url": "http://127.0.0.1:3007/dashboard",
+    "title": "SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nTimetable\nHomework\n\nSchool\n\nStaff\nTransport\nSettings\nRO\n\nReview Operator\n\nAdministrator\n\nDashboard\nRO\nSchool overview\n\nSaturday, 14 November · Fees, enrolment and work that needs attention\n\nNew admission\nCollect fee\n\nCollected this month\n\n₹1.9 L\n\n+8% vs last month\n\nCollected this session\n\n₹7.3 L\n\n73% of ₹10.1 L\n\nFees outstanding\n\n₹2.8 L\n\n20 students with dues\n\nStudents enrolled\n\n24\n\n12 boys · 12 girls\n\nFee collection\n\nMonthly totals · Amounts in ₹ lakh\n\nOpen reports\n0\n0.5\n1\n1.5\n2\nApr\nMay\nJun\nJul\nAug\nSep\nOct\nNov\n1.9\nToday at the office\n\nCollection and pending work\n\n₹9,500\n\n3 receipts\n\nCollected today\n\n3 sections need attendance\n\n3 of 6 sections marked\n\nOpen\n\n3 cheques received this week\n\n₹45,000 to review\n\nReview\n\nNo birthdays today\n\nFrom student records\n\nOutstanding fees by class\n\nClasses with the highest remaining balance\n\nView dues\n7th\n₹1.0 L\n6th\n₹88,000\n8th\n₹86,000\nPayment methods\n\nRecorded collections this session\n\n₹7.3 L\nCash\n₹2.6 L\n36%\nUPI\n₹4.4 L\n60%\nCheque\n₹30,000\n4%\nHome\nStudents\nFees\nAttendance\nMenu",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "School overview",
+      "Fee collection",
+      "Today at the office",
+      "Outstanding fees by class",
+      "Payment methods"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  },
+  {
+    "route": "students",
+    "file": "students.png",
+    "url": "http://127.0.0.1:3007/students",
+    "title": "SMS Barmer Review School | SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nAll students\nEnquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nTimetable\nHomework\n\nSchool\n\nStaff\nTransport\nSettings\nRO\n\nReview Operator\n\nAdministrator\n\nAll students\nRO\nStudent register\n\nFind student records, manage admissions and review fee balances.\n\nNew admission\nAll\n24\nFees pending\n20\nFully paid\n4\nBy bus\n8\nAny field\nName\nSR no.\nParent's name\nMobile\nAdmission no.\nRoll no.\nAddress\nPEN\nClass\nAll\n6th\n7th\n8th\nAll\nSection\nAll\nA\nB\nAll\nGender\nAll\nBoys\nGirls\nAll\nCategory\nAll\nGeneral\nOBC\nMBC\nSC\nST\nEWS\nAll\n24 records\nAS\nAarav Sharma\n6th - A · SR-1200 · S/o Rajesh Sharma\nPaid\nAS\nAditi Soni\n6th - A · SR-1206 · S/o Suresh Rathore\n₹10,000 due\nDS\nDiya Singh\n6th - A · SR-1212 · S/o Rajesh Sharma\n₹14,000 due\nTD\nTara Desai\n6th - A · SR-1218 · S/o Suresh Rathore\n₹18,000 due\nVS\nVihaan Singh\n6th - B · SR-1203 · D/o Vikram Singh\n₹18,000 due\nAJ\nArjun Joshi\n6th - B · SR-1209 · D/o Mahesh Joshi\n₹22,000 due\nAB\nAditya Bhat\n6th - B · SR-1215 · D/o Vikram Singh\n₹6,000 due\nYV\nYash Verma\n6th - B · SR-1221 · D/o Mahesh Joshi\nPaid\nIM\nIshita Mehta\n7th - A · SR-1204 · S/o Rajesh Sharma\n₹22,000 due\nKP\nKavya Patel\n7th - A · SR-1210 · S/o Suresh Rathore\n₹6,000 due\nSA\nSiya Agarwal\n7th - A · SR-1216 · S/o Rajesh Sharma\n₹10,000 due\nRS\nRiya Saxena\n7th - A · SR-1222 · S/o Suresh Rathore\n₹14,000 due\nPJ\nPrisha Joshi\n7th - B · SR-1201 · D/o Mahesh Joshi\n₹10,000 due\nKJ\nKabir Jain\n7th - B · SR-1207 · D/o Vikram Singh\nPaid\nSR\nShaurya Rao\n7th - B · SR-1213 · D/o Mahesh Joshi\n₹18,000 due\nVS\nVivaan Shah\n7th - B · SR-1219 · D/o Vikram Singh\n₹22,000 due\nAR\nAnanya Rathore\n8th - A · SR-1202 · S/o Suresh Rathore\n₹14,000 due\nMV\nMeera Vyas\n8th - A · SR-1208 · S/o Rajesh Sharma\n₹18,000 due\nNK\nNisha Kumari\n8th - A · SR-1214 · S/o Suresh Rathore\nPaid\nAG\nAvni Gupta\n8th - A · SR-1220 · S/o Rajesh Sharma\n₹6,000 due\nDC\nDev Choudhary\n8th - B · SR-1205 · D/o Mahesh Joshi\n₹6,000 due\nRM\nRohan Mehta\n8th - B · SR-1211 · D/o Vikram Singh\n₹10,000 due\nRD\nReyansh Das\n8th - B · SR-1217 · D/o Mahesh Joshi\n₹14,000 due\nDS\nDhruv Shah\n8th - B · SR-1223 · D/o Vikram Singh\n₹18,000 due\n1–24 of 24\nHome\nStudents\nFees\nAttendance\nMenu",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Student register"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  },
+  {
+    "route": "fees/collect",
+    "file": "fees-collect.png",
+    "url": "http://127.0.0.1:3007/fees/collect",
+    "title": "SMS Barmer Review School | SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nTimetable\nHomework\n\nSchool\n\nStaff\nTransport\nSettings\nRO\n\nReview Operator\n\nAdministrator\n\nCollect fee\nRO\nFee counter\n\nFind a student, review dues and record a payment\n\nFind a student\nFind student\nOutstanding balances\n\nSelect a record to review its ledger and collect payment.\n\nAS\nAarav Sharma\n6th - A · SR-1200\n₹0\noutstanding\nCollect\nPJ\nPrisha Joshi\n7th - B · SR-1201\n₹10,000\noutstanding\nCollect\nAR\nAnanya Rathore\n8th - A · SR-1202\n₹14,000\noutstanding\nCollect\nVS\nVihaan Singh\n6th - B · SR-1203\n₹18,000\noutstanding\nCollect\nIM\nIshita Mehta\n7th - A · SR-1204\n₹22,000\noutstanding\nCollect\nDC\nDev Choudhary\n8th - B · SR-1205\n₹6,000\noutstanding\nCollect\n\nCollected today\n\n₹9,500\n\n3 receipts\n\nCash\n₹4,500\nUPI\n₹5,000\nCheque\n₹0\nLatest receipts\nAarav Sharma\nToday · #1024 · 6th\n₹2,500\nPrisha Joshi\n13 Nov · #1025 · 7th\n₹3,000\nAnanya Rathore\n12 Nov · #1026 · 8th\n₹3,500\nVihaan Singh\n11 Nov · #1027 · 6th\n₹4,000\nIshita Mehta\nToday · #1028 · 7th\n₹4,500\nDev Choudhary\n13 Nov · #1029 · 8th\n₹5,000\nAditi Soni\n12 Nov · #1030 · 6th\n₹5,500\nKabir Jain\n11 Nov · #1031 · 7th\n₹6,000\nHome\nStudents\nFees\nAttendance\nMenu",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Fee counter",
+      "Find a student",
+      "Outstanding balances",
+      "Latest receipts"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  },
+  {
+    "route": "attendance/mark",
+    "file": "attendance-mark.png",
+    "url": "http://127.0.0.1:3007/attendance/mark",
+    "title": "SMS Barmer Review School | SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nFees\nAttendance\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nTimetable\nHomework\n\nSchool\n\nStaff\nTransport\nSettings\nRO\n\nReview Operator\n\nAdministrator\n\nMark attendance\nRO\nDaily attendance\n\nSaturday, 14 November · 3 of 6 sections marked\n\nPresent\n9\nAbsent\n3\nOn leave\n0\nSections left\n3\nAll sections\nNot marked\nMarked\nOpen register\nMark next section\nClass 6th\n2 sections\n6th - A\nMarked by Review operator · 4 students\nReview\n6th - B\nAwaiting attendance · 4 students\nMark\nClass 7th\n2 sections\n7th - A\nMarked by Review operator · 4 students\nReview\n7th - B\nAwaiting attendance · 4 students\nMark\nClass 8th\n2 sections\n8th - A\nMarked by Review operator · 4 students\nReview\n8th - B\nAwaiting attendance · 4 students\nMark\nHome\nStudents\nFees\nAttendance\nMenu",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Daily attendance"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  },
+  {
+    "route": "exams/marks",
+    "file": "exams-marks.png",
+    "url": "http://127.0.0.1:3007/exams/marks?exam=exam-review",
+    "title": "SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nMarks entry\nReport cards\nExam setup\nTimetable\nHomework\n\nSchool\n\nStaff\nTransport\nSettings\nRO\n\nReview Operator\n\nAdministrator\n\nMarks entry\nRO\nMarks entry\n\nChoose an exam, then open the class and subject register you need to complete\n\nTerm I examination · out of 100\n47% entered · 408 of 864 marks\n6th - A36 students\n\nEnglish\n\n0 / 36 marks entered\n\nEnter marks\n\nHindi\n\n3 / 36 marks entered\n\nEnter marks\n\nMathematics\n\n6 / 36 marks entered\n\nEnter marks\n\nScience\n\n9 / 36 marks entered\n\nEnter marks\n6th - B36 students\n\nEnglish\n\n5 / 36 marks entered\n\nEnter marks\n\nHindi\n\n8 / 36 marks entered\n\nEnter marks\n\nMathematics\n\n11 / 36 marks entered\n\nEnter marks\n\nScience\n\n14 / 36 marks entered\n\nEnter marks\n7th - A36 students\n\nEnglish\n\n10 / 36 marks entered\n\nEnter marks\n\nHindi\n\n13 / 36 marks entered\n\nEnter marks\n\nMathematics\n\n16 / 36 marks entered\n\nEnter marks\n\nScience\n\n19 / 36 marks entered\n\nEnter marks\n7th - B36 students\n\nEnglish\n\n15 / 36 marks entered\n\nEnter marks\n\nHindi\n\n18 / 36 marks entered\n\nEnter marks\n\nMathematics\n\n21 / 36 marks entered\n\nEnter marks\n\nScience\n\n24 / 36 marks entered\n\nEnter marks\n8th - A36 students\n\nEnglish\n\n20 / 36 marks entered\n\nEnter marks\n\nHindi\n\n23 / 36 marks entered\n\nEnter marks\n\nMathematics\n\n26 / 36 marks entered\n\nEnter marks\n\nScience\n\n29 / 36 marks entered\n\nEnter marks\n8th - B36 students\n\nEnglish\n\n25 / 36 marks entered\n\nEnter marks\n\nHindi\n\n28 / 36 marks entered\n\nEnter marks\n\nMathematics\n\n31 / 36 marks entered\n\nEnter marks\n\nScience\n\n34 / 36 marks entered\n\nEnter marks\nHome\nStudents\nFees\nAttendance\nMenu",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Marks entry"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  },
+  {
+    "route": "settings",
+    "file": "settings.png",
+    "url": "http://127.0.0.1:3007/settings",
+    "title": "SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nTimetable\nHomework\n\nSchool\n\nStaff\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nRO\n\nReview Operator\n\nAdministrator\n\nSchool & sessions\nRO\nSchool settings\n\nSchool identity, official records and the academic calendar\n\nSchool profile\nAcademic session\nSchool profile\n\nDetails used across the school system\n\nUndo\nSave changes\nSchool identity\nSchool name*\nShort name\nShown in the logo tile and crest, e.g. SPS\nPrincipal's name\nPrinted under the signature line\nLogo\nSB\n\nNo logo yet: the crest with your short name is used\n\nPNG or JPG. A square logo on a white or clear background looks best.\n\nUpload logo\nSchool photo (apps' Home)\nNo photo\n\nNo photo yet: the apps use their built-in picture\n\nA wide photo of the school building (landscape). Shown at the top of the parent and staff apps.\n\nUpload photo\nBoard and registration\nBoard\nCBSE\nRBSE\nICSE\nOther\nAffiliation no.\nSchool no. / code\nUDISE+ code\n11 digits\nAddress and contact\nAddress\nStreet / area\nCity\nDistrict\nState\nPIN code\nOffice phone\nSecond phone\nE-mail\nWebsite\nHow it prints\nSB\n\nSMS BARMER REVIEW SCHOOL\n\nBARMER, RAJASTHAN – 344001\n\nAffiliated to C.B.S.E., New Delhi\n\nAffiliation No. — · School No. —\n\nUsed on fee receipts, TC, bonafide and character certificates, gate passes and the sidebar.\n\nHome\nStudents\nFees\nAttendance\nMenu",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "School settings",
+      "School profile",
+      "School identity",
+      "Board and registration",
+      "Address and contact"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  },
+  {
+    "route": "staff",
+    "file": "staff.png",
+    "url": "http://127.0.0.1:3007/staff",
+    "title": "SMS Barmer Review School | SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nTimetable\nHomework\n\nSchool\n\nStaff\nDirectory\nAttendance & leave\nPayroll\nTransport\nSettings\nRO\n\nReview Operator\n\nAdministrator\n\nDirectory\nRO\nStaff directory\n\n8 on staff · 0 with a login\n\nClass teachers\nAdd staff\nAll\n8\nTeaching\n6\nNon-teaching\n2\nLeft\n0\nNS\nNeha Sharma\nEMP-100 · Teacher\n6th - A\nNo login\nRM\nRakesh Mehta\nEMP-101 · Teacher\n6th - B\nNo login\nKD\nKamla Devi\nEMP-102 · Teacher\n7th - A\nNo login\nMS\nManish Singh\nEMP-103 · Teacher\n7th - B\nNo login\nPV\nPooja Verma\nEMP-104 · Teacher\n8th - A\nNo login\nSS\nSanjay Soni\nEMP-105 · Teacher\n8th - B\nNo login\nSR\nSunita Rao\nEMP-106 · Office Clerk\nNo login\nML\nMohan Lal\nEMP-107 · Office Clerk\nNo login\n\n8 people\n\nHome\nStudents\nFees\nAttendance\nMenu",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Staff directory"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  },
+  {
+    "route": "transport",
+    "file": "transport.png",
+    "url": "http://127.0.0.1:3007/transport",
+    "title": "SMS Barmer Review School | SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\n\nAcademics\n\nExams\nTimetable\nHomework\n\nSchool\n\nStaff\nTransport\nSettings\nRO\n\nReview Operator\n\nAdministrator\n\nTransport\nRO\nTransport\n\nRoutes, vehicles, drivers and student allocations\n\nAdd route\nStudents on bus\n8\nRoutes\n1\nSeats\n32\nWithout a route\n1\nRoute register\n\nOpen a route to manage its stops and riders\n\nCity route\n2 stops\n7 / 32 seats\nHome\nStudents\nFees\nAttendance\nMenu",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Transport",
+      "Route register"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  },
+  {
+    "route": "login",
+    "file": "login.png",
+    "url": "http://127.0.0.1:3007/login",
+    "title": "SchoolDesk ERP",
+    "text": "Back to website\nSB\nSMS Barmer Review School\nSchoolDesk ERP · Barmer\nSign in to your school\n\nSelect your role and enter your registered details.\n\nAdmin\nFaculty\nAccounts\nParent\nMobile number or staff ID\nPassword\nForgot password?\nSign in as Admin",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Your school office, in order.",
+      "Sign in to your school"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  }
+]

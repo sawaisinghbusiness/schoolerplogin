@@ -37,6 +37,8 @@ export default function UsersPage() {
   const [ownOpen, setOwnOpen] = useState(false);
 
   const load = useCallback(async () => {
+    setLoadError(null);
+    setDenied(false);
     const r = await userService.list();
     if (r.status === 403) return setDenied(true);
     if (r.error) return setLoadError(r.error);
@@ -108,38 +110,12 @@ export default function UsersPage() {
         </div>
       </header>
 
-      {/* What each staff role can do, with how many people have it */}
-      {/* Phones: the role guide folds away so the list of people comes first */}
-      <details className="card group sm:hidden">
-        <summary className="flex min-h-[48px] cursor-pointer list-none items-center justify-between gap-3 px-4 text-sm font-semibold text-slate-900">
-          What each role can open
-          <span className="text-xs font-medium text-slate-500 group-open:hidden">Show</span>
-          <span className="hidden text-xs font-medium text-slate-500 group-open:inline">Hide</span>
-        </summary>
-        <ul className="divide-y divide-slate-100 border-t border-slate-100">
-          {STAFF_ROLES.map((r) => (
-            <li key={r} className="px-4 py-3">
-              <div className="flex items-center justify-between gap-2">
-                <span className={`badge ${ROLE_INFO[r].badge}`}>{ROLE_INFO[r].label}</span>
-                <span className="text-xs tabular-nums text-slate-500">{users ? `${counts[r] || 0} active` : "…"}</span>
-              </div>
-              <p className="mt-1.5 text-[13px] leading-snug text-slate-600">{ROLE_INFO[r].can}</p>
-            </li>
-          ))}
-        </ul>
+      <details className="card group overflow-hidden">
+        <summary className="flex min-h-[52px] cursor-pointer list-none items-center gap-3 px-5 text-sm font-semibold text-slate-900"><ShieldCheck className="h-4 w-4 text-slate-500" /><span className="flex-1">Role permissions</span><span className="text-xs font-normal text-slate-500 group-open:hidden">View reference</span><span className="hidden text-xs font-normal text-slate-500 group-open:inline">Close reference</span></summary>
+        <dl className="grid border-t border-slate-200 sm:grid-cols-2">
+          {STAFF_ROLES.map(r => <div key={r} className="border-b border-slate-100 px-5 py-4"><dt className="flex items-center justify-between gap-3 text-sm font-semibold text-slate-800"><span>{ROLE_INFO[r].label}</span><span className="text-xs font-normal tabular-nums text-slate-500">{users ? (counts[r] || 0) + " active" : "Loading"}</span></dt><dd className="mt-1.5 text-[13px] leading-5 text-slate-600">{ROLE_INFO[r].can}</dd></div>)}
+        </dl>
       </details>
-
-      <section className="hidden gap-3 sm:grid sm:grid-cols-2 xl:grid-cols-4" aria-label="Roles">
-        {STAFF_ROLES.map((r) => (
-          <div key={r} className="card p-4">
-            <div className="flex items-center justify-between gap-2">
-              <span className={`badge ${ROLE_INFO[r].badge}`}>{ROLE_INFO[r].label}</span>
-              <span className="text-xs tabular-nums text-slate-500">{users ? `${counts[r] || 0} active` : "…"}</span>
-            </div>
-            <p className="mt-2.5 text-[13px] leading-snug text-slate-600">{ROLE_INFO[r].can}</p>
-          </div>
-        ))}
-      </section>
 
       {loadError ? (
         <div className="card p-8 text-center">
@@ -148,9 +124,9 @@ export default function UsersPage() {
           <button type="button" onClick={load} className="btn btn-secondary btn-sm mt-4">Try again</button>
         </div>
       ) : (
-        <section className="card overflow-hidden" aria-label="User accounts">
-          <div className="flex flex-wrap items-center gap-2 border-b border-slate-200/80 p-3 sm:p-4">
-            <div className="flex gap-1 rounded-xl bg-slate-100 p-1" role="tablist" aria-label="Accounts">
+        <section className="card register-table overflow-hidden" aria-label="User accounts">
+          <div className="workspace-toolbar !rounded-none !border-x-0 !border-t-0 !shadow-none">
+            <div className="module-tabs flex" role="tablist" aria-label="Accounts">
               {([
                 { key: "staff", label: "Staff", n: staff.length },
                 { key: "family", label: "Parents & students", n: family.length },
@@ -200,7 +176,7 @@ export default function UsersPage() {
                       <span className="m-row-meta font-mono">{[u.phone_number, u.employee_code, u.admission_no].filter(Boolean).join(" · ")}</span>
                     </span>
                     <span className="shrink-0 text-right">
-                      <span className={`badge ${ROLE_INFO[u.role]?.badge || "badge-slate"}`}>{ROLE_INFO[u.role]?.label || u.role}</span>
+                      <span className="badge badge-slate">{ROLE_INFO[u.role]?.label || u.role}</span>
                       {!u.is_active && <span className="mt-1 block text-xs text-slate-500">Switched off</span>}
                     </span>
                   </button>

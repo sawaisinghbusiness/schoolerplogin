@@ -57,7 +57,7 @@ export default function PromotePage() {
         </div>
       </header>
 
-      <div className="flex w-fit gap-1 rounded-xl bg-slate-200/60 p-1" role="tablist">
+      <div className="module-tabs flex w-fit gap-1 rounded-xl bg-slate-200/60 p-1" role="tablist">
         {[
           { key: "promote" as Tab, label: "Promote to next class" },
           { key: "section" as Tab, label: "Change section" },
@@ -81,7 +81,7 @@ export default function PromotePage() {
           <button type="button" onClick={load} className="btn btn-secondary btn-sm">Try again</button>
         </div>
       ) : students === null ? (
-        <div className="card space-y-3 p-5">
+        <div className="card workspace-section space-y-3 p-5">
           {Array.from({ length: 6 }).map((_, i) => (
             <div key={i} className="skeleton h-11 w-full" />
           ))}
@@ -151,7 +151,7 @@ function PromoteTab({ students, structure, onDone }: { students: Student[]; stru
   return (
     <>
       {/* From → To */}
-      <section className="card p-5">
+      <section className="card workspace-section p-5">
         <div className="flex flex-wrap items-end gap-4">
           <label className="min-w-[180px] flex-1">
             <span className="field-label">From</span>
@@ -193,9 +193,9 @@ function PromoteTab({ students, structure, onDone }: { students: Student[]; stru
       </section>
 
       {!from ? (
-        <div className="card px-5 py-14 text-center text-sm text-slate-500">Choose the class and section to promote. Nothing moves until you confirm.</div>
+        <div className="card workspace-section px-5 py-14 text-center text-sm text-slate-500">Choose the class and section to promote. Nothing moves until you confirm.</div>
       ) : (
-      <section className="card overflow-hidden">
+      <section className="card workspace-section overflow-hidden">
         <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200/80 px-5 py-3">
           <h2 className="text-sm font-semibold text-slate-900">
             {fromCls} - {fromSec} <span className="font-normal text-slate-500">· {list.length} students</span>
@@ -213,11 +213,11 @@ function PromoteTab({ students, structure, onDone }: { students: Student[]; stru
         {list.length === 0 ? (
           <p className="px-5 py-12 text-center text-sm text-slate-500">No active students in this section.</p>
         ) : (
-          <ul className="grid gap-2.5 bg-slate-50/60 p-3 sm:p-4">
+          <ul className="divide-y divide-slate-200">
             {list.map((s) => {
               const d = decisions[s.id] || "promote";
               return (
-                <li key={s.id} className="grid grid-cols-1 items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 sm:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
+                <li key={s.id} className="grid grid-cols-1 items-center gap-3 bg-white px-4 py-3 sm:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
                   <span className="flex min-w-0 items-center gap-3">
                     <span className="w-6 shrink-0 text-right text-[13px] tabular-nums text-slate-400">{s.rollNo || "—"}</span>
                     <Avatar name={s.name} id={s.id} photoUrl={s.photoUrl} size="sm" neutral />
@@ -335,7 +335,7 @@ function SectionTab({ students, structure, onDone }: { students: Student[]; stru
     onDone();
   };
 
-  if (!multi.length) return <div className="card px-5 py-12 text-center text-sm text-slate-500">Every class has a single section, so there is nothing to shift.</div>;
+  if (!multi.length) return <div className="card workspace-section px-5 py-12 text-center text-sm text-slate-500">Every class has a single section, so there is nothing to shift.</div>;
 
   const toggle = (id: string) =>
     setPicked((p) => {
@@ -346,7 +346,7 @@ function SectionTab({ students, structure, onDone }: { students: Student[]; stru
 
   return (
     <>
-      <section className="card p-5">
+      <section className="card workspace-section p-5">
         <div className="flex flex-wrap items-end gap-4">
           <label className="min-w-[140px]">
             <span className="field-label">Class</span>
@@ -382,7 +382,7 @@ function SectionTab({ students, structure, onDone }: { students: Student[]; stru
         </div>
       </section>
 
-      <section className="card overflow-hidden">
+      <section className="card workspace-section overflow-hidden">
         <div className="flex items-center justify-between border-b border-slate-200/80 px-5 py-3">
           <h2 className="text-sm font-semibold text-slate-900">
             {cls} - {fromSec} <span className="font-normal text-slate-500">· tick the students to shift</span>

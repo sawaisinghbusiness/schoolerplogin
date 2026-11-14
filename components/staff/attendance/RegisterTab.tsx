@@ -78,8 +78,8 @@ export function RegisterTab() {
   if (setupNeeded) return <SetupNeeded onRetry={load} />;
 
   return (
-    <section className="card overflow-hidden">
-      <div className="flex flex-wrap items-center gap-2 border-b border-slate-200/80 p-3 sm:px-4">
+    <section className="card register-table overflow-hidden">
+      <div className="workspace-toolbar !rounded-none !border-x-0 !border-t-0 !shadow-none">
         <div className="flex items-center rounded-lg border border-slate-200 bg-white shadow-2xs">
           <button type="button" onClick={() => setMonth(shiftMonth(month, -1))} disabled={month <= SESSION_START_MONTH} className="rounded-l-lg p-2 text-slate-500 hover:bg-slate-50 hover:text-slate-900 disabled:opacity-40" aria-label="Previous month">
             <ChevronLeft className="h-4 w-4" />
