@@ -4,26 +4,91 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
-import { INK, INK_DEEP, MARIGOLD, SiteShell } from "@/components/site/SiteShell";
+import { SiteShell, type SiteTheme } from "@/components/site/SiteShell";
 import { PublicClass, usePublicSite } from "@/components/site/usePublicSite";
 import { STAGES, plural } from "@/components/site/stages";
 
-function Hero({ phone, name, city, board }: { phone?: string; name: string; city: string; board: string }) {
-  return <div className="public-school-hero mx-auto grid max-w-7xl items-center gap-8 px-5 pb-10 pt-8 sm:px-8 md:grid-cols-[1.1fr_.9fr] md:gap-16 md:pb-0 md:pt-8">
-    <div className="py-5 md:pb-20 md:pt-8">
-      <h1 className="max-w-2xl font-display text-[42px] font-medium leading-[1.06] tracking-tight sm:text-[56px] lg:text-[68px]" style={{color:INK}}>{name}</h1>
-      <p className="mt-5 text-[15px] font-medium text-slate-700">{[board,city].filter(Boolean).join(" \u00b7 ")}</p>
-      <p className="mt-5 max-w-md text-[17px] leading-[1.8] text-slate-600">Explore classes and subjects, view school information, and contact the office for admission.</p>
-      <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
-        <Link href="/admission" className="inline-flex min-h-12 items-center gap-3 rounded-md px-6 text-[15px] font-medium text-white hover:brightness-110" style={{background:INK}}>Admission information<ArrowRight className="h-4 w-4"/></Link>
-        <Link href="/academics" className="inline-flex min-h-12 items-center gap-2 text-[15px] font-medium hover:underline" style={{color:INK}}>Classes and subjects<ArrowRight className="h-4 w-4"/></Link>
+/** The Home page keeps its original look (1 Oct 2026): school blue, sky wash with doodles, marigold accents. */
+const INK = "#17507A";
+const INK_DEEP = "#0F3A59";
+const MARIGOLD = "#E9A23B";
+const HOME_THEME: SiteTheme = { ink: INK, inkDeep: INK_DEEP, sky: "#E9F0FB", marigold: MARIGOLD, doodles: true };
+
+/** Hand-drawn marigold stroke under a word in the headline. */
+function Swash() {
+  return (
+    <svg aria-hidden viewBox="0 0 300 18" preserveAspectRatio="none" className="absolute -bottom-2 left-0 h-3 w-full">
+      <path d="M3 13 C 70 4, 150 3, 297 8" fill="none" stroke={MARIGOLD} strokeWidth="5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function Hero({ phone }: { phone?: string }) {
+  return (
+    <div className="mx-auto grid max-w-7xl items-end gap-8 px-5 sm:px-8 md:grid-cols-[1.1fr_0.9fr]">
+      {/* The arch stands on the white facts strip below; the text keeps its own space under the buttons. */}
+      <div className="pb-6 pt-8 md:pb-16 md:pt-14">
+        <p className="flex items-center gap-3 text-[14px] text-slate-600">
+          <span aria-hidden className="h-[2px] w-8 rounded-full" style={{ background: MARIGOLD }} />
+          CBSE affiliated · Pre-Nursery to Class XII · Barmer
+        </p>
+        <h1 className="mt-6 font-display text-[2.7rem] font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-[4.2rem]" style={{ color: INK }}>
+          Your Child&apos;s{" "}
+          <span className="relative inline-block">
+            Future
+            <Swash />
+          </span>
+          <br />
+          Begins Here
+        </h1>
+        <p className="mt-7 max-w-md text-[17px] leading-relaxed text-slate-600">
+          A CBSE school in Barmer where children join at three and stay until their Class XII board exams. Admissions for 2026–27 are open.
+        </p>
+        <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <Link href="/admission" className="inline-flex h-12 items-center gap-2 rounded-lg px-6 text-[15px] font-semibold text-white transition hover:brightness-110" style={{ background: INK }}>
+            Admission 2026–27
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+          {phone ? (
+            <a href={`tel:${phone}`} className="inline-flex items-center gap-2 text-[15px] font-semibold underline-offset-4 hover:underline" style={{ color: INK }}>
+              <Phone className="h-4 w-4" />
+              {phone}
+            </a>
+          ) : (
+            <Link href="/contact" className="text-[15px] font-semibold underline-offset-4 hover:underline" style={{ color: INK }}>
+              Visit the school →
+            </Link>
+          )}
+        </div>
       </div>
-      {phone && <a href={"tel:"+phone} className="mt-7 inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900"><Phone className="h-4 w-4"/>{phone}</a>}
+
+      {/* The student in front of a school doorway arch */}
+      <div className="relative mx-auto h-[350px] w-[302px] sm:h-[440px] sm:w-[380px] lg:h-[500px] lg:w-[430px]">
+        <div className="absolute bottom-0 left-1/2 h-[85%] w-[86%] -translate-x-1/2 rounded-t-full" style={{ background: INK }}>
+          <div className="absolute inset-x-3 bottom-0 top-3 rounded-t-full border border-b-0 border-white/25" />
+        </div>
+        <Image
+          src="/images/hero-student-blazer.png"
+          alt="A St. Paul School student in her blazer holding her books"
+          width={1164}
+          height={1351}
+          priority
+          sizes="(min-width: 1024px) 430px, (min-width: 640px) 380px, 302px"
+          className="absolute bottom-0 left-1/2 w-full -translate-x-1/2"
+        />
+        <div className="absolute left-0 top-[16%] flex h-24 w-24 -rotate-[10deg] items-center justify-center rounded-full text-center shadow-sm sm:h-28 sm:w-28" style={{ background: MARIGOLD, color: INK_DEEP }}>
+          <span aria-hidden className="absolute inset-1.5 rounded-full border border-dashed border-white/70" />
+          <span className="font-display text-[13px] font-semibold leading-tight sm:text-[15px]">
+            Admissions
+            <br />
+            open
+            <br />
+            <span className="text-[11px] sm:text-[12px]">2026–27</span>
+          </span>
+        </div>
+      </div>
     </div>
-    <div className="relative mx-auto h-[320px] w-full max-w-[430px] overflow-hidden rounded-t-[16px] border border-b-0 border-[#DDE5D9] bg-[#E2E8DA] sm:h-[420px] md:self-end lg:h-[490px]">
-      <Image src="/images/hero-student.png" alt="A student holding her notebooks" width={1406} height={1422} priority sizes="(min-width: 1024px) 430px, (min-width: 640px) 400px, 340px" className="absolute bottom-0 left-1/2 h-auto w-full -translate-x-1/2 object-contain"/>
-    </div>
-  </div>;
+  );
 }
 
 function Facts({ loaded, students, classes, sections, board, aff }: { loaded: boolean; students: number; classes: number; sections: number; board: string; aff: string }) {
@@ -67,7 +132,8 @@ function Stages({ classes }: { classes: PublicClass[] }) {
         {STAGES.map((s, i) => {
           const secs = classes.filter((c) => c.wing === s.wing).reduce((n, c) => n + c.sections.length, 0);
           return (
-            <li key={s.wing} className="grid grid-cols-[1fr_auto] items-baseline gap-4 border-b border-slate-200 py-5">
+            <li key={s.wing} className="grid grid-cols-[3rem_1fr_auto] items-baseline gap-4 border-b border-slate-200 py-5">
+              <span className="font-display text-[22px] font-semibold tabular-nums text-slate-300">{String(i + 1).padStart(2, "0")}</span>
               <span>
                 <span className="block text-[17px] font-semibold text-slate-900">{s.wing}</span>
                 <span className="mt-0.5 block text-[14px] text-slate-500">{s.range}</span>
@@ -113,7 +179,7 @@ export default function HomePage() {
   const { site, loaded, signedIn } = usePublicSite();
   const { school, stats } = site;
   return (
-    <SiteShell site={site} signedIn={signedIn} banner={<Hero phone={school.phone[0]} name={school.name} city={school.city} board={school.board} />}>
+    <SiteShell site={site} signedIn={signedIn} theme={HOME_THEME} banner={<Hero phone={school.phone[0]} />}>
       <Facts loaded={loaded} students={stats.students} classes={stats.classes} sections={stats.sections} board={school.board} aff={school.affiliation_no} />
       <Stages classes={site.classes} />
       <AdmissionBand phone={school.phone[0]} />

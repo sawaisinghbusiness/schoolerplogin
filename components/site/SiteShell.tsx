@@ -10,6 +10,34 @@ export const INK = "#183C40"; // school blue: headings, buttons
 export const INK_DEEP = "#14282C"; // footer
 export const SKY = "#F2F4EE"; // page wash behind the header
 export const MARIGOLD = "#B27D3C"; // small accents only
+const BASE_INK = INK;
+const BASE_INK_DEEP = INK_DEEP;
+const BASE_MARIGOLD = MARIGOLD;
+
+/** School doodles (pencil, book, ruler, notes, ABC…) as one repeating tile: the Home page's original wash. */
+const DOODLE_SVG = `<svg xmlns='http://www.w3.org/2000/svg' width='260' height='220' viewBox='0 0 260 220' fill='none' stroke='#C5D4EC' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'>
+<g transform='rotate(-30 30 40)'><rect x='10' y='34' width='46' height='11' rx='2'/><path d='M56 34l11 5.5-11 5.5'/><path d='M18 34v11'/></g>
+<g transform='translate(92 18)'><path d='M2 6c8-4 16-4 22 0v26c-6-4-14-4-22 0z'/><path d='M24 6c6-4 14-4 22 0v26c-8-4-16-4-22 0'/></g>
+<g transform='translate(176 14) rotate(12)'><path d='M2 40L40 2v38z'/><path d='M10 40v-5M18 40v-7M26 40v-5'/></g>
+<g transform='translate(222 92)'><path d='M8 26V4l16-4v22'/><circle cx='5' cy='26' r='4'/><circle cx='21' cy='22' r='4'/></g>
+<text x='22' y='120' font-family='Georgia,serif' font-size='22' fill='#C5D4EC' stroke='none'>A b c</text>
+<g transform='translate(110 96)'><circle cx='16' cy='16' r='15'/><path d='M1 16h30M16 1c-7 8-7 22 0 30M16 1c7 8 7 22 0 30'/></g>
+<g transform='translate(168 150) rotate(-10)'><path d='M0 12L40 0 28 30 20 18z'/><path d='M20 18L40 0'/></g>
+<text x='30' y='190' font-family='Georgia,serif' font-size='18' fill='#C5D4EC' stroke='none'>2+3=5</text>
+<g transform='translate(118 168)'><path d='M12 0a10 10 0 0 1 6 18v6h-12v-6A10 10 0 0 1 12 0z'/><path d='M7 28h10'/></g>
+<g transform='translate(222 176)'><path d='M10 0l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z'/></g>
+<g transform='translate(66 64)'><rect x='0' y='0' width='24' height='30' rx='2'/><path d='M5 8h14M5 14h14M5 20h9'/></g>
+</svg>`;
+export const DOODLES = `url("data:image/svg+xml,${encodeURIComponent(DOODLE_SVG)}")`;
+
+/** A page may bring its own colours (the Home page keeps its original blue look). */
+export interface SiteTheme {
+  ink: string;
+  inkDeep: string;
+  sky: string;
+  marigold: string;
+  doodles?: boolean;
+}
 
 const NAV = [
   { href: "/", label: "Home" },
@@ -18,27 +46,31 @@ const NAV = [
   { href: "/contact", label: "Contact" },
 ];
 
-function Crest({ site }: { site: PublicSite }) {
+function Crest({ site, ink = INK }: { site: PublicSite; ink?: string }) {
   return site.school.logo_url ? (
     // eslint-disable-next-line @next/next/no-img-element
     <img src={site.school.logo_url} alt="" className="h-11 w-11 rounded-full bg-white object-contain p-0.5 ring-1 ring-slate-900/10" />
   ) : (
-    <span className="flex h-11 w-11 items-center justify-center rounded-full font-display text-[15px] font-semibold text-white" style={{ background: INK }}>
+    <span className="flex h-11 w-11 items-center justify-center rounded-full font-display text-[15px] font-semibold text-white" style={{ background: ink }}>
       {(site.school.short || "SP").slice(0, 3)}
     </span>
   );
 }
 
 /** Header (with the doodle wash), optional page banner, page body and footer for every public page. */
-export function SiteShell({ site, signedIn, banner, children }: { site: PublicSite; signedIn: boolean; banner?: React.ReactNode; children: React.ReactNode }) {
+export function SiteShell({ site, signedIn, banner, theme, children }: { site: PublicSite; signedIn: boolean; banner?: React.ReactNode; theme?: SiteTheme; children: React.ReactNode }) {
   const pathname = usePathname() || "/";
   const [menuOpen, setMenuOpen] = useState(false);
   const { school } = site;
   const place = placeOf(school);
+  const INK = theme?.ink ?? BASE_INK;
+  const INK_DEEP = theme?.inkDeep ?? BASE_INK_DEEP;
+  const MARIGOLD = theme?.marigold ?? BASE_MARIGOLD;
 
   return (
     <div className="public-school-site min-h-screen bg-white text-slate-800">
-      <div className="relative overflow-hidden" style={{ background: SKY }}>
+      <div className="relative overflow-hidden" style={{ background: theme?.sky ?? SKY }}>
+        {theme?.doodles && <div aria-hidden className="pointer-events-none absolute inset-0 opacity-60" style={{ backgroundImage: DOODLES, backgroundSize: "260px 220px" }} />}
 
         {site.events.length > 0 && (
           <div className="relative z-20 text-white" style={{ background: INK }}>
@@ -56,7 +88,7 @@ export function SiteShell({ site, signedIn, banner, children }: { site: PublicSi
 
         <header className="relative z-20 mx-auto flex min-h-[80px] max-w-7xl items-center gap-8 px-5 sm:px-8">
           <Link href="/" className="flex items-center gap-3">
-            <Crest site={site} />
+            <Crest site={site} ink={INK} />
             <span className="leading-tight">
               <span className="block max-w-[250px] truncate font-display text-[17px] font-semibold sm:text-[19px]" style={{ color: INK }}>{school.name}</span>
               <span className="block text-[11.5px] text-slate-500">{school.city}, {school.state}</span>
