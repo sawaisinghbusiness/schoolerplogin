@@ -3,12 +3,12 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CalendarCheck2, ClipboardList, Home, IndianRupee, LayoutGrid, ReceiptText, Users } from "lucide-react";
+import { CalendarCheck2, ClipboardList, Home, IndianRupee, ReceiptText, Users } from "lucide-react";
 import { useCurrentUser } from "./useCurrentUser";
 
 type Tab = { href: string; label: string; icon: typeof Home; match: string };
 
-/** Four everyday screens per role; everything else is one tap away under Menu. */
+/** Four everyday screens per role; the header menu opens the remaining destinations. */
 const TABS: Record<string, Tab[]> = {
   admin: [
     { href: "/dashboard", label: "Home", icon: Home, match: "/dashboard" },
@@ -36,7 +36,7 @@ const TABS: Record<string, Tab[]> = {
   ],
 };
 
-export function MobileTabBar({ onMenu, menuOpen }: { onMenu: () => void; menuOpen: boolean }) {
+export function MobileTabBar() {
   const pathname = usePathname() || "";
   const { roleKey } = useCurrentUser();
   const tabs = TABS[roleKey] || [];
@@ -49,7 +49,7 @@ export function MobileTabBar({ onMenu, menuOpen }: { onMenu: () => void; menuOpe
     <nav aria-label="Main" className="erp-mobile-nav fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-sm md:hidden">
       <div className="flex h-14">
         {tabs.map((t) => {
-          const on = !menuOpen && activeTab?.href === t.href;
+          const on = activeTab?.href === t.href;
           return (
             <Link key={t.href} href={t.href} aria-current={on ? "page" : undefined} className={`${item} ${on ? "text-brand-700" : "text-slate-500"}`}>
               <span className={`flex h-7 w-12 items-center justify-center rounded-full transition-colors ${on ? "bg-brand-50" : ""}`}>
@@ -59,12 +59,6 @@ export function MobileTabBar({ onMenu, menuOpen }: { onMenu: () => void; menuOpe
             </Link>
           );
         })}
-        <button type="button" onClick={onMenu} aria-expanded={menuOpen} className={`${item} ${menuOpen || !activeTab ? "text-brand-700" : "text-slate-500"}`}>
-          <span className={`flex h-7 w-12 items-center justify-center rounded-full ${menuOpen || !activeTab ? "bg-brand-50" : ""}`}>
-            <LayoutGrid className="h-[20px] w-[20px]" strokeWidth={1.9} />
-          </span>
-          <span>Menu</span>
-        </button>
       </div>
     </nav>
   );

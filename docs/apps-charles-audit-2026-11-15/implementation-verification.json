@@ -1,0 +1,95 @@
+{
+  "capturedAt": "2026-11-15T18:15:27.531Z",
+  "sets": [
+    {
+      "run": "Initial applied pass",
+      "file": "/inventory-erp-extra.json",
+      "observations": 13,
+      "overflow": []
+    },
+    {
+      "run": "Initial applied pass",
+      "file": "/inventory-erp.json",
+      "observations": 3,
+      "overflow": []
+    },
+    {
+      "run": "Initial applied pass",
+      "file": "/inventory-parents-extra.json",
+      "observations": 10,
+      "overflow": []
+    },
+    {
+      "run": "Initial applied pass",
+      "file": "/inventory-parents.json",
+      "observations": 8,
+      "overflow": []
+    },
+    {
+      "run": "Initial applied pass",
+      "file": "/inventory-staff-extra.json",
+      "observations": 9,
+      "overflow": []
+    },
+    {
+      "run": "Initial applied pass",
+      "file": "/inventory-staff.json",
+      "observations": 4,
+      "overflow": []
+    },
+    {
+      "run": "narrow-final",
+      "file": "narrow-final/inventory-erp-narrow-final.json",
+      "observations": 7,
+      "overflow": []
+    },
+    {
+      "run": "narrow-final",
+      "file": "narrow-final/inventory-parents-narrow-final.json",
+      "observations": 2,
+      "overflow": []
+    },
+    {
+      "run": "hindi",
+      "file": "hindi/inventory-erp-hindi.json",
+      "observations": 3,
+      "overflow": []
+    },
+    {
+      "run": "hindi",
+      "file": "hindi/inventory-parents-hindi.json",
+      "observations": 5,
+      "overflow": []
+    },
+    {
+      "run": "text-200",
+      "file": "text-200/inventory-erp-text-200.json",
+      "observations": 3,
+      "overflow": []
+    },
+    {
+      "run": "text-200",
+      "file": "text-200/inventory-parents-text-200.json",
+      "observations": 3,
+      "overflow": []
+    },
+    {
+      "run": "final-interactions",
+      "file": "final-interactions/inventory-erp-final-interactions.json",
+      "observations": 4,
+      "overflow": []
+    },
+    {
+      "run": "final-interactions",
+      "file": "final-interactions/inventory-parents-final-interactions.json",
+      "observations": 8,
+      "overflow": []
+    },
+    {
+      "run": "final-interactions",
+      "file": "final-interactions/inventory-staff-final-interactions.json",
+      "observations": 5,
+      "overflow": []
+    }
+  ]
+}

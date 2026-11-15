@@ -1,0 +1,148 @@
+{
+  "synthetic": true,
+  "targets": [
+    {
+      "label": "EN",
+      "width": 44,
+      "height": 44
+    },
+    {
+      "label": "हि",
+      "width": 44,
+      "height": 44
+    },
+    {
+      "label": "Notices",
+      "width": 44,
+      "height": 44
+    },
+    {
+      "label": "My profile",
+      "width": 44,
+      "height": 44
+    }
+  ],
+  "selection": [
+    {
+      "text": "Trip record",
+      "current": "page",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "text": "Home",
+      "current": null,
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "text": "Profile",
+      "current": null,
+      "bg": "rgba(0, 0, 0, 0)"
+    }
+  ],
+  "screens": [
+    {
+      "id": "home-390",
+      "width": 390,
+      "scroll": 375,
+      "text": "SR\n\nGood evening\n\nReview\n\nEN\nहि\nRD\nToday's route\n15 Nov\nMorning · school\nAfternoon · home\nRJ 04 TEST\nNot started\nBarmer North Route\n\nStart from\n\nReview School\n\nFinish at · Long neighbourhood stop near community centre\n\n3 children\n2 stops\nSlide to start trip\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nToday's stops\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "home-stops",
+      "width": 390,
+      "scroll": 375,
+      "text": "SR\n\nGood evening\n\nReview\n\nEN\nहि\nRD\nToday's route\n15 Nov\nMorning · school\nAfternoon · home\nRJ 04 TEST\nNot started\nBarmer North Route\n\nStart from\n\nReview School\n\nFinish at · Long neighbourhood stop near community centre\n\n3 children\n2 stops\nSlide to start trip\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nToday's stops\nReview School\nDepart from school\n1\nSecond stop\n1 child\n2\nLong neighbourhood stop near community centre\n2 children\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "history",
+      "width": 390,
+      "scroll": 390,
+      "text": "Trip record\nMon\n9\nTue\n10\nWed\n11\nThu\n12\nFri\n13\nSat\n14\nSun\n15\nSun, 15 Nov\n\n1 trip\n\nMorning pickup\nCompleted\nStarted\n7:00 AM\nEnded\n7:45 AM\n\nFirst stop → Review School\n\n4 stops completed\n·\n12 marked on\n7.0 km\nRoute estimate\n0\nDelays\n12\nBoard / drop entries\n\nPlanned route distance · not GPS distance.\n\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "history-selected",
+      "width": 390,
+      "scroll": 390,
+      "text": "Trip record\nMon\n9\nTue\n10\nWed\n11\nThu\n12\nFri\n13\nSat\n14\nSun\n15\nWed, 11 Nov\n\n1 trip\n\nMorning pickup\nCompleted\nStarted\n7:00 AM\nEnded\n7:45 AM\n\nFirst stop → Review School\n\n4 stops completed\n·\n12 marked on\n7.0 km\nRoute estimate\n0\nDelays\n12\nBoard / drop entries\n\nPlanned route distance · not GPS distance.\n\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "profile",
+      "width": 390,
+      "scroll": 375,
+      "text": "Profile\nRD\nReview Driver\nDriver · D001\nSynthetic Review School\nMy details\nJoined\n1 Jan 2024\nMobile\nMine\nSalary slips\nMy attendance\nMy leave\nSettings\nLanguage\nEnglish\nStop alert\nCloses by itself in 3 s\nI close it myself\n\nThe alert shows for 3 seconds, then goes.\n\nLog out\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "home-360-short",
+      "width": 360,
+      "scroll": 345,
+      "text": "SR\n\nGood evening\n\nReview\n\nEN\nहि\nRD\nToday's route\n15 Nov\nMorning · school\nAfternoon · home\nRJ 04 TEST\nNot started\nBarmer North Route\n\nStart from\n\nReview School\n\nFinish at · Long neighbourhood stop near community centre\n\n3 children\n2 stops\nSlide to start trip\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nToday's stops\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "home-390-short",
+      "width": 390,
+      "scroll": 375,
+      "text": "SR\n\nGood evening\n\nReview\n\nEN\nहि\nRD\nToday's route\n15 Nov\nMorning · school\nAfternoon · home\nRJ 04 TEST\nNot started\nBarmer North Route\n\nStart from\n\nReview School\n\nFinish at · Long neighbourhood stop near community centre\n\n3 children\n2 stops\nSlide to start trip\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nToday's stops\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "home-hi",
+      "width": 390,
+      "scroll": 375,
+      "text": "SR\n\nनमस्ते\n\nReview\n\nEN\nहि\nRD\nआज का सफ़र\n15 नव॰\nसुबह · स्कूल\nछुट्टी · घर\nRJ 04 TEST\nशुरू नहीं हुई\nBarmer North Route\n\nयहाँ से शुरू\n\nReview School\n\nमंज़िल · Long neighbourhood stop near community centre\n\n3 बच्चे\n2 स्टॉप\nट्रिप शुरू करने को स्वाइप करें\nदाईं ओर पूरा स्वाइप करें। कीबोर्ड से Enter दबाएँ।\nस्वाइप नहीं कर पा रहे?\nआज के स्टॉप\nट्रिप रिकॉर्ड\nहोम\nप्रोफ़ाइल"
+    },
+    {
+      "id": "partial-reset",
+      "width": 390,
+      "scroll": 375,
+      "text": "SR\n\nGood evening\n\nReview\n\nEN\nहि\nRD\nToday's route\n15 Nov\nMorning · school\nAfternoon · home\nRJ 04 TEST\nNot started\nBarmer North Route\n\nStart from\n\nReview School\n\nFinish at · Long neighbourhood stop near community centre\n\n3 children\n2 stops\nSlide to start trip\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nToday's stops\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "fallback",
+      "width": 390,
+      "scroll": 375,
+      "text": "SR\n\nGood evening\n\nReview\n\nEN\nहि\nRD\nToday's route\n15 Nov\nMorning · school\nAfternoon · home\nRJ 04 TEST\nNot started\nBarmer North Route\n\nStart from\n\nReview School\n\nFinish at · Long neighbourhood stop near community centre\n\n3 children\n2 stops\nSlide to start trip\nSlide the handle right to confirm. With a keyboard, press Enter.\nConfirm\nCancel\nToday's stops\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "pre-trip",
+      "width": 390,
+      "scroll": 390,
+      "text": "Barmer North Route · Afternoon · home\n\nToday's route\n\n2 stops · 3 children\n\nSlide to confirm\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?"
+    },
+    {
+      "id": "trip-running",
+      "width": 390,
+      "scroll": 390,
+      "text": "Vehicle number\n\nRJ 04 TEST\n\nReview School\n\n9:42 PM\n\nLong neighbourhood stop near community centre\n\n—\n\nDistance left\n—\nSpeed\n28 km/h\nOn board\n3\n\nLast location sent: 9:42 PM\n\nAfternoon · home · 0 min\nEnd trip\nNext stop · 1/2\nSecond stop\n1 getting off · about 2 min\n750 m\nR\n3 on board\n\n0%0 of 2 stops done\n\nSlide at the stop\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nReport delay\nMore"
+    },
+    {
+      "id": "trip-details",
+      "width": 390,
+      "scroll": 390,
+      "text": "Vehicle number\n\nRJ 04 TEST\n\nReview School\n\n9:42 PM\n\nLong neighbourhood stop near community centre\n\n—\n\nDistance left\n—\nSpeed\n50 km/h\nOn board\n3\n\nLast location sent: 9:42 PM\n\nAfternoon · home · 0 min\nEnd trip\nNext stop · 1/2\nSecond stop\n1 getting off · about 2 min\n740 m\nR\n3 on board\n\n0%0 of 2 stops done\n\nSlide at the stop\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nReport delay\nMore"
+    },
+    {
+      "id": "stop-roster",
+      "width": 390,
+      "scroll": 390,
+      "text": "Vehicle number\n\nRJ 04 TEST\n\nReview School\n\n9:42 PM\n\nLong neighbourhood stop near community centre\n\n—\n\nDistance left\n—\nSpeed\n50 km/h\nOn board\n3\n\nLast location sent: 9:42 PM\n\nAfternoon · home · 0 min\nEnd trip\nNext stop · 1/2\nSecond stop\n1 getting off · about 2 min\n710 m\nR\n3 on board\n\n0%0 of 2 stops done\n\nSlide at the stop\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nReport delay\nMore\nSecond stop\n\nStop 1\n\n0/1\n\noff\n\nRT\nReview Child Three\nClass 5 - A\nGot off\nStop done (1 left) · Next"
+    },
+    {
+      "id": "history-reduced-motion",
+      "width": 390,
+      "scroll": 390,
+      "text": "Trip record\nMon\n9\nTue\n10\nWed\n11\nThu\n12\nFri\n13\nSat\n14\nSun\n15\nSun, 15 Nov\n\n1 trip\n\nMorning pickup\nCompleted\nStarted\n7:00 AM\nEnded\n7:45 AM\n\nFirst stop → Review School\n\n4 stops completed\n·\n12 marked on\n7.0 km\nRoute estimate\n0\nDelays\n12\nBoard / drop entries\n\nPlanned route distance · not GPS distance.\n\nTrip record\nHome\nProfile"
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "44px home header targets",
+    "single selected navigation",
+    "collapsed stops and disclosure",
+    "rapid date changes and no nested entrance",
+    "empty Help removed",
+    "360/390 and Hindi no horizontal overflow",
+    "partial swipe resets; full swipe starts once",
+    "trip full place names",
+    "stop roster opens",
+    "reduced motion"
+  ],
+  "limits": "Mock APIs and synthetic blank basemap; no live data writes or physical device verification."
+}

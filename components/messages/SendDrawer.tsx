@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Check, Copy, Loader2, MessageCircle, Search, Trash2, Undo2 } from "lucide-react";
 import { SideDrawer } from "@/components/ui/SideDrawer";
 import { toast } from "@/components/ui/Toaster";
@@ -24,6 +24,9 @@ export function SendDrawer({ messageId, canDelete, onClose, onChanged, onDeleted
   const [view, setView] = useState<View>("pending");
   const [query, setQuery] = useState("");
   const [copied, setCopied] = useState(false);
+  const [opened, setOpened] = useState<string | null>(null);
+  const [marking, setMarking] = useState(false);
+  const markingRef = useRef(false);
   const [deleting, setDeleting] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(false);
 
@@ -35,6 +38,7 @@ export function SendDrawer({ messageId, canDelete, onClose, onChanged, onDeleted
     setView("pending");
     setQuery("");
     setConfirmDelete(false);
+    setOpened(null);
     messageService.get(messageId).then((r) => {
       if (r.error || !r.data) return setError(r.error || "Could not open this message.");
       setMessage(r.data.message);
@@ -55,22 +59,20 @@ export function SendDrawer({ messageId, canDelete, onClose, onChanged, onDeleted
   }, [rows, view, query]);
 
   const setStatus = async (r: Recipient, status: "sent" | "pending") => {
-    if (!message) return;
-    setRows((prev) => (prev || []).map((x) => (x.id === r.id ? { ...x, status, sent_at: status === "sent" ? new Date().toISOString() : null } : x)));
-    const res = await messageService.mark(message.id, r.id, status);
-    if (res.error) {
-      setRows((prev) => (prev || []).map((x) => (x.id === r.id ? r : x)));
-      toast(res.error, "error");
-      return;
-    }
-    if (typeof res.sent === "number") onChanged(message.id, res.sent);
+    if(!message||markingRef.current)return;
+    markingRef.current=true;setMarking(true);
+    try {
+      const res=await messageService.mark(message.id,r.id,status);
+      if(res.error){toast(res.error,"error");return;}
+      setRows(prev=>(prev||[]).map(x=>x.id===r.id?{...x,status,sent_at:status==="sent"?new Date().toISOString():null}:x));
+      setOpened(null);if(typeof res.sent==="number")onChanged(message.id,res.sent);
+    } catch {toast("Could not save the status.","error");}
+    finally {markingRef.current=false;setMarking(false);}
   };
-
   const send = (r: Recipient) => {
-    window.open(whatsappUrl(r.phone, r.text), "_blank", "noopener");
-    setStatus(r, "sent");
+    window.open(whatsappUrl(r.phone,r.text),"_blank","noopener");
+    setOpened(r.id);
   };
-
   const next = (rows || []).find((r) => r.status === "pending");
 
   const copyNumbers = async () => {
@@ -151,8 +153,8 @@ export function SendDrawer({ messageId, canDelete, onClose, onChanged, onDeleted
                 </button>
               ) : (
                 <span className="badge badge-emerald ml-auto">
-                  <Check className="h-3.5 w-3.5" />
-                  Everyone has it
+                  {total > 0 && <Check className="h-3.5 w-3.5" />}
+                  {total > 0 ? "All available numbers marked sent" : "No recipients with a phone number"}
                 </span>
               )}
             </div>
@@ -160,10 +162,11 @@ export function SendDrawer({ messageId, canDelete, onClose, onChanged, onDeleted
               <div className="h-full rounded-full bg-emerald-500 transition-all" style={{ width: `${pct}%` }} />
             </div>
             <p className="mt-3 text-xs leading-relaxed text-slate-500">
-              WhatsApp opens with the message typed in. Press send there, then come back for the next parent. Each one is ticked off here as you go.
+              WhatsApp opens with the message typed in. Send it there, then return and confirm “Yes, I sent it” to update the manual record.
             </p>
           </section>
 
+          {opened && rows.some(r=>r.id===opened&&r.status==="pending") && <section className="card space-y-3 p-4"><p className="text-sm">Sent it in WhatsApp? Confirm the manual record here. Opening WhatsApp does not mark it sent.</p><div className="flex flex-wrap gap-2"><button type="button" disabled={marking} className="btn btn-primary" onClick={()=>{const r=rows.find(r=>r.id===opened);if(r)void setStatus(r,"sent")}}>{marking?"Saving…":"Yes, I sent it"}</button><button type="button" disabled={marking} className="btn btn-secondary" onClick={()=>setOpened(null)}>Not yet</button></div></section>}
           <details className="card group p-4">
             <summary className="cursor-pointer text-sm font-semibold text-slate-900">Message text</summary>
             <p lang={message.lang} className="mt-3 whitespace-pre-wrap text-[14px] leading-relaxed text-slate-700">{message.body}</p>
@@ -218,7 +221,7 @@ export function SendDrawer({ messageId, canDelete, onClose, onChanged, onDeleted
                       </button>
                     )}
                     {r.status === "sent" && (
-                      <button type="button" onClick={() => setStatus(r, "pending")} className="btn btn-secondary btn-sm shrink-0" title="Not sent after all">
+                      <button type="button" disabled={marking} onClick={() => setStatus(r, "pending")} className="btn btn-secondary btn-sm shrink-0" title="Not sent after all">
                         <Undo2 className="h-4 w-4" />
                         Undo
                       </button>

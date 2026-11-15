@@ -1,0 +1,1318 @@
+[
+  {
+    "mode": "parents",
+    "requested": "/search/",
+    "file": "parents/search-360.png",
+    "url": "/search/",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "खोजें\nएआई असिस्टेंट से पूछें\nआज का होमवर्क?\nकितनी फ़ीस बाकी है?\nअगला एग्ज़ाम कब है?\nबस कहाँ है?\nज़्यादा खोले जाने वाले\nफ़ीस\nहाज़िरी\nहोमवर्क\nटाइम टेबल\nआपके लिए नया\nSports Day\nरविवार, 22 नवंबर · कार्यक्रम\nDussehra Mela\nशुक्रवार, 27 नवंबर · कार्यक्रम\nदशहरा अवकाश\nशनिवार, 14 नवंबर · सूचना\nअभिभावक–शिक्षक बैठक\nबुधवार, 11 नवंबर · सूचना\nहोम\nकैलेंडर\nपढ़ाई\nफ़ीस\nप्रोफ़ाइल",
+    "width": 360,
+    "scrollWidth": 360,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "वापस",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "वापस",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "खोजें या पूछें",
+        "x": 69,
+        "y": 76,
+        "w": 210,
+        "h": 40,
+        "font": "16px",
+        "label": "खोजें या पूछें",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "बोलकर खोजें",
+        "x": 291,
+        "y": 74,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "बोलकर खोजें",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "आज का होमवर्क?",
+        "x": 16,
+        "y": 144,
+        "w": 121,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "कितनी फ़ीस बाकी है?",
+        "x": 145,
+        "y": 144,
+        "w": 138,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "अगला एग्ज़ाम कब है?",
+        "x": 292,
+        "y": 144,
+        "w": 139,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "बस कहाँ है?",
+        "x": 438,
+        "y": 144,
+        "w": 90,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "फ़ीस",
+        "x": 16,
+        "y": 236,
+        "w": 76,
+        "h": 65,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "हाज़िरी",
+        "x": 100,
+        "y": 236,
+        "w": 76,
+        "h": 65,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "होमवर्क",
+        "x": 184,
+        "y": 236,
+        "w": 76,
+        "h": 65,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "टाइम टेबल",
+        "x": 268,
+        "y": 236,
+        "w": 76,
+        "h": 65,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Sports Dayरविवार, 22 नवंबर · कार्यक्रम",
+        "x": 16,
+        "y": 355,
+        "w": 210,
+        "h": 170,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Dussehra Melaशुक्रवार, 27 नवंबर · कार्यक्रम",
+        "x": 238,
+        "y": 355,
+        "w": 210,
+        "h": 170,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "दशहरा अवकाशशनिवार, 14 नवंबर · सूचना",
+        "x": 460,
+        "y": 355,
+        "w": 210,
+        "h": 170,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "अभिभावक–शिक्षक बैठकबुधवार, 11 नवंबर · सूचना",
+        "x": 682,
+        "y": 355,
+        "w": 210,
+        "h": 170,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "होम",
+        "x": 0,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "कैलेंडर",
+        "x": 72,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "पढ़ाई",
+        "x": 144,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "फ़ीस",
+        "x": 216,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "प्रोफ़ाइल",
+        "x": 288,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [
+      {
+        "tag": "A",
+        "name": "आज का होमवर्क?",
+        "x": 16,
+        "y": 144,
+        "w": 121,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "कितनी फ़ीस बाकी है?",
+        "x": 145,
+        "y": 144,
+        "w": 138,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "अगला एग्ज़ाम कब है?",
+        "x": 292,
+        "y": 144,
+        "w": 139,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "बस कहाँ है?",
+        "x": 438,
+        "y": 144,
+        "w": 90,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "खोजें",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "बोलकर खोजें",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(38, 46, 66)"
+      },
+      {
+        "tag": "H2",
+        "text": "ज़्यादा खोले जाने वाले",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(95, 104, 123)"
+      },
+      {
+        "tag": "H2",
+        "text": "आपके लिए नया",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(95, 104, 123)"
+      }
+    ],
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "src": "/img/events/sports.webp"
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "src": "/img/events/mela.webp"
+      }
+    ],
+    "animations": [
+      {
+        "name": "search-glow-in",
+        "state": "finished",
+        "duration": 700,
+        "iterations": 1
+      },
+      {
+        "name": "search-glow-move",
+        "state": "running",
+        "duration": 2400,
+        "iterations": null
+      },
+      {
+        "name": "search-glow-out",
+        "state": "running",
+        "duration": 900,
+        "iterations": 1
+      },
+      {
+        "name": "search-blink",
+        "state": "running",
+        "duration": 1000,
+        "iterations": null
+      },
+      {
+        "name": "search-up",
+        "state": "finished",
+        "duration": 450,
+        "iterations": 1
+      },
+      {
+        "name": "search-up",
+        "state": "finished",
+        "duration": 450,
+        "iterations": 1
+      },
+      {
+        "name": "search-up",
+        "state": "finished",
+        "duration": 450,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "parents",
+    "requested": "/fees/pay/?i=0",
+    "file": "parents/fees--pay-360.png",
+    "url": "/fees/pay/?i=0",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "भुगतान\nPG\n\nफ़ीस भुगतान\n\n₹18,000\n\nकिसकी\nPriya Garg\nकिसे\nMother Teresa Nobles Academy\nकितनी रकम\nपूरे सत्र की बाकी\n₹18,000\nदूसरी रकम\n\nQR स्कैन करके ₹18,000 भरें\n\nकिसी भी UPI ऐप से स्कैन करें\n\nइसी फ़ोन में हैं? QR सेव करें\n₹18,000 भर दिए\nआगे क्या होगा\nहोम\nकैलेंडर\nपढ़ाई\nफ़ीस\nप्रोफ़ाइल",
+    "width": 360,
+    "scrollWidth": 345,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "वापस",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "वापस",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "बच्चा बदलें: Priya Garg",
+        "x": 295,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "बच्चा बदलें: Priya Garg",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "amt",
+        "x": 33,
+        "y": 286,
+        "w": 18,
+        "h": 18,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "amt",
+        "x": 33,
+        "y": 343,
+        "w": 18,
+        "h": 18,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "इसी फ़ोन में हैं? QR सेव करें",
+        "x": 100,
+        "y": 810,
+        "w": 145,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "₹18,000 भर दिए",
+        "x": 16,
+        "y": 887,
+        "w": 313,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "होम",
+        "x": 0,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "कैलेंडर",
+        "x": 69,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "पढ़ाई",
+        "x": 138,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "फ़ीस",
+        "x": 207,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "प्रोफ़ाइल",
+        "x": 276,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "भुगतान",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "बच्चा बदलें: Priya Garg",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "P",
+        "text": "फ़ीस भुगतान",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(52, 65, 87)"
+      },
+      {
+        "tag": "P",
+        "text": "₹18,000",
+        "size": "28px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "DT",
+        "text": "किसकी",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "DD",
+        "text": "Priya Garg",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "DT",
+        "text": "किसे",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "DD",
+        "text": "Mother Teresa Nobles Academy",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "P",
+        "text": "QR स्कैन करके ₹18,000 भरें",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "P",
+        "text": "किसी भी UPI ऐप से स्कैन करें",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "₹18,000 भर दिए",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "P",
+        "text": "QR को किसी भी UPI ऐप से स्कैन करके दिखाई गई रकम भरें। फिर यहाँ आकर UTR नंबर लिखें, स्कूल ब",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      }
+    ],
+    "images": [
+      {
+        "alt": "",
+        "loaded": false,
+        "src": "/img/fee-receipt.webp"
+      },
+      {
+        "alt": "स्कूल का पेमेंट QR",
+        "loaded": false,
+        "src": "/img/upi/demo-qr.svg"
+      }
+    ],
+    "animations": [
+      {
+        "name": "study-in",
+        "state": "running",
+        "duration": 500,
+        "iterations": 1
+      },
+      {
+        "name": "study-in",
+        "state": "running",
+        "duration": 500,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "parents",
+    "requested": "/leave/apply/",
+    "file": "parents/leave--apply-360.png",
+    "url": "/leave/apply/",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "छुट्टी की अर्ज़ी\nPG\nछुट्टी का प्रकार\nबीमारी\nघर का काम / शादी\nज़रूरी काम\nदूसरा कारण\nकिस दिन से\nकिस दिन तक\nपूरा दिन\nआधा दिन\n\nकुल: 1 दिन\n\nछुट्टी का कारण\n0/300\n\nकक्षा अध्यापक इसे देखकर यहीं जवाब देंगे। एक बार में 30 दिन तक की छुट्टी। ज़्यादा के लिए स्कूल ऑफ़िस से मिलें।\n\nअर्ज़ी भेजें\nहोम\nकैलेंडर\nपढ़ाई\nफ़ीस\nप्रोफ़ाइल",
+    "width": 360,
+    "scrollWidth": 360,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "वापस",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "वापस",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "बच्चा बदलें: Priya Garg",
+        "x": 310,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "बच्चा बदलें: Priya Garg",
+        "disabled": false
+      },
+      {
+        "tag": "SELECT",
+        "name": "बीमारीघर का काम / शादीज़रूरी कामदूसरा कारण",
+        "x": 16,
+        "y": 92,
+        "w": 328,
+        "h": 52,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "leave-from",
+        "x": 16,
+        "y": 196,
+        "w": 158,
+        "h": 52,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "leave-to",
+        "x": 186,
+        "y": 196,
+        "w": 158,
+        "h": 52,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "पूरा दिन",
+        "x": 21,
+        "y": 265,
+        "w": 157,
+        "h": 44,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "आधा दिन",
+        "x": 182,
+        "y": 265,
+        "w": 157,
+        "h": 44,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "TEXTAREA",
+        "name": "जैसे: बुखार है, शादी में बाहर जा रहे हैं",
+        "x": 16,
+        "y": 398,
+        "w": 328,
+        "h": 122,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "अर्ज़ी भेजें",
+        "x": 16,
+        "y": 636,
+        "w": 328,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "होम",
+        "x": 0,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "कैलेंडर",
+        "x": 72,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "पढ़ाई",
+        "x": 144,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "फ़ीस",
+        "x": 216,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "प्रोफ़ाइल",
+        "x": 288,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "छुट्टी की अर्ज़ी",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "बच्चा बदलें: Priya Garg",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "पूरा दिन",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "आधा दिन",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(52, 65, 87)"
+      },
+      {
+        "tag": "P",
+        "text": "कुल: 1 दिन",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "P",
+        "text": "कक्षा अध्यापक इसे देखकर यहीं जवाब देंगे। एक बार में 30 दिन तक की छुट्टी। ज़्यादा के लिए स्",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "अर्ज़ी भेजें",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  },
+  {
+    "mode": "parents",
+    "requested": "/meetings/detail/?id=meet-ptm",
+    "file": "parents/meetings--detail-360.png",
+    "url": "/meetings/detail/?id=meet-ptm",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "मीटिंग\nPG\nParent–teacher meeting\n\nRakesh Bishnoi · Class Nursery - A\n\nरवि, 22 नव॰\n9:00 AM – 11:00 AM\nClassroom, first floor\nHalf Yearly answer sheets and the term's progress.\nअपना समय चुनें\n9:00\n9:15\n9:30\n9:45\n10:00\n10:15\n10:30\n10:45\n\nकटे हुए समय दूसरे पैरेंट्स ले चुके हैं\n\nहोम\nकैलेंडर\nपढ़ाई\nफ़ीस\nप्रोफ़ाइल",
+    "width": 360,
+    "scrollWidth": 345,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "वापस",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "वापस",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "बच्चा बदलें: Priya Garg",
+        "x": 295,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "बच्चा बदलें: Priya Garg",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:00 AM, ले लिया गया",
+        "x": 33,
+        "y": 409,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "9:00 AM, ले लिया गया",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:15 AM, ले लिया गया",
+        "x": 129,
+        "y": 409,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "9:15 AM, ले लिया गया",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:30 AM",
+        "x": 224,
+        "y": 409,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "9:30 AM",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:45 AM, ले लिया गया",
+        "x": 33,
+        "y": 465,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "9:45 AM, ले लिया गया",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:00 AM",
+        "x": 129,
+        "y": 465,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "10:00 AM",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:15 AM",
+        "x": 224,
+        "y": 465,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "10:15 AM",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:30 AM, ले लिया गया",
+        "x": 33,
+        "y": 521,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "10:30 AM, ले लिया गया",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:45 AM",
+        "x": 129,
+        "y": 521,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "10:45 AM",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "होम",
+        "x": 0,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "कैलेंडर",
+        "x": 69,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "पढ़ाई",
+        "x": 138,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "फ़ीस",
+        "x": 207,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "प्रोफ़ाइल",
+        "x": 276,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "मीटिंग",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "बच्चा बदलें: Priya Garg",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "H2",
+        "text": "Parent–teacher meeting",
+        "size": "20px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "P",
+        "text": "Rakesh Bishnoi · Class Nursery - A",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "H2",
+        "text": "अपना समय चुनें",
+        "size": "20px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:00 AM, ले लिया गया",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:15 AM, ले लिया गया",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:30 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:45 AM, ले लिया गया",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:00 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:15 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:30 AM, ले लिया गया",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:45 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "P",
+        "text": "कटे हुए समय दूसरे पैरेंट्स ले चुके हैं",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "study-in",
+        "state": "running",
+        "duration": 500,
+        "iterations": 1
+      },
+      {
+        "name": "study-in",
+        "state": "running",
+        "duration": 500,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "parents",
+    "requested": "/teachers/chat/?id=t-neha",
+    "file": "parents/teachers--chat-360.png",
+    "url": "/teachers/chat/?id=t-neha",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "NS\n\nNeha Sharma\n\nक्लास टीचर · English\n\nकल\n\nNamaste ma'am, Laxman was unwell yesterday. Which pages should he finish at home?\n\n9:15 pm\n\nNamaste. Please do pages 14 and 15 of the English book. Hope he feels better.\n\n10:15 pm\n\nआज\n\nCan we meet once about his reading?\n\n8:15 pm\n\nमिलने का समय\n\n18\nबुध, नवंबर · 11:30 AM\nस्कूल में · 15 मिनट\nठीक है\nदूसरा समय\nसंदेश",
+    "width": 360,
+    "scrollWidth": 360,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "वापस",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "वापस",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "ठीक है",
+        "x": 29,
+        "y": 571,
+        "w": 121,
+        "h": 44,
+        "font": "14.5px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "दूसरा समय",
+        "x": 158,
+        "y": 571,
+        "w": 121,
+        "h": 44,
+        "font": "14.5px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "TEXTAREA",
+        "name": "संदेश लिखें",
+        "x": 12,
+        "y": 788,
+        "w": 282,
+        "h": 46,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "भेजें",
+        "x": 302,
+        "y": 788,
+        "w": 46,
+        "h": 46,
+        "font": "16px",
+        "label": "भेजें",
+        "disabled": true
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [
+      {
+        "text": "संदेश",
+        "x": 11,
+        "y": 834,
+        "w": 1,
+        "h": 1
+      }
+    ],
+    "typography": [
+      {
+        "tag": "P",
+        "text": "Neha Sharma",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "P",
+        "text": "क्लास टीचर · English",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(95, 104, 123)"
+      },
+      {
+        "tag": "P",
+        "text": "कल",
+        "size": "12.5px",
+        "weight": "500",
+        "color": "rgb(138, 147, 166)"
+      },
+      {
+        "tag": "P",
+        "text": "Namaste ma'am, Laxman was unwell yesterday. Which pages should he finish at home?",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "P",
+        "text": "9:15 pm",
+        "size": "11px",
+        "weight": "400",
+        "color": "rgba(255, 255, 255, 0.7)"
+      },
+      {
+        "tag": "P",
+        "text": "Namaste. Please do pages 14 and 15 of the English book. Hope he feels better.",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "P",
+        "text": "10:15 pm",
+        "size": "11px",
+        "weight": "400",
+        "color": "rgb(138, 147, 166)"
+      },
+      {
+        "tag": "P",
+        "text": "आज",
+        "size": "12.5px",
+        "weight": "500",
+        "color": "rgb(138, 147, 166)"
+      },
+      {
+        "tag": "P",
+        "text": "Can we meet once about his reading?",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "P",
+        "text": "8:15 pm",
+        "size": "11px",
+        "weight": "400",
+        "color": "rgb(138, 147, 166)"
+      },
+      {
+        "tag": "P",
+        "text": "मिलने का समय",
+        "size": "12.5px",
+        "weight": "600",
+        "color": "rgb(95, 104, 123)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "ठीक है",
+        "size": "14.5px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "दूसरा समय",
+        "size": "14.5px",
+        "weight": "600",
+        "color": "rgb(38, 46, 66)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "भेजें",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(67, 86, 76)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  }
+]

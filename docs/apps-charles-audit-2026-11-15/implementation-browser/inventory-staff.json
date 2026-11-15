@@ -1,0 +1,1149 @@
+[
+  {
+    "mode": "staff",
+    "requested": "/marks/",
+    "file": "staff/marks-390.png",
+    "url": "/marks/",
+    "title": "Mother Teresa Nobles Academy · Staff",
+    "text": "Marks\nExam - Half Yearly Exam\nClass - 5th - B\nSubject - Maths\n\nParts: Theory 80 + Internal 20\n\nEnter marks\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Exam - Half Yearly Exam",
+        "x": 33,
+        "y": 90,
+        "w": 324,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Class - 5th - B",
+        "x": 33,
+        "y": 154,
+        "w": 324,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Subject - Maths",
+        "x": 33,
+        "y": 214,
+        "w": 324,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Enter marks",
+        "x": 33,
+        "y": 332,
+        "w": 324,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 78,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 156,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 234,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 312,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "Marks",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Exam - Half Yearly Exam",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Class - 5th - B",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Subject - Maths",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Parts: Theory 80 + Internal 20",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Enter marks",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  },
+  {
+    "mode": "staff",
+    "requested": "/homework/",
+    "file": "staff/homework-390.png",
+    "url": "/homework/",
+    "title": "Mother Teresa Nobles Academy · Staff",
+    "text": "Homework\nCreate\nCheck\nClass - 5th - B\nSubject - Maths\nTitle\nSubmit by\nAttach photo or PDF\nSend homework\nRecently given\n\nMaths - 5th - B\n\n14 Nov\n\nExercise 4.2 — Q 1 to 10\n\nShow all steps.\n\nDue 15 Nov\n\nMaths - 5th - A\n\n13 Nov\n\nTable of 13 and 14\n\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Create",
+        "x": 16,
+        "y": 73,
+        "w": 172,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Check",
+        "x": 188,
+        "y": 73,
+        "w": 172,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Class - 5th - B",
+        "x": 33,
+        "y": 153,
+        "w": 309,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Subject - Maths",
+        "x": 33,
+        "y": 213,
+        "w": 309,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "e.g. Exercise 4.2, questions 1–8",
+        "x": 48,
+        "y": 281,
+        "w": 279,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "TEXTAREA",
+        "name": "Homework details",
+        "x": 33,
+        "y": 341,
+        "w": 309,
+        "h": 104,
+        "font": "16px",
+        "label": "Homework details",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "",
+        "x": 48,
+        "y": 464,
+        "w": 253,
+        "h": 42,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Attach photo or PDF",
+        "x": 33,
+        "y": 525,
+        "w": 309,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Send homework",
+        "x": 33,
+        "y": 587,
+        "w": 309,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 75,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 150,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 225,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 300,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "Homework",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Create",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Check",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Class - 5th - B",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Subject - Maths",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Attach photo or PDF",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Send homework",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "H2",
+        "text": "Recently given",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Maths - 5th - B",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Exercise 4.2 — Q 1 to 10",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Show all steps.",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(75, 84, 104)"
+      },
+      {
+        "tag": "P",
+        "text": "Maths - 5th - A",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Table of 13 and 14",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  },
+  {
+    "mode": "staff",
+    "requested": "/homework/",
+    "file": "staff/homework-390.png",
+    "url": "/homework/",
+    "title": "Mother Teresa Nobles Academy · Staff",
+    "text": "Homework\nCreate\nCheck\nClass - 5th - B\nSubject - Maths\nTitle\nSubmit by\nAttach photo or PDF\nSend homework\nRecently given\n\nMaths - 5th - B\n\n14 Nov\n\nExercise 4.2 — Q 1 to 10\n\nShow all steps.\n\nDue 15 Nov\n\nMaths - 5th - A\n\n13 Nov\n\nTable of 13 and 14\n\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Create",
+        "x": 16,
+        "y": 73,
+        "w": 172,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Check",
+        "x": 188,
+        "y": 73,
+        "w": 172,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Class - 5th - B",
+        "x": 33,
+        "y": 153,
+        "w": 309,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Subject - Maths",
+        "x": 33,
+        "y": 213,
+        "w": 309,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "e.g. Exercise 4.2, questions 1–8",
+        "x": 48,
+        "y": 281,
+        "w": 279,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "TEXTAREA",
+        "name": "Homework details",
+        "x": 33,
+        "y": 341,
+        "w": 309,
+        "h": 104,
+        "font": "16px",
+        "label": "Homework details",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "",
+        "x": 48,
+        "y": 464,
+        "w": 253,
+        "h": 42,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Attach photo or PDF",
+        "x": 33,
+        "y": 525,
+        "w": 309,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Send homework",
+        "x": 33,
+        "y": 587,
+        "w": 309,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 75,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 150,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 225,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 300,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "Homework",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Create",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Check",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Class - 5th - B",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Subject - Maths",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Attach photo or PDF",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Send homework",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "H2",
+        "text": "Recently given",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Maths - 5th - B",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Exercise 4.2 — Q 1 to 10",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Show all steps.",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(75, 84, 104)"
+      },
+      {
+        "tag": "P",
+        "text": "Maths - 5th - A",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Table of 13 and 14",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  },
+  {
+    "mode": "staff",
+    "requested": "/leave/?tab=requests",
+    "file": "staff/leave-390.png",
+    "url": "/leave/?tab=requests",
+    "title": "Mother Teresa Nobles Academy · Staff",
+    "text": "Leave\nMy leave\nRequests\n3\nIJ\n\nIshita Jain - 5th - B\n\n2 days\nReason\nFamily function\nFrom\n16 Nov to 17 Nov\nNotes\nशादी में बाहर जाना है\nApprove\nNot approve\nHV\n\nHarsh Vyas - 5th - B\n\n1 day\nReason\nSick\nFrom\n15 Nov\nNotes\nबुखार है\nApprove\nNot approve\nTP\n\nTanvi Purohit - 5th - B\n\n3 days\nReason\nFamily function\nFrom\n19 Nov to 21 Nov\nNotes\nFamily function in Jodhpur\nApprove\nNot approve\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Apply leave",
+        "x": 325,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Apply leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "My leave",
+        "x": 16,
+        "y": 73,
+        "w": 172,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Requests3",
+        "x": 188,
+        "y": 73,
+        "w": 172,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Approve",
+        "x": 140,
+        "y": 314,
+        "w": 99,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Not approve",
+        "x": 247,
+        "y": 314,
+        "w": 95,
+        "h": 46,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Approve",
+        "x": 140,
+        "y": 559,
+        "w": 99,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Not approve",
+        "x": 247,
+        "y": 559,
+        "w": 95,
+        "h": 46,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Approve",
+        "x": 140,
+        "y": 804,
+        "w": 99,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Not approve",
+        "x": 247,
+        "y": 804,
+        "w": 95,
+        "h": 46,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 75,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 150,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 225,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 300,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "Leave",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "My leave",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Requests3",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "P",
+        "text": "Ishita Jain - 5th - B",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "DT",
+        "text": "Reason",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "DD",
+        "text": "Family function",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "DT",
+        "text": "From",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "DD",
+        "text": "16 Nov to 17 Nov",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "DT",
+        "text": "Notes",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "DD",
+        "text": "शादी में बाहर जाना है",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Approve",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Not approve",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Harsh Vyas - 5th - B",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "DT",
+        "text": "Reason",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "DD",
+        "text": "Sick",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "DT",
+        "text": "From",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "DD",
+        "text": "15 Nov",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "DT",
+        "text": "Notes",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "DD",
+        "text": "बुखार है",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Approve",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Not approve",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Tanvi Purohit - 5th - B",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "DT",
+        "text": "Reason",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "DD",
+        "text": "Family function",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "DT",
+        "text": "From",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "DD",
+        "text": "19 Nov to 21 Nov",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "DT",
+        "text": "Notes",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "DD",
+        "text": "Family function in Jodhpur",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Approve",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Not approve",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  }
+]

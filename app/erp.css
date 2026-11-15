@@ -26,6 +26,18 @@
 .erp-shell .page-header .page-title + .page-subtitle { margin-bottom: 0; }
 .erp-shell :is(h2,h3).font-bold { font-weight: 600; }
 .erp-shell .card, .erp-shell .surface, .erp-dialog .card { border: 1px solid var(--erp-line); border-radius: 12px; background: #fff; box-shadow: none; }
+/* Student profile drawer: every card like the student card, with less rounded corners and a very light red outline. */
+.erp-dialog.student-profile .card { border-color: #F2D4D4; border-radius: 6px; }
+/* Switching profile tabs (as on the driver's trip record): the white pill glides to the picked tab, and the
+   new tab's content slides in from its side, later tabs from the right, earlier ones from the left. */
+@media (prefers-reduced-motion: no-preference) {
+  .student-profile .profile-tab-pill { transition: transform 300ms cubic-bezier(.32,.72,0,1), width 300ms cubic-bezier(.32,.72,0,1); }
+  .student-profile .module-tabs [role="tab"] { transition: color .15s ease, transform .15s cubic-bezier(.32,.72,0,1); }
+  .student-profile .profile-tab-panel[data-dir="1"] { animation: profileTabFromRight 260ms cubic-bezier(.32,.72,0,1); }
+  .student-profile .profile-tab-panel[data-dir="-1"] { animation: profileTabFromLeft 260ms cubic-bezier(.32,.72,0,1); }
+  @keyframes profileTabFromRight { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
+  @keyframes profileTabFromLeft { from { opacity: 0; transform: translateX(-24px); } to { opacity: 1; transform: none; } }
+}
 .erp-shell .card-hover:hover, .erp-shell .surface-hover:hover { border-color: #B2C1C7; box-shadow: none; transform: none; }
 .erp-shell .panel { border: 1px solid var(--erp-line); border-radius: 8px; background: #F7F9FA; }
 .erp-shell .field, .erp-dialog .field { min-height: 38px; border-radius: 6px; border-color: #C9D2D9; padding-block: 8px; box-shadow: none; color: var(--erp-ink); font-weight: 400; }
@@ -70,6 +82,14 @@
 .erp-shell .kpi { border-radius: 10px; border-color: var(--erp-line); box-shadow: none; }
 .erp-shell .kpi-note { display: block; margin-top: 6px; font-size: 12px; color: var(--erp-muted); }
 .erp-shell .page-enter { animation: none; }
+/* Moving between ERP pages: the new page fades in with a short slide, from the right going forward and from
+   the left coming back (browser back / Back link). Quick (280ms, ease-out) because people do this all day. */
+@media (prefers-reduced-motion: no-preference) {
+  .erp-shell .page-enter[data-nav="forward"] { animation: erpPageForward 280ms cubic-bezier(.32,.72,0,1) backwards; }
+  .erp-shell .page-enter[data-nav="back"] { animation: erpPageBack 280ms cubic-bezier(.32,.72,0,1) backwards; }
+  @keyframes erpPageForward { from { opacity: 0; transform: translateX(16px); } to { opacity: 1; transform: none; } }
+  @keyframes erpPageBack { from { opacity: 0; transform: translateX(-16px); } to { opacity: 1; transform: none; } }
+}
 .erp-shell .erp-search:focus-within { box-shadow: 0 0 0 2px rgb(18 102 94 / .08); }
 .erp-shell ::selection, .erp-dialog ::selection { background: #DCEFE9; color: #104640; }
 .erp-shell :focus-visible, .erp-dialog :focus-visible, .erp-login :focus-visible { outline: 2px solid #12665E; outline-offset: 3px; }
@@ -131,3 +151,15 @@
 @media(max-width:639px) { .erp-shell .summary-three > * { padding: 12px 8px; } .erp-shell .summary-three .kpi-value { font-size: 22px; } }
 
 .erp-mobile-nav { font-family: "IBM Plex Sans Variable", "Nirmala UI", sans-serif; }
+
+/* Approved Petrol + Sand, ERP workspace only. */
+.erp-shell,.erp-dialog,.erp-shell .erp-parity{--erp-canvas:#F2EEE7;--erp-paper:#FFFEFA;--erp-line:#D8D5CD;--erp-ink:#263735;--erp-muted:#59635F;--primary:192 54% 19%;--ring:192 54% 19%;--action-primary:#163F49;--action-hover:#10323B;--action-pressed:#0C2830;--action-disabled:#D7DFDC;--action-disabled-ink:#43564C;}
+.erp-shell .erp-topbar,.erp-shell .card,.erp-shell .surface,.erp-dialog .card,.erp-shell .erp-mobile-nav,.erp-shell .bg-white,.erp-dialog .bg-white{background-color:var(--erp-paper)}
+.erp-shell .erp-sidebar{background:#163F49;color:#FFFEFA;border-color:#345963}
+.erp-shell .erp-sidebar :is(.text-slate-900,.text-slate-800,.text-slate-700,.text-slate-600,.text-slate-500,.text-slate-400){color:#DCE8E7}
+.erp-shell .office-nav-link,.erp-shell .office-nav-child{color:#DCE8E7}
+.erp-shell .office-nav-link:hover,.erp-shell .office-nav-child:hover{background:#254F59;color:#fff}
+.erp-shell .office-nav-link.is-active,.erp-shell .office-nav-child.is-active{background:#FFFEFA;color:#163F49}
+.erp-shell .office-nav-children,.erp-shell .office-sidebar-footer{border-color:#496A72}
+.erp-shell thead{background:#E6EEEC;color:#163F49}
+.erp-shell .erp-mobile-nav [aria-current=page]{color:#163F49}

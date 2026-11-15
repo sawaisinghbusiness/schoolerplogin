@@ -1,0 +1,40 @@
+{
+  "rows": 32,
+  "errors": [],
+  "missing": [
+    {
+      "mode": "staff",
+      "route": "/messages/chat/?id=chat-neha",
+      "path": "/api/staff-app/chats/chat-neha",
+      "query": "",
+      "status": 404,
+      "error": "Conversation not found."
+    },
+    {
+      "mode": "staff",
+      "route": "/students/detail/?id=demo-5b-1",
+      "path": "/api/staff-app/students/detail",
+      "query": "?id=demo-5b-1",
+      "status": 404,
+      "error": "Student not found."
+    },
+    {
+      "mode": "staff",
+      "route": "/messages/chat/?id=chat-neha",
+      "path": "/api/staff-app/chats/chat-neha",
+      "query": "",
+      "status": 404,
+      "error": "Conversation not found."
+    }
+  ],
+  "blocked": [
+    {
+      "mode": "staff",
+      "route": "/assistant/",
+      "path": "/api/staff-app/assistant/warm",
+      "method": "POST"
+    }
+  ],
+  "overflow": [],
+  "limits": "All APIs mocked; viewport emulation in Chromium; no real submissions, payments or messages."
+}

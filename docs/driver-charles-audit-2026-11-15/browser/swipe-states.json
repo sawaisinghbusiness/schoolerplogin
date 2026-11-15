@@ -1,0 +1,25 @@
+{
+  "checks": [
+    "failure stays on pre-trip with error and reset slider",
+    "keyboard activation has no artificial wait",
+    "no spinner in first 100ms",
+    "spinner on sustained request",
+    "pending control disabled and duplicate activation ignored",
+    "successful response opens active trip"
+  ],
+  "screens": [
+    {
+      "id": "start-failed",
+      "width": 390,
+      "scroll": 390,
+      "text": "Barmer North Route · Morning · to school\n\nToday's route\n\n2 stops · 3 children\n\nSynthetic start failure\n\nSlide to confirm\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?"
+    },
+    {
+      "id": "start-pending",
+      "width": 390,
+      "scroll": 390,
+      "text": "Barmer North Route · Morning · to school\n\nToday's route\n\n2 stops · 3 children\n\nSlide to confirm\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?"
+    }
+  ],
+  "errors": []
+}

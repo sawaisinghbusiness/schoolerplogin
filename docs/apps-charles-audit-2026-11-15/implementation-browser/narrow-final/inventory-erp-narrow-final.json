@@ -1,0 +1,3241 @@
+[
+  {
+    "mode": "erp",
+    "requested": "/erp/messages/detail/?id=message-review",
+    "file": "erp/erp--messages--detail-360.png",
+    "url": "/erp/messages/detail/?id=message-review",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "Send Message\n\nParent-teacher meeting\n\nWhole school · 12 Nov, 10:00 am · Review Operator\n\nSent\n\n1 / 4\n\nSend next: Prisha Joshi\n\nSend the message in WhatsApp, then return and confirm here. Opening WhatsApp does not mark it sent.\n\nMessage text\nTo send 3\nSent 1\nNo number 0\nCopy numbers\n\nPrisha Joshi\n\n7th - B · Mahesh Joshi\n\nWhatsApp\n\nAnanya Rathore\n\n8th - A · Suresh Rathore\n\nWhatsApp\n\nVihaan Singh\n\n6th - B · Vikram Singh\n\nWhatsApp\nDelete message\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 345,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Send next: Prisha Joshi",
+        "x": 33,
+        "y": 236,
+        "w": 279,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "To send 3",
+        "x": 16,
+        "y": 446,
+        "w": 104,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Sent 1",
+        "x": 120,
+        "y": 446,
+        "w": 104,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "No number 0",
+        "x": 225,
+        "y": 446,
+        "w": 104,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Name, class or mobile",
+        "x": 57,
+        "y": 517,
+        "w": 257,
+        "h": 24,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Copy numbers",
+        "x": 16,
+        "y": 561,
+        "w": 313,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "WhatsApp",
+        "x": 215,
+        "y": 629,
+        "w": 114,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "WhatsApp",
+        "x": 215,
+        "y": 694,
+        "w": 114,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "WhatsApp",
+        "x": 215,
+        "y": 759,
+        "w": 114,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Delete message",
+        "x": 16,
+        "y": 826,
+        "w": 127,
+        "h": 40,
+        "font": "13.5px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 69,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 138,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 207,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 276,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [
+      {
+        "tag": "BUTTON",
+        "name": "Delete message",
+        "x": 16,
+        "y": 826,
+        "w": 127,
+        "h": 40,
+        "font": "13.5px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "Send Message",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "P",
+        "text": "Parent-teacher meeting",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Whole school · 12 Nov, 10:00 am · Review Operator",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "P",
+        "text": "Sent",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "P",
+        "text": "1 / 4",
+        "size": "24px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Send next: Prisha Joshi",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "P",
+        "text": "Send the message in WhatsApp, then return and confirm here. Opening WhatsApp does not mark",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "P",
+        "text": "Please attend the scheduled meeting on Saturday.",
+        "size": "14.5px",
+        "weight": "400",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "To send 3",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Sent 1",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "No number 0",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Copy numbers",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "P",
+        "text": "Prisha Joshi",
+        "size": "15px",
+        "weight": "500",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "7th - B · Mahesh Joshi",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "WhatsApp",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Ananya Rathore",
+        "size": "15px",
+        "weight": "500",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "8th - A · Suresh Rathore",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "WhatsApp",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Vihaan Singh",
+        "size": "15px",
+        "weight": "500",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "6th - B · Vikram Singh",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "WhatsApp",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Delete message",
+        "size": "13.5px",
+        "weight": "600",
+        "color": "rgb(220, 38, 38)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  },
+  {
+    "mode": "erp",
+    "requested": "/erp/messages/new/",
+    "file": "erp/erp--messages--new-360.png",
+    "url": "/erp/messages/new/",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "New Message\n\nGoes to parents on WhatsApp, each with their child's name filled in\n\nTo\nWhole school\nClasses\nSections\nFees due\nMessage\nहिंदी\nEnglish\nअवकाश की सूचना\nअभिभावक-शिक्षक बैठक\nपरीक्षा की सूचना\nफीस बकाया\nसूचना\nReview school notice\nTitle (for your register)\nMessage text\n\n0/1000\n\nFill in for each parent:\n{name}\n{class}\n{father}\n{school}\nHow the first parent gets it\nAlso show on the website notice board\nOnly the title is shown, at the top of the school website.\nSave and start sending\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 345,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Whole school",
+        "x": 20,
+        "y": 181,
+        "w": 73,
+        "h": 64,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Classes",
+        "x": 97,
+        "y": 181,
+        "w": 73,
+        "h": 64,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Sections",
+        "x": 175,
+        "y": 181,
+        "w": 73,
+        "h": 64,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Fees due",
+        "x": 252,
+        "y": 181,
+        "w": 73,
+        "h": 64,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "हिंदी",
+        "x": 186,
+        "y": 267,
+        "w": 69,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "English",
+        "x": 258,
+        "y": 267,
+        "w": 69,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "अवकाश की सूचना",
+        "x": 16,
+        "y": 323,
+        "w": 116,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "अभिभावक-शिक्षक बैठक",
+        "x": 138,
+        "y": 323,
+        "w": 151,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "परीक्षा की सूचना",
+        "x": 16,
+        "y": 373,
+        "w": 105,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "फीस बकाया",
+        "x": 127,
+        "y": 373,
+        "w": 85,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "सूचना",
+        "x": 218,
+        "y": 373,
+        "w": 55,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Review school notice",
+        "x": 16,
+        "y": 423,
+        "w": 159,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "e.g. Diwali holidays",
+        "x": 31,
+        "y": 488,
+        "w": 283,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "TEXTAREA",
+        "name": "Choose a ready message above, or write your own.",
+        "x": 16,
+        "y": 581,
+        "w": 313,
+        "h": 182,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "{name}",
+        "x": 141,
+        "y": 789,
+        "w": 67,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "{class}",
+        "x": 214,
+        "y": 789,
+        "w": 74,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "{father}",
+        "x": 16,
+        "y": 839,
+        "w": 81,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "{school}",
+        "x": 103,
+        "y": 839,
+        "w": 81,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "",
+        "x": 30,
+        "y": 1034,
+        "w": 20,
+        "h": 20,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Save and start sending",
+        "x": 16,
+        "y": 1156,
+        "w": 313,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 69,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 138,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 207,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 276,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "New Message",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "P",
+        "text": "Goes to parents on WhatsApp, each with their child's name filled in",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "H2",
+        "text": "To",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Whole school",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Classes",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Sections",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Fees due",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "H2",
+        "text": "Message",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "हिंदी",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "English",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "अवकाश की सूचना",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "अभिभावक-शिक्षक बैठक",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "परीक्षा की सूचना",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "फीस बकाया",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "सूचना",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Review school notice",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "P",
+        "text": "0/1000",
+        "size": "12px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "{name}",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "{class}",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "{father}",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "{school}",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "H2",
+        "text": "How the first parent gets it",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save and start sending",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "shimmer",
+        "state": "running",
+        "duration": 1500,
+        "iterations": null
+      },
+      {
+        "name": "shimmer",
+        "state": "running",
+        "duration": 1500,
+        "iterations": null
+      }
+    ]
+  },
+  {
+    "mode": "erp",
+    "requested": "/erp/meetings/new/",
+    "file": "erp/erp--meetings--new-360.png",
+    "url": "/erp/meetings/new/",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "New Meeting\nPTM · parents pick a time\nMeeting · yes / no\nTitle *\nClass - All parents\nSection - All\nDate *\nFrom *\nTo *\nMinutes per family - 10 minutes\nWith (teacher / principal)\nPlace\nOnline link (optional)\nAgenda (optional)\nSend to parents\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 345,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "PTM · parents pick a time",
+        "x": 20,
+        "y": 81,
+        "w": 151,
+        "h": 48,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Meeting · yes / no",
+        "x": 175,
+        "y": 81,
+        "w": 151,
+        "h": 48,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Parent-Teacher Meeting",
+        "x": 31,
+        "y": 156,
+        "w": 283,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Class - All parents",
+        "x": 16,
+        "y": 219,
+        "w": 152,
+        "h": 65,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Section - All",
+        "x": 178,
+        "y": 219,
+        "w": 152,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "mt-date",
+        "x": 31,
+        "y": 307,
+        "w": 257,
+        "h": 42,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "mt-start",
+        "x": 31,
+        "y": 383,
+        "w": 122,
+        "h": 42,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "mt-end",
+        "x": 193,
+        "y": 383,
+        "w": 122,
+        "h": 42,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Minutes per family - 10 minutes",
+        "x": 16,
+        "y": 448,
+        "w": 313,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Neha Sharma",
+        "x": 31,
+        "y": 519,
+        "w": 283,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Room 4",
+        "x": 31,
+        "y": 593,
+        "w": 283,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "https://meet.google.com/…",
+        "x": 31,
+        "y": 667,
+        "w": 283,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "TEXTAREA",
+        "name": "Agenda (optional)",
+        "x": 16,
+        "y": 766,
+        "w": 313,
+        "h": 104,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Send to parents",
+        "x": 16,
+        "y": 882,
+        "w": 313,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 69,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 138,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 207,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 276,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "New Meeting",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "PTM · parents pick a time",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Meeting · yes / no",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Class - All parents",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Section - All",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Minutes per family - 10 minutes",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Send to parents",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  },
+  {
+    "mode": "erp",
+    "requested": "/erp/fees/collect/?student=review-1",
+    "file": "erp/erp--fees--collect-360.png",
+    "url": "/erp/fees/collect/?student=review-1",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "Collect Fee\nPJ\n\nPrisha Joshi\n\n7th - B · SR-1201 · Mahesh Joshi\n\nChange\n\nSession fee\n\n₹48,000\n\nPaid\n\n₹16,000\n\nStill due\n\n₹32,000\n\nSession 2026-27\n33% paid\nQuarter 1\n10 Apr\n\nPaid\n₹15,750\n\nQuarter 2\n10 Jul\n\n₹11,000\nOverdue\n· 128d late\n\nWill be cleared by this payment\n\nQuarter 3\n10 Oct\n\n₹9,750\nOverdue\n· 36d late\n\nWill be cleared by this payment\n\nQuarter 4\n10 Jan\n\n₹11,250\n\nFee being paid\nOverdue ₹20,750\nUp to Quarter 4 ₹32,000\n₹\nTuition fee\n₹12,750\nExam fee\n₹1,500\nComputer fee\n₹500\nTransport fee\n₹6,000\nLate fine\nQuarter 2 128 days late · Quarter 3 36 days late (up to ₹860)\n₹\nTotal to collect\nTwenty One Thousand Six Hundred Ten Rupees Only\n₹21,610\nPaid by\nCash\nUPI\nCheque\nNote, optional\nCollect ₹21,610 & print\nPrisha's receipts\nCash\n14 Nov · #1024\n₹2,500\nUPI\n13 Nov · #1025\n₹3,000\nCash\n12 Nov · #1026\n₹3,500\nUPI\n11 Nov · #1027\n₹4,000\nCash\n14 Nov · #1028\n₹4,500\nUPI\n13 Nov · #1029\n₹5,000\nCash\n12 Nov · #1030\n₹5,500\nUPI\n11 Nov · #1031\n₹6,000\nLatest receipts\nAarav Sharma\n14 Nov · #1024 · 6th\n₹2,500\nPrisha Joshi\n13 Nov · #1025 · 7th\n₹3,000\nAnanya Rathore\n12 Nov · #1026 · 8th\n₹3,500\nVihaan Singh\n11 Nov · #1027 · 6th\n₹4,000\nIshita Mehta\n14 Nov · #1028 · 7th\n₹4,500\nDev Choudhary\n13 Nov · #1029 · 8th\n₹5,000\nAditi Soni\n12 Nov · #1030 · 6th\n₹5,500\nKabir Jain\n11 Nov · #1031 · 7th\n₹6,000\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 345,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Collect from another student…",
+        "x": 57,
+        "y": 89,
+        "w": 257,
+        "h": 24,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "",
+        "x": 93,
+        "y": 210,
+        "w": 14,
+        "h": 14,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Change",
+        "x": 233,
+        "y": 158,
+        "w": 79,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Overdue ₹20,750",
+        "x": 16,
+        "y": 831,
+        "w": 138,
+        "h": 36,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Up to Quarter 4 ₹32,000",
+        "x": 16,
+        "y": 873,
+        "w": 181,
+        "h": 36,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Fee being paid",
+        "x": 54,
+        "y": 933,
+        "w": 260,
+        "h": 24,
+        "font": "16px",
+        "label": "Fee being paid",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "fee-fine",
+        "x": 233,
+        "y": 1192,
+        "w": 64,
+        "h": 24,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cash",
+        "x": 20,
+        "y": 1393,
+        "w": 99,
+        "h": 42,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "UPI",
+        "x": 123,
+        "y": 1393,
+        "w": 99,
+        "h": 42,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cheque",
+        "x": 226,
+        "y": 1393,
+        "w": 99,
+        "h": 42,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "e.g. Paid by father",
+        "x": 31,
+        "y": 1462,
+        "w": 283,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Collect ₹21,610 & print",
+        "x": 16,
+        "y": 1525,
+        "w": 313,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cash14 Nov · #1024₹2,500",
+        "x": 16,
+        "y": 1617,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "UPI13 Nov · #1025₹3,000",
+        "x": 16,
+        "y": 1675,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cash12 Nov · #1026₹3,500",
+        "x": 16,
+        "y": 1733,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "UPI11 Nov · #1027₹4,000",
+        "x": 16,
+        "y": 1791,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cash14 Nov · #1028₹4,500",
+        "x": 16,
+        "y": 1849,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "UPI13 Nov · #1029₹5,000",
+        "x": 16,
+        "y": 1907,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cash12 Nov · #1030₹5,500",
+        "x": 16,
+        "y": 1965,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "UPI11 Nov · #1031₹6,000",
+        "x": 16,
+        "y": 2023,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Aarav Sharma14 Nov · #1024 · 6th₹2,500",
+        "x": 16,
+        "y": 2126,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Prisha Joshi13 Nov · #1025 · 7th₹3,000",
+        "x": 16,
+        "y": 2184,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Ananya Rathore12 Nov · #1026 · 8th₹3,500",
+        "x": 16,
+        "y": 2242,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Vihaan Singh11 Nov · #1027 · 6th₹4,000",
+        "x": 16,
+        "y": 2300,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Ishita Mehta14 Nov · #1028 · 7th₹4,500",
+        "x": 16,
+        "y": 2358,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Dev Choudhary13 Nov · #1029 · 8th₹5,000",
+        "x": 16,
+        "y": 2416,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Aditi Soni12 Nov · #1030 · 6th₹5,500",
+        "x": 16,
+        "y": 2474,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Kabir Jain11 Nov · #1031 · 7th₹6,000",
+        "x": 16,
+        "y": 2532,
+        "w": 313,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 69,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 138,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 207,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 276,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [
+      {
+        "tag": "A",
+        "name": "",
+        "x": 93,
+        "y": 210,
+        "w": 14,
+        "h": 14,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Overdue ₹20,750",
+        "x": 16,
+        "y": 831,
+        "w": 138,
+        "h": 36,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Up to Quarter 4 ₹32,000",
+        "x": 16,
+        "y": 873,
+        "w": 181,
+        "h": 36,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cash",
+        "x": 20,
+        "y": 1393,
+        "w": 99,
+        "h": 42,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "UPI",
+        "x": 123,
+        "y": 1393,
+        "w": 99,
+        "h": 42,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cheque",
+        "x": 226,
+        "y": 1393,
+        "w": 99,
+        "h": 42,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "unlabelled": [],
+    "clipped": [
+      {
+        "text": "7th - B · SR-1201 · Mahesh Joshi",
+        "x": 93,
+        "y": 182,
+        "w": 128,
+        "h": 24
+      },
+      {
+        "text": "Twenty One Thousand Six Hundred Ten Rupees Only",
+        "x": 33,
+        "y": 1299,
+        "w": 171,
+        "h": 24
+      }
+    ],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "Collect Fee",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "P",
+        "text": "Prisha Joshi",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "7th - B · SR-1201 · Mahesh Joshi",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Change",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "P",
+        "text": "Session fee",
+        "size": "11.5px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "P",
+        "text": "₹48,000",
+        "size": "15.5px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Paid",
+        "size": "11.5px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "P",
+        "text": "₹16,000",
+        "size": "15.5px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Still due",
+        "size": "11.5px",
+        "weight": "600",
+        "color": "rgb(220, 38, 38)"
+      },
+      {
+        "tag": "P",
+        "text": "₹32,000",
+        "size": "15.5px",
+        "weight": "600",
+        "color": "rgb(185, 28, 28)"
+      },
+      {
+        "tag": "P",
+        "text": "Paid ₹15,750",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "₹11,000Overdue· 128d late",
+        "size": "13px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Will be cleared by this payment",
+        "size": "11.5px",
+        "weight": "600",
+        "color": "rgb(10, 34, 76)"
+      },
+      {
+        "tag": "P",
+        "text": "₹9,750Overdue· 36d late",
+        "size": "13px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Will be cleared by this payment",
+        "size": "11.5px",
+        "weight": "600",
+        "color": "rgb(10, 34, 76)"
+      },
+      {
+        "tag": "P",
+        "text": "₹11,250",
+        "size": "13px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H2",
+        "text": "Fee being paid",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Overdue ₹20,750",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(10, 34, 76)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Up to Quarter 4 ₹32,000",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "H2",
+        "text": "Paid by",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Cash",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "UPI",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Cheque",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Collect ₹21,610 & print",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "H2",
+        "text": "Prisha's receipts",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Cash14 Nov · #1024₹2,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "UPI13 Nov · #1025₹3,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Cash12 Nov · #1026₹3,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "UPI11 Nov · #1027₹4,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Cash14 Nov · #1028₹4,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "UPI13 Nov · #1029₹5,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Cash12 Nov · #1030₹5,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "UPI11 Nov · #1031₹6,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H2",
+        "text": "Latest receipts",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Aarav Sharma14 Nov · #1024 · 6th₹2,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Prisha Joshi13 Nov · #1025 · 7th₹3,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ananya Rathore12 Nov · #1026 · 8th₹3,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Vihaan Singh11 Nov · #1027 · 6th₹4,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ishita Mehta14 Nov · #1028 · 7th₹4,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Dev Choudhary13 Nov · #1029 · 8th₹5,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Aditi Soni12 Nov · #1030 · 6th₹5,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Kabir Jain11 Nov · #1031 · 7th₹6,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  },
+  {
+    "mode": "erp",
+    "requested": "/erp/students/admission/",
+    "file": "erp/erp--students--admission-360.png",
+    "url": "/erp/students/admission/",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "Admission form\n1\nStudent\n2\nClass\n3\nLast school\n4\nFamily\n5\nAddress & bus\n6\nDocuments\n7\nCheck & save\nStudent\nStep 1 of 7\n\nWrite everything as on the birth certificate.\n\nPassport photo\n\nClear face, plain background. It shows on the ID card, report card and the parent app.\n\nTake or choose photo\nName and birth\nFull name (English) *\nName in Hindi\nfor TC & certificates\n\nGender *\n\nBoy\nGirl\nOther\nDate of birth *\nAge on 1 April\nPlace of birth\nIdentity\nAadhaar number\nReligion - Hindu\nCaste\n\nCategory *\n\nGeneral\nOBC\nMBC\nSC\nST\nEWS\nNationality\nMother tongue - Hindi\nHealth\n\nBlood group\n\nA+\nA-\nB+\nB-\nO+\nO-\nAB+\nAB-\nHealth details (allergy, illness, special needs)\nNext: Class\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 345,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "1Student",
+        "x": 16,
+        "y": 77,
+        "w": 101,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "2Class",
+        "x": 123,
+        "y": 77,
+        "w": 84,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "3Last school",
+        "x": 213,
+        "y": 77,
+        "w": 121,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "4Family",
+        "x": 340,
+        "y": 77,
+        "w": 91,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "5Address & bus",
+        "x": 437,
+        "y": 77,
+        "w": 140,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "6Documents",
+        "x": 582,
+        "y": 77,
+        "w": 123,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "7Check & save",
+        "x": 711,
+        "y": 77,
+        "w": 135,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Passport photo",
+        "x": 31,
+        "y": 242,
+        "w": 84,
+        "h": 104,
+        "font": "11.5px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Take or choose photo",
+        "x": 129,
+        "y": 309,
+        "w": 185,
+        "h": 50,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Aarav Singh Rathore",
+        "x": 46,
+        "y": 448,
+        "w": 253,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "आरव सिंह राठौड़",
+        "x": 46,
+        "y": 522,
+        "w": 253,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Boy",
+        "x": 31,
+        "y": 615,
+        "w": 57,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Girl",
+        "x": 96,
+        "y": 615,
+        "w": 53,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Other",
+        "x": 157,
+        "y": 615,
+        "w": 70,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "adm-dob",
+        "x": 46,
+        "y": 682,
+        "w": 81,
+        "h": 42,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "",
+        "x": 193,
+        "y": 683,
+        "w": 107,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Barmer",
+        "x": 46,
+        "y": 758,
+        "w": 253,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "12 digits",
+        "x": 46,
+        "y": 898,
+        "w": 253,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Religion - Hindu",
+        "x": 31,
+        "y": 961,
+        "w": 137,
+        "h": 65,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "adm-caste",
+        "x": 193,
+        "y": 972,
+        "w": 107,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "General",
+        "x": 31,
+        "y": 1068,
+        "w": 83,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "OBC",
+        "x": 122,
+        "y": 1068,
+        "w": 63,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "MBC",
+        "x": 193,
+        "y": 1068,
+        "w": 63,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "SC",
+        "x": 264,
+        "y": 1068,
+        "w": 50,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "ST",
+        "x": 31,
+        "y": 1120,
+        "w": 47,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "EWS",
+        "x": 86,
+        "y": 1120,
+        "w": 61,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "adm-nationality",
+        "x": 46,
+        "y": 1187,
+        "w": 107,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Mother tongue - Hindi",
+        "x": 178,
+        "y": 1176,
+        "w": 137,
+        "h": 86,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "A+",
+        "x": 31,
+        "y": 1370,
+        "w": 49,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "A-",
+        "x": 88,
+        "y": 1370,
+        "w": 48,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "B+",
+        "x": 143,
+        "y": 1370,
+        "w": 49,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "B-",
+        "x": 200,
+        "y": 1370,
+        "w": 48,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "O+",
+        "x": 256,
+        "y": 1370,
+        "w": 51,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "O-",
+        "x": 31,
+        "y": 1422,
+        "w": 50,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "AB+",
+        "x": 89,
+        "y": 1422,
+        "w": 58,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "AB-",
+        "x": 156,
+        "y": 1422,
+        "w": 57,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "e.g. asthma, peanut allergy",
+        "x": 46,
+        "y": 1554,
+        "w": 253,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Child with special needs (CWSN)",
+        "x": 266,
+        "y": 1639,
+        "w": 48,
+        "h": 28,
+        "font": "16px",
+        "label": "Child with special needs (CWSN)",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "e.g. mole on left cheek",
+        "x": 46,
+        "y": 1712,
+        "w": 253,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Next: Class",
+        "x": 16,
+        "y": 1566,
+        "w": 313,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 69,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 138,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 207,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 276,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [
+      {
+        "tag": "BUTTON",
+        "name": "Child with special needs (CWSN)",
+        "x": 266,
+        "y": 1639,
+        "w": 48,
+        "h": 28,
+        "font": "16px",
+        "label": "Child with special needs (CWSN)",
+        "disabled": false
+      }
+    ],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "Admission form",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "1Student",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2Class",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "3Last school",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "4Family",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "5Address & bus",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "6Documents",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "7Check & save",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "H2",
+        "text": "Student",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Write everything as on the birth certificate.",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Passport photo",
+        "size": "11.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "P",
+        "text": "Clear face, plain background. It shows on the ID card, report card and the parent app.",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Take or choose photo",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H3",
+        "text": "Name and birth",
+        "size": "15.5px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Gender *",
+        "size": "12.5px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Boy",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Girl",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Other",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H3",
+        "text": "Identity",
+        "size": "15.5px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Religion - Hindu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Category *",
+        "size": "12.5px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "General",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "OBC",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "MBC",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "SC",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "ST",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "EWS",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Mother tongue - Hindi",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H3",
+        "text": "Health",
+        "size": "15.5px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Blood group",
+        "size": "12.5px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "A+",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "A-",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "B+",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "B-",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "O+",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "O-",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "AB+",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "AB-",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Child with special needs (CWSN)",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Next: Class",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  },
+  {
+    "mode": "erp",
+    "requested": "/erp/staff/payroll/",
+    "file": "erp/erp--staff--payroll-360.png",
+    "url": "/erp/staff/payroll/",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "Payroll\nNovember 2026\nNet salary\n₹1,04,800\nPaid\n₹52,400\nTo pay\n₹52,400\nSalary not set\n2\nDownload bank sheet\nRecalculate\nPay many\nNS\nNeha Sharma\nTeacher · 30/30 days\n₹26,200\nPaid\nRM\nRakesh Mehta\nTeacher · 30/30 days\n₹26,200\nPaid\nKD\nKamla Devi\nTeacher · 30/30 days\n₹26,200\nNot paid\nMS\nManish Singh\nTeacher · 30/30 days\n₹26,200\nNot paid\nPV\nPooja Verma\nTeacher\nNot run\nSS\nSanjay Soni\nTeacher\nNot run\nSR\nSunita Rao\nOffice Clerk\nSet salary\nML\nMohan Lal\nOffice Clerk\nSet salary\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 345,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Previous month",
+        "x": 16,
+        "y": 77,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Previous month",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Next month",
+        "x": 285,
+        "y": 77,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Next month",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Download bank sheet",
+        "x": 16,
+        "y": 308,
+        "w": 313,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Recalculate",
+        "x": 16,
+        "y": 366,
+        "w": 202,
+        "h": 48,
+        "font": "15px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Pay many",
+        "x": 226,
+        "y": 366,
+        "w": 103,
+        "h": 48,
+        "font": "15px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "NSNeha SharmaTeacher · 30/30 days₹26,200Paid",
+        "x": 33,
+        "y": 443,
+        "w": 279,
+        "h": 75,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "RMRakesh MehtaTeacher · 30/30 days₹26,200Paid",
+        "x": 33,
+        "y": 562,
+        "w": 279,
+        "h": 75,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "KDKamla DeviTeacher · 30/30 days₹26,200Not paid",
+        "x": 33,
+        "y": 681,
+        "w": 279,
+        "h": 75,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "MSManish SinghTeacher · 30/30 days₹26,200Not paid",
+        "x": 33,
+        "y": 800,
+        "w": 279,
+        "h": 75,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "PVPooja VermaTeacherNot run",
+        "x": 33,
+        "y": 919,
+        "w": 279,
+        "h": 72,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "SSSanjay SoniTeacherNot run",
+        "x": 33,
+        "y": 1035,
+        "w": 279,
+        "h": 72,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "SRSunita RaoOffice ClerkSet salary",
+        "x": 33,
+        "y": 1151,
+        "w": 279,
+        "h": 72,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "MLMohan LalOffice ClerkSet salary",
+        "x": 33,
+        "y": 1267,
+        "w": 279,
+        "h": 72,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 69,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 138,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 207,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 276,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [
+      {
+        "text": "Teacher · 30/30 days",
+        "x": 101,
+        "y": 481,
+        "w": 122,
+        "h": 24
+      },
+      {
+        "text": "Teacher · 30/30 days",
+        "x": 101,
+        "y": 600,
+        "w": 122,
+        "h": 24
+      },
+      {
+        "text": "Teacher · 30/30 days",
+        "x": 101,
+        "y": 719,
+        "w": 122,
+        "h": 24
+      },
+      {
+        "text": "Teacher · 30/30 days",
+        "x": 101,
+        "y": 838,
+        "w": 122,
+        "h": 24
+      }
+    ],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "Payroll",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Previous month",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Next month",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Download bank sheet",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Recalculate",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Pay many",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "NSNeha SharmaTeacher · 30/30 days₹26,200Paid",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "RMRakesh MehtaTeacher · 30/30 days₹26,200Paid",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "KDKamla DeviTeacher · 30/30 days₹26,200Not paid",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "MSManish SinghTeacher · 30/30 days₹26,200Not paid",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "PVPooja VermaTeacherNot run",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "SSSanjay SoniTeacherNot run",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "SRSunita RaoOffice ClerkSet salary",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "MLMohan LalOffice ClerkSet salary",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  },
+  {
+    "mode": "erp",
+    "requested": "/erp/settings/templates/",
+    "file": "erp/erp--settings--templates-360.png",
+    "url": "/erp/settings/templates/",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "Message Templates\nThe school's own\nNew template\nReview school notice\nEnglish\nHello {name}, please contact the school office.\nBuilt in\nHoliday notice\nDear Parent, the school will remain closed on {date} for {reason}. {name} should come to school as usual on {next}. – {school}\nParent-teacher meeting\nDear Parent, the parent-teacher meeting for {name} (Class {class}) is on {date}, 10 am to 12 noon. Please do come. – {school}\nExam notice\nDear Parent, exams for {name} (Class {class}) begin on {date}. Please collect the date sheet from the school. – {school}\nFee reminder\nDear Parent, fee of {due} for {name} (Class {class}) is due. Please pay at the school office at the earliest. – {school}\nNotice\nDear Parent,\n\n– {school}\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 345,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "New template",
+        "x": 185,
+        "y": 77,
+        "w": 144,
+        "h": 44,
+        "font": "13.5px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Review school noticeEnglishHello {name}, please contact the school office.",
+        "x": 17,
+        "y": 134,
+        "w": 311,
+        "h": 102,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 69,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 138,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 207,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 276,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "Message Templates",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "H2",
+        "text": "The school's own",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "New template",
+        "size": "13.5px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Review school noticeEnglishHello {name}, please contact the school office.",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H2",
+        "text": "Built in",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  }
+]

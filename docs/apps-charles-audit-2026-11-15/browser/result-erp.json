@@ -1,0 +1,45 @@
+{
+  "rows": 74,
+  "errors": [],
+  "missing": [
+    {
+      "mode": "erp",
+      "route": "/erp/exams/report-cards/?exam=exam-review&section=6th%20-%20A",
+      "path": "/api/exams/exam-review/report",
+      "status": 503
+    },
+    {
+      "mode": "erp",
+      "route": "/erp/fees/collect/?student=review-0",
+      "path": "/api/fees/position/review-0",
+      "status": 503
+    },
+    {
+      "mode": "erp",
+      "route": "/erp/messages/detail/?id=message-review",
+      "path": "/api/messages/message-review",
+      "status": 503
+    },
+    {
+      "mode": "erp",
+      "route": "/erp/transport/",
+      "path": "/api/transport/live",
+      "status": 503
+    },
+    {
+      "mode": "erp",
+      "route": "/erp/transport/students/",
+      "path": "/api/transport/live",
+      "status": 503
+    },
+    {
+      "mode": "erp",
+      "route": "/erp/fees/collect/?student=review-0",
+      "path": "/api/fees/position/review-0",
+      "status": 503
+    }
+  ],
+  "blocked": [],
+  "overflow": [],
+  "limits": "All APIs mocked; viewport emulation in Chromium; no real submissions, payments or messages."
+}

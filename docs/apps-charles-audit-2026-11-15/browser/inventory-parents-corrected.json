@@ -1,0 +1,613 @@
+[
+  {
+    "mode": "parents",
+    "requested": "/meetings/detail/?id=meet-ptm",
+    "file": "parents/meetings--detail-390.png",
+    "url": "/meetings/detail?id=meet-ptm",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "Meeting\nPG\nParent–teacher meeting\n\nRakesh Bishnoi · Class Nursery - A\n\nSun, 22 Nov\n9:00 AM – 11:00 AM\nClassroom, first floor\nHalf Yearly answer sheets and the term's progress.\nPick your time\n9:00\n9:15\n9:30\n9:45\n10:00\n10:15\n10:30\n10:45\n\nCrossed-out times are taken by other parents\n\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Switch child: Priya Garg",
+        "x": 325,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Switch child: Priya Garg",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:00 AM, taken",
+        "x": 33,
+        "y": 419,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "9:00 AM, taken",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:15 AM, taken",
+        "x": 139,
+        "y": 419,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "9:15 AM, taken",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:30 AM",
+        "x": 244,
+        "y": 419,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "9:30 AM",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:45 AM, taken",
+        "x": 33,
+        "y": 475,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "9:45 AM, taken",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:00 AM",
+        "x": 139,
+        "y": 475,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "10:00 AM",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:15 AM",
+        "x": 244,
+        "y": 475,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "10:15 AM",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:30 AM, taken",
+        "x": 33,
+        "y": 531,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "10:30 AM, taken",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:45 AM",
+        "x": 139,
+        "y": 531,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "10:45 AM",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Calendar",
+        "x": 75,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Study",
+        "x": 150,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees",
+        "x": 225,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 300,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "Meeting",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Switch child: Priya Garg",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "H2",
+        "text": "Parent–teacher meeting",
+        "size": "20px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "P",
+        "text": "Rakesh Bishnoi · Class Nursery - A",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "H2",
+        "text": "Pick your time",
+        "size": "20px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:00 AM, taken",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:15 AM, taken",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:30 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:45 AM, taken",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:00 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:15 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:30 AM, taken",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:45 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "P",
+        "text": "Crossed-out times are taken by other parents",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "study-in",
+        "state": "running",
+        "duration": 500,
+        "iterations": 1
+      },
+      {
+        "name": "study-in",
+        "state": "running",
+        "duration": 500,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "parents",
+    "requested": "/events/album/?id=teachers",
+    "file": "parents/events--album-390.png",
+    "url": "/events/album?id=teachers",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "Photos\nTeachers' Day\n\n5 Sept 2026 · 2 photos\n\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Teachers' Day 1",
+        "x": 16,
+        "y": 132,
+        "w": 117,
+        "h": 80,
+        "font": "16px",
+        "label": "Teachers' Day 1",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Save to phone",
+        "x": 95,
+        "y": 174,
+        "w": 36,
+        "h": 36,
+        "font": "16px",
+        "label": "Save to phone",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Teachers' Day 2",
+        "x": 137,
+        "y": 132,
+        "w": 117,
+        "h": 80,
+        "font": "16px",
+        "label": "Teachers' Day 2",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Save to phone",
+        "x": 215,
+        "y": 174,
+        "w": 36,
+        "h": 36,
+        "font": "16px",
+        "label": "Save to phone",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Calendar",
+        "x": 78,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Study",
+        "x": 156,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees",
+        "x": 234,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 312,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [
+      {
+        "tag": "BUTTON",
+        "name": "Save to phone",
+        "x": 95,
+        "y": 174,
+        "w": 36,
+        "h": 36,
+        "font": "16px",
+        "label": "Save to phone",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Save to phone",
+        "x": 215,
+        "y": 174,
+        "w": 36,
+        "h": 36,
+        "font": "16px",
+        "label": "Save to phone",
+        "disabled": false
+      }
+    ],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "Photos",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "H2",
+        "text": "Teachers' Day",
+        "size": "20px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "P",
+        "text": "5 Sept 2026 · 2 photos",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Teachers' Day 1",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save to phone",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Teachers' Day 2",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save to phone",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(30, 44, 67)"
+      }
+    ],
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "src": "/img/events/teachers.webp"
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "src": "/img/events/annual.webp"
+      }
+    ],
+    "animations": []
+  },
+  {
+    "mode": "parents",
+    "requested": "/login/",
+    "file": "parents/login-390.png",
+    "url": "/login",
+    "title": "School Parent",
+    "text": "हिंदी\n\n \n\nParent app\n\nSign in\n\nUse the mobile number you gave the school at admission.\n\nMobile number\n+91\nSend code on WhatsApp\n\nThe 6-digit code arrives in a few seconds.",
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "हिंदी",
+        "x": 323,
+        "y": 12,
+        "w": 47,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "98765 43210",
+        "x": 69,
+        "y": 337,
+        "w": 286,
+        "h": 40,
+        "font": "17px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Send code on WhatsApp",
+        "x": 20,
+        "y": 404,
+        "w": 350,
+        "h": 50,
+        "font": "15px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "हिंदी",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(20, 70, 160)"
+      },
+      {
+        "tag": "P",
+        "text": "",
+        "size": "16px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "P",
+        "text": "Parent app",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(95, 104, 123)"
+      },
+      {
+        "tag": "H1",
+        "text": "Sign in",
+        "size": "24px",
+        "weight": "800",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "P",
+        "text": "Use the mobile number you gave the school at admission.",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(95, 104, 123)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Send code on WhatsApp",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "P",
+        "text": "The 6-digit code arrives in a few seconds.",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(95, 104, 123)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  }
+]

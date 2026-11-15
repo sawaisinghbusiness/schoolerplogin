@@ -1,0 +1,4244 @@
+[
+  {
+    "mode": "erp",
+    "requested": "/erp/attendance/mark/",
+    "file": "erp/erp--attendance--mark-390.png",
+    "url": "/erp/attendance/mark/",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "Mark Attendance\nDate\nClass - 6th\nSection - A\nAll present\nMark absent by roll numbers\nApply\nNo.\nName\nP\nA\nL\nH\n1\nAarav Sharma\n2\nPrisha Joshi\n3\nAnanya Rathore\n4\nVihaan Singh\nSave · 4 present, 0 absent\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Previous day",
+        "x": 16,
+        "y": 79,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Previous day",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "att-date",
+        "x": 83,
+        "y": 80,
+        "w": 198,
+        "h": 42,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Next day",
+        "x": 330,
+        "y": 79,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Next day",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Class - 6th",
+        "x": 16,
+        "y": 137,
+        "w": 174,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Section - A",
+        "x": 200,
+        "y": 137,
+        "w": 174,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "All present",
+        "x": 29,
+        "y": 210,
+        "w": 114,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "e.g. 3, 8, 12",
+        "x": 29,
+        "y": 291,
+        "w": 242,
+        "h": 48,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Apply",
+        "x": 279,
+        "y": 291,
+        "w": 82,
+        "h": 48,
+        "font": "14px",
+        "label": null,
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Aarav Sharma",
+        "x": 49,
+        "y": 399,
+        "w": 144,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Aarav Sharma: Present",
+        "x": 193,
+        "y": 399,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Aarav Sharma: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Aarav Sharma: Absent",
+        "x": 237,
+        "y": 399,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Aarav Sharma: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Aarav Sharma: Leave",
+        "x": 281,
+        "y": 399,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Aarav Sharma: Leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Aarav Sharma: Half day",
+        "x": 325,
+        "y": 399,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Aarav Sharma: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Prisha Joshi",
+        "x": 49,
+        "y": 453,
+        "w": 144,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Prisha Joshi: Present",
+        "x": 193,
+        "y": 453,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Prisha Joshi: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Prisha Joshi: Absent",
+        "x": 237,
+        "y": 453,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Prisha Joshi: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Prisha Joshi: Leave",
+        "x": 281,
+        "y": 453,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Prisha Joshi: Leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Prisha Joshi: Half day",
+        "x": 325,
+        "y": 453,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Prisha Joshi: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Ananya Rathore",
+        "x": 49,
+        "y": 507,
+        "w": 144,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Ananya Rathore: Present",
+        "x": 193,
+        "y": 507,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Ananya Rathore: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Ananya Rathore: Absent",
+        "x": 237,
+        "y": 507,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Ananya Rathore: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Ananya Rathore: Leave",
+        "x": 281,
+        "y": 507,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Ananya Rathore: Leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Ananya Rathore: Half day",
+        "x": 325,
+        "y": 507,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Ananya Rathore: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Vihaan Singh",
+        "x": 49,
+        "y": 561,
+        "w": 144,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Vihaan Singh: Present",
+        "x": 193,
+        "y": 561,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Vihaan Singh: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Vihaan Singh: Absent",
+        "x": 237,
+        "y": 561,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Vihaan Singh: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Vihaan Singh: Leave",
+        "x": 281,
+        "y": 561,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Vihaan Singh: Leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Vihaan Singh: Half day",
+        "x": 325,
+        "y": 561,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Vihaan Singh: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Save · 4 present, 0 absent",
+        "x": 16,
+        "y": 618,
+        "w": 358,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 78,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 156,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 234,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 312,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "Mark Attendance",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Previous day",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Next day",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Class - 6th",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Section - A",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "All present",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Apply",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Aarav Sharma",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Aarav Sharma: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Aarav Sharma: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Aarav Sharma: Leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Aarav Sharma: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Prisha Joshi",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Prisha Joshi: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Prisha Joshi: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Prisha Joshi: Leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Prisha Joshi: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ananya Rathore",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ananya Rathore: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ananya Rathore: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ananya Rathore: Leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ananya Rathore: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Vihaan Singh",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Vihaan Singh: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Vihaan Singh: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Vihaan Singh: Leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Vihaan Singh: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save · 4 present, 0 absent",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "rise",
+        "state": "finished",
+        "duration": 280,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "erp",
+    "requested": "/erp/attendance/mark/section/?class=6th&section=A",
+    "file": "erp/erp--attendance--mark--section-390.png",
+    "url": "/erp/attendance/mark/?class=6th&section=A",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "Mark Attendance\nDate\nClass - 6th\nSection - A\nAll present\nMark absent by roll numbers\nApply\nNo.\nName\nP\nA\nL\nH\n1\nAarav Sharma\n2\nPrisha Joshi\n3\nAnanya Rathore\n4\nVihaan Singh\nSave · 4 present, 0 absent\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Previous day",
+        "x": 16,
+        "y": 79,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Previous day",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "att-date",
+        "x": 83,
+        "y": 80,
+        "w": 198,
+        "h": 42,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Next day",
+        "x": 330,
+        "y": 79,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Next day",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Class - 6th",
+        "x": 16,
+        "y": 137,
+        "w": 174,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Section - A",
+        "x": 200,
+        "y": 137,
+        "w": 174,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "All present",
+        "x": 29,
+        "y": 210,
+        "w": 114,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "e.g. 3, 8, 12",
+        "x": 29,
+        "y": 291,
+        "w": 242,
+        "h": 48,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Apply",
+        "x": 279,
+        "y": 291,
+        "w": 82,
+        "h": 48,
+        "font": "14px",
+        "label": null,
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Aarav Sharma",
+        "x": 49,
+        "y": 399,
+        "w": 144,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Aarav Sharma: Present",
+        "x": 193,
+        "y": 399,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Aarav Sharma: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Aarav Sharma: Absent",
+        "x": 237,
+        "y": 399,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Aarav Sharma: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Aarav Sharma: Leave",
+        "x": 281,
+        "y": 399,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Aarav Sharma: Leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Aarav Sharma: Half day",
+        "x": 325,
+        "y": 399,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Aarav Sharma: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Prisha Joshi",
+        "x": 49,
+        "y": 453,
+        "w": 144,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Prisha Joshi: Present",
+        "x": 193,
+        "y": 453,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Prisha Joshi: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Prisha Joshi: Absent",
+        "x": 237,
+        "y": 453,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Prisha Joshi: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Prisha Joshi: Leave",
+        "x": 281,
+        "y": 453,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Prisha Joshi: Leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Prisha Joshi: Half day",
+        "x": 325,
+        "y": 453,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Prisha Joshi: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Ananya Rathore",
+        "x": 49,
+        "y": 507,
+        "w": 144,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Ananya Rathore: Present",
+        "x": 193,
+        "y": 507,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Ananya Rathore: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Ananya Rathore: Absent",
+        "x": 237,
+        "y": 507,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Ananya Rathore: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Ananya Rathore: Leave",
+        "x": 281,
+        "y": 507,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Ananya Rathore: Leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Ananya Rathore: Half day",
+        "x": 325,
+        "y": 507,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Ananya Rathore: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Vihaan Singh",
+        "x": 49,
+        "y": 561,
+        "w": 144,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Vihaan Singh: Present",
+        "x": 193,
+        "y": 561,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Vihaan Singh: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Vihaan Singh: Absent",
+        "x": 237,
+        "y": 561,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Vihaan Singh: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Vihaan Singh: Leave",
+        "x": 281,
+        "y": 561,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Vihaan Singh: Leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Vihaan Singh: Half day",
+        "x": 325,
+        "y": 561,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Vihaan Singh: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Save · 4 present, 0 absent",
+        "x": 16,
+        "y": 618,
+        "w": 358,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 78,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 156,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 234,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 312,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "Mark Attendance",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Previous day",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Next day",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Class - 6th",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Section - A",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "All present",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Apply",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Aarav Sharma",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Aarav Sharma: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Aarav Sharma: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Aarav Sharma: Leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Aarav Sharma: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Prisha Joshi",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Prisha Joshi: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Prisha Joshi: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Prisha Joshi: Leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Prisha Joshi: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ananya Rathore",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ananya Rathore: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ananya Rathore: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ananya Rathore: Leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ananya Rathore: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Vihaan Singh",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Vihaan Singh: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Vihaan Singh: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Vihaan Singh: Leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Vihaan Singh: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save · 4 present, 0 absent",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "rise",
+        "state": "finished",
+        "duration": 280,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "erp",
+    "requested": "/erp/staff/attendance/",
+    "file": "erp/erp--staff--attendance-390.png",
+    "url": "/erp/staff/attendance/",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "Staff Attendance & Leave\nToday\nRegister\nLeave 1\n\nSaved 14 Nov, 10:00 am · Review Operator\n\nMark all present\nIn/out time\nName\nP\nA\nL\nH\nNeha Sharma\nEMP-100 · Teacher\nIn\nOut\nRakesh Mehta\nEMP-101 · Teacher\nIn\nOut\nKamla Devi\nEMP-102 · Teacher\nIn\nOut\nManish Singh\nEMP-103 · Teacher\nIn\nOut\nPooja Verma\nEMP-104 · Teacher\nIn\nOut\nSanjay Soni\nEMP-105 · Teacher\nIn\nOut\nSunita Rao\nEMP-106 · Office Clerk\nIn\nOut\nMohan Lal\nEMP-107 · Office Clerk\n\n7 present · 1 absent · 0 on leave · 0 half day · 8 staff\n\nHome\nStudents\nReport\nAttendance\nProfile\nSave changes",
+    "width": 390,
+    "scrollWidth": 375,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Today",
+        "x": 16,
+        "y": 77,
+        "w": 114,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Register",
+        "x": 130,
+        "y": 77,
+        "w": 114,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Leave 1",
+        "x": 245,
+        "y": 77,
+        "w": 114,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Previous day",
+        "x": 16,
+        "y": 138,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Previous day",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Date",
+        "x": 83,
+        "y": 147,
+        "w": 183,
+        "h": 26,
+        "font": "16px",
+        "label": "Date",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Next day",
+        "x": 315,
+        "y": 138,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Next day",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Mark all present",
+        "x": 16,
+        "y": 228,
+        "w": 122,
+        "h": 40,
+        "font": "13.5px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "",
+        "x": 263,
+        "y": 239,
+        "w": 18,
+        "h": 18,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Neha Sharma: Present",
+        "x": 178,
+        "y": 321,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Neha Sharma: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Neha Sharma: Absent",
+        "x": 222,
+        "y": 321,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Neha Sharma: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Neha Sharma: On leave",
+        "x": 266,
+        "y": 321,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Neha Sharma: On leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Neha Sharma: Half day",
+        "x": 310,
+        "y": 321,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Neha Sharma: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Neha Sharma: in",
+        "x": 37,
+        "y": 371,
+        "w": 146,
+        "h": 44,
+        "font": "16px",
+        "label": "Neha Sharma: in",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Neha Sharma: out",
+        "x": 221,
+        "y": 371,
+        "w": 134,
+        "h": 44,
+        "font": "16px",
+        "label": "Neha Sharma: out",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Neha Sharma: remark",
+        "x": 21,
+        "y": 423,
+        "w": 333,
+        "h": 44,
+        "font": "16px",
+        "label": "Neha Sharma: remark",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Rakesh Mehta: Present",
+        "x": 178,
+        "y": 485,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Rakesh Mehta: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Rakesh Mehta: Absent",
+        "x": 222,
+        "y": 485,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Rakesh Mehta: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Rakesh Mehta: On leave",
+        "x": 266,
+        "y": 485,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Rakesh Mehta: On leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Rakesh Mehta: Half day",
+        "x": 310,
+        "y": 485,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Rakesh Mehta: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Rakesh Mehta: in",
+        "x": 37,
+        "y": 535,
+        "w": 146,
+        "h": 44,
+        "font": "16px",
+        "label": "Rakesh Mehta: in",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Rakesh Mehta: out",
+        "x": 221,
+        "y": 535,
+        "w": 134,
+        "h": 44,
+        "font": "16px",
+        "label": "Rakesh Mehta: out",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Rakesh Mehta: remark",
+        "x": 21,
+        "y": 587,
+        "w": 333,
+        "h": 44,
+        "font": "16px",
+        "label": "Rakesh Mehta: remark",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Kamla Devi: Present",
+        "x": 178,
+        "y": 649,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Kamla Devi: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Kamla Devi: Absent",
+        "x": 222,
+        "y": 649,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Kamla Devi: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Kamla Devi: On leave",
+        "x": 266,
+        "y": 649,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Kamla Devi: On leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Kamla Devi: Half day",
+        "x": 310,
+        "y": 649,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Kamla Devi: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Kamla Devi: in",
+        "x": 37,
+        "y": 699,
+        "w": 146,
+        "h": 44,
+        "font": "16px",
+        "label": "Kamla Devi: in",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Kamla Devi: out",
+        "x": 221,
+        "y": 699,
+        "w": 134,
+        "h": 44,
+        "font": "16px",
+        "label": "Kamla Devi: out",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Kamla Devi: remark",
+        "x": 21,
+        "y": 751,
+        "w": 333,
+        "h": 44,
+        "font": "16px",
+        "label": "Kamla Devi: remark",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Manish Singh: Present",
+        "x": 178,
+        "y": 813,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Manish Singh: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Manish Singh: Absent",
+        "x": 222,
+        "y": 813,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Manish Singh: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Manish Singh: On leave",
+        "x": 266,
+        "y": 813,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Manish Singh: On leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Manish Singh: Half day",
+        "x": 310,
+        "y": 813,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Manish Singh: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Manish Singh: in",
+        "x": 37,
+        "y": 863,
+        "w": 146,
+        "h": 44,
+        "font": "16px",
+        "label": "Manish Singh: in",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Manish Singh: out",
+        "x": 221,
+        "y": 863,
+        "w": 134,
+        "h": 44,
+        "font": "16px",
+        "label": "Manish Singh: out",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Manish Singh: remark",
+        "x": 21,
+        "y": 915,
+        "w": 333,
+        "h": 44,
+        "font": "16px",
+        "label": "Manish Singh: remark",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Pooja Verma: Present",
+        "x": 178,
+        "y": 977,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Pooja Verma: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Pooja Verma: Absent",
+        "x": 222,
+        "y": 977,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Pooja Verma: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Pooja Verma: On leave",
+        "x": 266,
+        "y": 977,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Pooja Verma: On leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Pooja Verma: Half day",
+        "x": 310,
+        "y": 977,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Pooja Verma: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Pooja Verma: in",
+        "x": 37,
+        "y": 1027,
+        "w": 146,
+        "h": 44,
+        "font": "16px",
+        "label": "Pooja Verma: in",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Pooja Verma: out",
+        "x": 221,
+        "y": 1027,
+        "w": 134,
+        "h": 44,
+        "font": "16px",
+        "label": "Pooja Verma: out",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Pooja Verma: remark",
+        "x": 21,
+        "y": 1079,
+        "w": 333,
+        "h": 44,
+        "font": "16px",
+        "label": "Pooja Verma: remark",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Sanjay Soni: Present",
+        "x": 178,
+        "y": 1141,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Sanjay Soni: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Sanjay Soni: Absent",
+        "x": 222,
+        "y": 1141,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Sanjay Soni: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Sanjay Soni: On leave",
+        "x": 266,
+        "y": 1141,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Sanjay Soni: On leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Sanjay Soni: Half day",
+        "x": 310,
+        "y": 1141,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Sanjay Soni: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Sanjay Soni: in",
+        "x": 37,
+        "y": 1191,
+        "w": 146,
+        "h": 44,
+        "font": "16px",
+        "label": "Sanjay Soni: in",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Sanjay Soni: out",
+        "x": 221,
+        "y": 1191,
+        "w": 134,
+        "h": 44,
+        "font": "16px",
+        "label": "Sanjay Soni: out",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Sanjay Soni: remark",
+        "x": 21,
+        "y": 1243,
+        "w": 333,
+        "h": 44,
+        "font": "16px",
+        "label": "Sanjay Soni: remark",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Sunita Rao: Present",
+        "x": 178,
+        "y": 1305,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Sunita Rao: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Sunita Rao: Absent",
+        "x": 222,
+        "y": 1305,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Sunita Rao: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Sunita Rao: On leave",
+        "x": 266,
+        "y": 1305,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Sunita Rao: On leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Sunita Rao: Half day",
+        "x": 310,
+        "y": 1305,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Sunita Rao: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Sunita Rao: in",
+        "x": 37,
+        "y": 1355,
+        "w": 146,
+        "h": 44,
+        "font": "16px",
+        "label": "Sunita Rao: in",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Sunita Rao: out",
+        "x": 221,
+        "y": 1355,
+        "w": 134,
+        "h": 44,
+        "font": "16px",
+        "label": "Sunita Rao: out",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Sunita Rao: remark",
+        "x": 21,
+        "y": 1407,
+        "w": 333,
+        "h": 44,
+        "font": "16px",
+        "label": "Sunita Rao: remark",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Mohan Lal: Present",
+        "x": 178,
+        "y": 1469,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Mohan Lal: Present",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Mohan Lal: Absent",
+        "x": 222,
+        "y": 1469,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Mohan Lal: Absent",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Mohan Lal: On leave",
+        "x": 266,
+        "y": 1469,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Mohan Lal: On leave",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Mohan Lal: Half day",
+        "x": 310,
+        "y": 1469,
+        "w": 44,
+        "h": 44,
+        "font": "15px",
+        "label": "Mohan Lal: Half day",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Mohan Lal: remark",
+        "x": 21,
+        "y": 1519,
+        "w": 333,
+        "h": 44,
+        "font": "16px",
+        "label": "Mohan Lal: remark",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 75,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 150,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 225,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 300,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Save changes",
+        "x": 16,
+        "y": 722,
+        "w": 343,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [
+      {
+        "tag": "BUTTON",
+        "name": "Mark all present",
+        "x": 16,
+        "y": 228,
+        "w": 122,
+        "h": 40,
+        "font": "13.5px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "Staff Attendance & Leave",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Today",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Register",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Leave 1",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Previous day",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Next day",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Saved 14 Nov, 10:00 am · Review Operator",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Mark all present",
+        "size": "13.5px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Neha Sharma: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Neha Sharma: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Neha Sharma: On leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Neha Sharma: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Rakesh Mehta: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Rakesh Mehta: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Rakesh Mehta: On leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Rakesh Mehta: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Kamla Devi: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Kamla Devi: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Kamla Devi: On leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Kamla Devi: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Manish Singh: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Manish Singh: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Manish Singh: On leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Manish Singh: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Pooja Verma: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Pooja Verma: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Pooja Verma: On leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Pooja Verma: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Sanjay Soni: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Sanjay Soni: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Sanjay Soni: On leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Sanjay Soni: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Sunita Rao: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Sunita Rao: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Sunita Rao: On leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Sunita Rao: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Mohan Lal: Present",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Mohan Lal: Absent",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Mohan Lal: On leave",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Mohan Lal: Half day",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "7 present · 1 absent · 0 on leave · 0 half day · 8 staff",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(75, 84, 104)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save changes",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "rise",
+        "state": "finished",
+        "duration": 280,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "erp",
+    "requested": "/erp/exams/report-cards/?exam=exam-review&section=6th%20-%20A",
+    "file": "erp/erp--exams--report-cards-390.png",
+    "url": "/erp/exams/report-cards/?exam=exam-review&section=6th+-+A",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "Report Cards\nExam - Term I examination\nSection - 6th - A (4)\n\n6th - A · 4 students\n\n1\nAarav Sharma\nNeeds improvement\n76.0%\nB1 · Rank 1\n2\nPrisha Joshi\nNeeds improvement\n76.0%\nB1 · Rank 2\n3\nAnanya Rathore\nNeeds improvement\n76.0%\nB1 · Rank 3\n4\nVihaan Singh\nNeeds improvement\n76.0%\nB1 · Rank 4\nHome\nStudents\nReport\nAttendance\nProfile\nPrint whole class (4)",
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Exam - Term I examination",
+        "x": 16,
+        "y": 77,
+        "w": 358,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Section - 6th - A (4)",
+        "x": 16,
+        "y": 137,
+        "w": 358,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Name, roll or SR no.",
+        "x": 57,
+        "y": 209,
+        "w": 302,
+        "h": 24,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "1Aarav SharmaNeeds improvement76.0%B1 · Rank 1",
+        "x": 16,
+        "y": 293,
+        "w": 358,
+        "h": 67,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "2Prisha JoshiNeeds improvement76.0%B1 · Rank 2",
+        "x": 16,
+        "y": 360,
+        "w": 358,
+        "h": 67,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "3Ananya RathoreNeeds improvement76.0%B1 · Rank 3",
+        "x": 16,
+        "y": 427,
+        "w": 358,
+        "h": 67,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "4Vihaan SinghNeeds improvement76.0%B1 · Rank 4",
+        "x": 16,
+        "y": 494,
+        "w": 358,
+        "h": 67,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 78,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 156,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 234,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 312,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Print whole class (4)",
+        "x": 16,
+        "y": 722,
+        "w": 358,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "Report Cards",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Exam - Term I examination",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Section - 6th - A (4)",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "6th - A · 4 students",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "1Aarav SharmaNeeds improvement76.0%B1 · Rank 1",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2Prisha JoshiNeeds improvement76.0%B1 · Rank 2",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "3Ananya RathoreNeeds improvement76.0%B1 · Rank 3",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "4Vihaan SinghNeeds improvement76.0%B1 · Rank 4",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Print whole class (4)",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "rise",
+        "state": "finished",
+        "duration": 280,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "erp",
+    "requested": "/erp/fees/collect/?student=review-1",
+    "file": "erp/erp--fees--collect-390.png",
+    "url": "/erp/fees/collect/?student=review-1",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "Collect Fee\nPJ\n\nPrisha Joshi\n\n7th - B · SR-1201 · Mahesh Joshi\n\nChange\n\nSession fee\n\n₹48,000\n\nPaid\n\n₹16,000\n\nStill due\n\n₹32,000\n\nSession 2026-27\n33% paid\nQuarter 1\n10 Apr\n\nPaid ₹15,750\n\nQuarter 2\n10 Jul\n\n₹11,000· 128d late\n\nCleared by this payment\n\nQuarter 3\n10 Oct\n\n₹9,750· 36d late\n\nCleared by this payment\n\nQuarter 4\n10 Jan\n\n₹11,250\n\nFee being paid\nOverdue ₹20,750\nUp to Quarter 4 ₹32,000\n₹\nTuition fee\n₹12,750\nExam fee\n₹1,500\nComputer fee\n₹500\nTransport fee\n₹6,000\nLate fine\nQuarter 2 128 days late · Quarter 3 36 days late (up to ₹860)\n₹\nTotal to collect\nTwenty One Thousand Six Hundred Ten Rupees Only\n₹21,610\nPaid by\nCash\nUPI\nCheque\nNote, optional\nCollect ₹21,610 & print\nPrisha's receipts\nCash\n14 Nov · #1024\n₹2,500\nUPI\n13 Nov · #1025\n₹3,000\nCash\n12 Nov · #1026\n₹3,500\nUPI\n11 Nov · #1027\n₹4,000\nCash\n14 Nov · #1028\n₹4,500\nUPI\n13 Nov · #1029\n₹5,000\nCash\n12 Nov · #1030\n₹5,500\nUPI\n11 Nov · #1031\n₹6,000\nLatest receipts\nAarav Sharma\n14 Nov · #1024 · 6th\n₹2,500\nPrisha Joshi\n13 Nov · #1025 · 7th\n₹3,000\nAnanya Rathore\n12 Nov · #1026 · 8th\n₹3,500\nVihaan Singh\n11 Nov · #1027 · 6th\n₹4,000\nIshita Mehta\n14 Nov · #1028 · 7th\n₹4,500\nDev Choudhary\n13 Nov · #1029 · 8th\n₹5,000\nAditi Soni\n12 Nov · #1030 · 6th\n₹5,500\nKabir Jain\n11 Nov · #1031 · 7th\n₹6,000\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Collect from another student…",
+        "x": 57,
+        "y": 89,
+        "w": 287,
+        "h": 24,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "",
+        "x": 93,
+        "y": 210,
+        "w": 14,
+        "h": 14,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Change",
+        "x": 263,
+        "y": 158,
+        "w": 79,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Overdue ₹20,750",
+        "x": 16,
+        "y": 717,
+        "w": 138,
+        "h": 36,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Up to Quarter 4 ₹32,000",
+        "x": 160,
+        "y": 717,
+        "w": 181,
+        "h": 36,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Fee being paid",
+        "x": 54,
+        "y": 777,
+        "w": 290,
+        "h": 24,
+        "font": "16px",
+        "label": "Fee being paid",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "fee-fine",
+        "x": 263,
+        "y": 1024,
+        "w": 64,
+        "h": 24,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cash",
+        "x": 20,
+        "y": 1213,
+        "w": 109,
+        "h": 42,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "UPI",
+        "x": 133,
+        "y": 1213,
+        "w": 109,
+        "h": 42,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cheque",
+        "x": 246,
+        "y": 1213,
+        "w": 109,
+        "h": 42,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "e.g. Paid by father",
+        "x": 31,
+        "y": 1275,
+        "w": 313,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Collect ₹21,610 & print",
+        "x": 16,
+        "y": 1331,
+        "w": 343,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cash14 Nov · #1024₹2,500",
+        "x": 16,
+        "y": 1423,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "UPI13 Nov · #1025₹3,000",
+        "x": 16,
+        "y": 1481,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cash12 Nov · #1026₹3,500",
+        "x": 16,
+        "y": 1539,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "UPI11 Nov · #1027₹4,000",
+        "x": 16,
+        "y": 1597,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cash14 Nov · #1028₹4,500",
+        "x": 16,
+        "y": 1655,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "UPI13 Nov · #1029₹5,000",
+        "x": 16,
+        "y": 1713,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cash12 Nov · #1030₹5,500",
+        "x": 16,
+        "y": 1771,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "UPI11 Nov · #1031₹6,000",
+        "x": 16,
+        "y": 1829,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Aarav Sharma14 Nov · #1024 · 6th₹2,500",
+        "x": 16,
+        "y": 1932,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Prisha Joshi13 Nov · #1025 · 7th₹3,000",
+        "x": 16,
+        "y": 1990,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Ananya Rathore12 Nov · #1026 · 8th₹3,500",
+        "x": 16,
+        "y": 2048,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Vihaan Singh11 Nov · #1027 · 6th₹4,000",
+        "x": 16,
+        "y": 2106,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Ishita Mehta14 Nov · #1028 · 7th₹4,500",
+        "x": 16,
+        "y": 2164,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Dev Choudhary13 Nov · #1029 · 8th₹5,000",
+        "x": 16,
+        "y": 2222,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Aditi Soni12 Nov · #1030 · 6th₹5,500",
+        "x": 16,
+        "y": 2280,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Kabir Jain11 Nov · #1031 · 7th₹6,000",
+        "x": 16,
+        "y": 2338,
+        "w": 343,
+        "h": 58,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 75,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 150,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 225,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 300,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [
+      {
+        "tag": "A",
+        "name": "",
+        "x": 93,
+        "y": 210,
+        "w": 14,
+        "h": 14,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Overdue ₹20,750",
+        "x": 16,
+        "y": 717,
+        "w": 138,
+        "h": 36,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Up to Quarter 4 ₹32,000",
+        "x": 160,
+        "y": 717,
+        "w": 181,
+        "h": 36,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cash",
+        "x": 20,
+        "y": 1213,
+        "w": 109,
+        "h": 42,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "UPI",
+        "x": 133,
+        "y": 1213,
+        "w": 109,
+        "h": 42,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Cheque",
+        "x": 246,
+        "y": 1213,
+        "w": 109,
+        "h": 42,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "unlabelled": [],
+    "clipped": [
+      {
+        "text": "7th - B · SR-1201 · Mahesh Joshi",
+        "x": 93,
+        "y": 182,
+        "w": 158,
+        "h": 24
+      },
+      {
+        "text": "Twenty One Thousand Six Hundred Ten Rupees Only",
+        "x": 33,
+        "y": 1119,
+        "w": 201,
+        "h": 24
+      }
+    ],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "Collect Fee",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "P",
+        "text": "Prisha Joshi",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "7th - B · SR-1201 · Mahesh Joshi",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Change",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "P",
+        "text": "Session fee",
+        "size": "11.5px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "P",
+        "text": "₹48,000",
+        "size": "15.5px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Paid",
+        "size": "11.5px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "P",
+        "text": "₹16,000",
+        "size": "15.5px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Still due",
+        "size": "11.5px",
+        "weight": "600",
+        "color": "rgb(220, 38, 38)"
+      },
+      {
+        "tag": "P",
+        "text": "₹32,000",
+        "size": "15.5px",
+        "weight": "600",
+        "color": "rgb(185, 28, 28)"
+      },
+      {
+        "tag": "P",
+        "text": "Paid ₹15,750",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(18, 138, 62)"
+      },
+      {
+        "tag": "P",
+        "text": "₹11,000· 128d late",
+        "size": "13px",
+        "weight": "700",
+        "color": "rgb(220, 38, 38)"
+      },
+      {
+        "tag": "P",
+        "text": "Cleared by this payment",
+        "size": "11.5px",
+        "weight": "600",
+        "color": "rgb(10, 34, 76)"
+      },
+      {
+        "tag": "P",
+        "text": "₹9,750· 36d late",
+        "size": "13px",
+        "weight": "700",
+        "color": "rgb(220, 38, 38)"
+      },
+      {
+        "tag": "P",
+        "text": "Cleared by this payment",
+        "size": "11.5px",
+        "weight": "600",
+        "color": "rgb(10, 34, 76)"
+      },
+      {
+        "tag": "P",
+        "text": "₹11,250",
+        "size": "13px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H2",
+        "text": "Fee being paid",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Overdue ₹20,750",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(10, 34, 76)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Up to Quarter 4 ₹32,000",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "H2",
+        "text": "Paid by",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Cash",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "UPI",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Cheque",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Collect ₹21,610 & print",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "H2",
+        "text": "Prisha's receipts",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Cash14 Nov · #1024₹2,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "UPI13 Nov · #1025₹3,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Cash12 Nov · #1026₹3,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "UPI11 Nov · #1027₹4,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Cash14 Nov · #1028₹4,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "UPI13 Nov · #1029₹5,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Cash12 Nov · #1030₹5,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "UPI11 Nov · #1031₹6,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H2",
+        "text": "Latest receipts",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Aarav Sharma14 Nov · #1024 · 6th₹2,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Prisha Joshi13 Nov · #1025 · 7th₹3,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ananya Rathore12 Nov · #1026 · 8th₹3,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Vihaan Singh11 Nov · #1027 · 6th₹4,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ishita Mehta14 Nov · #1028 · 7th₹4,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Dev Choudhary13 Nov · #1029 · 8th₹5,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Aditi Soni12 Nov · #1030 · 6th₹5,500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Kabir Jain11 Nov · #1031 · 7th₹6,000",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "rise",
+        "state": "finished",
+        "duration": 280,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "erp",
+    "requested": "/erp/messages/detail/?id=message-review",
+    "file": "erp/erp--messages--detail-390.png",
+    "url": "/erp/messages/detail/?id=message-review",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "Send Message\n\nParent-teacher meeting\n\nWhole school · 12 Nov, 10:00 am · Review Operator\n\nSent\n\n1 / 4\n\nSend next: Prisha Joshi\n\nWhatsApp opens with the message typed in. Press send there, then come back for the next parent. Each one is ticked off here as you go.\n\nMessage text\nTo send 3\nSent 1\nNo number 0\nCopy numbers\n\nPrisha Joshi\n\n7th - B · Mahesh Joshi\n\nWhatsApp\n\nAnanya Rathore\n\n8th - A · Suresh Rathore\n\nWhatsApp\n\nVihaan Singh\n\n6th - B · Vikram Singh\n\nWhatsApp\nDelete message\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 405,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Send next: Prisha Joshi",
+        "x": 33,
+        "y": 236,
+        "w": 309,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "To send 3",
+        "x": 16,
+        "y": 446,
+        "w": 114,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Sent 1",
+        "x": 130,
+        "y": 446,
+        "w": 114,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "No number 0",
+        "x": 245,
+        "y": 446,
+        "w": 114,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Name, class or mobile",
+        "x": 57,
+        "y": 517,
+        "w": 176,
+        "h": 24,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Copy numbers",
+        "x": 256,
+        "y": 505,
+        "w": 149,
+        "h": 48,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "WhatsApp",
+        "x": 245,
+        "y": 578,
+        "w": 114,
+        "h": 38,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "WhatsApp",
+        "x": 245,
+        "y": 643,
+        "w": 114,
+        "h": 38,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "WhatsApp",
+        "x": 245,
+        "y": 708,
+        "w": 114,
+        "h": 38,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Delete message",
+        "x": 16,
+        "y": 772,
+        "w": 127,
+        "h": 40,
+        "font": "13.5px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 765,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 75,
+        "y": 765,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 150,
+        "y": 765,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 225,
+        "y": 765,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 300,
+        "y": 765,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [
+      {
+        "tag": "BUTTON",
+        "name": "WhatsApp",
+        "x": 245,
+        "y": 578,
+        "w": 114,
+        "h": 38,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "WhatsApp",
+        "x": 245,
+        "y": 643,
+        "w": 114,
+        "h": 38,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "WhatsApp",
+        "x": 245,
+        "y": 708,
+        "w": 114,
+        "h": 38,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Delete message",
+        "x": 16,
+        "y": 772,
+        "w": 127,
+        "h": 40,
+        "font": "13.5px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "Send Message",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "P",
+        "text": "Parent-teacher meeting",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Whole school · 12 Nov, 10:00 am · Review Operator",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "P",
+        "text": "Sent",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "P",
+        "text": "1 / 4",
+        "size": "24px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Send next: Prisha Joshi",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "P",
+        "text": "WhatsApp opens with the message typed in. Press send there, then come back for the next pa",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "P",
+        "text": "Please attend the scheduled meeting on Saturday.",
+        "size": "14.5px",
+        "weight": "400",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "To send 3",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Sent 1",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "No number 0",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Copy numbers",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "P",
+        "text": "Prisha Joshi",
+        "size": "15px",
+        "weight": "500",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "7th - B · Mahesh Joshi",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "WhatsApp",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Ananya Rathore",
+        "size": "15px",
+        "weight": "500",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "8th - A · Suresh Rathore",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "WhatsApp",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Vihaan Singh",
+        "size": "15px",
+        "weight": "500",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "6th - B · Vikram Singh",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "WhatsApp",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Delete message",
+        "size": "13.5px",
+        "weight": "600",
+        "color": "rgb(220, 38, 38)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "rise",
+        "state": "finished",
+        "duration": 280,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "erp",
+    "requested": "/erp/transport/",
+    "file": "erp/erp--transport-390.png",
+    "url": "/erp/transport/",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "Routes & Buses\nBus activity\n\n1 running · 0 need attention\n\nView status\nCity route\nRJ-04-PA-0000 · Next: Station Road\nRunning\nUpdated 10:07 pm\nRefresh\n8\non bus\n1\nroutes · 32 seats\n1\nno route yet\nRoutes\nCity route\n7/32\nRJ-04-PA-0000 · Sample Driver\n1 bus students have no route\nAdd route\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "View status",
+        "x": 268,
+        "y": 94,
+        "w": 91,
+        "h": 40,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "City routeRJ-04-PA-0000 · Next: Station RoadRunning",
+        "x": 17,
+        "y": 151,
+        "w": 356,
+        "h": 67,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Refresh bus status",
+        "x": 295,
+        "y": 226,
+        "w": 64,
+        "h": 32,
+        "font": "12px",
+        "label": "Refresh bus status",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "City route7/32RJ-04-PA-0000 · Sample Driver",
+        "x": 16,
+        "y": 410,
+        "w": 374,
+        "h": 84,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "1 bus students have no route",
+        "x": 16,
+        "y": 507,
+        "w": 358,
+        "h": 52,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Add route",
+        "x": 16,
+        "y": 571,
+        "w": 358,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 78,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 156,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 234,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 312,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [
+      {
+        "tag": "BUTTON",
+        "name": "View status",
+        "x": 268,
+        "y": 94,
+        "w": 91,
+        "h": 40,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Refresh bus status",
+        "x": 295,
+        "y": 226,
+        "w": 64,
+        "h": 32,
+        "font": "12px",
+        "label": "Refresh bus status",
+        "disabled": false
+      }
+    ],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "Routes & Buses",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "H2",
+        "text": "Bus activity",
+        "size": "17px",
+        "weight": "650",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "1 running · 0 need attention",
+        "size": "12px",
+        "weight": "400",
+        "color": "rgb(83, 103, 91)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "View status",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(41, 78, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "City routeRJ-04-PA-0000 · Next: Station RoadRunning",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(32, 52, 42)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Refresh bus status",
+        "size": "12px",
+        "weight": "400",
+        "color": "rgb(41, 78, 67)"
+      },
+      {
+        "tag": "H2",
+        "text": "Routes",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "rise",
+        "state": "finished",
+        "duration": 280,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "erp",
+    "requested": "/erp/transport/students/",
+    "file": "erp/erp--transport--students-390.png",
+    "url": "/erp/transport/",
+    "title": "School Staff",
+    "text": "Routes & Buses\nBus activity\n\n1 running · 0 need attention\n\nView status\nCity route\nRJ-04-PA-0000 · Next: Station Road\nRunning\nUpdated 10:07 pm\nRefresh\n8\non bus\n1\nroutes · 32 seats\n1\nno route yet\nRoutes\nCity route\n7/32\nRJ-04-PA-0000 · Sample Driver\n1 bus students have no route\nAdd route\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "View status",
+        "x": 268,
+        "y": 94,
+        "w": 91,
+        "h": 40,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "City routeRJ-04-PA-0000 · Next: Station RoadRunning",
+        "x": 17,
+        "y": 151,
+        "w": 356,
+        "h": 67,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Refresh bus status",
+        "x": 295,
+        "y": 226,
+        "w": 64,
+        "h": 32,
+        "font": "12px",
+        "label": "Refresh bus status",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "City route7/32RJ-04-PA-0000 · Sample Driver",
+        "x": 16,
+        "y": 410,
+        "w": 374,
+        "h": 84,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "1 bus students have no route",
+        "x": 16,
+        "y": 507,
+        "w": 358,
+        "h": 52,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Add route",
+        "x": 16,
+        "y": 571,
+        "w": 358,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 78,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 156,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 234,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 312,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [
+      {
+        "tag": "BUTTON",
+        "name": "View status",
+        "x": 268,
+        "y": 94,
+        "w": 91,
+        "h": 40,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Refresh bus status",
+        "x": 295,
+        "y": 226,
+        "w": 64,
+        "h": 32,
+        "font": "12px",
+        "label": "Refresh bus status",
+        "disabled": false
+      }
+    ],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "Routes & Buses",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "H2",
+        "text": "Bus activity",
+        "size": "17px",
+        "weight": "650",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "1 running · 0 need attention",
+        "size": "12px",
+        "weight": "400",
+        "color": "rgb(83, 103, 91)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "View status",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(41, 78, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "City routeRJ-04-PA-0000 · Next: Station RoadRunning",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(32, 52, 42)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Refresh bus status",
+        "size": "12px",
+        "weight": "400",
+        "color": "rgb(41, 78, 67)"
+      },
+      {
+        "tag": "H2",
+        "text": "Routes",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "rise",
+        "state": "finished",
+        "duration": 280,
+        "iterations": 1
+      }
+    ]
+  }
+]

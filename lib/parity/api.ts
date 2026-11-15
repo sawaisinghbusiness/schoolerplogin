@@ -37,10 +37,12 @@ export function useApi<T>(path: string | null) { const [data, setData] = useStat
         setData(next);
         setError(null);
     }
+    return true;
 }
 catch (e) {
     if (version.current === v)
         setError(e instanceof ApiError ? e : new ApiError(0, 'Could not load this information.'));
+    return false;
 }
 finally {
     if (version.current === v)

@@ -1,0 +1,514 @@
+[
+  {
+    "mode": "parents",
+    "requested": "/leave/apply/",
+    "file": "parents/leave--apply-360.png",
+    "url": "/leave/apply/",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "Apply Leave\nPG\nType\nSick\nFamily function\nCasual\nOther\nFrom\nTo\nFull day\nHalf day\nReason for leave\n0/300\n\nThe class teacher will see this and reply here. Up to 30 days at a time. For longer, please meet the school office.\n\nApply\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 360,
+    "scrollWidth": 360,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Switch child: Priya Garg",
+        "x": 310,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Switch child: Priya Garg",
+        "disabled": false
+      },
+      {
+        "tag": "SELECT",
+        "name": "SickFamily functionCasualOther",
+        "x": 16,
+        "y": 92,
+        "w": 328,
+        "h": 52,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "leave-from",
+        "x": 16,
+        "y": 196,
+        "w": 158,
+        "h": 52,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "leave-to",
+        "x": 186,
+        "y": 196,
+        "w": 158,
+        "h": 52,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Full day",
+        "x": 21,
+        "y": 265,
+        "w": 157,
+        "h": 44,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Half day",
+        "x": 182,
+        "y": 265,
+        "w": 157,
+        "h": 44,
+        "font": "16px",
+        "label": null,
+        "disabled": true
+      },
+      {
+        "tag": "TEXTAREA",
+        "name": "e.g. Has fever, going out of town for a wedding",
+        "x": 16,
+        "y": 366,
+        "w": 328,
+        "h": 122,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Apply",
+        "x": 16,
+        "y": 624,
+        "w": 328,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Calendar",
+        "x": 72,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Study",
+        "x": 144,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees",
+        "x": 216,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 288,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "Apply Leave",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Switch child: Priya Garg",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Full day",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Half day",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(52, 65, 87)"
+      },
+      {
+        "tag": "P",
+        "text": "The class teacher will see this and reply here. Up to 30 days at a time. For longer, pleas",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Apply",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  },
+  {
+    "mode": "parents",
+    "requested": "/meetings/detail/?id=meet-ptm",
+    "file": "parents/meetings--detail-360.png",
+    "url": "/meetings/detail/?id=meet-ptm",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "Meeting\nPG\nParent–teacher meeting\n\nRakesh Bishnoi · Class Nursery - A\n\nSun, 22 Nov\n9:00 AM – 11:00 AM\nClassroom, first floor\nHalf Yearly answer sheets and the term's progress.\nPick your time\n9:00\n9:15\n9:30\n9:45\n10:00\n10:15\n10:30\n10:45\n\nCrossed-out times are taken by other parents\n\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 360,
+    "scrollWidth": 345,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Switch child: Priya Garg",
+        "x": 295,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Switch child: Priya Garg",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:00 AM, taken",
+        "x": 33,
+        "y": 409,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "9:00 AM, taken",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:15 AM, taken",
+        "x": 129,
+        "y": 409,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "9:15 AM, taken",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:30 AM",
+        "x": 224,
+        "y": 409,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "9:30 AM",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:45 AM, taken",
+        "x": 33,
+        "y": 465,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "9:45 AM, taken",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:00 AM",
+        "x": 129,
+        "y": 465,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "10:00 AM",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:15 AM",
+        "x": 224,
+        "y": 465,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "10:15 AM",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:30 AM, taken",
+        "x": 33,
+        "y": 521,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "10:30 AM, taken",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:45 AM",
+        "x": 129,
+        "y": 521,
+        "w": 88,
+        "h": 48,
+        "font": "16px",
+        "label": "10:45 AM",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Calendar",
+        "x": 69,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Study",
+        "x": 138,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees",
+        "x": 207,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 276,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "Meeting",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Switch child: Priya Garg",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "H2",
+        "text": "Parent–teacher meeting",
+        "size": "20px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "P",
+        "text": "Rakesh Bishnoi · Class Nursery - A",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "H2",
+        "text": "Pick your time",
+        "size": "20px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:00 AM, taken",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:15 AM, taken",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:30 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:45 AM, taken",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:00 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:15 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:30 AM, taken",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:45 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "P",
+        "text": "Crossed-out times are taken by other parents",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "study-in",
+        "state": "finished",
+        "duration": 500,
+        "iterations": 1
+      },
+      {
+        "name": "study-in",
+        "state": "finished",
+        "duration": 500,
+        "iterations": 1
+      }
+    ]
+  }
+]

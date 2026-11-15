@@ -1,0 +1,30 @@
+{
+  "rows": 45,
+  "errors": [],
+  "missing": [
+    {
+      "mode": "parents",
+      "route": "/meetings/detail/?id=ptm-1",
+      "path": "/api/parent/meetings/detail",
+      "query": "?student=demo-priya&id=ptm-1",
+      "status": 404,
+      "error": "Meeting not found."
+    }
+  ],
+  "blocked": [
+    {
+      "mode": "parents",
+      "route": "/assistant/",
+      "path": "/api/parent/assistant/warm",
+      "method": "POST"
+    },
+    {
+      "mode": "parents",
+      "route": "/assistant/",
+      "path": "/api/parent/assistant/warm",
+      "method": "POST"
+    }
+  ],
+  "overflow": [],
+  "limits": "All APIs mocked; viewport emulation in Chromium; no real submissions, payments or messages."
+}

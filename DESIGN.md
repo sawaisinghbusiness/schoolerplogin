@@ -55,3 +55,7 @@ Transport flow revision: parents Bus overview links to /bus/tracking/; tracking 
 ## Status labels
 
 Operational status badges use white, dark text, thin dark outline and a trailing semantic dot (red delay/rejection, purple running, green settled/approved/completed, amber waiting, neutral inactive). app/status-badges.css is shared across web/staff/parents and excludes assistant/public contexts. Functional chart/calendar/action colours remain distinct. See the final section of docs/transport-experience-2026-11-15/REVISION.md.
+
+
+## Approved Petrol + Sand
+ERP uses petrol #163F49 navigation and primary actions, sand #F2EEE7 canvas, ivory #FFFEFA work surfaces, #263735 ink and #D8D5CD dividers. Sidebar is petrol with ivory active rows. Status dots retain semantic colours. Scope excludes personal Staff, Parents, Driver, assistant and official print designs.

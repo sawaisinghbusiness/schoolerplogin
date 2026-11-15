@@ -1,0 +1,106 @@
+{
+  "verifiedAt": "2026-11-15T18:17:38.915Z",
+  "productionBuilds": {
+    "staff": {
+      "passed": true,
+      "generatedPages": 96
+    },
+    "parents": {
+      "passed": true,
+      "generatedPages": 39
+    },
+    "web": {
+      "passed": true,
+      "generatedPages": 75
+    }
+  },
+  "regressionTests": {
+    "passed": 18,
+    "failed": 0,
+    "command": "node --test tests/erp-parity.test.cjs tests/regressions.test.cjs"
+  },
+  "browserRuns": [
+    {
+      "file": "final-interactions/result-staff.json",
+      "rows": 5,
+      "errors": [],
+      "missing": [],
+      "blocked": [],
+      "overflow": [],
+      "limits": "All APIs mocked; viewport emulation in Chromium; no real submissions, payments or messages."
+    },
+    {
+      "file": "final-interactions/result-erp.json",
+      "rows": 4,
+      "errors": [],
+      "missing": [],
+      "blocked": [],
+      "overflow": [],
+      "limits": "All APIs mocked; viewport emulation in Chromium; no real submissions, payments or messages."
+    },
+    {
+      "file": "final-interactions/result-parents.json",
+      "rows": 8,
+      "errors": [],
+      "missing": [],
+      "blocked": [],
+      "overflow": [],
+      "limits": "All APIs mocked; viewport emulation in Chromium; no real submissions, payments or messages."
+    },
+    {
+      "file": "narrow-final/result-erp-extra.json",
+      "rows": 7,
+      "errors": [],
+      "missing": [],
+      "blocked": [],
+      "overflow": [],
+      "limits": "All APIs mocked; viewport emulation in Chromium; no real submissions, payments or messages."
+    },
+    {
+      "file": "narrow-final/result-parents-extra.json",
+      "rows": 2,
+      "errors": [],
+      "missing": [],
+      "blocked": [],
+      "overflow": [],
+      "limits": "All APIs mocked; viewport emulation in Chromium; no real submissions, payments or messages."
+    },
+    {
+      "file": "hindi/result-erp-extra.json",
+      "rows": 3,
+      "errors": [],
+      "missing": [],
+      "blocked": [],
+      "overflow": [],
+      "limits": "All APIs mocked; viewport emulation in Chromium; no real submissions, payments or messages."
+    },
+    {
+      "file": "hindi/result-parents-extra.json",
+      "rows": 5,
+      "errors": [],
+      "missing": [],
+      "blocked": [],
+      "overflow": [],
+      "limits": "All APIs mocked; viewport emulation in Chromium; no real submissions, payments or messages."
+    },
+    {
+      "file": "text-200/result-erp-extra.json",
+      "rows": 3,
+      "errors": [],
+      "missing": [],
+      "blocked": [],
+      "overflow": [],
+      "limits": "All APIs mocked; viewport emulation in Chromium; no real submissions, payments or messages."
+    },
+    {
+      "file": "text-200/result-parents-extra.json",
+      "rows": 3,
+      "errors": [],
+      "missing": [],
+      "blocked": [],
+      "overflow": [],
+      "limits": "All APIs mocked; viewport emulation in Chromium; no real submissions, payments or messages."
+    }
+  ],
+  "limits": "Synthetic API and emulated Chromium only. 200% text is simulated, not native-device conformance. See IMPLEMENTATION.md for retained limits."
+}

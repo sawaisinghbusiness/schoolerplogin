@@ -112,6 +112,14 @@
     {
       "mobile": "/erp/transport/students",
       "web": "/transport/students"
+    },
+    {
+      "mobile": "/erp/fees/cheques",
+      "web": "/fees/cheques"
+    },
+    {
+      "mobile": "/erp/fees/carry-forward",
+      "web": "/fees/carry-forward"
     }
   ],
   "generatedFiles": [
@@ -119,12 +127,15 @@
     "components/parity/generated/components/erp/GatePassSheet.tsx",
     "components/parity/generated/components/erp/PhotoCropper.tsx",
     "components/parity/generated/components/erp/SetupNeeded.tsx",
+    "components/parity/generated/components/erp/StudentProfileOfficeTabs.tsx",
+    "components/parity/generated/components/erp/StudentProfileTabs.tsx",
     "components/parity/generated/components/erp/certs/CertificateDocument.tsx",
     "components/parity/generated/components/erp/certs/SheetPreview.tsx",
     "components/parity/generated/components/erp/transport/DriverList.tsx",
     "components/parity/generated/components/ui.tsx",
     "components/parity/generated/lib/actionPalette.tsx",
     "components/parity/generated/lib/csv.ts",
+    "components/parity/generated/lib/editorDrafts.ts",
     "components/parity/generated/lib/erpAppearance.tsx",
     "components/parity/generated/lib/erpAttendance.ts",
     "components/parity/generated/lib/erpCerts.ts",
@@ -144,6 +155,7 @@
     "components/parity/generated/lib/marksWorkbook.ts",
     "components/parity/generated/lib/spreadsheet.ts",
     "components/parity/generated/lib/useDialog.ts",
+    "components/parity/generated/lib/useUnsavedChanges.ts",
     "components/parity/generated/pages/attendance/today.tsx",
     "components/parity/generated/pages/birthdays.tsx",
     "components/parity/generated/pages/calendar.tsx",
@@ -151,6 +163,8 @@
     "components/parity/generated/pages/copy-check/sheet.tsx",
     "components/parity/generated/pages/exams/marks/sheet.tsx",
     "components/parity/generated/pages/exams/setup/edit.tsx",
+    "components/parity/generated/pages/fees/carry-forward.tsx",
+    "components/parity/generated/pages/fees/cheques.tsx",
     "components/parity/generated/pages/meetings/new.tsx",
     "components/parity/generated/pages/messages/detail.tsx",
     "components/parity/generated/pages/messages/new.tsx",

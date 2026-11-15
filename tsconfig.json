@@ -33,6 +33,7 @@
     "**/*.tsx",
     ".next-build-visual/types/**/*.ts",
     ".next-build/types/**/*.ts",
+    ".next-local/types/**/*.ts",
     ".next/types/**/*.ts",
     "next-env.d.ts"
   ],

@@ -1,0 +1,1445 @@
+{
+  "findings": [
+    {
+      "id": "search-unavailable-results",
+      "file": "parents/search-unavailable-results.png",
+      "url": "/search",
+      "title": "Mother Teresa Nobles Academy · Parents",
+      "text": "Search\nNo internet. Showing saved information.\nAsk AI Assistant: impossible-query\n\nNothing found in homework or notices.\n\nHome\nCalendar\nStudy\nFees\nProfile",
+      "width": 390,
+      "scrollWidth": 390,
+      "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+      "controls": [
+        {
+          "tag": "A",
+          "name": "Back",
+          "x": 6,
+          "y": 6,
+          "w": 44,
+          "h": 44,
+          "font": "16px",
+          "label": "Back",
+          "disabled": false
+        },
+        {
+          "tag": "INPUT",
+          "name": "Search or ask",
+          "x": 69,
+          "y": 129,
+          "w": 240,
+          "h": 40,
+          "font": "16px",
+          "label": "Search or ask",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Search by speaking",
+          "x": 321,
+          "y": 127,
+          "w": 44,
+          "h": 44,
+          "font": "16px",
+          "label": "Search by speaking",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Ask AI Assistant: impossible-query",
+          "x": 16,
+          "y": 197,
+          "w": 358,
+          "h": 50,
+          "font": "16px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "x": 0,
+          "y": 780,
+          "w": 78,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Calendar",
+          "x": 78,
+          "y": 780,
+          "w": 78,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Study",
+          "x": 156,
+          "y": 780,
+          "w": 78,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Fees",
+          "x": 234,
+          "y": 780,
+          "w": 78,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Profile",
+          "x": 312,
+          "y": 780,
+          "w": 78,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        }
+      ],
+      "small": [],
+      "unlabelled": [],
+      "clipped": [],
+      "typography": [
+        {
+          "tag": "H1",
+          "text": "Search",
+          "size": "18px",
+          "weight": "700",
+          "color": "rgb(22, 33, 58)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Search by speaking",
+          "size": "16px",
+          "weight": "400",
+          "color": "rgb(38, 46, 66)"
+        },
+        {
+          "tag": "P",
+          "text": "Nothing found in homework or notices.",
+          "size": "14px",
+          "weight": "400",
+          "color": "rgb(95, 104, 123)"
+        }
+      ],
+      "images": [],
+      "animations": [
+        {
+          "name": "search-glow-in",
+          "state": "finished",
+          "duration": 700,
+          "iterations": 1
+        },
+        {
+          "name": "search-glow-move",
+          "state": "running",
+          "duration": 2400,
+          "iterations": null
+        },
+        {
+          "name": "search-glow-out",
+          "state": "running",
+          "duration": 900,
+          "iterations": 1
+        }
+      ]
+    },
+    {
+      "id": "calendar-timetable",
+      "file": "parents/calendar-timetable.png",
+      "url": "/calendar",
+      "title": "Mother Teresa Nobles Academy · Parents",
+      "text": "Calendar\nPG\nAttendance\nTime table\nMon\n16\nTue\n17\nWed\n18\nThu\n19\nFri\n20\nSat\n21\nMonday\n8:00 – 8:40\nEnglish\nAnita Rathore\n8:40 – 9:20\nHindi\nKamla Devi\n9:20 – 10:00\nScience\nSuresh Meena\n10:00 – 10:40\nSocial Studies\nPooja Vyas\n10:40 – 11:00\nInterval\n11:00 – 11:40\nComputer\nVikram Singh\n11:40 – 12:20\nSanskrit\nHari Om Sharma\n12:20 – 1:00\nMaths\nRakesh Bishnoi\nHome\nCalendar\nStudy\nFees\nProfile",
+      "width": 390,
+      "scrollWidth": 390,
+      "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "name": "Menu",
+          "x": 6,
+          "y": 6,
+          "w": 44,
+          "h": 44,
+          "font": "16px",
+          "label": "Menu",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Switch child: Priya Garg",
+          "x": 340,
+          "y": 6,
+          "w": 44,
+          "h": 44,
+          "font": "16px",
+          "label": "Switch child: Priya Garg",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Attendance",
+          "x": 20,
+          "y": 68,
+          "w": 175,
+          "h": 40,
+          "font": "14.5px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Time table",
+          "x": 195,
+          "y": 68,
+          "w": 175,
+          "h": 40,
+          "font": "14.5px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Monday",
+          "x": 16,
+          "y": 132,
+          "w": 55,
+          "h": 52,
+          "font": "11.5px",
+          "label": "Monday",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Tuesday",
+          "x": 77,
+          "y": 132,
+          "w": 55,
+          "h": 52,
+          "font": "11.5px",
+          "label": "Tuesday",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Wednesday",
+          "x": 137,
+          "y": 132,
+          "w": 55,
+          "h": 52,
+          "font": "11.5px",
+          "label": "Wednesday",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Thursday",
+          "x": 198,
+          "y": 132,
+          "w": 55,
+          "h": 52,
+          "font": "11.5px",
+          "label": "Thursday",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Friday",
+          "x": 259,
+          "y": 132,
+          "w": 55,
+          "h": 52,
+          "font": "11.5px",
+          "label": "Friday",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Saturday",
+          "x": 319,
+          "y": 132,
+          "w": 55,
+          "h": 52,
+          "font": "11.5px",
+          "label": "Saturday",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "x": 0,
+          "y": 780,
+          "w": 78,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Calendar",
+          "x": 78,
+          "y": 780,
+          "w": 78,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Study",
+          "x": 156,
+          "y": 780,
+          "w": 78,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Fees",
+          "x": 234,
+          "y": 780,
+          "w": 78,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Profile",
+          "x": 312,
+          "y": 780,
+          "w": 78,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        }
+      ],
+      "small": [
+        {
+          "tag": "BUTTON",
+          "name": "Attendance",
+          "x": 20,
+          "y": 68,
+          "w": 175,
+          "h": 40,
+          "font": "14.5px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Time table",
+          "x": 195,
+          "y": 68,
+          "w": 175,
+          "h": 40,
+          "font": "14.5px",
+          "label": null,
+          "disabled": false
+        }
+      ],
+      "unlabelled": [],
+      "clipped": [],
+      "typography": [
+        {
+          "tag": "BUTTON",
+          "text": "Menu",
+          "size": "16px",
+          "weight": "400",
+          "color": "rgb(22, 33, 58)"
+        },
+        {
+          "tag": "H1",
+          "text": "Calendar",
+          "size": "18px",
+          "weight": "700",
+          "color": "rgb(22, 33, 58)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Switch child: Priya Garg",
+          "size": "16px",
+          "weight": "400",
+          "color": "rgb(22, 33, 58)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Attendance",
+          "size": "14.5px",
+          "weight": "500",
+          "color": "rgb(89, 98, 115)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Time table",
+          "size": "14.5px",
+          "weight": "600",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Monday",
+          "size": "11.5px",
+          "weight": "400",
+          "color": "rgba(255, 255, 255, 0.8)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Tuesday",
+          "size": "11.5px",
+          "weight": "400",
+          "color": "rgb(89, 98, 115)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Wednesday",
+          "size": "11.5px",
+          "weight": "400",
+          "color": "rgb(89, 98, 115)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Thursday",
+          "size": "11.5px",
+          "weight": "400",
+          "color": "rgb(89, 98, 115)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Friday",
+          "size": "11.5px",
+          "weight": "400",
+          "color": "rgb(89, 98, 115)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Saturday",
+          "size": "11.5px",
+          "weight": "400",
+          "color": "rgb(89, 98, 115)"
+        },
+        {
+          "tag": "H2",
+          "text": "Monday",
+          "size": "16px",
+          "weight": "600",
+          "color": "rgb(30, 44, 67)"
+        }
+      ],
+      "images": [],
+      "animations": [
+        {
+          "name": "study-from-right",
+          "state": "finished",
+          "duration": 380,
+          "iterations": 1
+        },
+        {
+          "name": "study-in",
+          "state": "running",
+          "duration": 500,
+          "iterations": 1
+        }
+      ]
+    },
+    {
+      "id": "exam-result",
+      "file": "parents/exam-result.png",
+      "url": "/exam?tab=result",
+      "title": "Mother Teresa Nobles Academy · Parents",
+      "text": "Exam\nPG\nSchedule\nResult\n\nHalf Yearly Exam\n\n517 / 600\n\n86.2% · Grade A2\n\nEnglish\n\n86/100\nGrade A2\n\nHindi\n\n91/100\nGrade A1\n\nMaths\n\n93/100\nGrade A1\n\nScience\n\n81/100\nGrade A2\n\nSocial Studies\n\n77/100\nGrade B1\n\nSanskrit\n\n89/100\nGrade A2\nAll results\nHalf Yearly Exam\n517 / 600 · 86.2%\nUnit Test 1\n256 / 300 · 85.3%\nHome\nCalendar\nStudy\nFees\nProfile",
+      "width": 390,
+      "scrollWidth": 375,
+      "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+      "controls": [
+        {
+          "tag": "A",
+          "name": "Back",
+          "x": 6,
+          "y": 6,
+          "w": 44,
+          "h": 44,
+          "font": "16px",
+          "label": "Back",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Switch child: Priya Garg",
+          "x": 325,
+          "y": 6,
+          "w": 44,
+          "h": 44,
+          "font": "16px",
+          "label": "Switch child: Priya Garg",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Schedule",
+          "x": 16,
+          "y": 64,
+          "w": 172,
+          "h": 48,
+          "font": "16px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Result",
+          "x": 188,
+          "y": 64,
+          "w": 172,
+          "h": 48,
+          "font": "16px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Half Yearly Exam517 / 600 · 86.2%",
+          "x": 17,
+          "y": 850,
+          "w": 341,
+          "h": 72,
+          "font": "16px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Unit Test 1256 / 300 · 85.3%",
+          "x": 17,
+          "y": 923,
+          "w": 341,
+          "h": 72,
+          "font": "16px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "x": 0,
+          "y": 780,
+          "w": 75,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Calendar",
+          "x": 75,
+          "y": 780,
+          "w": 75,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Study",
+          "x": 150,
+          "y": 780,
+          "w": 75,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Fees",
+          "x": 225,
+          "y": 780,
+          "w": 75,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Profile",
+          "x": 300,
+          "y": 780,
+          "w": 75,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        }
+      ],
+      "small": [],
+      "unlabelled": [],
+      "clipped": [],
+      "typography": [
+        {
+          "tag": "H1",
+          "text": "Exam",
+          "size": "18px",
+          "weight": "700",
+          "color": "rgb(22, 33, 58)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Switch child: Priya Garg",
+          "size": "16px",
+          "weight": "400",
+          "color": "rgb(22, 33, 58)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Schedule",
+          "size": "16px",
+          "weight": "500",
+          "color": "rgb(89, 98, 115)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Result",
+          "size": "16px",
+          "weight": "600",
+          "color": "rgb(13, 42, 94)"
+        },
+        {
+          "tag": "P",
+          "text": "Half Yearly Exam",
+          "size": "16px",
+          "weight": "500",
+          "color": "rgb(30, 44, 67)"
+        },
+        {
+          "tag": "P",
+          "text": "517 / 600",
+          "size": "28px",
+          "weight": "600",
+          "color": "rgb(30, 44, 67)"
+        },
+        {
+          "tag": "P",
+          "text": "86.2% · Grade A2",
+          "size": "14px",
+          "weight": "400",
+          "color": "rgb(89, 98, 115)"
+        },
+        {
+          "tag": "P",
+          "text": "English",
+          "size": "16px",
+          "weight": "500",
+          "color": "rgb(30, 44, 67)"
+        },
+        {
+          "tag": "P",
+          "text": "Hindi",
+          "size": "16px",
+          "weight": "500",
+          "color": "rgb(30, 44, 67)"
+        },
+        {
+          "tag": "P",
+          "text": "Maths",
+          "size": "16px",
+          "weight": "500",
+          "color": "rgb(30, 44, 67)"
+        },
+        {
+          "tag": "P",
+          "text": "Science",
+          "size": "16px",
+          "weight": "500",
+          "color": "rgb(30, 44, 67)"
+        },
+        {
+          "tag": "P",
+          "text": "Social Studies",
+          "size": "16px",
+          "weight": "500",
+          "color": "rgb(30, 44, 67)"
+        },
+        {
+          "tag": "P",
+          "text": "Sanskrit",
+          "size": "16px",
+          "weight": "500",
+          "color": "rgb(30, 44, 67)"
+        },
+        {
+          "tag": "H2",
+          "text": "All results",
+          "size": "20px",
+          "weight": "600",
+          "color": "rgb(30, 44, 67)"
+        }
+      ],
+      "images": [],
+      "animations": [
+        {
+          "name": "study-in",
+          "state": "finished",
+          "duration": 500,
+          "iterations": 1
+        },
+        {
+          "name": "study-in",
+          "state": "finished",
+          "duration": 500,
+          "iterations": 1
+        }
+      ]
+    },
+    {
+      "id": "study-pomodoro",
+      "file": "parents/study-pomodoro.png",
+      "url": "/study",
+      "title": "Mother Teresa Nobles Academy · Parents",
+      "text": "Study timer\nPG\nTimer\nPomodoro\nRound 1\nRound 2\nRound 3\nRound 4\nRound 1 of 4\n25:00\nReady to start\nEnglish\nHindi\nScience\nSocial Studies\nComputer\nSanskrit\nMaths\nStart round 1\nRounds today\n0\n\nNo rounds finished yet today\n\nHow Pomodoro works\nHome\nCalendar\nStudy\nFees\nProfile",
+      "width": 390,
+      "scrollWidth": 375,
+      "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "name": "Menu",
+          "x": 6,
+          "y": 6,
+          "w": 44,
+          "h": 44,
+          "font": "16px",
+          "label": "Menu",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Switch child: Priya Garg",
+          "x": 325,
+          "y": 6,
+          "w": 44,
+          "h": 44,
+          "font": "16px",
+          "label": "Switch child: Priya Garg",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Timer",
+          "x": 20,
+          "y": 68,
+          "w": 168,
+          "h": 40,
+          "font": "14.5px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Pomodoro",
+          "x": 188,
+          "y": 68,
+          "w": 168,
+          "h": 40,
+          "font": "14.5px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "English",
+          "x": 16,
+          "y": 445,
+          "w": 78,
+          "h": 36,
+          "font": "14px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Hindi",
+          "x": 100,
+          "y": 445,
+          "w": 64,
+          "h": 36,
+          "font": "14px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Science",
+          "x": 170,
+          "y": 445,
+          "w": 84,
+          "h": 36,
+          "font": "14px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Social Studies",
+          "x": 260,
+          "y": 445,
+          "w": 124,
+          "h": 36,
+          "font": "14px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Computer",
+          "x": 390,
+          "y": 445,
+          "w": 99,
+          "h": 36,
+          "font": "14px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Sanskrit",
+          "x": 495,
+          "y": 445,
+          "w": 83,
+          "h": 36,
+          "font": "14px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Maths",
+          "x": 584,
+          "y": 445,
+          "w": 70,
+          "h": 36,
+          "font": "14px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Start round 1",
+          "x": 96,
+          "y": 497,
+          "w": 182,
+          "h": 48,
+          "font": "16px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "x": 0,
+          "y": 780,
+          "w": 75,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Calendar",
+          "x": 75,
+          "y": 780,
+          "w": 75,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Study",
+          "x": 150,
+          "y": 780,
+          "w": 75,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Fees",
+          "x": 225,
+          "y": 780,
+          "w": 75,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Profile",
+          "x": 300,
+          "y": 780,
+          "w": 75,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        }
+      ],
+      "small": [
+        {
+          "tag": "BUTTON",
+          "name": "Timer",
+          "x": 20,
+          "y": 68,
+          "w": 168,
+          "h": 40,
+          "font": "14.5px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Pomodoro",
+          "x": 188,
+          "y": 68,
+          "w": 168,
+          "h": 40,
+          "font": "14.5px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "English",
+          "x": 16,
+          "y": 445,
+          "w": 78,
+          "h": 36,
+          "font": "14px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Hindi",
+          "x": 100,
+          "y": 445,
+          "w": 64,
+          "h": 36,
+          "font": "14px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Science",
+          "x": 170,
+          "y": 445,
+          "w": 84,
+          "h": 36,
+          "font": "14px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Social Studies",
+          "x": 260,
+          "y": 445,
+          "w": 124,
+          "h": 36,
+          "font": "14px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Computer",
+          "x": 390,
+          "y": 445,
+          "w": 99,
+          "h": 36,
+          "font": "14px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Sanskrit",
+          "x": 495,
+          "y": 445,
+          "w": 83,
+          "h": 36,
+          "font": "14px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Maths",
+          "x": 584,
+          "y": 445,
+          "w": 70,
+          "h": 36,
+          "font": "14px",
+          "label": null,
+          "disabled": false
+        }
+      ],
+      "unlabelled": [],
+      "clipped": [],
+      "typography": [
+        {
+          "tag": "BUTTON",
+          "text": "Menu",
+          "size": "16px",
+          "weight": "400",
+          "color": "rgb(22, 33, 58)"
+        },
+        {
+          "tag": "H1",
+          "text": "Study timer",
+          "size": "18px",
+          "weight": "700",
+          "color": "rgb(22, 33, 58)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Switch child: Priya Garg",
+          "size": "16px",
+          "weight": "400",
+          "color": "rgb(22, 33, 58)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Timer",
+          "size": "14.5px",
+          "weight": "500",
+          "color": "rgb(89, 98, 115)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Pomodoro",
+          "size": "14.5px",
+          "weight": "600",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "English",
+          "size": "14px",
+          "weight": "500",
+          "color": "rgb(155, 60, 27)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Hindi",
+          "size": "14px",
+          "weight": "400",
+          "color": "rgb(52, 65, 87)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Science",
+          "size": "14px",
+          "weight": "400",
+          "color": "rgb(52, 65, 87)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Social Studies",
+          "size": "14px",
+          "weight": "400",
+          "color": "rgb(52, 65, 87)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Computer",
+          "size": "14px",
+          "weight": "400",
+          "color": "rgb(52, 65, 87)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Sanskrit",
+          "size": "14px",
+          "weight": "400",
+          "color": "rgb(52, 65, 87)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Maths",
+          "size": "14px",
+          "weight": "400",
+          "color": "rgb(52, 65, 87)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Start round 1",
+          "size": "16px",
+          "weight": "600",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "H2",
+          "text": "Rounds today",
+          "size": "16px",
+          "weight": "600",
+          "color": "rgb(30, 44, 67)"
+        },
+        {
+          "tag": "P",
+          "text": "No rounds finished yet today",
+          "size": "13.5px",
+          "weight": "400",
+          "color": "rgb(89, 98, 115)"
+        },
+        {
+          "tag": "P",
+          "text": "Each round: 25 min study, then a 5 min break. The next round starts by itself.",
+          "size": "13px",
+          "weight": "400",
+          "color": "rgb(89, 98, 115)"
+        }
+      ],
+      "images": [],
+      "animations": [
+        {
+          "name": "study-from-right",
+          "state": "finished",
+          "duration": 380,
+          "iterations": 1
+        },
+        {
+          "name": "study-tick",
+          "state": "finished",
+          "duration": 320,
+          "iterations": 1
+        },
+        {
+          "name": "study-pop",
+          "state": "finished",
+          "duration": 420,
+          "iterations": 1
+        },
+        {
+          "name": "study-in",
+          "state": "finished",
+          "duration": 500,
+          "iterations": 1
+        }
+      ]
+    },
+    {
+      "id": "album-viewer",
+      "file": "parents/album-viewer.png",
+      "url": "/events/album?id=teachers",
+      "title": "Mother Teresa Nobles Academy · Parents",
+      "text": "Photos\nTeachers' Day\n\n5 Sept 2026 · 2 photos\n\nHome\nCalendar\nStudy\nFees\nProfile\n1 / 2",
+      "width": 390,
+      "scrollWidth": 390,
+      "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+      "controls": [
+        {
+          "tag": "A",
+          "name": "Back",
+          "x": 6,
+          "y": 6,
+          "w": 44,
+          "h": 44,
+          "font": "16px",
+          "label": "Back",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Teachers' Day 1",
+          "x": 16,
+          "y": 132,
+          "w": 117,
+          "h": 80,
+          "font": "16px",
+          "label": "Teachers' Day 1",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Save to phone",
+          "x": 95,
+          "y": 174,
+          "w": 36,
+          "h": 36,
+          "font": "16px",
+          "label": "Save to phone",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Teachers' Day 2",
+          "x": 137,
+          "y": 132,
+          "w": 117,
+          "h": 80,
+          "font": "16px",
+          "label": "Teachers' Day 2",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Save to phone",
+          "x": 215,
+          "y": 174,
+          "w": 36,
+          "h": 36,
+          "font": "16px",
+          "label": "Save to phone",
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Home",
+          "x": 0,
+          "y": 780,
+          "w": 78,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Calendar",
+          "x": 78,
+          "y": 780,
+          "w": 78,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Study",
+          "x": 156,
+          "y": 780,
+          "w": 78,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Fees",
+          "x": 234,
+          "y": 780,
+          "w": 78,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "A",
+          "name": "Profile",
+          "x": 312,
+          "y": 780,
+          "w": 78,
+          "h": 64,
+          "font": "12px",
+          "label": null,
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Close",
+          "x": 8,
+          "y": 0,
+          "w": 48,
+          "h": 48,
+          "font": "16px",
+          "label": "Close",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Save to phone",
+          "x": 334,
+          "y": 0,
+          "w": 48,
+          "h": 48,
+          "font": "16px",
+          "label": "Save to phone",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Next",
+          "x": 338,
+          "y": 402,
+          "w": 48,
+          "h": 48,
+          "font": "16px",
+          "label": "Next",
+          "disabled": false
+        }
+      ],
+      "small": [
+        {
+          "tag": "BUTTON",
+          "name": "Save to phone",
+          "x": 95,
+          "y": 174,
+          "w": 36,
+          "h": 36,
+          "font": "16px",
+          "label": "Save to phone",
+          "disabled": false
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Save to phone",
+          "x": 215,
+          "y": 174,
+          "w": 36,
+          "h": 36,
+          "font": "16px",
+          "label": "Save to phone",
+          "disabled": false
+        }
+      ],
+      "unlabelled": [],
+      "clipped": [],
+      "typography": [
+        {
+          "tag": "H1",
+          "text": "Photos",
+          "size": "18px",
+          "weight": "700",
+          "color": "rgb(22, 33, 58)"
+        },
+        {
+          "tag": "H2",
+          "text": "Teachers' Day",
+          "size": "20px",
+          "weight": "600",
+          "color": "rgb(30, 44, 67)"
+        },
+        {
+          "tag": "P",
+          "text": "5 Sept 2026 · 2 photos",
+          "size": "14px",
+          "weight": "400",
+          "color": "rgb(89, 98, 115)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Teachers' Day 1",
+          "size": "16px",
+          "weight": "400",
+          "color": "rgb(30, 44, 67)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Save to phone",
+          "size": "16px",
+          "weight": "400",
+          "color": "rgb(30, 44, 67)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Teachers' Day 2",
+          "size": "16px",
+          "weight": "400",
+          "color": "rgb(30, 44, 67)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Save to phone",
+          "size": "16px",
+          "weight": "400",
+          "color": "rgb(30, 44, 67)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Close",
+          "size": "16px",
+          "weight": "400",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Save to phone",
+          "size": "16px",
+          "weight": "400",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Next",
+          "size": "16px",
+          "weight": "400",
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "images": [
+        {
+          "alt": "",
+          "loaded": true,
+          "src": "/img/events/teachers.webp"
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "src": "/img/events/annual.webp"
+        },
+        {
+          "alt": "Teachers' Day 1",
+          "loaded": true,
+          "src": "/img/events/teachers.webp"
+        }
+      ],
+      "animations": [
+        {
+          "name": "fadeIn",
+          "state": "finished",
+          "duration": 150,
+          "iterations": 1
+        }
+      ]
+    },
+    {
+      "test": "Album viewer dialog semantics",
+      "dialogs": 1,
+      "active": "BODY"
+    }
+  ],
+  "errors": [],
+  "blocked": []
+}

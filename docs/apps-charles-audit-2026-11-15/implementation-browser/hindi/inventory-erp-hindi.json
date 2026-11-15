@@ -1,0 +1,1634 @@
+[
+  {
+    "mode": "erp",
+    "requested": "/erp/messages/new/",
+    "file": "erp/erp--messages--new-360.png",
+    "url": "/erp/messages/new/",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "नया मैसेज\n\nमाता-पिता को WhatsApp पर, हर एक के बच्चे के नाम के साथ\n\nकिसे\nपूरा स्कूल\nकक्षाएँ\nसेक्शन\nफ़ीस बाकी\nमैसेज\nहिंदी\nEnglish\nअवकाश की सूचना\nअभिभावक-शिक्षक बैठक\nपरीक्षा की सूचना\nफीस बकाया\nसूचना\nReview school notice\nशीर्षक (अपने रजिस्टर के लिए)\nमैसेज का पाठ\n\n0/1000\n\nहर माता-पिता के लिए भरेगा:\n{name}\n{class}\n{father}\n{school}\nपहले माता-पिता को ऐसा मिलेगा\nस्कूल वेबसाइट के नोटिस बोर्ड पर भी दिखाएँ\nवेबसाइट के ऊपर सिर्फ़ शीर्षक दिखेगा।\nसेव करें और भेजना शुरू करें\nहोम\nबच्चे\nरिपोर्ट\nहाज़िरी\nप्रोफ़ाइल",
+    "width": 360,
+    "scrollWidth": 345,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "वापस",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "वापस",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "पूरा स्कूल",
+        "x": 20,
+        "y": 157,
+        "w": 73,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "कक्षाएँ",
+        "x": 97,
+        "y": 157,
+        "w": 73,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "सेक्शन",
+        "x": 175,
+        "y": 157,
+        "w": 73,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "फ़ीस बाकी",
+        "x": 252,
+        "y": 157,
+        "w": 73,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "हिंदी",
+        "x": 186,
+        "y": 223,
+        "w": 69,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "English",
+        "x": 258,
+        "y": 223,
+        "w": 69,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "अवकाश की सूचना",
+        "x": 16,
+        "y": 279,
+        "w": 116,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "अभिभावक-शिक्षक बैठक",
+        "x": 138,
+        "y": 279,
+        "w": 151,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "परीक्षा की सूचना",
+        "x": 16,
+        "y": 329,
+        "w": 105,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "फीस बकाया",
+        "x": 127,
+        "y": 329,
+        "w": 85,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "सूचना",
+        "x": 218,
+        "y": 329,
+        "w": 55,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Review school notice",
+        "x": 16,
+        "y": 379,
+        "w": 159,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "जैसे: दिवाली की छुट्टियाँ",
+        "x": 31,
+        "y": 444,
+        "w": 283,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "TEXTAREA",
+        "name": "ऊपर से तैयार मैसेज चुनें, या अपना लिखें।",
+        "x": 16,
+        "y": 537,
+        "w": 313,
+        "h": 182,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "{name}",
+        "x": 141,
+        "y": 745,
+        "w": 67,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "{class}",
+        "x": 214,
+        "y": 745,
+        "w": 74,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "{father}",
+        "x": 16,
+        "y": 795,
+        "w": 81,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "{school}",
+        "x": 103,
+        "y": 795,
+        "w": 81,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "",
+        "x": 30,
+        "y": 990,
+        "w": 20,
+        "h": 20,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "सेव करें और भेजना शुरू करें",
+        "x": 16,
+        "y": 1064,
+        "w": 313,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "होम",
+        "x": 0,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "बच्चे",
+        "x": 69,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "रिपोर्ट",
+        "x": 138,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "हाज़िरी",
+        "x": 207,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "प्रोफ़ाइल",
+        "x": 276,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "नया मैसेज",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "P",
+        "text": "माता-पिता को WhatsApp पर, हर एक के बच्चे के नाम के साथ",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "H2",
+        "text": "किसे",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "पूरा स्कूल",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "कक्षाएँ",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "सेक्शन",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "फ़ीस बाकी",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "H2",
+        "text": "मैसेज",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "हिंदी",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "English",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "अवकाश की सूचना",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "अभिभावक-शिक्षक बैठक",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "परीक्षा की सूचना",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "फीस बकाया",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "सूचना",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Review school notice",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "P",
+        "text": "0/1000",
+        "size": "12px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "{name}",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "{class}",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "{father}",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "{school}",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "H2",
+        "text": "पहले माता-पिता को ऐसा मिलेगा",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "सेव करें और भेजना शुरू करें",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "shimmer",
+        "state": "running",
+        "duration": 1500,
+        "iterations": null
+      },
+      {
+        "name": "shimmer",
+        "state": "running",
+        "duration": 1500,
+        "iterations": null
+      }
+    ]
+  },
+  {
+    "mode": "erp",
+    "requested": "/erp/students/admission/",
+    "file": "erp/erp--students--admission-360.png",
+    "url": "/erp/students/admission/",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "प्रवेश फ़ॉर्म\n1\nबच्चा\n2\nकक्षा\n3\nपिछला स्कूल\n4\nपरिवार\n5\nपता और बस\n6\nकागज़\n7\nजाँचें और सेव\nबच्चा\nचरण 1 / 7\n\nसब कुछ जन्म प्रमाण पत्र के अनुसार लिखें।\n\nपासपोर्ट फ़ोटो\n\nसाफ़ चेहरा, सादा पीछे। ID कार्ड, रिपोर्ट कार्ड और पेरेंट ऐप में दिखेगी।\n\nफ़ोटो लें या चुनें\nनाम और जन्म\nपूरा नाम (English) *\nनाम हिंदी में\nTC और सर्टिफ़िकेट के लिए\n\nलिंग *\n\nलड़का\nलड़की\nअन्य\nजन्म तिथि *\n1 अप्रैल को उम्र\nजन्म स्थान\nपहचान\nआधार नंबर\nधर्म - Hindu\nजाति\n\nश्रेणी *\n\nGeneral\nOBC\nMBC\nSC\nST\nEWS\nराष्ट्रीयता\nमातृभाषा - Hindi\nसेहत\n\nब्लड ग्रुप\n\nA+\nA-\nB+\nB-\nO+\nO-\nAB+\nAB-\nसेहत की जानकारी (एलर्जी, बीमारी, विशेष ज़रूरत)\nआगे: कक्षा\nहोम\nबच्चे\nरिपोर्ट\nहाज़िरी\nप्रोफ़ाइल",
+    "width": 360,
+    "scrollWidth": 345,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "वापस",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "वापस",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "1बच्चा",
+        "x": 16,
+        "y": 77,
+        "w": 75,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "2कक्षा",
+        "x": 97,
+        "y": 77,
+        "w": 74,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "3पिछला स्कूल",
+        "x": 177,
+        "y": 77,
+        "w": 111,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "4परिवार",
+        "x": 295,
+        "y": 77,
+        "w": 84,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "5पता और बस",
+        "x": 385,
+        "y": 77,
+        "w": 111,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "6कागज़",
+        "x": 501,
+        "y": 77,
+        "w": 82,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "7जाँचें और सेव",
+        "x": 589,
+        "y": 77,
+        "w": 114,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "पासपोर्ट फ़ोटो",
+        "x": 31,
+        "y": 229,
+        "w": 84,
+        "h": 104,
+        "font": "11.5px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "फ़ोटो लें या चुनें",
+        "x": 129,
+        "y": 286,
+        "w": 124,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Aarav Singh Rathore",
+        "x": 46,
+        "y": 422,
+        "w": 253,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "आरव सिंह राठौड़",
+        "x": 46,
+        "y": 496,
+        "w": 253,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "लड़का",
+        "x": 31,
+        "y": 589,
+        "w": 63,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "लड़की",
+        "x": 102,
+        "y": 589,
+        "w": 63,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "अन्य",
+        "x": 173,
+        "y": 589,
+        "w": 54,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "adm-dob",
+        "x": 46,
+        "y": 656,
+        "w": 81,
+        "h": 42,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "",
+        "x": 193,
+        "y": 657,
+        "w": 107,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Barmer",
+        "x": 46,
+        "y": 732,
+        "w": 253,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "12 digits",
+        "x": 46,
+        "y": 872,
+        "w": 253,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "धर्म - Hindu",
+        "x": 31,
+        "y": 935,
+        "w": 137,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "adm-caste",
+        "x": 193,
+        "y": 946,
+        "w": 107,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "General",
+        "x": 31,
+        "y": 1039,
+        "w": 83,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "OBC",
+        "x": 122,
+        "y": 1039,
+        "w": 63,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "MBC",
+        "x": 193,
+        "y": 1039,
+        "w": 63,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "SC",
+        "x": 264,
+        "y": 1039,
+        "w": 50,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "ST",
+        "x": 31,
+        "y": 1091,
+        "w": 47,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "EWS",
+        "x": 86,
+        "y": 1091,
+        "w": 61,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "adm-nationality",
+        "x": 46,
+        "y": 1158,
+        "w": 107,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "मातृभाषा - Hindi",
+        "x": 178,
+        "y": 1147,
+        "w": 137,
+        "h": 65,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "A+",
+        "x": 31,
+        "y": 1320,
+        "w": 49,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "A-",
+        "x": 88,
+        "y": 1320,
+        "w": 48,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "B+",
+        "x": 143,
+        "y": 1320,
+        "w": 49,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "B-",
+        "x": 200,
+        "y": 1320,
+        "w": 48,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "O+",
+        "x": 256,
+        "y": 1320,
+        "w": 51,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "O-",
+        "x": 31,
+        "y": 1372,
+        "w": 50,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "AB+",
+        "x": 89,
+        "y": 1372,
+        "w": 58,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "AB-",
+        "x": 156,
+        "y": 1372,
+        "w": 57,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "जैसे अस्थमा",
+        "x": 46,
+        "y": 1496,
+        "w": 253,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "विशेष ज़रूरत वाला बच्चा (CWSN)",
+        "x": 266,
+        "y": 1569,
+        "w": 48,
+        "h": 28,
+        "font": "16px",
+        "label": "विशेष ज़रूरत वाला बच्चा (CWSN)",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "जैसे बाएँ गाल पर तिल",
+        "x": 46,
+        "y": 1630,
+        "w": 253,
+        "h": 40,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "आगे: कक्षा",
+        "x": 16,
+        "y": 1508,
+        "w": 313,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "होम",
+        "x": 0,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "बच्चे",
+        "x": 69,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "रिपोर्ट",
+        "x": 138,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "हाज़िरी",
+        "x": 207,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "प्रोफ़ाइल",
+        "x": 276,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [
+      {
+        "tag": "BUTTON",
+        "name": "विशेष ज़रूरत वाला बच्चा (CWSN)",
+        "x": 266,
+        "y": 1569,
+        "w": 48,
+        "h": 28,
+        "font": "16px",
+        "label": "विशेष ज़रूरत वाला बच्चा (CWSN)",
+        "disabled": false
+      }
+    ],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "प्रवेश फ़ॉर्म",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "1बच्चा",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2कक्षा",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "3पिछला स्कूल",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "4परिवार",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "5पता और बस",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "6कागज़",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "7जाँचें और सेव",
+        "size": "13px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "H2",
+        "text": "बच्चा",
+        "size": "17px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "सब कुछ जन्म प्रमाण पत्र के अनुसार लिखें।",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "पासपोर्ट फ़ोटो",
+        "size": "11.5px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "P",
+        "text": "साफ़ चेहरा, सादा पीछे। ID कार्ड, रिपोर्ट कार्ड और पेरेंट ऐप में दिखेगी।",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "फ़ोटो लें या चुनें",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H3",
+        "text": "नाम और जन्म",
+        "size": "15.5px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "लिंग *",
+        "size": "12.5px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "लड़का",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "लड़की",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "अन्य",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H3",
+        "text": "पहचान",
+        "size": "15.5px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "धर्म - Hindu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "श्रेणी *",
+        "size": "12.5px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "General",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "OBC",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "MBC",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "SC",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "ST",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "EWS",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "मातृभाषा - Hindi",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H3",
+        "text": "सेहत",
+        "size": "15.5px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "ब्लड ग्रुप",
+        "size": "12.5px",
+        "weight": "600",
+        "color": "rgb(94, 102, 109)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "A+",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "A-",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "B+",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "B-",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "O+",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "O-",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "AB+",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "AB-",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "विशेष ज़रूरत वाला बच्चा (CWSN)",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "आगे: कक्षा",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  },
+  {
+    "mode": "erp",
+    "requested": "/erp/staff/payroll/",
+    "file": "erp/erp--staff--payroll-360.png",
+    "url": "/erp/staff/payroll/",
+    "title": "SMS Barmer Review School · Staff",
+    "text": "सैलरी\nNovember 2026\nकुल सैलरी\n₹1,04,800\nदे दी\n₹52,400\nदेनी बाकी\n₹52,400\nसैलरी तय नहीं\n2\nबैंक शीट डाउनलोड\nदोबारा हिसाब\nएक साथ दें\nNS\nNeha Sharma\nTeacher · 30/30 दिन\n₹26,200\nदी गई\nRM\nRakesh Mehta\nTeacher · 30/30 दिन\n₹26,200\nदी गई\nKD\nKamla Devi\nTeacher · 30/30 दिन\n₹26,200\nबाकी\nMS\nManish Singh\nTeacher · 30/30 दिन\n₹26,200\nबाकी\nPV\nPooja Verma\nTeacher\nबनी नहीं\nSS\nSanjay Soni\nTeacher\nबनी नहीं\nSR\nSunita Rao\nOffice Clerk\nसैलरी तय करें\nML\nMohan Lal\nOffice Clerk\nसैलरी तय करें\nहोम\nबच्चे\nरिपोर्ट\nहाज़िरी\nप्रोफ़ाइल",
+    "width": 360,
+    "scrollWidth": 345,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "मेन्यू",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "मेन्यू",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "पिछला महीना",
+        "x": 16,
+        "y": 77,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "पिछला महीना",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "अगला महीना",
+        "x": 285,
+        "y": 77,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "अगला महीना",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "बैंक शीट डाउनलोड",
+        "x": 16,
+        "y": 308,
+        "w": 313,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "दोबारा हिसाब",
+        "x": 16,
+        "y": 366,
+        "w": 211,
+        "h": 48,
+        "font": "15px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "एक साथ दें",
+        "x": 235,
+        "y": 366,
+        "w": 94,
+        "h": 48,
+        "font": "15px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "NSNeha SharmaTeacher · 30/30 दिन₹26,200दी गई",
+        "x": 33,
+        "y": 443,
+        "w": 279,
+        "h": 75,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "RMRakesh MehtaTeacher · 30/30 दिन₹26,200दी गई",
+        "x": 33,
+        "y": 562,
+        "w": 279,
+        "h": 75,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "KDKamla DeviTeacher · 30/30 दिन₹26,200बाकी",
+        "x": 33,
+        "y": 681,
+        "w": 279,
+        "h": 75,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "MSManish SinghTeacher · 30/30 दिन₹26,200बाकी",
+        "x": 33,
+        "y": 800,
+        "w": 279,
+        "h": 75,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "PVPooja VermaTeacherबनी नहीं",
+        "x": 33,
+        "y": 919,
+        "w": 279,
+        "h": 72,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "SSSanjay SoniTeacherबनी नहीं",
+        "x": 33,
+        "y": 1035,
+        "w": 279,
+        "h": 72,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "SRSunita RaoOffice Clerkसैलरी तय करें",
+        "x": 33,
+        "y": 1151,
+        "w": 279,
+        "h": 72,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "MLMohan LalOffice Clerkसैलरी तय करें",
+        "x": 33,
+        "y": 1267,
+        "w": 279,
+        "h": 72,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "होम",
+        "x": 0,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "बच्चे",
+        "x": 69,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "रिपोर्ट",
+        "x": 138,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "हाज़िरी",
+        "x": 207,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "प्रोफ़ाइल",
+        "x": 276,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "मेन्यू",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "सैलरी",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "पिछला महीना",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "अगला महीना",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "बैंक शीट डाउनलोड",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "दोबारा हिसाब",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "एक साथ दें",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "NSNeha SharmaTeacher · 30/30 दिन₹26,200दी गई",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "RMRakesh MehtaTeacher · 30/30 दिन₹26,200दी गई",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "KDKamla DeviTeacher · 30/30 दिन₹26,200बाकी",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "MSManish SinghTeacher · 30/30 दिन₹26,200बाकी",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "PVPooja VermaTeacherबनी नहीं",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "SSSanjay SoniTeacherबनी नहीं",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "SRSunita RaoOffice Clerkसैलरी तय करें",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "MLMohan LalOffice Clerkसैलरी तय करें",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  }
+]

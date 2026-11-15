@@ -48,3 +48,4 @@ next-env.d.ts
 /.verification/
 
 /.next-action-build/
+/.next-apps-charles-build/

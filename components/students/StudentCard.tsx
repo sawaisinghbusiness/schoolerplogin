@@ -10,7 +10,7 @@ const dob = (value?: string) => value ? new Date(value + "T00:00:00").toLocaleDa
 /** A working identity summary. Printed school cards have their own document layout. */
 export function StudentCard({ student: s, schoolName, schoolShort }: { student: Student; schoolName: string; schoolShort: string }) {
   return (
-    <section className="overflow-hidden rounded-lg border border-slate-200 bg-white" aria-label={`${s.name}, identity summary`}>
+    <section className="overflow-hidden !rounded-[6px] border border-[#F2D4D4] bg-white" aria-label={`${s.name}, identity summary`}>
       <div className="flex items-center gap-3 border-b border-slate-100 px-4 py-3">
         <span className="grid h-7 w-7 shrink-0 place-items-center rounded bg-slate-100 text-[10px] font-semibold text-slate-600" aria-hidden>{schoolShort}</span>
         <span className="truncate text-xs font-medium text-slate-600">{schoolName}</span>
@@ -18,16 +18,17 @@ export function StudentCard({ student: s, schoolName, schoolShort }: { student: 
       </div>
       <div className="flex items-center gap-4 px-4 py-4">
         {s.photoUrl ? <img src={s.photoUrl} alt="" className="h-[76px] w-[64px] shrink-0 rounded-md border border-slate-200 object-cover" /> : <span className="grid h-[76px] w-[64px] shrink-0 place-items-center rounded-md border border-slate-200 bg-slate-50 text-xl font-medium text-slate-500" aria-hidden>{initials(s.name)}</span>}
-        <div className="min-w-0">
+        <div className="min-w-0 flex-1">
           <h3 className="break-words text-xl font-semibold leading-tight text-slate-900">{s.name}</h3>
           <p className="mt-1.5 text-sm text-slate-600">Class {s.classSec}{s.rollNo ? ` · Roll ${s.rollNo}` : ""}</p>
           <p className="mt-1 text-xs text-slate-500">SR no. <span className="font-medium text-slate-700">{s.srNo || "—"}</span></p>
         </div>
+        {/* Admission no. and date of birth on the right, under "Active student" (that side was empty). */}
+        <dl className="shrink-0 space-y-2.5 text-right">
+          <Field label="Admission no." value={s.admissionNo || "—"} />
+          <Field label="Date of birth" value={dob(s.dob)} />
+        </dl>
       </div>
-      <dl className="grid grid-cols-2 gap-4 border-t border-slate-100 px-4 py-3">
-        <Field label="Admission no." value={s.admissionNo || "—"} />
-        <Field label="Date of birth" value={dob(s.dob)} />
-      </dl>
       <details className="group border-t border-slate-100">
         <summary className="flex min-h-[42px] cursor-pointer list-none items-center justify-between px-4 text-xs font-medium text-slate-600 [&::-webkit-details-marker]:hidden">Family &amp; contact details<ChevronDown className="h-3.5 w-3.5 transition-transform group-open:rotate-180 motion-reduce:transition-none" aria-hidden /></summary>
         <div className="space-y-3 px-4 pb-4">

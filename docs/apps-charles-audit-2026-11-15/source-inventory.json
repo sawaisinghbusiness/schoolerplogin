@@ -1,0 +1,2228 @@
+[
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/assistant/",
+    "file": "app/(app)/assistant/page.tsx",
+    "lines": 292,
+    "targets": [
+      "lib/api.ts",
+      "lib/erpMode.ts",
+      "lib/staff.tsx",
+      "lib/i18n.tsx",
+      "components/SahayakThinking.tsx",
+      "components/SahayakOwl.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/attendance/",
+    "file": "app/(app)/attendance/page.tsx",
+    "lines": 232,
+    "targets": [
+      "lib/api.ts",
+      "lib/toast.tsx",
+      "lib/staff.tsx",
+      "lib/i18n.tsx",
+      "components/ui.tsx",
+      "components/MyMonth.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "tab",
+      "id"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/attendance/leave/",
+    "file": "app/(app)/erp/attendance/leave/page.tsx",
+    "lines": 157,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/attendance/mark/",
+    "file": "app/(app)/erp/attendance/mark/page.tsx",
+    "lines": 110,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/erpAttendance.ts",
+      "components/erp/ErpRollCall.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "date",
+      "class",
+      "section"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/attendance/mark/section/",
+    "file": "app/(app)/erp/attendance/mark/section/page.tsx",
+    "lines": 16,
+    "targets": [
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/attendance/register/",
+    "file": "app/(app)/erp/attendance/register/page.tsx",
+    "lines": 324,
+    "targets": [
+      "lib/useErpSession.ts",
+      "lib/spreadsheet.ts",
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/erpRegister.ts",
+      "components/erp/register/PrintRegister.tsx",
+      "components/ui.tsx",
+      "lib/erpCerts.ts"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/attendance/today/",
+    "file": "app/(app)/erp/attendance/today/page.tsx",
+    "lines": 253,
+    "targets": [
+      "lib/api.ts",
+      "lib/toast.tsx",
+      "lib/i18n.tsx",
+      "lib/erpAttendance.ts",
+      "lib/erpStaff.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/birthdays/",
+    "file": "app/(app)/erp/birthdays/page.tsx",
+    "lines": 112,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/calendar/",
+    "file": "app/(app)/erp/calendar/page.tsx",
+    "lines": 302,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/useErpSession.ts",
+      "lib/format.ts",
+      "lib/toast.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/copy-check/",
+    "file": "app/(app)/erp/copy-check/page.tsx",
+    "lines": 175,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/erpStaff.ts",
+      "components/ui.tsx",
+      "components/erp/SetupNeeded.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/copy-check/sheet/",
+    "file": "app/(app)/erp/copy-check/sheet/page.tsx",
+    "lines": 240,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpStaff.ts",
+      "components/ui.tsx",
+      "components/erp/SetupNeeded.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "id",
+      "section"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/exams/marks/",
+    "file": "app/(app)/erp/exams/marks/page.tsx",
+    "lines": 126,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/erpExams.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "exam"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/exams/marks/sheet/",
+    "file": "app/(app)/erp/exams/marks/sheet/page.tsx",
+    "lines": 276,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/spreadsheet.ts",
+      "lib/marksWorkbook.ts",
+      "lib/erpGrading.ts",
+      "lib/erpExams.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "exam",
+      "section",
+      "subject"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/exams/report-cards/",
+    "file": "app/(app)/erp/exams/report-cards/page.tsx",
+    "lines": 224,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/erpCerts.ts",
+      "lib/erpExams.ts",
+      "components/erp/report/ReportCardDocument.tsx",
+      "components/erp/certs/SheetPreview.tsx",
+      "components/erp/PrintReportCards.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "exam",
+      "section"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/exams/setup/edit/",
+    "file": "app/(app)/erp/exams/setup/edit/page.tsx",
+    "lines": 309,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpGrading.ts",
+      "lib/erpExams.ts",
+      "lib/erpExamSetup.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [
+      "/erp/exams/setup/"
+    ],
+    "query": [
+      "id"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/exams/setup/",
+    "file": "app/(app)/erp/exams/setup/page.tsx",
+    "lines": 399,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpExams.ts",
+      "lib/erpExamSetup.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/fees/collect/",
+    "file": "app/(app)/erp/fees/collect/page.tsx",
+    "lines": 523,
+    "targets": [
+      "lib/useErpSession.ts",
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/toast.tsx",
+      "lib/erpFeeEngine.ts",
+      "lib/erpFeeHeads.ts",
+      "lib/erpFees.ts",
+      "lib/erpStudents.ts",
+      "lib/erpCerts.ts",
+      "components/erp/FeeReceiptModal.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "student"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/fees/dues/",
+    "file": "app/(app)/erp/fees/dues/page.tsx",
+    "lines": 420,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/spreadsheet.ts",
+      "lib/format.ts",
+      "lib/toast.tsx",
+      "lib/erpDues.ts",
+      "lib/erpStudents.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/fees/online/",
+    "file": "app/(app)/erp/fees/online/page.tsx",
+    "lines": 373,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/toast.tsx",
+      "lib/erpFees.ts",
+      "lib/erpCerts.ts",
+      "components/erp/FeeReceiptModal.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/fees/receipts/",
+    "file": "app/(app)/erp/fees/receipts/page.tsx",
+    "lines": 312,
+    "targets": [
+      "lib/useErpSession.ts",
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/spreadsheet.ts",
+      "lib/format.ts",
+      "lib/toast.tsx",
+      "lib/erpReceipts.ts",
+      "lib/erpCerts.ts",
+      "components/erp/FeeReceiptModal.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/fees/reports/",
+    "file": "app/(app)/erp/fees/reports/page.tsx",
+    "lines": 408,
+    "targets": [
+      "lib/useErpSession.ts",
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/spreadsheet.ts",
+      "lib/erpReports.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/fees/setup/",
+    "file": "app/(app)/erp/fees/setup/page.tsx",
+    "lines": 773,
+    "targets": [
+      "lib/useErpSession.ts",
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpFeeEngine.ts",
+      "lib/erpStudents.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/homework/",
+    "file": "app/(app)/erp/homework/page.tsx",
+    "lines": 344,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/format.ts",
+      "lib/timetable.ts",
+      "components/ui.tsx",
+      "components/HomeworkFiles.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/meetings/new/",
+    "file": "app/(app)/erp/meetings/new/page.tsx",
+    "lines": 129,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [
+      "/erp/meetings/"
+    ],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/meetings/",
+    "file": "app/(app)/erp/meetings/page.tsx",
+    "lines": 191,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/messages/detail/",
+    "file": "app/(app)/erp/messages/detail/page.tsx",
+    "lines": 205,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpMessages.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [
+      "/erp/messages/"
+    ],
+    "query": [
+      "id"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/messages/new/",
+    "file": "app/(app)/erp/messages/new/page.tsx",
+    "lines": 299,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpMessages.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/messages/",
+    "file": "app/(app)/erp/messages/page.tsx",
+    "lines": 107,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/erpMessages.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/parent-chats/chat/",
+    "file": "app/(app)/erp/parent-chats/chat/page.tsx",
+    "lines": 92,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "id"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/parent-chats/",
+    "file": "app/(app)/erp/parent-chats/page.tsx",
+    "lines": 103,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/report/",
+    "file": "app/(app)/erp/report/page.tsx",
+    "lines": 440,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/staff.tsx",
+      "lib/erpDashboard.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/reports/",
+    "file": "app/(app)/erp/reports/page.tsx",
+    "lines": 7,
+    "targets": [
+      "lib/i18n.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/settings/classes/",
+    "file": "app/(app)/erp/settings/classes/page.tsx",
+    "lines": 902,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpExamSetup.ts",
+      "lib/erpSettings.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/settings/data/",
+    "file": "app/(app)/erp/settings/data/page.tsx",
+    "lines": 5,
+    "targets": [
+      "lib/i18n.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/settings/",
+    "file": "app/(app)/erp/settings/page.tsx",
+    "lines": 445,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpSettings.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/settings/templates/",
+    "file": "app/(app)/erp/settings/templates/page.tsx",
+    "lines": 170,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpMessages.ts",
+      "components/ui.tsx",
+      "components/erp/SetupNeeded.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/settings/users/",
+    "file": "app/(app)/erp/settings/users/page.tsx",
+    "lines": 496,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpSettings.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/settings/whatsapp/",
+    "file": "app/(app)/erp/settings/whatsapp/page.tsx",
+    "lines": 348,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpSettings.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/soon/",
+    "file": "app/(app)/erp/soon/page.tsx",
+    "lines": 52,
+    "targets": [
+      "lib/i18n.tsx",
+      "lib/erpSoon.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "m"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/staff/allocation/",
+    "file": "app/(app)/erp/staff/allocation/page.tsx",
+    "lines": 170,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpStaff.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/staff/attendance/",
+    "file": "app/(app)/erp/staff/attendance/page.tsx",
+    "lines": 796,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpStaff.ts",
+      "components/erp/staffRegister/StaffRegisterGrid.tsx",
+      "components/erp/staffRegister/PrintStaffRegister.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "tab"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/staff/class-teachers/",
+    "file": "app/(app)/erp/staff/class-teachers/page.tsx",
+    "lines": 119,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpStaff.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/staff/detail/",
+    "file": "app/(app)/erp/staff/detail/page.tsx",
+    "lines": 520,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "components/erp/PhotoCropper.tsx",
+      "lib/erpStaff.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [
+      "/erp/staff/"
+    ],
+    "query": [
+      "id"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/staff/excel/",
+    "file": "app/(app)/erp/staff/excel/page.tsx",
+    "lines": 50,
+    "targets": [
+      "lib/api.ts",
+      "lib/csv.ts",
+      "lib/erpStaff.ts",
+      "components/erp/ExcelRoundTrip.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/staff/new/",
+    "file": "app/(app)/erp/staff/new/page.tsx",
+    "lines": 216,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpStaff.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "id"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/staff/",
+    "file": "app/(app)/erp/staff/page.tsx",
+    "lines": 184,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/erpStaff.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [
+      "/erp/staff/new/"
+    ],
+    "query": [
+      "new"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/staff/payroll/",
+    "file": "app/(app)/erp/staff/payroll/page.tsx",
+    "lines": 668,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/spreadsheet.ts",
+      "lib/toast.tsx",
+      "lib/erpCerts.ts",
+      "lib/erpPayroll.ts",
+      "components/erp/PayslipDocument.tsx",
+      "components/erp/certs/SheetPreview.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/students/admission/",
+    "file": "app/(app)/erp/students/admission/page.tsx",
+    "lines": 1188,
+    "targets": [
+      "lib/useErpSession.ts",
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/toast.tsx",
+      "lib/erpStudents.ts",
+      "lib/erpEnquiry.ts",
+      "lib/erpWords.ts",
+      "lib/erpFeeEngine.ts",
+      "lib/erpTransport.ts",
+      "lib/erpDocs.ts",
+      "components/erp/PhotoCropper.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [
+      " - ",
+      " - "
+    ],
+    "query": [
+      "enquiry",
+      "id"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/students/certificates/issue/",
+    "file": "app/(app)/erp/students/certificates/issue/page.tsx",
+    "lines": 276,
+    "targets": [
+      "lib/useErpSession.ts",
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/toast.tsx",
+      "lib/erpWords.ts",
+      "lib/erpCerts.ts",
+      "lib/erpStudents.ts",
+      "components/erp/certs/CertificateDocument.tsx",
+      "components/erp/certs/SheetPreview.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/students/certificates/",
+    "file": "app/(app)/erp/students/certificates/page.tsx",
+    "lines": 95,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/erpCerts.ts",
+      "components/erp/certs/CertificateDocument.tsx",
+      "components/erp/certs/SheetPreview.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/students/detail/",
+    "file": "app/(app)/erp/students/detail/page.tsx",
+    "lines": 406,
+    "targets": [
+      "components/erp/GatePassSheet.tsx",
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/toast.tsx",
+      "lib/erpDocs.ts",
+      "lib/erpStudents.ts",
+      "components/ui.tsx",
+      "components/erp/StudentProfileTabs.tsx",
+      "components/erp/StudentProfileOfficeTabs.tsx"
+    ],
+    "redirect": [
+      " - "
+    ],
+    "query": [
+      "id"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/students/enquiries/detail/",
+    "file": "app/(app)/erp/students/enquiries/detail/page.tsx",
+    "lines": 160,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/toast.tsx",
+      "lib/erpEnquiry.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "id"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/students/enquiries/new/",
+    "file": "app/(app)/erp/students/enquiries/new/page.tsx",
+    "lines": 153,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpEnquiry.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/students/enquiries/",
+    "file": "app/(app)/erp/students/enquiries/page.tsx",
+    "lines": 115,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/erpEnquiry.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "view"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/students/excel/",
+    "file": "app/(app)/erp/students/excel/page.tsx",
+    "lines": 220,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/csv.ts",
+      "lib/erpStudents.ts",
+      "lib/erpStudents.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/students/id-cards/",
+    "file": "app/(app)/erp/students/id-cards/page.tsx",
+    "lines": 205,
+    "targets": [
+      "lib/useErpSession.ts",
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/erpStudents.ts",
+      "components/erp/IdCardPrint.tsx",
+      "components/erp/PrintReportCards.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/students/",
+    "file": "app/(app)/erp/students/page.tsx",
+    "lines": 203,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/erpStudents.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "search",
+      "new"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/students/photos/",
+    "file": "app/(app)/erp/students/photos/page.tsx",
+    "lines": 336,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/toast.tsx",
+      "lib/erpStudents.ts",
+      "lib/erpShrinkPhoto.ts",
+      "components/erp/PhotoCropper.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/students/promote/",
+    "file": "app/(app)/erp/students/promote/page.tsx",
+    "lines": 375,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/toast.tsx",
+      "lib/erpStudents.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/syllabus/excel/",
+    "file": "app/(app)/erp/syllabus/excel/page.tsx",
+    "lines": 200,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/spreadsheet.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/syllabus/",
+    "file": "app/(app)/erp/syllabus/page.tsx",
+    "lines": 110,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "components/ui.tsx",
+      "components/erp/SetupNeeded.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/syllabus/plan/",
+    "file": "app/(app)/erp/syllabus/plan/page.tsx",
+    "lines": 260,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/useErpSession.ts",
+      "lib/format.ts",
+      "lib/toast.tsx",
+      "components/ui.tsx",
+      "components/erp/SetupNeeded.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "class",
+      "subject"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/timetable/",
+    "file": "app/(app)/erp/timetable/page.tsx",
+    "lines": 425,
+    "targets": [
+      "lib/useErpSession.ts",
+      "lib/erpCerts.ts",
+      "components/erp/certs/SheetPreview.tsx",
+      "components/erp/timetable/TimetableDocument.tsx",
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/format.ts",
+      "lib/timetable.ts",
+      "lib/erpTimetable.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/transport/",
+    "file": "app/(app)/erp/transport/page.tsx",
+    "lines": 135,
+    "targets": [
+      "components/transport/TransportLivePanel.tsx",
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/erpTransport.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/transport/route/",
+    "file": "app/(app)/erp/transport/route/page.tsx",
+    "lines": 408,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/toast.tsx",
+      "lib/erpTransport.ts",
+      "components/ui.tsx",
+      "components/erp/certs/SheetPreview.tsx",
+      "components/erp/transport/DriverList.tsx"
+    ],
+    "redirect": [
+      "/erp/transport/"
+    ],
+    "query": [
+      "id"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "erp-app",
+    "route": "/erp/transport/students/",
+    "file": "app/(app)/erp/transport/students/page.tsx",
+    "lines": 13,
+    "targets": [
+      "components/ui.tsx"
+    ],
+    "redirect": [
+      "/erp/transport/"
+    ],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/homework/",
+    "file": "app/(app)/homework/page.tsx",
+    "lines": 305,
+    "targets": [
+      "lib/api.ts",
+      "lib/toast.tsx",
+      "lib/staff.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "components/ui.tsx",
+      "components/HomeworkFiles.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "tab"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/leave/apply/",
+    "file": "app/(app)/leave/apply/page.tsx",
+    "lines": 109,
+    "targets": [
+      "lib/api.ts",
+      "lib/toast.tsx",
+      "lib/i18n.tsx",
+      "lib/leave.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [
+      "/leave/?sent=1"
+    ],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/leave/",
+    "file": "app/(app)/leave/page.tsx",
+    "lines": 275,
+    "targets": [
+      "lib/api.ts",
+      "lib/toast.tsx",
+      "lib/staff.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/leave.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "tab",
+      "sent"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/lectures/",
+    "file": "app/(app)/lectures/page.tsx",
+    "lines": 68,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/timetable.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/marks/",
+    "file": "app/(app)/marks/page.tsx",
+    "lines": 190,
+    "targets": [
+      "lib/api.ts",
+      "lib/toast.tsx",
+      "lib/staff.tsx",
+      "lib/i18n.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "alias",
+    "route": "/me/attendance/",
+    "file": "app/(app)/me/attendance/page.tsx",
+    "lines": 8,
+    "targets": [
+      "components/Redirect.tsx"
+    ],
+    "redirect": [
+      "/my-attendance/"
+    ],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "alias",
+    "route": "/me/leave/",
+    "file": "app/(app)/me/leave/page.tsx",
+    "lines": 8,
+    "targets": [
+      "components/Redirect.tsx"
+    ],
+    "redirect": [
+      "/leave/"
+    ],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "alias",
+    "route": "/me/",
+    "file": "app/(app)/me/page.tsx",
+    "lines": 8,
+    "targets": [
+      "components/Redirect.tsx"
+    ],
+    "redirect": [
+      "/profile/"
+    ],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "alias",
+    "route": "/me/requests/",
+    "file": "app/(app)/me/requests/page.tsx",
+    "lines": 8,
+    "targets": [
+      "components/Redirect.tsx"
+    ],
+    "redirect": [
+      "/leave/?tab=requests"
+    ],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "alias",
+    "route": "/me/salary/",
+    "file": "app/(app)/me/salary/page.tsx",
+    "lines": 8,
+    "targets": [
+      "components/Redirect.tsx"
+    ],
+    "redirect": [
+      "/salary/"
+    ],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "alias",
+    "route": "/me/timetable/",
+    "file": "app/(app)/me/timetable/page.tsx",
+    "lines": 8,
+    "targets": [
+      "components/Redirect.tsx"
+    ],
+    "redirect": [
+      "/timetable/"
+    ],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/messages/chat/",
+    "file": "app/(app)/messages/chat/page.tsx",
+    "lines": 368,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/messages.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [
+      "/login/"
+    ],
+    "query": [
+      "id"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/messages/",
+    "file": "app/(app)/messages/page.tsx",
+    "lines": 123,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/messages.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/my-attendance/",
+    "file": "app/(app)/my-attendance/page.tsx",
+    "lines": 13,
+    "targets": [
+      "components/MyMonth.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/notes/",
+    "file": "app/(app)/notes/page.tsx",
+    "lines": 113,
+    "targets": [
+      "lib/api.ts",
+      "lib/toast.tsx",
+      "lib/staff.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/notice/",
+    "file": "app/(app)/notice/page.tsx",
+    "lines": 101,
+    "targets": [
+      "lib/api.ts",
+      "lib/counts.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/",
+    "file": "app/(app)/page.tsx",
+    "lines": 31,
+    "targets": [
+      "lib/erpMode.ts",
+      "lib/staff.tsx",
+      "components/ui.tsx",
+      "components/driver/DriverHome.tsx",
+      "components/StaffHome.tsx",
+      "components/ErpHome.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/profile/",
+    "file": "app/(app)/profile/page.tsx",
+    "lines": 129,
+    "targets": [
+      "lib/driverPrefs.ts",
+      "lib/api.ts",
+      "lib/staff.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "components/ui.tsx",
+      "lib/erpMode.ts",
+      "components/erp/ErpProfile.tsx"
+    ],
+    "redirect": [
+      "/login/"
+    ],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/salary/",
+    "file": "app/(app)/salary/page.tsx",
+    "lines": 78,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/students/detail/",
+    "file": "app/(app)/students/detail/page.tsx",
+    "lines": 200,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "id"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/students/",
+    "file": "app/(app)/students/page.tsx",
+    "lines": 85,
+    "targets": [
+      "lib/api.ts",
+      "lib/staff.tsx",
+      "lib/i18n.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "search"
+    ]
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/timetable/",
+    "file": "app/(app)/timetable/page.tsx",
+    "lines": 78,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/timetable.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "driver",
+    "route": "/trip/history/",
+    "file": "app/(app)/trip/history/page.tsx",
+    "lines": 120,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/bus.ts",
+      "components/ui.tsx",
+      "components/driver/parts.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "driver",
+    "route": "/trip/",
+    "file": "app/(app)/trip/page.tsx",
+    "lines": 741,
+    "targets": [
+      "lib/api.ts",
+      "lib/useDialog.ts",
+      "lib/demo.ts",
+      "lib/i18n.tsx",
+      "lib/driverPrefs.ts",
+      "lib/bus.ts",
+      "components/driver/SlideConfirm.tsx",
+      "lib/slideFeedback.ts",
+      "lib/haptics.ts",
+      "components/BusMap.tsx",
+      "components/ui.tsx",
+      "components/driver/DropAlert.tsx",
+      "components/driver/StopSheet.tsx",
+      "components/driver/DelaySheet.tsx",
+      "components/driver/parts.tsx"
+    ],
+    "redirect": [
+      "/"
+    ],
+    "query": []
+  },
+  {
+    "app": "staff",
+    "group": "staff",
+    "route": "/login/",
+    "file": "app/login/page.tsx",
+    "lines": 353,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/demo.ts",
+      "lib/erpMode.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [
+      "/",
+      "/"
+    ],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/assistant/",
+    "file": "app/(app)/assistant/page.tsx",
+    "lines": 270,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "components/SahayakThinking.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "q"
+    ]
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/attendance/",
+    "file": "app/(app)/attendance/page.tsx",
+    "lines": 8,
+    "targets": [
+      "components/Redirect.tsx"
+    ],
+    "redirect": [
+      "/calendar/"
+    ],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/bus/",
+    "file": "app/(app)/bus/page.tsx",
+    "lines": 320,
+    "targets": [
+      "components/BusDisclosure.tsx",
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/text/more.ts",
+      "lib/bus.ts",
+      "components/ui.tsx",
+      "components/LiveBus.tsx",
+      "components/kit.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/bus/tracking/",
+    "file": "app/(app)/bus/tracking/page.tsx",
+    "lines": 17,
+    "targets": [
+      "components/BusCrewDetails.tsx",
+      "lib/parent.tsx",
+      "components/LiveBus.tsx",
+      "lib/i18n.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/calendar/",
+    "file": "app/(app)/calendar/page.tsx",
+    "lines": 9,
+    "targets": [
+      "components/CalendarScreen.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/events/album/",
+    "file": "app/(app)/events/album/page.tsx",
+    "lines": 143,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/events.ts",
+      "components/art.tsx",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "id"
+    ]
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/events/",
+    "file": "app/(app)/events/page.tsx",
+    "lines": 89,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/events.ts",
+      "components/art.tsx",
+      "components/ui.tsx",
+      "components/kit.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/exam/detail/",
+    "file": "app/(app)/exam/detail/page.tsx",
+    "lines": 118,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/exam.ts",
+      "lib/text/more.ts",
+      "components/ui.tsx",
+      "components/kit.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "id"
+    ]
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/exam/",
+    "file": "app/(app)/exam/page.tsx",
+    "lines": 157,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/exam.ts",
+      "lib/text/more.ts",
+      "components/ui.tsx",
+      "components/kit.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "tab"
+    ]
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/fees/detail/",
+    "file": "app/(app)/fees/detail/page.tsx",
+    "lines": 146,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/fees.ts",
+      "lib/text/fees.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "i"
+    ]
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/fees/",
+    "file": "app/(app)/fees/page.tsx",
+    "lines": 370,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/fees.ts",
+      "lib/text/fees.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/fees/pay/",
+    "file": "app/(app)/fees/pay/page.tsx",
+    "lines": 304,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/fees.ts",
+      "lib/text/fees.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "i"
+    ]
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/homework/",
+    "file": "app/(app)/homework/page.tsx",
+    "lines": 189,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/text/study.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/id-card/",
+    "file": "app/(app)/id-card/page.tsx",
+    "lines": 30,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/text/more.ts",
+      "components/ui.tsx",
+      "components/more/IdCard.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/leave/apply/",
+    "file": "app/(app)/leave/apply/page.tsx",
+    "lines": 198,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/leave.ts",
+      "lib/text/more.ts",
+      "components/ui.tsx",
+      "components/kit.tsx"
+    ],
+    "redirect": [
+      "/leave/?sent=1"
+    ],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/leave/",
+    "file": "app/(app)/leave/page.tsx",
+    "lines": 145,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/leave.ts",
+      "lib/text/more.ts",
+      "components/ui.tsx",
+      "components/kit.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "sent"
+    ]
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/meetings/detail/",
+    "file": "app/(app)/meetings/detail/page.tsx",
+    "lines": 194,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/meetings.ts",
+      "components/ui.tsx",
+      "components/kit.tsx"
+    ],
+    "redirect": [],
+    "query": [
+      "id"
+    ]
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/meetings/",
+    "file": "app/(app)/meetings/page.tsx",
+    "lines": 127,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/meetings.ts",
+      "components/ui.tsx",
+      "components/kit.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/more/bus/",
+    "file": "app/(app)/more/bus/page.tsx",
+    "lines": 8,
+    "targets": [
+      "components/Redirect.tsx"
+    ],
+    "redirect": [
+      "/bus/"
+    ],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/more/id-card/",
+    "file": "app/(app)/more/id-card/page.tsx",
+    "lines": 8,
+    "targets": [
+      "components/Redirect.tsx"
+    ],
+    "redirect": [
+      "/id-card/"
+    ],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/more/leave/",
+    "file": "app/(app)/more/leave/page.tsx",
+    "lines": 8,
+    "targets": [
+      "components/Redirect.tsx"
+    ],
+    "redirect": [
+      "/leave/"
+    ],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/more/notices/",
+    "file": "app/(app)/more/notices/page.tsx",
+    "lines": 8,
+    "targets": [
+      "components/Redirect.tsx"
+    ],
+    "redirect": [
+      "/notice/"
+    ],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/more/",
+    "file": "app/(app)/more/page.tsx",
+    "lines": 8,
+    "targets": [
+      "components/Redirect.tsx"
+    ],
+    "redirect": [
+      "/profile/"
+    ],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/more/report-card/",
+    "file": "app/(app)/more/report-card/page.tsx",
+    "lines": 8,
+    "targets": [
+      "components/Redirect.tsx"
+    ],
+    "redirect": [
+      "/report-card/"
+    ],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/notice/",
+    "file": "app/(app)/notice/page.tsx",
+    "lines": 126,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/text/more.ts",
+      "components/ui.tsx",
+      "components/kit.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/",
+    "file": "app/(app)/page.tsx",
+    "lines": 362,
+    "targets": [
+      "lib/parent.tsx",
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/menu.tsx",
+      "components/BusHomeStatus.tsx",
+      "components/ChildSheet.tsx"
+    ],
+    "redirect": [
+      "."
+    ],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/preview/id-card/",
+    "file": "app/(app)/preview/id-card/page.tsx",
+    "lines": 40,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/text/more.ts",
+      "components/ui.tsx",
+      "components/kit.tsx",
+      "components/more/IdCard.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/profile/",
+    "file": "app/(app)/profile/page.tsx",
+    "lines": 251,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/text/more.ts",
+      "components/more/IdCard.tsx",
+      "components/ui.tsx",
+      "components/ChildSheet.tsx",
+      "components/kit.tsx"
+    ],
+    "redirect": [
+      "/login/"
+    ],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/report-card/",
+    "file": "app/(app)/report-card/page.tsx",
+    "lines": 162,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/exam.ts",
+      "lib/text/more.ts",
+      "components/ui.tsx",
+      "components/report/ReportSheets.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/search/",
+    "file": "app/(app)/search/page.tsx",
+    "lines": 258,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "components/art.tsx",
+      "components/QuickIcons.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/study/",
+    "file": "app/(app)/study/page.tsx",
+    "lines": 9,
+    "targets": [
+      "components/StudyScreen.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/teachers/chat/",
+    "file": "app/(app)/teachers/chat/page.tsx",
+    "lines": 285,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/meetings.ts",
+      "lib/teachers.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [
+      "/login/"
+    ],
+    "query": [
+      "id"
+    ]
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/teachers/",
+    "file": "app/(app)/teachers/page.tsx",
+    "lines": 88,
+    "targets": [
+      "lib/api.ts",
+      "lib/parent.tsx",
+      "lib/i18n.tsx",
+      "lib/teachers.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/login/",
+    "file": "app/login/page.tsx",
+    "lines": 229,
+    "targets": [
+      "lib/api.ts",
+      "lib/i18n.tsx",
+      "lib/format.ts",
+      "lib/demo.ts",
+      "components/ui.tsx"
+    ],
+    "redirect": [
+      "/onboarding/",
+      "/"
+    ],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/motion-test/",
+    "file": "app/motion-test/page.tsx",
+    "lines": 99,
+    "targets": [],
+    "redirect": [],
+    "query": []
+  },
+  {
+    "app": "parents",
+    "group": "parents",
+    "route": "/onboarding/",
+    "file": "app/onboarding/page.tsx",
+    "lines": 72,
+    "targets": [
+      "lib/i18n.tsx",
+      "components/art.tsx"
+    ],
+    "redirect": [
+      "/login/"
+    ],
+    "query": []
+  }
+]

@@ -1,0 +1,372 @@
+[
+  {
+    "mode": "staff",
+    "requested": "/messages/chat/?id=c1",
+    "file": "staff/messages--chat-390.png",
+    "url": "/messages/chat/?id=c1",
+    "title": "Mother Teresa Nobles Academy · Staff",
+    "text": "LS\n\nLaxman Singh\n\nParent · 5th - B · Roll 12\n\nToday\n\nMa'am, Laxman is finding fractions hard. How can we practise at home?\n\n8:07 am\n\nReply",
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Send a meeting time",
+        "x": 12,
+        "y": 788,
+        "w": 46,
+        "h": 46,
+        "font": "16px",
+        "label": "Send a meeting time",
+        "disabled": false
+      },
+      {
+        "tag": "TEXTAREA",
+        "name": "Write a reply",
+        "x": 66,
+        "y": 788,
+        "w": 258,
+        "h": 46,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Send",
+        "x": 332,
+        "y": 788,
+        "w": 46,
+        "h": 46,
+        "font": "16px",
+        "label": "Send",
+        "disabled": true
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [
+      {
+        "text": "Reply",
+        "x": 11,
+        "y": 834,
+        "w": 1,
+        "h": 1
+      }
+    ],
+    "typography": [
+      {
+        "tag": "P",
+        "text": "Laxman Singh",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Parent · 5th - B · Roll 12",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "P",
+        "text": "Today",
+        "size": "12.5px",
+        "weight": "500",
+        "color": "rgb(106, 112, 120)"
+      },
+      {
+        "tag": "P",
+        "text": "Ma'am, Laxman is finding fractions hard. How can we practise at home?",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "8:07 am",
+        "size": "12px",
+        "weight": "400",
+        "color": "rgb(106, 112, 120)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Send a meeting time",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(10, 34, 76)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Send",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  },
+  {
+    "mode": "staff",
+    "requested": "/students/detail/?id=sec-5b-s1",
+    "file": "staff/students--detail-390.png",
+    "url": "/students/detail/?id=sec-5b-s1",
+    "title": "Mother Teresa Nobles Academy · Staff",
+    "text": "Student\nAC\n\nAarav Choudhary\n\n5th - B · Roll 01\n\nSR-2021-0814\n\nCall parent\nWhatsApp\n84%\nAttendance\n—\nAbsent days\n80.2%\nAvg. marks\nImportant details\nFather\nRamesh Choudhary\nMobile\n94201 90140\nDate of birth\n4 Jan 2016\nAddress\nShastri Nagar, Barmer\nExam results\nHalf Yearly Exam\n26 Sept 2026\n400/500\nUnit Test 1\n25 Jul 2026\n201/250\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Call parent",
+        "x": 31,
+        "y": 172,
+        "w": 153,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "WhatsApp",
+        "x": 192,
+        "y": 172,
+        "w": 153,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Half Yearly Exam26 Sept 2026400/500",
+        "x": 17,
+        "y": 598,
+        "w": 341,
+        "h": 70,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Unit Test 125 Jul 2026201/250",
+        "x": 17,
+        "y": 678,
+        "w": 341,
+        "h": 70,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 75,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 150,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 225,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 300,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "Student",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Aarav Choudhary",
+        "size": "17px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "5th - B · Roll 01",
+        "size": "13.5px",
+        "weight": "400",
+        "color": "rgb(75, 84, 104)"
+      },
+      {
+        "tag": "P",
+        "text": "SR-2021-0814",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "H2",
+        "text": "Important details",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "DT",
+        "text": "Father",
+        "size": "12px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "DD",
+        "text": "Ramesh Choudhary",
+        "size": "14.5px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "DT",
+        "text": "Mobile",
+        "size": "12px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "DD",
+        "text": "94201 90140",
+        "size": "14.5px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "DT",
+        "text": "Date of birth",
+        "size": "12px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "DD",
+        "text": "4 Jan 2016",
+        "size": "14.5px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "DT",
+        "text": "Address",
+        "size": "12px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "DD",
+        "text": "Shastri Nagar, Barmer",
+        "size": "14.5px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H2",
+        "text": "Exam results",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Half Yearly Exam26 Sept 2026400/500",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Unit Test 125 Jul 2026201/250",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "rise",
+        "state": "finished",
+        "duration": 280,
+        "iterations": 1
+      }
+    ]
+  }
+]

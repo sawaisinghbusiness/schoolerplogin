@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { IndianRupee, Pencil, Printer, Ticket, X } from "lucide-react";
@@ -13,7 +13,11 @@ import { FeeReceiptModal } from "@/components/fees/FeeReceiptModal";
 import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
 import { StudentCard } from "@/components/students/StudentCard";
 
-type Tab = "details" | "fees" | "passes";
+import { AttendanceSection, HistorySection, LedgerSection, PaymentsSection, RefundsSection, RemarksSection, ResultsSection, SiblingsSection, SrRegisterSection, TimetableSection, WalletSection } from "@/components/students/ProfileMoreTabs";
+
+// Details, Fees and Gate passes as before; the student profile 360 tabs follow Gate passes in the same strip,
+// drawn in this drawer's own style (components/students/ProfileMoreTabs.tsx).
+type Tab = "details" | "fees" | "passes" | "ledger" | "payments" | "wallet" | "refunds" | "attendance" | "results" | "siblings" | "remarks" | "discipline" | "sr" | "timetable" | "history";
 
 const inr = (n: number) => "₹" + Math.round(n || 0).toLocaleString("en-IN");
 const day = (d: string) => new Date(String(d).slice(0, 10) + "T00:00:00").toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
@@ -36,6 +40,11 @@ interface Props {
 export function StudentDrawer({ student, isOpen, onClose, onIssueGatePass, onEdit, passesVersion = 0 }: Props) {
   const { schoolProfile } = useSchoolProfile();
   const [tab, setTab] = useState<Tab>("details");
+  // Switching tabs: the white pill glides to the new tab and the panel slides in from that side
+  // (a tab further right comes in from the right), as on the driver's trip record.
+  const [dir, setDir] = useState<1 | -1>(1);
+  const strip = useRef<HTMLDivElement>(null);
+  const [pill, setPill] = useState<{ x: number; w: number } | null>(null);
   const [receipts, setReceipts] = useState<FeeTransaction[] | null>(null);
   const [passes, setPasses] = useState<GatePass[] | null>(null);
   const [receipt, setReceipt] = useState<FeeTransaction | null>(null);
@@ -45,6 +54,17 @@ export function StudentDrawer({ student, isOpen, onClose, onIssueGatePass, onEdi
   const closeRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => setMounted(true), []);
+
+  // Keep the pill under the picked tab (also when the drawer opens or the window is resized).
+  useLayoutEffect(() => {
+    const place = () => {
+      const el = strip.current?.querySelector<HTMLElement>('[aria-selected="true"]');
+      if (el) setPill({ x: el.offsetLeft, w: el.offsetWidth });
+    };
+    place();
+    window.addEventListener("resize", place);
+    return () => window.removeEventListener("resize", place);
+  }, [tab, isOpen, mounted, student?.id]);
 
   // New student: back to the first tab, drop the old lists.
   useEffect(() => {
@@ -93,6 +113,18 @@ export function StudentDrawer({ student, isOpen, onClose, onIssueGatePass, onEdi
     { key: "details", label: "Details" },
     { key: "fees", label: "Fees" },
     { key: "passes", label: "Gate passes" },
+    { key: "ledger", label: "Ledger" },
+    { key: "payments", label: "Payments" },
+    { key: "wallet", label: "Wallet" },
+    { key: "refunds", label: "Refunds" },
+    { key: "attendance", label: "Attendance" },
+    { key: "results", label: "Results" },
+    { key: "siblings", label: "Siblings" },
+    { key: "remarks", label: "Remarks" },
+    { key: "discipline", label: "Discipline" },
+    { key: "sr", label: "SR register" },
+    { key: "timetable", label: "Timetable" },
+    { key: "history", label: "Edit history" },
   ];
 
   const printPass = (p: GatePass) => {
@@ -111,7 +143,7 @@ export function StudentDrawer({ student, isOpen, onClose, onIssueGatePass, onEdi
       <div className="fixed inset-0 z-40 flex justify-end">
         <div className="absolute inset-0 bg-night-950/40 animate-fadeIn" onClick={onClose} />
 
-        <aside role="dialog" aria-modal="true" aria-label={`${s.name}, student profile`} className="erp-dialog relative flex h-full w-full max-w-[540px] flex-col bg-[#F4F5F7] shadow-2xl animate-slide-in-right">
+        <aside role="dialog" aria-modal="true" aria-label={`${s.name}, student profile`} className="erp-dialog student-profile relative flex h-full w-full flex-col bg-[#F4F5F7] shadow-2xl animate-slide-in-right">
           <header className="flex h-14 shrink-0 items-center justify-between border-b border-slate-300/50 px-5">
             <span className="text-sm font-semibold text-slate-600">Student profile</span>
             <span className="flex items-center gap-1">
@@ -133,15 +165,22 @@ export function StudentDrawer({ student, isOpen, onClose, onIssueGatePass, onEdi
             </div>
 
             <div className="sticky top-0 z-10 bg-[#F4F5F7] px-5 pt-3">
-              <div className="module-tabs flex gap-1 rounded-lg bg-slate-100 p-1" role="tablist" aria-label="Profile sections">
-                {TABS.map((t) => (
+              {/* Same tabs as before; with more of them the strip scrolls sideways. */}
+              <div ref={strip} className="module-tabs relative flex gap-1 overflow-x-auto rounded-lg bg-slate-100 p-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" role="tablist" aria-label="Profile sections">
+                {pill && <span aria-hidden className="profile-tab-pill pointer-events-none absolute bottom-1 left-0 top-1 rounded-lg bg-white shadow-sm" style={{ width: pill.w, transform: `translateX(${pill.x}px)` }} />}
+                {TABS.map((t, i) => (
                   <button
                     key={t.key}
                     type="button"
                     role="tab"
                     aria-selected={tab === t.key}
-                    onClick={() => setTab(t.key)}
-                    className={`flex-1 rounded-lg py-2 text-[13.5px] font-semibold transition ${tab === t.key ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}
+                    onClick={(e) => {
+                      if (t.key === tab) return;
+                      setDir(i > TABS.findIndex((x) => x.key === tab) ? 1 : -1);
+                      setTab(t.key);
+                      e.currentTarget.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" });
+                    }}
+                    className={`relative z-[1] min-w-[112px] flex-1 shrink-0 whitespace-nowrap rounded-lg px-4 py-2 text-[13.5px] font-semibold transition-colors active:scale-[.97] ${tab === t.key ? (pill ? "text-slate-900" : "bg-white text-slate-900 shadow-sm") : "text-slate-500 hover:text-slate-800"}`}
                   >
                     {t.label}
                   </button>
@@ -149,7 +188,7 @@ export function StudentDrawer({ student, isOpen, onClose, onIssueGatePass, onEdi
               </div>
             </div>
 
-            <div className="space-y-4 p-5">
+            <div key={tab} className="profile-tab-panel space-y-4 p-5" data-dir={dir}>
               {tab === "details" && (
                 <>
                   <InfoCard title="Student">
@@ -263,6 +302,19 @@ export function StudentDrawer({ student, isOpen, onClose, onIssueGatePass, onEdi
                   )}
                 </div>
               )}
+
+              {tab === "ledger" && <LedgerSection id={s.id} />}
+              {tab === "payments" && <PaymentsSection id={s.id} onPrint={setReceipt} />}
+              {tab === "wallet" && <WalletSection id={s.id} balanceDue={s.balanceFee} />}
+              {tab === "refunds" && <RefundsSection id={s.id} paid={s.paidFee} />}
+              {tab === "attendance" && <AttendanceSection id={s.id} />}
+              {tab === "results" && <ResultsSection id={s.id} />}
+              {tab === "siblings" && <SiblingsSection id={s.id} />}
+              {tab === "remarks" && <RemarksSection id={s.id} kind="followup" />}
+              {tab === "discipline" && <RemarksSection key="discipline" id={s.id} kind="discipline" />}
+              {tab === "sr" && <SrRegisterSection s={s} full={full} />}
+              {tab === "timetable" && <TimetableSection id={s.id} />}
+              {tab === "history" && <HistorySection id={s.id} />}
             </div>
           </div>
 

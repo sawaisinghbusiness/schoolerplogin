@@ -1,0 +1,2474 @@
+[
+  {
+    "mode": "parents",
+    "requested": "/",
+    "file": "parents/home-390.png",
+    "url": "/",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "MA\nMother Teresa Nobles Academy\nBarmer\n2\nGood Evening,\nPG\nPriya Garg\nClass 5th - B • Roll No. 17\nToday\n·\nSunday\nTransport\nHomework\nFees\nResults\nBus trip in progress\nDemo · sample trip\nToday at school\nFees due now\nNo payment due now\n₹0\nToday's homework\nView assignments in the diary\n4\nExam results\nHalf Yearly Exam\nLatest Notices\nView All\nदशहरा अवकाश\nSchool Announcement • Nov 14, 2026\nUpcoming Events\nView All\n22\nNov\nSports Day\nSunday\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 16,
+        "y": 21,
+        "w": 299,
+        "h": 43,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Notices, 2 new",
+        "x": 315,
+        "y": 20,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Notices, 2 new",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Priya Garg: switch child",
+        "x": 12,
+        "y": 162,
+        "w": 351,
+        "h": 96,
+        "font": "16px",
+        "label": "Priya Garg: switch child",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Transport",
+        "x": 20,
+        "y": 282,
+        "w": 78,
+        "h": 68,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Homework",
+        "x": 106,
+        "y": 282,
+        "w": 78,
+        "h": 68,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees",
+        "x": 192,
+        "y": 282,
+        "w": 78,
+        "h": 68,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Results",
+        "x": 277,
+        "y": 282,
+        "w": 78,
+        "h": 68,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Bus trip in progress. Demo · sample trip",
+        "x": 20,
+        "y": 395,
+        "w": 335,
+        "h": 76,
+        "font": "16px",
+        "label": "Bus trip in progress. Demo · sample trip",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees due nowNo payment due now₹0",
+        "x": 20,
+        "y": 531,
+        "w": 335,
+        "h": 77,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Today's homeworkView assignments in the diary4",
+        "x": 20,
+        "y": 608,
+        "w": 335,
+        "h": 77,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Exam resultsHalf Yearly Exam",
+        "x": 20,
+        "y": 685,
+        "w": 335,
+        "h": 77,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "View All",
+        "x": 307,
+        "y": 790,
+        "w": 48,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "दशहरा अवकाशSchool Announcement • Nov 14, 2026",
+        "x": 20,
+        "y": 834,
+        "w": 335,
+        "h": 72,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "View All",
+        "x": 307,
+        "y": 939,
+        "w": 48,
+        "h": 44,
+        "font": "13px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "22NovSports DaySunday",
+        "x": 20,
+        "y": 983,
+        "w": 335,
+        "h": 72,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Calendar",
+        "x": 75,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Study",
+        "x": 150,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees",
+        "x": 225,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 300,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 16,
+        "y": 21,
+        "w": 299,
+        "h": 43,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      }
+    ],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Priya Garg: switch child",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H2",
+        "text": "Today at school",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H2",
+        "text": "Latest Notices",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H2",
+        "text": "Upcoming Events",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      }
+    ],
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "src": "/img/school-hero-morning.webp"
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "src": "/img/tiles/bus.webp"
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "src": "/img/tiles/homework.webp"
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "src": "/img/tiles/fees.webp"
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "src": "/img/tiles/results.webp"
+      }
+    ],
+    "animations": [
+      {
+        "name": "home-tile-in",
+        "state": "finished",
+        "duration": 350,
+        "iterations": 1
+      },
+      {
+        "name": "home-art-bus",
+        "state": "running",
+        "duration": 1300,
+        "iterations": 1
+      },
+      {
+        "name": "home-tile-in",
+        "state": "finished",
+        "duration": 350,
+        "iterations": 1
+      },
+      {
+        "name": "home-art-rise",
+        "state": "running",
+        "duration": 1000,
+        "iterations": 1
+      },
+      {
+        "name": "home-tile-in",
+        "state": "finished",
+        "duration": 350,
+        "iterations": 1
+      },
+      {
+        "name": "home-art-tilt",
+        "state": "running",
+        "duration": 1100,
+        "iterations": 1
+      },
+      {
+        "name": "home-tile-in",
+        "state": "finished",
+        "duration": 350,
+        "iterations": 1
+      },
+      {
+        "name": "home-art-cheer",
+        "state": "running",
+        "duration": 1100,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "parents",
+    "requested": "/profile/",
+    "file": "parents/profile-390.png",
+    "url": "/profile/",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "Profile\nPG\nPriya Garg\n\nClass 5th - B · Roll 17\n\nMother Teresa Nobles Academy\n\nSR no.\nSR-2021-0880\nAdm. no.\nADM-4410\nChild's details\nDate of birth\n22 Mar 2016\nFather\nJagdish Prasad Garg\nMother\nSugan Kanwar\nMobile\n95888 94289\nAddress\nSindhari Road, Near Bus Stand, Barmer\nAsk school to update\nThis child\nSwitch child\nPriya\nID card\nApp\nLanguage\nEnglish\nHelp\nCall school office\n94600 62543\nAsk AI Assistant\nLog out\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Ask school to update",
+        "x": 17,
+        "y": 710,
+        "w": 341,
+        "h": 57,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Switch childPriya",
+        "x": 17,
+        "y": 833,
+        "w": 341,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "ID card",
+        "x": 17,
+        "y": 890,
+        "w": 341,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "LanguageEnglish",
+        "x": 17,
+        "y": 1012,
+        "w": 341,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Call school office94600 62543",
+        "x": 17,
+        "y": 1134,
+        "w": 341,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Ask AI Assistant",
+        "x": 17,
+        "y": 1191,
+        "w": 341,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Log out",
+        "x": 16,
+        "y": 1272,
+        "w": 343,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Calendar",
+        "x": 75,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Study",
+        "x": 150,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees",
+        "x": 225,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 300,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "H1",
+        "text": "Profile",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "H1",
+        "text": "Priya Garg",
+        "size": "20px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "P",
+        "text": "Class 5th - B · Roll 17",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(52, 65, 87)"
+      },
+      {
+        "tag": "P",
+        "text": "Mother Teresa Nobles Academy",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "DT",
+        "text": "SR no.",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "DD",
+        "text": "SR-2021-0880",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "DT",
+        "text": "Adm. no.",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "DD",
+        "text": "ADM-4410",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "H2",
+        "text": "Child's details",
+        "size": "20px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "DT",
+        "text": "Date of birth",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "DD",
+        "text": "22 Mar 2016",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "DT",
+        "text": "Father",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "DD",
+        "text": "Jagdish Prasad Garg",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "DT",
+        "text": "Mother",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "DD",
+        "text": "Sugan Kanwar",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "DT",
+        "text": "Mobile",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "DD",
+        "text": "95888 94289",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "DT",
+        "text": "Address",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "DD",
+        "text": "Sindhari Road, Near Bus Stand, Barmer",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ask school to update",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "H2",
+        "text": "This child",
+        "size": "20px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Switch childPriya",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "H2",
+        "text": "App",
+        "size": "20px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "LanguageEnglish",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "H2",
+        "text": "Help",
+        "size": "20px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Log out",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(163, 47, 53)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "study-in",
+        "state": "finished",
+        "duration": 500,
+        "iterations": 1
+      },
+      {
+        "name": "study-in",
+        "state": "finished",
+        "duration": 500,
+        "iterations": 1
+      },
+      {
+        "name": "study-in",
+        "state": "finished",
+        "duration": 500,
+        "iterations": 1
+      },
+      {
+        "name": "study-in",
+        "state": "finished",
+        "duration": 500,
+        "iterations": 1
+      },
+      {
+        "name": "study-in",
+        "state": "finished",
+        "duration": 500,
+        "iterations": 1
+      },
+      {
+        "name": "study-in",
+        "state": "finished",
+        "duration": 500,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "parents",
+    "requested": "/search/",
+    "file": "parents/search-390.png",
+    "url": "/search/",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "Search\nAsk AI Assistant\nToday's homework?\nHow much fee is due?\nWhen is the next exam?\nWhere is the bus?\nPopular\nFees\nAttendance\nHomework\nTimetable\nNew for you\nSports Day\nSun, 22 Nov · Event\nDussehra Mela\nFri, 27 Nov · Event\nदशहरा अवकाश\nSat, 14 Nov · Notice\nअभिभावक–शिक्षक बैठक\nWed, 11 Nov · Notice\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "Search or ask",
+        "x": 69,
+        "y": 76,
+        "w": 240,
+        "h": 40,
+        "font": "16px",
+        "label": "Search or ask",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Search by speaking",
+        "x": 321,
+        "y": 74,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Search by speaking",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Today's homework?",
+        "x": 16,
+        "y": 144,
+        "w": 163,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "How much fee is due?",
+        "x": 187,
+        "y": 144,
+        "w": 174,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "When is the next exam?",
+        "x": 370,
+        "y": 144,
+        "w": 184,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Where is the bus?",
+        "x": 562,
+        "y": 144,
+        "w": 146,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees",
+        "x": 16,
+        "y": 236,
+        "w": 84,
+        "h": 65,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 108,
+        "y": 236,
+        "w": 84,
+        "h": 65,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Homework",
+        "x": 199,
+        "y": 236,
+        "w": 84,
+        "h": 65,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Timetable",
+        "x": 291,
+        "y": 236,
+        "w": 84,
+        "h": 65,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Sports DaySun, 22 Nov · Event",
+        "x": 16,
+        "y": 355,
+        "w": 210,
+        "h": 170,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Dussehra MelaFri, 27 Nov · Event",
+        "x": 238,
+        "y": 355,
+        "w": 210,
+        "h": 170,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "दशहरा अवकाशSat, 14 Nov · Notice",
+        "x": 460,
+        "y": 355,
+        "w": 210,
+        "h": 170,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "अभिभावक–शिक्षक बैठकWed, 11 Nov · Notice",
+        "x": 682,
+        "y": 355,
+        "w": 210,
+        "h": 170,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Calendar",
+        "x": 78,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Study",
+        "x": 156,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees",
+        "x": 234,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 312,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [
+      {
+        "tag": "A",
+        "name": "Today's homework?",
+        "x": 16,
+        "y": 144,
+        "w": 163,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "How much fee is due?",
+        "x": 187,
+        "y": 144,
+        "w": 174,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "When is the next exam?",
+        "x": 370,
+        "y": 144,
+        "w": 184,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Where is the bus?",
+        "x": 562,
+        "y": 144,
+        "w": 146,
+        "h": 38,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "Search",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Search by speaking",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(38, 46, 66)"
+      },
+      {
+        "tag": "H2",
+        "text": "Popular",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(95, 104, 123)"
+      },
+      {
+        "tag": "H2",
+        "text": "New for you",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(95, 104, 123)"
+      }
+    ],
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "src": "/img/events/sports.webp"
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "src": "/img/events/mela.webp"
+      }
+    ],
+    "animations": [
+      {
+        "name": "search-glow-in",
+        "state": "finished",
+        "duration": 700,
+        "iterations": 1
+      },
+      {
+        "name": "search-glow-move",
+        "state": "running",
+        "duration": 2400,
+        "iterations": null
+      },
+      {
+        "name": "search-glow-out",
+        "state": "running",
+        "duration": 900,
+        "iterations": 1
+      },
+      {
+        "name": "search-blink",
+        "state": "running",
+        "duration": 1000,
+        "iterations": null
+      },
+      {
+        "name": "search-up",
+        "state": "finished",
+        "duration": 450,
+        "iterations": 1
+      },
+      {
+        "name": "search-up",
+        "state": "finished",
+        "duration": 450,
+        "iterations": 1
+      },
+      {
+        "name": "search-up",
+        "state": "finished",
+        "duration": 450,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "parents",
+    "requested": "/fees/pay/?i=0",
+    "file": "parents/fees--pay-390.png",
+    "url": "/fees/pay/?i=0",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "Payment\nPG\n\nFee payment\n\n₹18,000\n\nFor\nPriya Garg\nTo\nMother Teresa Nobles Academy\nHow much\nFull session\n₹18,000\nAnother amount\n\nScan the QR and pay ₹18,000\n\nPay with any UPI app\n\nOn this phone? Save the QR\nI have paid ₹18,000\nWhat happens next\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Switch child: Priya Garg",
+        "x": 325,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Switch child: Priya Garg",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "amt",
+        "x": 33,
+        "y": 286,
+        "w": 18,
+        "h": 18,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "amt",
+        "x": 33,
+        "y": 343,
+        "w": 18,
+        "h": 18,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "On this phone? Save the QR",
+        "x": 96,
+        "y": 809,
+        "w": 184,
+        "h": 44,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "I have paid ₹18,000",
+        "x": 16,
+        "y": 886,
+        "w": 343,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Calendar",
+        "x": 75,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Study",
+        "x": 150,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees",
+        "x": 225,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 300,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "Payment",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Switch child: Priya Garg",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "P",
+        "text": "Fee payment",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(52, 65, 87)"
+      },
+      {
+        "tag": "P",
+        "text": "₹18,000",
+        "size": "28px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "DT",
+        "text": "For",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "DD",
+        "text": "Priya Garg",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "DT",
+        "text": "To",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "DD",
+        "text": "Mother Teresa Nobles Academy",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "P",
+        "text": "Scan the QR and pay ₹18,000",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "P",
+        "text": "Pay with any UPI app",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "I have paid ₹18,000",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "P",
+        "text": "Scan the QR with any UPI app and pay the amount shown. Then come here and enter the UTR nu",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      }
+    ],
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "src": "/img/fee-receipt.webp"
+      },
+      {
+        "alt": "School payment QR",
+        "loaded": true,
+        "src": "/img/upi/demo-qr.svg"
+      },
+      {
+        "alt": "PhonePe",
+        "loaded": true,
+        "src": "/img/upi/phonepe.svg"
+      },
+      {
+        "alt": "Google Pay",
+        "loaded": true,
+        "src": "/img/upi/googlepay.svg"
+      },
+      {
+        "alt": "Paytm",
+        "loaded": true,
+        "src": "/img/upi/paytm.svg"
+      }
+    ],
+    "animations": [
+      {
+        "name": "study-in",
+        "state": "finished",
+        "duration": 500,
+        "iterations": 1
+      },
+      {
+        "name": "study-in",
+        "state": "finished",
+        "duration": 500,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "parents",
+    "requested": "/leave/apply/",
+    "file": "parents/leave--apply-390.png",
+    "url": "/leave/apply/",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "Apply Leave\nPG\nType\nSick\nFamily function\nCasual\nOther\nFrom\nTo\nFull day\nHalf day\n\nTotal: 1 day\n\nReason for leave\n0/300\n\nThe class teacher will see this and reply here. Up to 30 days at a time. For longer, please meet the school office.\n\nApply\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Switch child: Priya Garg",
+        "x": 340,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Switch child: Priya Garg",
+        "disabled": false
+      },
+      {
+        "tag": "SELECT",
+        "name": "SickFamily functionCasualOther",
+        "x": 16,
+        "y": 92,
+        "w": 358,
+        "h": 52,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "leave-from",
+        "x": 16,
+        "y": 196,
+        "w": 173,
+        "h": 52,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "leave-to",
+        "x": 201,
+        "y": 196,
+        "w": 173,
+        "h": 52,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Full day",
+        "x": 21,
+        "y": 265,
+        "w": 172,
+        "h": 44,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Half day",
+        "x": 197,
+        "y": 265,
+        "w": 172,
+        "h": 44,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "TEXTAREA",
+        "name": "e.g. Has fever, going out of town for a wedding",
+        "x": 16,
+        "y": 398,
+        "w": 358,
+        "h": 122,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Apply",
+        "x": 16,
+        "y": 656,
+        "w": 358,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Calendar",
+        "x": 78,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Study",
+        "x": 156,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees",
+        "x": 234,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 312,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "Apply Leave",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Switch child: Priya Garg",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Full day",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Half day",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(52, 65, 87)"
+      },
+      {
+        "tag": "P",
+        "text": "Total: 1 day",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "P",
+        "text": "The class teacher will see this and reply here. Up to 30 days at a time. For longer, pleas",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Apply",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  },
+  {
+    "mode": "parents",
+    "requested": "/meetings/detail/?id=meet-ptm",
+    "file": "parents/meetings--detail-390.png",
+    "url": "/meetings/detail/?id=meet-ptm",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "Meeting\nPG\nParent–teacher meeting\n\nRakesh Bishnoi · Class Nursery - A\n\nSun, 22 Nov\n9:00 AM – 11:00 AM\nClassroom, first floor\nHalf Yearly answer sheets and the term's progress.\nPick your time\n9:00\n9:15\n9:30\n9:45\n10:00\n10:15\n10:30\n10:45\n\nCrossed-out times are taken by other parents\n\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Switch child: Priya Garg",
+        "x": 325,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Switch child: Priya Garg",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:00 AM, taken",
+        "x": 33,
+        "y": 409,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "9:00 AM, taken",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:15 AM, taken",
+        "x": 139,
+        "y": 409,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "9:15 AM, taken",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:30 AM",
+        "x": 244,
+        "y": 409,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "9:30 AM",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "9:45 AM, taken",
+        "x": 33,
+        "y": 465,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "9:45 AM, taken",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:00 AM",
+        "x": 139,
+        "y": 465,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "10:00 AM",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:15 AM",
+        "x": 244,
+        "y": 465,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "10:15 AM",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:30 AM, taken",
+        "x": 33,
+        "y": 521,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "10:30 AM, taken",
+        "disabled": true
+      },
+      {
+        "tag": "BUTTON",
+        "name": "10:45 AM",
+        "x": 139,
+        "y": 521,
+        "w": 98,
+        "h": 48,
+        "font": "16px",
+        "label": "10:45 AM",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Calendar",
+        "x": 75,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Study",
+        "x": 150,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees",
+        "x": 225,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 300,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "Meeting",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Switch child: Priya Garg",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "H2",
+        "text": "Parent–teacher meeting",
+        "size": "20px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "P",
+        "text": "Rakesh Bishnoi · Class Nursery - A",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "H2",
+        "text": "Pick your time",
+        "size": "20px",
+        "weight": "600",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:00 AM, taken",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:15 AM, taken",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:30 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "9:45 AM, taken",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:00 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:15 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:30 AM, taken",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(89, 98, 115)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "10:45 AM",
+        "size": "16px",
+        "weight": "500",
+        "color": "rgb(30, 44, 67)"
+      },
+      {
+        "tag": "P",
+        "text": "Crossed-out times are taken by other parents",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(89, 98, 115)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "study-in",
+        "state": "finished",
+        "duration": 500,
+        "iterations": 1
+      },
+      {
+        "name": "study-in",
+        "state": "finished",
+        "duration": 500,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "parents",
+    "requested": "/teachers/chat/?id=t-neha",
+    "file": "parents/teachers--chat-390.png",
+    "url": "/teachers/chat/?id=t-neha",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "NS\n\nNeha Sharma\n\nClass teacher · English\n\nYesterday\n\nNamaste ma'am, Laxman was unwell yesterday. Which pages should he finish at home?\n\n9:08 pm\n\nNamaste. Please do pages 14 and 15 of the English book. Hope he feels better.\n\n10:08 pm\n\nToday\n\nCan we meet once about his reading?\n\n8:08 pm\n\nMeeting time\n\n18\nWed, November · 11:30 AM\nIn school · 15 min\nOkay\nAnother time\nMessage",
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Okay",
+        "x": 29,
+        "y": 571,
+        "w": 133,
+        "h": 44,
+        "font": "14.5px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Another time",
+        "x": 170,
+        "y": 571,
+        "w": 133,
+        "h": 44,
+        "font": "14.5px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "TEXTAREA",
+        "name": "Write a message",
+        "x": 12,
+        "y": 788,
+        "w": 312,
+        "h": 46,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Send",
+        "x": 332,
+        "y": 788,
+        "w": 46,
+        "h": 46,
+        "font": "16px",
+        "label": "Send",
+        "disabled": true
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [
+      {
+        "text": "Message",
+        "x": 11,
+        "y": 834,
+        "w": 1,
+        "h": 1
+      }
+    ],
+    "typography": [
+      {
+        "tag": "P",
+        "text": "Neha Sharma",
+        "size": "16px",
+        "weight": "600",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "P",
+        "text": "Class teacher · English",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(95, 104, 123)"
+      },
+      {
+        "tag": "P",
+        "text": "Yesterday",
+        "size": "12.5px",
+        "weight": "500",
+        "color": "rgb(138, 147, 166)"
+      },
+      {
+        "tag": "P",
+        "text": "Namaste ma'am, Laxman was unwell yesterday. Which pages should he finish at home?",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "P",
+        "text": "9:08 pm",
+        "size": "11px",
+        "weight": "400",
+        "color": "rgba(255, 255, 255, 0.7)"
+      },
+      {
+        "tag": "P",
+        "text": "Namaste. Please do pages 14 and 15 of the English book. Hope he feels better.",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "P",
+        "text": "10:08 pm",
+        "size": "11px",
+        "weight": "400",
+        "color": "rgb(138, 147, 166)"
+      },
+      {
+        "tag": "P",
+        "text": "Today",
+        "size": "12.5px",
+        "weight": "500",
+        "color": "rgb(138, 147, 166)"
+      },
+      {
+        "tag": "P",
+        "text": "Can we meet once about his reading?",
+        "size": "15px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "P",
+        "text": "8:08 pm",
+        "size": "11px",
+        "weight": "400",
+        "color": "rgb(138, 147, 166)"
+      },
+      {
+        "tag": "P",
+        "text": "Meeting time",
+        "size": "12.5px",
+        "weight": "600",
+        "color": "rgb(95, 104, 123)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Okay",
+        "size": "14.5px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Another time",
+        "size": "14.5px",
+        "weight": "600",
+        "color": "rgb(38, 46, 66)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Send",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(67, 86, 76)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  },
+  {
+    "mode": "parents",
+    "requested": "/report-card/",
+    "file": "parents/report-card-390.png",
+    "url": "/report-card/",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "Report Card\nPG\nChoose exam\nHalf Yearly Exam\nUnit Test 1\nMTNA\nMTNA\nMOTHER TERESA NOBLES ACADEMY\n\nNEHRU NAGAR, BARMER, RAJASTHAN – 344001\n\nAffiliated to C.B.S.E., New Delhi  ·  Affiliation No. 1730512  ·  School Code 10458\n\nPhone: 94600 62543 · E-mail: office@mtnabarmer.in\n\nREPORT CARD\n\nHALF YEARLY EXAM  —  SESSION 2026-27\n\nName of Student\nPRIYA GARG\nRoll No.\n17\nClass & Section\n5TH - B\nS.R. No.\nSR-2021-0880\nDate of Birth\n22.03.2016\nFather's Name\nMR. JAGDISH PRASAD GARG\nMother's Name\nMRS. SUGAN KANWAR\nSCHOLASTIC AREAS\nMaximum marks in each subject: 100\nS.No.\tSubject\tTheory\n(80)\tInternal\n(20)\tTotal\n(100)\tGrade\n1\tENGLISH\t68\t18\t86\tA2\n2\tHINDI\t72\t19\t91\tA1\n3\tMATHS\t75\t18\t93\tA1\n4\tSCIENCE\t64\t17\t81\tA2\n5\tSOCIAL STUDIES\t61\t16\t77\tB1\n6\tSANSKRIT\t70\t19\t89\tA2\nGRAND TOTAL\n517 / 600\nPERCENTAGE\n86.20%\nOVERALL GRADE\nA2\nRANK IN CLASS\n4\nATTENDANCE\n118 / 128\nResult:\nPASS\nClass Teacher\n \nExam In-charge\n \nPrincipal\n(Signature with seal)\nGRADING SCALE (8-POINT, IN % OF MARKS)\nGrade\tA1\tA2\tB1\tB2\tC1\tC2\tD\tE\nMarks %\t91–100\t81–90\t71–80\t61–70\t51–60\t41–50\t33–40\tBelow 33\n\nAB = Absent. A pupil needs at least 33% marks in each subject. Attendance is days present out of school days marked this session.\n\nATTENDANCE\nWorking Days\tDays Present\tPercentage\n128\t118\t92.2%\nCLASS TEACHER'S REMARKS\nGood in maths. Reading speed in English can improve.\n \n \nINSTRUCTIONS TO PARENTS\nPlease go through the report card and discuss it with your ward.\nThe parent-teacher meeting will be held on the date given by the school.\nPlease tell the school office about any change of address or mobile number.\nPARENT'S SIGNATURE\n \nPlace: BARMER\nDate: 15.11.2026\nClass Teacher\n \nExam In-charge\n \nPrincipal\n(Signature with seal)\n\nTap to see the back\n\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Switch child: Priya Garg",
+        "x": 340,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Switch child: Priya Garg",
+        "disabled": false
+      },
+      {
+        "tag": "SELECT",
+        "name": "Half Yearly ExamUnit Test 1",
+        "x": 16,
+        "y": 60,
+        "w": 246,
+        "h": 48,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Share",
+        "x": 270,
+        "y": 60,
+        "w": 48,
+        "h": 48,
+        "font": "16px",
+        "label": "Share",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Print / Save PDF",
+        "x": 326,
+        "y": 60,
+        "w": 48,
+        "h": 48,
+        "font": "16px",
+        "label": "Print / Save PDF",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Show the back",
+        "x": 16,
+        "y": 120,
+        "w": 358,
+        "h": 506,
+        "font": "16px",
+        "label": "Show the back",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Calendar",
+        "x": 78,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Study",
+        "x": 156,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees",
+        "x": 234,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 312,
+        "y": 780,
+        "w": 78,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "Report Card",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Switch child: Priya Garg",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Share",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Print / Save PDF",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Show the back",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "H1",
+        "text": "Mother Teresa Nobles Academy",
+        "size": "31px",
+        "weight": "700",
+        "color": "rgb(28, 42, 94)"
+      },
+      {
+        "tag": "P",
+        "text": "Nehru Nagar, Barmer, Rajasthan – 344001",
+        "size": "13.5px",
+        "weight": "700",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "P",
+        "text": "Affiliated to C.B.S.E., New Delhi · Affiliation No. 1730512 · School Code 10458",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "P",
+        "text": "Phone: 94600 62543 · E-mail: office@mtnabarmer.in",
+        "size": "11.5px",
+        "weight": "400",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "P",
+        "text": "Half Yearly Exam — Session 2026-27",
+        "size": "14px",
+        "weight": "700",
+        "color": "rgb(28, 42, 94)"
+      },
+      {
+        "tag": "P",
+        "text": "AB = Absent. A pupil needs at least 33% marks in each subject. Attendance is days present ",
+        "size": "12px",
+        "weight": "400",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "P",
+        "text": "Tap to see the back",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(95, 104, 123)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "rise",
+        "state": "finished",
+        "duration": 280,
+        "iterations": 1
+      }
+    ]
+  },
+  {
+    "mode": "parents",
+    "requested": "/motion-test/",
+    "file": "parents/motion-test-390.png",
+    "url": "/motion-test/",
+    "title": "404: This page could not be found.",
+    "text": "404\nThis page could not be found.",
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "404",
+        "size": "24px",
+        "weight": "500",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "H2",
+        "text": "This page could not be found.",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  },
+  {
+    "mode": "parents",
+    "requested": "/preview/id-card/",
+    "file": "parents/preview--id-card-390.png",
+    "url": "/preview/id-card/",
+    "title": "404: This page could not be found.",
+    "text": "ID Card\nPG\n404\nThis page could not be found.\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Switch child: Priya Garg",
+        "x": 325,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Switch child: Priya Garg",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Calendar",
+        "x": 75,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Study",
+        "x": 150,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees",
+        "x": 225,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 300,
+        "y": 780,
+        "w": 75,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "ID Card",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Switch child: Priya Garg",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "H1",
+        "text": "404",
+        "size": "24px",
+        "weight": "500",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "H2",
+        "text": "This page could not be found.",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  }
+]

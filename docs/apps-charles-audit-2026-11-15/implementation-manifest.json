@@ -1,0 +1,1984 @@
+{
+  "capturedAt": "2026-11-15T18:17:39.433Z",
+  "note": "Compared with the audit baseline; includes concurrent changes, not an attribution of ownership.",
+  "protectedAssistantSources": 5,
+  "protectedAssistantUnchanged": true,
+  "sources": [
+    {
+      "app": "staff",
+      "file": "app/(app)/assistant/page.tsx",
+      "sha256": "c153eb0ddfb83a36a626619de8e1a4579b3b6c102cfdfb0edd4bca8ed829b07d",
+      "bytes": 18206,
+      "baselineSha256": "c153eb0ddfb83a36a626619de8e1a4579b3b6c102cfdfb0edd4bca8ed829b07d",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/api.ts",
+      "sha256": "34184e82aa35f90449d6ca63d3595eec1bada614142bdb0aee806444aad88930",
+      "bytes": 5344,
+      "baselineSha256": "8139f754081d27d8dece54a01aa98055b9a1c9a057fd5fad7a786351a76e1833",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpMode.ts",
+      "sha256": "38f8725354cd24cc7d2ce91014c8145fa3808b464f549214919b26ef0e600fa8",
+      "bytes": 5428,
+      "baselineSha256": "38f8725354cd24cc7d2ce91014c8145fa3808b464f549214919b26ef0e600fa8",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/staff.tsx",
+      "sha256": "501f939418ee2262eebb07fb5708bcf25acd52791f534b845c086e696ca296a7",
+      "bytes": 1783,
+      "baselineSha256": "501f939418ee2262eebb07fb5708bcf25acd52791f534b845c086e696ca296a7",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/i18n.tsx",
+      "sha256": "378f1423cd7cc6fb20d481b7b8c19a1990a56155a680fa182a85360cbc1470cf",
+      "bytes": 1226,
+      "baselineSha256": "378f1423cd7cc6fb20d481b7b8c19a1990a56155a680fa182a85360cbc1470cf",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/SahayakThinking.tsx",
+      "sha256": "354d5935dc516e29e956f085beaae09bde7e4f8938b5efcc7e14c9bd6a7ba145",
+      "bytes": 3517,
+      "baselineSha256": "354d5935dc516e29e956f085beaae09bde7e4f8938b5efcc7e14c9bd6a7ba145",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/SahayakOwl.tsx",
+      "sha256": "6ab3e64653ea5f9f06027d6189b5563374a3adb120313934a9c289f0c61e65c8",
+      "bytes": 6542,
+      "baselineSha256": "6ab3e64653ea5f9f06027d6189b5563374a3adb120313934a9c289f0c61e65c8",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/attendance/page.tsx",
+      "sha256": "6cf2e66df4fa5897f9891451cdc13757f144a98e92b0efc4e1697e55a87744ba",
+      "bytes": 11520,
+      "baselineSha256": "6cf2e66df4fa5897f9891451cdc13757f144a98e92b0efc4e1697e55a87744ba",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/toast.tsx",
+      "sha256": "110a247ae8c27278d0d3be88b4027aced46306a92fc05ccbdf0ce89e46acaa19",
+      "bytes": 2867,
+      "baselineSha256": "110a247ae8c27278d0d3be88b4027aced46306a92fc05ccbdf0ce89e46acaa19",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/ui.tsx",
+      "sha256": "f5e2f433910c29365fc4fc71e847277f92d8256016ebb7693858072c4bbeeea7",
+      "bytes": 18818,
+      "baselineSha256": "5167d8c45bcc20900b884550b8c3a163e4035a14c5d29be5d5f078adae0f441c",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "components/MyMonth.tsx",
+      "sha256": "3ec9c09ae4bcf5a450e5a88b4dbe78f6efbe103d46a1402c05b077d26937ab88",
+      "bytes": 10824,
+      "baselineSha256": "34ff9b9eb380bc2a0a93b97a9389923a7e607ca7f46b9d967139f7ca62d989e1",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/attendance/leave/page.tsx",
+      "sha256": "0fee87083bd0b82a0fa9b3e465cbff24f07e4f8f00f73b9d79ed76f9680e47e0",
+      "bytes": 8516,
+      "baselineSha256": "0fee87083bd0b82a0fa9b3e465cbff24f07e4f8f00f73b9d79ed76f9680e47e0",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/attendance/mark/page.tsx",
+      "sha256": "c69d45c118ca30bc639ced17394adbe4fd91d56a8c690adc5e856955e86d2d10",
+      "bytes": 5125,
+      "baselineSha256": "c69d45c118ca30bc639ced17394adbe4fd91d56a8c690adc5e856955e86d2d10",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpAttendance.ts",
+      "sha256": "2eb48dfffe4bdbf30a30cd818f04a98b427267358fe49f1e6001594b00b6de6f",
+      "bytes": 1935,
+      "baselineSha256": "2eb48dfffe4bdbf30a30cd818f04a98b427267358fe49f1e6001594b00b6de6f",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/ErpRollCall.tsx",
+      "sha256": "a71024420bb965142afe20e67cf2830e83386b18145316b359f7a5d4c1e64e8d",
+      "bytes": 11527,
+      "baselineSha256": "a71024420bb965142afe20e67cf2830e83386b18145316b359f7a5d4c1e64e8d",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/attendance/mark/section/page.tsx",
+      "sha256": "fd7b9a781a90946d3bd3dd7ff33d6b1f684a27227222739f58634aabff8fccc9",
+      "bytes": 490,
+      "baselineSha256": "fd7b9a781a90946d3bd3dd7ff33d6b1f684a27227222739f58634aabff8fccc9",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/attendance/register/page.tsx",
+      "sha256": "9b2dc7f8090890535d5a50a902a14441b9ced9e2cfeda5ab973af3727e075ddb",
+      "bytes": 19113,
+      "baselineSha256": "9b2dc7f8090890535d5a50a902a14441b9ced9e2cfeda5ab973af3727e075ddb",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/useErpSession.ts",
+      "sha256": "187c7bcacd96b2486f9f1d56cd4c3ce1b6628f09b4f38361a2ef93b67377d4b9",
+      "bytes": 1491,
+      "baselineSha256": "187c7bcacd96b2486f9f1d56cd4c3ce1b6628f09b4f38361a2ef93b67377d4b9",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/spreadsheet.ts",
+      "sha256": "874865f860df472ba964a732c7458537dd295f065b90a9083ccbad867aae29b8",
+      "bytes": 1062,
+      "baselineSha256": "874865f860df472ba964a732c7458537dd295f065b90a9083ccbad867aae29b8",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpRegister.ts",
+      "sha256": "24514632b35d808a72dc54143ab066e2e6a9292bd8aed9169ae3cbbeaef15484",
+      "bytes": 2181,
+      "baselineSha256": "24514632b35d808a72dc54143ab066e2e6a9292bd8aed9169ae3cbbeaef15484",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/register/PrintRegister.tsx",
+      "sha256": "4d8db82687731bb197b776ca78661fa82b104761350c49d6cb8cfab3da7888f7",
+      "bytes": 3335,
+      "baselineSha256": "4d8db82687731bb197b776ca78661fa82b104761350c49d6cb8cfab3da7888f7",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpCerts.ts",
+      "sha256": "db6054005680255d2ce36d8fe818563759d13ef567ea73cb6476e9451eb87677",
+      "bytes": 1629,
+      "baselineSha256": "db6054005680255d2ce36d8fe818563759d13ef567ea73cb6476e9451eb87677",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/attendance/today/page.tsx",
+      "sha256": "0985927f165d41dfac938a86eb995b32ca57994cd5a60c6a70fc73de0943dfbe",
+      "bytes": 15150,
+      "baselineSha256": "461167a878f0ba96f8542cf04a254d16171eb64c33bdf73f83282fa47bb7bd9e",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpStaff.ts",
+      "sha256": "bad986c800f12aafd998b435d4555155a6de0788eb25963e308d48f4b3d7d521",
+      "bytes": 9793,
+      "baselineSha256": "bad986c800f12aafd998b435d4555155a6de0788eb25963e308d48f4b3d7d521",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/birthdays/page.tsx",
+      "sha256": "02b97039d1ab69c836c0eb9ed873d2c5a32fce79e1efffd533c5cc62eefd1423",
+      "bytes": 5828,
+      "baselineSha256": "02b97039d1ab69c836c0eb9ed873d2c5a32fce79e1efffd533c5cc62eefd1423",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/calendar/page.tsx",
+      "sha256": "9a18fd2ffa08d8da80e99805c3fdd411d3a29443bbf4277aa838b10417ca2c84",
+      "bytes": 16705,
+      "baselineSha256": "9a18fd2ffa08d8da80e99805c3fdd411d3a29443bbf4277aa838b10417ca2c84",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/format.ts",
+      "sha256": "cad8e3e9408f3eb92fcfb94470bace543972d71732b23ff15d69dabe665c6dbb",
+      "bytes": 2019,
+      "baselineSha256": "cad8e3e9408f3eb92fcfb94470bace543972d71732b23ff15d69dabe665c6dbb",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/copy-check/page.tsx",
+      "sha256": "137fe0e33150ebccbcd59bb162e87b1fd2820ad5aa0df83d5ad9b2cdcdaddd38",
+      "bytes": 9743,
+      "baselineSha256": "137fe0e33150ebccbcd59bb162e87b1fd2820ad5aa0df83d5ad9b2cdcdaddd38",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/SetupNeeded.tsx",
+      "sha256": "0b1db5a19fd3a0e819020ba505b9159df9bd8824a0b8fe7606496ea5fea65985",
+      "bytes": 1096,
+      "baselineSha256": "0b1db5a19fd3a0e819020ba505b9159df9bd8824a0b8fe7606496ea5fea65985",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/copy-check/sheet/page.tsx",
+      "sha256": "644bcad59d0dbc6f7cb7bec3c0c422f665e231b04f0662c63922a4535c840aa9",
+      "bytes": 13801,
+      "baselineSha256": "75004c1bcaad9358de29d55f1fbad24f1822dcddb5bb84aecc3f1659020e1f4e",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/exams/marks/page.tsx",
+      "sha256": "1cd1c64c24a013ecde9d4c39b65a48a9028ca7a0ead05519857ca15be6fe8bc2",
+      "bytes": 7393,
+      "baselineSha256": "1cd1c64c24a013ecde9d4c39b65a48a9028ca7a0ead05519857ca15be6fe8bc2",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpExams.ts",
+      "sha256": "aefc796292fcfa2a04032c8c2ffab56661c8dd6c17750450dd8c9e4f0e0a5ad2",
+      "bytes": 1925,
+      "baselineSha256": "aefc796292fcfa2a04032c8c2ffab56661c8dd6c17750450dd8c9e4f0e0a5ad2",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/exams/marks/sheet/page.tsx",
+      "sha256": "f3dc1e5e89cd459e824fd344e2b5d9ac032036c966bada90f7e792e5f562801c",
+      "bytes": 15457,
+      "baselineSha256": "3713b8833471059d94a3a831ff84ec0cbc7105799376e05d290400becc7c8214",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "lib/marksWorkbook.ts",
+      "sha256": "5e8a36cc00386960ae17e3c7245156e5306b52b39a505e8df024c0ce5cdbab82",
+      "bytes": 2535,
+      "baselineSha256": "5e8a36cc00386960ae17e3c7245156e5306b52b39a505e8df024c0ce5cdbab82",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpGrading.ts",
+      "sha256": "59d770dfe31c38a968dc04db758abe97c64c1075e141f13609dd3b054e3eb105",
+      "bytes": 2902,
+      "baselineSha256": "59d770dfe31c38a968dc04db758abe97c64c1075e141f13609dd3b054e3eb105",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/exams/report-cards/page.tsx",
+      "sha256": "777ee5bd51d8b585bd0485fef6cdb2d96a263fc9e05aa6dc152070b640071798",
+      "bytes": 12925,
+      "baselineSha256": "777ee5bd51d8b585bd0485fef6cdb2d96a263fc9e05aa6dc152070b640071798",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/report/ReportCardDocument.tsx",
+      "sha256": "b46e12e19cbedaaf9c3ea45ebfc8e8f7b8fd61fe2ef6e8d38dc27b9e191ef390",
+      "bytes": 16739,
+      "baselineSha256": "b46e12e19cbedaaf9c3ea45ebfc8e8f7b8fd61fe2ef6e8d38dc27b9e191ef390",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/certs/SheetPreview.tsx",
+      "sha256": "8af2bcc17b7328950e66656feef507b5fa3ffdedaf2646f4e852805e9cf96447",
+      "bytes": 2593,
+      "baselineSha256": "8af2bcc17b7328950e66656feef507b5fa3ffdedaf2646f4e852805e9cf96447",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/PrintReportCards.tsx",
+      "sha256": "776f0bdd88cc7d3bd0bec16fb9882dc1ff3432f6146e99cddc73b810b203159d",
+      "bytes": 2737,
+      "baselineSha256": "776f0bdd88cc7d3bd0bec16fb9882dc1ff3432f6146e99cddc73b810b203159d",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/exams/setup/edit/page.tsx",
+      "sha256": "c38a29e0f79a1422f2bcb8c4056ffaa87c07a5e5baee838b87df58f9d6d4b68d",
+      "bytes": 18626,
+      "baselineSha256": "c38a29e0f79a1422f2bcb8c4056ffaa87c07a5e5baee838b87df58f9d6d4b68d",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpExamSetup.ts",
+      "sha256": "b296953148b5141ff2b92c6e760f3547e6eb5936f2e2d6fd3e9287740f063610",
+      "bytes": 2893,
+      "baselineSha256": "b296953148b5141ff2b92c6e760f3547e6eb5936f2e2d6fd3e9287740f063610",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/exams/setup/page.tsx",
+      "sha256": "d904f95b27c26a021c2bddbb21d80eaa16ec29e62e7f8d4c2e8121e379c87187",
+      "bytes": 22418,
+      "baselineSha256": "d904f95b27c26a021c2bddbb21d80eaa16ec29e62e7f8d4c2e8121e379c87187",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/fees/collect/page.tsx",
+      "sha256": "b8fbbee6854271faa721f723c10f4189a6ca984b8d9c36f996fea4afe474d7cd",
+      "bytes": 31302,
+      "baselineSha256": "2c8ab7c88c5ed85fdee93edb32ae4b6652cf8a4f85452f07ef50478bad73eb9e",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpFeeEngine.ts",
+      "sha256": "e1b6a91c11c30a316dd76f27c7e4b0f0349674915297631597b84c8900ac334f",
+      "bytes": 16030,
+      "baselineSha256": "e1b6a91c11c30a316dd76f27c7e4b0f0349674915297631597b84c8900ac334f",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpFeeHeads.ts",
+      "sha256": "f227852e5b10b67124babff8388235d0b2c00e0fbd91fd37b5b0a4884e791f4d",
+      "bytes": 1354,
+      "baselineSha256": "f227852e5b10b67124babff8388235d0b2c00e0fbd91fd37b5b0a4884e791f4d",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpFees.ts",
+      "sha256": "9e386bbffee59ce456bbf4a5a6da88388ba96eabccd89777a74bc4c4413c974b",
+      "bytes": 3079,
+      "baselineSha256": "9e386bbffee59ce456bbf4a5a6da88388ba96eabccd89777a74bc4c4413c974b",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpStudents.ts",
+      "sha256": "89c7a9ee344ab91e6ae1b71503f1217fb0adfa78631a13ae4c68c5db676e53b1",
+      "bytes": 3545,
+      "baselineSha256": "89c7a9ee344ab91e6ae1b71503f1217fb0adfa78631a13ae4c68c5db676e53b1",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/FeeReceiptModal.tsx",
+      "sha256": "e0932c7376aab5837abb7f4204130ac8e000eae8ad2155c83f3ed3f5c19f697b",
+      "bytes": 10738,
+      "baselineSha256": "e0932c7376aab5837abb7f4204130ac8e000eae8ad2155c83f3ed3f5c19f697b",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/fees/dues/page.tsx",
+      "sha256": "76bf4542caaa15aba1f82b901e91f5249327d98ce142be893bd9b8cf5ba40dab",
+      "bytes": 25013,
+      "baselineSha256": "fbe74e900734f6c9e176f566098de0489729a3d496456d0ed284ce20cf4b539b",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpDues.ts",
+      "sha256": "448a6bc17e970d7044a932cc1e7a5bbbf80fb5f463438a33cc3030528b30a90c",
+      "bytes": 2994,
+      "baselineSha256": "448a6bc17e970d7044a932cc1e7a5bbbf80fb5f463438a33cc3030528b30a90c",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/fees/online/page.tsx",
+      "sha256": "872a19c5776fd65eca4660dd294d1de5d28fd7ad51c8c15e74af3fd4f0abca7b",
+      "bytes": 22702,
+      "baselineSha256": "872a19c5776fd65eca4660dd294d1de5d28fd7ad51c8c15e74af3fd4f0abca7b",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/fees/receipts/page.tsx",
+      "sha256": "5692dd5e98b89b9133a374d3e6243dfa8227f7376693983e095c001f68b868d4",
+      "bytes": 18999,
+      "baselineSha256": "5692dd5e98b89b9133a374d3e6243dfa8227f7376693983e095c001f68b868d4",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpReceipts.ts",
+      "sha256": "5c8b7cfc00474b776729de8df3cd5a5d5a8d9880ad3f7d4b47486fdb690673e8",
+      "bytes": 1783,
+      "baselineSha256": "5c8b7cfc00474b776729de8df3cd5a5d5a8d9880ad3f7d4b47486fdb690673e8",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/fees/reports/page.tsx",
+      "sha256": "32b6d3a267932d6da697c007a033cf7eb91da69fdf6e338f4b6c41784a251898",
+      "bytes": 22425,
+      "baselineSha256": "32b6d3a267932d6da697c007a033cf7eb91da69fdf6e338f4b6c41784a251898",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpReports.ts",
+      "sha256": "b320ee4ddcc26445ce6edc214c80295d28ef08dcf9faf49779f6248743998af0",
+      "bytes": 950,
+      "baselineSha256": "b320ee4ddcc26445ce6edc214c80295d28ef08dcf9faf49779f6248743998af0",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/fees/setup/page.tsx",
+      "sha256": "9931e5ba03d0ba883c60aced7fe25c937886d02c3a7fa347d6411877b6f0fea3",
+      "bytes": 45034,
+      "baselineSha256": "957d1b963d4e09913a0f89988074d83653281ae102054fe34b4eb2cded16d9f6",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/homework/page.tsx",
+      "sha256": "6c9210cca236f14abc36b3ee92d3356d73ed88fd2aba4317ee605dd638696d79",
+      "bytes": 17582,
+      "baselineSha256": "6c9210cca236f14abc36b3ee92d3356d73ed88fd2aba4317ee605dd638696d79",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/timetable.ts",
+      "sha256": "cf7ad538ce9d9c795302172f7f8cc493891fe30e8ac3c3237f50a1c8ec68b094",
+      "bytes": 1227,
+      "baselineSha256": "cf7ad538ce9d9c795302172f7f8cc493891fe30e8ac3c3237f50a1c8ec68b094",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/HomeworkFiles.tsx",
+      "sha256": "fe539e8bfd6f6a9e8b5d82a2d638fd3618efa128f1a636cff0eedf176f32bf6a",
+      "bytes": 5472,
+      "baselineSha256": "fe539e8bfd6f6a9e8b5d82a2d638fd3618efa128f1a636cff0eedf176f32bf6a",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/meetings/new/page.tsx",
+      "sha256": "bb653af3424ee2c0e1e3a460d861c0824736e9f1aaa9343f94720da7d2f67bc0",
+      "bytes": 6937,
+      "baselineSha256": "67c663a12c2493a0a536b39fdd08f20a1cfed280063ce4db63fe537555410e33",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/meetings/page.tsx",
+      "sha256": "ca77fbd4b767efb2ace3a4f37fa6c9249f1f886fe98cab5116cfb68f47c66c11",
+      "bytes": 10766,
+      "baselineSha256": "ca77fbd4b767efb2ace3a4f37fa6c9249f1f886fe98cab5116cfb68f47c66c11",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/messages/detail/page.tsx",
+      "sha256": "20b2c9a2a3f9fe140d5694d894a3be67c202cde20dc77f71d257132523d92e81",
+      "bytes": 11574,
+      "baselineSha256": "3d9d22cf01ad4978c7a56881353dc7b08f1a6a26aea96cf265203e20a4d2dea1",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpMessages.ts",
+      "sha256": "127cdb40f56d78df81d41d3e5a12b4c1ead084cdc0bd2479e328281ab2303334",
+      "bytes": 4310,
+      "baselineSha256": "127cdb40f56d78df81d41d3e5a12b4c1ead084cdc0bd2479e328281ab2303334",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/messages/new/page.tsx",
+      "sha256": "c4cdbdfd5951e79cf195f2c06e13edda260abc2c74acfdd88445d56f0e7981b9",
+      "bytes": 17102,
+      "baselineSha256": "583bd441c312dba0d69d5bb43c382e6410515e382f20b1ea1f57d4a8e9f8fbce",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/messages/page.tsx",
+      "sha256": "eecc915c553458537c97586d2397a76903b3dcf514151253367c283626b40a04",
+      "bytes": 6903,
+      "baselineSha256": "eecc915c553458537c97586d2397a76903b3dcf514151253367c283626b40a04",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/parent-chats/chat/page.tsx",
+      "sha256": "cf9ed788e060f0962bcf9680576c458bf8e494de5f912e1112e618b5d850bfd2",
+      "bytes": 5323,
+      "baselineSha256": "cf9ed788e060f0962bcf9680576c458bf8e494de5f912e1112e618b5d850bfd2",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/parent-chats/page.tsx",
+      "sha256": "e9e3165827c7deeafdcc2bad83c84134affb0e6b61417a854010850163de58bb",
+      "bytes": 5628,
+      "baselineSha256": "e9e3165827c7deeafdcc2bad83c84134affb0e6b61417a854010850163de58bb",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/report/page.tsx",
+      "sha256": "7ef411cbca91211436a379ec388c186bd0799359f457aea78dc9ae7d4128d058",
+      "bytes": 25930,
+      "baselineSha256": "7ef411cbca91211436a379ec388c186bd0799359f457aea78dc9ae7d4128d058",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpDashboard.ts",
+      "sha256": "4d2178292348fead5bb010c597e03202257e9f616d533ae9d0c9b96dce537047",
+      "bytes": 1979,
+      "baselineSha256": "4d2178292348fead5bb010c597e03202257e9f616d533ae9d0c9b96dce537047",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/reports/page.tsx",
+      "sha256": "e524ca3a94ed23e0469d3d4a49b2ecb060eb200a1af8e2cbe417b7048e171e60",
+      "bytes": 1045,
+      "baselineSha256": "cfa71b79baecbee6a9e2653835567271f56e9285306dc4127f56da8a01650cb5",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/settings/classes/page.tsx",
+      "sha256": "6f73989c7d439a42e69445a4bcc764264e9869df6c824faba6c4a903cd7f7ab6",
+      "bytes": 51224,
+      "baselineSha256": "6f73989c7d439a42e69445a4bcc764264e9869df6c824faba6c4a903cd7f7ab6",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpSettings.ts",
+      "sha256": "acc746288fca773a937d8406f78dfbe62bcc923367386d8b6253efc64b4def36",
+      "bytes": 16342,
+      "baselineSha256": "acc746288fca773a937d8406f78dfbe62bcc923367386d8b6253efc64b4def36",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/settings/data/page.tsx",
+      "sha256": "2a32387ce3bf7f1c330d7fcab5c791aef109e877600d97d8a136b5c59c332282",
+      "bytes": 718,
+      "baselineSha256": "9f597ea13acdd7cf1fccddd55005acfc65ef78ae9915c0de8ebcf55ebbaf5345",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/settings/page.tsx",
+      "sha256": "4619bd22f9d1fe22ae9cf9a83fb837abb75d14a156649aecadc198352855991b",
+      "bytes": 26778,
+      "baselineSha256": "c8be4a41cc8eb0f62c805f9ccdca3ffe2fab9b4c07652e75dbe9ba930399a983",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/settings/templates/page.tsx",
+      "sha256": "285f46b68f5ed22016477881143c93370ae9c8047b398c7a62ec2643aa857f9e",
+      "bytes": 9804,
+      "baselineSha256": "dda6adf944fbed1cb9e7f9ba6b6c64893478dfddfc6f0b57159c7be5bcfd964a",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/settings/users/page.tsx",
+      "sha256": "bb32c55f1d515bf7045efdecd442af23c966c3ceb18b04ba3292f48a46a6b67c",
+      "bytes": 30280,
+      "baselineSha256": "bb32c55f1d515bf7045efdecd442af23c966c3ceb18b04ba3292f48a46a6b67c",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/settings/whatsapp/page.tsx",
+      "sha256": "710e82c4ba68d63281052df503b74e696dbc0ab087c2ac86035558f57dbacd9e",
+      "bytes": 20686,
+      "baselineSha256": "710e82c4ba68d63281052df503b74e696dbc0ab087c2ac86035558f57dbacd9e",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/soon/page.tsx",
+      "sha256": "e763f779865746ff60dbc81ce41131ea37f31c6c9ac61b53ea8968fcd5824597",
+      "bytes": 2165,
+      "baselineSha256": "e763f779865746ff60dbc81ce41131ea37f31c6c9ac61b53ea8968fcd5824597",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpSoon.ts",
+      "sha256": "eeaf741c17b9ca4c896345e3555ec68172728f5d03fc539bd18d86fd2c53c26d",
+      "bytes": 690,
+      "baselineSha256": "eeaf741c17b9ca4c896345e3555ec68172728f5d03fc539bd18d86fd2c53c26d",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/staff/allocation/page.tsx",
+      "sha256": "ec1890d16cbf5e447a2c5afb6bafc3671772309962254e7a95194da680060207",
+      "bytes": 9097,
+      "baselineSha256": "6f7b3cd5cbcfa0e78b7560b1d35de2b07e7a9efc234778f2d4b7ab0138c1514c",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/staff/attendance/page.tsx",
+      "sha256": "03e7c293dccb252e40371edf7aa3b3734868b0a7fc7f29ea6de144d22293bad9",
+      "bytes": 46269,
+      "baselineSha256": "03e7c293dccb252e40371edf7aa3b3734868b0a7fc7f29ea6de144d22293bad9",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/staffRegister/StaffRegisterGrid.tsx",
+      "sha256": "5b767ec7b461c5edfa8435169c78f6c752a7907da612975dd678a6eb1aff4cce",
+      "bytes": 6658,
+      "baselineSha256": "5b767ec7b461c5edfa8435169c78f6c752a7907da612975dd678a6eb1aff4cce",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/staffRegister/PrintStaffRegister.tsx",
+      "sha256": "c960ea7cc9058498ef8042b0a0efe069e3dd007648e599f3b7cac3f5121150fb",
+      "bytes": 3498,
+      "baselineSha256": "c960ea7cc9058498ef8042b0a0efe069e3dd007648e599f3b7cac3f5121150fb",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/staff/class-teachers/page.tsx",
+      "sha256": "8866261d3f84ed20b156fe580eab6bfe432a0641c214b2e104ce813b30ae2781",
+      "bytes": 6335,
+      "baselineSha256": "1d9043859a217c0b5f0da44dd230052b74d8e57e06ae1941dbb10bbc69132a23",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/staff/detail/page.tsx",
+      "sha256": "288fc99c22b5031928b303d61a9e7d43e7400b93be3d71fcdd32cc42a4098d75",
+      "bytes": 26763,
+      "baselineSha256": "288fc99c22b5031928b303d61a9e7d43e7400b93be3d71fcdd32cc42a4098d75",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/PhotoCropper.tsx",
+      "sha256": "ee8e0e2ddec7d9296f887fb6be4d24cd20eafa79017d42f1d4233fe528bd6d01",
+      "bytes": 10089,
+      "baselineSha256": "ee8e0e2ddec7d9296f887fb6be4d24cd20eafa79017d42f1d4233fe528bd6d01",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/staff/excel/page.tsx",
+      "sha256": "04bd681c7b8c1c7ac991eb1b1e3face2458c015ae61e51fc95ba13fb24f53af8",
+      "bytes": 3071,
+      "baselineSha256": "04bd681c7b8c1c7ac991eb1b1e3face2458c015ae61e51fc95ba13fb24f53af8",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/csv.ts",
+      "sha256": "7fc4b783e1d45cd2a38f2ae0168c5b3ba7206204cd36f39c3146d181d5f78636",
+      "bytes": 2789,
+      "baselineSha256": "7fc4b783e1d45cd2a38f2ae0168c5b3ba7206204cd36f39c3146d181d5f78636",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/ExcelRoundTrip.tsx",
+      "sha256": "69f921892bd590e2ecbfd124b0758a49af590b82b8edbaa89d70c2dfa2c708bb",
+      "bytes": 9308,
+      "baselineSha256": "ad7661f5ccfd1fafa6ed05a273025106afb763908378c64cd35bd0e7c956c821",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/staff/new/page.tsx",
+      "sha256": "dcdbaebab1bd5e31b304f1d13cdc588ae453baacee129f02e9bf6819048f9dc6",
+      "bytes": 11620,
+      "baselineSha256": "69271ec022a71d023be4ec174dfe23f4cb93d650796811a23ab9c5addb1723de",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/staff/page.tsx",
+      "sha256": "b6380402240b745763537ebac7b1ecd3f9cb7e6bd7cc059c1b0772cc33223205",
+      "bytes": 10128,
+      "baselineSha256": "b6380402240b745763537ebac7b1ecd3f9cb7e6bd7cc059c1b0772cc33223205",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/staff/payroll/page.tsx",
+      "sha256": "5389eedcdbf67013f4dfbbab4ce36d060c8a0f8c0161aa70a7d2f7781740b1c9",
+      "bytes": 35008,
+      "baselineSha256": "b51cb1d40afc37bace7a95a5be68b1e4e0a1d1effee16a74dacb9c825243ab8e",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpPayroll.ts",
+      "sha256": "b00f10add3b68f5a6ccd0eeeec4eb0f106a7d1831f98f6e6a57c59774a9f486e",
+      "bytes": 3091,
+      "baselineSha256": "b00f10add3b68f5a6ccd0eeeec4eb0f106a7d1831f98f6e6a57c59774a9f486e",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/PayslipDocument.tsx",
+      "sha256": "d3d964c3938b13222d6a1a8149497cb4dbdf849d14e1e2a930cceee4593b03a7",
+      "bytes": 4834,
+      "baselineSha256": "d3d964c3938b13222d6a1a8149497cb4dbdf849d14e1e2a930cceee4593b03a7",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/students/admission/page.tsx",
+      "sha256": "ae6af968a816923d01d01f0427459638511f79c2d4ed3497a1e9db26ada49f3a",
+      "bytes": 71116,
+      "baselineSha256": "968d2889aef091315b3c4e633d153fe17bd7ae4eec5f6308ec4b168ca95df8e1",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpEnquiry.ts",
+      "sha256": "698380c3f94d7ecd0ba29bef06ad8581fa0884416cb50fc3fa9d7505d09127fc",
+      "bytes": 3347,
+      "baselineSha256": "698380c3f94d7ecd0ba29bef06ad8581fa0884416cb50fc3fa9d7505d09127fc",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpWords.ts",
+      "sha256": "e2619b21a890022bcdd69c5d0c6bc9113dfffd3821b5a0022c585a1dd62a2cdf",
+      "bytes": 3145,
+      "baselineSha256": "e2619b21a890022bcdd69c5d0c6bc9113dfffd3821b5a0022c585a1dd62a2cdf",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpTransport.ts",
+      "sha256": "eb5323d72c4f92a016c944532bf241cd706714aa6499f81b02add22f7e33897e",
+      "bytes": 2298,
+      "baselineSha256": "eb5323d72c4f92a016c944532bf241cd706714aa6499f81b02add22f7e33897e",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpDocs.ts",
+      "sha256": "267a94d827c83be30dea880a56203e3a78d248152b46563a2fba546b4eda81fd",
+      "bytes": 2806,
+      "baselineSha256": "267a94d827c83be30dea880a56203e3a78d248152b46563a2fba546b4eda81fd",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/students/certificates/issue/page.tsx",
+      "sha256": "63f4026ce4842bd5069ddd9fc1782a4b5f1586be79d728b91a842ac48e5afda3",
+      "bytes": 14639,
+      "baselineSha256": "63f4026ce4842bd5069ddd9fc1782a4b5f1586be79d728b91a842ac48e5afda3",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/certs/CertificateDocument.tsx",
+      "sha256": "ce8d2d8f72bf5cd3106d53f3eb61f9952814a4af7b929ffaf23d6b3f81ee0fad",
+      "bytes": 16272,
+      "baselineSha256": "ce8d2d8f72bf5cd3106d53f3eb61f9952814a4af7b929ffaf23d6b3f81ee0fad",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/students/certificates/page.tsx",
+      "sha256": "55a18ec041067d6b3554cd4938e9ad1a71cd10af84098f24818e562465e07768",
+      "bytes": 5349,
+      "baselineSha256": "55a18ec041067d6b3554cd4938e9ad1a71cd10af84098f24818e562465e07768",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/students/detail/page.tsx",
+      "sha256": "5894f28c171e1a7021bec4fc6214af8e802386b9c8167b26a75f0e6f3b84bdf0",
+      "bytes": 24327,
+      "baselineSha256": "5894f28c171e1a7021bec4fc6214af8e802386b9c8167b26a75f0e6f3b84bdf0",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/GatePassSheet.tsx",
+      "sha256": "0ad182a6f0813f1feb9d9adb0c3edaf223081ef1b1121dbe91073e470fd777d5",
+      "bytes": 5909,
+      "baselineSha256": "0ad182a6f0813f1feb9d9adb0c3edaf223081ef1b1121dbe91073e470fd777d5",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/StudentProfileTabs.tsx",
+      "sha256": "eaf946a3183263a09d15ebb0e8004a0f4e0d306e6398ff1ba21f58208aeb6bc4",
+      "bytes": 27685,
+      "baselineSha256": "eaf946a3183263a09d15ebb0e8004a0f4e0d306e6398ff1ba21f58208aeb6bc4",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/StudentProfileOfficeTabs.tsx",
+      "sha256": "8c5a25de9a8d486679ec561b78e8cef048d7eb2cf7b46cc6758171fc1ded60c1",
+      "bytes": 23360,
+      "baselineSha256": "8c5a25de9a8d486679ec561b78e8cef048d7eb2cf7b46cc6758171fc1ded60c1",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/students/enquiries/detail/page.tsx",
+      "sha256": "441f2195d314cb07366d40274bf385eaf2cd8689b06a96e61fc1375213f42c4f",
+      "bytes": 8494,
+      "baselineSha256": "441f2195d314cb07366d40274bf385eaf2cd8689b06a96e61fc1375213f42c4f",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/students/enquiries/new/page.tsx",
+      "sha256": "a91500c63ad38ed88336ed78076fb21db070f26e03c2ea618f02ac6ceac2c7ce",
+      "bytes": 7975,
+      "baselineSha256": "a91500c63ad38ed88336ed78076fb21db070f26e03c2ea618f02ac6ceac2c7ce",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/students/enquiries/page.tsx",
+      "sha256": "f398bed0651147dbe2f6a5ee5b2621c0ed42e6708995f8f213dbf026b095105b",
+      "bytes": 6147,
+      "baselineSha256": "f398bed0651147dbe2f6a5ee5b2621c0ed42e6708995f8f213dbf026b095105b",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/students/excel/page.tsx",
+      "sha256": "9ba09a7ad9f482d2ec2021cfb9f050ffcfafabb4c8b402f944209bffc0b4e3d7",
+      "bytes": 12793,
+      "baselineSha256": "9ba09a7ad9f482d2ec2021cfb9f050ffcfafabb4c8b402f944209bffc0b4e3d7",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/students/id-cards/page.tsx",
+      "sha256": "ff785aeaf43843c0b8852a68aab517c0587782d4ea5bc312050d326b06ff2fd1",
+      "bytes": 11044,
+      "baselineSha256": "ff785aeaf43843c0b8852a68aab517c0587782d4ea5bc312050d326b06ff2fd1",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/IdCardPrint.tsx",
+      "sha256": "e4bafdfe22a0954e038f30485a03114e6d591149ba4854b7e29375eab76c9508",
+      "bytes": 10151,
+      "baselineSha256": "e4bafdfe22a0954e038f30485a03114e6d591149ba4854b7e29375eab76c9508",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/students/page.tsx",
+      "sha256": "e387d7e32c85c7593517c001bbf77d89cad918f133584fae3abaa40d2b865146",
+      "bytes": 9108,
+      "baselineSha256": "e387d7e32c85c7593517c001bbf77d89cad918f133584fae3abaa40d2b865146",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/students/photos/page.tsx",
+      "sha256": "3dd6485baff515cc77d496ee36e5707a2294c8ae15c009d9ef133898d8ced9fb",
+      "bytes": 15445,
+      "baselineSha256": "3dd6485baff515cc77d496ee36e5707a2294c8ae15c009d9ef133898d8ced9fb",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpShrinkPhoto.ts",
+      "sha256": "f3b482c83d30c04387402f3a0be72bca667b6b2eef0e0239683adfe0f5cc14c4",
+      "bytes": 1556,
+      "baselineSha256": "f3b482c83d30c04387402f3a0be72bca667b6b2eef0e0239683adfe0f5cc14c4",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/students/promote/page.tsx",
+      "sha256": "85de6b9d6020342b8b27ce6d7e17e420714ff048059819abfb70eaebb0256ddf",
+      "bytes": 20319,
+      "baselineSha256": "85de6b9d6020342b8b27ce6d7e17e420714ff048059819abfb70eaebb0256ddf",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/syllabus/excel/page.tsx",
+      "sha256": "408d5cb899aaba18c68656a16c1a81de69b0fecf7e9451b9ed5d6ef2f67f7caf",
+      "bytes": 11064,
+      "baselineSha256": "408d5cb899aaba18c68656a16c1a81de69b0fecf7e9451b9ed5d6ef2f67f7caf",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/syllabus/page.tsx",
+      "sha256": "3d895a47bc3d24c26b3d6e875ca2f9a32a5f5adefe358bac60952c8ae568e1d7",
+      "bytes": 5860,
+      "baselineSha256": "3d895a47bc3d24c26b3d6e875ca2f9a32a5f5adefe358bac60952c8ae568e1d7",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/syllabus/plan/page.tsx",
+      "sha256": "0a3491ba0ab9ac1c512e0185700244c7e4a0f38bc67bfbb00491596e90d8f086",
+      "bytes": 14273,
+      "baselineSha256": "0a3491ba0ab9ac1c512e0185700244c7e4a0f38bc67bfbb00491596e90d8f086",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/timetable/page.tsx",
+      "sha256": "931b8bf9851b32577a086e70a0e091b026a7f5dbe4e0a4c31d3a1d98cbec3863",
+      "bytes": 23676,
+      "baselineSha256": "931b8bf9851b32577a086e70a0e091b026a7f5dbe4e0a4c31d3a1d98cbec3863",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/timetable/TimetableDocument.tsx",
+      "sha256": "f8da57bb291d9ce6f0acc5d37675cd131b2cdd50b60147ed346fdfff3f4b20cc",
+      "bytes": 2943,
+      "baselineSha256": "f8da57bb291d9ce6f0acc5d37675cd131b2cdd50b60147ed346fdfff3f4b20cc",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/erpTimetable.ts",
+      "sha256": "1ab444d1d00e3aa4cba52d680e3394f12f05b986b4f7e9affad1142ba7107efb",
+      "bytes": 1138,
+      "baselineSha256": "1ab444d1d00e3aa4cba52d680e3394f12f05b986b4f7e9affad1142ba7107efb",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/transport/page.tsx",
+      "sha256": "34325faf15edbb4ff9d8609fd8fb5bb7271117eb1b4dda96bda69c40a892b555",
+      "bytes": 8026,
+      "baselineSha256": "34325faf15edbb4ff9d8609fd8fb5bb7271117eb1b4dda96bda69c40a892b555",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/transport/TransportLivePanel.tsx",
+      "sha256": "a6438fff421ebd0b01d8e91a28839fdb902137e6dea9aa64a3be6ed5626f96b8",
+      "bytes": 6566,
+      "baselineSha256": "a6438fff421ebd0b01d8e91a28839fdb902137e6dea9aa64a3be6ed5626f96b8",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/transport/route/page.tsx",
+      "sha256": "993929f93cfb5592a4d79589301e9ac2729ea57a5eda0bf8754dacae1fe5a2d5",
+      "bytes": 22861,
+      "baselineSha256": "993929f93cfb5592a4d79589301e9ac2729ea57a5eda0bf8754dacae1fe5a2d5",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/transport/DriverList.tsx",
+      "sha256": "8d02f33c24f7a4c67ddfd26cb8506bd7a87f42195a8dbe36eabac9cc264c73b5",
+      "bytes": 2360,
+      "baselineSha256": "8d02f33c24f7a4c67ddfd26cb8506bd7a87f42195a8dbe36eabac9cc264c73b5",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/erp/transport/students/page.tsx",
+      "sha256": "9f3036fcdb2be3928e73ab5349215bdaab938973f9a66dde42dfe75a7b0d3d51",
+      "bytes": 452,
+      "baselineSha256": "9f3036fcdb2be3928e73ab5349215bdaab938973f9a66dde42dfe75a7b0d3d51",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/homework/page.tsx",
+      "sha256": "03f7d5a7bd63c9acf1818a42f85aa8d03161bc32a99f40a4eec06daf25103446",
+      "bytes": 14670,
+      "baselineSha256": "f6d9a0b55116258ab6683c6d39b3db288ddcc8a3e001f1bf225185e4004a9b65",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/leave/apply/page.tsx",
+      "sha256": "f2172d3126e94602ed6764ef2353a062fbbb44856d634b35c85ef4469ae01b08",
+      "bytes": 5242,
+      "baselineSha256": "f2172d3126e94602ed6764ef2353a062fbbb44856d634b35c85ef4469ae01b08",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/leave.ts",
+      "sha256": "d612d2de880988ca8a240f91d110772707f2f03e7def005c2ce01b75c46c8d7a",
+      "bytes": 414,
+      "baselineSha256": "d612d2de880988ca8a240f91d110772707f2f03e7def005c2ce01b75c46c8d7a",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/leave/page.tsx",
+      "sha256": "868640d6ac8d093c56efbb54b3db0d47ea3a596e06eb98a2cf4ff654edebaf02",
+      "bytes": 12539,
+      "baselineSha256": "df95488835dc12a9afdff3b161a636e7569b87cbdd809a45b79fc9c8b7928241",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/lectures/page.tsx",
+      "sha256": "542141c22a3eb6afe67bf2a41d518377191a2cd6c6eb153200b6bd27cc2d2008",
+      "bytes": 2784,
+      "baselineSha256": "542141c22a3eb6afe67bf2a41d518377191a2cd6c6eb153200b6bd27cc2d2008",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/marks/page.tsx",
+      "sha256": "9353c3744025b2e84e2ee95c1727b41f8f877b04c8f08199cb18d66e8791fe45",
+      "bytes": 9932,
+      "baselineSha256": "fde407e3d7175137552b4133a028cb501feffa172f403c214d27faf68af77426",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/me/attendance/page.tsx",
+      "sha256": "d215dccf2eb24fa6624205b7ce2b9446cb2884e783f82d297f5be105671428f6",
+      "bytes": 146,
+      "baselineSha256": "d215dccf2eb24fa6624205b7ce2b9446cb2884e783f82d297f5be105671428f6",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/Redirect.tsx",
+      "sha256": "8b6b5525fa050d444e1bc1b887d532d4956361c4d012509349e23744c475b894",
+      "bytes": 346,
+      "baselineSha256": "8b6b5525fa050d444e1bc1b887d532d4956361c4d012509349e23744c475b894",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/me/leave/page.tsx",
+      "sha256": "0c69269ffcd9a21c5f37a4c362f2b60bedc85f1eae4ea2235f739627c3d2df31",
+      "bytes": 138,
+      "baselineSha256": "0c69269ffcd9a21c5f37a4c362f2b60bedc85f1eae4ea2235f739627c3d2df31",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/me/page.tsx",
+      "sha256": "4e0447f4caf0974ce172279fd1fa32d966e08d078feafc00c2d1cf2c93d2bf32",
+      "bytes": 140,
+      "baselineSha256": "4e0447f4caf0974ce172279fd1fa32d966e08d078feafc00c2d1cf2c93d2bf32",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/me/requests/page.tsx",
+      "sha256": "14ccc94186f8939cb2bd12f08e292d831a9dba3a1d58d55351062e3da70a3482",
+      "bytes": 151,
+      "baselineSha256": "14ccc94186f8939cb2bd12f08e292d831a9dba3a1d58d55351062e3da70a3482",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/me/salary/page.tsx",
+      "sha256": "c81c2e49271a5ff39a553338fc10b42f67cb7954af08f11762e9481b4a896b53",
+      "bytes": 139,
+      "baselineSha256": "c81c2e49271a5ff39a553338fc10b42f67cb7954af08f11762e9481b4a896b53",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/me/timetable/page.tsx",
+      "sha256": "bfcb01d3f31eb789a64d7dc3f778c378871effe80251a7448a811c16af72ac7b",
+      "bytes": 142,
+      "baselineSha256": "bfcb01d3f31eb789a64d7dc3f778c378871effe80251a7448a811c16af72ac7b",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/messages/chat/page.tsx",
+      "sha256": "1e2f05f0a4591bab87ee3636b41678118d22807b8d06f584cd6c422ba2b373c4",
+      "bytes": 18403,
+      "baselineSha256": "1e2f05f0a4591bab87ee3636b41678118d22807b8d06f584cd6c422ba2b373c4",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/messages.ts",
+      "sha256": "e8e39caa001923771c8f9fd94e63ca34e1c2d3f1b76f266febb82fb1bdcc9098",
+      "bytes": 3538,
+      "baselineSha256": "e8e39caa001923771c8f9fd94e63ca34e1c2d3f1b76f266febb82fb1bdcc9098",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/messages/page.tsx",
+      "sha256": "6fac3084b6eaa3a173b9eebd1e335499dcefb7d6642d26a327e9824a510b90d6",
+      "bytes": 5673,
+      "baselineSha256": "6fac3084b6eaa3a173b9eebd1e335499dcefb7d6642d26a327e9824a510b90d6",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/my-attendance/page.tsx",
+      "sha256": "3a81bf36d82f262bf30f1e1b52b168e4f3b4fea126e6bae1645b6d93b867ab74",
+      "bytes": 300,
+      "baselineSha256": "3a81bf36d82f262bf30f1e1b52b168e4f3b4fea126e6bae1645b6d93b867ab74",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/notes/page.tsx",
+      "sha256": "d43257afc7505fb0fadc8b85f079fcde50cab1eee2edb8161e4dfa79408da18d",
+      "bytes": 5411,
+      "baselineSha256": "2760a1d1113b1224e555c0c876e6d81fc74a4adc279e0b7ce6b5841075ed6ec9",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/notice/page.tsx",
+      "sha256": "e7d373b9ec9059b2ca23d77f7db91034c827a9f434c48f76fe1dc2d632f56bca",
+      "bytes": 3944,
+      "baselineSha256": "e7d373b9ec9059b2ca23d77f7db91034c827a9f434c48f76fe1dc2d632f56bca",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/counts.ts",
+      "sha256": "fec686ad74326d6a134146140d3c45af2fe3ff0622fe31c12d3e42fef44e6540",
+      "bytes": 1562,
+      "baselineSha256": "fec686ad74326d6a134146140d3c45af2fe3ff0622fe31c12d3e42fef44e6540",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/page.tsx",
+      "sha256": "52bbe6059c94abc9a825b5e937a2b94949ab6ede4fc323f33b6202d1da0196b5",
+      "bytes": 1115,
+      "baselineSha256": "52bbe6059c94abc9a825b5e937a2b94949ab6ede4fc323f33b6202d1da0196b5",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/driver/DriverHome.tsx",
+      "sha256": "bdc015e887110bb863072804f1247e30fd2008e514819610e16e3af9ffbef8b8",
+      "bytes": 10977,
+      "baselineSha256": "bdc015e887110bb863072804f1247e30fd2008e514819610e16e3af9ffbef8b8",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/StaffHome.tsx",
+      "sha256": "39ba0c9fa99dbcee601a2961f571b53327221401ca3ba84c9240663f63d6619a",
+      "bytes": 21896,
+      "baselineSha256": "39ba0c9fa99dbcee601a2961f571b53327221401ca3ba84c9240663f63d6619a",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/ErpHome.tsx",
+      "sha256": "caa290d70791578aaf56bc00b94aeda9ca3878bc913b6234c94ddc04cc72815f",
+      "bytes": 13656,
+      "baselineSha256": "4a663ceb8a3a6d7d759cbd953e47fa230f0cef4b7b101974e7320dc86ca7f94f",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/profile/page.tsx",
+      "sha256": "23d948b9dd65c354ea5f043c8c42c66e6898af8ad14f53b4213402ec7375fae9",
+      "bytes": 7566,
+      "baselineSha256": "b962c78a0f0a030538fb6ce246972e114e93a941c20a6d9689b7aaa85fb66a4a",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "lib/driverPrefs.ts",
+      "sha256": "ccc3fc3a343a4fc598764c2ecc9069ba84501b3760d323661210c3f261a84747",
+      "bytes": 773,
+      "baselineSha256": "ccc3fc3a343a4fc598764c2ecc9069ba84501b3760d323661210c3f261a84747",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/erp/ErpProfile.tsx",
+      "sha256": "fd842334a10e6a0c6b62137bf33694b59bc6a2bfc4a5d981d983697c913b5ad4",
+      "bytes": 8457,
+      "baselineSha256": "1f87c369db845990f3afb9be07f387098c73fa54b49260854940d72cd7724c03",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/salary/page.tsx",
+      "sha256": "781f342fc7d0c12b3d92992c13b94f134057dcf94879ad4acd2869f70d17b5a9",
+      "bytes": 3317,
+      "baselineSha256": "781f342fc7d0c12b3d92992c13b94f134057dcf94879ad4acd2869f70d17b5a9",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/students/detail/page.tsx",
+      "sha256": "e76c9c015a8fb91318f471f4091186e1a0126a5b6169af1d1796d34ab973a115",
+      "bytes": 9730,
+      "baselineSha256": "e76c9c015a8fb91318f471f4091186e1a0126a5b6169af1d1796d34ab973a115",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/students/page.tsx",
+      "sha256": "4ddd24cbce21c75ede605fb27295eb26b1ef6f03a56141d91e426ced51349487",
+      "bytes": 3745,
+      "baselineSha256": "4ddd24cbce21c75ede605fb27295eb26b1ef6f03a56141d91e426ced51349487",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/timetable/page.tsx",
+      "sha256": "b10848ca6b565dcd863ab004f4f3cc666d8f7b9d35dca271f6c6368e291d9b3b",
+      "bytes": 3944,
+      "baselineSha256": "b10848ca6b565dcd863ab004f4f3cc666d8f7b9d35dca271f6c6368e291d9b3b",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/trip/history/page.tsx",
+      "sha256": "9892f3d804fd05ca0e30cb51c6b908563528e7b07b4498c21c9b6cf33e69b744",
+      "bytes": 7420,
+      "baselineSha256": "9892f3d804fd05ca0e30cb51c6b908563528e7b07b4498c21c9b6cf33e69b744",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/bus.ts",
+      "sha256": "394d24cf12334ce2fc5904c9a394a9da5164c77d14cb6e4d60e9d5003bdc7d42",
+      "bytes": 5976,
+      "baselineSha256": "394d24cf12334ce2fc5904c9a394a9da5164c77d14cb6e4d60e9d5003bdc7d42",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/driver/parts.tsx",
+      "sha256": "ab72a58afea0441f690c2567193739914b919f376c6795492c11edaca6e328f2",
+      "bytes": 3649,
+      "baselineSha256": "ab72a58afea0441f690c2567193739914b919f376c6795492c11edaca6e328f2",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/(app)/trip/page.tsx",
+      "sha256": "ed4ca1fb8fbca9a06fd1abc9d59c0123911f99f4f61539e7a8fa9254d6f7f6ad",
+      "bytes": 41950,
+      "baselineSha256": "ed4ca1fb8fbca9a06fd1abc9d59c0123911f99f4f61539e7a8fa9254d6f7f6ad",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/useDialog.ts",
+      "sha256": "74ad131a8914eb153fd35c8385237a3e0a576bbbc48ea8237ade5f202c159d77",
+      "bytes": 2731,
+      "baselineSha256": "74ad131a8914eb153fd35c8385237a3e0a576bbbc48ea8237ade5f202c159d77",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/demo.ts",
+      "sha256": "7d1eab303b4d3741726d313b0d1174209807a497acd25ffcb5b5d7fe4e835912",
+      "bytes": 36464,
+      "baselineSha256": "7d1eab303b4d3741726d313b0d1174209807a497acd25ffcb5b5d7fe4e835912",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/driver/SlideConfirm.tsx",
+      "sha256": "66f98ec7a805746a8f4986ed97628c54021f591eb72a5a720cfddc79c87d3f27",
+      "bytes": 4708,
+      "baselineSha256": "71d71385c816ad0d772087c5cafc62dc45e3d22e8bd5b6d719ff8542a2374567",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "lib/slideFeedback.ts",
+      "sha256": "fbaafe9b3486087e5d5635b38f4cc9a72990e652e1920ffed45712fbb51f47a4",
+      "bytes": 6923,
+      "baselineSha256": "fbaafe9b3486087e5d5635b38f4cc9a72990e652e1920ffed45712fbb51f47a4",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "lib/haptics.ts",
+      "sha256": "7d1ffa27caecae178824822e969afb61c02937ad5192a20dcbe7e1072dc3e255",
+      "bytes": 1614,
+      "baselineSha256": "7d1ffa27caecae178824822e969afb61c02937ad5192a20dcbe7e1072dc3e255",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/BusMap.tsx",
+      "sha256": "19ba9ca40d96f205dbdba02d272939f782ea1ff6839c7a862ae2564612c7bef2",
+      "bytes": 10183,
+      "baselineSha256": "19ba9ca40d96f205dbdba02d272939f782ea1ff6839c7a862ae2564612c7bef2",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/driver/DropAlert.tsx",
+      "sha256": "c0ca297a656bf51c05f6e2d64d3cddca67d6e95e9e54851ade4044d15ea661f3",
+      "bytes": 5044,
+      "baselineSha256": "c0ca297a656bf51c05f6e2d64d3cddca67d6e95e9e54851ade4044d15ea661f3",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/driver/StopSheet.tsx",
+      "sha256": "540bf142cd982ca86ebfc4da1543dc60ce327b0acf8dd948a212249aa268e154",
+      "bytes": 6030,
+      "baselineSha256": "540bf142cd982ca86ebfc4da1543dc60ce327b0acf8dd948a212249aa268e154",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/driver/DelaySheet.tsx",
+      "sha256": "5514b576d972a848379c9a720e3104f3ba46cf164071074b01ad19141125da02",
+      "bytes": 5698,
+      "baselineSha256": "5514b576d972a848379c9a720e3104f3ba46cf164071074b01ad19141125da02",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/login/page.tsx",
+      "sha256": "358784ac8129aac1ce6e2a893c3b94ebbe25fcf314404cabfb4f89a2f073bc7a",
+      "bytes": 15923,
+      "baselineSha256": "358784ac8129aac1ce6e2a893c3b94ebbe25fcf314404cabfb4f89a2f073bc7a",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "components/AppShell.tsx",
+      "sha256": "4fe3b04fd5aa5916b35f232498a6da48ed59b93056379487de4c2eb92780b475",
+      "bytes": 24856,
+      "baselineSha256": "c1d134d56e71ceb4c315eb2b9cf866d199cfd9c5504adaacc670bde8b322d7ba",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/globals.css",
+      "sha256": "5a4d96795834393ac994fde484d25a7a702941d1be28d46ff57b1b82ed82a1d1",
+      "bytes": 36130,
+      "baselineSha256": "5efba8f3bf8d44448c51d6598fb35a9e98ebbafda959b435cecf135c74393e6e",
+      "changed": true
+    },
+    {
+      "app": "staff",
+      "file": "app/action-palette.css",
+      "sha256": "a647d2a34b803a4e1cdad9991d6cca678ab3cd73d19d0c179a1067d601846bec",
+      "bytes": 1578,
+      "baselineSha256": "a647d2a34b803a4e1cdad9991d6cca678ab3cd73d19d0c179a1067d601846bec",
+      "changed": false
+    },
+    {
+      "app": "staff",
+      "file": "app/status-badges.css",
+      "sha256": "edc62f23de5c44743946b29c1c3e89dfa008af48508e55f4c264415df49d90af",
+      "bytes": 3454,
+      "baselineSha256": "edc62f23de5c44743946b29c1c3e89dfa008af48508e55f4c264415df49d90af",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/assistant/page.tsx",
+      "sha256": "9bdc817845f83291cf75fbadbd2ea49d4edfcfa49b2c1446fb4d1b9c15337b11",
+      "bytes": 15150,
+      "baselineSha256": "9bdc817845f83291cf75fbadbd2ea49d4edfcfa49b2c1446fb4d1b9c15337b11",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "lib/api.ts",
+      "sha256": "8d0ca35c9589680a928f994c882ba2eb6a8381d4ec5512199867470692014aa1",
+      "bytes": 5503,
+      "baselineSha256": "61ef906d75b98ce6114851c988cdde8b783e6d0ba23678920a1b2219611b15c6",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "lib/parent.tsx",
+      "sha256": "d950b0cf69e15ad4e34e908a7e8afb3e774a19f4d2ce9cd6821e4ea7f2832fd0",
+      "bytes": 4161,
+      "baselineSha256": "d950b0cf69e15ad4e34e908a7e8afb3e774a19f4d2ce9cd6821e4ea7f2832fd0",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "lib/i18n.tsx",
+      "sha256": "7ba25559ad8f621289c56a9926421b58546ab5c22421885244bc0627678e9e1c",
+      "bytes": 7697,
+      "baselineSha256": "7ba25559ad8f621289c56a9926421b58546ab5c22421885244bc0627678e9e1c",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "components/SahayakThinking.tsx",
+      "sha256": "006304d1ce61d10d410a05b0b49067a302fb5b4b58d3e6c0c3e1d53d7b79e024",
+      "bytes": 2387,
+      "baselineSha256": "006304d1ce61d10d410a05b0b49067a302fb5b4b58d3e6c0c3e1d53d7b79e024",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/attendance/page.tsx",
+      "sha256": "979cee3322623c3acf03e2802cc875c06c232f6a3e8dfaeb694a51a861a90273",
+      "bytes": 141,
+      "baselineSha256": "979cee3322623c3acf03e2802cc875c06c232f6a3e8dfaeb694a51a861a90273",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "components/Redirect.tsx",
+      "sha256": "8b6b5525fa050d444e1bc1b887d532d4956361c4d012509349e23744c475b894",
+      "bytes": 346,
+      "baselineSha256": "8b6b5525fa050d444e1bc1b887d532d4956361c4d012509349e23744c475b894",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/bus/page.tsx",
+      "sha256": "f00ee6c275a176ea86ecb2073a61d1ea5b26f4d0fa5bc050d1ec1e4867141cb8",
+      "bytes": 17153,
+      "baselineSha256": "f00ee6c275a176ea86ecb2073a61d1ea5b26f4d0fa5bc050d1ec1e4867141cb8",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "components/BusDisclosure.tsx",
+      "sha256": "a5238c81b2cdd972e9d01ce39f6e2fff8cca70dbe6035eb25388fef1cd4f27af",
+      "bytes": 823,
+      "baselineSha256": "a5238c81b2cdd972e9d01ce39f6e2fff8cca70dbe6035eb25388fef1cd4f27af",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "lib/format.ts",
+      "sha256": "b70077205099078ebfea4ec00594f7c6dbab5113debb4ab6b01cce9d0becd049",
+      "bytes": 2281,
+      "baselineSha256": "b70077205099078ebfea4ec00594f7c6dbab5113debb4ab6b01cce9d0becd049",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "lib/text/more.ts",
+      "sha256": "fa946ce29616140745c91a96afc0045caa43cf88fefca355b90dbf31aac69626",
+      "bytes": 7776,
+      "baselineSha256": "fa946ce29616140745c91a96afc0045caa43cf88fefca355b90dbf31aac69626",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "lib/bus.ts",
+      "sha256": "f29d870e714fc3be6745cd0320df8726cb53dd70681abe6d6f35ea26dae9eb5b",
+      "bytes": 3627,
+      "baselineSha256": "f29d870e714fc3be6745cd0320df8726cb53dd70681abe6d6f35ea26dae9eb5b",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "components/ui.tsx",
+      "sha256": "e3ed02ac4a6e491dfe9092ca08d82452f2255b5aa6895cd3f5c9294848980d1f",
+      "bytes": 7998,
+      "baselineSha256": "e3ed02ac4a6e491dfe9092ca08d82452f2255b5aa6895cd3f5c9294848980d1f",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "components/LiveBus.tsx",
+      "sha256": "0b208791b3b8c70c1fa2badc2b57d51b830eabbd1e5322aeabc8992deb4e0b3d",
+      "bytes": 1428,
+      "baselineSha256": "0b208791b3b8c70c1fa2badc2b57d51b830eabbd1e5322aeabc8992deb4e0b3d",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "components/kit.tsx",
+      "sha256": "345fb1660eaf356fc8ed022c06a56d2dbb6c5cca85a5d0b86d86d4afc0b8a745",
+      "bytes": 6381,
+      "baselineSha256": "345fb1660eaf356fc8ed022c06a56d2dbb6c5cca85a5d0b86d86d4afc0b8a745",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/bus/tracking/page.tsx",
+      "sha256": "c0ba46514bbe7c789ae4c30df34d1be7589a594a897b368eb272a5bffd87543a",
+      "bytes": 2254,
+      "baselineSha256": "c0ba46514bbe7c789ae4c30df34d1be7589a594a897b368eb272a5bffd87543a",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "components/BusCrewDetails.tsx",
+      "sha256": "ac024cc230a649e648a37ca32575877a63c1f3edea6f19f7f702de8cb262656c",
+      "bytes": 1789,
+      "baselineSha256": "ac024cc230a649e648a37ca32575877a63c1f3edea6f19f7f702de8cb262656c",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/calendar/page.tsx",
+      "sha256": "887a8487cbf015aedde52205c783bd8a5d27d0abe7971d8609db0c08a1698df7",
+      "bytes": 234,
+      "baselineSha256": "887a8487cbf015aedde52205c783bd8a5d27d0abe7971d8609db0c08a1698df7",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "components/CalendarScreen.tsx",
+      "sha256": "3bd28037beb1631447620ec72feb2289243d300bd56b4e2fa7f8b063184d26fe",
+      "bytes": 17124,
+      "baselineSha256": "1360b6fd57abb0aae866b4c9f15bbfbe334d788da0cc9eed1026f841779df7cd",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/events/album/page.tsx",
+      "sha256": "2c5a04a0e33a79c93aacfced61a746e0808b47f4591bd6a2f600dceb4eb1e5ab",
+      "bytes": 7155,
+      "baselineSha256": "65c1a160b5e2c6e78dc0755920eaab0f9418dfde83998500d8068f1444544ee0",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "lib/events.ts",
+      "sha256": "773d897a6f2b2f5d9e23c09f231741fbad4b17a6be516a8f2e8113d8e4d63952",
+      "bytes": 912,
+      "baselineSha256": "773d897a6f2b2f5d9e23c09f231741fbad4b17a6be516a8f2e8113d8e4d63952",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "components/art.tsx",
+      "sha256": "e4fb0af5b2b2e9fa12ec2c885318969fd18a88ed7bc6b4f86816e770960969a5",
+      "bytes": 14705,
+      "baselineSha256": "e4fb0af5b2b2e9fa12ec2c885318969fd18a88ed7bc6b4f86816e770960969a5",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/events/page.tsx",
+      "sha256": "cec0dd1b14e35f02bbced4f9123f048c5aa38e89f32da8177525c7e9715f30b1",
+      "bytes": 3914,
+      "baselineSha256": "cec0dd1b14e35f02bbced4f9123f048c5aa38e89f32da8177525c7e9715f30b1",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/exam/detail/page.tsx",
+      "sha256": "fb2cec7e2b97151fbda7cf9e72d29d6d4cdd7738ee82fe326b6f1a23ce5412c7",
+      "bytes": 5184,
+      "baselineSha256": "fb2cec7e2b97151fbda7cf9e72d29d6d4cdd7738ee82fe326b6f1a23ce5412c7",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "lib/exam.ts",
+      "sha256": "eff46059890c0e33291148b2e5f5c9add85a5a40b66335fc56d9fc078ed31411",
+      "bytes": 2939,
+      "baselineSha256": "eff46059890c0e33291148b2e5f5c9add85a5a40b66335fc56d9fc078ed31411",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/exam/page.tsx",
+      "sha256": "8bd7e9fc2cf10327b388b1785e0da894034a3108c1ec968feb930c66c9dd63c9",
+      "bytes": 6271,
+      "baselineSha256": "8bd7e9fc2cf10327b388b1785e0da894034a3108c1ec968feb930c66c9dd63c9",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/fees/detail/page.tsx",
+      "sha256": "b8c5c8dd858120b10e0967c7c5648bc778b12c5cf296c34cf8b150a16be07f96",
+      "bytes": 6581,
+      "baselineSha256": "b8c5c8dd858120b10e0967c7c5648bc778b12c5cf296c34cf8b150a16be07f96",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "lib/fees.ts",
+      "sha256": "75fb66b0ed748eed49f2c36af9ab3724fa51e88c3ffafcb89d76314fa9f0b089",
+      "bytes": 1860,
+      "baselineSha256": "75fb66b0ed748eed49f2c36af9ab3724fa51e88c3ffafcb89d76314fa9f0b089",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "lib/text/fees.ts",
+      "sha256": "d6825a8e9687d634b3d91962b0d8983d96a88fb89574f0217258fb59d8635dcf",
+      "bytes": 4974,
+      "baselineSha256": "d6825a8e9687d634b3d91962b0d8983d96a88fb89574f0217258fb59d8635dcf",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/fees/page.tsx",
+      "sha256": "b021b4ea22faa2a101882dd82a49821edb3266cb08080b991520227c205f09e4",
+      "bytes": 19648,
+      "baselineSha256": "b021b4ea22faa2a101882dd82a49821edb3266cb08080b991520227c205f09e4",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/fees/pay/page.tsx",
+      "sha256": "960311a3e58cfd3bdd0e5f10773edeaa1c8e68ce62c29cdf979e5871ac8bdb08",
+      "bytes": 17604,
+      "baselineSha256": "c8876db1f7a8d3ea1476184e9878d388eacc8af53d4a30555f889cd4ad23740f",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/homework/page.tsx",
+      "sha256": "194fd49ba69c54e83a32d11db460a3e9f9d4a7b8997b45f7ab94098d200b6c59",
+      "bytes": 7550,
+      "baselineSha256": "194fd49ba69c54e83a32d11db460a3e9f9d4a7b8997b45f7ab94098d200b6c59",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "lib/text/study.ts",
+      "sha256": "cdb28692477049e3f4d1bc4cd753dddc1d7e070a7f1c91568642f2ab8ec8f107",
+      "bytes": 2620,
+      "baselineSha256": "cdb28692477049e3f4d1bc4cd753dddc1d7e070a7f1c91568642f2ab8ec8f107",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/id-card/page.tsx",
+      "sha256": "04fca2b6e55d659d522e2898e7352c8427d08d8093fc3cdba7a357fb1eb02921",
+      "bytes": 919,
+      "baselineSha256": "04fca2b6e55d659d522e2898e7352c8427d08d8093fc3cdba7a357fb1eb02921",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "components/more/IdCard.tsx",
+      "sha256": "f8579f7e1bdae59dd26ea6381d84bb97dea3cd011a4fc5fae35fa4660000b264",
+      "bytes": 12888,
+      "baselineSha256": "f8579f7e1bdae59dd26ea6381d84bb97dea3cd011a4fc5fae35fa4660000b264",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/leave/apply/page.tsx",
+      "sha256": "7c303724d5309ef69a3191e14ab87dadb212e946868cf769369183101483872b",
+      "bytes": 8369,
+      "baselineSha256": "914c2541ed203d8e8839919aaffe6affbd18026e0582c38bf3fab55001073ec8",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "lib/leave.ts",
+      "sha256": "3c2a7b4dd9df6095a16a49c04f0a2b5e11d17da8fe2d9b5e6e07610d301d110d",
+      "bytes": 992,
+      "baselineSha256": "3c2a7b4dd9df6095a16a49c04f0a2b5e11d17da8fe2d9b5e6e07610d301d110d",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/leave/page.tsx",
+      "sha256": "b1b510a51e8844f6f117ce4a2c51a8fb01906508454f515d6f91bfcefa4c7ad6",
+      "bytes": 6098,
+      "baselineSha256": "b1b510a51e8844f6f117ce4a2c51a8fb01906508454f515d6f91bfcefa4c7ad6",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/meetings/detail/page.tsx",
+      "sha256": "b0b2003d9aaaeaa9fb64bade0edec64e8bf257b9583c14d976480f8ec7183fcc",
+      "bytes": 10166,
+      "baselineSha256": "b0b2003d9aaaeaa9fb64bade0edec64e8bf257b9583c14d976480f8ec7183fcc",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "lib/meetings.ts",
+      "sha256": "a3421d9a0ce9c4c0192c15337fa5107727e3888cec75428ce642cb4b9f1406a2",
+      "bytes": 887,
+      "baselineSha256": "a3421d9a0ce9c4c0192c15337fa5107727e3888cec75428ce642cb4b9f1406a2",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/meetings/page.tsx",
+      "sha256": "101101267765ca7072428135824e6e0b4680d7638b0383f272853db96437388c",
+      "bytes": 6177,
+      "baselineSha256": "15bcff5fd806dad4aa148a49f8f34dacde6f31acdb1aa5e1f79439f3d82dc8e2",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/more/bus/page.tsx",
+      "sha256": "ee7fe06c9dc5cf61bcc52dff4336390ff5ab024aa1e16f7b336d674f6c5105ea",
+      "bytes": 136,
+      "baselineSha256": "ee7fe06c9dc5cf61bcc52dff4336390ff5ab024aa1e16f7b336d674f6c5105ea",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/more/id-card/page.tsx",
+      "sha256": "72838560d9ce3426254ba86cb359cb21f1d5dc6a5f1e3b31639b6f9cd4f66f6e",
+      "bytes": 140,
+      "baselineSha256": "72838560d9ce3426254ba86cb359cb21f1d5dc6a5f1e3b31639b6f9cd4f66f6e",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/more/leave/page.tsx",
+      "sha256": "0c69269ffcd9a21c5f37a4c362f2b60bedc85f1eae4ea2235f739627c3d2df31",
+      "bytes": 138,
+      "baselineSha256": "0c69269ffcd9a21c5f37a4c362f2b60bedc85f1eae4ea2235f739627c3d2df31",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/more/notices/page.tsx",
+      "sha256": "21de2350f39c6c8da8b3fd17ddbf919bef40987195be38341a9ad2b688c5d52f",
+      "bytes": 139,
+      "baselineSha256": "21de2350f39c6c8da8b3fd17ddbf919bef40987195be38341a9ad2b688c5d52f",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/more/page.tsx",
+      "sha256": "4e0447f4caf0974ce172279fd1fa32d966e08d078feafc00c2d1cf2c93d2bf32",
+      "bytes": 140,
+      "baselineSha256": "4e0447f4caf0974ce172279fd1fa32d966e08d078feafc00c2d1cf2c93d2bf32",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/more/report-card/page.tsx",
+      "sha256": "b6a73741799054604c68619578beebcbe761dd9be5586e1010e5abcb3522c4f4",
+      "bytes": 151,
+      "baselineSha256": "b6a73741799054604c68619578beebcbe761dd9be5586e1010e5abcb3522c4f4",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/notice/page.tsx",
+      "sha256": "f2597c747fe844e8accaf611ec367f324b87be30e00c27c5a06c05828a6dab2a",
+      "bytes": 4484,
+      "baselineSha256": "f2597c747fe844e8accaf611ec367f324b87be30e00c27c5a06c05828a6dab2a",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/page.tsx",
+      "sha256": "098bf4f7e3fb46144aa3e5ba2a80bb58d18fa7c8d37b67df4154d14c8f9818d1",
+      "bytes": 21088,
+      "baselineSha256": "098bf4f7e3fb46144aa3e5ba2a80bb58d18fa7c8d37b67df4154d14c8f9818d1",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "lib/menu.tsx",
+      "sha256": "b87a281043392bf767125610835db34e9f1286c4d86077b2d8465414573b368e",
+      "bytes": 319,
+      "baselineSha256": "b87a281043392bf767125610835db34e9f1286c4d86077b2d8465414573b368e",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "components/BusHomeStatus.tsx",
+      "sha256": "7ec28056b123b375f23736c5706e7a5fd4a8e367e969ded91b9cb68956c4466f",
+      "bytes": 2370,
+      "baselineSha256": "7ec28056b123b375f23736c5706e7a5fd4a8e367e969ded91b9cb68956c4466f",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "components/ChildSheet.tsx",
+      "sha256": "245bb5b2d3e2ca0ce99c8adc49c33cefb00d517ef407a861b59c36701281d7fe",
+      "bytes": 2877,
+      "baselineSha256": "245bb5b2d3e2ca0ce99c8adc49c33cefb00d517ef407a861b59c36701281d7fe",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/preview/id-card/page.tsx",
+      "sha256": "41ac98a193064a40ed94fbedd8e6b1cfe58280b021f790f6caa4f32d2c083720",
+      "bytes": 1435,
+      "baselineSha256": "c325c6e5a881e270abca0c27d157d02ac0c989ba67d7a4f8591f1eea76a72688",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/profile/page.tsx",
+      "sha256": "f950d95ec7b30f29832f148d6a1a1a3c2ae8f955d61d830b2a96f063c4c6f7cf",
+      "bytes": 12237,
+      "baselineSha256": "f950d95ec7b30f29832f148d6a1a1a3c2ae8f955d61d830b2a96f063c4c6f7cf",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/report-card/page.tsx",
+      "sha256": "b91cd341e0f97bd8f960390b8d16ecbc2985f52d0b573b277fe3e5be54ce28ba",
+      "bytes": 7348,
+      "baselineSha256": "4c07ce12760905fe8ac778cbf1804ffd83e0a582c2e935c283796d163149d15f",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "components/report/ReportSheets.tsx",
+      "sha256": "d4d3a11b34695cb646865516f763d0538ead9caaa0e2b994f2f59ac944973a6a",
+      "bytes": 16313,
+      "baselineSha256": "d4d3a11b34695cb646865516f763d0538ead9caaa0e2b994f2f59ac944973a6a",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/search/page.tsx",
+      "sha256": "e548fb5c5f8279ca0f0cded0b7a0c45ffc9ab793788663d94b673ce5aa9299b5",
+      "bytes": 12412,
+      "baselineSha256": "460083313b542352bc6822251a456ec9cb0869c292326478d7c00c97e9cc6308",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "components/QuickIcons.tsx",
+      "sha256": "0e36150097fd902e579ef211d90f52f0372a059e76144164d3f5146e46ebc3f0",
+      "bytes": 22599,
+      "baselineSha256": "0e36150097fd902e579ef211d90f52f0372a059e76144164d3f5146e46ebc3f0",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/study/page.tsx",
+      "sha256": "29aac7f70ee3938ffd2287c2d7bbc11c56bb19f3691fce36f062063729b5260c",
+      "bytes": 205,
+      "baselineSha256": "29aac7f70ee3938ffd2287c2d7bbc11c56bb19f3691fce36f062063729b5260c",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "components/StudyScreen.tsx",
+      "sha256": "8e1a71326ba9ec8e7bd2dfbad08a53919670c6f355cbce849eb4034ca833c5ff",
+      "bytes": 32207,
+      "baselineSha256": "a2135f87b043b020073d09171223c67d3d17c942d9aa65cf30232e19336be1c5",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/teachers/chat/page.tsx",
+      "sha256": "e83d3a7c6cb2286a2db135e7141293ae11e49228e81d3b249381b04d209d0577",
+      "bytes": 13899,
+      "baselineSha256": "c419e4955c9edae45386bc015efc229583e05f0dc7ce740b6a73bc3f0f883a50",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "lib/teachers.ts",
+      "sha256": "5c14b857c6019edafd8b1603a00e04052e3bc8840a5d85b813890d05d2cedc1d",
+      "bytes": 2708,
+      "baselineSha256": "5c14b857c6019edafd8b1603a00e04052e3bc8840a5d85b813890d05d2cedc1d",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/(app)/teachers/page.tsx",
+      "sha256": "df0a2c0393bec0a3f169fab1bfd7eb4bd10dae89a2c675c8642f208d4420c462",
+      "bytes": 4264,
+      "baselineSha256": "df0a2c0393bec0a3f169fab1bfd7eb4bd10dae89a2c675c8642f208d4420c462",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/login/page.tsx",
+      "sha256": "8d595c65ffe0c30c14de8b7b0534023aa526efc8867bbf5013908bc16ebdd4a6",
+      "bytes": 9389,
+      "baselineSha256": "10abe17de846d20ec55a628fcd29fb2275f531620f27b5d1a71f8fa6d3154fe7",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "lib/demo.ts",
+      "sha256": "64b8ea8d92e4aaba425da5474c3ca558b315b062cff8e696582defd2e48e37b9",
+      "bytes": 39405,
+      "baselineSha256": "64b8ea8d92e4aaba425da5474c3ca558b315b062cff8e696582defd2e48e37b9",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/motion-test/page.tsx",
+      "sha256": "0a2f6efdcaa71323c9847670b68f2e2c1e9fe05dce451fec03fcb5f42f87c995",
+      "bytes": 4770,
+      "baselineSha256": "566f53c14a4f6993c8ce7179b2c0e6ecc112f9d8635a49f9da5e0fc8c972fd57",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "app/onboarding/page.tsx",
+      "sha256": "70a67371fa343fd2ee87f0cba8959e3d27d83dff949ccbed233f0e904d07f856",
+      "bytes": 3384,
+      "baselineSha256": "79d633d20adc06a76e82e34a2e5490f655342659f2c4ae2b5b70a4086008af6a",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "components/AppShell.tsx",
+      "sha256": "37b56b9a03c76712a561fd07dd04fd328066ccc9e15766cd16f89474e4ed5194",
+      "bytes": 12182,
+      "baselineSha256": "6fe33bdd56e7c2a1236e7078e1ac8d492c0dfd610ac20f9dba13e0092163b801",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "app/globals.css",
+      "sha256": "0b45a1881d4342f3ac0dcafeb11232cf2a0a3c03873cd716d9a4eaeb5260f779",
+      "bytes": 32373,
+      "baselineSha256": "446b67e22bcdd7dae49e765c5dff930b3f045351f6d25fd61165dcedb9aeabe5",
+      "changed": true
+    },
+    {
+      "app": "parents",
+      "file": "app/action-palette.css",
+      "sha256": "a647d2a34b803a4e1cdad9991d6cca678ab3cd73d19d0c179a1067d601846bec",
+      "bytes": 1578,
+      "baselineSha256": "a647d2a34b803a4e1cdad9991d6cca678ab3cd73d19d0c179a1067d601846bec",
+      "changed": false
+    },
+    {
+      "app": "parents",
+      "file": "app/status-badges.css",
+      "sha256": "edc62f23de5c44743946b29c1c3e89dfa008af48508e55f4c264415df49d90af",
+      "bytes": 3454,
+      "baselineSha256": "edc62f23de5c44743946b29c1c3e89dfa008af48508e55f4c264415df49d90af",
+      "changed": false
+    }
+  ]
+}
