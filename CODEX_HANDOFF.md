@@ -1,3 +1,41 @@
+# PUSH AUTHORIZED: ALL CURRENT CODE, INCLUDING CLAUDE
+
+User explicitly requested publishing all Codex and Claude changes. All four repos fetched origin and were0 ahead/0 behind before staging. Bundle includes transport/driver/status/motion changes, Claude side-menu outlines, parent event-photo assets and backend event scene mapping. Raw root reference images, .claude local settings and public/preview artifacts remain local. Earlier no-push notes below describe the pre-authorization stage. No live seed/migration is run. Check git log/origin for publication outcome.
+
+# LATEST SWIPE FEEL + ROUTE CLEANUP
+
+Office breakdown sentence removed; View last location smaller/top-right. SlideConfirm is now pill/circular iPhone-inspired, smooth direct pointer motion,320ms non-bouncy settle,170ms latch, custom soft two-sine cue only on full accepted swipe, audio primed by user gesture.32 tests pass, driver22-capture flow including sound/no-partial-sound assertions passes. Sound preview docs/transport-experience-2026-11-15/slide-confirm.wav. No push. See REVISION.md final section for evidence/limits.
+
+# VERIFIED: ALL CURRENT REQUESTS COMPLETED LOCALLY
+
+Final layout screenshot: docs/transport-experience-2026-11-15/browser/fleet-upper-detail-staff-erp.png. Shared outlined badges, exact dialog placement, road-ahead camera/top-view bus/faster demo, swipe start+at-stop, all earlier disclosures/history/salary work are integrated.30 tests;22 driver +28 transport browser captures; staff/parents/web production builds pass. Last CSS waiting-dot specificity correction verified in focused browser. No push/deploy.
+
+# LATEST: ALL REQUESTED REFINEMENTS INTEGRATED, LOCAL ONLY
+
+See REVISION.md final section. Shared outlined neutral status badges across web/staff/driver/parents; right dots red delay/purple running/green completed/amber waiting. Exact office dialog layout implemented (stop + badge row, top-right location link, progress below box, location status beneath). Driver map road-ahead heading/pitch55, legible upright top-view yellow bus, faster10m/700ms demo. SlideConfirm on Home Start, pretrip Start and At stop (88% travel +release); partial swipes reset, direct Home start, keyboard/two-step accessible alternate. Prior parent overview/tracking, collapsed stops/crew, history-date and salary motion retained.28 transport browser captures and swipe/lifecycle driver run pass;30 unit tests pass. No push/deploy; preserve concurrent user changes.
+
+# LATEST REFINEMENT
+
+Parent All stops row and tracking Bus and crew details are collapsed inline disclosures (BusDisclosure/BusCrewDetails), not navigation. Office route detail is simplified: next stop, progress pair, freshness and links. See REVISION.md final section. Earlier30 tests/build record predates these small UI refinements; latest parent/staff tsc passes and browser checks cover disclosures. No push.
+
+# VERIFIED COMPLETION: LOCAL ONLY
+
+Final transport revision is complete.30 tests pass; web/staff/parents production builds and backend build pass.25 transport +21 driver browser captures, zero observed exceptions/overflow. Actual intermediate MapLibre marker frames and monotonic salary collapse sampled. Read REVISION.md for final flow; REPORT.md first-layout descriptions are superseded. No push/deploy.
+
+# FINAL USER REVISION: READ THIS FIRST
+
+`docs/transport-experience-2026-11-15/REVISION.md` supersedes the first bus layout. Parents Bus is overview; Live tracking is `/bus/tracking/` with separate back/title and visible map. Office overview is compact (max two active routes), details in a bounded upper native dialog; no inline full-screen expansion. Driver motion added for page entry, selection/check feedback; trip history selected date/records transition separately; salary is a180ms non-bouncy grid disclosure. Both maps interpolate only between received fixes via lib/receivedMotion.ts; no extrapolation. Demo moves5.5m per700ms instead of45m. Current gallery uses only revised screens. All previous driver fixes remain. No push authorized for this work. Preserve concurrent changes.
+
+# LATEST: TRANSPORT HOMEPAGE + ROLE STATUS (LOCAL, NOT PUSHED)
+
+Read `docs/transport-experience-2026-11-15/REPORT.md` and `gallery.html` first. User rejected the driver homepage and moving demo and requested a redesigned Home plus different parent/office bus status. Driver now uses a departure sheet and ordered itinerary. Parent Home has child-scoped status; bus screen has status first, optional map and explicit stale/error/timetable/demo states. ERP web and staff ERP share TransportLivePanel. Backend adds GET /api/transport/live restricted to admin/accountant and a read-only transport list option; parent live adds tripId/pathRoad. No migrations, DB seeds or live trips. AI assistant untouched. Preserve concurrent SideMenu/art changes. Do not push until requested.
+
+# CURRENT TASK: DRIVER APP UPGRADE (LOCAL, NOT PUSHED)
+
+User asked to fix driver login briefly showing ERP, then review and upgrade the whole driver flow/UI. Implementation and research report: `docs/driver-review-2026-11-15/REPORT.md`; audit and trip notes alongside it. Staff changes are in the Desktop staff checkout; backend trip-end error propagation is in F:/folders of web/sms backend. Four driver regression tests are in this web repo. Do not infer push authorization for this new work from the earlier completed publication. AI assistant is untouched. Staff tsconfig .next-local addition is an existing dev-server change; preserve it. Browser harness is synthetic only and contains no live writes. Read the report and result.json for actual verification scope and remaining real-device limits.
+
+---
+
 # PUBLICATION AUTHORIZED BY USER
 
 Latest request: push the completed work, INCLUDING Claude's changes. All four origin/main branches were fetched and aligned with local HEAD before preparing publication. The reviewed bundle includes the parity/backend session work, staff/ERP design system, personal staff refinements, evergreen action role, Claude's homepage/WebP/notice changes, and the user's staged restored AI assistant appearance. No assistant design was modified by the action pass. Unrelated raw reference screenshots, public/preview assets, local tool settings and backend demo undo/data files are excluded from the publication manifest. Demo scripts are published as source only; none is executed and no DB seeding is authorized by a push request.

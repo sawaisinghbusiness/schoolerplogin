@@ -1,0 +1,497 @@
+{
+  "synthetic": true,
+  "checks": [
+    "Delayed server identity ignores cached teacher; zero incorrect role DOM observed",
+    "One short tonal cue on full swipe; no audio on partial swipe",
+    "Received GPS marker progresses through intermediate browser frames, rather than jumping",
+    "Permission loss after good fix clears GPS and shows recovery",
+    "Incomplete swipes reset; full deliberate swipes start trip and open stop roster",
+    "Child mark persists; unfinished stop requires explicit second confirmation without marking remaining children",
+    "Delay uses actual bus-screen update, no push-delivery promise",
+    "Homepage full swipe starts the run; no second Start tap",
+    "Failed end stays on active trip; explicit successful retry returns home",
+    "Failed logout retains session and offers retry",
+    "Populated salary, attendance, leave, application and notices rendered; home/profile also checked at 360px",
+    "OTP login with prior ERP flag and cached teacher clears previous mode; no teacher/ERP DOM during delayed driver hydration"
+  ],
+  "screens": [
+    {
+      "id": "home",
+      "width": 390,
+      "scroll": 375,
+      "text": "SR\n\nGood evening\n\nReview\n\nEN\nहि\nRD\nToday's route\n15 Nov\nMorning · school\nAfternoon · home\nRJ 04 TEST\nNot started\nBarmer North Route\n\nTake children home\n\nStart from\n\nReview School\n\nFinish at · Long neighbourhood stop near community centre\n\n3 children\n2 stops\nSlide to start trip\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nToday's stops\nTo home\nReview School\nDepart from school\n1\nSecond stop\n1 child\n2\nLong neighbourhood stop near community centre\n2 children\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "pre-trip",
+      "width": 390,
+      "scroll": 390,
+      "text": "Barmer North Route · Morning · to school\n\nToday's route\n\n2 stops · 3 children\n\nSlide to start trip\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?"
+    },
+    {
+      "id": "running",
+      "width": 390,
+      "scroll": 390,
+      "text": "Vehicle number\n\nRJ 04 TEST\n\nLong neighbourhood stop near community centre\n\n6:16 PM\n\nReview School\n\n—\n\nDistance left\n—\nSpeed\n—\nOn board\n0\n\nNo location sent yet\n\nMorning · to school · 0 min\nEnd trip\nFinding the bus's location…\nNext stop · 1/2\nLong neighbourhood stop near community centre\n2 getting on\nR\nR\n0 on board\n\n0%0 of 2 stops done\n\nSlide at the stop\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nReport delay\nMore"
+    },
+    {
+      "id": "home-running",
+      "width": 390,
+      "scroll": 375,
+      "text": "SR\n\nGood evening\n\nReview\n\nEN\nहि\nRD\nToday's route\n15 Nov\nRJ 04 TEST\nTrip in progress\nBarmer North Route\n\nPick up children for school\n\nNext stop\n\nLong neighbourhood stop near community centre\n\nFinish at · Review School\n\n3 children\n2 stops\n\n0 stops completed · 0 children marked\n\nResume trip\nToday's stops\nTo school\n1\nLong neighbourhood stop near community centre\n2 children · Next stop\n7:30\n2\nSecond stop\n1 child\n7:40\nReview School\nArrive at school\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "map-motion-review",
+      "width": 390,
+      "scroll": 390,
+      "text": "Vehicle number\n\nRJ 04 TEST\n\nLong neighbourhood stop near community centre\n\n6:16 PM\n\nReview School\n\n—\n\nDistance left\n—\nSpeed\n18 km/h\nOn board\n0\n\nNo location sent yet\n\nMorning · to school · 0 min\nEnd trip\nNext stop · 1/2\nLong neighbourhood stop near community centre\n2 getting on · about 30 min\n10.0 km\nR\nR\n0 on board\n\n0%0 of 2 stops done\n\nSlide at the stop\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nReport delay\nMore"
+    },
+    {
+      "id": "children",
+      "width": 390,
+      "scroll": 390,
+      "text": "Vehicle number\n\nRJ 04 TEST\n\nLong neighbourhood stop near community centre\n\n6:16 PM\n\nReview School\n\n—\n\nDistance left\n—\nSpeed\n—\nOn board\n0\n\nNo location sent yet\n\nMorning · to school · 0 min\nEnd trip\n\nCan't get the phone's location\n\nLocation permission is blocked. Allow it in your browser or phone settings.\n\nTurn on Location and allow this app to use it. Only then the bus shows on the map and stop alerts come.\n\nTry again\nNext stop · 1/2\nLong neighbourhood stop near community centre\n2 getting on\nR\nR\n0 on board\n\n0%0 of 2 stops done\n\nConfirmed\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nReport delay\nMore\nLong neighbourhood stop near community centre\n\nStop 1\n\n0/2\n\non\n\nRO\nReview Child One\nClass 6 - A\nGot on\nRT\nReview Child Two\nClass 4 - B\nGot on\nStop done (2 left) · Next"
+    },
+    {
+      "id": "delay",
+      "width": 390,
+      "scroll": 390,
+      "text": "Vehicle number\n\nRJ 04 TEST\n\nLong neighbourhood stop near community centre\n\n6:16 PM\n\nReview School\n\n—\n\nDistance left\n—\nSpeed\n—\nOn board\n1\n\nNo location sent yet\n\nMorning · to school · 0 min\nEnd trip\n\nCan't get the phone's location\n\nLocation permission is blocked. Allow it in your browser or phone settings.\n\nTurn on Location and allow this app to use it. Only then the bus shows on the map and stop alerts come.\n\nTry again\nNext stop · 2/2\nSecond stop\n1 getting on\nR\n1 on board\n\n50%1 of 2 stops done\n\nSlide at the stop\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nReport delay\nMore\nTell the parents\n\nVisible on the parents bus screen for this route\n\nTraffic jam\nBus broke down\nFlat tyre\nRoad closed, taking another way\nSomething else\n\nHow late\n\n10 min\n20 min\n30+ min\n\nParents will see\n\nThe bus is running late\n\nBecause of a traffic jam, the Barmer North Route bus will be about 10 minutes late.\n\nUpdate delay"
+    },
+    {
+      "id": "end-confirm",
+      "width": 390,
+      "scroll": 390,
+      "text": "Vehicle number\n\nRJ 04 TEST\n\nLong neighbourhood stop near community centre\n\n6:16 PM\n\nReview School\n\n—\n\nDistance left\n—\nSpeed\n—\nOn board\n1\n\nNo location sent yet\n\nMorning · to school · 0 min\nYes, end\nNext stop · 2/2\nSecond stop\n1 getting on\nR\n1 on board\n\n50%1 of 2 stops done\n\nDelay update: 10 min late · Traffic jam\nSlide at the stop\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nReport delay\nMore\nEnd this trip?\n\n1 / 2 stops recorded. 1 / 3 children marked.\n\nCheck the bus and confirm every child is accounted for before ending.\n\nKeep trip open\nEnd trip"
+    },
+    {
+      "id": "end-error",
+      "width": 390,
+      "scroll": 390,
+      "text": "Vehicle number\n\nRJ 04 TEST\n\nLong neighbourhood stop near community centre\n\n6:16 PM\n\nReview School\n\n—\n\nDistance left\n—\nSpeed\n—\nOn board\n1\n\nNo location sent yet\n\nMorning · to school · 0 min\nYes, end\nNext stop · 2/2\nSecond stop\n1 getting on\nR\n1 on board\n\n50%1 of 2 stops done\n\nDelay update: 10 min late · Traffic jam\n\nSynthetic end failure\n\nSlide at the stop\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nReport delay\nMore\nEnd this trip?\n\n1 / 2 stops recorded. 1 / 3 children marked.\n\nCheck the bus and confirm every child is accounted for before ending.\n\nSynthetic end failure\n\nKeep trip open\nEnd trip"
+    },
+    {
+      "id": "home-swipe-started",
+      "width": 390,
+      "scroll": 390,
+      "text": "Vehicle number\n\nRJ 04 TEST\n\nReview School\n\n6:16 PM\n\nLong neighbourhood stop near community centre\n\n—\n\nDistance left\n—\nSpeed\n—\nOn board\n3\n\nNo location sent yet\n\nAfternoon · home · 0 min\nEnd trip\nFinding the bus's location…\nNext stop · 1/2\nSecond stop\n1 getting off\nR\n3 on board\n\n0%0 of 2 stops done\n\nSlide at the stop\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nReport delay\nMore"
+    },
+    {
+      "id": "history",
+      "width": 390,
+      "scroll": 390,
+      "text": "Trip record\nMon\n9\nTue\n10\nWed\n11\nThu\n12\nFri\n13\nSat\n14\nSun\n15\nSun, 15 Nov\n\n1 trip records\n\nMorning pickup\nCompleted\nStarted\n7:00 AM\nEnded\n7:45 AM\n\nFirst stop → Review School\n\n4 stops completed\n·\n12 marked on\n7.0 km\nRoute estimate\n0\nDelays\n12\nOn / off\n\nDistance is an estimate from the route length, not measured GPS distance travelled.\n\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "history-other-date",
+      "width": 390,
+      "scroll": 390,
+      "text": "Trip record\nMon\n9\nTue\n10\nWed\n11\nThu\n12\nFri\n13\nSat\n14\nSun\n15\nMon, 9 Nov\n\n1 trip records\n\nMorning pickup\nCompleted\nStarted\n7:00 AM\nEnded\n7:45 AM\n\nFirst stop → Review School\n\n4 stops completed\n·\n12 marked on\n7.0 km\nRoute estimate\n0\nDelays\n12\nOn / off\n\nDistance is an estimate from the route length, not measured GPS distance travelled.\n\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "profile",
+      "width": 390,
+      "scroll": 375,
+      "text": "Profile\nRD\nReview Driver\nDriver · D001\nSynthetic Review School\nMy details\nJoined\n1 Jan 2024\nMobile\nMine\nSalary slips\nMy attendance\nMy leave\nSettings\nLanguage\nEnglish\nStop alert\nCloses by itself in 3 s\nI close it myself\n\nThe alert shows for 3 seconds, then goes.\n\nHelp\nLog out\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "salary",
+      "width": 390,
+      "scroll": 390,
+      "text": "Salary Slips\nOctober 2026\nPaid on 5 Nov 2026\n₹19,500\nBasic\n₹18,000\nAllowances\n₹2,000\nAdjustment\n− ₹500\nTake-home\n₹19,500\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "attendance",
+      "width": 390,
+      "scroll": 390,
+      "text": "My Attendance\n\nNovember 2026\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\nPresent\nAbsent\nLeave\nHoliday\n\nPresent\n\n14\n\nAbsent\n\n0\n\nLeave\n\n0\n\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "leave",
+      "width": 390,
+      "scroll": 390,
+      "text": "Leave\nNovember 2026\n\nFri, 20 Nov\n\nWaiting\n\nPersonal appointment\n\nWithdraw\nCasual\nFull day\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "leave-apply",
+      "width": 390,
+      "scroll": 390,
+      "text": "Apply Leave\nType - Casual\nFrom\nTo\nFull day\nHalf day\nReason for leave\n\nThe school office will see this and reply here.\n\nApply\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "notices",
+      "width": 390,
+      "scroll": 390,
+      "text": "Notice\nTransport meeting\nSun, 15 Nov\nNew\nReview the route with the office before departure.\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "home-360",
+      "width": 360,
+      "scroll": 345,
+      "text": "SR\n\nGood evening\n\nReview\n\nEN\nहि\nRD\nToday's route\n15 Nov\nMorning · school\nAfternoon · home\nRJ 04 TEST\nNot started\nBarmer North Route\n\nTake children home\n\nStart from\n\nReview School\n\nFinish at · Long neighbourhood stop near community centre\n\n3 children\n2 stops\nSlide to start trip\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nToday's stops\nTo home\nReview School\nDepart from school\n1\nSecond stop\n1 child\n2\nLong neighbourhood stop near community centre\n2 children\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "profile-360",
+      "width": 360,
+      "scroll": 345,
+      "text": "Profile\nRD\nReview Driver\nDriver · D001\nSynthetic Review School\nMy details\nJoined\n1 Jan 2024\nMobile\nMine\nSalary slips\nMy attendance\nMy leave\nSettings\nLanguage\nEnglish\nStop alert\nCloses by itself in 3 s\nI close it myself\n\nThe alert shows for 3 seconds, then goes.\n\nHelp\nLog out\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "home-hi",
+      "width": 360,
+      "scroll": 345,
+      "text": "SR\n\nनमस्ते\n\nReview\n\nEN\nहि\nRD\nआज का सफ़र\n15 नव॰\nसुबह · स्कूल\nछुट्टी · घर\nRJ 04 TEST\nशुरू नहीं हुई\nBarmer North Route\n\nबच्चों को घर छोड़ना\n\nयहाँ से शुरू\n\nReview School\n\nमंज़िल · Long neighbourhood stop near community centre\n\n3 बच्चे\n2 स्टॉप\nट्रिप शुरू करने को स्वाइप करें\nदाईं ओर पूरा स्वाइप करें। कीबोर्ड से Enter दबाएँ।\nस्वाइप नहीं कर पा रहे?\nआज के स्टॉप\nघर की ओर\nReview School\nस्कूल से निकलें\n1\nSecond stop\n1 बच्चे\n2\nLong neighbourhood stop near community centre\n2 बच्चे\nट्रिप रिकॉर्ड\nहोम\nप्रोफ़ाइल"
+    },
+    {
+      "id": "login-role-isolation",
+      "width": 360,
+      "scroll": 345,
+      "text": "SR\n\nGood evening\n\nReview\n\nEN\nहि\nRD\nToday's route\n15 Nov\nMorning · school\nAfternoon · home\nRJ 04 TEST\nNot started\nBarmer North Route\n\nTake children home\n\nStart from\n\nReview School\n\nFinish at · Long neighbourhood stop near community centre\n\n3 children\n2 stops\nSlide to start trip\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nToday's stops\nTo home\nReview School\nDepart from school\n1\nSecond stop\n1 child\n2\nLong neighbourhood stop near community centre\n2 children\nTrip record\nHome\nProfile"
+    }
+  ],
+  "requests": [
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/bus/trip",
+      "body": {
+        "kind": "morning"
+      }
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/bus/mark",
+      "body": {
+        "kidId": "k1",
+        "on": true
+      }
+    },
+    {
+      "path": "/bus/stop-done",
+      "body": {
+        "stop": "Long neighbourhood stop near community centre"
+      }
+    },
+    {
+      "path": "/bus/delay",
+      "body": {
+        "reason": "traffic",
+        "minutes": 10
+      }
+    },
+    {
+      "path": "/bus/trip/end",
+      "body": {}
+    },
+    {
+      "path": "/bus/trip/end",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/bus/trip",
+      "body": {
+        "kind": "afternoon"
+      }
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/bus/history",
+      "body": {}
+    },
+    {
+      "path": "/bus/history",
+      "body": {}
+    },
+    {
+      "path": "/bus/history",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/logout",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/my/salary",
+      "body": {}
+    },
+    {
+      "path": "/my/salary",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/my/attendance",
+      "body": {}
+    },
+    {
+      "path": "/my/attendance",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/my/leave",
+      "body": {}
+    },
+    {
+      "path": "/my/leave",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/my/leave",
+      "body": {}
+    },
+    {
+      "path": "/my/leave",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/notices",
+      "body": {}
+    },
+    {
+      "path": "/notices",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/school",
+      "body": {}
+    },
+    {
+      "path": "/school",
+      "body": {}
+    },
+    {
+      "path": "/otp",
+      "body": {
+        "mobile": "9999999999"
+      }
+    },
+    {
+      "path": "/verify",
+      "body": {
+        "mobile": "9999999999",
+        "code": "123456",
+        "role": "teacher"
+      }
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/me",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    },
+    {
+      "path": "/bus/route",
+      "body": {}
+    }
+  ],
+  "errors": [],
+  "limits": "Synthetic API and blank basemap. No live trip, GPS journey or notification delivery verified."
+}

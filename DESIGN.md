@@ -37,3 +37,21 @@ Design review used the incumbent application, Impeccable's Operate guidance, and
 ## Operational action palette
 
 Primary actions across web, staff and parent products use deep evergreen #294E43, hover #203F36, pressed #18332B, white labels; disabled #D7DFD8 with #43564C. Secondary actions stay quiet; destructive/status/chart/navigation roles remain distinct. app/action-palette.css is scoped to authenticated operational shell/dialogs and ported workflow roots. Public website, login and explicitly excluded AI assistant designs retain existing treatment. See docs/action-colour-2026-11-15/REPORT.md.
+
+
+## Driver app authority
+
+Driver remains green/yellow/neutral, scoped by .drv and .driver-shell in the staff checkout. No ERP reskin. See docs/driver-review-2026-11-15/REPORT.md for tokens, workflows and rendered verification. Trip owns its full screen, without the general header or bottom tabs; never obscure operational controls.
+
+
+## Transport monitoring by role
+
+ERP web and staff ERP share the office TransportLivePanel register. Trip activity and GPS freshness are separate; failed polling is unavailable, not an empty fleet. Office location data requires admin/accountant authorization. Parent views are child-scoped and show recorded child status first. Driver Home is a departure sheet in warm neutral #F4F3ED, ink #17251E and yellow #FFCB00 for Start/Resume. See docs/transport-experience-2026-11-15/REPORT.md.
+
+
+Transport flow revision: parents Bus overview links to /bus/tracking/; tracking does not repeat the route/crew register. ERP activity overview is compact; detail opens in an upper bounded native dialog. Driver transitions are180-220ms, no spring overshoot, with reduced motion respected. See docs/transport-experience-2026-11-15/REVISION.md.
+
+
+## Status labels
+
+Operational status badges use white, dark text, thin dark outline and a trailing semantic dot (red delay/rejection, purple running, green settled/approved/completed, amber waiting, neutral inactive). app/status-badges.css is shared across web/staff/parents and excludes assistant/public contexts. Functional chart/calendar/action colours remain distinct. See the final section of docs/transport-experience-2026-11-15/REVISION.md.

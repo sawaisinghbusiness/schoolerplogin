@@ -1,0 +1,12 @@
+{
+  "synthetic": true,
+  "routes": 28,
+  "overflow": [],
+  "errors": [],
+  "missing": [],
+  "interactions": [
+    "Office overview stays below350px; route details open in a bounded dialog near the top. All four statuses remain available; Escape closes the detail.",
+    "Bus tap opens overview without a map; Live tracking click opens a separate route. Fresh/stale/missing/failed GPS, boarding, missing entry, delay, idle, demo and sibling states verified."
+  ],
+  "writes": []
+}

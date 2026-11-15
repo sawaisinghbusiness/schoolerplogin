@@ -8,6 +8,7 @@ import "./globals.css";
 import "./erp.css";
 import "./parity.css";
 import "./action-palette.css";
+import "./status-badges.css";
 import { AppShell } from "@/components/layout/AppShell";
 
 export const metadata: Metadata = {

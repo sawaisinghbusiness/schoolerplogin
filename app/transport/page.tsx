@@ -7,6 +7,7 @@ import { Bus, ChevronRight, Plus, RefreshCw } from "lucide-react";
 import { toast } from "@/components/ui/Toaster";
 import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
 import { BusRoute, transportService } from "@/lib/services/transportService";
+import { TransportLivePanel } from "@/components/transport/TransportLivePanel";
 import { RouteDrawer } from "@/components/transport/RouteDrawer";
 
 const fmtPhone = (p?: string | null) => (p && /^\d{10}$/.test(p) ? `${p.slice(0, 5)} ${p.slice(5)}` : "");
@@ -65,6 +66,7 @@ export default function TransportPage() {
         </div>
       ) : (
         <>
+          {(me === "admin" || me === "accountant") && <TransportLivePanel />}
           <div className="summary-strip">
             <Figure label="Students on bus" value={routes ? total.toLocaleString("en-IN") : "…"} dot="bg-brand-500" />
             <Figure label="Routes" value={routes ? String(routes.length) : "…"} dot="bg-slate-400" />

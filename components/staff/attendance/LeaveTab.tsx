@@ -7,7 +7,7 @@ import { ErrorBox, Rows, SetupNeeded } from "./shared";
 import { DecideLeaveDrawer, RecordLeaveDrawer } from "./LeaveDrawers";
 
 type Filter = "all" | LeaveStatus;
-const BADGE: Record<LeaveStatus, string> = { Pending: "badge-slate", Approved: "badge-amber", Rejected: "badge-rose" };
+const BADGE: Record<LeaveStatus, string> = { Pending: "badge-amber", Approved: "badge-emerald", Rejected: "badge-rose" };
 const range = (from: string, to: string) => (from === to ? shortDate(from) : `${shortDate(from)} – ${shortDate(to)}`);
 const year = (d: string) => d.slice(0, 4);
 

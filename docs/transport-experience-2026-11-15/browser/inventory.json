@@ -1,0 +1,376 @@
+[
+  {
+    "id": "fleet-compact",
+    "client": "web",
+    "route": "/transport",
+    "file": "fleet-compact-web.png",
+    "url": "http://127.0.0.1:3010/transport",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nRoutes & buses\nBus students\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nTransport\nRoutes & buses\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nTransport\n\nRoutes, vehicles, drivers and student allocations\n\nAdd route\nBus activity\n\n2 running · 1 need attention\n\nView status\nSouth route · Sindhari Road\nRJ04 TEST · Next: Station Road\n30+ min delay\nNorth route · Station Road\nRJ04 TEST · Next: Station Road\nRunning\nUpdated 6:04 pm\nRefresh\nStudents on bus\n97\nRoutes\n4\nSeats\n128\nWithout a route\n1\nRoute register\n\nOpen a route to manage its stops and riders\n\nRoute / area\nVehicle / driver\nOccupancy\nNorth route · Station Road\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats\nSouth route · Sindhari Road\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats\nWest route · Mahabar\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats\nEast route · Gandhi Chowk\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Transport",
+      "Bus activity",
+      "Today's bus status",
+      "Route register"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "fleet-upper-detail",
+    "client": "web",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nRoutes & buses\nBus students\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nTransport\nRoutes & buses\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nTransport\n\nRoutes, vehicles, drivers and student allocations\n\nAdd route\nBus activity\n\n2 running · 1 need attention\n\nView status\nSouth route · Sindhari Road\nRJ04 TEST · Next: Station Road\n30+ min delay\nNorth route · Station Road\nRJ04 TEST · Next: Station Road\nRunning\nUpdated 6:04 pm\nRefresh\nSouth route · Sindhari Road\n\nRJ04 TEST · Review Driver\n\nNext stop\nView last location\n\nStation Road\n\n30+ min delay\n\nBus breakdown - driver reported\n\n2/5 stops complete\n12 marked on\n\nLocation unavailable - last update 5:58 pm\n\nStudents on bus\n97\nRoutes\n4\nSeats\n128\nWithout a route\n1\nRoute register\n\nOpen a route to manage its stops and riders\n\nRoute / area\nVehicle / driver\nOccupancy\nNorth route · Station Road\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats\nSouth route · Sindhari Road\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats\nWest route · Mahabar\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats\nEast route · Gandhi Chowk\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats"
+  },
+  {
+    "id": "fleet-all-status",
+    "client": "web",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nRoutes & buses\nBus students\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nTransport\nRoutes & buses\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nTransport\n\nRoutes, vehicles, drivers and student allocations\n\nAdd route\nBus activity\n\n2 running · 1 need attention\n\nView status\nSouth route · Sindhari Road\nRJ04 TEST · Next: Station Road\n30+ min delay\nNorth route · Station Road\nRJ04 TEST · Next: Station Road\nRunning\nUpdated 6:04 pm\nRefresh\nToday's bus status\n\n4 routes · 2 running\n\nNorth route · Station Road\nRJ04 TEST · Next: Station Road\nRunning\nSouth route · Sindhari Road\nRJ04 TEST · Next: Station Road\n30+ min delay\nWest route · Mahabar\nRJ04 TEST\nCompleted\nEast route · Gandhi Chowk\nRJ04 TEST\nNot started\nStudents on bus\n97\nRoutes\n4\nSeats\n128\nWithout a route\n1\nRoute register\n\nOpen a route to manage its stops and riders\n\nRoute / area\nVehicle / driver\nOccupancy\nNorth route · Station Road\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats\nSouth route · Sindhari Road\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats\nWest route · Mahabar\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats\nEast route · Gandhi Chowk\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats"
+  },
+  {
+    "id": "fleet-compact",
+    "client": "staff-erp",
+    "route": "/erp/transport/",
+    "file": "fleet-compact-staff-erp.png",
+    "url": "http://127.0.0.1:3310/erp/transport",
+    "text": "Routes & Buses\nBus activity\n\n2 running · 1 need attention\n\nView status\nSouth route · Sindhari Road\nRJ04 TEST · Next: Station Road\n30+ min delay\nNorth route · Station Road\nRJ04 TEST · Next: Station Road\nRunning\nUpdated 6:04 pm\nRefresh\n97\non bus\n4\nroutes · 128 seats\n1\nno route yet\nRoutes\nNorth route · Station Road\n24/32\nRJ04 TEST · Review Driver\nSouth route · Sindhari Road\n24/32\nRJ04 TEST · Review Driver\nWest route · Mahabar\n24/32\nRJ04 TEST · Review Driver\nEast route · Gandhi Chowk\n24/32\nRJ04 TEST · Review Driver\n1 bus students have no route\nAdd route\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "headings": [
+      "Routes & Buses",
+      "Bus activity",
+      "Today's bus status",
+      "Routes"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "fleet-upper-detail",
+    "client": "staff-erp",
+    "width": 390,
+    "scrollWidth": 390,
+    "text": "Routes & Buses\nBus activity\n\n2 running · 1 need attention\n\nView status\nSouth route · Sindhari Road\nRJ04 TEST · Next: Station Road\n30+ min delay\nNorth route · Station Road\nRJ04 TEST · Next: Station Road\nRunning\nUpdated 6:04 pm\nRefresh\nSouth route · Sindhari Road\n\nRJ04 TEST · Review Driver\n\nNext stop\nView last location\n\nStation Road\n\n30+ min delay\n\nBus breakdown - driver reported\n\n2/5 stops complete\n12 marked on\n\nLocation unavailable - last update 5:58 pm\n\n97\non bus\n4\nroutes · 128 seats\n1\nno route yet\nRoutes\nNorth route · Station Road\n24/32\nRJ04 TEST · Review Driver\nSouth route · Sindhari Road\n24/32\nRJ04 TEST · Review Driver\nWest route · Mahabar\n24/32\nRJ04 TEST · Review Driver\nEast route · Gandhi Chowk\n24/32\nRJ04 TEST · Review Driver\n1 bus students have no route\nAdd route\nHome\nStudents\nReport\nAttendance\nProfile"
+  },
+  {
+    "id": "fleet-all-status",
+    "client": "staff-erp",
+    "width": 390,
+    "scrollWidth": 390,
+    "text": "Routes & Buses\nBus activity\n\n2 running · 1 need attention\n\nView status\nSouth route · Sindhari Road\nRJ04 TEST · Next: Station Road\n30+ min delay\nNorth route · Station Road\nRJ04 TEST · Next: Station Road\nRunning\nUpdated 6:04 pm\nRefresh\nToday's bus status\n\n4 routes · 2 running\n\nNorth route · Station Road\nRJ04 TEST · Next: Station Road\nRunning\nSouth route · Sindhari Road\nRJ04 TEST · Next: Station Road\n30+ min delay\nWest route · Mahabar\nRJ04 TEST\nCompleted\nEast route · Gandhi Chowk\nRJ04 TEST\nNot started\n97\non bus\n4\nroutes · 128 seats\n1\nno route yet\nRoutes\nNorth route · Station Road\n24/32\nRJ04 TEST · Review Driver\nSouth route · Sindhari Road\n24/32\nRJ04 TEST · Review Driver\nWest route · Mahabar\n24/32\nRJ04 TEST · Review Driver\nEast route · Gandhi Chowk\n24/32\nRJ04 TEST · Review Driver\n1 bus students have no route\nAdd route\nHome\nStudents\nReport\nAttendance\nProfile"
+  },
+  {
+    "id": "fleet-refresh-error",
+    "client": "web",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nRoutes & buses\nBus students\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nTransport\nRoutes & buses\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nTransport\n\nRoutes, vehicles, drivers and student allocations\n\nAdd route\nBus activity\n\n2 running · 2 need attention\n\nView status\n\nUpdate failed. Last received status is shown.\nRetry\n\nNorth route · Station Road\nRJ04 TEST · Next: Station Road\nRunning\nSouth route · Sindhari Road\nRJ04 TEST · Next: Station Road\n30+ min delay\nUpdated 6:04 pm\nRefresh\nNorth route · Station Road\n\nRJ04 TEST · Review Driver\n\nConnection lost. This is the last received snapshot.\n\nNext stop\n\nStation Road\n\nRunning\n2/5 stops complete\n12 marked on\n\nLocation unavailable - last update 6:04 pm\n\nStudents on bus\n97\nRoutes\n4\nSeats\n128\nWithout a route\n1\nRoute register\n\nOpen a route to manage its stops and riders\n\nRoute / area\nVehicle / driver\nOccupancy\nNorth route · Station Road\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats\nSouth route · Sindhari Road\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats\nWest route · Mahabar\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats\nEast route · Gandhi Chowk\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats"
+  },
+  {
+    "id": "parent-bus-overview",
+    "client": "parent",
+    "route": "/bus/",
+    "file": "parent-bus-overview-parent.png",
+    "url": "http://127.0.0.1:3100/bus",
+    "text": "School Bus\nPJ\nNorth route\nRJ04 TEST\nStation Road\n\nYour child's stop\n\nScheduled morning pickup\n7:10 AM\nTrip in progress\n\nOpen tracking for location and your child's trip status.\n\nLive tracking\nBus and crew\nIND\nRJ04 TEST\nVehicle no.\nRD\nReview Driver\nDriver\nAll stops on the route\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "School Bus",
+      "Station Road",
+      "Bus and crew"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "parent-stops-expanded",
+    "client": "parent",
+    "width": 390,
+    "scrollWidth": 375,
+    "text": "School Bus\nPJ\nNorth route\nRJ04 TEST\nStation Road\n\nYour child's stop\n\nScheduled morning pickup\n7:10 AM\nTrip in progress\n\nOpen tracking for location and your child's trip status.\n\nLive tracking\nBus and crew\nIND\nRJ04 TEST\nVehicle no.\nRD\nReview Driver\nDriver\nAll stops on the route\n\nNorth route · times are as scheduled\n\nFirst stop\n7:00 AM\nStation Road\nYour stop\n7:10 AM\nSecond stop\n7:20 AM\nHome\nCalendar\nStudy\nFees\nProfile"
+  },
+  {
+    "id": "parent-clicked-tracking",
+    "client": "parent",
+    "width": 390,
+    "scrollWidth": 390,
+    "text": "Live tracking\nPJ\nYour stop is next\n\nStation Road\n\n3\nmin approx.\n© OpenStreetMap\n\nLocation updated · 5 sec ago\n\nArrival is estimated from distance, without live traffic.\n\nTurn on bus alerts on this phone\nBus and crew details\nHome\nCalendar\nStudy\nFees\nProfile"
+  },
+  {
+    "id": "parent-crew-expanded",
+    "client": "parent",
+    "width": 390,
+    "scrollWidth": 390,
+    "text": "Live tracking\nPJ\nYour stop is next\n\nStation Road\n\n3\nmin approx.\n© OpenStreetMap\n\nLocation updated · 5 sec ago\n\nArrival is estimated from distance, without live traffic.\n\nTurn on bus alerts on this phone\nBus and crew details\nVehicle\nRJ04 TEST\nDriver\nReview Driver\nHome\nCalendar\nStudy\nFees\nProfile"
+  },
+  {
+    "id": "parent-tracking-live",
+    "client": "parent",
+    "route": "/bus/tracking/",
+    "file": "parent-tracking-live-parent.png",
+    "url": "http://127.0.0.1:3100/bus/tracking",
+    "text": "Live tracking\nPJ\nYour stop is next\n\nStation Road\n\n3\nmin approx.\n© OpenStreetMap\n\nLocation updated · 5 sec ago\n\nArrival is estimated from distance, without live traffic.\n\nTurn on bus alerts on this phone\nBus and crew details\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Live tracking",
+      "Your stop is next"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "parent-tracking-connection-lost",
+    "client": "parent",
+    "width": 390,
+    "scrollWidth": 390,
+    "text": "Live tracking\nPJ\nYour stop is next\n\nStation Road\n\n© OpenStreetMap\n\nConnection lost · last received information\n\nArrival estimates resume after a fresh location update.\n\nTurn on bus alerts on this phone\nBus and crew details\nHome\nCalendar\nStudy\nFees\nProfile"
+  },
+  {
+    "id": "parent-tracking-stale",
+    "client": "parent",
+    "route": "/bus/tracking/",
+    "file": "parent-tracking-stale-parent.png",
+    "url": "http://127.0.0.1:3100/bus/tracking",
+    "text": "Live tracking\nPJ\nYour stop is next\n\nStation Road\n\n© OpenStreetMap\n\nLast location · 5 min ago\n\nArrival estimates resume after a fresh location update.\n\nTurn on bus alerts on this phone\nBus and crew details\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Live tracking",
+      "Your stop is next"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "parent-tracking-boarded",
+    "client": "parent",
+    "route": "/bus/tracking/",
+    "file": "parent-tracking-boarded-parent.png",
+    "url": "http://127.0.0.1:3100/bus/tracking",
+    "text": "Live tracking\nPJ\nPrisha is on the bus\n\nStation Road\n\nRecorded by the driver · 6:04 pm\n\n© OpenStreetMap\n\nLocation updated · 5 sec ago\n\nTurn on bus alerts on this phone\nBus and crew details\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Live tracking",
+      "Prisha is on the bus"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "parent-tracking-missing-entry",
+    "client": "parent",
+    "route": "/bus/tracking/",
+    "file": "parent-tracking-missing-entry-parent.png",
+    "url": "http://127.0.0.1:3100/bus/tracking",
+    "text": "Live tracking\nPJ\nYour stop has been passed\n\nStation Road\n\nYour child's entry is missing. Please check with the bus crew.\n\n© OpenStreetMap\n\nLocation updated · 5 sec ago\n\nTurn on bus alerts on this phone\nBus and crew details\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Live tracking",
+      "Your stop has been passed"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "parent-tracking-delay",
+    "client": "parent",
+    "route": "/bus/tracking/",
+    "file": "parent-tracking-delay-parent.png",
+    "url": "http://127.0.0.1:3100/bus/tracking",
+    "text": "Live tracking\nPJ\nYour stop is next\n\nStation Road\n\n3\nmin approx.\n© OpenStreetMap\n\nLocation updated · 5 sec ago\n\nArrival is estimated from distance, without live traffic.\n\nDriver reports 20 min delay\n\nBecause of a traffic jam\n\nTurn on bus alerts on this phone\nBus and crew details\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Live tracking",
+      "Your stop is next"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "parent-tracking-waiting",
+    "client": "parent",
+    "route": "/bus/tracking/",
+    "file": "parent-tracking-waiting-parent.png",
+    "url": "http://127.0.0.1:3100/bus/tracking",
+    "text": "Live tracking\nPJ\nYour stop is next\n\nStation Road\n\n© OpenStreetMap\n\nWaiting for the bus location\n\nArrival estimates resume after a fresh location update.\n\nTurn on bus alerts on this phone\nBus and crew details\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Live tracking",
+      "Your stop is next"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "parent-tracking-idle",
+    "client": "parent",
+    "route": "/bus/tracking/",
+    "file": "parent-tracking-idle-parent.png",
+    "url": "http://127.0.0.1:3100/bus/tracking",
+    "text": "Live tracking\nPJ\nNo trip running right now\n\nThe trip appears here once the driver starts the run.\n\nBack to bus details\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Live tracking",
+      "No trip running right now"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "parent-tracking-demo",
+    "client": "parent",
+    "route": "/bus/tracking/",
+    "file": "parent-tracking-demo-parent.png",
+    "url": "http://127.0.0.1:3100/bus/tracking",
+    "text": "Live tracking\nPJ\nYour stop is next\n\nStation Road\n\n3\nmin approx.\n\nDemo · sample trip, not a live location\n\n© OpenStreetMap\n\nLocation updated · 5 sec ago\n\nArrival is estimated from distance, without live traffic.\n\nBus and crew details\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Live tracking",
+      "Your stop is next"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "parent-tracking-unavailable",
+    "client": "parent",
+    "route": "/bus/tracking/",
+    "file": "parent-tracking-unavailable-parent.png",
+    "url": "http://127.0.0.1:3100/bus/tracking",
+    "text": "Live tracking\nPJ\nTracking is unavailable\n\nCheck your connection and try again. A previous location will not be presented as live.\n\nTry again\nBack to bus details\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Live tracking",
+      "Tracking is unavailable"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "parent-neutral-status",
+    "client": "parent",
+    "route": "/leave/",
+    "file": "parent-neutral-status-parent.png",
+    "url": "http://127.0.0.1:3100/leave",
+    "text": "Leave\nNovember 2026\nFri, 20 Nov\nCasual · Full day\nReview appointment\nWaiting\nCancel application\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Leave",
+      "November 2026"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "parent-home-status",
+    "client": "parent",
+    "route": "/",
+    "file": "parent-home-status-parent.png",
+    "url": "http://127.0.0.1:3100/",
+    "text": "SS\nSynthetic Review School\nBarmer\nGood Evening,\nPJ\nPrisha Joshi\nClass 6th - A • Roll No. 1\nToday\n·\nPresent\nTransport\nHomework\nFees\nResults\nBus trip in progress\nStation Road\nToday at school\nToday's homework\nNothing assigned\nExam results\nNot published yet\nLatest Notices\nView All\n\nNo notices yet\n\nUpcoming Events\nView All\n\nNo upcoming events\n\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "headings": [
+      "Today at school",
+      "Latest Notices",
+      "Upcoming Events"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "parent-sibling",
+    "client": "parent",
+    "route": "/bus/tracking/",
+    "file": "parent-sibling-parent.png",
+    "url": "http://127.0.0.1:3100/bus/tracking",
+    "text": "Live tracking\nRS\n1 stop before yours\n\nSecond stop\n\n6\nmin approx.\n© OpenStreetMap\n\nLocation updated · 5 sec ago\n\nArrival is estimated from distance, without live traffic.\n\nTurn on bus alerts on this phone\nBus and crew details\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Live tracking",
+      "1 stop before yours"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "parent-overview-360",
+    "client": "parent",
+    "route": "/bus/",
+    "file": "parent-overview-360-parent.png",
+    "url": "http://127.0.0.1:3100/bus",
+    "text": "School Bus\nRS\nNorth route\nRJ04 TEST\nSecond stop\n\nYour child's stop\n\nScheduled morning pickup\n7:10 AM\nTrip in progress\n\nOpen tracking for location and your child's trip status.\n\nLive tracking\nBus and crew\nIND\nRJ04 TEST\nVehicle no.\nRD\nReview Driver\nDriver\nAll stops on the route\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 360,
+    "scrollWidth": 345,
+    "headings": [
+      "School Bus",
+      "Second stop",
+      "Bus and crew"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "parent-tracking-360",
+    "client": "parent",
+    "route": "/bus/tracking/",
+    "file": "parent-tracking-360-parent.png",
+    "url": "http://127.0.0.1:3100/bus/tracking",
+    "text": "Live tracking\nRS\n1 stop before yours\n\nSecond stop\n\n6\nmin approx.\n© OpenStreetMap\n\nLocation updated · 5 sec ago\n\nArrival is estimated from distance, without live traffic.\n\nTurn on bus alerts on this phone\nBus and crew details\nHome\nCalendar\nStudy\nFees\nProfile",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Live tracking",
+      "1 stop before yours"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "teacher-no-fleet",
+    "client": "web",
+    "route": "/transport",
+    "file": "teacher-no-fleet-web.png",
+    "url": "http://127.0.0.1:3010/transport",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nRoutes & buses\nBus students\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nFaculty\n\nHome\nTransport\nRoutes & buses\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nFaculty\nTransport\n\nRoutes, vehicles, drivers and student allocations\n\nStudents on bus\n97\nRoutes\n4\nSeats\n128\nWithout a route\n1\nRoute register\n\nOpen a route to manage its stops and riders\n\nRoute / area\nVehicle / driver\nOccupancy\nNorth route · Station Road\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats\nSouth route · Sindhari Road\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats\nWest route · Mahabar\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats\nEast route · Gandhi Chowk\n5 stops\nRJ04 TEST\nReview Driver\n24 / 32 seats",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Transport",
+      "Route register"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "teacher-no-fleet",
+    "client": "staff-erp",
+    "route": "/erp/transport/",
+    "file": "teacher-no-fleet-staff-erp.png",
+    "url": "http://127.0.0.1:3310/erp/transport",
+    "text": "Routes & Buses\n97\non bus\n4\nroutes · 128 seats\n1\nno route yet\nRoutes\nNorth route · Station Road\n24/32\nRJ04 TEST · Review Driver\nSouth route · Sindhari Road\n24/32\nRJ04 TEST · Review Driver\nWest route · Mahabar\n24/32\nRJ04 TEST · Review Driver\nEast route · Gandhi Chowk\n24/32\nRJ04 TEST · Review Driver\n1 bus students have no route\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Routes & Buses",
+      "Routes"
+    ],
+    "errors": [],
+    "missing": []
+  }
+]
