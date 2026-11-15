@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
-import { ArrowDown, ArrowUp, Loader2, Phone, Plus, Printer, Search, Trash2, X } from "lucide-react";
+import { ArrowDown, ArrowUp, Loader2, MapPin, Phone, Plus, Printer, Search, Trash2, X } from "lucide-react";
 import { SideDrawer } from "@/components/ui/SideDrawer";
 import { toast } from "@/components/ui/Toaster";
 import { PrintSheet } from "@/components/certificates/SheetPreview";
+import { StopPlacePicker } from "./StopPlacePicker";
 import { BusRoute, Rider, RouteInput, Stop, transportService } from "@/lib/services/transportService";
 
 type Tab = "students" | "details";
@@ -68,6 +69,7 @@ export function RouteDrawer({ route, routes, school, isAdmin, onClose, onChanged
 
   if (!route) return null;
 
+  const [picking, setPicking] = useState<number | null>(null);
   const setStop = (i: number, patch: Partial<Stop>) => setF((p) => ({ ...p, stops: p.stops.map((s, j) => (j === i ? { ...s, ...patch } : s)) }));
   const moveStopRow = (i: number, d: number) =>
     setF((p) => {
@@ -276,6 +278,16 @@ export function RouteDrawer({ route, routes, school, isAdmin, onClose, onChanged
                       <span className="w-5 shrink-0 text-right text-xs tabular-nums text-slate-400">{i + 1}</span>
                       <input value={s.name} onChange={(e) => setStop(i, { name: e.target.value })} placeholder="Stop name" maxLength={60} disabled={!isAdmin} aria-label={`Stop ${i + 1}`} className="field field-sm min-w-0 flex-1" />
                       <input type="time" value={s.time} onChange={(e) => setStop(i, { time: e.target.value })} disabled={!isAdmin} aria-label={`Pickup time at stop ${i + 1}`} className="field field-sm w-[7.5rem] tabular-nums" />
+                      <button
+                        type="button"
+                        onClick={() => s.name.trim() && setPicking(i)}
+                        disabled={!isAdmin || !s.name.trim()}
+                        className={`rounded-md p-1.5 hover:bg-slate-100 disabled:opacity-30 ${typeof s.lat === "number" ? "text-emerald-600" : "text-slate-400"}`}
+                        aria-label={typeof s.lat === "number" ? `Change the map place of ${s.name}` : `Choose the map place of ${s.name}`}
+                        title={typeof s.lat === "number" ? "Place on map saved. Click to change." : "Choose place on map"}
+                      >
+                        <MapPin className="h-4 w-4" />
+                      </button>
                       {isAdmin && (
                         <span className="flex shrink-0">
                           <button type="button" onClick={() => moveStopRow(i, -1)} disabled={i === 0} className="rounded-md p-1.5 text-slate-400 hover:bg-slate-100 disabled:opacity-30" aria-label="Move up">
@@ -292,6 +304,25 @@ export function RouteDrawer({ route, routes, school, isAdmin, onClose, onChanged
                     </li>
                   ))}
                 </ol>
+                <p className="mt-2 text-xs text-slate-500">
+                  <MapPin className="mr-1 inline h-3.5 w-3.5 text-emerald-600" />
+                  Green pin: the stop's place is on the map. The bus app drives to it and the alert comes there. Save the route after choosing places.
+                </p>
+                {picking !== null && f.stops[picking] && (
+                  <StopPlacePicker
+                    name={f.stops[picking].name}
+                    value={typeof f.stops[picking].lat === "number" ? { lat: f.stops[picking].lat as number, lng: f.stops[picking].lng as number } : null}
+                    near={(() => {
+                      const o = f.stops.find((x) => typeof x.lat === "number");
+                      return o ? { lat: o.lat as number, lng: o.lng as number } : null;
+                    })()}
+                    onClose={() => setPicking(null)}
+                    onSave={(p) => {
+                      setStop(picking, p ? { lat: p.lat, lng: p.lng } : { lat: null, lng: null });
+                      setPicking(null);
+                    }}
+                  />
+                )}
                 {isAdmin && (
                   <button type="button" onClick={() => setF((p) => ({ ...p, stops: [...p.stops, { name: "", time: "" }] }))} className="mt-3 inline-flex items-center gap-1 text-[13px] font-semibold text-brand-700 hover:underline">
                     <Plus className="h-3.5 w-3.5" />
