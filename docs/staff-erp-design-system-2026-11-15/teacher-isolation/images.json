@@ -1,0 +1,32 @@
+[
+  {
+    "src": "/img/school-hero-morning.webp",
+    "loaded": true,
+    "width": 1200,
+    "height": 676
+  },
+  {
+    "src": "/img/tiles/attendance.webp",
+    "loaded": true,
+    "width": 111,
+    "height": 128
+  },
+  {
+    "src": "/img/tiles/homework.webp",
+    "loaded": true,
+    "width": 120,
+    "height": 128
+  },
+  {
+    "src": "/img/tiles/students.webp",
+    "loaded": true,
+    "width": 145,
+    "height": 128
+  },
+  {
+    "src": "/img/tiles/marks.webp",
+    "loaded": true,
+    "width": 113,
+    "height": 128
+  }
+]

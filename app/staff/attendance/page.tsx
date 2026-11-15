@@ -1,5 +1,7 @@
 "use client";
 
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
+
 import React, { useEffect, useState } from "react";
 import { staffAttendanceService } from "@/lib/services/staffAttendanceService";
 import { DayTab } from "@/components/staff/attendance/DayTab";
@@ -16,17 +18,13 @@ const isTab = (v: string | null): v is Tab => v === "today" || v === "register" 
 
 export default function StaffAttendancePage() {
   const [tab, setTab] = useState<Tab>("today");
-  const [role, setRole] = useState<string | null>(null);
+  const { roleKey } = useCurrentUser();
+  const role = roleKey || null;
   const [pending, setPending] = useState<number | null>(null);
 
   useEffect(() => {
     const t = new URLSearchParams(window.location.search).get("tab");
     if (isTab(t)) setTab(t);
-    try {
-      setRole(localStorage.getItem("schooldesk_user_role") || "");
-    } catch {
-      /* private window */
-    }
     staffAttendanceService.leaves().then((r) => {
       if (r.data) setPending(r.data.data.filter((l) => l.status === "Pending").length);
     });

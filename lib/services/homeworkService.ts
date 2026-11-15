@@ -17,6 +17,11 @@ export interface PostOption {
   subjects: string[];
   anySubject: boolean;
 }
+export interface HomeworkFile {
+  url: string;
+  name: string;
+  kind: "image" | "pdf";
+}
 export interface Homework {
   id: string;
   subject: string;
@@ -26,6 +31,7 @@ export interface Homework {
   dueDate: string | null;
   canEdit: boolean;
   by: string;
+  files?: HomeworkFile[];
 }
 export interface HwInput {
   sectionId: string;
@@ -33,6 +39,7 @@ export interface HwInput {
   title: string;
   details: string;
   dueDate: string;
+  files?: HomeworkFile[];
 }
 
 type Done = { success: boolean; error?: string };

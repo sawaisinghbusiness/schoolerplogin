@@ -1,0 +1,154 @@
+[
+  {
+    "id": "teacher-home",
+    "client": "app",
+    "route": "/",
+    "file": "teacher-home-app.png",
+    "url": "http://127.0.0.1:3310/",
+    "text": "SS\nSynthetic review school\nBarmer\nGood Afternoon\nRT\nReview Teacher\nTeacher • Class teacher 6th - A\nToday\n·\nAttendance not marked\nAttendance\nHomework\nStudents\nMarks\nToday at school\nClass attendance\nAll marked\nLeave requests\nNone waiting\nParent enquiries\nNo new messages\nToday's lectures\nView All\n\nYou have no classes today.\n\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Today at school",
+      "Today's lectures"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "teacher-home-360",
+    "client": "app",
+    "route": "/",
+    "file": "teacher-home-360-app.png",
+    "url": "http://127.0.0.1:3310/",
+    "text": "SS\nSynthetic review school\nBarmer\nGood Afternoon\nRT\nReview Teacher\nTeacher • Class teacher 6th - A\nToday\n·\nAttendance not marked\nAttendance\nHomework\nStudents\nMarks\nToday at school\nClass attendance\nAll marked\nLeave requests\nNone waiting\nParent enquiries\nNo new messages\nToday's lectures\nView All\n\nYou have no classes today.\n\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Today at school",
+      "Today's lectures"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "teacher-attendance",
+    "client": "app",
+    "route": "/attendance/",
+    "file": "teacher-attendance-app.png",
+    "url": "http://127.0.0.1:3310/attendance",
+    "text": "Attendance\nStudents\nTeacher\nClass - 6th - A\nDate\nSave · 2 present, 0 absent\nNo.\nName\nP\nA\nL\n1\nPrisha Joshi Rathore Singh\n2\nAarav Sharma\nSave · 2 present, 0 absent\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Attendance"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "teacher-attendance-360",
+    "client": "app",
+    "route": "/attendance/",
+    "file": "teacher-attendance-360-app.png",
+    "url": "http://127.0.0.1:3310/attendance",
+    "text": "Attendance\nStudents\nTeacher\nClass - 6th - A\nDate\nSave · 2 present, 0 absent\nNo.\nName\nP\nA\nL\n1\nPrisha Joshi Rathore Singh\n2\nAarav Sharma\nSave · 2 present, 0 absent\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Attendance"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "teacher-marks",
+    "client": "app",
+    "route": "/marks/",
+    "file": "teacher-marks-app.png",
+    "url": "http://127.0.0.1:3310/marks",
+    "text": "Marks\nExam - Term I\nClass - 6th - A\nSubject - Maths\n\nParts: Written examination 80 + Internal assessment 20\n\nEnter marks\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Marks"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "teacher-marks-360",
+    "client": "app",
+    "route": "/marks/",
+    "file": "teacher-marks-360-app.png",
+    "url": "http://127.0.0.1:3310/marks",
+    "text": "Marks\nExam - Term I\nClass - 6th - A\nSubject - Maths\n\nParts: Written examination 80 + Internal assessment 20\n\nEnter marks\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Marks"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "teacher-leave",
+    "client": "app",
+    "route": "/leave/apply/",
+    "file": "teacher-leave-app.png",
+    "url": "http://127.0.0.1:3310/leave/apply",
+    "text": "Apply Leave\nType - Casual\nFrom\nTo\nFull day\nHalf day\nReason for leave\n\nThe school office will see this and reply here.\n\nApply\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Apply Leave"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "teacher-leave-360",
+    "client": "app",
+    "route": "/leave/apply/",
+    "file": "teacher-leave-360-app.png",
+    "url": "http://127.0.0.1:3310/leave/apply",
+    "text": "Apply Leave\nType - Casual\nFrom\nTo\nFull day\nHalf day\nReason for leave\n\nThe school office will see this and reply here.\n\nApply\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Apply Leave"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "teacher-homework",
+    "client": "app",
+    "route": "/homework/?tab=check",
+    "file": "teacher-homework-app.png",
+    "url": "http://127.0.0.1:3310/homework?tab=check",
+    "text": "Homework\nCreate\nCheck\nHomework - 6th - A · Maths · 14 Nov — Fraction practice\n\nMaths - 6th - A\n\n14 Nov\n\nFraction practice\n\nUntick anyone who did not submit.\n\nPS\nPrisha Joshi Rathore Singh\nAS\nAarav Sharma\nHome\nStudents\nReport\nAttendance\nProfile\nSave · 2 / 2 submitted",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Homework"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "teacher-homework-360",
+    "client": "app",
+    "route": "/homework/?tab=check",
+    "file": "teacher-homework-360-app.png",
+    "url": "http://127.0.0.1:3310/homework?tab=check",
+    "text": "Homework\nCreate\nCheck\nHomework - 6th - A · Maths · 14 Nov — Fraction practice\n\nMaths - 6th - A\n\n14 Nov\n\nFraction practice\n\nUntick anyone who did not submit.\n\nPS\nPrisha Joshi Rathore Singh\nAS\nAarav Sharma\nHome\nStudents\nReport\nAttendance\nProfile\nSave · 2 / 2 submitted",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Homework"
+    ],
+    "errors": [],
+    "missing": []
+  }
+]

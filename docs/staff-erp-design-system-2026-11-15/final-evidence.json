@@ -1,0 +1,67 @@
+{
+  "captureCount": 48,
+  "checks": [
+    {
+      "dir": "home-after",
+      "routes": 2,
+      "errors": [],
+      "overflow": [],
+      "missing": [],
+      "interactions": []
+    },
+    {
+      "dir": "browser",
+      "routes": 16,
+      "errors": [],
+      "overflow": [],
+      "missing": [],
+      "interactions": []
+    },
+    {
+      "dir": "supplement-complete",
+      "routes": 8,
+      "errors": [],
+      "overflow": [],
+      "missing": [],
+      "interactions": [
+        "ERP Sheet and menu portals retain theme; marks Save bar clears actual tab navigation. No data mutations."
+      ]
+    },
+    {
+      "dir": "hindi-final",
+      "routes": 6,
+      "errors": [],
+      "overflow": [],
+      "missing": [],
+      "interactions": []
+    },
+    {
+      "dir": "teacher-isolation",
+      "routes": 2,
+      "errors": [],
+      "overflow": [],
+      "missing": [],
+      "interactions": []
+    },
+    {
+      "dir": "states",
+      "routes": 4,
+      "errors": [],
+      "overflow": [],
+      "missing": [],
+      "interactions": []
+    },
+    {
+      "dir": "teacher-tasks-final",
+      "synthetic": true,
+      "routes": 10,
+      "overflow": [],
+      "errors": [],
+      "missing": [],
+      "interactions": [],
+      "writes": []
+    }
+  ],
+  "note": "Synthetic local records; representative route/state/device coverage, not every64route and permission.",
+  "additionalPortalAndEntryViews": 3
+}

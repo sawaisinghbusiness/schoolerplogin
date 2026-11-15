@@ -36,7 +36,7 @@ export function AppShell({ children }: AppShellProps) {
 
   return (
     <SchoolProfileProvider>
-      <div className="erp-shell flex h-[100dvh] w-screen overflow-hidden font-sans text-slate-900">
+      <div data-action-theme="evergreen" className="erp-shell flex h-[100dvh] w-screen overflow-hidden font-sans text-slate-900">
         <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
 
         <div className="flex-1 flex flex-col min-w-0 h-full overflow-hidden">

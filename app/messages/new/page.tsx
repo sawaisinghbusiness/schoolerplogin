@@ -1,6 +1,3 @@
-import { redirect } from "next/navigation";
-
-// Writing a message happens in a drawer on /messages.
-export default function Page() {
-  redirect("/messages?new=1");
-}
+import Workflow from "@/components/parity/generated/pages/messages/new";
+import { ParityFrame } from "@/components/parity/ParityFrame";
+export default function Page(){return <ParityFrame title={"New message"} back={"/erp/messages/"}><Workflow /></ParityFrame>;}

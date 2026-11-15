@@ -1,0 +1,9 @@
+{
+  "comparedFiles": 188,
+  "mismatches": [
+    "app\\(app)\\assistant\\page.tsx",
+    "components\\SahayakThinking.tsx"
+  ],
+  "scope": "Final ERP and teacher task app/components/lib",
+  "capturedAt": "2026-11-15T09:56:50.479Z"
+}

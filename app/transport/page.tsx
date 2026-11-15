@@ -1,5 +1,7 @@
 "use client";
 
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
+
 import React, { useCallback, useEffect, useState } from "react";
 import { Bus, ChevronRight, Plus, RefreshCw } from "lucide-react";
 import { toast } from "@/components/ui/Toaster";
@@ -8,13 +10,6 @@ import { BusRoute, transportService } from "@/lib/services/transportService";
 import { RouteDrawer } from "@/components/transport/RouteDrawer";
 
 const fmtPhone = (p?: string | null) => (p && /^\d{10}$/.test(p) ? `${p.slice(0, 5)} ${p.slice(5)}` : "");
-const role = () => {
-  try {
-    return localStorage.getItem("schooldesk_user_role") || "";
-  } catch {
-    return "";
-  }
-};
 
 export default function TransportPage() {
   const { schoolProfile } = useSchoolProfile();
@@ -24,7 +19,7 @@ export default function TransportPage() {
   const [unassigned, setUnassigned] = useState(0);
   const [setupNeeded, setSetupNeeded] = useState(false);
   const [open, setOpen] = useState<BusRoute | "unassigned" | "new" | null>(null);
-  const [me, setMe] = useState("");
+  const { roleKey: me } = useCurrentUser();
 
   const load = useCallback(async () => {
     setLoadError(null);
@@ -40,7 +35,6 @@ export default function TransportPage() {
 
   useEffect(() => {
     load();
-    setMe(role());
   }, [load]);
 
   const isAdmin = me === "admin";

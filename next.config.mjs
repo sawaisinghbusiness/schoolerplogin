@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const BACKEND_URL = (process.env.BACKEND_URL || "").replace(/\/+$/, "");
+const BACKEND_URL = (process.env.ERP_BACKEND_URL || process.env.BACKEND_URL || "").replace(/\/+$/, "");
 
 const nextConfig = {
   reactStrictMode: true,

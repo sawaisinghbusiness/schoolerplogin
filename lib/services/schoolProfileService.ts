@@ -64,10 +64,10 @@ export const schoolProfileService = {
     return res.ok && res.data?.success ? { success: true, data: res.data.data } : { success: false, error: res.data?.error || res.error || "Could not save." };
   },
 
-  async session(): Promise<{ session: { code: string; label: string; start: string; end: string }; holidays: Holiday[]; error?: string }> {
+  async session(): Promise<{ session: { code: string; label: string; start: string; end: string } | null; holidays: Holiday[]; error?: string }> {
     const res = await api.get<{ session: { code: string; label: string; start: string; end: string }; holidays: Holiday[]; error?: string }>("/api/school/session");
-    if (res.data?.session) return res.data;
-    return { session: { code: "2026-2027", label: "2026-27", start: "2026-04-01", end: "2027-03-31" }, holidays: [], error: res.error };
+    if (res.ok && res.data?.session?.start && res.data.session.end) return res.data;
+    return { session: null, holidays: [], error: res.error || "Academic session is unavailable." };
   },
 
   async addHoliday(title: string, start: string, end: string): Promise<{ success: boolean; data?: Holiday; error?: string }> {

@@ -1,0 +1,94 @@
+[
+  {
+    "id": "home-hi",
+    "client": "app",
+    "route": "/",
+    "file": "home-hi-app.png",
+    "url": "http://127.0.0.1:3310/",
+    "text": "Good afternoon\nReview\nRO\nSearch a student by name or SR no.\nReport\nStudents\nFees\nAttendance\nEnquiries\nExams\nHomework\nTransport\nToday at school\nClass attendance\n3 of 6 classes not marked\n3\nAbsent today\nNo one so far\nFees collected today\n3 receipts\n₹9,500\nEnquiry follow-ups\nNone due\nBirthdays today\nNone today\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "headings": [
+      "Good afternoon\nReview",
+      "Today at school"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "current-360",
+    "client": "app",
+    "route": "/",
+    "file": "current-360-app.png",
+    "url": "http://127.0.0.1:3310/",
+    "text": "Good afternoon\nReview\nRO\nSearch a student by name or SR no.\nReport\nStudents\nFees\nAttendance\nEnquiries\nExams\nHomework\nTransport\nToday at school\nClass attendance\n3 of 6 classes not marked\n3\nAbsent today\nNo one so far\nFees collected today\n3 receipts\n₹9,500\nEnquiry follow-ups\nNone due\nBirthdays today\nNone today\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 345,
+    "headings": [
+      "Good afternoon\nReview",
+      "Today at school"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "marks-hi",
+    "client": "app",
+    "route": "/erp/exams/marks/sheet/?exam=exam-review&section=6th%20-%20A&subject=Maths",
+    "file": "marks-hi-app.png",
+    "url": "http://127.0.0.1:3310/erp/exams/marks/sheet?exam=exam-review&section=6th%20-%20A&subject=Maths",
+    "text": "Marks\n\nMaths · 6th - A\n\nTerm I examination · out of 100\n\nNext on the keyboard moves down · type a for absent\n\nDownload Excel\nFill from Excel\n1\nAarav Sharma\nC2\nAB\nWritten /80\nInternal /20\n= 50\n2\nPrisha Joshi\nC2\nAB\nWritten /80\nInternal /20\n= 50\n3\nAnanya Rathore\nC2\nAB\nWritten /80\nInternal /20\n= 50\n4\nVihaan Singh\nC2\nAB\nWritten /80\nInternal /20\n= 50\nHome\nStudents\nReport\nAttendance\nProfile\n\n4 / 4 entered\n\nSaved",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Marks"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "current-360",
+    "client": "app",
+    "route": "/erp/exams/marks/sheet/?exam=exam-review&section=6th%20-%20A&subject=Maths",
+    "file": "current-360-app.png",
+    "url": "http://127.0.0.1:3310/erp/exams/marks/sheet?exam=exam-review&section=6th%20-%20A&subject=Maths",
+    "text": "Marks\n\nMaths · 6th - A\n\nTerm I examination · out of 100\n\nNext on the keyboard moves down · type a for absent\n\nDownload Excel\nFill from Excel\n1\nAarav Sharma\nC2\nAB\nWritten /80\nInternal /20\n= 50\n2\nPrisha Joshi\nC2\nAB\nWritten /80\nInternal /20\n= 50\n3\nAnanya Rathore\nC2\nAB\nWritten /80\nInternal /20\n= 50\n4\nVihaan Singh\nC2\nAB\nWritten /80\nInternal /20\n= 50\nHome\nStudents\nReport\nAttendance\nProfile\n\n4 / 4 entered\n\nSaved",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Marks"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "fee-reports-hi",
+    "client": "app",
+    "route": "/erp/fees/reports/",
+    "file": "fee-reports-hi-app.png",
+    "url": "http://127.0.0.1:3310/erp/fees/reports",
+    "text": "Fee Reports\nExport spreadsheet\nToday\nThis week\nThis month\nThis session\nCustom\n\n1–15 Nov 2026 · 8 receipts · cancelled receipts not counted\n\nCollected\n₹34,000\n8 receipts\nCash\n₹15,000\n44% of collected\nUPI\n₹19,000\n56% of collected\nCheque / DD\n₹0\n0% of collected\nDay book\nHeads\nCollector\nClasses\nSat, 14 Nov\n₹9,500\n\n3 receipts · Cash ₹4,500 · UPI ₹5,000\n\nFri, 13 Nov\n₹24,500\n\n5 receipts · Cash ₹10,500 · UPI ₹14,000\n\nTotal · 2 days · 8 receipts\n₹34,000\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Fee Reports"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "current-360",
+    "client": "app",
+    "route": "/erp/fees/reports/",
+    "file": "current-360-app.png",
+    "url": "http://127.0.0.1:3310/erp/fees/reports",
+    "text": "Fee Reports\nExport spreadsheet\nToday\nThis week\nThis month\nThis session\nCustom\n\n1–15 Nov 2026 · 8 receipts · cancelled receipts not counted\n\nCollected\n₹34,000\n8 receipts\nCash\n₹15,000\n44% of collected\nUPI\n₹19,000\n56% of collected\nCheque / DD\n₹0\n0% of collected\nDay book\nHeads\nCollector\nClasses\nSat, 14 Nov\n₹9,500\n\n3 receipts · Cash ₹4,500 · UPI ₹5,000\n\nFri, 13 Nov\n₹24,500\n\n5 receipts · Cash ₹10,500 · UPI ₹14,000\n\nTotal · 2 days · 8 receipts\n₹34,000\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Fee Reports"
+    ],
+    "errors": [],
+    "missing": []
+  }
+]

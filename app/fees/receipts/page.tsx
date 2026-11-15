@@ -1,4 +1,5 @@
 "use client";
+import { useErpSession } from "@/lib/useErpSession";
 
 import React, { useEffect, useMemo, useState } from "react";
 import * as XLSX from "xlsx";
@@ -22,7 +23,7 @@ const modeKey = (m: string): Exclude<ModeFilter, "all"> => (/upi|qr/i.test(m) ? 
 const PAGE = 100;
 
 /** Start and end dates (inclusive) for a preset. The session runs April to March. */
-function rangeDates(r: Exclude<Range, "custom">): [string, string] {
+function rangeDates(r: Exclude<Range, "custom">, session?: {start:string;end:string} | null): [string, string] {
   const now = new Date();
   const today = iso(now);
   if (r === "today") return [today, today];
@@ -32,12 +33,13 @@ function rangeDates(r: Exclude<Range, "custom">): [string, string] {
     return [iso(d), today];
   }
   if (r === "month") return [iso(new Date(now.getFullYear(), now.getMonth(), 1)), today];
-  return ["2026-04-01", "2027-03-31"];
+  return [session?.start || "", session?.end || ""];
 }
 
 const CANCEL_REASONS = ["Wrong amount entered", "Wrong student selected", "Cheque bounced", "Entered twice", "Refunded to parent"];
 
 export default function ReceiptsPage() {
+  const { session, error: sessionError } = useErpSession();
   const { schoolProfile } = useSchoolProfile();
   const user = useCurrentUser();
   const isAdmin = user.role === "Administrator";
@@ -53,7 +55,7 @@ export default function ReceiptsPage() {
   const [printing, setPrinting] = useState<Receipt | null>(null);
   const [cancelling, setCancelling] = useState<Receipt | null>(null);
 
-  const [from, to] = range === "custom" ? custom : rangeDates(range);
+  const [from, to] = range === "custom" ? custom : rangeDates(range, session);
 
   const load = async () => {
     setLoading(true);
@@ -111,6 +113,7 @@ export default function ReceiptsPage() {
 
   return (
     <div className="workspace-page space-y-5 pb-12">
+      {sessionError && <p role="alert" className="text-sm text-rose-700">{sessionError} Session-wide dates are unavailable.</p>}
       <header className="page-header">
         <div>
           <h1 className="page-title">Receipts</h1>
@@ -130,7 +133,7 @@ export default function ReceiptsPage() {
       <div className="flex flex-wrap items-center gap-2">
         <div className="module-tabs scroll-row max-w-full gap-1 rounded-xl bg-slate-200/60 p-1" role="tablist" aria-label="Date range">
           {RANGES.map(([k, l]) => (
-            <button key={k} type="button" role="tab" aria-selected={range === k} onClick={() => setRange(k)} className={`shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-[13px] font-semibold sm:py-1.5 ${range === k ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}>
+            <button key={k} type="button" role="tab" aria-selected={range === k} disabled={k === "session" && !session} onClick={() => setRange(k)} className={`shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-[13px] font-semibold sm:py-1.5 ${range === k ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}>
               {l}
             </button>
           ))}

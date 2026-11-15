@@ -1,0 +1,11 @@
+{
+  "synthetic": true,
+  "routes": 8,
+  "overflow": [],
+  "errors": [],
+  "missing": [],
+  "interactions": [
+    "ERP Sheet and menu portals retain theme; marks Save bar clears actual tab navigation. No data mutations."
+  ],
+  "writes": []
+}

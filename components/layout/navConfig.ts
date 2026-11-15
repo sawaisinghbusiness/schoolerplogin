@@ -1,183 +1,92 @@
-import {
-  CalendarClock,
-  Briefcase,
-  Bus,
-  CalendarCheck,
-  CalendarDays,
-  IndianRupee,
-  LayoutDashboard,
-  MessageSquareText,
-  MessagesSquare,
-  NotebookPen,
-  Settings2,
-  Trophy,
-  Users,
-  type LucideIcon,
-} from "lucide-react";
-
-/**
- * Single source of truth for the sidebar, the command palette and page titles.
- * Mirrors the rebuild plan's 11 modules. `soon` marks screens that are planned but
- * not built yet: they open an honest "coming in phase X" page instead of fake data.
- */
-
+import { LayoutDashboard, Users, IndianRupee, CalendarCheck, MessageSquareText, CalendarClock, MessagesSquare, CalendarDays, Cake, Trophy, Table2, NotebookPen, ListChecks, ClipboardCheck, Briefcase, Bus, Settings2, Video, Award, FileQuestion, Library, BedDouble, Package, DoorOpen, HeartPulse, MessageSquareWarning, GraduationCap, Fingerprint, type LucideIcon } from 'lucide-react';
+import catalog from '@/lib/erp-system.json';
 export interface NavChild {
-  title: string;
-  href: string;
-  soon?: boolean;
+    title: string;
+    href: string;
+    soon?: boolean;
 }
-
 export interface NavItem {
-  title: string;
-  href?: string;
-  icon: LucideIcon;
-  soon?: boolean;
-  children?: NavChild[];
+    title: string;
+    href?: string;
+    icon: LucideIcon;
+    soon?: boolean;
+    children?: NavChild[];
 }
-
 export interface NavGroup {
-  label: string;
-  items: NavItem[];
+    label: string;
+    items: NavItem[];
 }
-
 export const CORE_NAV: NavItem[] = [{ title: "Dashboard", href: "/dashboard", icon: LayoutDashboard }];
-
-/**
- * One page per job. Things that fit on a page live there as tabs, popups or drawers
- * (new admission, student profile, add staff…); a separate page only when a different
- * person does it, at a different time, or it is a big workflow of its own.
- */
-export const NAV_GROUPS: NavGroup[] = [
-  {
-    label: "Daily work",
-    items: [
-      {
-        title: "Students",
-        icon: Users,
-        children: [
-          { title: "All students", href: "/students" },
-          { title: "Enquiries", href: "/students/enquiries" },
-          { title: "Promote & transfer", href: "/students/promote" },
-          { title: "Certificates", href: "/students/certificates" },
-          { title: "Photos", href: "/students/documents" },
-          { title: "ID cards", href: "/students/print" },
-        ],
-      },
-      {
-        title: "Fees",
-        icon: IndianRupee,
-        children: [
-          { title: "Collect fee", href: "/fees/collect" },
-          { title: "Dues & reminders", href: "/fees/dues" },
-          { title: "Online payments", href: "/fees/online" },
-          { title: "Receipts", href: "/fees/receipts" },
-          { title: "Reports", href: "/fees/reports" },
-          { title: "Fee setup", href: "/fees/setup" },
-        ],
-      },
-      {
-        title: "Attendance",
-        icon: CalendarCheck,
-        children: [
-          { title: "Mark attendance", href: "/attendance/mark" },
-          { title: "Register & reports", href: "/attendance/register" },
-          { title: "Leave requests", href: "/attendance/leave" },
-        ],
-      },
-      { title: "Messages", href: "/messages", icon: MessageSquareText },
-      { title: "Meetings & PTM", href: "/meetings", icon: CalendarClock },
-      { title: "Parent–teacher chats", href: "/parent-chats", icon: MessagesSquare },
-    ],
-  },
-  {
-    label: "Academics",
-    items: [
-      {
-        title: "Exams",
-        icon: Trophy,
-        children: [
-          { title: "Marks entry", href: "/exams/marks" },
-          { title: "Report cards", href: "/exams/report-cards" },
-          { title: "Exam setup", href: "/exams/setup" },
-        ],
-      },
-      { title: "Timetable", href: "/academics/timetable", icon: CalendarDays },
-      { title: "Homework", href: "/academics/homework", icon: NotebookPen },
-    ],
-  },
-  {
-    label: "School",
-    items: [
-      {
-        title: "Staff",
-        icon: Briefcase,
-        children: [
-          { title: "Directory", href: "/staff" },
-          { title: "Attendance & leave", href: "/staff/attendance" },
-          { title: "Payroll", href: "/staff/payroll" },
-        ],
-      },
-      { title: "Transport", href: "/transport", icon: Bus },
-      {
-        title: "Settings",
-        icon: Settings2,
-        children: [
-          { title: "School & sessions", href: "/settings" },
-          { title: "Classes & subjects", href: "/settings/classes" },
-          { title: "Users & roles", href: "/settings/users" },
-          { title: "WhatsApp", href: "/settings/messaging" },
-        ],
-      },
-    ],
-  },
-];
-
-/**
- * What the sidebar shows: the full plan, so the school sees everything the product
- * will do. Screens not built yet carry `soon` and are drawn muted with a tag.
- * A module whose screens are all unbuilt is marked `soon` itself.
- */
-export function visibleNavGroups(): NavGroup[] {
-  return NAV_GROUPS.map((g) => ({
-    ...g,
-    items: g.items.map((item) => (item.children && item.children.every((c) => c.soon) ? { ...item, soon: true } : item)),
-  }));
+const ICONS: Record<string, LucideIcon> = { LayoutDashboard, Users, IndianRupee, CalendarCheck, MessageSquareText, CalendarClock, MessagesSquare, CalendarDays, Cake, Trophy, Table2, NotebookPen, ListChecks, ClipboardCheck, Briefcase, Bus, Settings2, Video, Award, FileQuestion, Library, BedDouble, Package, DoorOpen, HeartPulse, MessageSquareWarning, GraduationCap, Fingerprint };
+export const NAV_GROUPS: NavGroup[] = [];
+for (const f of catalog.features) {
+    let group = NAV_GROUPS.find(g => g.label === f.group.en);
+    if (!group) {
+        group = { label: f.group.en, items: [] };
+        NAV_GROUPS.push(group);
+    }
+    let item = group.items.find(i => i.title === f.module.en);
+    if (!item) {
+        item = { title: f.module.en, icon: ICONS[f.icon] || LayoutDashboard, children: [] };
+        group.items.push(item);
+    }
+    item.children!.push({ title: f.title.en, href: f.web, soon: f.status === 'planned' });
 }
-
+for (const group of NAV_GROUPS)
+    for (const item of group.items)
+        if (item.children?.length === 1 && item.children[0].title === item.title) {
+            item.href = item.children[0].href;
+            item.soon = item.children[0].soon;
+            delete item.children;
+        }
+export function visibleNavGroups(): NavGroup[] {
+    return NAV_GROUPS.map((g) => ({
+        ...g,
+        items: g.items.map((item) => (item.children && item.children.every((c) => c.soon) ? { ...item, soon: true } : item)),
+    }));
+}
 /** Flat list of every destination, for the command palette and page titles. */
 export interface NavDestination {
-  title: string;
-  href: string;
-  section: string;
-  icon: LucideIcon;
-  soon?: boolean;
+    title: string;
+    href: string;
+    section: string;
+    icon: LucideIcon;
+    soon?: boolean;
 }
-
 export function allDestinations(): NavDestination[] {
-  const out: NavDestination[] = CORE_NAV.map((i) => ({ title: i.title, href: i.href!, section: "Overview", icon: i.icon }));
-  const seen = new Set(out.map((d) => d.href));
-  for (const group of NAV_GROUPS) {
-    for (const item of group.items) {
-      if (item.href && !seen.has(item.href)) {
-        out.push({ title: item.title, href: item.href, section: group.label, icon: item.icon, soon: item.soon });
-        seen.add(item.href);
-      }
-      for (const child of item.children || []) {
-        if (!seen.has(child.href)) {
-          out.push({ title: child.title, href: child.href, section: item.title, icon: item.icon, soon: child.soon });
-          seen.add(child.href);
+    const out: NavDestination[] = CORE_NAV.map((i) => ({ title: i.title, href: i.href!, section: "Overview", icon: i.icon }));
+    const seen = new Set(out.map((d) => d.href));
+    for (const group of NAV_GROUPS) {
+        for (const item of group.items) {
+            if (item.href && !seen.has(item.href)) {
+                out.push({ title: item.title, href: item.href, section: group.label, icon: item.icon, soon: item.soon });
+                seen.add(item.href);
+            }
+            for (const child of item.children || []) {
+                if (!seen.has(child.href)) {
+                    out.push({ title: child.title, href: child.href, section: item.title, icon: item.icon, soon: child.soon });
+                    seen.add(child.href);
+                }
+            }
         }
-      }
     }
-  }
-  return out;
+    return out;
 }
-
 /** Human title for the current path (used by the top bar breadcrumb). */
-export function titleForPath(pathname: string): { title: string; section: string } {
-  const match = allDestinations().find((d) => d.href === pathname);
-  if (match) return { title: match.title, section: match.section };
-  if (pathname.startsWith("/students/")) return { title: "Student", section: "Students" };
-  const last = pathname.split("/").filter(Boolean).pop() || "dashboard";
-  return { title: last.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()), section: "SchoolDesk" };
+export function titleForPath(pathname: string): {
+    title: string;
+    section: string;
+} {
+    const match = allDestinations().find((d) => d.href === pathname);
+    if (match)
+        return { title: match.title, section: match.section };
+    const parent = allDestinations().filter(d => !d.href.includes("?") && pathname.startsWith(d.href + "/")).sort((a, b) => b.href.length - a.href.length)[0];
+    if (parent) {
+        const leaf = pathname.split("/").filter(Boolean).at(-1) || parent.title;
+        return { title: leaf.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase()), section: parent.title };
+    }
+    if (pathname.startsWith("/students/"))
+        return { title: "Student", section: "Students" };
+    const last = pathname.split("/").filter(Boolean).pop() || "dashboard";
+    return { title: last.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()), section: "SchoolDesk" };
 }

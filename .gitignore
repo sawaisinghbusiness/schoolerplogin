@@ -39,3 +39,12 @@ next-env.d.ts
 # production build test folder
 /.next-build/
 /.next-build-visual/
+
+/.next-parity-dev/
+/.next-parity-build/
+
+/.next-erp-system-build/
+
+/.verification/
+
+/.next-action-build/

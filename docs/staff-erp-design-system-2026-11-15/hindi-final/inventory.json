@@ -1,0 +1,94 @@
+[
+  {
+    "id": "home-hi",
+    "client": "app",
+    "route": "/",
+    "file": "home-hi-app.png",
+    "url": "http://127.0.0.1:3310/",
+    "text": "नमस्ते\nReview\nRO\nबच्चे का नाम या SR नंबर खोजें\nरिपोर्ट\nबच्चे\nफ़ीस\nहाज़िरी\nप्रवेश पूछताछ\nपरीक्षा\nहोमवर्क\nट्रांसपोर्ट\nआज की जानकारी\nकक्षाओं की हाज़िरी\n6 में से 3 कक्षाओं की बाकी\n3\nआज अनुपस्थित\nअभी कोई नहीं\nआज जमा फ़ीस\n3 रसीदें\n₹9,500\nपूछताछ पर फ़ॉलो-अप\nकोई बाकी नहीं\nआज जन्मदिन\nआज किसी का नहीं\nहोम\nबच्चे\nरिपोर्ट\nहाज़िरी\nप्रोफ़ाइल",
+    "width": 390,
+    "scrollWidth": 375,
+    "headings": [
+      "नमस्ते\nReview",
+      "आज की जानकारी"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "home-hi-360",
+    "client": "app",
+    "route": "/",
+    "file": "home-hi-360-app.png",
+    "url": "http://127.0.0.1:3310/",
+    "text": "नमस्ते\nReview\nRO\nबच्चे का नाम या SR नंबर खोजें\nरिपोर्ट\nबच्चे\nफ़ीस\nहाज़िरी\nप्रवेश पूछताछ\nपरीक्षा\nहोमवर्क\nट्रांसपोर्ट\nआज की जानकारी\nकक्षाओं की हाज़िरी\n6 में से 3 कक्षाओं की बाकी\n3\nआज अनुपस्थित\nअभी कोई नहीं\nआज जमा फ़ीस\n3 रसीदें\n₹9,500\nपूछताछ पर फ़ॉलो-अप\nकोई बाकी नहीं\nआज जन्मदिन\nआज किसी का नहीं\nहोम\nबच्चे\nरिपोर्ट\nहाज़िरी\nप्रोफ़ाइल",
+    "width": 360,
+    "scrollWidth": 345,
+    "headings": [
+      "नमस्ते\nReview",
+      "आज की जानकारी"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "marks-hi",
+    "client": "app",
+    "route": "/erp/exams/marks/sheet/?exam=exam-review&section=6th%20-%20A&subject=Maths",
+    "file": "marks-hi-app.png",
+    "url": "http://127.0.0.1:3310/erp/exams/marks/sheet?exam=exam-review&section=6th%20-%20A&subject=Maths",
+    "text": "अंक\n\nMaths · 6th - A\n\nTerm I examination · पूर्णांक 100\n\nकीबोर्ड पर आगे दबाएँ तो अगला बच्चा · a लिखें = अनुपस्थित\n\nExcel डाउनलोड\nExcel से भरें\n1\nAarav Sharma\nC2\nAB\nWritten /80\nInternal /20\n= 50\n2\nPrisha Joshi\nC2\nAB\nWritten /80\nInternal /20\n= 50\n3\nAnanya Rathore\nC2\nAB\nWritten /80\nInternal /20\n= 50\n4\nVihaan Singh\nC2\nAB\nWritten /80\nInternal /20\n= 50\nहोम\nबच्चे\nरिपोर्ट\nहाज़िरी\nप्रोफ़ाइल\n\n4 / 4 भरे\n\nसेव है",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "अंक"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "marks-hi-360",
+    "client": "app",
+    "route": "/erp/exams/marks/sheet/?exam=exam-review&section=6th%20-%20A&subject=Maths",
+    "file": "marks-hi-360-app.png",
+    "url": "http://127.0.0.1:3310/erp/exams/marks/sheet?exam=exam-review&section=6th%20-%20A&subject=Maths",
+    "text": "अंक\n\nMaths · 6th - A\n\nTerm I examination · पूर्णांक 100\n\nकीबोर्ड पर आगे दबाएँ तो अगला बच्चा · a लिखें = अनुपस्थित\n\nExcel डाउनलोड\nExcel से भरें\n1\nAarav Sharma\nC2\nAB\nWritten /80\nInternal /20\n= 50\n2\nPrisha Joshi\nC2\nAB\nWritten /80\nInternal /20\n= 50\n3\nAnanya Rathore\nC2\nAB\nWritten /80\nInternal /20\n= 50\n4\nVihaan Singh\nC2\nAB\nWritten /80\nInternal /20\n= 50\nहोम\nबच्चे\nरिपोर्ट\nहाज़िरी\nप्रोफ़ाइल\n\n4 / 4 भरे\n\nसेव है",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "अंक"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "fee-reports-hi",
+    "client": "app",
+    "route": "/erp/fees/reports/",
+    "file": "fee-reports-hi-app.png",
+    "url": "http://127.0.0.1:3310/erp/fees/reports",
+    "text": "फ़ीस रिपोर्ट\nशीट डाउनलोड करें\nआज\nइस हफ़्ते\nइस महीने\nपूरा सत्र\nतारीख चुनें\n\n1–15 Nov 2026 · 8 रसीदें · रद्द रसीदें नहीं गिनीं\n\nजमा\n₹34,000\n8 रसीदें\nनकद\n₹15,000\n44% जमा का\nUPI\n₹19,000\n56% जमा का\nचेक / DD\n₹0\n0% जमा का\nरोज़\nहेड\nकिसने\nकक्षा\nSat, 14 Nov\n₹9,500\n\n3 रसीदें · Cash ₹4,500 · UPI ₹5,000\n\nFri, 13 Nov\n₹24,500\n\n5 रसीदें · Cash ₹10,500 · UPI ₹14,000\n\nकुल · 2 दिन · 8 रसीदें\n₹34,000\nहोम\nबच्चे\nरिपोर्ट\nहाज़िरी\nप्रोफ़ाइल",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "फ़ीस रिपोर्ट"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "fee-reports-hi-360",
+    "client": "app",
+    "route": "/erp/fees/reports/",
+    "file": "fee-reports-hi-360-app.png",
+    "url": "http://127.0.0.1:3310/erp/fees/reports",
+    "text": "फ़ीस रिपोर्ट\nशीट डाउनलोड करें\nआज\nइस हफ़्ते\nइस महीने\nपूरा सत्र\nतारीख चुनें\n\n1–15 Nov 2026 · 8 रसीदें · रद्द रसीदें नहीं गिनीं\n\nजमा\n₹34,000\n8 रसीदें\nनकद\n₹15,000\n44% जमा का\nUPI\n₹19,000\n56% जमा का\nचेक / DD\n₹0\n0% जमा का\nरोज़\nहेड\nकिसने\nकक्षा\nSat, 14 Nov\n₹9,500\n\n3 रसीदें · Cash ₹4,500 · UPI ₹5,000\n\nFri, 13 Nov\n₹24,500\n\n5 रसीदें · Cash ₹10,500 · UPI ₹14,000\n\nकुल · 2 दिन · 8 रसीदें\n₹34,000\nहोम\nबच्चे\nरिपोर्ट\nहाज़िरी\nप्रोफ़ाइल",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "फ़ीस रिपोर्ट"
+    ],
+    "errors": [],
+    "missing": []
+  }
+]

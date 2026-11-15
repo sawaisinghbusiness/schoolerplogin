@@ -1,0 +1,32 @@
+[
+  {
+    "id": "teacher-marks",
+    "client": "app",
+    "route": "/marks/",
+    "file": "teacher-marks-app.png",
+    "url": "http://127.0.0.1:3310/marks",
+    "text": "Marks\nExam - Term I\nClass - 6th - A\nSubject - Maths\n\nParts: Written examination 80 + Internal assessment 20\n\nEnter marks\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Marks"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "teacher-marks-360",
+    "client": "app",
+    "route": "/marks/",
+    "file": "teacher-marks-360-app.png",
+    "url": "http://127.0.0.1:3310/marks",
+    "text": "Marks\nExam - Term I\nClass - 6th - A\nSubject - Maths\n\nParts: Written examination 80 + Internal assessment 20\n\nEnter marks\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Marks"
+    ],
+    "errors": [],
+    "missing": []
+  }
+]

@@ -464,6 +464,50 @@ textarea {
   }
 }
 
+/* Website notice strip: the notices run right to left without end. The track holds the list twice, so
+   sliding it by exactly half brings the second copy to where the first began. */
+.notice-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+}
+.notice-track {
+  display: flex;
+  width: max-content;
+  animation: notice-run var(--notice-secs, 30s) linear infinite;
+}
+.notice-set {
+  display: flex;
+  flex-shrink: 0;
+  gap: 2rem;
+  padding-right: 2rem;
+}
+.notice-marquee:hover .notice-track,
+.notice-marquee:focus-within .notice-track {
+  animation-play-state: paused;
+}
+@keyframes notice-run {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .notice-marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .notice-track {
+    animation: none;
+  }
+  .notice-set[aria-hidden] {
+    display: none;
+  }
+}
+
 /* ==========================================================================
    Legacy MTNA utility classes (still referenced by pages)
    ========================================================================== */

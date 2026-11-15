@@ -1,5 +1,7 @@
 "use client";
 
+import { useErpSession } from "@/lib/useErpSession";
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { CalendarDays, Clock, Plus, Printer, RefreshCw } from "lucide-react";
 import { toast } from "@/components/ui/Toaster";
@@ -31,7 +33,8 @@ export default function TimetablePage() {
   const [cell, setCell] = useState<{ day: number; period: Period } | null>(null);
   const [periodsOpen, setPeriodsOpen] = useState(false);
   const [printing, setPrinting] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false);
+  const isAdmin = useCurrentUser().roleKey === "admin";
+  const { session } = useErpSession();
 
   const loadOverview = useCallback(async () => {
     const r = await timetableService.overview();
@@ -46,11 +49,6 @@ export default function TimetablePage() {
   }, []);
 
   useEffect(() => {
-    try {
-      setIsAdmin(localStorage.getItem("schooldesk_user_role") === "admin");
-    } catch {
-      /* display only */
-    }
     loadOverview().then((d) => {
       if (!d || d.setupNeeded) return;
       const first = d.classes[0];
@@ -311,7 +309,7 @@ export default function TimetablePage() {
       />
       {printing && entries && (
         <PrintSheet onDone={() => setPrinting(false)}>
-          <TimetableDocument school={schoolProfile.school_name || "School"} classSec={classSec} periods={periods} entries={entries} teacherName={teacherName} />
+          <TimetableDocument school={schoolProfile.school_name || "School"} classSec={classSec} sessionLabel={session?.label} periods={periods} entries={entries} teacherName={teacherName} />
         </PrintSheet>
       )}
     </div>

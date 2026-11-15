@@ -1,0 +1,36 @@
+{
+  "synthetic": true,
+  "routes": 6,
+  "overflow": [],
+  "errors": [],
+  "missing": [],
+  "interactions": [
+    "Native desktop Save, staff portal Save and parent Apply/payment actions resolve to evergreen; assistant routes opt out. No business action submitted."
+  ],
+  "writes": [
+    {
+      "method": "POST",
+      "path": "/api/dashboard/assistant/warm",
+      "body": {}
+    },
+    {
+      "method": "POST",
+      "path": "/api/dashboard/assistant/warm",
+      "body": {}
+    },
+    {
+      "method": "POST",
+      "path": "/api/parent/assistant/warm",
+      "body": {
+        "student": "child-review"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/parent/assistant/warm",
+      "body": {
+        "student": "child-review"
+      }
+    }
+  ]
+}

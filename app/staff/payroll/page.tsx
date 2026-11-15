@@ -1,5 +1,7 @@
 "use client";
 
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
+
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import * as XLSX from "xlsx";
@@ -21,13 +23,6 @@ const shift = (m: string, by: number) => {
   const d = new Date(Date.UTC(y, mo - 1 + by, 1));
   return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}`;
 };
-const role = () => {
-  try {
-    return localStorage.getItem("schooldesk_user_role") || "";
-  } catch {
-    return "";
-  }
-};
 
 export default function PayrollPage() {
   const { schoolProfile } = useSchoolProfile();
@@ -41,7 +36,7 @@ export default function PayrollPage() {
   const [slipFor, setSlipFor] = useState<string | null>(null);
   const [picked, setPicked] = useState<Set<string>>(new Set());
   const [payOpen, setPayOpen] = useState(false);
-  const [me, setMe] = useState("");
+  const { roleKey: me } = useCurrentUser();
 
   const load = useCallback(async () => {
     setLoadError(null);
@@ -57,7 +52,6 @@ export default function PayrollPage() {
     setPicked(new Set());
     load();
   }, [load]);
-  useEffect(() => setMe(role()), []);
 
   const stats = useMemo(() => {
     const list = rows || [];

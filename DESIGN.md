@@ -13,7 +13,7 @@ Signature: persistent student register numbers and aligned Indian-currency amoun
 ## Working rules
 
 - Neutral canvas `#F4F5F7`, white work surfaces, dividers `#DCE2E7`, ink `#18252F`. Light navigation with dark ink active rows.
-- Deep teal `#12665E` identifies actions, focus and selection. Green means paid/present/completed; amber means a real warning; red means due/error/absence. A person's initials do not need a random colour.
+- Deep evergreen `#294E43` identifies filled operational primary actions; existing teal `#12665E` retains selection and supporting brand roles. Green means paid/present/completed; amber means a real warning; red means due/error/absence. A person's initials do not need a random colour.
 - Use self-hosted IBM Plex Sans Variable in the ERP, with system fallbacks for Hindi. Keep the public-site type and official document typography separate.
 - Titles name the task and remain visible. Desktop title 27px, mobile 24px; supporting text 13px. Avoid shouting weights and widely tracked capitals.
 - Sidebar 236px; content fluid, capped at 1600px; desktop gutters 24–28px and mobile 16px. Keep natural vertical scrolling.
@@ -32,3 +32,8 @@ Review rendered desktop and phone layouts, populated and empty/error states, key
 ## References
 
 Design review used the incumbent application, Impeccable's Operate guidance, and [Unslop by Damir Sokolovsky](https://github.com/heydamir/unslop), licensed CC BY 4.0. The product-specific rules above are an application of its spacing, quiet-chrome, typography and honest-state principles, not a replacement theme copied from its examples.
+
+
+## Operational action palette
+
+Primary actions across web, staff and parent products use deep evergreen #294E43, hover #203F36, pressed #18332B, white labels; disabled #D7DFD8 with #43564C. Secondary actions stay quiet; destructive/status/chart/navigation roles remain distinct. app/action-palette.css is scoped to authenticated operational shell/dialogs and ported workflow roots. Public website, login and explicitly excluded AI assistant designs retain existing treatment. See docs/action-colour-2026-11-15/REPORT.md.

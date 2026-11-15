@@ -27,7 +27,7 @@ const FIELDS: { key: Field; label: string }[] = [
   { key: "pen", label: "PEN" },
 ];
 
-const CLASS_ORDER = ["Nursery", "LKG", "UKG", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th", "11th", "12th"];
+const CLASS_ORDER = ["Pre Nursery", "Nursery", "LKG", "UKG", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th", "11th", "12th"];
 const classRank = (c: string) => {
   const i = CLASS_ORDER.indexOf(c);
   return i === -1 ? 100 + (parseInt(c, 10) || 0) : i;
@@ -236,7 +236,7 @@ export default function StudentsPage() {
         </div>
         <div className="flex gap-2">
           <input ref={fileRef} type="file" accept=".xlsx,.xls,.csv" onChange={onImport} className="hidden" />
-          <button type="button" onClick={() => fileRef.current?.click()} disabled={importing} className="btn btn-secondary px-3 sm:px-4" aria-label="Import from Excel">
+          <button type="button" onClick={() => window.location.assign("/students/excel")} disabled={importing} className="btn btn-secondary px-3 sm:px-4" aria-label="Import from Excel">
             {importing ? <Loader2 className="h-4 w-4 animate-spin" /> : <Upload className="h-4 w-4" />}
             <span className="hidden sm:inline">{importing ? "Importing…" : "Import"}</span>
           </button>

@@ -1,4 +1,5 @@
 "use client";
+import { useErpSession } from "@/lib/useErpSession";
 
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AlertCircle, Banknote, Bus, Check, Landmark, Loader2, Phone, Printer, QrCode, Search, X } from "lucide-react";
@@ -40,6 +41,7 @@ const shortDate = (d: string) => {
 };
 
 export default function CollectFeesPage() {
+  const { session } = useErpSession();
   const { schoolProfile } = useSchoolProfile();
   // Search
   const [query, setQuery] = useState("");
@@ -393,7 +395,7 @@ export default function CollectFeesPage() {
                 </div>
                 <div className="mt-4">
                   <div className="flex justify-between text-xs font-medium text-slate-500">
-                    <span>Session 2026-27{position && position.ledger.finePaid > 0 ? ` · late fine paid ${inr(position.ledger.finePaid)}` : ""}</span>
+                    <span>Session {session?.label || "unavailable"}{position && position.ledger.finePaid > 0 ? ` · late fine paid ${inr(position.ledger.finePaid)}` : ""}</span>
                     <span className="tabular-nums">{paidPct}% paid</span>
                   </div>
                   <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-slate-100">

@@ -1,0 +1,669 @@
+[
+  {
+    "id": "calendar",
+    "client": "web",
+    "route": "/calendar",
+    "file": "calendar-web.png",
+    "url": "http://127.0.0.1:3010/calendar",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nDaily work\nCalendar\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nCalendar\n\nNovember 2026\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\nHoliday\nEvent\nToday\nThis month\nAdd\nReview staff meeting\nWed, 18 Nov · Meeting\nSynthetic office review event",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Calendar",
+      "This month"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "calendar",
+    "client": "app",
+    "route": "/erp/calendar/",
+    "file": "calendar-app.png",
+    "url": "http://127.0.0.1:3310/erp/calendar",
+    "text": "Calendar\n\nNovember 2026\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\nHoliday\nEvent\nToday\nThis month\nAdd\nReview staff meeting\nWed, 18 Nov · Meeting\nSynthetic office review event\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Calendar",
+      "This month"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "syllabus",
+    "client": "web",
+    "route": "/academics/syllabus",
+    "file": "syllabus-web.png",
+    "url": "http://127.0.0.1:3010/academics/syllabus",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nAcademics\nSyllabus\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nSyllabus coverage\nExcel import / export\nClass - 6th\n\n2 of 2 subjects have a plan\n\nEnglish\n3 chapters\nA\n1/3\nB\n1/3\n2 sections behind plan (2 due by now)\nMaths\n3 chapters\nA\n1/3\nB\n1/3\n2 sections behind plan (2 due by now)\n\nBlack line = chapters due by this month",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Syllabus coverage"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "syllabus",
+    "client": "app",
+    "route": "/erp/syllabus/",
+    "file": "syllabus-app.png",
+    "url": "http://127.0.0.1:3310/erp/syllabus",
+    "text": "Syllabus\nExcel\nClass - 6th\n\n2 of 2 subjects have a plan\n\nEnglish\n3 chapters\nA\n1/3\nB\n1/3\n2 sections behind plan (2 due by now)\nMaths\n3 chapters\nA\n1/3\nB\n1/3\n2 sections behind plan (2 due by now)\n\nBlack line = chapters due by this month\n\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Syllabus"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "chapter-plan",
+    "client": "web",
+    "route": "/academics/syllabus/plan?class=6th&subject=Maths",
+    "file": "chapter-plan-web.png",
+    "url": "http://127.0.0.1:3010/academics/syllabus/plan?class=6th&subject=Maths",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nSchoolDesk\nPlan\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nBack\nChapter plan\n6th · Maths\nA\nB\n6th - A · taught\n1/2\n\nOn track with the plan.\n\nChapters\nAdd chapters\n1.Fractions\nPlan: November 2026 · done 15 Nov · Review Teacher\n2.Decimals\nPlan: December 2026",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Chapter plan",
+      "6th · Maths",
+      "Chapters"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "chapter-plan",
+    "client": "app",
+    "route": "/erp/syllabus/plan/?class=6th&subject=Maths",
+    "file": "chapter-plan-app.png",
+    "url": "http://127.0.0.1:3310/erp/syllabus/plan?class=6th&subject=Maths",
+    "text": "Chapter Plan\n6th · Maths\nA\nB\n6th - A · taught\n1/2\n\nOn track with the plan.\n\nChapters\nAdd chapters\n1.Fractions\nPlan: November 2026 · done 15 Nov · Review Teacher\n2.Decimals\nPlan: December 2026\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Chapter Plan",
+      "6th · Maths",
+      "Chapters"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "syllabus-excel",
+    "client": "web",
+    "route": "/academics/syllabus/excel",
+    "file": "syllabus-excel-web.png",
+    "url": "http://127.0.0.1:3010/academics/syllabus/excel",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nSchoolDesk\nExcel\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nBack\nSyllabus import / export\n1. Download the file\n\nEvery class and subject's chapters, with a blank line where there are none. Chapter no. 1, 2, 3… and month like 10-2026.\n\nSyllabus file\n2. Upload it back\n\nIn Excel, File → Save As → CSV. Chapters left out are not deleted; remove those on the Syllabus page.\n\nChoose CSV file",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Syllabus import / export",
+      "1. Download the file",
+      "2. Upload it back"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "syllabus-excel",
+    "client": "app",
+    "route": "/erp/syllabus/excel/",
+    "file": "syllabus-excel-app.png",
+    "url": "http://127.0.0.1:3310/erp/syllabus/excel",
+    "text": "Syllabus in Excel\n1. Download the file\n\nEvery class and subject's chapters, with a blank line where there are none. Chapter no. 1, 2, 3… and month like 10-2026.\n\nSyllabus file\n2. Upload it back\n\nIn Excel, File → Save As → CSV. Chapters left out are not deleted; remove those on the Syllabus page.\n\nChoose CSV file\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Syllabus in Excel",
+      "1. Download the file",
+      "2. Upload it back"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "copy-checks",
+    "client": "web",
+    "route": "/academics/copy-check",
+    "file": "copy-checks-web.png",
+    "url": "http://127.0.0.1:3010/academics/copy-check",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nAcademics\nCopy check\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nCopy checking\nChecks\nReport\nSection - All sections\nNew check\n6th - A · Maths\n15 Nov · Fractions exercise · Review Teacher\n3\ncomplete\n1\nincomplete\n0\nnot given",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Copy checking"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "copy-checks",
+    "client": "app",
+    "route": "/erp/copy-check/",
+    "file": "copy-checks-app.png",
+    "url": "http://127.0.0.1:3310/erp/copy-check",
+    "text": "Copy Check\nChecks\nReport\nSection - All sections\nNew check\n6th - A · Maths\n15 Nov · Fractions exercise · Review Teacher\n3\ncomplete\n1\nincomplete\n0\nnot given\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Copy Check"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "copy-check-sheet",
+    "client": "web",
+    "route": "/academics/copy-check/sheet?section=6th%20-%20A",
+    "file": "copy-check-sheet-web.png",
+    "url": "http://127.0.0.1:3010/academics/copy-check/sheet?section=6th%20-%20A",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nSchoolDesk\nSheet\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nBack\nNotebook check\nSection - 6th - A\nSubject - English\nDate\nTopic (optional)\nAll complete\nNo.\nName\nC\nI\nN\n1\nAarav Sharma\n2\nPrisha Joshi\n3\nAnanya Rathore\n4\nVihaan Singh\nSave · 4 C, 0 I, 0 N",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Notebook check"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "copy-check-sheet",
+    "client": "app",
+    "route": "/erp/copy-check/sheet/?section=6th%20-%20A",
+    "file": "copy-check-sheet-app.png",
+    "url": "http://127.0.0.1:3310/erp/copy-check/sheet?section=6th%20-%20A",
+    "text": "Copy Check\nSection - 6th - A\nSubject - English\nDate\nTopic (optional)\nAll complete\nNo.\nName\nC\nI\nN\n1\nAarav Sharma\n2\nPrisha Joshi\n3\nAnanya Rathore\n4\nVihaan Singh\nHome\nStudents\nReport\nAttendance\nProfile\nSave · 4 C, 0 I, 0 N",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Copy Check"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "templates",
+    "client": "web",
+    "route": "/settings/templates",
+    "file": "templates-web.png",
+    "url": "http://127.0.0.1:3010/settings/templates",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\nSchool & sessions\nClasses & subjects\nUsers & roles\nWhatsApp\nMessage templates\nData\nPlanned\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nSettings\nMessage templates\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nMessage templates\nThe school's own\nNew template\nReview school notice\nEnglish\nHello {name}, please contact the school office.\nBuilt in\nHoliday notice\nDear Parent, the school will remain closed on {date} for {reason}. {name} should come to school as usual on {next}. – {school}\nParent-teacher meeting\nDear Parent, the parent-teacher meeting for {name} (Class {class}) is on {date}, 10 am to 12 noon. Please do come. – {school}\nExam notice\nDear Parent, exams for {name} (Class {class}) begin on {date}. Please collect the date sheet from the school. – {school}\nFee reminder\nDear Parent, fee of {due} for {name} (Class {class}) is due. Please pay at the school office at the earliest. – {school}\nNotice\nDear Parent,\n\n– {school}",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Message templates",
+      "The school's own",
+      "Built in"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "templates",
+    "client": "app",
+    "route": "/erp/settings/templates/",
+    "file": "templates-app.png",
+    "url": "http://127.0.0.1:3310/erp/settings/templates",
+    "text": "Message Templates\nThe school's own\nNew template\nReview school notice\nEnglish\nHello {name}, please contact the school office.\nBuilt in\nHoliday notice\nDear Parent, the school will remain closed on {date} for {reason}. {name} should come to school as usual on {next}. – {school}\nParent-teacher meeting\nDear Parent, the parent-teacher meeting for {name} (Class {class}) is on {date}, 10 am to 12 noon. Please do come. – {school}\nExam notice\nDear Parent, exams for {name} (Class {class}) begin on {date}. Please collect the date sheet from the school. – {school}\nFee reminder\nDear Parent, fee of {due} for {name} (Class {class}) is due. Please pay at the school office at the earliest. – {school}\nNotice\nDear Parent,\n\n– {school}\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "headings": [
+      "Message Templates",
+      "The school's own",
+      "Built in"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "allocation",
+    "client": "web",
+    "route": "/staff/allocation",
+    "file": "allocation-web.png",
+    "url": "http://127.0.0.1:3010/staff/allocation",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nDirectory\nAdd staff\nExcel import / export\nAllocation\nClass teachers\nStaff attendance\nStaff leave\nPayroll\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nStaff\nAllocation\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nSubject allocation\n\n0 of 24 subjects have a teacher\n\nSection - 6th - A · 4 empty\nClass teacher\nNeha Sharma\nEnglish\nTeacher - Nobody\nHindi\nTeacher - Nobody\nMaths\nTeacher - Nobody\nScience\nTeacher - Nobody\nNo changes",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Subject allocation"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "allocation",
+    "client": "app",
+    "route": "/erp/staff/allocation/",
+    "file": "allocation-app.png",
+    "url": "http://127.0.0.1:3310/erp/staff/allocation",
+    "text": "Subject Allocation\n\n0 of 24 subjects have a teacher\n\nSection - 6th - A · 4 empty\nClass teacher\nNeha Sharma\nEnglish\nTeacher - Nobody\nHindi\nTeacher - Nobody\nMaths\nTeacher - Nobody\nScience\nTeacher - Nobody\nHome\nStudents\nReport\nAttendance\nProfile\nNo changes",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Subject Allocation"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "class-teachers",
+    "client": "web",
+    "route": "/staff/class-teachers",
+    "file": "class-teachers-web.png",
+    "url": "http://127.0.0.1:3010/staff/class-teachers",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nDirectory\nAdd staff\nExcel import / export\nAllocation\nClass teachers\nStaff attendance\nStaff leave\nPayroll\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nStaff\nClass teachers\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nBack\nClass teachers\n\n6 of 6 sections have one\n\n6th - A\nTeacher - Neha Sharma · Teacher\n6th - B\nTeacher - Rakesh Mehta · Teacher\n7th - A\nTeacher - Kamla Devi · Teacher\n7th - B\nTeacher - Manish Singh · Teacher\n8th - A\nTeacher - Pooja Verma · Teacher\n8th - B\nTeacher - Sanjay Soni · Teacher\nSave class teachers",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Class teachers"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "class-teachers",
+    "client": "app",
+    "route": "/erp/staff/class-teachers/",
+    "file": "class-teachers-app.png",
+    "url": "http://127.0.0.1:3310/erp/staff/class-teachers",
+    "text": "Class Teachers\n\n6 of 6 sections have one\n\n6th - A\nTeacher - Neha Sharma · Teacher\n6th - B\nTeacher - Rakesh Mehta · Teacher\n7th - A\nTeacher - Kamla Devi · Teacher\n7th - B\nTeacher - Manish Singh · Teacher\n8th - A\nTeacher - Pooja Verma · Teacher\n8th - B\nTeacher - Sanjay Soni · Teacher\nHome\nStudents\nReport\nAttendance\nProfile\nSave class teachers",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Class Teachers"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "student-excel",
+    "client": "web",
+    "route": "/students/excel",
+    "file": "student-excel-web.png",
+    "url": "http://127.0.0.1:3010/students/excel",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nAll students\nAdmission enquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nExcel import / export\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nStudents\nExcel import / export\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nBack\nStudent import / export\n1. Download the file\n\nAll 24 students come filled in. Open it in Excel, correct it or add new students below.\n\nStudents list\nEmpty file\n2. Upload it back\n\nIn Excel, File → Save As → CSV. It is checked first; nothing is saved until you say so.\n\nChoose CSV file\n\nNew students get their fee from the fee setup (class + bus + admission fee). Class and bus of existing students don't change here. Fee payments only through Collect fee.",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Student import / export",
+      "1. Download the file",
+      "2. Upload it back"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "student-excel",
+    "client": "app",
+    "route": "/erp/students/excel/",
+    "file": "student-excel-app.png",
+    "url": "http://127.0.0.1:3310/erp/students/excel",
+    "text": "Students in Excel\n1. Download the file\n\nAll 24 students come filled in. Open it in Excel, correct it or add new students below.\n\nStudents list\nEmpty file\n2. Upload it back\n\nIn Excel, File → Save As → CSV. It is checked first; nothing is saved until you say so.\n\nChoose CSV file\n\nNew students get their fee from the fee setup (class + bus + admission fee). Class and bus of existing students don't change here. Fee payments only through Collect fee.\n\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Students in Excel",
+      "1. Download the file",
+      "2. Upload it back"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "staff-excel",
+    "client": "web",
+    "route": "/staff/excel",
+    "file": "staff-excel-web.png",
+    "url": "http://127.0.0.1:3010/staff/excel",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nDirectory\nAdd staff\nExcel import / export\nAllocation\nClass teachers\nStaff attendance\nStaff leave\nPayroll\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nStaff\nExcel import / export\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nBack\nStaff import / export\n1. Download the file\n\nAll 8 staff come filled in. Correct them, or add new staff on new lines (leave Emp Code empty and one is made).\n\nDownload file\n2. Upload it back\n\nIn Excel, File → Save As → CSV. It is checked first; nothing is saved until you say so.\n\nChoose Excel or CSV file\n\nSalary is not in this file; it stays on the Payroll page. An empty cell keeps what is saved.",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Staff import / export",
+      "1. Download the file",
+      "2. Upload it back"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "staff-excel",
+    "client": "app",
+    "route": "/erp/staff/excel/",
+    "file": "staff-excel-app.png",
+    "url": "http://127.0.0.1:3310/erp/staff/excel",
+    "text": "Staff in Excel\n1. Download the file\n\nAll 8 staff come filled in. Correct them, or add new staff on new lines (leave Emp Code empty and one is made).\n\nDownload file\n2. Upload it back\n\nIn Excel, File → Save As → CSV. It is checked first; nothing is saved until you say so.\n\nChoose Excel or CSV file\n\nSalary is not in this file; it stays on the Payroll page. An empty cell keeps what is saved.\n\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Staff in Excel",
+      "1. Download the file",
+      "2. Upload it back"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "reports",
+    "client": "web",
+    "route": "/reports",
+    "file": "reports-web.png",
+    "url": "http://127.0.0.1:3010/reports",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\nAll reports\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nReport\nAll reports\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nAll reports\n\nThe same school reports are available on ERP web and ERP app.\n\nReports\nFees\nRegister & reports\nAttendance\nReport cards\nExams\nSyllabus\nSyllabus\nPayroll\nStaff",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "All reports"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "reports",
+    "client": "app",
+    "route": "/erp/reports/",
+    "file": "reports-app.png",
+    "url": "http://127.0.0.1:3310/erp/reports",
+    "text": "All reports\n\nOpen the same school reports available on ERP web.\n\nReports\nFees\nRegister & reports\nAttendance\nReport cards\nExams\nSyllabus\nSyllabus\nPayroll\nStaff\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "All reports"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "birthdays",
+    "client": "web",
+    "route": "/birthdays",
+    "file": "birthdays-web.png",
+    "url": "http://127.0.0.1:3010/birthdays",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nDaily work\nBirthdays\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nBirthdays\nToday 1\n7 days 3\n30 days 3\nAll\nStudents\nStaff\nToday · 1\nAS\nAarav Sharma\n6th - A · turns 12",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Birthdays",
+      "Today · 1"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "birthdays",
+    "client": "app",
+    "route": "/erp/birthdays/",
+    "file": "birthdays-app.png",
+    "url": "http://127.0.0.1:3310/erp/birthdays",
+    "text": "Birthdays\nToday 1\n7 days 3\n30 days 3\nAll\nStudents\nStaff\nToday · 1\nAS\nAarav Sharma\n6th - A · turns 12\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Birthdays",
+      "Today · 1"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "attendance-today",
+    "client": "web",
+    "route": "/attendance/today",
+    "file": "attendance-today-web.png",
+    "url": "http://127.0.0.1:3010/attendance/today",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nToday\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nAttendance\nToday\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nToday's attendance\n\nSunday, 15 November · 3 / 6 sections marked\n\nPresent today\n12 / 24 students marked\n75%\nPresent\n9\nAbsent\n3\nLeave\n0\nNot marked\n12\nPending 3\nMarked 3\nAbsent 2\nRemind all (3)\n6th - B\n4 students · Rakesh Mehta\nRemind\n7th - B\n4 students · Manish Singh\nRemind\n8th - B\n4 students · Sanjay Soni\nRemind",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Today's attendance"
+    ],
+    "errors": [],
+    "missing": [
+      "/api/attendance/reminders"
+    ]
+  },
+  {
+    "id": "attendance-today",
+    "client": "app",
+    "route": "/erp/attendance/today/",
+    "file": "attendance-today-app.png",
+    "url": "http://127.0.0.1:3310/erp/attendance/today",
+    "text": "Today's Attendance\n\nSunday, 15 November · 3 / 6 sections marked\n\nPresent today\n12 / 24 students marked\n75%\nPresent\n9\nAbsent\n3\nLeave\n0\nNot marked\n12\nPending 3\nMarked 3\nAbsent 2\nRemind all (3)\n6th - B\n4 students · Rakesh Mehta\nRemind\n7th - B\n4 students · Manish Singh\nRemind\n8th - B\n4 students · Sanjay Soni\nRemind\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Today's Attendance"
+    ],
+    "errors": [],
+    "missing": [
+      "/api/attendance/reminders"
+    ]
+  },
+  {
+    "id": "payment-qr",
+    "client": "web",
+    "route": "/fees/online",
+    "file": "payment-qr-web.png",
+    "url": "http://127.0.0.1:3010/fees/online",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nFees\nOnline payments\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nOnline payments\n\nUPI payments parents reported in the parent app. Find the UTR in the bank statement, then verify.\n\nPayment QR & contact\nParents can’t pay online yet: the school’s payment QR is not uploaded. Upload it now\nTo check (3)\nVerified\nRejected\nPayment claims to verify\n3 records\nStudent\tUTR\tPaid on\tAmount\t\n\n\nAarav Sharma\n\n6th - A · SR-1200 ·\n\nREVIEW-2026-000\n\nsent 13 Nov, 3:30 pm\n\n13 Nov 2026\n\n₹5,000\n\nReject\nVerify\n\nPrisha Joshi\n\n7th - B · SR-1201 ·\n\nREVIEW-2026-001\n\nsent 13 Nov, 3:30 pm\n\n13 Nov 2026\n\n₹5,500\n\nReject\nVerify\n\nAnanya Rathore\n\n8th - A · SR-1202 ·\n\nREVIEW-2026-002\n\nsent 13 Nov, 3:30 pm\n\n13 Nov 2026\n\n₹6,000\n\nReject\nVerify",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Online payments",
+      "Payment claims to verify"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "payment-qr",
+    "client": "app",
+    "route": "/erp/fees/online/",
+    "file": "payment-qr-app.png",
+    "url": "http://127.0.0.1:3310/erp/fees/online",
+    "text": "Online Payments\nPayment QR & contact\n\nParents can't pay online yet: the school's payment QR is not uploaded. Upload it now\n\nTo check 3\nVerified\nRejected\n\nAarav Sharma\n\n6th - A · SR-1200 ·\n\n₹5,000\n\nUTR\nREVIEW-2026-000\nPaid on\n13 Nov 2026\n\nsent 13 Nov, 3:30 pm · Quarter 3 payment\n\nReject\nVerify\n\nPrisha Joshi\n\n7th - B · SR-1201 ·\n\n₹5,500\n\nUTR\nREVIEW-2026-001\nPaid on\n13 Nov 2026\n\nsent 13 Nov, 3:30 pm · Quarter 3 payment\n\nReject\nVerify\n\nAnanya Rathore\n\n8th - A · SR-1202 ·\n\n₹6,000\n\nUTR\nREVIEW-2026-002\nPaid on\n13 Nov 2026\n\nsent 13 Nov, 3:30 pm · Quarter 3 payment\n\nReject\nVerify\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "headings": [
+      "Online Payments"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "receipts",
+    "client": "web",
+    "route": "/fees/receipts",
+    "file": "receipts-web.png",
+    "url": "http://127.0.0.1:3010/fees/receipts",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nFees\nReceipts\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nReceipts\n\nEvery receipt issued, by number. A cancelled receipt stays in the register, marked cancelled.\n\nExport\nToday\nThis week\nThis month\nThis session\nCustom\n1 Nov 2026 – 15 Nov 2026\nCollected\n₹34,000\nHow parents paid\nCash\n₹16,000\n47%\nUPI\n₹18,000\n53%\nCheque\n₹0\n0%\nCancelled\n0\nAll modes\nCash\nUPI\nCheque\nOther\nShow cancelled\nReceipt\tStudent\tMode\tAmount\tReceived by\t\nActions\n\n\n1024\n14 Nov 2026 · 11:30 am\n\t\nAarav Sharma\n6th - A · SR-1200\n\t\nCash\n\t\n₹2,500\n\tReview Operator\t\n\n\n1025\n13 Nov 2026 · 11:30 am\n\t\nPrisha Joshi\n7th - B · SR-1201\n\t\nUPI\nREVIEW-UTR-1\n\t\n₹3,000\n\tReview Operator\t\n\n\n1026\n12 Nov 2026 · 11:30 am\n\t\nAnanya Rathore\n8th - A · SR-1202\n\t\nCash\n\t\n₹3,500\n\tReview Operator\t\n\n\n1027\n11 Nov 2026 · 11:30 am\n\t\nVihaan Singh\n6th - B · SR-1203\n\t\nUPI\nREVIEW-UTR-3\n\t\n₹4,000\n\tReview Operator\t\n\n\n1028\n14 Nov 2026 · 11:30 am\n\t\nIshita Mehta\n7th - A · SR-1204\n\t\nCash\n\t\n₹4,500\n\tReview Operator\t\n\n\n1029\n13 Nov 2026 · 11:30 am\n\t\nDev Choudhary\n8th - B · SR-1205\n\t\nUPI\nREVIEW-UTR-5\n\t\n₹5,000\n\tReview Operator\t\n\n\n1030\n12 Nov 2026 · 11:30 am\n\t\nAditi Soni\n6th - A · SR-1206\n\t\nCash\n\t\n₹5,500\n\tReview Operator\t\n\n\n1031\n11 Nov 2026 · 11:30 am\n\t\nKabir Jain\n7th - B · SR-1207\n\t\nUPI\nREVIEW-UTR-7\n\t\n₹6,000\n\tReview Operator\t\n8 of 8 shown\nTotal of these ₹34,000",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Receipts"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "receipts",
+    "client": "app",
+    "route": "/erp/fees/receipts/",
+    "file": "receipts-app.png",
+    "url": "http://127.0.0.1:3310/erp/fees/receipts",
+    "text": "Receipts\nExport spreadsheet\nToday\nThis week\nThis month\nThis session\nCustom\n\n1 Nov 2026 – 15 Nov 2026\n\nCollected\n\n₹34,000\n\n8 receipts\n\nCancelled\n\n0\n\n₹0 not counted\n\nCash\n₹16,000\n47%\nUPI\n₹18,000\n53%\nCheque\n₹0\n0%\nMode - All\nShow cancelled\nAarav Sharma\n1024 · 6th - A · Cash\n14 Nov 2026 · 11:30 am\n₹2,500\nPrisha Joshi\n1025 · 7th - B · UPI\n13 Nov 2026 · 11:30 am\n₹3,000\nAnanya Rathore\n1026 · 8th - A · Cash\n12 Nov 2026 · 11:30 am\n₹3,500\nVihaan Singh\n1027 · 6th - B · UPI\n11 Nov 2026 · 11:30 am\n₹4,000\nIshita Mehta\n1028 · 7th - A · Cash\n14 Nov 2026 · 11:30 am\n₹4,500\nDev Choudhary\n1029 · 8th - B · UPI\n13 Nov 2026 · 11:30 am\n₹5,000\nAditi Soni\n1030 · 6th - A · Cash\n12 Nov 2026 · 11:30 am\n₹5,500\nKabir Jain\n1031 · 7th - B · UPI\n11 Nov 2026 · 11:30 am\n₹6,000\n8 / 8\nTotal of these ₹34,000\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "headings": [
+      "Receipts"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "marks-sheet",
+    "client": "web",
+    "route": "/exams/marks/sheet?exam=exam-review&section=6th%20-%20A&subject=Maths",
+    "file": "marks-sheet-web.png",
+    "url": "http://127.0.0.1:3010/exams/marks/sheet?exam=exam-review&section=6th%20-%20A&subject=Maths",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nSchoolDesk\nSheet\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nBack\nMarks register\n\nMaths · 6th - A\n\nTerm I examination · out of 100\n\nNext on the keyboard moves down · type a for absent\n\nDownload Excel\nFill from Excel\n1\nAarav Sharma\nC2\nAB\nWritten /80\nInternal /20\n= 50\n2\nPrisha Joshi\nC2\nAB\nWritten /80\nInternal /20\n= 50\n3\nAnanya Rathore\nC2\nAB\nWritten /80\nInternal /20\n= 50\n4\nVihaan Singh\nC2\nAB\nWritten /80\nInternal /20\n= 50\n\n4 / 4 entered\n\nSaved",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Marks register"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "marks-sheet",
+    "client": "app",
+    "route": "/erp/exams/marks/sheet/?exam=exam-review&section=6th%20-%20A&subject=Maths",
+    "file": "marks-sheet-app.png",
+    "url": "http://127.0.0.1:3310/erp/exams/marks/sheet?exam=exam-review&section=6th%20-%20A&subject=Maths",
+    "text": "Marks\n\nMaths · 6th - A\n\nTerm I examination · out of 100\n\nNext on the keyboard moves down · type a for absent\n\nDownload Excel\nFill from Excel\n1\nAarav Sharma\nC2\nAB\nWritten /80\nInternal /20\n= 50\n2\nPrisha Joshi\nC2\nAB\nWritten /80\nInternal /20\n= 50\n3\nAnanya Rathore\nC2\nAB\nWritten /80\nInternal /20\n= 50\n4\nVihaan Singh\nC2\nAB\nWritten /80\nInternal /20\n= 50\nHome\nStudents\nReport\nAttendance\nProfile\n\n4 / 4 entered\n\nSaved",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Marks"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "admission",
+    "client": "web",
+    "route": "/students/admission",
+    "file": "admission-web.png",
+    "url": "http://127.0.0.1:3010/students/admission",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nAll students\nAdmission enquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nExcel import / export\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nAll students\nAdmission\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nBack\nNew admission\n1\nStudent\n2\nClass\n3\nLast school\n4\nFamily\n5\nAddress & bus\n6\nDocuments\n7\nCheck & save\nStudent\nStep 1 of 7\n\nWrite everything as on the birth certificate.\n\nPassport photo\n\nClear face, plain background. It shows on the ID card, report card and the parent app.\n\nTake or choose photo\nName and birth\nFull name (English) *\nName in Hindi\nfor TC & certificates\n\nGender *\n\nBoy\nGirl\nOther\nDate of birth *\nAge on 1 April\nPlace of birth\nIdentity\nAadhaar number\nReligion - Hindu\nCaste\n\nCategory *\n\nGeneral\nOBC\nMBC\nSC\nST\nEWS\nNationality\nMother tongue - Hindi\nHealth\n\nBlood group\n\nA+\nA-\nB+\nB-\nO+\nO-\nAB+\nAB-\nHealth details (allergy, illness, special needs)\nNext: Class",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "New admission",
+      "Student"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "admission",
+    "client": "app",
+    "route": "/erp/students/admission/",
+    "file": "admission-app.png",
+    "url": "http://127.0.0.1:3310/erp/students/admission",
+    "text": "Admission form\n1\nStudent\n2\nClass\n3\nLast school\n4\nFamily\n5\nAddress & bus\n6\nDocuments\n7\nCheck & save\nStudent\nStep 1 of 7\n\nWrite everything as on the birth certificate.\n\nPassport photo\n\nClear face, plain background. It shows on the ID card, report card and the parent app.\n\nTake or choose photo\nName and birth\nFull name (English) *\nName in Hindi\nfor TC & certificates\n\nGender *\n\nBoy\nGirl\nOther\nDate of birth *\nAge on 1 April\nPlace of birth\nIdentity\nAadhaar number\nReligion - Hindu\nCaste\n\nCategory *\n\nGeneral\nOBC\nMBC\nSC\nST\nEWS\nNationality\nMother tongue - Hindi\nHealth\n\nBlood group\n\nA+\nA-\nB+\nB-\nO+\nO-\nAB+\nAB-\nHealth details (allergy, illness, special needs)\nNext: Class\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "headings": [
+      "Admission form",
+      "Student"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "homework",
+    "client": "web",
+    "route": "/academics/homework",
+    "file": "homework-web.png",
+    "url": "http://127.0.0.1:3010/academics/homework",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nAcademics\nHomework\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nHomework register\n\nClass assignments, due dates and the work sent to families\n\nNew homework\n6th\n7th\n8th\nSection A\nSection B\nAll subjects\nEnglish\nHindi\nMaths\nScience\nYesterday\n1 assignment\nMathematics\nDue Mon, 16 Nov\n\nFractions: exercise 4.2\n\nComplete questions 1 to 8 in the class notebook.\n\nNeha Sharma\n\nFri, 13 Nov\n1 assignment\nEnglish\nDue Mon, 16 Nov\n\nReading comprehension\n\nRead chapter 6 and prepare a short summary.\n\nRakesh Mehta",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Homework register",
+      "Yesterday",
+      "Fri, 13 Nov"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "homework",
+    "client": "app",
+    "route": "/erp/homework/",
+    "file": "homework-app.png",
+    "url": "http://127.0.0.1:3310/erp/homework",
+    "text": "Homework\nClass - 6th\nSection - A\nAll subjects\nEnglish\nHindi\nMaths\nScience\nYesterday\n\nMathematics\n\nFractions: exercise 4.2\n\nComplete questions 1 to 8 in the class notebook.\n\nNeha Sharma\nDue 16 Nov\n13 Nov\n\nEnglish\n\nReading comprehension\n\nRead chapter 6 and prepare a short summary.\n\nRakesh Mehta\nDue 16 Nov\nNew homework\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Homework",
+      "Yesterday",
+      "13 Nov"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "payroll",
+    "client": "web",
+    "route": "/staff/payroll",
+    "file": "payroll-web.png",
+    "url": "http://127.0.0.1:3010/staff/payroll",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nDirectory\nAdd staff\nExcel import / export\nAllocation\nClass teachers\nStaff attendance\nStaff leave\nPayroll\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nStaff\nPayroll\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nPayroll\n\nMonthly salary preparation, payslips and payment records\n\nBank sheet\nRecalculate\nNovember 2026\n4 of 8 payslips prepared\nNet salary\n₹1,04,800\nPaid\n₹52,400\nTo pay\n₹52,400\nSalary not set\n2\nSalary register\n\nReview each payslip before recording payment\n\n8 employees\n\tStaff\tDays paid\tGross\tDeductions\tNet\tStatus\t\nActions\n\n\t\nNeha Sharma\nEMP-100 / Teacher\n\t30/30\t₹28,000\t₹1,800\t₹26,200\t\nPaid\tSalary\n\t\nRakesh Mehta\nEMP-101 / Teacher\n\t30/30\t₹28,000\t₹1,800\t₹26,200\t\nPaid\tSalary\n\t\nKamla Devi\nEMP-102 / Teacher\n\t30/30\t₹28,000\t₹1,800\t₹26,200\tNot paid\tSalary\n\t\nManish Singh\nEMP-103 / Teacher\n\t30/30\t₹28,000\t₹1,800\t₹26,200\tNot paid\tSalary\n\t\nPooja Verma\nEMP-104 / Teacher\n\tPayroll not calculated\tSalary\n\t\nSanjay Soni\nEMP-105 / Teacher\n\tPayroll not calculated\tSalary\n\t\nSunita Rao\nEMP-106 / Office Clerk\n\tSalary not set\tSet salary\n\t\nMohan Lal\nEMP-107 / Office Clerk\n\tSalary not set\tSet salary",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Payroll",
+      "Salary register"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "payroll",
+    "client": "app",
+    "route": "/erp/staff/payroll/",
+    "file": "payroll-app.png",
+    "url": "http://127.0.0.1:3310/erp/staff/payroll",
+    "text": "Payroll\nNovember 2026\nNet salary\n₹1,04,800\nPaid\n₹52,400\nTo pay\n₹52,400\nSalary not set\n2\nDownload bank sheet\nRecalculate\nPay many\nNS\nNeha Sharma\nTeacher · 30/30 days\n₹26,200\nPaid\nRM\nRakesh Mehta\nTeacher · 30/30 days\n₹26,200\nPaid\nKD\nKamla Devi\nTeacher · 30/30 days\n₹26,200\nNot paid\nMS\nManish Singh\nTeacher · 30/30 days\n₹26,200\nNot paid\nPV\nPooja Verma\nTeacher\nNot run\nSS\nSanjay Soni\nTeacher\nNot run\nSR\nSunita Rao\nOffice Clerk\nSet salary\nML\nMohan Lal\nOffice Clerk\nSet salary\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "headings": [
+      "Payroll"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "planned-library",
+    "client": "web",
+    "route": "/planned?m=library",
+    "file": "planned-library-web.png",
+    "url": "http://127.0.0.1:3010/planned?m=library",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nSchoolDesk\nPlanned\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nLibrary\n\nNot available yet\n\nThis module is planned on both ERP web and ERP app. It is not available for school work yet.\n\nBook list and who has which book.\nIssue and return, due dates and late fines.",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Library"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "planned-library",
+    "client": "app",
+    "route": "/erp/soon/?m=library",
+    "file": "planned-library-app.png",
+    "url": "http://127.0.0.1:3310/erp/soon?m=library",
+    "text": "Coming soon\nLibrary\n\nComing soon\n\nWhat it will do\nBook list and who has which book.\nIssue and return, due dates and late fines.\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Coming soon",
+      "Library"
+    ],
+    "errors": [],
+    "missing": []
+  }
+]

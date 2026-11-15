@@ -1,0 +1,176 @@
+{
+  "source": "Staff ERP workflows",
+  "routes": [
+    {
+      "mobile": "/erp/attendance/today",
+      "web": "/attendance/today"
+    },
+    {
+      "mobile": "/erp/calendar",
+      "web": "/calendar"
+    },
+    {
+      "mobile": "/erp/birthdays",
+      "web": "/birthdays"
+    },
+    {
+      "mobile": "/erp/syllabus",
+      "web": "/academics/syllabus"
+    },
+    {
+      "mobile": "/erp/syllabus/plan",
+      "web": "/academics/syllabus/plan"
+    },
+    {
+      "mobile": "/erp/syllabus/excel",
+      "web": "/academics/syllabus/excel"
+    },
+    {
+      "mobile": "/erp/copy-check",
+      "web": "/academics/copy-check"
+    },
+    {
+      "mobile": "/erp/copy-check/sheet",
+      "web": "/academics/copy-check/sheet"
+    },
+    {
+      "mobile": "/erp/staff/allocation",
+      "web": "/staff/allocation"
+    },
+    {
+      "mobile": "/erp/staff/class-teachers",
+      "web": "/staff/class-teachers"
+    },
+    {
+      "mobile": "/erp/staff/excel",
+      "web": "/staff/excel"
+    },
+    {
+      "mobile": "/erp/students/excel",
+      "web": "/students/excel"
+    },
+    {
+      "mobile": "/erp/settings/templates",
+      "web": "/settings/templates"
+    },
+    {
+      "mobile": "/erp/students/detail",
+      "web": "/students/detail"
+    },
+    {
+      "mobile": "/erp/students/admission",
+      "web": "/students/admission"
+    },
+    {
+      "mobile": "/erp/students/enquiries/new",
+      "web": "/students/enquiries/new"
+    },
+    {
+      "mobile": "/erp/students/enquiries/detail",
+      "web": "/students/enquiries/detail"
+    },
+    {
+      "mobile": "/erp/students/certificates/issue",
+      "web": "/students/certificates/issue"
+    },
+    {
+      "mobile": "/erp/staff/detail",
+      "web": "/staff/detail"
+    },
+    {
+      "mobile": "/erp/staff/new",
+      "web": "/staff/new"
+    },
+    {
+      "mobile": "/erp/messages/new",
+      "web": "/messages/new"
+    },
+    {
+      "mobile": "/erp/messages/detail",
+      "web": "/messages/detail"
+    },
+    {
+      "mobile": "/erp/meetings/new",
+      "web": "/meetings/new"
+    },
+    {
+      "mobile": "/erp/parent-chats/chat",
+      "web": "/parent-chats/chat"
+    },
+    {
+      "mobile": "/erp/exams/setup/edit",
+      "web": "/exams/setup/edit"
+    },
+    {
+      "mobile": "/erp/exams/marks/sheet",
+      "web": "/exams/marks/sheet"
+    },
+    {
+      "mobile": "/erp/transport/route",
+      "web": "/transport/route"
+    },
+    {
+      "mobile": "/erp/transport/students",
+      "web": "/transport/students"
+    }
+  ],
+  "generatedFiles": [
+    "components/parity/generated/components/erp/ExcelRoundTrip.tsx",
+    "components/parity/generated/components/erp/GatePassSheet.tsx",
+    "components/parity/generated/components/erp/PhotoCropper.tsx",
+    "components/parity/generated/components/erp/SetupNeeded.tsx",
+    "components/parity/generated/components/erp/certs/CertificateDocument.tsx",
+    "components/parity/generated/components/erp/certs/SheetPreview.tsx",
+    "components/parity/generated/components/erp/transport/DriverList.tsx",
+    "components/parity/generated/components/ui.tsx",
+    "components/parity/generated/lib/actionPalette.tsx",
+    "components/parity/generated/lib/csv.ts",
+    "components/parity/generated/lib/erpAppearance.tsx",
+    "components/parity/generated/lib/erpAttendance.ts",
+    "components/parity/generated/lib/erpCerts.ts",
+    "components/parity/generated/lib/erpDocs.ts",
+    "components/parity/generated/lib/erpEnquiry.ts",
+    "components/parity/generated/lib/erpExamSetup.ts",
+    "components/parity/generated/lib/erpExams.ts",
+    "components/parity/generated/lib/erpFeeEngine.ts",
+    "components/parity/generated/lib/erpGrading.ts",
+    "components/parity/generated/lib/erpMessages.ts",
+    "components/parity/generated/lib/erpStaff.ts",
+    "components/parity/generated/lib/erpStudents.ts",
+    "components/parity/generated/lib/erpTransport.ts",
+    "components/parity/generated/lib/erpWords.ts",
+    "components/parity/generated/lib/format.ts",
+    "components/parity/generated/lib/i18n.tsx",
+    "components/parity/generated/lib/marksWorkbook.ts",
+    "components/parity/generated/lib/spreadsheet.ts",
+    "components/parity/generated/lib/useDialog.ts",
+    "components/parity/generated/pages/attendance/today.tsx",
+    "components/parity/generated/pages/birthdays.tsx",
+    "components/parity/generated/pages/calendar.tsx",
+    "components/parity/generated/pages/copy-check.tsx",
+    "components/parity/generated/pages/copy-check/sheet.tsx",
+    "components/parity/generated/pages/exams/marks/sheet.tsx",
+    "components/parity/generated/pages/exams/setup/edit.tsx",
+    "components/parity/generated/pages/meetings/new.tsx",
+    "components/parity/generated/pages/messages/detail.tsx",
+    "components/parity/generated/pages/messages/new.tsx",
+    "components/parity/generated/pages/parent-chats/chat.tsx",
+    "components/parity/generated/pages/settings/templates.tsx",
+    "components/parity/generated/pages/staff/allocation.tsx",
+    "components/parity/generated/pages/staff/class-teachers.tsx",
+    "components/parity/generated/pages/staff/detail.tsx",
+    "components/parity/generated/pages/staff/excel.tsx",
+    "components/parity/generated/pages/staff/new.tsx",
+    "components/parity/generated/pages/students/admission.tsx",
+    "components/parity/generated/pages/students/certificates/issue.tsx",
+    "components/parity/generated/pages/students/detail.tsx",
+    "components/parity/generated/pages/students/enquiries/detail.tsx",
+    "components/parity/generated/pages/students/enquiries/new.tsx",
+    "components/parity/generated/pages/students/excel.tsx",
+    "components/parity/generated/pages/syllabus.tsx",
+    "components/parity/generated/pages/syllabus/excel.tsx",
+    "components/parity/generated/pages/syllabus/plan.tsx",
+    "components/parity/generated/pages/transport/route.tsx",
+    "components/parity/generated/pages/transport/students.tsx"
+  ]
+}

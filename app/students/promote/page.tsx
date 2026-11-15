@@ -178,7 +178,7 @@ function PromoteTab({ students, structure, onDone }: { students: Student[]; stru
             </div>
           ) : (
             <label className="min-w-[180px] flex-1">
-              <span className="field-label">To (session 2027-28)</span>
+              <span className="field-label">To class / section</span>
               <select value={toSec} onChange={(e) => setToSec(e.target.value)} disabled={!from} className="field w-full">
                 {!from && <option value="">—</option>}
                 {toSections.map((s) => (

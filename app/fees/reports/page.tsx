@@ -1,4 +1,5 @@
 "use client";
+import { useErpSession } from "@/lib/useErpSession";
 
 import React, { useEffect, useRef, useState } from "react";
 import * as XLSX from "xlsx";
@@ -9,7 +10,6 @@ import { ByCollector, ClassWise, DayBook, HeadWise, inr, lakh, pct, pctText } fr
 type Tab = "daybook" | "heads" | "collectors" | "classes";
 type Preset = "today" | "week" | "month" | "session" | "custom";
 
-const SESSION = { name: "2026-2027", short: "2026-27", start: "2026-04-01", end: "2027-03-31" };
 const MAX_DAYS = 400;
 
 const todayIST = () => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata" }).format(new Date());
@@ -22,7 +22,7 @@ const daysBetween = (a: string, b: string) => Math.round((Date.parse(b + "T00:00
 const long = (iso: string) => new Date(iso + "T00:00:00").toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
 const short = (iso: string) => new Date(iso + "T00:00:00").toLocaleDateString("en-IN", { day: "numeric", month: "short" });
 
-function rangeFor(p: Exclude<Preset, "custom">): { from: string; to: string } {
+function rangeFor(p: Exclude<Preset, "custom">, session?: {start:string;end:string} | null): { from: string; to: string } {
   const today = todayIST();
   if (p === "today") return { from: today, to: today };
   if (p === "week") {
@@ -30,7 +30,7 @@ function rangeFor(p: Exclude<Preset, "custom">): { from: string; to: string } {
     return { from: addDays(today, -((dow + 6) % 7)), to: today }; // from Monday
   }
   if (p === "month") return { from: today.slice(0, 8) + "01", to: today };
-  return { from: SESSION.start, to: today < SESSION.end ? today : SESSION.end };
+  return { from: session?.start || "", to: session ? (today < session.end ? today : session.end) : "" };
 }
 
 function rangeLabel(from: string, to: string) {
@@ -54,6 +54,7 @@ const TABS: [Tab, string][] = [
 ];
 
 export default function FeeReportsPage() {
+  const { session, error: sessionError } = useErpSession();
   const [preset, setPreset] = useState<Preset>("month");
   const [range, setRange] = useState(() => rangeFor("month"));
   const [draft, setDraft] = useState(range);
@@ -103,7 +104,8 @@ export default function FeeReportsPage() {
   const pickPreset = (p: Preset) => {
     setPreset(p);
     if (p === "custom") return setDraft(range);
-    setRange(rangeFor(p));
+    if (p === "session" && !session) return;
+    setRange(rangeFor(p, session));
   };
 
   const draftProblem = !draft.from || !draft.to ? "Pick both dates." : draft.from > draft.to ? "The start date is after the end date." : daysBetween(draft.from, draft.to) > MAX_DAYS ? `Pick ${MAX_DAYS} days or less.` : null;
@@ -140,9 +142,9 @@ export default function FeeReportsPage() {
       });
       const byClass = classes.classes.map((c) => row(c.class, "All", c)).concat([row("All classes", "", classes.totals)]);
       const bySection = classes.classes.reduce((a, c) => a.concat(c.sections.map((s) => row(c.class, s.section, s))), [] as ReturnType<typeof row>[]);
-      XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(byClass), `Class-wise ${SESSION.short}`);
-      XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(bySection), `Sections ${SESSION.short}`);
-      return XLSX.writeFile(wb, `Fee_classwise_${SESSION.short}_as_on_${todayIST()}.xlsx`);
+      XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(byClass), `Class-wise ${classes.session}`);
+      XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(bySection), `Sections ${session?.label || "current"}`);
+      return XLSX.writeFile(wb, `Fee_classwise_${session?.label || "current"}_as_on_${todayIST()}.xlsx`);
     }
     if (!report) return;
     const t = report.totals;
@@ -177,6 +179,7 @@ export default function FeeReportsPage() {
 
   return (
     <div className="workspace-page space-y-5 pb-24">
+      {sessionError && <p role="alert" className="text-sm text-rose-700">{sessionError} Session-wide dates are unavailable.</p>}
       <header className="page-header">
         <div>
           <h1 className="page-title">Fee reports</h1>
@@ -205,7 +208,7 @@ export default function FeeReportsPage() {
               type="button"
               role="radio"
               aria-checked={preset === k}
-              onClick={() => pickPreset(k)}
+              disabled={k === "session" && !session} onClick={() => pickPreset(k)}
               className={`shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-[13px] font-semibold sm:py-1.5 ${preset === k ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}
             >
               {l}
@@ -248,7 +251,7 @@ export default function FeeReportsPage() {
           {tab === "classes" ? (
             <div className="ml-auto flex items-center gap-3 text-[13px] text-slate-500">
               <span>
-                Session {SESSION.short}
+                Session {session?.label || "current"}
                 <span className="hidden lg:inline"> · active students</span>
                 {classes && classes.totals.discount === 0 ? " · no concessions" : ""} · dates above don’t apply
               </span>

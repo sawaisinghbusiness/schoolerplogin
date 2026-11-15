@@ -1,5 +1,4 @@
-import { ComingSoon } from "@/components/ui/ComingSoon";
-
-export default function Page() {
-  return <ComingSoon route="/reports" />;
-}
+import Link from 'next/link';
+import{ArrowRight}from 'lucide-react';
+import catalog from '@/lib/erp-system.json';
+export default function Reports(){const ids=['fees/reports','attendance/register','exams/report-cards','staff/payroll','syllabus'];const reports=catalog.features.filter(f=>ids.includes(f.id));return <div className="space-y-5"><header className="page-header"><div><h1 className="page-title">All reports</h1><p className="page-subtitle">The same school reports are available on ERP web and ERP app.</p></div></header><section className="workspace-section divide-y divide-slate-100">{reports.map(f=><Link key={f.id} href={f.web} className="flex items-center justify-between gap-4 px-5 py-4 hover:bg-slate-50"><span><span className="block text-sm font-semibold">{f.title.en}</span><span className="mt-1 block text-xs text-slate-500">{f.module.en}</span></span><ArrowRight className="h-4 w-4 text-brand-700"/></Link>)}</section></div>;}

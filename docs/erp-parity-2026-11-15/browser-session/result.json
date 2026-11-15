@@ -1,0 +1,11 @@
+{
+  "synthetic": true,
+  "routes": 2,
+  "overflow": [],
+  "errors": [],
+  "missing": [],
+  "interactions": [
+    "Both calendars and event forms use the server-provided2027-28 session, including date bounds."
+  ],
+  "writes": []
+}

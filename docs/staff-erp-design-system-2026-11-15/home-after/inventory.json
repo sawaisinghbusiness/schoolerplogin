@@ -1,0 +1,34 @@
+[
+  {
+    "id": "current",
+    "client": "app",
+    "route": "/",
+    "file": "current-app.png",
+    "url": "http://127.0.0.1:3310/",
+    "text": "Good afternoon\nReview\nRO\nSearch a student by name or SR no.\nReport\nStudents\nFees\nAttendance\nEnquiries\nExams\nHomework\nTransport\nToday at school\nClass attendance\n3 of 6 classes not marked\n3\nAbsent today\nNo one so far\nFees collected today\n3 receipts\n₹9,500\nEnquiry follow-ups\nNone due\nBirthdays today\nNone today\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "headings": [
+      "Good afternoon\nReview",
+      "Today at school"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "current-360",
+    "client": "app",
+    "route": "/",
+    "file": "current-360-app.png",
+    "url": "http://127.0.0.1:3310/",
+    "text": "Good afternoon\nReview\nRO\nSearch a student by name or SR no.\nReport\nStudents\nFees\nAttendance\nEnquiries\nExams\nHomework\nTransport\nToday at school\nClass attendance\n3 of 6 classes not marked\n3\nAbsent today\nNo one so far\nFees collected today\n3 receipts\n₹9,500\nEnquiry follow-ups\nNone due\nBirthdays today\nNone today\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 345,
+    "headings": [
+      "Good afternoon\nReview",
+      "Today at school"
+    ],
+    "errors": [],
+    "missing": []
+  }
+]

@@ -1,5 +1,7 @@
 "use client";
 
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
+
 import React, { useEffect, useMemo, useState } from "react";
 import { AlertTriangle, CalendarPlus, Loader2, RotateCcw, Save, Trash2 } from "lucide-react";
 import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
@@ -22,6 +24,8 @@ const SUGGESTED = [
 
 export default function SettingsPage() {
   const [tab, setTab] = useState<Tab>("school");
+  const { roleKey } = useCurrentUser();
+  const isAdmin = roleKey === "admin";
   return (
     <div className="space-y-5 pb-28">
       <header className="page-header">
@@ -42,14 +46,14 @@ export default function SettingsPage() {
           </button>
         ))}
       </div>
-      {tab === "school" ? <SchoolTab /> : <SessionTab />}
+      {tab === "school" ? <SchoolTab isAdmin={isAdmin} /> : <SessionTab isAdmin={isAdmin} />}
     </div>
   );
 }
 
 /* ───────────────────────── School ───────────────────────── */
 
-function SchoolTab() {
+function SchoolTab({ isAdmin }: { isAdmin: boolean }) {
   const { schoolProfile, updateProfile, refreshProfile, isLoading } = useSchoolProfile();
   const [form, setForm] = useState<SchoolProfile>(schoolProfile);
   const [saving, setSaving] = useState(false);
@@ -65,6 +69,7 @@ function SchoolTab() {
   const set = (k: keyof SchoolProfile, v: string) => setForm((f) => ({ ...f, [k]: v }));
 
   const save = async () => {
+    if (!isAdmin) return;
     if (!form.school_name.trim()) return setError("Enter the school's name.");
     setSaving(true);
     setError(null);
@@ -81,11 +86,11 @@ function SchoolTab() {
   return (
     <div className="grid items-start gap-5 xl:grid-cols-[minmax(0,1fr)_320px]">
       <div className="workspace-toolbar sticky top-0 z-10 xl:col-span-2">
-        <div className="w-full min-w-0 sm:w-auto sm:flex-1"><h2 className="text-sm font-semibold text-slate-900">School profile</h2><p className="mt-1 text-xs text-slate-500">{dirty ? "Changes have not been saved" : "Details used across the school system"}</p></div>
-        <button type="button" onClick={() => setForm(schoolProfile)} disabled={!dirty || saving} className="btn btn-secondary"><RotateCcw className="h-4 w-4" />Undo</button>
-        <button type="button" onClick={save} disabled={!dirty || saving} className="btn btn-primary">{saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}Save changes</button>
+        <div className="w-full min-w-0 sm:w-auto sm:flex-1"><h2 className="text-sm font-semibold text-slate-900">School profile</h2><p className="mt-1 text-xs text-slate-500">{!isAdmin ? "View only. An administrator can update school details." : dirty ? "Changes have not been saved" : "Details used across the school system"}</p></div>
+        <button type="button" onClick={() => setForm(schoolProfile)} disabled={!isAdmin || !dirty || saving} className="btn btn-secondary"><RotateCcw className="h-4 w-4" />Undo</button>
+        <button type="button" onClick={save} disabled={!isAdmin || !dirty || saving} className="btn btn-primary">{saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}Save changes</button>
       </div>
-      <div className="card overflow-hidden">
+      <fieldset disabled={!isAdmin || saving} className="card min-w-0 overflow-hidden">
         {setupNeeded && (
           <div className="alert alert-amber">
             <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
@@ -131,7 +136,7 @@ function SchoolTab() {
           <In label="E-mail" value={form.email} onChange={(v) => set("email", v.trim())} />
           <In label="Website" value={form.website} onChange={(v) => set("website", v.trim())} />
         </Card>
-      </div>
+      </fieldset>
 
       {/* How it prints */}
       <aside className="space-y-3 xl:sticky xl:top-4">
@@ -321,7 +326,7 @@ function In({ label, value, onChange, hint, required, wide, mono }: { label: str
 
 /* ───────────────────────── Session & holidays ───────────────────────── */
 
-function SessionTab() {
+function SessionTab({ isAdmin }: { isAdmin: boolean }) {
   const [data, setData] = useState<Awaited<ReturnType<typeof schoolProfileService.session>> | null>(null);
   const [title, setTitle] = useState("");
   const [from, setFrom] = useState("");
@@ -334,6 +339,7 @@ function SessionTab() {
   }, []);
 
   const add = async (t: string, a: string, b: string) => {
+    if (!isAdmin) return;
     if (!t.trim() || !a) return toast("Name the holiday and pick its date.", "error");
     setBusy("add");
     const r = await schoolProfileService.addHoliday(t.trim(), a, b || a);
@@ -346,6 +352,7 @@ function SessionTab() {
     load();
   };
   const remove = async (h: Holiday) => {
+    if (!isAdmin) return;
     setBusy(h.id);
     const r = await schoolProfileService.removeHoliday(h.id);
     setBusy(null);
@@ -354,7 +361,7 @@ function SessionTab() {
   };
 
   if (!data) return <div className="skeleton h-72 w-full" />;
-  if (data.error) return <div role="alert" className="card p-6"><h2 className="text-sm font-semibold text-slate-900">Academic session unavailable</h2><p className="mt-2 text-sm text-slate-600">{data.error}</p><button type="button" onClick={load} className="btn btn-secondary btn-sm mt-4">Try again</button></div>;
+  if (data.error || !data.session) return <div role="alert" className="card p-6"><h2 className="text-sm font-semibold text-slate-900">Academic session unavailable</h2><p className="mt-2 text-sm text-slate-600">{data.error}</p><button type="button" onClick={load} className="btn btn-secondary btn-sm mt-4">Try again</button></div>;
   const s = data.session;
   const today = todayIso();
   const total = daysBetween(s.start, s.end);
@@ -397,7 +404,7 @@ function SessionTab() {
             <span className="mb-1 block text-xs font-semibold text-slate-600">To (optional)</span>
             <input type="date" value={to} min={from || s.start} max={s.end} onChange={(e) => setTo(e.target.value)} className="field field-sm" />
           </label>
-          <button type="button" onClick={() => add(title, from, to)} disabled={busy === "add"} className="btn btn-primary btn-sm h-9">
+          <button type="button" onClick={() => add(title, from, to)} disabled={!isAdmin || busy === "add"} className="btn btn-primary btn-sm h-9">
             {busy === "add" ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <CalendarPlus className="h-3.5 w-3.5" />}
             Add
           </button>
@@ -406,7 +413,7 @@ function SessionTab() {
           <div className="flex flex-wrap items-center gap-2 border-b border-slate-100 px-5 py-2.5 text-[13px] text-slate-500">
             Add quickly:
             {suggestions.map((x) => (
-              <button key={x.date} type="button" onClick={() => add(x.title, x.date, x.date)} className="btn btn-secondary btn-sm">
+              <button key={x.date} type="button" disabled={!isAdmin} onClick={() => add(x.title, x.date, x.date)} className="btn btn-secondary btn-sm">
                 {x.title} · {short(x.date)}
               </button>
             ))}
@@ -432,7 +439,7 @@ function SessionTab() {
                       {n === 1 ? day(h.start_date) : `${day(h.start_date)} – ${day(h.end_date)} · ${n} days`}
                     </span>
                   </span>
-                  <button type="button" onClick={() => remove(h)} disabled={busy === h.id} className="rounded-lg p-2 text-slate-400 hover:bg-rose-50 hover:text-rose-600" aria-label={`Remove ${h.title}`}>
+                  <button type="button" onClick={() => remove(h)} disabled={!isAdmin || busy === h.id} className="rounded-lg p-2 text-slate-400 hover:bg-rose-50 hover:text-rose-600" aria-label={`Remove ${h.title}`}>
                     {busy === h.id ? <Loader2 className="h-4 w-4 animate-spin" /> : <Trash2 className="h-4 w-4" />}
                   </button>
                 </li>

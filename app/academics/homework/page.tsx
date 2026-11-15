@@ -4,6 +4,8 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { NotebookPen, Pencil, Plus, RefreshCw, Trash2 } from "lucide-react";
 import { toast } from "@/components/ui/Toaster";
 import { ConfirmModal } from "@/components/settings/classes/shared";
+import { HomeworkFileLinks } from "@/components/homework/HomeworkFiles";
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
 import { HomeworkDrawer } from "@/components/homework/HomeworkDrawer";
 import { HwClass, Homework, PostOption, homeworkService } from "@/lib/services/homeworkService";
 
@@ -31,7 +33,7 @@ export default function HomeworkPage() {
   const [deleting, setDeleting] = useState<Homework | null>(null);
   const [delBusy, setDelBusy] = useState(false);
   const [open, setOpen] = useState<Set<string>>(new Set());
-  const [role, setRole] = useState("");
+  const { roleKey: role } = useCurrentUser();
 
   const loadOptions = useCallback(async () => {
     setOptionsError(null);
@@ -48,11 +50,6 @@ export default function HomeworkPage() {
   }, []);
 
   useEffect(() => {
-    try {
-      setRole(localStorage.getItem("schooldesk_user_role") || "");
-    } catch {
-      /* display only */
-    }
     loadOptions();
   }, [loadOptions]);
 
@@ -197,6 +194,7 @@ export default function HomeworkPage() {
                               {expanded ? "Show less" : "Read more"}
                             </button>
                           )}
+                          <HomeworkFileLinks files={h.files} />
                           {h.by && <p className="mt-1.5 text-xs text-slate-500">{h.by}</p>}
                         </div>
                         {h.canEdit && (

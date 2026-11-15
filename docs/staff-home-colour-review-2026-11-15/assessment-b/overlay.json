@@ -1,0 +1,8 @@
+{
+  "injected": true,
+  "logs": [
+    "%c[impeccable] 1 anti-pattern found color: oklch(84% 0.19 80.46); font-weight: bold",
+    "%cflat-type-hierarchy%c Role sizes: body 16px, h1 16px, h2 18px (largest adjacent step 1.13:1; target 1.25:1) color: oklch(84% 0.19 80.46); font-weight: bold color: inherit body",
+    "console.groupEnd"
+  ]
+}

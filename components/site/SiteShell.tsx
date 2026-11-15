@@ -75,14 +75,25 @@ export function SiteShell({ site, signedIn, banner, theme, children }: { site: P
 
         {site.events.length > 0 && (
           <div className="relative z-20 text-white" style={{ background: INK }}>
-            <div className="mx-auto flex max-w-7xl items-center gap-5 overflow-x-auto px-5 py-2 text-[13px] sm:px-8">
+            <div className="mx-auto flex max-w-7xl items-center gap-4 px-5 py-2 text-[13px] sm:px-8">
               <span className="shrink-0 font-semibold" style={{ color: MARIGOLD }}>Notice</span>
-              {site.events.slice(0, 3).map((e) => (
-                <span key={e.title + e.start} className="shrink-0 whitespace-nowrap text-white/90">
-                  <span className="font-semibold">{e.start === e.end ? dayLabel(e.start, false) : `${dayLabel(e.start, false)} – ${dayLabel(e.end, false)}`}</span> · {e.title}
-                  {e.holiday && <span className="text-white/60"> (school closed)</span>}
-                </span>
-              ))}
+              {/* Runs right to left without end (two copies of the list); stops while pointed at or focused, and
+                  stands still for people who ask for less motion. */}
+              <div className="notice-marquee min-w-0 flex-1">
+                <div className="notice-track" style={{ "--notice-secs": `${Math.max(18, site.events.slice(0, 6).length * 9)}s` } as React.CSSProperties}>
+                  {[0, 1].map((copy) => (
+                    <div key={copy} className="notice-set" aria-hidden={copy === 1 || undefined}>
+                      {site.events.slice(0, 6).map((e) => (
+                        <span key={e.title + e.start} className="shrink-0 whitespace-nowrap text-white/90">
+                          <span className="font-semibold">{e.start === e.end ? dayLabel(e.start, false) : `${dayLabel(e.start, false)} – ${dayLabel(e.end, false)}`}</span> · {e.title}
+                          {e.holiday && <span className="text-white/60"> (school closed)</span>}
+                          <span aria-hidden className="ml-8" style={{ color: MARIGOLD }}>•</span>
+                        </span>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         )}

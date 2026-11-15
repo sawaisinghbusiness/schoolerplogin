@@ -1,5 +1,6 @@
 "use client";
 
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { AlertTriangle, ClipboardCheck, Lock, LockOpen, Pencil, Plus, RefreshCw, Send, Trash2 } from "lucide-react";
@@ -32,14 +33,6 @@ function scopeNote(e: Exam): string {
     .join(" · ");
 }
 
-function role(): string {
-  try {
-    return localStorage.getItem("schooldesk_user_role") || "";
-  } catch {
-    return "";
-  }
-}
-
 export default function ExamSetupPage() {
   const [loadError, setLoadError] = useState<string | null>(null);
   const [exams, setExams] = useState<Exam[] | null>(null);
@@ -50,7 +43,7 @@ export default function ExamSetupPage() {
   const [subjectsFor, setSubjectsFor] = useState<ClassItem | null>(null);
   const [deleting, setDeleting] = useState<Exam | null>(null);
   const [deleteBusy, setDeleteBusy] = useState(false);
-  const [me, setMe] = useState("");
+  const { roleKey: me } = useCurrentUser();
 
   const loadClasses = useCallback(async () => {
     const r = await classService.fetchClasses();
@@ -69,7 +62,6 @@ export default function ExamSetupPage() {
 
   useEffect(() => {
     load();
-    setMe(role());
   }, [load]);
 
   const canEdit = me === "admin" || me === "exam_cell";
@@ -123,7 +115,7 @@ export default function ExamSetupPage() {
         <section className="card workspace-section overflow-hidden" aria-label="Exams">
           <div className="flex items-center justify-between border-b border-slate-200/80 px-5 py-3.5">
             <div>
-            <h2 className="text-[15px] font-bold text-slate-900">Exams · 2026-27</h2>
+            <h2 className="text-[15px] font-bold text-slate-900">Exams</h2>
             <p className="text-[12.5px] text-slate-500">Parents see an exam&apos;s report card in their app only after it is locked.</p>
           </div>
             {exams && exams.length > 0 && (

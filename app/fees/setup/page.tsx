@@ -1,4 +1,5 @@
 "use client";
+import { useErpSession } from "@/lib/useErpSession";
 
 import React, { useEffect, useMemo, useState } from "react";
 import { AlertTriangle, CheckCircle2, ChevronRight, Loader2, RotateCcw, Save, Users } from "lucide-react";
@@ -12,6 +13,7 @@ import { ConcessionCard } from "@/components/fees/setup/ConcessionCard";
 const when = (iso: string) => new Date(iso).toLocaleString("en-IN", { day: "numeric", month: "short", hour: "numeric", minute: "2-digit", hour12: true });
 
 export default function FeeSetupPage() {
+  const { session } = useErpSession();
   const [cfg, setCfg] = useState<FeeConfig | null>(null);
   const [savedCfg, setSavedCfg] = useState<FeeConfig>(DEFAULT_FEE_CONFIG);
   const [meta, setMeta] = useState<{ saved: boolean; updatedAt: string | null; updatedBy: string | null; setupMissing: boolean }>({ saved: false, updatedAt: null, updatedBy: null, setupMissing: false });
@@ -77,7 +79,7 @@ export default function FeeSetupPage() {
         <div>
           <h1 className="page-title">Fee setup</h1>
           <p className="page-subtitle">
-            Session 2026-27 ·{" "}
+            Session {session?.label || "unavailable"} ·{" "}
             {meta.saved ? (
               <>
                 saved {meta.updatedAt ? when(meta.updatedAt) : ""}

@@ -1,6 +1,3 @@
-import { redirect } from "next/navigation";
-
-/** Students on each route now live inside the Transport page (open a route). */
-export default function Page() {
-  redirect("/transport");
-}
+import Workflow from "@/components/parity/generated/pages/transport/students";
+import { ParityFrame } from "@/components/parity/ParityFrame";
+export default function Page(){return <ParityFrame title={"Bus students"}><Workflow /></ParityFrame>;}

@@ -62,10 +62,10 @@ function Hero({ phone }: { phone?: string }) {
           <div className="absolute inset-x-3 bottom-0 top-3 rounded-t-full border border-b-0 border-white/25" />
         </div>
         <Image
-          src="/images/hero-student-blazer.png"
+          src="/images/hero-student-blazer.webp"
           alt="A St. Paul School student in her blazer holding her books"
-          width={1164}
-          height={1351}
+          width={860}
+          height={998}
           priority
           sizes="(min-width: 1024px) 430px, (min-width: 640px) 380px, 302px"
           className="absolute bottom-0 left-1/2 w-full -translate-x-1/2"

@@ -1,5 +1,7 @@
 "use client";
 
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
+
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { AlertTriangle, Briefcase, ChevronRight, KeyRound, Plus, RefreshCw, Search } from "lucide-react";
 import { Avatar } from "@/components/ui/Avatar";
@@ -19,13 +21,6 @@ type View = "all" | "teaching" | "non_teaching" | "left";
 const phone = (m: string) => (/^\d{10}$/.test(m) ? `${m.slice(0, 5)} ${m.slice(5)}` : m);
 const roleLabel = (r: string) => ROLE_INFO[r as keyof typeof ROLE_INFO]?.label || r;
 
-function role(): string {
-  try {
-    return localStorage.getItem("schooldesk_user_role") || "";
-  } catch {
-    return "";
-  }
-}
 
 export default function StaffPage() {
   const [list, setList] = useState<StaffMember[] | null>(null);
@@ -40,7 +35,7 @@ export default function StaffPage() {
   const [open, setOpen] = useState<{ id: string; focus: "login" | "work" | null } | null>(null);
   const [ctOpen, setCtOpen] = useState(false);
   const [issued, setIssued] = useState<IssuedLogin | null>(null);
-  const [me, setMe] = useState("");
+  const { roleKey: me } = useCurrentUser();
 
   const load = useCallback(async () => {
     setRefreshing(true);
@@ -55,13 +50,12 @@ export default function StaffPage() {
 
   useEffect(() => {
     load();
-    setMe(role());
     // /staff?new=1 (old "Add staff" links) opens the form straight away.
-    if (new URLSearchParams(window.location.search).get("new") === "1") {
+    if (me === "admin" && new URLSearchParams(window.location.search).get("new") === "1") {
       setForm({ staff: null });
       window.history.replaceState(null, "", "/staff");
     }
-  }, [load]);
+  }, [load, me]);
 
   const current = (list || []).filter((s) => s.status !== "Relieved");
   const teachers = current.filter((s) => s.staffType === "teaching");

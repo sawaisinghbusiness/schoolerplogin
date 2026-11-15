@@ -1,0 +1,60 @@
+{
+  "status": "Proposal only; not applied to the app",
+  "colors": {
+    "canvas": "#ECEEEB",
+    "header": "#0D2A5E",
+    "surface": "#FFFFFF",
+    "tile": "#F8F8F5",
+    "ink": "#242628",
+    "muted": "#5E666D",
+    "line": "#D5DAD5",
+    "pressed": "#E2E7E2",
+    "warning": "#8A5200",
+    "success": "#176447",
+    "danger": "#A62D38"
+  },
+  "contrast": [
+    {
+      "label": "Body on canvas",
+      "foreground": "#242628",
+      "background": "#ECEEEB",
+      "ratio": 13.013255227672675,
+      "passesNormalText": true
+    },
+    {
+      "label": "Secondary on canvas",
+      "foreground": "#5E666D",
+      "background": "#ECEEEB",
+      "ratio": 5.002631625986032,
+      "passesNormalText": true
+    },
+    {
+      "label": "White on navy",
+      "foreground": "#FFFFFF",
+      "background": "#0D2A5E",
+      "ratio": 13.907936208844179,
+      "passesNormalText": true
+    },
+    {
+      "label": "Warning on white",
+      "foreground": "#8A5200",
+      "background": "#FFFFFF",
+      "ratio": 6.3876927338136085,
+      "passesNormalText": true
+    },
+    {
+      "label": "Navy on tile",
+      "foreground": "#0D2A5E",
+      "background": "#F8F8F5",
+      "ratio": 13.071318764132839,
+      "passesNormalText": true
+    },
+    {
+      "label": "Ink on white",
+      "foreground": "#242628",
+      "background": "#FFFFFF",
+      "ratio": 15.185489313732555,
+      "passesNormalText": true
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+/* Shared ERP workflows use the desktop ERP visual language. */
+.erp-parity{--parity-ink:#18252F;--parity-muted:#5D6B75;--parity-line:#DCE2E7;color:var(--parity-ink);font-family:'IBM Plex Sans Variable','Nirmala UI',sans-serif;font-size:14px;line-height:1.5}
+.erp-parity .font-title{font-family:inherit}
+.erp-parity .row-card,.erp-parity .glass-line{border:1px solid var(--parity-line);border-radius:12px;background:#fff;padding:16px;box-shadow:none;backdrop-filter:none}
+.erp-parity .row-card .row-card{border:0;border-bottom:1px solid var(--parity-line);border-radius:0;padding:12px 0}
+.erp-parity a.row-card,.erp-parity button.row-card{width:100%;text-align:left}
+.erp-parity .field-box{position:relative;display:flex;align-items:center;gap:10px;min-width:0;min-height:44px;padding:10px 12px;border:1px solid #C9D2D9;border-radius:6px;background:#fff}
+.erp-parity .field-box>small{position:absolute;left:12px;top:4px;font-size:11px;color:#5D6B75;pointer-events:none}
+.erp-parity .field-box input,.erp-parity .field-box select,.erp-parity .field-box textarea{min-width:0;flex:1;background:transparent;color:#18252F;outline:none}
+.erp-parity .field-box>small~input,.erp-parity .field-box>small~select{padding-top:12px}
+.erp-parity .field-box>svg{width:18px;height:18px;flex-shrink:0;color:#5D6B75}
+.erp-parity .field-box:focus-within,.erp-parity .textarea-box:focus{border-color:#12665E;outline:2px solid #DCEFE9;outline-offset:1px}
+.erp-parity .textarea-box{display:block;width:100%;min-height:96px;padding:12px;border:1px solid #C9D2D9;border-radius:6px;background:white;resize:vertical}
+.erp-parity .btn-primary,.erp-parity .btn-go,.erp-parity .btn-line,.erp-parity .btn-quiet,.erp-parity .btn-dark{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:8px 14px;border-radius:6px;font-size:13px;font-weight:500;transition:background-color .15s,color .15s}
+.erp-parity .btn-primary,.erp-parity .btn-go{border:1px solid #12665E;background:#12665E;color:white}
+.erp-parity .btn-primary:hover,.erp-parity .btn-go:hover{background:#0E554F}
+.erp-parity .btn-line,.erp-parity .btn-quiet{border:1px solid #CDD6DC;background:white;color:#34444F}
+.erp-parity .btn-dark{background:#21343D;color:white}
+.erp-parity button:disabled,.erp-parity input:disabled,.erp-parity select:disabled{cursor:not-allowed;opacity:.5}
+.erp-parity .tabs-line{position:relative;display:flex;gap:12px;border-bottom:1px solid var(--parity-line);background:#F4F5F7}
+.erp-parity .tabs-line>button{min-height:44px;flex:1;padding:8px 12px;font-size:14px;color:#5D6B75}
+.erp-parity .tabs-line>[aria-selected=true]{font-weight:600;color:#12665E}
+.erp-parity .tabs-line-bar{position:absolute;left:0;bottom:-1px;height:2px;background:#12665E;pointer-events:none;transition:transform .15s}
+.erp-parity .status-ok,.erp-parity .status-bad,.erp-parity .status-wait,.erp-parity .status-mute{display:inline-flex;align-items:center;gap:4px;border:1px solid currentColor;border-radius:4px;padding:2px 6px;font-size:11px;font-weight:500}
+.erp-parity .status-ok{color:#07745E}.erp-parity .status-bad{color:#B91C1C}.erp-parity .status-wait{color:#924F04}.erp-parity .status-mute{color:#5D6B75}
+.erp-parity .mlabel{font-size:13px;font-weight:500;color:#5D6B75}
+.erp-parity .meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;font-size:12px;color:#5D6B75}
+.erp-parity .meta>span{display:inline-flex;align-items:center;gap:4px}.erp-parity .meta svg{width:15px;height:15px}
+.erp-parity .kv>div{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #ECF0F2}
+.erp-parity .kv dt{color:#5D6B75}.erp-parity .kv dd{min-width:0;overflow-wrap:anywhere;text-align:right}
+.erp-parity .cal{max-width:760px;border:1px solid var(--parity-line);border-radius:12px;background:white;padding:20px}
+.erp-parity .tnum{font-variant-numeric:tabular-nums}
+.erp-parity .radio{display:flex;min-height:44px;align-items:center;gap:10px}
+.erp-parity .radio input{width:18px;height:18px;accent-color:#12665E}
+.erp-parity .link{display:inline-flex;align-items:center;gap:4px;min-height:38px;color:#12665E;font-weight:500}
+.erp-parity .staff-summary{display:flex;gap:0;flex-wrap:wrap;border:1px solid var(--parity-line);border-radius:12px;background:white;overflow:hidden}
+.erp-parity .staff-summary>*{min-width:0;flex:1 1 100px;padding:16px;border:0;background:transparent;border-radius:0}.erp-parity .staff-summary>*+*{border-left:1px solid var(--parity-line)}
+.erp-parity.staff-save-bar{left:236px;right:0;bottom:0!important;max-width:none;border-top:1px solid var(--parity-line);padding:12px 28px;display:flex;justify-content:flex-end;gap:12px;background:#fff}
+.erp-parity.staff-save-bar>button{min-width:160px;max-width:480px}
+.erp-parity .enter,.erp-parity .animate-rise{animation:none}
+.erp-parity :focus-visible{outline:2px solid #12665E;outline-offset:3px}
+.erp-parity [tabindex="-1"]:focus{outline:none}
+@media(max-width:767px){.erp-parity.staff-save-bar{left:0;bottom:calc(56px + env(safe-area-inset-bottom))!important;padding:10px 16px}.erp-parity .field-box{min-height:44px}.erp-parity input,.erp-parity select,.erp-parity textarea{font-size:16px}.erp-parity .btn-primary,.erp-parity .btn-go,.erp-parity .btn-line{min-height:44px}.erp-parity .cal{padding:12px}}
+
+@media(min-width:1200px){.erp-parity .calendar-workspace{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(300px,1fr);gap:20px;align-items:start}.erp-parity .calendar-workspace>.cal{grid-column:1;grid-row:1 / span 2;max-width:none}.erp-parity .calendar-workspace>.cal+div{grid-column:2;grid-row:1;margin-top:0}.erp-parity .calendar-workspace>ul,.erp-parity .calendar-workspace>p{grid-column:2;grid-row:2;margin-top:0}.erp-parity .chapter-plan-workspace{max-width:960px}}

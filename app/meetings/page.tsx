@@ -1,5 +1,6 @@
 "use client";
 
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { CalendarClock, Plus, RefreshCw, Search, Trash2, Video, X } from "lucide-react";
 import { api } from "@/lib/apiClient";
@@ -44,6 +45,7 @@ const dayLong = (iso: string) => new Date(iso + "T00:00:00").toLocaleDateString(
 const EMPTY = { title: "", kind: "ptm" as "ptm" | "general", className: "", section: "", host: "", date: "", start: "10:00", end: "12:00", slotMinutes: "10", place: "", onlineUrl: "", agenda: "" };
 
 export default function MeetingsPage() {
+  const canManage = ["admin", "teacher"].includes(useCurrentUser().roleKey);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [period, setPeriod] = useState<"all" | "upcoming" | "past">("all");
@@ -71,7 +73,7 @@ export default function MeetingsPage() {
 
   const save = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form) return;
+    if (!form || !canManage) return;
     setSaving(true);
     const r = await api.post<{ success: boolean; error?: string }>("/api/meetings", { ...form, slotMinutes: Number(form.slotMinutes) });
     setSaving(false);
@@ -82,6 +84,7 @@ export default function MeetingsPage() {
   };
 
   const cancel = async (m: Meeting) => {
+    if (!canManage) return;
     if (!window.confirm(`Cancel "${m.title}"? Parents will stop seeing it.`)) return;
     const r = await api.del<{ success: boolean; error?: string }>(`/api/meetings/${m.id}`);
     if (!r.ok) return toast(r.error || "Could not cancel.", "error");
@@ -113,7 +116,7 @@ export default function MeetingsPage() {
           <h1 className="page-title">Meetings &amp; PTM</h1>
           <p className="page-subtitle">Parents see these in the parent app. For a PTM they pick a free time; for other meetings they answer if they will come.</p>
         </div>
-        {!form && (
+        {!form && canManage && (
           <button type="button" onClick={() => setForm({ ...EMPTY, date: t })} className="btn btn-primary min-h-[44px]">
             <Plus className="h-4 w-4" />
             New meeting
@@ -258,7 +261,7 @@ export default function MeetingsPage() {
                       {open === m.id ? "Hide list" : "Who booked"}
                     </button>
                   )}
-                  {m.date >= t && (
+                  {m.date >= t && canManage && (
                     <button type="button" onClick={() => cancel(m)} aria-label={`Cancel ${m.title}`} className="btn btn-secondary btn-sm min-h-[38px]">
                       <Trash2 className="h-4 w-4 text-rose-600" />
                     </button>

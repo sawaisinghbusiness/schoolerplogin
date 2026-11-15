@@ -89,6 +89,7 @@ const config: Config = {
       colors: {
         slate: ink,
         emerald: jade,
+        jade,
         ink,
         brand: officeTeal,
         marigold,

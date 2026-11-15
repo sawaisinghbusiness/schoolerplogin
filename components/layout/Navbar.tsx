@@ -46,7 +46,7 @@ export function Navbar({ onToggleSidebar }: NavbarProps) {
   useEffect(() => {
     setIsMac(/Mac|iPhone|iPad/.test(navigator.platform));
     let active = true;
-    schoolProfileService.session().then(result => { if (active && !result.error) setSessionLabel(result.session.label); });
+    schoolProfileService.session().then(result => { if (active && !result.error && result.session) setSessionLabel(result.session.label); });
 
     const onClickOutside = (e: MouseEvent) => {
       const target = e.target as Node;

@@ -1,0 +1,40 @@
+{
+  "synthetic": true,
+  "routes": 42,
+  "overflow": [],
+  "errors": [],
+  "missing": [
+    "/api/attendance/reminders"
+  ],
+  "interactions": [
+    "Web-created calendar event appears in staff ERP (synthetic API).",
+    "App-updated calendar record appears on web (synthetic API).",
+    "Both calendar interfaces follow server teacher role despite forged localStorage admin."
+  ],
+  "writes": [
+    {
+      "method": "POST",
+      "path": "/api/calendar",
+      "body": {
+        "title": "Paired web event",
+        "isHoliday": false,
+        "category": "Event",
+        "start": "2026-11-15",
+        "end": "2026-11-15",
+        "description": ""
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/calendar/local-1",
+      "body": {
+        "title": "Paired app updated event",
+        "isHoliday": false,
+        "category": "Event",
+        "start": "2026-11-15",
+        "end": "2026-11-15",
+        "description": ""
+      }
+    }
+  ]
+}

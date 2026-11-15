@@ -1,0 +1,29 @@
+{
+  "recommended": {
+    "name": "Deep evergreen",
+    "fill": "#294E43",
+    "whiteContrast": 9.271160541429037
+  },
+  "candidates": [
+    {
+      "name": "Deep evergreen",
+      "fill": "#294E43",
+      "whiteContrast": 9.271160541429037
+    },
+    {
+      "name": "Warm charcoal",
+      "fill": "#303D36",
+      "whiteContrast": 11.373228393241847
+    },
+    {
+      "name": "Muted burgundy",
+      "fill": "#6C3544",
+      "whiteContrast": 9.41559941127388
+    }
+  ],
+  "hover": "#203F36",
+  "pressed": "#18332B",
+  "disabledFill": "#D7DFD8",
+  "disabledInk": "#43564C",
+  "scope": "Operational primary actions only; assistant excluded"
+}

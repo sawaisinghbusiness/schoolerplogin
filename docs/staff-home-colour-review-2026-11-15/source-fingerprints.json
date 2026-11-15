@@ -1,0 +1,18 @@
+[
+  {
+    "file": "components/ErpHome.tsx",
+    "sha256": "718da763e95814721ccae4986c2a561410cc206a49b1e2c7cf5b783185a89ff6"
+  },
+  {
+    "file": "components/staff-home.css",
+    "sha256": "e40324c0c8a11e1611833208b3e5e8fc03de666da03dad919ce45a3172b1633a"
+  },
+  {
+    "file": "components/AppShell.tsx",
+    "sha256": "53779438af8359c89f26f83c73d296a06fc6a35e09cad8bb10638e15a402f5c4"
+  },
+  {
+    "file": "app/(app)/page.tsx",
+    "sha256": "52bbe6059c94abc9a825b5e937a2b94949ab6ede4fc323f33b6202d1da0196b5"
+  }
+]

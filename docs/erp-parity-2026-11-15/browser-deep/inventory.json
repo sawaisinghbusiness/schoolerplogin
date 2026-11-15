@@ -1,0 +1,32 @@
+[
+  {
+    "id": "transport-route",
+    "client": "web",
+    "route": "/transport/route?id=route1",
+    "file": "transport-route-web.png",
+    "url": "http://127.0.0.1:3010/transport/route?id=route1",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nRoutes & buses\nBus students\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nRoutes & buses\nRoute\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nBack\nTransport route\n\nCity route\n\nRJ-04-PA-0000 · Sample Driver\n\nStudents · 7\nRoute details\nDriver's list\nAarav Sharma\n6th - A\nCity centre\nPrisha Joshi\n7th - B\nCity centre\nAnanya Rathore\n8th - A\nCity centre\nVihaan Singh\n6th - B\nCity centre\nIshita Mehta\n7th - A\nCity centre\nDev Choudhary\n8th - B\nCity centre\nAditi Soni\n6th - A\nCity centre",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Transport route"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "transport-route",
+    "client": "app",
+    "route": "/erp/transport/route/?id=route1",
+    "file": "transport-route-app.png",
+    "url": "http://127.0.0.1:3310/erp/transport/route?id=route1",
+    "text": "Bus Route\n\nCity route\n\nRJ-04-PA-0000 · Sample Driver\n\nStudents · 7\nRoute details\nDriver's list\nAarav Sharma\n6th - A\nCity centre\nPrisha Joshi\n7th - B\nCity centre\nAnanya Rathore\n8th - A\nCity centre\nVihaan Singh\n6th - B\nCity centre\nIshita Mehta\n7th - A\nCity centre\nDev Choudhary\n8th - B\nCity centre\nAditi Soni\n6th - A\nCity centre\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Bus Route"
+    ],
+    "errors": [],
+    "missing": []
+  }
+]

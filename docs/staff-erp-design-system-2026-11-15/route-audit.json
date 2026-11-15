@@ -1,0 +1,519 @@
+{
+  "sourcePages": 64,
+  "browserRoutesReviewed": 0,
+  "status": "Source inventory; ERP shared theme not yet implemented at checkpoint",
+  "routes": [
+    {
+      "key": "attendance/leave",
+      "pattern": "Approval register",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton, Status, type Tone",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "attendance/mark",
+      "pattern": "Roll call workspace",
+      "primitives": "ErrorCard, ListSkeleton, SelectBox",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "attendance/mark/section",
+      "pattern": "Compatibility redirect",
+      "primitives": "ListSkeleton",
+      "risk": "Redirect/loading inherits shell; not a standalone redesign",
+      "colors": []
+    },
+    {
+      "key": "attendance/register",
+      "pattern": "Attendance report / print",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton, SelectBox, Sheet",
+      "risk": "Official print typography/layout must remain separate; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "attendance/today",
+      "pattern": "Absence and follow-up register",
+      "primitives": "Avatar, Empty, ErrorCard, LineTabs, ListSkeleton",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "birthdays",
+      "pattern": "Date-filtered people register",
+      "primitives": "Avatar, Empty, ErrorCard, LineTabs, ListSkeleton",
+      "risk": "36px category chips",
+      "colors": []
+    },
+    {
+      "key": "calendar",
+      "pattern": "Calendar + event editor",
+      "primitives": "Empty, ErrorCard, SelectBox, Sheet, Skeleton",
+      "risk": "Holiday #2563eb semantic; 32px day controls need measured touch review; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": [
+        "#2563eb"
+      ]
+    },
+    {
+      "key": "copy-check",
+      "pattern": "Copy-check summary register",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton, SelectBox",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "copy-check/sheet",
+      "pattern": "Roster entry + fixed Save",
+      "primitives": "Empty, ErrorCard, ListSkeleton, SelectBox, StickyBar",
+      "risk": "Portalled Save bar must inherit ERP scope and clear64px navigation/safe area; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "exams/marks",
+      "pattern": "Marks context selector",
+      "primitives": "Empty, ErrorCard, ListSkeleton, SelectBox",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "exams/marks/sheet",
+      "pattern": "Marks entry + Excel preview",
+      "primitives": "Empty, ErrorCard, ListSkeleton, StickyBar",
+      "risk": "Portalled Save bar must inherit ERP scope and clear64px navigation/safe area; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "exams/report-cards",
+      "pattern": "Report-card selection + official preview",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton, SelectBox, Sheet, StickyBar",
+      "risk": "Official print typography/layout must remain separate; Portalled Save bar must inherit ERP scope and clear64px navigation/safe area; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "exams/setup/edit",
+      "pattern": "Exam configuration editor",
+      "primitives": "ListSkeleton, StickyBar",
+      "risk": "Portalled Save bar must inherit ERP scope and clear64px navigation/safe area",
+      "colors": []
+    },
+    {
+      "key": "exams/setup",
+      "pattern": "Exam setup register",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton, Sheet",
+      "risk": "Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "fees/collect",
+      "pattern": "Fee counter / transaction",
+      "primitives": "Avatar, Empty, ErrorCard, ListSkeleton, Skeleton",
+      "risk": "Cash/UPI/Cheque palette is labelled data categories; preserve distinctions",
+      "colors": [
+        "#2a78d6",
+        "#eb6834",
+        "#1baf7a"
+      ]
+    },
+    {
+      "key": "fees/dues",
+      "pattern": "Dues register + reminder sheet",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton, SelectBox, Sheet, StickyBar",
+      "risk": "Portalled Save bar must inherit ERP scope and clear64px navigation/safe area; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "fees/online",
+      "pattern": "Claim register + QR settings",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton, SelectBox, Sheet",
+      "risk": "Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "fees/receipts",
+      "pattern": "Receipt register + print / cancellation",
+      "primitives": "Empty, ErrorCard, ListSkeleton, SelectBox, Sheet",
+      "risk": "Cash/UPI/Cheque palette is labelled data categories; preserve distinctions; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": [
+        "#2a78d6",
+        "#eb6834",
+        "#1baf7a"
+      ]
+    },
+    {
+      "key": "fees/reports",
+      "pattern": "Financial report / labelled categories",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton",
+      "risk": "Cash/UPI/Cheque palette is labelled data categories; preserve distinctions",
+      "colors": [
+        "#2a78d6",
+        "#eb6834",
+        "#1baf7a"
+      ]
+    },
+    {
+      "key": "fees/setup",
+      "pattern": "Fee configuration / installment editor",
+      "primitives": "ErrorCard, ListSkeleton, SelectBox, Sheet, StickyBar",
+      "risk": "3-column fine inputs at narrow width; installment grid remains local-scroll workflow; Portalled Save bar must inherit ERP scope and clear64px navigation/safe area; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "homework",
+      "pattern": "Homework register + file editor",
+      "primitives": "Empty, ErrorCard, ListSkeleton, SelectBox, Sheet",
+      "risk": "38px subject tabs; attachment editor shared; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": [
+        "#0D2A5E"
+      ]
+    },
+    {
+      "key": "meetings/new",
+      "pattern": "Meeting composer",
+      "primitives": "Empty, ErrorCard, ListSkeleton, SelectBox",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "meetings",
+      "pattern": "Meeting register + response detail",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton, Sheet",
+      "risk": "Portalled sheet styling/focus independent of shell ancestry",
+      "colors": [
+        "#E8EFF7",
+        "#0D2A5E"
+      ]
+    },
+    {
+      "key": "messages/detail",
+      "pattern": "Delivery detail / sending controls",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": [
+        "#1FA855"
+      ]
+    },
+    {
+      "key": "messages/new",
+      "pattern": "Audience + message composer",
+      "primitives": "Empty, ErrorCard, ListSkeleton",
+      "risk": "4-column audience segment; 32px token insertion controls; long Hindi labels",
+      "colors": []
+    },
+    {
+      "key": "messages",
+      "pattern": "Delivery register",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": [
+        "#0D2A5E"
+      ]
+    },
+    {
+      "key": "parent-chats/chat",
+      "pattern": "Read-only conversation thread",
+      "primitives": "Avatar, Empty, ErrorCard, ListSkeleton",
+      "risk": "Explicit #F7F9FC thread canvas; preserve navy/white message bubbles and light secondary text",
+      "colors": [
+        "#ECEEEB",
+        "#0D2A5E",
+        "#D8E3F1"
+      ]
+    },
+    {
+      "key": "parent-chats",
+      "pattern": "Read-only conversation register",
+      "primitives": "Avatar, Empty, ErrorCard, LineTabs, ListSkeleton",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": [
+        "#0D2A5E"
+      ]
+    },
+    {
+      "key": "report",
+      "pattern": "Operational dashboard / charts",
+      "primitives": "ErrorCard, Skeleton",
+      "risk": "SVG 11px labels, #8A93A6 axis text; compare on real chart background",
+      "colors": [
+        "#0D2A5E",
+        "#E9ECF2",
+        "#8A93A6",
+        "#16213A"
+      ]
+    },
+    {
+      "key": "reports",
+      "pattern": "Report destination hub",
+      "primitives": "No direct ui import",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "settings/classes",
+      "pattern": "Class/section configuration",
+      "primitives": "Empty, ErrorCard, ListSkeleton, SelectBox, Sheet",
+      "risk": "Portalled sheet styling/focus independent of shell ancestry",
+      "colors": [
+        "#0D2A5E"
+      ]
+    },
+    {
+      "key": "settings/data",
+      "pattern": "Explicit planned module",
+      "primitives": "No direct ui import",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "settings",
+      "pattern": "School configuration editor / document settings",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton, SelectBox, Sheet, StickyBar",
+      "risk": "Portalled Save bar must inherit ERP scope and clear64px navigation/safe area; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": [
+        "#1c2a5e",
+        "#0D2A5E"
+      ]
+    },
+    {
+      "key": "settings/templates",
+      "pattern": "Message template register/editor",
+      "primitives": "Empty, ErrorCard, ListSkeleton, Sheet",
+      "risk": "Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "settings/users",
+      "pattern": "Account access register/editor",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton, Sheet, Status",
+      "risk": "Literal #28d72a messaging-service colour; avoid using as generic action; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": [
+        "#0D2A5E",
+        "#28d72a"
+      ]
+    },
+    {
+      "key": "settings/whatsapp",
+      "pattern": "Messaging integration settings",
+      "primitives": "Empty, ErrorCard, ListSkeleton, Sheet, Status",
+      "risk": "Literal #28d72a messaging-service colour; avoid using as generic action; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": [
+        "#28d72a"
+      ]
+    },
+    {
+      "key": "soon",
+      "pattern": "Explicit planned-module explanation",
+      "primitives": "Empty",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "staff/allocation",
+      "pattern": "Subject/teacher allocation grid",
+      "primitives": "Empty, ErrorCard, ListSkeleton, SelectBox, StickyBar",
+      "risk": "Portalled Save bar must inherit ERP scope and clear64px navigation/safe area",
+      "colors": []
+    },
+    {
+      "key": "staff/attendance",
+      "pattern": "Staff attendance roster/register",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton, SelectBox, Sheet, Status, StickyBar",
+      "risk": "Official print typography/layout must remain separate; Portalled Save bar must inherit ERP scope and clear64px navigation/safe area; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": [
+        "#0D2A5E"
+      ]
+    },
+    {
+      "key": "staff/class-teachers",
+      "pattern": "Class-teacher allocation grid",
+      "primitives": "Empty, ErrorCard, ListSkeleton, SelectBox, StickyBar",
+      "risk": "Portalled Save bar must inherit ERP scope and clear64px navigation/safe area",
+      "colors": []
+    },
+    {
+      "key": "staff/detail",
+      "pattern": "Staff record editor",
+      "primitives": "Avatar, Empty, ErrorCard, ListSkeleton, SelectBox, Sheet, Status",
+      "risk": "Portalled sheet styling/focus independent of shell ancestry",
+      "colors": [
+        "#0D2A5E"
+      ]
+    },
+    {
+      "key": "staff/excel",
+      "pattern": "Excel round trip / review",
+      "primitives": "ErrorCard, ListSkeleton",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "staff/new",
+      "pattern": "Staff registration form",
+      "primitives": "Empty, ErrorCard, ListSkeleton, SelectBox",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": [
+        "#0D2A5E"
+      ]
+    },
+    {
+      "key": "staff",
+      "pattern": "Staff register",
+      "primitives": "Avatar, Empty, ErrorCard, LineTabs, ListSkeleton",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "staff/payroll",
+      "pattern": "Payroll register + payslip preview",
+      "primitives": "Avatar, Empty, ErrorCard, ListSkeleton, SelectBox, Sheet, StickyBar",
+      "risk": "Official print typography/layout must remain separate; Portalled Save bar must inherit ERP scope and clear64px navigation/safe area; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": [
+        "#0D2A5E"
+      ]
+    },
+    {
+      "key": "students/admission",
+      "pattern": "Admission form + crop/photo",
+      "primitives": "Avatar, ErrorCard, ListSkeleton, SelectBox, Sheet",
+      "risk": "Portalled sheet styling/focus independent of shell ancestry",
+      "colors": [
+        "#0D2A5E",
+        "#ECEEEB"
+      ]
+    },
+    {
+      "key": "students/certificates/issue",
+      "pattern": "Certificate form + official preview",
+      "primitives": "Avatar, SelectBox",
+      "risk": "Official print typography/layout must remain separate; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "students/certificates",
+      "pattern": "Certificate register + official preview",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton",
+      "risk": "Official print typography/layout must remain separate; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "students/detail",
+      "pattern": "Student record / gate pass",
+      "primitives": "Avatar, Empty, ErrorCard, LineTabs, ListSkeleton, Status",
+      "risk": "Portalled sheet styling/focus independent of shell ancestry",
+      "colors": [
+        "#0D2A5E"
+      ]
+    },
+    {
+      "key": "students/enquiries/detail",
+      "pattern": "Enquiry detail + follow-up",
+      "primitives": "Empty, ErrorCard, ListSkeleton, Status",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "students/enquiries/new",
+      "pattern": "Enquiry form",
+      "primitives": "SelectBox",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "students/enquiries",
+      "pattern": "Enquiry register",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton, Status",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "students/excel",
+      "pattern": "Student workbook round trip",
+      "primitives": "ErrorCard, ListSkeleton",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": [
+        "#0D2A5E"
+      ]
+    },
+    {
+      "key": "students/id-cards",
+      "pattern": "ID-card selection + official print",
+      "primitives": "Avatar, Empty, ErrorCard, ListSkeleton, SelectBox, StickyBar, LineTabs",
+      "risk": "Official print typography/layout must remain separate; Portalled Save bar must inherit ERP scope and clear64px navigation/safe area; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "students",
+      "pattern": "Student register",
+      "primitives": "Avatar, Empty, ErrorCard, LineTabs, ListSkeleton, SelectBox, Status",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "students/photos",
+      "pattern": "Photo workflow + crop sheet",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton, SelectBox, Sheet",
+      "risk": "Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "students/promote",
+      "pattern": "Promotion selection + review",
+      "primitives": "Avatar, Empty, ErrorCard, LineTabs, ListSkeleton, SelectBox, Sheet, StickyBar",
+      "risk": "Portalled Save bar must inherit ERP scope and clear64px navigation/safe area; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "syllabus/excel",
+      "pattern": "Syllabus workbook round trip",
+      "primitives": "ErrorCard, ListSkeleton",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "syllabus",
+      "pattern": "Syllabus summary",
+      "primitives": "Empty, ErrorCard, ListSkeleton, SelectBox",
+      "risk": "Inherits shell/shared primitives; inspect actual populated state, not source coverage alone",
+      "colors": []
+    },
+    {
+      "key": "syllabus/plan",
+      "pattern": "Chapter plan editor",
+      "primitives": "Empty, ErrorCard, ListSkeleton, SelectBox, Sheet",
+      "risk": "Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "timetable",
+      "pattern": "Day/period grid + slot editor",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton, SelectBox, Sheet",
+      "risk": "6-column days; 40px subject chips; current-period distinction; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": [
+        "#0D2A5E"
+      ]
+    },
+    {
+      "key": "transport",
+      "pattern": "Route register + capacity summary",
+      "primitives": "Empty, ErrorCard, ListSkeleton",
+      "risk": "3-cell summary and route capacity state; no arbitrary4-cell rule",
+      "colors": [
+        "#E8EFF7",
+        "#0D2A5E"
+      ]
+    },
+    {
+      "key": "transport/route",
+      "pattern": "Route/rider register + edit/print",
+      "primitives": "Empty, ErrorCard, LineTabs, ListSkeleton, SelectBox, Sheet, StickyBar",
+      "risk": "Official print typography/layout must remain separate; Portalled Save bar must inherit ERP scope and clear64px navigation/safe area; Portalled sheet styling/focus independent of shell ancestry",
+      "colors": []
+    },
+    {
+      "key": "transport/students",
+      "pattern": "Compatibility redirect",
+      "primitives": "ListSkeleton",
+      "risk": "Redirect/loading inherits shell; not a standalone redesign",
+      "colors": []
+    }
+  ]
+}

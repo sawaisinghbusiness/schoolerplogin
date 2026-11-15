@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { AlertTriangle, Loader2 } from "lucide-react";
+import { api } from "@/lib/apiClient";
 import { SideDrawer } from "@/components/ui/SideDrawer";
 import { ClassItem, classService } from "@/lib/services/classService";
 import { Audience, AudienceKind, Lang, Message, Preview, TEMPLATES, messageService, unfilled } from "@/lib/services/messageService";
@@ -40,6 +41,7 @@ function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; chi
 }
 
 export function ComposeDrawer({ isOpen, onClose, onCreated }: { isOpen: boolean; onClose: () => void; onCreated: (m: Message) => void }) {
+  const [schoolTemplates, setSchoolTemplates] = useState<{ id: string; title: string; body: string; lang: Lang }[]>([]);
   const [classes, setClasses] = useState<ClassItem[]>([]);
   const [kind, setKind] = useState<AudienceKind>("school");
   const [picked, setPicked] = useState<string[]>([]);
@@ -67,6 +69,7 @@ export function ComposeDrawer({ isOpen, onClose, onCreated }: { isOpen: boolean;
     setUntil(plusDays(7));
     setPreview(null);
     setError(null);
+    api.get<{ data: { id: string; title: string; body: string; lang: Lang }[] }>("/api/message-templates").then(r => setSchoolTemplates(r.ok ? r.data?.data || [] : []));
     if (!classes.length) classService.fetchClasses().then((r) => setClasses(r.data || []));
   }, [isOpen]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -217,6 +220,7 @@ export function ComposeDrawer({ isOpen, onClose, onCreated }: { isOpen: boolean;
               ))}
             </div>
           </div>
+          {schoolTemplates.length > 0 && <div className="space-y-2"><p className="field-label">School templates</p><div className="flex flex-wrap gap-1.5">{schoolTemplates.map(t => <Chip key={t.id} on={template === t.id} onClick={() => { setTemplate(t.id); setTitle(t.title); setBody(t.body); setLang(t.lang); }}>{t.title}</Chip>)}</div></div>}
           <div className="flex flex-wrap gap-1.5">
             {TEMPLATES.map((t) => (
               <Chip key={t.key} on={template === t.key} onClick={() => applyTemplate(t.key)}>{t.label}</Chip>

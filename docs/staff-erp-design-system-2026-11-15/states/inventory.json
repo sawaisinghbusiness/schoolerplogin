@@ -1,0 +1,62 @@
+[
+  {
+    "id": "error-home",
+    "client": "app",
+    "route": "/",
+    "file": "error-home-app.png",
+    "url": "http://127.0.0.1:3310/",
+    "text": "Good afternoon\nReview\nRO\nSearch a student by name or SR no.\n\nYou're offline. Showing what was saved last time.\n\nReport\nStudents\nFees\nAttendance\nEnquiries\nExams\nHomework\nTransport\n\nCouldn't load today's figures.\n\nRetry\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Good afternoon\nReview"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "error-home-360",
+    "client": "app",
+    "route": "/",
+    "file": "error-home-360-app.png",
+    "url": "http://127.0.0.1:3310/",
+    "text": "Good afternoon\nReview\nRO\nSearch a student by name or SR no.\n\nYou're offline. Showing what was saved last time.\n\nReport\nStudents\nFees\nAttendance\nEnquiries\nExams\nHomework\nTransport\n\nCouldn't load today's figures.\n\nRetry\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Good afternoon\nReview"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "empty-birthdays",
+    "client": "app",
+    "route": "/erp/birthdays/",
+    "file": "empty-birthdays-app.png",
+    "url": "http://127.0.0.1:3310/erp/birthdays",
+    "text": "Birthdays\nToday 0\n7 days 0\n30 days 0\nAll\nStudents\nStaff\n\nNo birthdays today.\n\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Birthdays"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "empty-birthdays-360",
+    "client": "app",
+    "route": "/erp/birthdays/",
+    "file": "empty-birthdays-360-app.png",
+    "url": "http://127.0.0.1:3310/erp/birthdays",
+    "text": "Birthdays\nToday 0\n7 days 0\n30 days 0\nAll\nStudents\nStaff\n\nNo birthdays today.\n\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 360,
+    "scrollWidth": 360,
+    "headings": [
+      "Birthdays"
+    ],
+    "errors": [],
+    "missing": []
+  }
+]

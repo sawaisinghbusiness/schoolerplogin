@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Loader2, Lock } from "lucide-react";
+import { Download,Upload,Loader2, Lock } from "lucide-react";
 import { SideDrawer } from "@/components/ui/SideDrawer";
 import { toast } from "@/components/ui/Toaster";
 import { gradeFor, markProblem, totalOf } from "@/lib/grading";
+import {downloadWorkbook,readWorkbook} from "@/lib/spreadsheet";
+import {reconcileMarks} from "@/lib/marksWorkbook";
 import { Sheet, examService } from "@/lib/services/examService";
 
 interface Row {
@@ -36,6 +38,8 @@ export function MarkSheetDrawer({ target, onClose, onSaved }: {
   const [saved, setSaved] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [importResult,setImportResult]=useState<{matched:number;errors:string[]}|null>(null);
+  const fileInput=useRef<HTMLInputElement>(null);
   const [confirmClose, setConfirmClose] = useState(false);
   const grid = useRef<HTMLTableSectionElement>(null);
 
@@ -45,13 +49,17 @@ export function MarkSheetDrawer({ target, onClose, onSaved }: {
     setRows([]);
     setError(null);
     setConfirmClose(false);
+    setImportResult(null);
+    let active=true;
     examService.sheet(target.examId, target.section, target.subject).then((r) => {
+      if(!active)return;
       if (r.error || !r.data) return setError(r.error || "Could not open the mark sheet.");
       const rs = toRows(r.data);
       setSheet(r.data);
       setRows(rs);
       setSaved(JSON.stringify(rs));
     });
+    return()=>{active=false;};
   }, [target]);
 
   const parts = sheet?.exam.components || [];
@@ -152,6 +160,8 @@ export function MarkSheetDrawer({ target, onClose, onSaved }: {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [target, save]);
 
+  async function exportSheet(){if(!target||!sheet)return;try{await downloadWorkbook('marks-'+target.subject+'-'+target.section+'.xlsx',['Student ID','Roll No','Name',...parts.map(p=>p.name+' (/'+p.max+')'),'Absent (Yes/No)'],rows.map(r=>[r.studentId,r.rollNo,r.name,...parts.map(p=>r.absent?'':r.values[p.key]),r.absent?'Yes':'']));}catch(e){setError(e instanceof Error?e.message:'Could not export marks.');}}
+  async function importSheet(file:File|undefined){if(!file||locked)return;try{const result=reconcileMarks(rows,parts,await readWorkbook(file));setRows(result.rows);setImportResult({matched:result.matched,errors:result.errors});}catch(e){setError(e instanceof Error?e.message:'Could not read the workbook.');}}
   const tryClose = () => {
     if (dirty && !locked) return setConfirmClose(true);
     onClose();
@@ -201,6 +211,8 @@ export function MarkSheetDrawer({ target, onClose, onSaved }: {
         ))
       }
     >
+      {sheet&&!locked&&rows.length>0&&<div className="flex flex-wrap gap-2 border-b border-slate-200 px-5 py-3"><button type="button" className="btn btn-secondary btn-sm" onClick={exportSheet} disabled={busy}><Download className="h-4 w-4"/>Download Excel</button><button type="button" className="btn btn-secondary btn-sm" onClick={()=>fileInput.current?.click()} disabled={busy}><Upload className="h-4 w-4"/>Fill from Excel</button><input ref={fileInput} type="file" accept=".xlsx,.xls,.csv,.tsv" hidden onChange={e=>{void importSheet(e.target.files?.[0]);e.target.value="";}}/></div>}
+      {importResult&&<div className="mx-5 mt-3 text-sm" role="status"><p>{importResult.matched} students loaded. Review, then Save marks.</p>{importResult.errors.length>0&&<details className="mt-2 text-rose-700"><summary>{importResult.errors.length} import problems</summary><ul>{importResult.errors.map((e,i)=><li key={i}>{e}</li>)}</ul></details>}</div>}
       {error && <p role="alert" className="mx-5 mt-4 rounded-lg bg-rose-50 px-3 py-2 text-sm text-rose-700 ring-1 ring-rose-100">{error}</p>}
       {!sheet ? (
         !error && (

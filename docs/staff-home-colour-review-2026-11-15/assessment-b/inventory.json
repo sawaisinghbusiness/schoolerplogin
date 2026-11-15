@@ -1,0 +1,35 @@
+[
+  {
+    "id": "current-home",
+    "client": "web",
+    "route": "/",
+    "file": "current-home-web.png",
+    "url": "http://127.0.0.1:3010/",
+    "text": "SB\nSMS Barmer Review School\nBarmer, Rajasthan\nHome\nAcademics\nAdmission\nContact\nDashboard\n\nCBSE affiliated · Pre-Nursery to Class XII · Barmer\n\nYour Child's Future\n\nBegins Here\n\nA CBSE school in Barmer where children join at three and stay until their Class XII board exams. Admissions for 2026–27 are open.\n\nAdmission 2026–27\nVisit the school →\nAdmissions\nopen\n2026–27\nstudents this session\n24\nstudents this session\nclasses, Pre-Nursery to XII\n3\nclasses, Pre-Nursery to XII\nsections\n6\nsections\naffiliated\nCBSE\naffiliated\nPre-Nursery to Class XII, under one roof.\n\nFive stages, one school. Your child moves up with friends and teachers who already know them.\n\nClasses and subjects\n01\nPre-primary\nPre-Nursery, Nursery, LKG, UKG\n02\nPrimary\nClasses I to V\n03\nMiddle\nClasses VI to VIII\n6 sections\n04\nSecondary\nClasses IX and X\n05\nSenior Secondary\nClasses XI and XII\nAdmissions for 2026–27 are open.\n\nSee the steps and the documents to bring — or call the office and come see the school.\n\nHow to apply\n\nSMS Barmer Review School\n\nAffiliated to CBSE\n\nBarmer, Rajasthan, Barmer, Rajasthan, 344001\nAcademics\nAdmission\nContact\nMandatory Public Disclosure\nStaff & parent login\n\n© 2026 SMS Barmer Review School, Barmer",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Your Child's Future\n\nBegins Here",
+      "Pre-Nursery to Class XII, under one roof.",
+      "Admissions for 2026–27 are open."
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "current-home",
+    "client": "app",
+    "route": "/",
+    "file": "current-home-app.png",
+    "url": "http://127.0.0.1:3310/",
+    "text": "Good afternoon\nReview\nRO\nSearch a student by name or SR no.\nReport\nStudents\nFees\nAttendance\nEnquiries\nExams\nHomework\nTransport\nToday at school\nClass attendance\n3 of 6 classes not marked\n3\nAbsent today\nNo one so far\nFees collected today\n3 receipts\n₹9,500\nEnquiry follow-ups\nNone due\nBirthdays today\nNone today\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "headings": [
+      "Good afternoon\nReview",
+      "Today at school"
+    ],
+    "errors": [],
+    "missing": []
+  }
+]

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useErpSession } from "@/lib/useErpSession";
 import Link from "next/link";
 import * as XLSX from "xlsx";
 import { ChevronLeft, ChevronRight, Download, Printer, RefreshCw } from "lucide-react";
@@ -13,7 +14,7 @@ import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
 type Tab = "register" | "low";
 
 const BELOW = 75;
-const SESSION_START_MONTH = "2026-04";
+
 const SEC_KEY = "att.register.sec";
 
 const todayIST = () => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata" }).format(new Date());
@@ -37,6 +38,8 @@ export default function AttendanceRegisterPage() {
   const [sectionsError, setSectionsError] = useState<string | null>(null);
   const [sec, setSec] = useState<string>("");
   const [month, setMonth] = useState(thisMonth);
+  const { session } = useErpSession();
+  const sessionStartMonth = session?.start.slice(0, 7) || "";
   const [tab, setTab] = useState<Tab>("register");
 
   const [reg, setReg] = useState<MonthRegister | null>(null);
@@ -240,7 +243,7 @@ export default function AttendanceRegisterPage() {
           ))}
         </select>
         <div className="flex items-center rounded-lg border border-slate-200 bg-white shadow-2xs">
-          <button type="button" onClick={() => setMonth(shiftMonth(month, -1))} disabled={month <= SESSION_START_MONTH} className="rounded-l-lg p-2 text-slate-500 hover:bg-slate-50 hover:text-slate-900 disabled:opacity-40" aria-label="Previous month">
+          <button type="button" onClick={() => setMonth(shiftMonth(month, -1))} disabled={!!sessionStartMonth && month <= sessionStartMonth} className="rounded-l-lg p-2 text-slate-500 hover:bg-slate-50 hover:text-slate-900 disabled:opacity-40" aria-label="Previous month">
             <ChevronLeft className="h-4 w-4" />
           </button>
           <span className="min-w-[124px] border-x border-slate-200 px-3 py-1.5 text-center text-[13px] font-semibold tabular-nums text-slate-900" aria-live="polite">

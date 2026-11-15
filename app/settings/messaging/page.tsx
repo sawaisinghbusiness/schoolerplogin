@@ -1,5 +1,7 @@
 "use client";
 
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
+
 import React, { useCallback, useEffect, useState } from "react";
 import { Loader2, LogOut, Moon, RefreshCw, RotateCcw, Send, Smartphone } from "lucide-react";
 import { toast } from "@/components/ui/Toaster";
@@ -25,6 +27,9 @@ const when = (iso: string) => {
 };
 
 export default function WhatsAppSettingsPage() {
+  const { roleKey } = useCurrentUser();
+  const isAdmin = roleKey === "admin";
+  const canRetry = isAdmin || roleKey === "accountant";
   const { schoolProfile } = useSchoolProfile();
   const school = schoolProfile.school_name || "School";
   const [status, setStatus] = useState<WaStatus | null>(null);
@@ -64,6 +69,7 @@ export default function WhatsAppSettingsPage() {
   }, [linking, loadStatus, loadOutbox]);
 
   const connect = async () => {
+    if (!isAdmin) return;
     setBusy(true);
     const r = await whatsappService.connect();
     setBusy(false);
@@ -71,6 +77,7 @@ export default function WhatsAppSettingsPage() {
     loadStatus();
   };
   const disconnect = async () => {
+    if (!isAdmin) return;
     setBusy(true);
     const r = await whatsappService.logout();
     setBusy(false);
@@ -80,7 +87,7 @@ export default function WhatsAppSettingsPage() {
     loadStatus();
   };
   const setSwitch = async (key: keyof Pick<WaSettings, "auto_absent" | "auto_receipt">, on: boolean) => {
-    if (!status?.settings) return;
+    if (!isAdmin || !status?.settings) return;
     setStatus({ ...status, settings: { ...status.settings, [key]: on } });
     const r = await whatsappService.saveSettings({ [key]: on });
     if (!r.success) {
@@ -89,6 +96,7 @@ export default function WhatsAppSettingsPage() {
     }
   };
   const retry = async () => {
+    if (!canRetry) return;
     const r = await whatsappService.retry();
     if (r.success) toast(`${r.count} message${r.count === 1 ? "" : "s"} back in the queue.`, "success");
     else toast(r.error || "Could not retry.", "error");
@@ -155,9 +163,9 @@ export default function WhatsAppSettingsPage() {
                 <>
                   <p className="mt-3 text-[22px] font-bold tabular-nums tracking-tight text-slate-900">+{s.me.number.replace(/^91(\d{5})(\d{5})$/, "91 $1 $2")}</p>
                   {s.me.name && <p className="text-sm text-slate-500">{s.me.name}</p>}
-                  <TestForm school={school} />
+                  {isAdmin && <TestForm school={school} />}
                   <div className="mt-4 border-t border-slate-100 pt-3">
-                    <button type="button" onClick={() => setConfirmOff(true)} className="btn btn-secondary btn-sm">
+                    <button type="button" onClick={() => setConfirmOff(true)} disabled={!isAdmin} className="btn btn-secondary btn-sm">
                       <LogOut className="h-4 w-4" />
                       Disconnect
                     </button>
@@ -186,7 +194,7 @@ export default function WhatsAppSettingsPage() {
                 <>
                   <p className="mt-2 text-sm text-slate-600">Link the school&apos;s phone once by scanning a QR code, like WhatsApp Web. It stays linked after that.</p>
                   {s.lastError && <p className="alert alert-amber mt-3 text-sm">{s.lastError}</p>}
-                  <button type="button" onClick={connect} disabled={busy} className="btn btn-primary mt-4">
+                  <button type="button" onClick={connect} disabled={!isAdmin || busy} className="btn btn-primary mt-4">
                     {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Smartphone className="h-4 w-4" />}
                     Connect WhatsApp
                   </button>
@@ -202,6 +210,7 @@ export default function WhatsAppSettingsPage() {
                 <p className="text-[13px] text-slate-500">Each message is queued and leaves a few seconds apart{s.state !== "open" ? ", once WhatsApp is connected" : ""}.</p>
               </div>
               <Toggle
+                disabled={!isAdmin}
                 title="Absent today"
                 note="When attendance is saved, the parents of absent students get this. Changing someone to present before it goes takes it back."
                 sample={`प्रिय अभिभावक, आज (2 Oct) Laxman Garg (कक्षा Nursery-A) स्कूल में अनुपस्थित है। कृपया कारण बताएं। – ${school}`}
@@ -209,6 +218,7 @@ export default function WhatsAppSettingsPage() {
                 onChange={(v) => setSwitch("auto_absent", v)}
               />
               <Toggle
+                disabled={!isAdmin}
                 title="Fee received"
                 note="After each payment at the counter, the parent gets the amount, receipt number and what is still due."
                 sample={`प्रिय अभिभावक, Laxman Garg (कक्षा Nursery-A) की फीस ₹5,000 प्राप्त हुई। रसीद नं. 1042, दिनांक 2 Oct। शेष बकाया: ₹7,500। धन्यवाद – ${school}`}
@@ -238,7 +248,7 @@ export default function WhatsAppSettingsPage() {
                 </span>
               )}
               {s.counts.failed > 0 && (
-                <button type="button" onClick={retry} className="btn btn-secondary btn-sm ml-auto">
+                <button type="button" onClick={retry} disabled={!canRetry} className="btn btn-secondary btn-sm ml-auto">
                   <RotateCcw className="h-4 w-4" />
                   Retry failed
                 </button>
@@ -340,7 +350,7 @@ export default function WhatsAppSettingsPage() {
           <button type="button" onClick={() => setConfirmOff(false)} className="btn btn-secondary">
             Cancel
           </button>
-          <button type="button" onClick={disconnect} disabled={busy} className="btn btn-danger">
+          <button type="button" onClick={disconnect} disabled={!isAdmin || busy} className="btn btn-danger">
             {busy && <Loader2 className="h-4 w-4 animate-spin" />}
             Disconnect
           </button>
@@ -360,7 +370,7 @@ function StateTag({ state }: { state: WaStatus["state"] }) {
   return <span className={`badge ${map.cls}`}>{map.label}</span>;
 }
 
-function Toggle({ title, note, sample, on, onChange }: { title: string; note: string; sample: string; on: boolean; onChange: (v: boolean) => void }) {
+function Toggle({ title, note, sample, on, disabled, onChange }: { title: string; note: string; sample: string; on: boolean; disabled: boolean; onChange: (v: boolean) => void }) {
   return (
     <div className="flex gap-4 p-5">
       <div className="min-w-0 flex-1">
@@ -372,6 +382,7 @@ function Toggle({ title, note, sample, on, onChange }: { title: string; note: st
         type="button"
         role="switch"
         aria-checked={on}
+        disabled={disabled}
         aria-label={title}
         onClick={() => onChange(!on)}
         className={`relative mt-0.5 h-6 w-11 shrink-0 rounded-full transition ${on ? "bg-emerald-600" : "bg-slate-300"}`}

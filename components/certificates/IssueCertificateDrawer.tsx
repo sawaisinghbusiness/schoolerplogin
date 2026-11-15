@@ -1,4 +1,5 @@
 "use client";
+import { useErpSession } from "@/lib/useErpSession";
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
@@ -56,7 +57,7 @@ const FIELDS: Record<CertificateType, FieldDef[]> = {
 };
 
 /** Everything the certificate prints, filled from the student's record where we have it. */
-function defaults(type: CertificateType, s: Student | null): Record<string, string> {
+function defaults(type: CertificateType, s: Student | null, sessionLabel = ""): Record<string, string> {
   const today = todayIso();
   const base: Record<string, string> = s
     ? {
@@ -70,11 +71,11 @@ function defaults(type: CertificateType, s: Student | null): Record<string, stri
         dob: (s.dob || "").slice(0, 10),
         class: s.class,
         classSec: s.classSec,
-        session: "2026-27",
+        session: sessionLabel,
         nationality: "Indian",
         category: s.category === "General" || !s.category ? "No (General)" : `Yes (${s.category})`,
       }
-    : { nationality: "Indian", session: "2026-27" };
+    : { nationality: "Indian", session: sessionLabel };
   if (type === "bonafide") return { ...base, purpose: "", issueDate: today };
   if (type === "character") return { ...base, studiedFrom: "", studiedTo: "", conduct: "Good", issueDate: today };
   const next = s ? nextClass(s.class) : "";
@@ -85,7 +86,7 @@ function defaults(type: CertificateType, s: Student | null): Record<string, stri
     failed: "No",
     subjects: "",
     promotion: next ? `Yes, to Class ${next} (${classInWords(next)})` : "Not applicable",
-    duesUpTo: s && s.balanceFee > 0 ? `${inr(s.balanceFee)} still due` : "All dues paid up to March 2027",
+    duesUpTo: s && s.balanceFee > 0 ? `${inr(s.balanceFee)} still due` : "No outstanding balance on record",
     concession: "None",
     workingDays: "",
     daysPresent: "",
@@ -108,10 +109,12 @@ interface Props {
 }
 
 export function IssueCertificateDrawer({ isOpen, onClose, students, school, onIssued }: Props) {
+  const { session, error: sessionError } = useErpSession();
   const [type, setType] = useState<CertificateType>("tc");
   const [student, setStudent] = useState<Student | null>(null);
   const [query, setQuery] = useState("");
   const [d, setD] = useState<Record<string, string>>(defaults("tc", null));
+  useEffect(() => { if(session) setD(previous => previous.session ? previous : {...previous, session:session.label}); }, [session?.label]);
   const [markLeft, setMarkLeft] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -126,7 +129,7 @@ export function IssueCertificateDrawer({ isOpen, onClose, students, school, onIs
     setType("tc");
     setStudent(null);
     setQuery("");
-    setD(defaults("tc", null));
+    setD(defaults("tc", null, session?.label || ""));
     setMarkLeft(true);
     setError(null);
     setIssued(null);
@@ -143,7 +146,7 @@ export function IssueCertificateDrawer({ isOpen, onClose, students, school, onIs
   const choose = (t: CertificateType, s: Student | null) => {
     setType(t);
     setStudent(s);
-    setD(defaults(t, s));
+    setD(defaults(t, s, session?.label || ""));
     setError(null);
   };
 
@@ -157,6 +160,7 @@ export function IssueCertificateDrawer({ isOpen, onClose, students, school, onIs
 
   const issue = async () => {
     if (!student) return setError("Choose the student first.");
+    if (!session) return setError(sessionError || "Academic session is unavailable.");
     setSaving(true);
     setError(null);
     const res = await certificateService.issue({ studentId: student.id, type, details: d, markLeft: type === "tc" && markLeft });
@@ -356,7 +360,7 @@ export function IssueCertificateDrawer({ isOpen, onClose, students, school, onIs
               <button type="button" onClick={onClose} disabled={saving} className="btn btn-secondary">
                 Cancel
               </button>
-              <button type="button" onClick={issue} disabled={saving || !student} className="btn btn-primary min-w-[160px]">
+              <button type="button" onClick={issue} disabled={saving || !student || !session} className="btn btn-primary min-w-[160px]">
                 {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Printer className="h-4 w-4" />}
                 {saving ? "Issuing…" : "Issue and print"}
               </button>

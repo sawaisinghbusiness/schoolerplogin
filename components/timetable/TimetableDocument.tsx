@@ -2,7 +2,7 @@ import React from "react";
 import { DAYS, Entry, Period } from "@/lib/services/timetableService";
 
 /** A4 class timetable, plain black on white. */
-export function TimetableDocument({ school, classSec, periods, entries, teacherName }: { school: string; classSec: string; periods: Period[]; entries: Entry[]; teacherName: (id: string | null) => string }) {
+export function TimetableDocument({ school, classSec, periods, entries, teacherName, sessionLabel }: { school: string; classSec: string; periods: Period[]; entries: Entry[]; teacherName: (id: string | null) => string; sessionLabel?: string }) {
   const cell = "border border-black px-2 py-2 align-top";
   const at = (day: number, p: Period) => entries.find((e) => e.day === day && e.periodId === p.id);
   return (
@@ -10,7 +10,7 @@ export function TimetableDocument({ school, classSec, periods, entries, teacherN
       <div className="border-b-2 border-black pb-3 text-center">
         <div className="text-[20px] font-bold uppercase tracking-wide">{school}</div>
         <div className="mt-1 text-[15px] font-bold">
-          Timetable · Class {classSec} · Session 2026-27
+          Timetable · Class {classSec}{sessionLabel ? ` · Session ${sessionLabel}` : ""}
         </div>
       </div>
       <table className="mt-6 w-full border-collapse">

@@ -1,0 +1,19 @@
+{
+  "command": "impeccable detect components/ErpHome.tsx --json",
+  "cwd": "C:/Users/ADMIN/Desktop/folder for staff app erp project",
+  "exitCode": 0,
+  "findings": [],
+  "browser": {
+    "injectionSucceeded": true,
+    "overlayFindings": [
+      {
+        "rule": "flat-type-hierarchy",
+        "location": "body / h1 / h2",
+        "description": "body16px,h1 inherited16px,h218px,largest adjacent ratio1.13 versus detector target1.25",
+        "interpretation": "Heuristic only: actual nested greeting/name spans are12.5px and17px; compact18px section headings are intentional mobile UI. Not a proven accessibility defect."
+      }
+    ],
+    "userVisibleOverlayRemaining": false,
+    "liveServerStopped": true
+  }
+}

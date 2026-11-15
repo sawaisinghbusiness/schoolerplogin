@@ -1,5 +1,6 @@
 "use client";
 
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Globe, MessageSquareText, Plus, RefreshCw, Search } from "lucide-react";
 import { Message, messageService } from "@/lib/services/messageService";
@@ -14,14 +15,6 @@ const when = (iso: string) => {
   };
 };
 
-function role(): string {
-  try {
-    return localStorage.getItem("schooldesk_user_role") || "";
-  } catch {
-    return "";
-  }
-}
-
 export default function MessagesPage() {
   const [list, setList] = useState<Message[] | null>(null);
   const [setupNeeded, setSetupNeeded] = useState(false);
@@ -29,7 +22,7 @@ export default function MessagesPage() {
   const [refreshing, setRefreshing] = useState(false);
   const [composeOpen, setComposeOpen] = useState(false);
   const [openId, setOpenId] = useState<string | null>(null);
-  const [me, setMe] = useState("");
+  const { roleKey: me } = useCurrentUser();
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState<"all" | "pending" | "sent">("all");
 
@@ -44,7 +37,6 @@ export default function MessagesPage() {
 
   useEffect(() => {
     load();
-    setMe(role());
     // /messages?new=1 opens the composer straight away (old "Send circular" links land here).
     if (new URLSearchParams(window.location.search).get("new") === "1") {
       setComposeOpen(true);

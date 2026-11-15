@@ -1,4 +1,5 @@
 "use client";
+import { useErpSession } from "@/lib/useErpSession";
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
@@ -24,7 +25,7 @@ import { StudentCard } from "@/components/students/StudentCard";
  * backend saves the old fields and answers detailsSaved: false.
  */
 
-const CLASS_ORDER = ["Nursery", "LKG", "UKG", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th", "11th", "12th"];
+const CLASS_ORDER = ["Pre Nursery", "Nursery", "LKG", "UKG", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th", "11th", "12th"];
 const GENDERS = ["Male", "Female", "Other"] as const;
 const CATEGORIES = ["General", "OBC", "MBC", "SC", "ST", "EWS"];
 const RELIGIONS = ["Hindu", "Muslim", "Sikh", "Jain", "Christian", "Buddhist", "Other"];
@@ -201,6 +202,7 @@ interface Props {
 }
 
 export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProfile, editing, onUpdated, prefill }: Props) {
+  const { session } = useErpSession();
   const { schoolProfile } = useSchoolProfile();
   const [form, setForm] = useState<Form>(blank());
   const [errors, setErrors] = useState<Errors>({});
@@ -264,10 +266,10 @@ export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProf
       stopsOf: (r: string) => Array.from(stopsByRoute.get(r) || []).sort(),
       houses: Array.from(houses).sort(),
       takenSr: new Set(students.filter((s) => s.id !== editing?.id).map((s) => s.srNo)),
-      nextSr: `SR-2026-${nextNumber(students.map((s) => s.srNo), 1001)}`,
+      nextSr: session ? `SR-${session.start.slice(0,4)}-${nextNumber(students.map((s) => s.srNo), 1001)}` : "",
       nextAdm: `ADM-${nextNumber(students.map((s) => s.admissionNo), 1)}`,
     };
-  }, [students, editing?.id, routes]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [students, editing?.id, routes, session?.start]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const loadFull = async (id: string) => {
     loadingId.current = id;
@@ -777,7 +779,7 @@ export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProf
           {text("admissionNo", "Admission no.", { mono: true })}
           {text("admissionDate", "Admission date", { required: true, type: "date" })}
           <Field id="adm-session" label="Session">
-            <input id="adm-session" readOnly tabIndex={-1} value="2026-27" className="field w-full" />
+            <input id="adm-session" readOnly tabIndex={-1} value={session?.label || "Session unavailable"} className="field w-full" />
           </Field>
           {text("penNo", "PEN (UDISE+)", { num: true, max: 11, hint: "11 digits, if the child has one" })}
           {text("shalaDarpanId", "Shala Darpan ID", { mono: true, hint: "From the old school, if any" })}
@@ -1080,7 +1082,7 @@ export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProf
         <header className="flex h-16 shrink-0 items-center justify-between border-b border-slate-300/50 bg-white px-5 sm:px-6">
           <div>
             <h2 className="text-lg font-semibold text-slate-900">{editing ? "Edit student" : saved ? "Admission saved" : "New admission"}</h2>
-            <p className="text-xs text-slate-500">{editing ? `${editing.name} · ${editing.srNo}` : "Session 2026-27"}</p>
+            <p className="text-xs text-slate-500">{editing ? `${editing.name} · ${editing.srNo}` : session ? `Session ${session.label}` : "Session unavailable"}</p>
           </div>
           <button type="button" onClick={onClose} disabled={saving} className="rounded-lg p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-900" aria-label="Close">
             <X className="h-5 w-5" />
@@ -1180,7 +1182,7 @@ export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProf
 
                     {editing ? (
                       <div className="card p-4">
-                        <h3 className="text-sm font-semibold text-slate-900">Fee for 2026-27</h3>
+                        <h3 className="text-sm font-semibold text-slate-900">Fee for {session?.label || "current session"}</h3>
                         <dl className="mt-3 space-y-1.5 text-[13px]">
                           <FeeLine label="Total" value={editing.totalFee} />
                           <FeeLine label="Paid" value={editing.paidFee} />
@@ -1197,7 +1199,7 @@ export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProf
                       </div>
                     ) : (
                       <div className="card p-4">
-                        <h3 className="text-sm font-semibold text-slate-900">Fee for 2026-27</h3>
+                        <h3 className="text-sm font-semibold text-slate-900">Fee for {session?.label || "current session"}</h3>
                         <dl className="mt-3 space-y-1.5 text-[13px]">
                           {plan.lines.map((l) => (
                             <FeeLine key={l.key} label={l.key === "admission" ? `${l.name} (once)` : l.name} value={l.total} />

@@ -1,0 +1,129 @@
+[
+  {
+    "id": "calendar",
+    "client": "web",
+    "route": "/calendar",
+    "file": "calendar-web.png",
+    "url": "http://127.0.0.1:3010/calendar",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nDaily work\nCalendar\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nCalendar\n\nNovember 2026\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\nHoliday\nEvent\nToday\nThis month\nAdd\nReview staff meeting\nWed, 18 Nov · Meeting\nSynthetic office review event",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Calendar",
+      "This month"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "calendar",
+    "client": "app",
+    "route": "/erp/calendar/",
+    "file": "calendar-app.png",
+    "url": "http://127.0.0.1:3310/erp/calendar",
+    "text": "Calendar\n\nNovember 2026\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\nHoliday\nEvent\nToday\nThis month\nAdd\nReview staff meeting\nWed, 18 Nov · Meeting\nSynthetic office review event\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Calendar",
+      "This month"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "chapter-plan",
+    "client": "web",
+    "route": "/academics/syllabus/plan?class=6th&subject=Maths",
+    "file": "chapter-plan-web.png",
+    "url": "http://127.0.0.1:3010/academics/syllabus/plan?class=6th&subject=Maths",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nSyllabus\nPlan\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nBack\nChapter plan\n6th · Maths\nA\nB\n6th - A · taught\n1/2\n\nOn track with the plan.\n\nChapters\nAdd chapters\n1.Fractions\nPlan: November 2026 · done 15 Nov · Review Teacher\n2.Decimals\nPlan: December 2026",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Chapter plan",
+      "6th · Maths",
+      "Chapters"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "chapter-plan",
+    "client": "app",
+    "route": "/erp/syllabus/plan/?class=6th&subject=Maths",
+    "file": "chapter-plan-app.png",
+    "url": "http://127.0.0.1:3310/erp/syllabus/plan?class=6th&subject=Maths",
+    "text": "Chapter Plan\n6th · Maths\nA\nB\n6th - A · taught\n1/2\n\nOn track with the plan.\n\nChapters\nAdd chapters\n1.Fractions\nPlan: November 2026 · done 15 Nov · Review Teacher\n2.Decimals\nPlan: December 2026\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Chapter Plan",
+      "6th · Maths",
+      "Chapters"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "attendance-today",
+    "client": "web",
+    "route": "/attendance/today",
+    "file": "attendance-today-web.png",
+    "url": "http://127.0.0.1:3010/attendance/today",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nToday\nMark attendance\nRegister & reports\nLeave requests\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nAttendance\nToday\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nToday's attendance\n\nSunday, 15 November · 3 / 6 sections marked\n\nPresent today\n12 / 24 students marked\n75%\nPresent\n9\nAbsent\n3\nLeave\n0\nNot marked\n12\nPending 3\nMarked 3\nAbsent 2\nRemind all (3)\n6th - B\n4 students · Rakesh Mehta\nRemind\n7th - B\n4 students · Manish Singh\nRemind\n8th - B\n4 students · Sanjay Soni\nRemind",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Today's attendance"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "attendance-today",
+    "client": "app",
+    "route": "/erp/attendance/today/",
+    "file": "attendance-today-app.png",
+    "url": "http://127.0.0.1:3310/erp/attendance/today",
+    "text": "Today's Attendance\n\nSunday, 15 November · 3 / 6 sections marked\n\nPresent today\n12 / 24 students marked\n75%\nPresent\n9\nAbsent\n3\nLeave\n0\nNot marked\n12\nPending 3\nMarked 3\nAbsent 2\nRemind all (3)\n6th - B\n4 students · Rakesh Mehta\nRemind\n7th - B\n4 students · Manish Singh\nRemind\n8th - B\n4 students · Sanjay Soni\nRemind\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Today's Attendance"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "payment-qr",
+    "client": "web",
+    "route": "/fees/online",
+    "file": "payment-qr-web.png",
+    "url": "http://127.0.0.1:3010/fees/online",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nCollect fee\nDues & reminders\nOnline payments\nReceipts\nReports\nFee setup\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nFees\nOnline payments\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nOnline payments\n\nUPI payments parents reported in the parent app. Find the UTR in the bank statement, then verify.\n\nPayment QR & contact\nParents can’t pay online yet: the school’s payment QR is not uploaded. Upload it now\nTo check (3)\nVerified\nRejected\nPayment claims to verify\n3 records\nStudent\tUTR\tPaid on\tAmount\t\n\n\nAarav Sharma\n\n6th - A · SR-1200 ·\n\nREVIEW-2026-000\n\nsent 13 Nov, 3:30 pm\n\n13 Nov 2026\n\n₹5,000\n\nReject\nVerify\n\nPrisha Joshi\n\n7th - B · SR-1201 ·\n\nREVIEW-2026-001\n\nsent 13 Nov, 3:30 pm\n\n13 Nov 2026\n\n₹5,500\n\nReject\nVerify\n\nAnanya Rathore\n\n8th - A · SR-1202 ·\n\nREVIEW-2026-002\n\nsent 13 Nov, 3:30 pm\n\n13 Nov 2026\n\n₹6,000\n\nReject\nVerify",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "Online payments",
+      "Payment claims to verify"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "payment-qr",
+    "client": "app",
+    "route": "/erp/fees/online/",
+    "file": "payment-qr-app.png",
+    "url": "http://127.0.0.1:3310/erp/fees/online",
+    "text": "Online Payments\nPayment QR & contact\n\nParents can't pay online yet: the school's payment QR is not uploaded. Upload it now\n\nTo check 3\nVerified\nRejected\n\nAarav Sharma\n\n6th - A · SR-1200 ·\n\n₹5,000\n\nUTR\nREVIEW-2026-000\nPaid on\n13 Nov 2026\n\nsent 13 Nov, 3:30 pm · Quarter 3 payment\n\nReject\nVerify\n\nPrisha Joshi\n\n7th - B · SR-1201 ·\n\n₹5,500\n\nUTR\nREVIEW-2026-001\nPaid on\n13 Nov 2026\n\nsent 13 Nov, 3:30 pm · Quarter 3 payment\n\nReject\nVerify\n\nAnanya Rathore\n\n8th - A · SR-1202 ·\n\n₹6,000\n\nUTR\nREVIEW-2026-002\nPaid on\n13 Nov 2026\n\nsent 13 Nov, 3:30 pm · Quarter 3 payment\n\nReject\nVerify\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "headings": [
+      "Online Payments"
+    ],
+    "errors": [],
+    "missing": []
+  }
+]

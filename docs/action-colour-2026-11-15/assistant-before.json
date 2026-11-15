@@ -1,0 +1,42 @@
+[
+  {
+    "repo": "staff",
+    "file": "app/(app)/assistant/page.tsx",
+    "sha256": "c153eb0ddfb83a36a626619de8e1a4579b3b6c102cfdfb0edd4bca8ed829b07d"
+  },
+  {
+    "repo": "staff",
+    "file": "components/SahayakThinking.tsx",
+    "sha256": "354d5935dc516e29e956f085beaae09bde7e4f8938b5efcc7e14c9bd6a7ba145"
+  },
+  {
+    "repo": "staff",
+    "file": "components/SahayakButton.tsx",
+    "sha256": "4e63b00bfd9d4f9b1f3c4881dce8770b448a3a544ac67339cc46ed1b6ee60961"
+  },
+  {
+    "repo": "staff",
+    "file": "components/SahayakOwl.tsx",
+    "sha256": "6ab3e64653ea5f9f06027d6189b5563374a3adb120313934a9c289f0c61e65c8"
+  },
+  {
+    "repo": "parents",
+    "file": "app/(app)/assistant/page.tsx",
+    "sha256": "9bdc817845f83291cf75fbadbd2ea49d4edfcfa49b2c1446fb4d1b9c15337b11"
+  },
+  {
+    "repo": "parents",
+    "file": "components/SahayakThinking.tsx",
+    "sha256": "006304d1ce61d10d410a05b0b49067a302fb5b4b58d3e6c0c3e1d53d7b79e024"
+  },
+  {
+    "repo": "parents",
+    "file": "components/SahayakButton.tsx",
+    "sha256": "6c376d22615ec7cf995a86849eebcd327d711fa9ddb12e81d767ba2c0ec71c7b"
+  },
+  {
+    "repo": "parents",
+    "file": "components/SahayakOwl.tsx",
+    "sha256": "6ab3e64653ea5f9f06027d6189b5563374a3adb120313934a9c289f0c61e65c8"
+  }
+]

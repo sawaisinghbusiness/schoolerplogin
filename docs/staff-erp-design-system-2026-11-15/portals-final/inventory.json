@@ -1,0 +1,33 @@
+[
+  {
+    "id": "attendance",
+    "client": "app",
+    "route": "/erp/attendance/mark/?date=2026-11-14&class=6th&section=A",
+    "file": "attendance-app.png",
+    "url": "http://127.0.0.1:3310/erp/attendance/mark?date=2026-11-14&class=6th&section=A",
+    "text": "Mark Attendance\nDate\nClass - 6th\nSection - A\nAll present\nMark absent by roll numbers\nApply\nNo.\nName\nP\nA\nL\nH\n1\nAarav Sharma\n2\nPrisha Joshi\n3\nAnanya Rathore\n4\nVihaan Singh\nSave · 4 present, 0 absent\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Mark Attendance"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "birthdays",
+    "client": "app",
+    "route": "/erp/birthdays/",
+    "file": "birthdays-app.png",
+    "url": "http://127.0.0.1:3310/erp/birthdays",
+    "text": "Birthdays\nToday 1\n7 days 3\n30 days 3\nAll\nStudents\nStaff\nToday · 1\nAS\nAarav Sharma\n6th - A · turns 12\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 390,
+    "headings": [
+      "Birthdays",
+      "Today · 1"
+    ],
+    "errors": [],
+    "missing": []
+  }
+]

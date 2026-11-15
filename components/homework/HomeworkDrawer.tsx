@@ -3,7 +3,9 @@
 import React, { useEffect, useState } from "react";
 import { Loader2 } from "lucide-react";
 import { SideDrawer } from "@/components/ui/SideDrawer";
-import { Homework, PostOption, homeworkService } from "@/lib/services/homeworkService";
+import { Homework, HomeworkFile, PostOption, homeworkService } from "@/lib/services/homeworkService";
+
+import { HomeworkFilePicker } from "@/components/homework/HomeworkFiles";
 
 const OTHER = "__other__";
 const todayStr = () => new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" });
@@ -24,6 +26,8 @@ export function HomeworkDrawer({ open, options, sectionId, editing, onClose, onS
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");
   const [due, setDue] = useState("");
+  const [files, setFiles] = useState<HomeworkFile[]>([]);
+  const [uploading, setUploading] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -39,6 +43,7 @@ export function HomeworkDrawer({ open, options, sectionId, editing, onClose, onS
     setTitle(editing?.title || "");
     setDetails(editing?.details || "");
     setDue(editing?.dueDate || "");
+    setFiles(editing?.files || []);
     setError(null);
   }, [open, editing, options, sectionId]);
 
@@ -52,9 +57,10 @@ export function HomeworkDrawer({ open, options, sectionId, editing, onClose, onS
   const name = subject === OTHER ? other.trim() : subject;
 
   const save = async () => {
+    if (uploading) return;
     setBusy(true);
     setError(null);
-    const body = { sectionId: sec, subject: name, title, details, dueDate: due };
+    const body = { sectionId: sec, subject: name, title, details, dueDate: due, files };
     const r = editing ? await homeworkService.update(editing.id, body) : await homeworkService.create(body);
     setBusy(false);
     if (!r.success) return setError(r.error || "Could not save.");
@@ -64,16 +70,16 @@ export function HomeworkDrawer({ open, options, sectionId, editing, onClose, onS
   return (
     <SideDrawer
       isOpen={open}
-      onClose={onClose}
-      busy={busy}
+      onClose={() => !busy && !uploading && onClose()}
+      busy={busy || uploading}
       width="max-w-[520px]"
       title={editing ? "Change homework" : "New homework"}
       footer={
         <>
-          <button type="button" onClick={onClose} disabled={busy} className="btn btn-secondary ml-auto">
+          <button type="button" onClick={onClose} disabled={busy || uploading} className="btn btn-secondary ml-auto">
             Cancel
           </button>
-          <button type="button" onClick={save} disabled={busy || !sec || name.length < 2 || title.trim().length < 2} className="btn btn-primary">
+          <button type="button" onClick={save} disabled={busy || uploading || !sec || name.length < 2 || title.trim().length < 2} className="btn btn-primary">
             {busy && <Loader2 className="h-4 w-4 animate-spin" />}
             {editing ? "Save" : "Post homework"}
           </button>
@@ -117,6 +123,8 @@ export function HomeworkDrawer({ open, options, sectionId, editing, onClose, onS
           </span>
           <textarea value={details} onChange={(e) => setDetails(e.target.value)} rows={5} maxLength={2000} className="field w-full" />
         </label>
+
+        <HomeworkFilePicker files={files} onChange={setFiles} onBusyChange={setUploading} disabled={busy} />
 
         <label className="block sm:w-1/2">
           <span className="field-label">

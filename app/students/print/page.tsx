@@ -1,4 +1,5 @@
 "use client";
+import { useErpSession } from "@/lib/useErpSession";
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Printer, RotateCw, Search, Users } from "lucide-react";
@@ -24,10 +25,10 @@ function chunk<T>(list: T[], size: number): T[][] {
 }
 
 export default function IdCardsPage() {
+  const { session, error: sessionError } = useErpSession();
   const { schoolProfile: p } = useSchoolProfile();
   const [students, setStudents] = useState<Student[] | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
-  const [session, setSession] = useState<{ label: string; end: string } | null>(null);
   const [cls, setCls] = useState("");
   const [sec, setSec] = useState("");
   const [query, setQuery] = useState("");
@@ -40,7 +41,6 @@ export default function IdCardsPage() {
       setLoadError(r.error);
       setStudents(r.data.filter((s) => s.status !== "Inactive"));
     });
-    schoolProfileService.session().then((r) => setSession({ label: r.session.label, end: r.session.end }));
   }, []);
 
   const school: CardSchool = {
@@ -50,7 +50,7 @@ export default function IdCardsPage() {
     address: [p.address, p.city, [p.state, p.pincode].filter(Boolean).join(" ")].filter(Boolean).join(", "),
     phone: p.contact1 || undefined,
     affiliation: p.affiliation_no ? `${p.board || "CBSE"} Affiliation No. ${p.affiliation_no}` : undefined,
-    session: session?.label || "2026-27",
+    session: session?.label || "",
     validTill: session?.end ? longDate(session.end) : undefined,
   };
 
@@ -108,11 +108,12 @@ export default function IdCardsPage() {
     <div className="flex flex-col gap-5 pb-12 lg:h-[calc(100dvh-128px)] lg:pb-0">
       <header className="page-header shrink-0">
         <h1 className="page-title">ID cards</h1>
-        <button type="button" onClick={() => setPrinting(true)} disabled={!chosen.length} className="btn btn-primary">
+        <button type="button" onClick={() => setPrinting(true)} disabled={!chosen.length || !session} className="btn btn-primary">
           <Printer className="h-4 w-4" />
           {chosen.length === 1 ? "Print 1 card" : `Print ${chosen.length} cards`}
         </button>
       </header>
+      {!session && <p role="status" className="text-sm text-slate-600">{sessionError || "Loading academic session before printing..."}</p>}
 
       {students === null ? (
         <div className="grid gap-5 lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)]">
@@ -205,7 +206,7 @@ export default function IdCardsPage() {
         </div>
       )}
 
-      {printing && (
+      {printing && session && (
         <PrintReportCards onDone={() => setPrinting(false)}>
           {sheets.flatMap((group, i) => [
             <IdCardSheet key={`f${i}`} students={group} side="front" school={school} />,

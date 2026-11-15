@@ -1,5 +1,6 @@
 "use client";
 
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
 import Link from "next/link";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { AlertTriangle, ArrowRight, Check, ChevronLeft, ChevronRight, Loader2, MessageCircle, RefreshCw } from "lucide-react";
@@ -105,6 +106,7 @@ function SectionTile({s,onClick}:{s:SectionDay;onClick:()=>void}) {
 /** One section: everyone starts Present; change the few who are not, then save. */
 function MarkDrawer({ date, section, onClose, onSaved, onNext }: { date: string; section: SectionDay | null; onClose: () => void; onSaved: () => void; onNext: (s: SectionDay) => void }) {
   const { schoolProfile } = useSchoolProfile();
+  const canMark = ["admin", "teacher"].includes(useCurrentUser().roleKey);
   const [roster, setRoster] = useState<SectionRoster | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [marks, setMarks] = useState<Record<string, AttStatus>>({});
@@ -135,7 +137,7 @@ function MarkDrawer({ date, section, onClose, onSaved, onNext }: { date: string;
   }, [marks]);
 
   const applyRolls = () => {
-    if (!roster) return;
+    if (!roster || !canMark) return;
     const wanted = new Set(
       rolls
         .split(/[\s,]+/)
@@ -151,7 +153,7 @@ function MarkDrawer({ date, section, onClose, onSaved, onNext }: { date: string;
   };
 
   const save = async () => {
-    if (!roster || !section) return;
+    if (!roster || !section || !canMark) return;
     setSaving(true);
     const res = await attendanceService.save(
       date,
@@ -193,7 +195,7 @@ function MarkDrawer({ date, section, onClose, onSaved, onNext }: { date: string;
             <span className="hidden text-[13px] text-slate-500 sm:block">
               <b className="text-emerald-700">{counts.Present + counts.HalfDay}</b> present · <b className="text-rose-600">{counts.Absent}</b> absent · <b className="text-marigold-700">{counts.Leave}</b> leave
             </span>
-            <button type="button" onClick={save} disabled={saving || !roster} className="btn btn-primary ml-auto min-w-[170px]">
+            <button type="button" onClick={save} disabled={saving || !roster || !canMark} className="btn btn-primary ml-auto min-w-[170px]">
               {saving && <Loader2 className="h-4 w-4 animate-spin" />}
               {saving ? "Saving…" : roster?.saved ? "Save changes" : "Save attendance"}
             </button>
@@ -283,7 +285,7 @@ function MarkDrawer({ date, section, onClose, onSaved, onNext }: { date: string;
                 aria-label="Absent roll numbers"
                 className="field field-sm min-w-0 flex-1"
               />
-              <button type="button" onClick={applyRolls} disabled={!rolls.trim()} className="btn btn-soft btn-sm">
+              <button type="button" onClick={applyRolls} disabled={!rolls.trim() || !canMark} className="btn btn-soft btn-sm">
                 Mark absent
               </button>
             </div>
@@ -309,7 +311,7 @@ function MarkDrawer({ date, section, onClose, onSaved, onNext }: { date: string;
                           role="radio"
                           aria-checked={m === o.key}
                           title={o.label}
-                          onClick={() => setMarks({ ...marks, [s.id]: o.key })}
+                          disabled={!canMark || saving} onClick={() => setMarks({ ...marks, [s.id]: o.key })}
                           className={`h-10 w-10 rounded-md text-sm font-bold transition sm:h-8 sm:w-8 sm:text-[13px] ${m === o.key ? o.on : "text-slate-500 hover:bg-white hover:text-slate-800"}`}
                         >
                           {o.short}
@@ -319,7 +321,7 @@ function MarkDrawer({ date, section, onClose, onSaved, onNext }: { date: string;
                   </div>
                   {(m === "Leave" || m === "Absent") && (
                     <input
-                      value={remarks[s.id] || ""}
+                      disabled={!canMark || saving} value={remarks[s.id] || ""}
                       onChange={(e) => setRemarks({ ...remarks, [s.id]: e.target.value })}
                       placeholder={m === "Leave" ? "Reason for leave (optional)" : "Note (optional), e.g. fever"}
                       aria-label={`Note for ${s.name}`}

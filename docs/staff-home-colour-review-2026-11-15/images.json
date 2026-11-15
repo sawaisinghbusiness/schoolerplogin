@@ -1,0 +1,56 @@
+[
+  {
+    "src": "/home-top-erp.jpg",
+    "loaded": true,
+    "width": 1536,
+    "height": 857
+  },
+  {
+    "src": "/img/tiles/erp/report.png",
+    "loaded": true,
+    "width": 221,
+    "height": 192
+  },
+  {
+    "src": "/img/tiles/erp/students.png",
+    "loaded": true,
+    "width": 280,
+    "height": 192
+  },
+  {
+    "src": "/img/tiles/erp/fees.png",
+    "loaded": true,
+    "width": 190,
+    "height": 192
+  },
+  {
+    "src": "/img/tiles/erp/attendance.png",
+    "loaded": true,
+    "width": 296,
+    "height": 192
+  },
+  {
+    "src": "/img/tiles/erp/enquiries.png",
+    "loaded": true,
+    "width": 162,
+    "height": 192
+  },
+  {
+    "src": "/img/tiles/erp/exams.png",
+    "loaded": true,
+    "width": 174,
+    "height": 192
+  },
+  {
+    "src": "/img/tiles/erp/homework.png",
+    "loaded": true,
+    "width": 267,
+    "height": 192
+  },
+  {
+    "src": "/img/tiles/erp/transport.png",
+    "loaded": true,
+    "width": 250,
+    "height": 192
+  }
+]

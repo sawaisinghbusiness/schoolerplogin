@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, LogOut, Search, X } from "lucide-react";
 import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
-import { CORE_NAV, visibleNavGroups, type NavItem } from "./navConfig";
+import { CORE_NAV, allDestinations, visibleNavGroups, type NavItem } from "./navConfig";
 import { useCurrentUser } from "./useCurrentUser";
 import { SignOutDialog } from "./SignOutDialog";
 import { useDialog } from "@/components/ui/useDialog";
@@ -16,6 +16,7 @@ const Planned = () => <span className="ml-auto text-[10px] font-medium text-slat
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const pathname = usePathname();
+  const activeHref=useMemo(()=>allDestinations().filter(d=>!d.href.includes("?")&&(pathname===d.href||pathname.startsWith(d.href+"/"))).sort((a,b)=>b.href.length-a.href.length)[0]?.href,[pathname]);
   const { schoolProfile } = useSchoolProfile();
   const user = useCurrentUser();
   const [query, setQuery] = useState("");
@@ -30,12 +31,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   useEffect(() => {
     for (const group of navGroups) for (const item of group.items) {
-      if (item.children?.some(child => child.href === pathname)) {
+      if (item.children?.some(child => child.href === activeHref)) {
         setOpen(previous => previous[item.title] ? previous : { ...previous, [item.title]: true });
       }
     }
     onClose?.();
-  }, [pathname, navGroups]); // Close the phone drawer after navigation.
+  }, [pathname, activeHref, navGroups]); // Close the phone drawer after navigation.
 
   const q = query.trim().toLowerCase();
   const groups = useMemo(() => !q ? navGroups : navGroups.map(group => ({ ...group,
@@ -47,7 +48,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   })).filter(group => group.items.length), [q, navGroups]);
 
   const leaf = (item: NavItem) => {
-    const active = pathname === item.href, Icon = item.icon;
+    const active = activeHref === item.href, Icon = item.icon;
     return <Link key={item.title} href={item.href || "#"} onClick={onClose} aria-current={active ? "page" : undefined} className={`office-nav-link ${active ? "is-active" : ""}`}>
       <Icon className="h-[18px] w-[18px] shrink-0" strokeWidth={1.7} aria-hidden />
       <span className="truncate">{item.title}</span>{item.soon && <Planned />}
@@ -56,7 +57,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const item = (entry: NavItem) => {
     if (!entry.children?.length) return leaf(entry);
     const Icon = entry.icon, expanded = !!q || !!open[entry.title];
-    const current = entry.children.some(child => child.href === pathname);
+    const current = entry.children.some(child => child.href === activeHref);
     return <div key={entry.title}>
       <button type="button" onClick={() => setOpen(previous => ({ ...previous, [entry.title]: !previous[entry.title] }))} aria-expanded={expanded} className={`office-nav-link w-full text-left ${current ? "font-semibold text-slate-900" : ""}`}>
         <Icon className="h-[18px] w-[18px] shrink-0" strokeWidth={1.7} aria-hidden />
@@ -64,7 +65,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         {entry.soon && <Planned />}<ChevronDown className={`h-3.5 w-3.5 shrink-0 text-slate-400 transition-transform ${expanded ? "" : "-rotate-90"}`} aria-hidden />
       </button>
       {expanded && <div className="office-nav-children">
-        {entry.children.map(child => <Link key={child.href} href={child.href} onClick={onClose} aria-current={pathname === child.href ? "page" : undefined} className={`office-nav-child ${pathname === child.href ? "is-active" : ""}`}>
+        {entry.children.map(child => <Link key={child.href} href={child.href} onClick={onClose} aria-current={activeHref === child.href ? "page" : undefined} className={`office-nav-child ${activeHref === child.href ? "is-active" : ""}`}>
           <span className="truncate">{child.title}</span>{child.soon && <Planned />}
         </Link>)}
       </div>}

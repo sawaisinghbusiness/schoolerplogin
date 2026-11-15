@@ -1,6 +1,3 @@
-import { redirect } from "next/navigation";
-
-// Adding a staff member happens in a drawer on /staff.
-export default function Page() {
-  redirect("/staff?new=1");
-}
+import Workflow from "@/components/parity/generated/pages/staff/new";
+import { ParityFrame } from "@/components/parity/ParityFrame";
+export default function Page(){return <ParityFrame title={"Add staff"} back={"/erp/staff/"}><Workflow /></ParityFrame>;}

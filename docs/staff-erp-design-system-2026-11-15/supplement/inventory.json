@@ -1,0 +1,34 @@
+[
+  {
+    "id": "students",
+    "client": "app",
+    "route": "/erp/students/",
+    "file": "students-app.png",
+    "url": "http://127.0.0.1:3310/erp/students",
+    "text": "All Students\nAdd student\nAll 24\nDue 20\nPaid 4\nBus 8\nClass - All\nSection - All\nAS\nAarav Sharma\n6th A · S/o Rajesh Sharma\nPaid\nAS\nAditi Soni\n6th A · S/o Suresh Rathore\n₹10,000\nDS\nDiya Singh\n6th A · S/o Rajesh Sharma\n₹14,000\nTD\nTara Desai\n6th A · S/o Suresh Rathore\n₹18,000\nVS\nVihaan Singh\n6th B · D/o Vikram Singh\n₹18,000\nAJ\nArjun Joshi\n6th B · D/o Mahesh Joshi\n₹22,000\nAB\nAditya Bhat\n6th B · D/o Vikram Singh\n₹6,000\nYV\nYash Verma\n6th B · D/o Mahesh Joshi\nPaid\nIM\nIshita Mehta\n7th A · S/o Rajesh Sharma\n₹22,000\nKP\nKavya Patel\n7th A · S/o Suresh Rathore\n₹6,000\nSA\nSiya Agarwal\n7th A · S/o Rajesh Sharma\n₹10,000\nRS\nRiya Saxena\n7th A · S/o Suresh Rathore\n₹14,000\nPJ\nPrisha Joshi\n7th B · D/o Mahesh Joshi\n₹10,000\nKJ\nKabir Jain\n7th B · D/o Vikram Singh\nPaid\nSR\nShaurya Rao\n7th B · D/o Mahesh Joshi\n₹18,000\nVS\nVivaan Shah\n7th B · D/o Vikram Singh\n₹22,000\nAR\nAnanya Rathore\n8th A · S/o Suresh Rathore\n₹14,000\nMV\nMeera Vyas\n8th A · S/o Rajesh Sharma\n₹18,000\nNK\nNisha Kumari\n8th A · S/o Suresh Rathore\nPaid\nAG\nAvni Gupta\n8th A · S/o Rajesh Sharma\n₹6,000\nDC\nDev Choudhary\n8th B · D/o Mahesh Joshi\n₹6,000\nRM\nRohan Mehta\n8th B · D/o Vikram Singh\n₹10,000\nRD\nReyansh Das\n8th B · D/o Mahesh Joshi\n₹14,000\nDS\nDhruv Shah\n8th B · D/o Vikram Singh\n₹18,000\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "headings": [
+      "All Students"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  {
+    "id": "fees-counter",
+    "client": "app",
+    "route": "/erp/fees/collect/",
+    "file": "fees-counter-app.png",
+    "url": "http://127.0.0.1:3310/erp/fees/collect",
+    "text": "Collect Fee\n\nCollected today\n\n₹9,500\n\n3 receipts\n\nCash\n₹4,500\nUPI\n₹5,000\nCheque\n₹0\nHighest balances\n\nStudents with the most fee pending. Tap one to collect.\n\nNo fees pending this session.\n\nLatest receipts\nAarav Sharma\n14 Nov · #1024 · 6th\n₹2,500\nPrisha Joshi\n13 Nov · #1025 · 7th\n₹3,000\nAnanya Rathore\n12 Nov · #1026 · 8th\n₹3,500\nVihaan Singh\n11 Nov · #1027 · 6th\n₹4,000\nIshita Mehta\n14 Nov · #1028 · 7th\n₹4,500\nDev Choudhary\n13 Nov · #1029 · 8th\n₹5,000\nAditi Soni\n12 Nov · #1030 · 6th\n₹5,500\nKabir Jain\n11 Nov · #1031 · 7th\n₹6,000\nHome\nStudents\nReport\nAttendance\nProfile",
+    "width": 390,
+    "scrollWidth": 375,
+    "headings": [
+      "Collect Fee",
+      "Highest balances",
+      "Latest receipts"
+    ],
+    "errors": [],
+    "missing": []
+  }
+]

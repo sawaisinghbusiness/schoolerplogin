@@ -1,5 +1,6 @@
 "use client";
 
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
 import React, { useCallback, useEffect, useState } from "react";
 import { CalendarOff, Check, Phone, RefreshCw, X } from "lucide-react";
 import { api } from "@/lib/apiClient";
@@ -55,15 +56,8 @@ export default function LeaveRequestsPage() {
   const [filter, setFilter] = useState<Filter>("pending");
   const [res, setRes] = useState<ListResult | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
-  const [role, setRole] = useState("");
+  const { roleKey: role } = useCurrentUser();
 
-  useEffect(() => {
-    try {
-      setRole(localStorage.getItem("schooldesk_user_role") || "");
-    } catch {
-      /* display only */
-    }
-  }, []);
 
   const load = useCallback(async () => {
     setRes(null);

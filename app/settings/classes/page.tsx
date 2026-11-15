@@ -1,5 +1,7 @@
 "use client";
 
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
+
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { AlertTriangle, ArrowDown, ArrowUp, Loader2, Pencil, Plus, RotateCcw, Trash2 } from "lucide-react";
 import { classService, ClassItem } from "@/lib/services/classService";
@@ -20,6 +22,8 @@ interface Stray {
 }
 
 export default function ClassesPage() {
+  const { roleKey } = useCurrentUser();
+  const canEdit = roleKey === "admin";
   const [classes, setClasses] = useState<ClassItem[] | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [counts, setCounts] = useState<Counts | null>(null);
@@ -154,12 +158,13 @@ export default function ClassesPage() {
             )}
           </p>
         </div>
-        <button type="button" onClick={() => openAdd(null)} disabled={!classes} className="btn btn-primary shrink-0">
+        <button type="button" onClick={() => openAdd(null)} disabled={!canEdit || !classes} className="btn btn-primary shrink-0">
           <Plus className="h-4 w-4" />
           Add class
         </button>
       </header>
 
+      {!canEdit && <p className="text-sm text-slate-500">Only an administrator can change classes, sections and subjects.</p>}
       {countsError && <div role="alert" className="alert alert-amber"><span className="flex-1">Class structure is available, but student counts could not be loaded: {countsError}</span><button type="button" onClick={loadCounts} className="btn btn-secondary btn-sm">Retry counts</button></div>}
 
       {setupNotice && (
@@ -188,7 +193,7 @@ export default function ClassesPage() {
         <div className="card px-5 py-14 text-center">
           <p className="text-sm font-semibold text-slate-900">No classes yet</p>
           <p className="mt-1 text-[13px] text-slate-500">Add your first class with its sections. Subjects can be added now or later.</p>
-          <button type="button" onClick={() => openAdd(null)} className="btn btn-primary btn-sm mt-4">
+          <button type="button" onClick={() => openAdd(null)} disabled={!canEdit} className="btn btn-primary btn-sm mt-4">
             <Plus className="h-3.5 w-3.5" />
             Add class
           </button>
@@ -211,6 +216,7 @@ export default function ClassesPage() {
                     <ClassRow
                       key={c.id}
                       cls={c}
+                      canEdit={canEdit}
                       counts={counts}
                       students={classCount(c.name)}
                       secCount={secCount}
@@ -245,7 +251,7 @@ export default function ClassesPage() {
             but {missingClasses.length === 1 ? "is" : "are"} not set up here yet.
           </span>
           {missingClasses.slice(0, 2).map((m) => (
-            <button key={m.name} type="button" onClick={() => openAdd({ name: m.name, sections: m.sections.map((s) => s.section) })} className="btn btn-secondary btn-sm shrink-0">
+            <button key={m.name} type="button" disabled={!canEdit} onClick={() => openAdd({ name: m.name, sections: m.sections.map((s) => s.section) })} className="btn btn-secondary btn-sm shrink-0">
               <Plus className="h-3.5 w-3.5" />
               Set up {m.name}
             </button>
@@ -289,7 +295,7 @@ export default function ClassesPage() {
       <SectionDrawer
         cls={drawerClass}
         section={drawerSection}
-        students={drawerClass && drawerSection ? secCount(drawerClass.name, drawerSection.name) : 0}
+        students={drawerClass && drawerSection && counts ? secCount(drawerClass.name, drawerSection.name) : null}
         streams={streamsOf(classes || [])}
         setupNotice={setupNotice}
         onSetupNotice={setSetupNotice}
@@ -304,6 +310,7 @@ export default function ClassesPage() {
 
 function ClassRow({
   cls,
+  canEdit,
   counts,
   students,
   secCount,
@@ -318,6 +325,7 @@ function ClassRow({
   onDelete,
 }: {
   cls: ClassItem;
+  canEdit: boolean;
   counts: Counts | null;
   students: number;
   secCount: (cls: string, sec: string) => number;
@@ -354,6 +362,7 @@ function ClassRow({
               <button
                 key={s.id}
                 type="button"
+                disabled={!canEdit}
                 onClick={() => onOpenSection(s.id)}
                 title={`${cls.name} - ${s.name}: ${counts ? plural(n, "student") : "student count unavailable"}, ${s.subjects.length ? plural(s.subjects.length, "subject") : "no subjects yet"}. Click to edit.`}
                 className="inline-flex min-h-[36px] max-w-full items-center gap-2 rounded-md border border-slate-200 bg-white px-3 py-1.5 text-[13px] transition-colors hover:border-brand-400 hover:bg-brand-50/60"
@@ -368,6 +377,7 @@ function ClassRow({
             <button
               key={s.section}
               type="button"
+              disabled={!canEdit}
               onClick={() => onAddSection([s.section])}
               title={`${plural(s.students, "student")} ${s.students === 1 ? "is" : "are"} in ${cls.name} - ${s.section}, but the section is not set up. Click to add it.`}
               className="inline-flex max-w-full items-center gap-1.5 rounded-lg border border-dashed border-marigold-300 bg-marigold-50/60 px-2.5 py-1 text-[13px] text-marigold-900 hover:border-marigold-400"
@@ -376,7 +386,7 @@ function ClassRow({
               <span className="tabular-nums opacity-70">{s.students}</span>
             </button>
           ))}
-          <button type="button" onClick={() => onAddSection(null)} className="inline-flex min-h-[36px] items-center gap-1 rounded-md px-2.5 py-1.5 text-[13px] font-semibold text-brand-700 hover:bg-brand-50">
+          <button type="button" disabled={!canEdit} onClick={() => onAddSection(null)} className="inline-flex min-h-[36px] items-center gap-1 rounded-md px-2.5 py-1.5 text-[13px] font-semibold text-brand-700 hover:bg-brand-50">
             <Plus className="h-3.5 w-3.5" />
             Add section
           </button>
@@ -397,20 +407,20 @@ function ClassRow({
           <Loader2 className="mx-1.5 h-4 w-4 animate-spin text-slate-400" />
         ) : (
           <>
-            <button type="button" onClick={() => onMove(-1)} disabled={first} className={iconBtn} title="Move up" aria-label={`Move ${cls.name} up`}>
+            <button type="button" onClick={() => onMove(-1)} disabled={!canEdit || first} className={iconBtn} title="Move up" aria-label={`Move ${cls.name} up`}>
               <ArrowUp className="h-4 w-4" />
             </button>
-            <button type="button" onClick={() => onMove(1)} disabled={last} className={iconBtn} title="Move down" aria-label={`Move ${cls.name} down`}>
+            <button type="button" onClick={() => onMove(1)} disabled={!canEdit || last} className={iconBtn} title="Move down" aria-label={`Move ${cls.name} down`}>
               <ArrowDown className="h-4 w-4" />
             </button>
           </>
         )}
         <span className="mx-1 h-4 w-px bg-slate-200" />
-        <button type="button" onClick={onRename} className={iconBtn} title="Rename class" aria-label={`Rename ${cls.name}`}>
+        <button type="button" disabled={!canEdit || !counts} onClick={onRename} className={iconBtn} title="Rename class" aria-label={`Rename ${cls.name}`}>
           <Pencil className="h-4 w-4" />
         </button>
         <WithTip tip={students ? `${plural(students, "student")} ${students === 1 ? "is" : "are"} in ${cls.name}. Move them before deleting.` : undefined}>
-          <button type="button" onClick={onDelete} disabled={!!students || !counts} className={`${iconBtn} hover:bg-rose-50 hover:text-rose-600`} title={students ? undefined : "Delete class"} aria-label={`Delete ${cls.name}`}>
+          <button type="button" onClick={onDelete} disabled={!canEdit || !!students || !counts} className={`${iconBtn} hover:bg-rose-50 hover:text-rose-600`} title={students ? undefined : "Delete class"} aria-label={`Delete ${cls.name}`}>
             <Trash2 className="h-4 w-4" />
           </button>
         </WithTip>

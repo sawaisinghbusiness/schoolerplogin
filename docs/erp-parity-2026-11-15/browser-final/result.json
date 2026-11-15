@@ -1,0 +1,58 @@
+{
+  "synthetic": true,
+  "routes": 8,
+  "overflow": [],
+  "errors": [],
+  "missing": [],
+  "interactions": [
+    "Web-created calendar event appears in staff ERP (synthetic API).",
+    "App-updated calendar record appears on web (synthetic API).",
+    "Web QR upload is visible in app; app QR removal is visible on web (synthetic API).",
+    "Same XLSX fills marks on web and app; no write occurs until explicit Save.",
+    "Both calendar interfaces follow server teacher role despite forged localStorage admin."
+  ],
+  "writes": [
+    {
+      "method": "POST",
+      "path": "/api/calendar",
+      "body": {
+        "title": "Paired web event",
+        "isHoliday": false,
+        "category": "Event",
+        "start": "2026-11-15",
+        "end": "2026-11-15",
+        "description": ""
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/calendar/local-1",
+      "body": {
+        "title": "Paired app updated event",
+        "isHoliday": false,
+        "category": "Event",
+        "start": "2026-11-15",
+        "end": "2026-11-15",
+        "description": ""
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/fee-claims/settings",
+      "body": {
+        "qrImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aZ6kAAAAASUVORK5CYII=",
+        "upiName": "Review School",
+        "officePhone": ""
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/fee-claims/settings",
+      "body": {
+        "removeQr": true,
+        "upiName": "Review School",
+        "officePhone": ""
+      }
+    }
+  ]
+}

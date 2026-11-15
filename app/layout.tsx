@@ -6,6 +6,8 @@ import "@fontsource-variable/jetbrains-mono";
 import "@fontsource-variable/fraunces";
 import "./globals.css";
 import "./erp.css";
+import "./parity.css";
+import "./action-palette.css";
 import { AppShell } from "@/components/layout/AppShell";
 
 export const metadata: Metadata = {

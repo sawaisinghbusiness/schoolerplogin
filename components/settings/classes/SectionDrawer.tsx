@@ -22,7 +22,7 @@ export function SectionDrawer({
 }: {
   cls: ClassItem | null;
   section: SectionItem | null;
-  students: number;
+  students: number | null;
   /** Streams to offer (11th–12th). */
   streams: string[];
   setupNotice: string | null;
@@ -96,6 +96,7 @@ export function SectionDrawer({
   };
 
   const remove = async () => {
+    if (students === null || students > 0) return;
     setBusy(true);
     const res = await classService.deleteSection(section.id);
     setBusy(false);
@@ -113,7 +114,7 @@ export function SectionDrawer({
         onClose={onClose}
         busy={busy || !!confirm}
         title={label}
-        subtitle={`${plural(students, "student")} · ${section.subjects.length ? plural(section.subjects.length, "subject") : "no subjects yet"}`}
+        subtitle={`${students === null ? "Student count unavailable" : plural(students, "student")} · ${section.subjects.length ? plural(section.subjects.length, "subject") : "no subjects yet"}`}
         width="max-w-[480px]"
         footer={
           <>
@@ -146,7 +147,7 @@ export function SectionDrawer({
               </button>
             </div>
             <p className={`mt-1.5 text-xs ${clash ? "text-rose-700" : "text-slate-500"}`}>
-              {clash ? `${cls.name} already has section ${newName}.` : students ? `Its ${plural(students, "student")} move to the new name.` : "No students in this section yet."}
+              {clash ? `${cls.name} already has section ${newName}.` : students ? `Its ${plural(students, "student")} move to the new name.` : students === null ? "Student count is unavailable." : "No students in this section yet."}
             </p>
           </section>
 
@@ -184,10 +185,10 @@ export function SectionDrawer({
           <section className="workspace-section flex flex-wrap items-center gap-3 border-b border-slate-200 p-5 last:border-b-0">
             <div className="min-w-0 flex-1">
               <h3 className="text-[13px] font-semibold text-slate-700">Delete section</h3>
-              <p className="text-xs text-slate-500">{students ? `${plural(students, "student")} ${students === 1 ? "is" : "are"} in ${label}. Move them from Promote & transfer first.` : "Removes the section. This cannot be undone."}</p>
+              <p className="text-xs text-slate-500">{students ? `${plural(students, "student")} ${students === 1 ? "is" : "are"} in ${label}. Move them from Promote & transfer first.` : students === null ? "Student count is unavailable. Reload counts before deleting this section." : "Removes the section. This cannot be undone."}</p>
             </div>
             <WithTip tip={students ? `${label} has ${plural(students, "student")}` : undefined}>
-              <button type="button" onClick={() => setConfirm("delete")} disabled={!!students || busy} className="btn btn-sm border border-rose-200 bg-white text-rose-700 hover:bg-rose-50">
+              <button type="button" onClick={() => setConfirm("delete")} disabled={students === null || !!students || busy} className="btn btn-sm border border-rose-200 bg-white text-rose-700 hover:bg-rose-50">
                 <Trash2 className="h-3.5 w-3.5" />
                 Delete
               </button>
@@ -200,12 +201,12 @@ export function SectionDrawer({
         <p>
           {label} becomes <b className="text-slate-900">{cls.name} - {newName}</b>.
         </p>
-        {students > 0 ? (
+        {students !== null && students > 0 ? (
           <p className="rounded-lg bg-slate-50 p-3">
             Renaming moves all <b className="text-slate-900">{plural(students, "student")}</b> of {label} to the new name. Their records, attendance and fees stay the same.
           </p>
         ) : (
-          <p>No students are in this section yet.</p>
+          <p>{students === null ? "Student count is unavailable. Existing records follow the section name." : "No students are in this section yet."}</p>
         )}
       </ConfirmModal>
 
