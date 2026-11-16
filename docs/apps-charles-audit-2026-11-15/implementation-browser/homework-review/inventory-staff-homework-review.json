@@ -1,0 +1,461 @@
+[
+  {
+    "mode": "staff",
+    "requested": "/homework/?tab=check",
+    "file": "staff/homework-360.png",
+    "url": "/homework?tab=check",
+    "title": "Mother Teresa Nobles Academy · Staff",
+    "text": "Homework\nCreate\nCheck\nHomework - 5th - B · Maths · 14 Nov — Exercise 4.2 — Q 1 to 10\n\nMaths - 5th - B\n\n14 Nov\n\nExercise 4.2 — Q 1 to 10\n\n1 sent their work from home. See below.\n\nMark who completed the work. Open received files before saving your review.\n\nAC\nAarav Choudhary\nWork received\nView submitted work · 0 files\n\nDid all 10 questions. Q7 was hard.\n\nAS\nAnanya Sharma\nBR\nBhavesh Rathore\nCM\nChetna Meena\nDS\nDevendra Singh\nDB\nDivya Bishnoi\nFK\nFarhan Khan\nGK\nGeeta Kanwar\nHV\nHarsh Vyas\nIJ\nIshita Jain\nJS\nJayant Soni\nKP\nKavya Panwar\nLG\nLokesh Gehlot\nMG\nMahi Garg\nHome\nStudents\nReport\nAttendance\nProfile\nSave · 14 / 14 submitted",
+    "width": 360,
+    "scrollWidth": 345,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "name": "Menu",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Menu",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Create",
+        "x": 16,
+        "y": 73,
+        "w": 157,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Check",
+        "x": 173,
+        "y": 73,
+        "w": 157,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Homework - 5th - B · Maths · 14 Nov — Exercise 4.2 — Q 1 to 10",
+        "x": 16,
+        "y": 136,
+        "w": 313,
+        "h": 48,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "ACAarav ChoudharyWork received",
+        "x": 31,
+        "y": 381,
+        "w": 283,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "ASAnanya Sharma",
+        "x": 31,
+        "y": 531,
+        "w": 283,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "BRBhavesh Rathore",
+        "x": 31,
+        "y": 588,
+        "w": 283,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "CMChetna Meena",
+        "x": 31,
+        "y": 645,
+        "w": 283,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "DSDevendra Singh",
+        "x": 31,
+        "y": 702,
+        "w": 283,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "DBDivya Bishnoi",
+        "x": 31,
+        "y": 759,
+        "w": 283,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "FKFarhan Khan",
+        "x": 31,
+        "y": 816,
+        "w": 283,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "GKGeeta Kanwar",
+        "x": 31,
+        "y": 873,
+        "w": 283,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "HVHarsh Vyas",
+        "x": 31,
+        "y": 930,
+        "w": 283,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "IJIshita Jain",
+        "x": 31,
+        "y": 987,
+        "w": 283,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "JSJayant Soni",
+        "x": 31,
+        "y": 1044,
+        "w": 283,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "KPKavya Panwar",
+        "x": 31,
+        "y": 1101,
+        "w": 283,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "LGLokesh Gehlot",
+        "x": 31,
+        "y": 1158,
+        "w": 283,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "MGMahi Garg",
+        "x": 31,
+        "y": 1215,
+        "w": 283,
+        "h": 56,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Students",
+        "x": 69,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Report",
+        "x": 138,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Attendance",
+        "x": 207,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 276,
+        "y": 780,
+        "w": 69,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Save · 14 / 14 submitted",
+        "x": 16,
+        "y": 724,
+        "w": 313,
+        "h": 46,
+        "font": "14px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "H1",
+        "text": "Homework",
+        "size": "18px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Create",
+        "size": "14px",
+        "weight": "500",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Check",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(13, 42, 94)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Homework - 5th - B · Maths · 14 Nov — Exercise 4.2 — Q 1 to 10",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Maths - 5th - B",
+        "size": "17px",
+        "weight": "700",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Exercise 4.2 — Q 1 to 10",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "1 sent their work from home. See below.",
+        "size": "13px",
+        "weight": "500",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "P",
+        "text": "Mark who completed the work. Open received files before saving your review.",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(102, 106, 110)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "ACAarav ChoudharyWork received",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "P",
+        "text": "Did all 10 questions. Q7 was hard.",
+        "size": "13.5px",
+        "weight": "400",
+        "color": "rgb(38, 46, 66)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "ASAnanya Sharma",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "BRBhavesh Rathore",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "CMChetna Meena",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "DSDevendra Singh",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "DBDivya Bishnoi",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "FKFarhan Khan",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "GKGeeta Kanwar",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "HVHarsh Vyas",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "IJIshita Jain",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "JSJayant Soni",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "KPKavya Panwar",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "LGLokesh Gehlot",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "MGMahi Garg",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(36, 38, 40)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save · 14 / 14 submitted",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": []
+  }
+]

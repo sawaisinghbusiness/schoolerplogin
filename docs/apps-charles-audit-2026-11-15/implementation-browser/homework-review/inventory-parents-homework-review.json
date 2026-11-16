@@ -1,0 +1,475 @@
+[
+  {
+    "mode": "parents",
+    "requested": "/homework/",
+    "file": "parents/homework-360.png",
+    "url": "/homework",
+    "title": "Mother Teresa Nobles Academy · Parents",
+    "text": "Homework\nPG\nThis week\nMaths\nMon, 16 Nov\nPending\n\nExercise 4.2 — Q 1 to 10\n\nShow all steps.\n\nDue tomorrow\n\nDone, send to teacher\nHindi\nMon, 16 Nov\nPending\n\nपाठ 6 के प्रश्न-उत्तर याद करें\n\nDue: 18 Nov\n\nDone, send to teacher\nLast week\nEnglish\nSat, 14 Nov\nChecked\n\nWrite a paragraph on 'My School'\n\nAbout 100 words.\n\nDone, send to teacher\nScience\nSat, 14 Nov\nChecked\n\nDraw the parts of a plant\n\nLabel root, stem, leaf, flower.\n\nDone, send to teacher\nSocial Studies\nFri, 13 Nov\nNot submitted\n\nMap work: mark 5 rivers of India\n\nDone, send to teacher\nComputer\nTue, 10 Nov\nChecked\n\nLearn the parts of a computer\n\nDone, send to teacher\nHome\nCalendar\nStudy\nFees\nProfile\nSend homework to teacher\n\nMaths\n\nExercise 4.2 — Q 1 to 10\n\nYour completed work\n\nTake photos of the copy's pages or choose a PDF (up to 5).\n\nAdd photo or PDF\nNote for the teacher (optional)\n\nSending shares your work with the teacher. Their review appears separately.\n\nSend to teacher",
+    "width": 360,
+    "scrollWidth": 360,
+    "bodyFont": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+    "controls": [
+      {
+        "tag": "A",
+        "name": "Back",
+        "x": 6,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Back",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Switch child: Priya Garg",
+        "x": 310,
+        "y": 6,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Switch child: Priya Garg",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Done, send to teacher",
+        "x": 31,
+        "y": 222,
+        "w": 298,
+        "h": 50,
+        "font": "15px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Done, send to teacher",
+        "x": 31,
+        "y": 396,
+        "w": 298,
+        "h": 50,
+        "font": "15px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Done, send to teacher",
+        "x": 31,
+        "y": 609,
+        "w": 298,
+        "h": 50,
+        "font": "15px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Done, send to teacher",
+        "x": 31,
+        "y": 782,
+        "w": 298,
+        "h": 50,
+        "font": "15px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Done, send to teacher",
+        "x": 31,
+        "y": 956,
+        "w": 298,
+        "h": 50,
+        "font": "15px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Done, send to teacher",
+        "x": 31,
+        "y": 1101,
+        "w": 298,
+        "h": 50,
+        "font": "15px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Home",
+        "x": 0,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Calendar",
+        "x": 72,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Study",
+        "x": 144,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Fees",
+        "x": 216,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "name": "Profile",
+        "x": 288,
+        "y": 780,
+        "w": 72,
+        "h": 64,
+        "font": "12px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Close",
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 844,
+        "font": "16px",
+        "label": "Close",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Close",
+        "x": 308,
+        "y": 275,
+        "w": 44,
+        "h": 44,
+        "font": "16px",
+        "label": "Close",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "name": "",
+        "x": 15,
+        "y": 476,
+        "w": 1,
+        "h": 1,
+        "font": "16px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Add photo or PDF",
+        "x": 16,
+        "y": 489,
+        "w": 328,
+        "h": 52,
+        "font": "15px",
+        "label": null,
+        "disabled": false
+      },
+      {
+        "tag": "TEXTAREA",
+        "name": "E.g. Did questions 1 to 10, did not understand 11.",
+        "x": 16,
+        "y": 589,
+        "w": 328,
+        "h": 104,
+        "font": "16px",
+        "label": "associated label",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "name": "Send to teacher",
+        "x": 16,
+        "y": 774,
+        "w": 328,
+        "h": 50,
+        "font": "15px",
+        "label": null,
+        "disabled": false
+      }
+    ],
+    "small": [],
+    "unlabelled": [
+      {
+        "name": "",
+        "x": 15,
+        "y": 476,
+        "w": 1,
+        "h": 1
+      }
+    ],
+    "clipped": [],
+    "typography": [
+      {
+        "tag": "H1",
+        "text": "Homework",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Switch child: Priya Garg",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "H2",
+        "text": "This week",
+        "size": "13px",
+        "weight": "500",
+        "color": "rgb(95, 104, 123)"
+      },
+      {
+        "tag": "P",
+        "text": "Exercise 4.2 — Q 1 to 10",
+        "size": "15.5px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "P",
+        "text": "Show all steps.",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "P",
+        "text": "Due tomorrow",
+        "size": "13px",
+        "weight": "500",
+        "color": "rgb(120, 85, 45)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Done, send to teacher",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(20, 70, 160)"
+      },
+      {
+        "tag": "P",
+        "text": "पाठ 6 के प्रश्न-उत्तर याद करें",
+        "size": "15.5px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "P",
+        "text": "Due: 18 Nov",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(95, 104, 123)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Done, send to teacher",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(20, 70, 160)"
+      },
+      {
+        "tag": "H2",
+        "text": "Last week",
+        "size": "13px",
+        "weight": "500",
+        "color": "rgb(95, 104, 123)"
+      },
+      {
+        "tag": "P",
+        "text": "Write a paragraph on 'My School'",
+        "size": "15.5px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "P",
+        "text": "About 100 words.",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Done, send to teacher",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(20, 70, 160)"
+      },
+      {
+        "tag": "P",
+        "text": "Draw the parts of a plant",
+        "size": "15.5px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "P",
+        "text": "Label root, stem, leaf, flower.",
+        "size": "14px",
+        "weight": "400",
+        "color": "rgb(56, 65, 85)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Done, send to teacher",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(20, 70, 160)"
+      },
+      {
+        "tag": "P",
+        "text": "Map work: mark 5 rivers of India",
+        "size": "15.5px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Done, send to teacher",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(20, 70, 160)"
+      },
+      {
+        "tag": "P",
+        "text": "Learn the parts of a computer",
+        "size": "15.5px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Done, send to teacher",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(20, 70, 160)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Close",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "H2",
+        "text": "Send homework to teacher",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Close",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(95, 104, 123)"
+      },
+      {
+        "tag": "P",
+        "text": "Maths",
+        "size": "13px",
+        "weight": "400",
+        "color": "rgb(95, 104, 123)"
+      },
+      {
+        "tag": "P",
+        "text": "Exercise 4.2 — Q 1 to 10",
+        "size": "15.5px",
+        "weight": "700",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "H3",
+        "text": "Your completed work",
+        "size": "14px",
+        "weight": "600",
+        "color": "rgb(22, 33, 58)"
+      },
+      {
+        "tag": "P",
+        "text": "Take photos of the copy's pages or choose a PDF (up to 5).",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(95, 104, 123)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Add photo or PDF",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(20, 70, 160)"
+      },
+      {
+        "tag": "P",
+        "text": "Sending shares your work with the teacher. Their review appears separately.",
+        "size": "12.5px",
+        "weight": "400",
+        "color": "rgb(95, 104, 123)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Send to teacher",
+        "size": "15px",
+        "weight": "600",
+        "color": "rgb(255, 255, 255)"
+      }
+    ],
+    "images": [],
+    "animations": [
+      {
+        "name": "rise",
+        "state": "finished",
+        "duration": 280,
+        "iterations": 1
+      },
+      {
+        "name": "fadeIn",
+        "state": "finished",
+        "duration": 150,
+        "iterations": 1
+      },
+      {
+        "name": "slideUp",
+        "state": "finished",
+        "duration": 260,
+        "iterations": 1
+      }
+    ]
+  }
+]
