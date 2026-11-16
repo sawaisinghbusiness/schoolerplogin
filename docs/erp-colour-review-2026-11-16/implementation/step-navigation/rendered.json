@@ -1,0 +1,1518 @@
+{
+  "capturedAt": "2026-11-16T11:10:39.624Z",
+  "limits": "Synthetic read-only API data; proposed styles injected in DOM only; visible opaque/composited colour samples do not certify whole-app accessibility.",
+  "rows": [
+    {
+      "mode": "erpApp",
+      "route": "/",
+      "variant": "live",
+      "file": "implementation/step-navigation/erpApp-home-live.png",
+      "url": "/",
+      "width": 390,
+      "scrollWidth": 375,
+      "text": "Good afternoon\nReview\nRO\nSearch a student by name or SR no.\nReport\nStudents\nFees\nAttendance\nEnquiries\nExams\nHomework\nTransport\nToday at school\nClass attendance\n3 of 6 classes not marked\n3\nAbsent today\nNo one so far\nFees collected today\n3 receipts\n₹9,500\nEnquiry follow-ups\nNone due\nBirthdays today\nNone today\nHome\nStudents\nReport\nAttendance\nProfile",
+      "named": {
+        "canvas": {
+          "text": "Good afternoonReviewROSearch a student by name or SR no.ReportStudentsFeesA",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "rawBackground": "rgb(238, 241, 245)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "heading": {
+          "text": "Good afternoonReview",
+          "foreground": "#ffffff",
+          "background": "#242d3c",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "Good afternoon",
+          "foreground": "#c4cdda",
+          "background": "#242d3c",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "12.5px",
+          "weight": "500"
+        }
+      },
+      "textSamples": []
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/students/",
+      "variant": "live",
+      "file": "implementation/step-navigation/erpApp-erp-students-live.png",
+      "url": "/erp/students",
+      "width": 390,
+      "scrollWidth": 375,
+      "text": "All Students\nAdd student\nAll 24\nDue 20\nPaid 4\nBus 8\nClass - All\nSection - All\nAS\nAarav Sharma\n6th A · S/o Rajesh Sharma\nPaid\nAS\nAditi Soni\n6th A · S/o Suresh Rathore\n₹10,000\nDS\nDiya Singh\n6th A · S/o Rajesh Sharma\n₹14,000\nTD\nTara Desai\n6th A · S/o Suresh Rathore\n₹18,000\nVS\nVihaan Singh\n6th B · D/o Vikram Singh\n₹18,000\nAJ\nArjun Joshi\n6th B · D/o Mahesh Joshi\n₹22,000\nAB\nAditya Bhat\n6th B · D/o Vikram Singh\n₹6,000\nYV\nYash Verma\n6th B · D/o Mahesh Joshi\nPaid\nIM\nIshita Mehta\n7th A · S/o Rajesh Sharma\n₹22,000\nKP\nKavya Patel\n7th A · S/o Suresh Rathore\n₹6,000\nSA\nSiya Agarwal\n7th A · S/o Rajesh Sharma\n₹10,000\nRS\nRiya Saxena\n7th A · S/o Suresh Rathore\n₹14,000\nPJ\nPrisha Joshi\n7th B · D/o Mahesh Joshi\n₹10,000\nKJ\nKabir Jain\n7th B · D/o Vikram Singh\nPaid\nSR\nShaurya Rao\n7th B · D/o Mahesh Joshi\n₹18,000\nVS\nVivaan Shah\n7th B · D/o Vikram Singh\n₹22,000\nAR\nAnanya Rathore\n8th A · S/o Suresh Rathore\n₹14,000\nMV\nMeera Vyas\n8th A · S/o Rajesh Sharma\n₹18,000\nNK\nNisha Kumari\n8th A · S/o Suresh Rathore\nPaid\nAG\nAvni Gupta\n8th A · S/o Rajesh Sharma\n₹6,000\nDC\nDev Choudhary\n8th B · D/o Mahesh Joshi\n₹6,000\nRM\nRohan Mehta\n8th B · D/o Vikram Singh\n₹10,000\nRD\nReyansh Das\n8th B · D/o Mahesh Joshi\n₹14,000\nDS\nDhruv Shah\n8th B · D/o Vikram Singh\n₹18,000\nHome\nStudents\nReport\nAttendance\nProfile",
+      "named": {
+        "canvas": {
+          "text": "All StudentsAdd studentAll 24Due 20Paid 4Bus 8Class - AllSection - AllASAar",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "rawBackground": "rgb(238, 241, 245)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "card": {
+          "text": "ASAarav Sharma6th A · S/o Rajesh SharmaPaid",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(214, 221, 230)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "field": {
+          "text": "Name, SR no., father or mobile",
+          "foreground": "#16213a",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "Class -",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "15.5px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "All 24",
+          "foreground": "#a43f20",
+          "background": "#eef1f5",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Due 20",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "size": 14,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid 4",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "size": 14,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Bus 8",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "size": 14,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Class - All",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Section - All",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/students/admission/",
+      "variant": "live",
+      "file": "implementation/step-navigation/erpApp-erp-students-admission-live.png",
+      "url": "/erp/students/admission",
+      "width": 390,
+      "scrollWidth": 375,
+      "text": "Admission form\n1\nStudent\n2\nClass\n3\nLast school\n4\nFamily\n5\nAddress & bus\n6\nDocuments\n7\nCheck & save\nStudent\nStep 1 of 7\n\nWrite everything as on the birth certificate.\n\nPassport photo\n\nClear face, plain background. It shows on the ID card, report card and the parent app.\n\nTake or choose photo\nName and birth\nFull name (English) *\nName in Hindi\nfor TC & certificates\n\nGender *\n\nBoy\nGirl\nOther\nDate of birth *\nAge on 1 April\nPlace of birth\nIdentity\nAadhaar number\nReligion - Hindu\nCaste\n\nCategory *\n\nGeneral\nOBC\nMBC\nSC\nST\nEWS\nNationality\nMother tongue - Hindi\nHealth\n\nBlood group\n\nA+\nA-\nB+\nB-\nO+\nO-\nAB+\nAB-\nHealth details (allergy, illness, special needs)\nNext: Class",
+      "named": {
+        "canvas": {
+          "text": "Admission form1Student2Class3Last school4Family5Address & bus6Documents7Che",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "rawBackground": "rgb(238, 241, 245)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "card": {
+          "text": "Passport photoClear face, plain background. It shows on the ID card, report",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(214, 221, 230)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "field": {
+          "text": "Aarav Singh Rathore",
+          "foreground": "#16213a",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "Step 1 of 7",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "12.5px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "1Student",
+          "foreground": "#ffffff",
+          "background": "#a43f20",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "2Class",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "3Last school",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "4Family",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "5Address & bus",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6Documents",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "7Check & save",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Write everything as on the birth certificate.",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Passport photo",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 11.5,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Clear face, plain background. It shows on the ID card, report card and",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Take or choose photo",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Full name (English) *",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Full name (English) *",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Name in Hindifor TC & certificates",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Name in Hindi",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Gender *",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Boy",
+          "foreground": "#ffffff",
+          "background": "#a43f20",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Girl",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Other",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Date of birth *",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Date of birth *",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Age on 1 April",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Age on 1 April",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Place of birth",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Place of birth",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Aadhaar number",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Aadhaar number",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Religion - Hindu",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Caste",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Caste",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/students/admission/",
+      "variant": "completed",
+      "file": "implementation/step-navigation/erpApp-erp-students-admission-completed.png",
+      "url": "/erp/students/admission",
+      "width": 390,
+      "scrollWidth": 375,
+      "text": "Admission form\nStudent\nClass\n3\nLast school\n4\nFamily\n5\nAddress & bus\n6\nDocuments\n7\nCheck & save\nClass & register\nStep 2 of 7\nClass\nClass - 6th\nSection - A\n\nMedium\n\nHindi\nEnglish\nRoll no.\nnext free\nHouse - Not yet\nRegister numbers\nSR no. *\nauto\nAdmission no.\nauto\nAdmission date *\nSession\nPEN (UDISE+)\nShala Darpan ID\nAdmission type\n\nType *\n\nNew admission\nRe-admission\nTransfer from other school\nAdmitted under RTE (25% seat)\nGive the RTE concession in Fee setup\nBack\nNext: Last school\n\nEnter the student's full name.",
+      "named": {
+        "canvas": {
+          "text": "Admission formStudentClass3Last school4Family5Address & bus6Documents7Check",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "rawBackground": "rgb(238, 241, 245)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "card": {
+          "text": "ClassClass - 6thSection - AMediumHindiEnglishRoll no.next freeHouse - Not y",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(214, 221, 230)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "field": {
+          "text": null,
+          "foreground": "#16213a",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "Step 2 of 7",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "12.5px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "Student",
+          "foreground": "#ffffff",
+          "background": "#15803d",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Class",
+          "foreground": "#ffffff",
+          "background": "#15803d",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "3Last school",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "4Family",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "5Address & bus",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6Documents",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "7Check & save",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Class - 6th",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Section - A",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Medium",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Hindi",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "English",
+          "foreground": "#ffffff",
+          "background": "#a43f20",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Roll no.next free",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Roll no.",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "House - Not yet",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "SR no. *auto",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "SR no. *",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Admission no.auto",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Admission no.",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Admission date *",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Admission date *",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Session",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Session",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "PEN (UDISE+)",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "PEN (UDISE+)",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Shala Darpan ID",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Shala Darpan ID",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Type *",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "New admission",
+          "foreground": "#ffffff",
+          "background": "#a43f20",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Re-admission",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Transfer from other school",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/students/admission/",
+      "variant": "narrow",
+      "file": "implementation/step-navigation/erpApp-erp-students-admission-narrow.png",
+      "url": "/erp/students/admission",
+      "width": 360,
+      "scrollWidth": 345,
+      "text": "Admission form\nStudent\nClass\n3\nLast school\n4\nFamily\n5\nAddress & bus\n6\nDocuments\n7\nCheck & save\nClass & register\nStep 2 of 7\nClass\nClass - 6th\nSection - A\n\nMedium\n\nHindi\nEnglish\nRoll no.\nnext free\nHouse - Not yet\nRegister numbers\nSR no. *\nauto\nAdmission no.\nauto\nAdmission date *\nSession\nPEN (UDISE+)\nShala Darpan ID\nAdmission type\n\nType *\n\nNew admission\nRe-admission\nTransfer from other school\nAdmitted under RTE (25% seat)\nGive the RTE concession in Fee setup\nBack\nNext: Last school\n\nEnter the student's full name.",
+      "named": {
+        "canvas": {
+          "text": "Admission formStudentClass3Last school4Family5Address & bus6Documents7Check",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "rawBackground": "rgb(238, 241, 245)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "card": {
+          "text": "ClassClass - 6thSection - AMediumHindiEnglishRoll no.next freeHouse - Not y",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(214, 221, 230)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "field": {
+          "text": null,
+          "foreground": "#16213a",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "Step 2 of 7",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "12.5px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "Student",
+          "foreground": "#ffffff",
+          "background": "#15803d",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Class",
+          "foreground": "#ffffff",
+          "background": "#15803d",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "3Last school",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "4Family",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "5Address & bus",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6Documents",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "7Check & save",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Class - 6th",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Section - A",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Medium",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Hindi",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "English",
+          "foreground": "#ffffff",
+          "background": "#a43f20",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Roll no.next free",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Roll no.",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "House - Not yet",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "SR no. *auto",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "SR no. *",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Admission no.auto",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Admission no.",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Admission date *",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Admission date *",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Session",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Session",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "PEN (UDISE+)",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "PEN (UDISE+)",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Shala Darpan ID",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Shala Darpan ID",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Type *",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "New admission",
+          "foreground": "#ffffff",
+          "background": "#a43f20",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Re-admission",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/settings/classes/",
+      "variant": "live",
+      "file": "implementation/step-navigation/erpApp-erp-settings-classes-live.png",
+      "url": "/erp/settings/classes",
+      "width": 390,
+      "scrollWidth": 390,
+      "text": "Classes & Subjects\n\n3 classes · 6 sections · 24 students. Tap a section to rename it or set its subjects.\n\nAdd class\n\nOther\n3 classes · 24 students\n\n6th\n8 students\nA\n4\nB\n4\nSection\n\nEnglish · Hindi · Maths · Science\n\n7th\n8 students\nA\n4\nB\n4\nSection\n\nEnglish · Hindi · Maths · Science\n\n8th\n8 students\nA\n4\nB\n4\nSection\n\nEnglish · Hindi · Maths · Science",
+      "named": {
+        "canvas": {
+          "text": "Classes & Subjects3 classes · 6 sections · 24 students. Tap a section to re",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "rawBackground": "rgb(238, 241, 245)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "card": {
+          "text": "6th8 studentsA4B4 SectionEnglish · Hindi · Maths · Science",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(214, 221, 230)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "3 classes · 6 sections · 24 students. Tap a section to rename it or set its",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "3 classes · 6 sections · 24 students. Tap a section to rename it or se",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Add class",
+          "foreground": "#ffffff",
+          "background": "#a43f20",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Other3 classes · 24 students",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "size": 13,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th8 students",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "A4",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "B4",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Section",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "English · Hindi · Maths · Science",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12.5,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "7th8 students",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "A4",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "B4",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Section",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "English · Hindi · Maths · Science",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12.5,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "8th8 students",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "A4",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "B4",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Section",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "English · Hindi · Maths · Science",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 12.5,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/fees/collect/",
+      "variant": "live",
+      "file": "implementation/step-navigation/erpApp-erp-fees-collect-live.png",
+      "url": "/erp/fees/collect",
+      "width": 390,
+      "scrollWidth": 375,
+      "text": "Collect Fee\n\nCollected today\n\n₹9,500\n\n3 receipts\n\nCash\n₹4,500\nUPI\n₹5,000\nCheque\n₹0\nHighest balances\n\nStudents with the most fee pending. Tap one to collect.\n\nNo fees pending this session.\n\nLatest receipts\nAarav Sharma\n14 Nov · #1024 · 6th\n₹2,500\nPrisha Joshi\n13 Nov · #1025 · 7th\n₹3,000\nAnanya Rathore\n12 Nov · #1026 · 8th\n₹3,500\nVihaan Singh\n11 Nov · #1027 · 6th\n₹4,000\nIshita Mehta\n14 Nov · #1028 · 7th\n₹4,500\nDev Choudhary\n13 Nov · #1029 · 8th\n₹5,000\nAditi Soni\n12 Nov · #1030 · 6th\n₹5,500\nKabir Jain\n11 Nov · #1031 · 7th\n₹6,000",
+      "named": {
+        "canvas": {
+          "text": "Collect FeeCollected today₹9,5003 receiptsCash₹4,500UPI₹5,000Cheque₹0Highes",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "rawBackground": "rgb(238, 241, 245)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "card": {
+          "text": "No fees pending this session.",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(214, 221, 230)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "15px",
+          "weight": "400"
+        },
+        "field": {
+          "text": "Name, SR no., father or mobile",
+          "foreground": "#16213a",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "Collected today",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "600"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "Collected today",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹9,500",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 28,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "3 receipts",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Students with the most fee pending. Tap one to collect.",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "No fees pending this session.",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "size": 15,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Aarav Sharma14 Nov · #1024 · 6th₹2,500",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Prisha Joshi13 Nov · #1025 · 7th₹3,000",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Ananya Rathore12 Nov · #1026 · 8th₹3,500",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Vihaan Singh11 Nov · #1027 · 6th₹4,000",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Ishita Mehta14 Nov · #1028 · 7th₹4,500",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Dev Choudhary13 Nov · #1029 · 8th₹5,000",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Aditi Soni12 Nov · #1030 · 6th₹5,500",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Kabir Jain11 Nov · #1031 · 7th₹6,000",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "blocked": []
+}

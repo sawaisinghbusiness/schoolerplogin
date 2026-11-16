@@ -1,0 +1,22 @@
+[
+  {
+    "name": "web",
+    "text": "November 2026 payroll calculated for 53 staff.",
+    "border": "rgb(214, 221, 230)",
+    "radius": "10px",
+    "width": 400,
+    "background": "rgb(255, 255, 255)",
+    "role": "status",
+    "overflow": false
+  },
+  {
+    "name": "staff",
+    "text": "Choose a photo smaller than 25 MB.",
+    "border": "rgb(214, 221, 230)",
+    "radius": "10px",
+    "width": 351,
+    "background": "rgb(255, 255, 255)",
+    "role": "alert",
+    "overflow": false
+  }
+]

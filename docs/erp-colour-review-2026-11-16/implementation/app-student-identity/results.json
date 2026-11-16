@@ -1,0 +1,80 @@
+[
+  {
+    "width": 390,
+    "name": "Aarav Sharma",
+    "nameFits": true,
+    "nameLines": 0.9998713991769547,
+    "cardHeight": 183.5,
+    "cardFits": true,
+    "logoLoaded": true,
+    "fields": [
+      {
+        "text": "SR-1200",
+        "size": "11px",
+        "lines": 1
+      },
+      {
+        "text": "ADM-2400",
+        "size": "11px",
+        "lines": 1
+      },
+      {
+        "text": "12 Jun 2013",
+        "size": "11px",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "width": 360,
+    "name": "Aarav Sharma",
+    "nameFits": true,
+    "nameLines": 0.9998713991769547,
+    "cardHeight": 183.5,
+    "cardFits": true,
+    "logoLoaded": true,
+    "fields": [
+      {
+        "text": "SR-1200",
+        "size": "11px",
+        "lines": 1
+      },
+      {
+        "text": "ADM-2400",
+        "size": "11px",
+        "lines": 1
+      },
+      {
+        "text": "12 Jun 2013",
+        "size": "11px",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "name": "Aarav Sharma",
+    "nameFits": true,
+    "nameLines": 0.9998713991769547,
+    "cardHeight": 183.5,
+    "cardFits": true,
+    "logoLoaded": true,
+    "fields": [
+      {
+        "text": "SR-1200",
+        "size": "11px",
+        "lines": 1
+      },
+      {
+        "text": "ADM-2400",
+        "size": "11px",
+        "lines": 1
+      },
+      {
+        "text": "12 Jun 2013",
+        "size": "11px",
+        "lines": 1
+      }
+    ]
+  }
+]

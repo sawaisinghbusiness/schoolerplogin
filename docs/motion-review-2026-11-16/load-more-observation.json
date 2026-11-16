@@ -1,0 +1,15 @@
+{
+  "synthetic": true,
+  "fixtureStudents": 140,
+  "before": {
+    "rows": 30,
+    "rowAnimations": [],
+    "activeAnimations": []
+  },
+  "after": {
+    "rows": 90,
+    "rowAnimations": [],
+    "activeAnimations": []
+  },
+  "limits": "Current implementation in desktop Chromium at 390px with read-only fixtures. Not a low-end phone performance benchmark."
+}

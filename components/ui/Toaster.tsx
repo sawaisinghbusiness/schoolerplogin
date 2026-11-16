@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { CheckCircle2, Info, TriangleAlert, X } from "lucide-react";
+import "./toaster.css";
 
 type Tone = "success" | "error" | "info";
 
@@ -26,11 +27,7 @@ export function toast(message: string, tone?: Tone) {
   window.dispatchEvent(new CustomEvent(EVENT, { detail: { message: String(message), tone: tone ?? guessTone(String(message)) } }));
 }
 
-const STYLES: Record<Tone, { icon: typeof Info; ring: string; iconTint: string; bar: string }> = {
-  success: { icon: CheckCircle2, ring: "ring-emerald-600/15", iconTint: "bg-emerald-50 text-emerald-600", bar: "bg-emerald-500" },
-  error: { icon: TriangleAlert, ring: "ring-rose-600/15", iconTint: "bg-rose-50 text-rose-600", bar: "bg-rose-500" },
-  info: { icon: Info, ring: "ring-slate-900/10", iconTint: "bg-sky-50 text-sky-600", bar: "bg-sky-500" },
-};
+const STYLES: Record<Tone, { icon: typeof Info }> = {success:{icon:CheckCircle2},error:{icon:TriangleAlert},info:{icon:Info}};
 
 const DURATION = 4500;
 
@@ -58,31 +55,27 @@ export function Toaster() {
   }, []);
 
   return (
-    <div aria-live="polite" className="pointer-events-none fixed left-1/2 top-4 z-[80] flex w-[min(24rem,calc(100vw-2rem))] -translate-x-1/2 flex-col gap-2.5">
+    <div className="erp-toast-stack">
       {items.map((t) => {
         const s = STYLES[t.tone];
         const Icon = s.icon;
         return (
           <div
             key={t.id}
-            role="status"
-            className={`pointer-events-auto relative flex items-start gap-3 overflow-hidden rounded-2xl bg-white p-3.5 pr-10 shadow-xl ring-1 animate-scaleUp ${s.ring}`}
+            role={t.tone === "error" ? "alert" : "status"}
+            className="erp-toast" data-tone={t.tone}
           >
-            <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${s.iconTint}`}>
-              <Icon className="h-4 w-4" />
+            <span className="erp-toast-icon">
+              <Icon size={18} aria-hidden />
             </span>
-            <p className="pt-1 text-sm leading-snug text-slate-700">{t.message}</p>
+            <p>{t.message}</p>
             <button
               onClick={() => setItems((prev) => prev.filter((x) => x.id !== t.id))}
-              className="absolute right-2 top-2 rounded-lg p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-700"
+              type="button" className="erp-toast-dismiss"
               aria-label="Dismiss"
             >
               <X className="h-4 w-4" />
             </button>
-            <span
-              className={`absolute bottom-0 left-0 h-0.5 origin-left ${s.bar}`}
-              style={{ width: "100%", animation: `toastBar ${DURATION}ms linear forwards` }}
-            />
           </div>
         );
       })}

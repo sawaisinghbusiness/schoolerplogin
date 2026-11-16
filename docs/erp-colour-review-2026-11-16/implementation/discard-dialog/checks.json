@@ -1,0 +1,30 @@
+[
+  {
+    "text": "Custom dialog opens",
+    "pass": true
+  },
+  {
+    "text": "Navigation waits",
+    "pass": true
+  },
+  {
+    "text": "Safe action initially focused",
+    "pass": true
+  },
+  {
+    "text": "Keyboard focus remains in dialog",
+    "pass": true
+  },
+  {
+    "text": "Keep editing preserves data",
+    "pass": true
+  },
+  {
+    "text": "Escape cancels without discarding",
+    "pass": true
+  },
+  {
+    "text": "Explicit discard navigates to intended destination",
+    "pass": true
+  }
+]

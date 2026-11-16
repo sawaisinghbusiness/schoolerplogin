@@ -703,7 +703,7 @@ export function AdmissionDrawer({ isOpen, onClose, students, onSaved, onOpenProf
               aria-label={shownPhoto ? "Change photo" : "Add photo"}
               className="flex h-24 w-[72px] shrink-0 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-slate-50 text-slate-400 hover:border-slate-300"
             >
-              {shownPhoto ? <img src={shownPhoto} alt="" className="h-full w-full object-cover" /> : <Camera className="h-6 w-6" />}
+              {shownPhoto ? <img src={shownPhoto} alt="" className="h-full w-full object-cover object-[50%_22%]" /> : <Camera className="h-6 w-6" />}
             </button>
             <div className="flex flex-col items-start gap-1.5">
               <button type="button" onClick={() => photoRef.current?.click()} className="btn btn-secondary btn-sm">

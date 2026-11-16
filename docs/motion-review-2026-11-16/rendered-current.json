@@ -1,0 +1,225 @@
+{
+  "capturedAt": "2026-11-16T11:30:50.105Z",
+  "limits": "Synthetic read-only API data; proposed styles injected in DOM only; visible opaque/composited colour samples do not certify whole-app accessibility.",
+  "rows": [
+    {
+      "mode": "erpApp",
+      "route": "/erp/students/",
+      "variant": "before",
+      "file": "screens/erpApp-erp-students-before.png",
+      "url": "/erp/students",
+      "width": 390,
+      "scrollWidth": 375,
+      "text": "All Students\nAdd student\nAll 140\nDue 0\nPaid 140\nBus 140\nClass - All\nSection - All\nR0\nReview Student 001\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 002\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 003\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 004\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 005\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 006\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 007\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 008\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 009\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 010\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 011\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 012\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 013\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 014\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 015\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 016\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 017\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 018\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 019\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 020\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 021\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 022\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 023\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 024\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 025\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 026\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 027\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 028\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 029\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 030\n6th A · S/o Rajesh Sharma\nPaid\nLoad more\nHome\nStudents\nReport\nAttendance\nProfile",
+      "named": {
+        "canvas": {
+          "text": "All StudentsAdd studentAll 140Due 0Paid 140Bus 140Class - AllSection - AllR",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "rawBackground": "rgb(238, 241, 245)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "card": {
+          "text": "R0Review Student 0016th A · S/o Rajesh SharmaPaid",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(214, 221, 230)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "field": {
+          "text": "Name, SR no., father or mobile",
+          "foreground": "#16213a",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "Class -",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "15.5px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "All 140",
+          "foreground": "#a43f20",
+          "background": "#eef1f5",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Due 0",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "size": 14,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid 140",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "size": 14,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Bus 140",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "size": 14,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Class - All",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Section - All",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/students/",
+      "variant": "after",
+      "file": "screens/erpApp-erp-students-after.png",
+      "url": "/erp/students",
+      "width": 390,
+      "scrollWidth": 375,
+      "text": "All Students\nAdd student\nAll 140\nDue 0\nPaid 140\nBus 140\nClass - All\nSection - All\nR0\nReview Student 001\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 002\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 003\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 004\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 005\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 006\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 007\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 008\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 009\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 010\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 011\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 012\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 013\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 014\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 015\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 016\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 017\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 018\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 019\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 020\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 021\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 022\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 023\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 024\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 025\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 026\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 027\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 028\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 029\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 030\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 031\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 032\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 033\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 034\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 035\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 036\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 037\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 038\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 039\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 040\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 041\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 042\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 043\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 044\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 045\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 046\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 047\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 048\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 049\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 050\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 051\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 052\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 053\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 054\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 055\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 056\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 057\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 058\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 059\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 060\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 061\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 062\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 063\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 064\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 065\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 066\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 067\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 068\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 069\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 070\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 071\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 072\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 073\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 074\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 075\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 076\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 077\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 078\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 079\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 080\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 081\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 082\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 083\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 084\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 085\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 086\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 087\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 088\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 089\n6th A · S/o Rajesh Sharma\nPaid\nR0\nReview Student 090\n6th A · S/o Rajesh Sharma\nPaid\nLoad more\nHome\nStudents\nReport\nAttendance\nProfile",
+      "named": {
+        "canvas": {
+          "text": "All StudentsAdd studentAll 140Due 0Paid 140Bus 140Class - AllSection - AllR",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "rawBackground": "rgb(238, 241, 245)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "card": {
+          "text": "R0Review Student 0016th A · S/o Rajesh SharmaPaid",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(214, 221, 230)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "field": {
+          "text": "Name, SR no., father or mobile",
+          "foreground": "#16213a",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "Class -",
+          "foreground": "#536071",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "15.5px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "All 140",
+          "foreground": "#a43f20",
+          "background": "#eef1f5",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Due 0",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "size": 14,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid 140",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "size": 14,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Bus 140",
+          "foreground": "#536071",
+          "background": "#eef1f5",
+          "size": 14,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Class - All",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Section - All",
+          "foreground": "#202938",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "blocked": []
+}

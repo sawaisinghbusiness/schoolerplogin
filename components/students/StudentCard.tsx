@@ -1,30 +1,36 @@
 "use client";
 
-import React from "react";
-import { Bus, ChevronDown, MapPin, Phone } from "lucide-react";
+import React, { useState } from "react";
+import { Bus, ChevronDown, MapPin, Phone, School } from "lucide-react";
 import { Student } from "@/data/mockData";
 import { initials } from "@/components/ui/Avatar";
+import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
+import "./student-identity.css";
 
 const dob = (value?: string) => value ? new Date(value + "T00:00:00").toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" }) : "—";
 
 /** A working identity summary. Printed school cards have their own document layout. */
-export function StudentCard({ student: s, schoolName, schoolShort }: { student: Student; schoolName: string; schoolShort: string }) {
+export function StudentCard({ student: s, schoolName }: { student: Student; schoolName: string; schoolShort: string }) {
+  const { schoolProfile } = useSchoolProfile();
+  const [failedLogo, setFailedLogo] = useState<string | null>(null);
+  const logo = schoolProfile.logo_url;
   return (
-    <section className="overflow-hidden !rounded-[6px] border border-[#F2D4D4] bg-white" aria-label={`${s.name}, identity summary`}>
-      <div className="flex items-center gap-3 border-b border-slate-100 px-4 py-3">
-        <span className="grid h-7 w-7 shrink-0 place-items-center rounded bg-slate-100 text-[10px] font-semibold text-slate-600" aria-hidden>{schoolShort}</span>
-        <span className="truncate text-xs font-medium text-slate-600">{schoolName}</span>
-        <span className={`ml-auto text-xs font-medium ${s.status === "Inactive" ? "text-slate-500" : "text-emerald-700"}`}>{s.status === "Inactive" ? "Left school" : "Active student"}</span>
+    <section className="student-identity overflow-hidden !rounded-[6px] border border-[#F2D4D4] bg-white" aria-label={`${s.name}, identity summary`}>
+      <div className="student-identity-school">
+        {logo && failedLogo !== logo ? <img src={logo} alt="" className="student-identity-logo" onError={() => setFailedLogo(logo)} /> : <School size={26} className="shrink-0 text-slate-500" aria-hidden />}
+        <span className="min-w-0 flex-1 truncate text-xs font-medium text-slate-600" title={schoolName}>{schoolName}</span>
+        <span className={`shrink-0 text-[11px] font-medium ${s.status === "Inactive" ? "text-slate-500" : "text-emerald-700"}`}>{s.status === "Inactive" ? "Left school" : "Active student"}</span>
       </div>
-      <div className="flex items-center gap-4 px-4 py-4">
-        {s.photoUrl ? <img src={s.photoUrl} alt="" className="h-[76px] w-[64px] shrink-0 rounded-md border border-slate-200 object-cover" /> : <span className="grid h-[76px] w-[64px] shrink-0 place-items-center rounded-md border border-slate-200 bg-slate-50 text-xl font-medium text-slate-500" aria-hidden>{initials(s.name)}</span>}
+      <div className="student-identity-body">
+        <div className="student-identity-person">
+        {s.photoUrl ? <img src={s.photoUrl} alt="" className="student-identity-photo object-cover object-[50%_22%]" /> : <span className="student-identity-photo grid place-items-center bg-slate-50 text-lg font-medium text-slate-500" aria-hidden>{initials(s.name)}</span>}
         <div className="min-w-0 flex-1">
-          <h3 className="break-words text-xl font-semibold leading-tight text-slate-900">{s.name}</h3>
-          <p className="mt-1.5 text-sm text-slate-600">Class {s.classSec}{s.rollNo ? ` · Roll ${s.rollNo}` : ""}</p>
-          <p className="mt-1 text-xs text-slate-500">SR no. <span className="font-medium text-slate-700">{s.srNo || "—"}</span></p>
+          <h3 className="student-identity-name" title={s.name}>{s.name}</h3>
+          <p className="student-identity-class">Class {s.classSec}{s.rollNo ? ` · Roll ${s.rollNo}` : ""}</p>
         </div>
-        {/* Admission no. and date of birth on the right, under "Active student" (that side was empty). */}
-        <dl className="shrink-0 space-y-2.5 text-right">
+        </div>
+        <dl className="student-identity-facts">
+          <Field label="SR no." value={s.srNo || "—"} />
           <Field label="Admission no." value={s.admissionNo || "—"} />
           <Field label="Date of birth" value={dob(s.dob)} />
         </dl>

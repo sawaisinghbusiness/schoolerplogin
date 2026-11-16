@@ -1,0 +1,337 @@
+{
+  "results": [
+    {
+      "name": "staff",
+      "font": {
+        "family": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+        "weight": "500"
+      }
+    },
+    {
+      "name": "staff",
+      "width": 390,
+      "overflow": false,
+      "cards": [
+        {
+          "height": 96,
+          "width": 343,
+          "text": "AS\nAarav Sharma\n(6th A)\nRajesh Sharma\nPaid"
+        },
+        {
+          "height": 96,
+          "width": 343,
+          "text": "AS\nAditi Soni\n(6th A)\nSuresh Rathore\nDue"
+        },
+        {
+          "height": 96,
+          "width": 343,
+          "text": "DS\nDiya Singh\n(6th A)\nRajesh Sharma\nDue"
+        },
+        {
+          "height": 96,
+          "width": 343,
+          "text": "TD\nTara Desai\n(6th A)\nSuresh Rathore\nDue"
+        },
+        {
+          "height": 96,
+          "width": 343,
+          "text": "VS\nVihaan Singh\n(6th B)\nVikram Singh\nDue"
+        },
+        {
+          "height": 96,
+          "width": 343,
+          "text": "AJ\nArjun Joshi\n(6th B)\nMahesh Joshi\nDue"
+        },
+        {
+          "height": 96,
+          "width": 343,
+          "text": "AB\nAditya Bhat\n(6th B)\nVikram Singh\nDue"
+        },
+        {
+          "height": 96,
+          "width": 343,
+          "text": "YV\nYash Verma\n(6th B)\nMahesh Joshi\nPaid"
+        },
+        {
+          "height": 96,
+          "width": 343,
+          "text": "IM\nIshita Mehta\n(7th A)\nRajesh Sharma\nDue"
+        },
+        {
+          "height": 96,
+          "width": 343,
+          "text": "KP\nKavya Patel\n(7th A)\nSuresh Rathore\nDue"
+        },
+        {
+          "height": 96,
+          "width": 343,
+          "text": "SA\nSiya Agarwal\n(7th A)\nRajesh Sharma\nDue"
+        },
+        {
+          "height": 96,
+          "width": 343,
+          "text": "RS\nRiya Saxena\n(7th A)\nSuresh Rathore\nDue"
+        }
+      ],
+      "filters": [
+        {
+          "height": 64,
+          "text": "Class\nAll"
+        },
+        {
+          "height": 64,
+          "text": "Section\nAll"
+        }
+      ]
+    },
+    {
+      "name": "staff",
+      "width": 360,
+      "overflow": false,
+      "cards": [
+        {
+          "height": 96,
+          "width": 313,
+          "text": "AS\nAarav Sharma\n(6th A)\nRajesh Sharma\nPaid"
+        },
+        {
+          "height": 96,
+          "width": 313,
+          "text": "AS\nAditi Soni\n(6th A)\nSuresh Rathore\nDue"
+        },
+        {
+          "height": 96,
+          "width": 313,
+          "text": "DS\nDiya Singh\n(6th A)\nRajesh Sharma\nDue"
+        },
+        {
+          "height": 96,
+          "width": 313,
+          "text": "TD\nTara Desai\n(6th A)\nSuresh Rathore\nDue"
+        },
+        {
+          "height": 96,
+          "width": 313,
+          "text": "VS\nVihaan Singh\n(6th B)\nVikram Singh\nDue"
+        },
+        {
+          "height": 96,
+          "width": 313,
+          "text": "AJ\nArjun Joshi\n(6th B)\nMahesh Joshi\nDue"
+        },
+        {
+          "height": 96,
+          "width": 313,
+          "text": "AB\nAditya Bhat\n(6th B)\nVikram Singh\nDue"
+        },
+        {
+          "height": 96,
+          "width": 313,
+          "text": "YV\nYash Verma\n(6th B)\nMahesh Joshi\nPaid"
+        },
+        {
+          "height": 96,
+          "width": 313,
+          "text": "IM\nIshita Mehta\n(7th A)\nRajesh Sharma\nDue"
+        },
+        {
+          "height": 96,
+          "width": 313,
+          "text": "KP\nKavya Patel\n(7th A)\nSuresh Rathore\nDue"
+        },
+        {
+          "height": 96,
+          "width": 313,
+          "text": "SA\nSiya Agarwal\n(7th A)\nRajesh Sharma\nDue"
+        },
+        {
+          "height": 96,
+          "width": 313,
+          "text": "RS\nRiya Saxena\n(7th A)\nSuresh Rathore\nDue"
+        }
+      ],
+      "filters": [
+        {
+          "height": 64,
+          "text": "Class\nAll"
+        },
+        {
+          "height": 64,
+          "text": "Section\nAll"
+        }
+      ]
+    },
+    {
+      "menu": {
+        "background": "rgb(255, 255, 255)",
+        "text": "rgb(32, 41, 56)"
+      }
+    },
+    {
+      "pinch": {
+        "before": 1.15,
+        "after": 2.11
+      }
+    },
+    {
+      "crop": {
+        "width": 360,
+        "height": 360,
+        "modalOpen": false
+      },
+      "zoomWorked": true,
+      "dragWorked": true
+    },
+    {
+      "portrait": {
+        "width": 360,
+        "height": 480
+      }
+    },
+    {
+      "name": "web",
+      "font": {
+        "family": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+        "weight": "500"
+      }
+    },
+    {
+      "name": "web",
+      "width": 390,
+      "overflow": false,
+      "cards": [
+        {
+          "height": 96,
+          "width": 324,
+          "text": "AS\nAarav Sharma\n(6th - A)\nRajesh Sharma\nPaid"
+        },
+        {
+          "height": 96,
+          "width": 324,
+          "text": "AS\nAditi Soni\n(6th - A)\nSuresh Rathore\nDue"
+        },
+        {
+          "height": 96,
+          "width": 324,
+          "text": "DS\nDiya Singh\n(6th - A)\nRajesh Sharma\nDue"
+        },
+        {
+          "height": 96,
+          "width": 324,
+          "text": "TD\nTara Desai\n(6th - A)\nSuresh Rathore\nDue"
+        },
+        {
+          "height": 96,
+          "width": 324,
+          "text": "VS\nVihaan Singh\n(6th - B)\nVikram Singh\nDue"
+        },
+        {
+          "height": 96,
+          "width": 324,
+          "text": "AJ\nArjun Joshi\n(6th - B)\nMahesh Joshi\nDue"
+        },
+        {
+          "height": 96,
+          "width": 324,
+          "text": "AB\nAditya Bhat\n(6th - B)\nVikram Singh\nDue"
+        },
+        {
+          "height": 96,
+          "width": 324,
+          "text": "YV\nYash Verma\n(6th - B)\nMahesh Joshi\nPaid"
+        },
+        {
+          "height": 96,
+          "width": 324,
+          "text": "IM\nIshita Mehta\n(7th - A)\nRajesh Sharma\nDue"
+        },
+        {
+          "height": 96,
+          "width": 324,
+          "text": "KP\nKavya Patel\n(7th - A)\nSuresh Rathore\nDue"
+        },
+        {
+          "height": 96,
+          "width": 324,
+          "text": "SA\nSiya Agarwal\n(7th - A)\nRajesh Sharma\nDue"
+        },
+        {
+          "height": 96,
+          "width": 324,
+          "text": "RS\nRiya Saxena\n(7th - A)\nSuresh Rathore\nDue"
+        }
+      ],
+      "filters": []
+    },
+    {
+      "name": "web",
+      "width": 360,
+      "overflow": false,
+      "cards": [
+        {
+          "height": 96,
+          "width": 294,
+          "text": "AS\nAarav Sharma\n(6th - A)\nRajesh Sharma\nPaid"
+        },
+        {
+          "height": 96,
+          "width": 294,
+          "text": "AS\nAditi Soni\n(6th - A)\nSuresh Rathore\nDue"
+        },
+        {
+          "height": 96,
+          "width": 294,
+          "text": "DS\nDiya Singh\n(6th - A)\nRajesh Sharma\nDue"
+        },
+        {
+          "height": 96,
+          "width": 294,
+          "text": "TD\nTara Desai\n(6th - A)\nSuresh Rathore\nDue"
+        },
+        {
+          "height": 96,
+          "width": 294,
+          "text": "VS\nVihaan Singh\n(6th - B)\nVikram Singh\nDue"
+        },
+        {
+          "height": 96,
+          "width": 294,
+          "text": "AJ\nArjun Joshi\n(6th - B)\nMahesh Joshi\nDue"
+        },
+        {
+          "height": 96,
+          "width": 294,
+          "text": "AB\nAditya Bhat\n(6th - B)\nVikram Singh\nDue"
+        },
+        {
+          "height": 96,
+          "width": 294,
+          "text": "YV\nYash Verma\n(6th - B)\nMahesh Joshi\nPaid"
+        },
+        {
+          "height": 96,
+          "width": 294,
+          "text": "IM\nIshita Mehta\n(7th - A)\nRajesh Sharma\nDue"
+        },
+        {
+          "height": 96,
+          "width": 294,
+          "text": "KP\nKavya Patel\n(7th - A)\nSuresh Rathore\nDue"
+        },
+        {
+          "height": 96,
+          "width": 294,
+          "text": "SA\nSiya Agarwal\n(7th - A)\nRajesh Sharma\nDue"
+        },
+        {
+          "height": 96,
+          "width": 294,
+          "text": "RS\nRiya Saxena\n(7th - A)\nSuresh Rathore\nDue"
+        }
+      ],
+      "filters": []
+    }
+  ],
+  "errors": [],
+  "limits": "Synthetic read-only API data; crop saved into local form only; no database mutations."
+}

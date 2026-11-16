@@ -1,0 +1,50 @@
+{
+  "checks": [
+    {
+      "name": "Initial illustrative records",
+      "pass": true
+    },
+    {
+      "name": "Local reveal adds immediately",
+      "pass": true
+    },
+    {
+      "name": "Existing rows keep identity and do not replay",
+      "pass": true
+    },
+    {
+      "name": "Only newly appended rows animate",
+      "pass": true
+    },
+    {
+      "name": "Remote wait retains existing rows",
+      "pass": true
+    },
+    {
+      "name": "Remote success appends once",
+      "pass": true
+    },
+    {
+      "name": "Remote failure retains rows and exposes retry",
+      "pass": true
+    },
+    {
+      "name": "Cached return does not replace content with placeholders",
+      "pass": true
+    },
+    {
+      "name": "Reduced motion removes shimmer",
+      "pass": true
+    },
+    {
+      "name": "Reduced motion removes spatial entry",
+      "pass": true
+    },
+    {
+      "name": "Narrow preview has no horizontal overflow",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "limits": "Mechanism prototype verification, not production app implementation or device performance certification."
+}

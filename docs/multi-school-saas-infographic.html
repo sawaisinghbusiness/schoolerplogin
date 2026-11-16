@@ -1,0 +1,78 @@
+<div id="school-saas-visual">
+  <style>
+    #school-saas-visual{color:var(--foreground);--space:var(--font-size-base);display:grid;gap:calc(var(--space)*1.2)}
+    #school-saas-visual *{box-sizing:border-box}
+    #school-saas-visual .switches{display:flex;flex-wrap:wrap;gap:8px}
+    #school-saas-visual button{min-height:44px}
+    #school-saas-visual .diagram{display:grid;grid-template-columns:1fr 44px 1fr;gap:12px;align-items:center}
+    #school-saas-visual .object{padding:16px;background:var(--card);color:var(--card-foreground);border:1px solid var(--border);border-radius:10px;min-width:0}
+    #school-saas-visual .object h3{margin-bottom:8px}
+    #school-saas-visual .arrow{color:var(--muted-foreground);width:100%;height:24px}
+    #school-saas-visual .phone{width:180px;max-width:100%;margin:auto;border:1px solid var(--foreground);border-radius:20px;padding:12px;background:var(--background)}
+    #school-saas-visual .phone-top{width:40px;height:4px;background:var(--border);margin:0 auto 14px;border-radius:4px}
+    #school-saas-visual .record{display:flex;justify-content:space-between;gap:8px;padding:10px 0;border-bottom:1px solid var(--border)}
+    #school-saas-visual .record:last-child{border:0}
+    #school-saas-visual .pools{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+    #school-saas-visual .pool{padding:12px;border:1px solid var(--border);border-radius:8px;opacity:.55}
+    #school-saas-visual .pool[data-active=true]{opacity:1;border-color:var(--foreground)}
+    #school-saas-visual .db{width:100%;height:60px;color:var(--foreground)}
+    #school-saas-visual .label{color:var(--muted-foreground)}
+    #school-saas-visual .app-row{display:flex;flex-wrap:wrap;gap:8px}
+    #school-saas-visual .app-row span{padding:8px 12px;background:var(--muted);color:var(--muted-foreground);border-radius:6px}
+    #school-saas-visual .costbar{display:flex;height:30px;gap:3px;border-radius:5px;overflow:hidden;margin:12px 0}
+    #school-saas-visual .costbar span{background:var(--viz-series-1)}
+    #school-saas-visual .costbar span:nth-child(2){opacity:.65}#school-saas-visual .costbar span:nth-child(3){opacity:.35}
+    #school-saas-visual .costs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    #school-saas-visual .costs strong{display:block;font-weight:500}
+    #school-saas-visual .row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    #school-saas-visual .road{display:grid;grid-template-columns:24px 1fr;gap:0 12px}
+    #school-saas-visual .dot{width:12px;height:12px;border:2px solid var(--foreground);border-radius:50%;margin:5px auto 0;position:relative}
+    #school-saas-visual .dot:not(.last):after{content:"";position:absolute;top:12px;left:3px;width:1px;height:65px;background:var(--border)}
+    #school-saas-visual .step{padding-bottom:24px}
+    #school-saas-visual .step .label{margin-top:4px}
+    #school-saas-visual .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    #school-saas-visual a{color:var(--foreground);text-underline-offset:3px}
+    #school-saas-visual .sources{display:flex;flex-wrap:wrap;gap:12px}
+    #school-saas-visual [hidden]{display:none!important}
+    @media(max-width:540px){#school-saas-visual .diagram{grid-template-columns:1fr}#school-saas-visual .arrow{transform:rotate(90deg);width:32px;margin:auto}#school-saas-visual .split{grid-template-columns:1fr}#school-saas-visual .costs{gap:8px}}
+  </style>
+  <h2>एक platform · अलग-अलग schools</h2>
+  <div class="switches" role="group" aria-label="Infographic views">
+    <button class="btn" data-view="system" aria-pressed="true">App कैसे चलेगी</button>
+    <button class="btn" data-view="setup" aria-pressed="false">क्या बनाना है</button>
+    <button class="btn" data-view="cost" aria-pressed="false">खर्च कैसे बँटेगा</button>
+  </div>
+  <section data-panel="system">
+    <div class="app-row"><span>Desktop ERP</span><span>Staff + Driver app</span><span>Parents app</span></div>
+    <div class="row" style="margin:16px 0"><h3>School बदलकर देखो</h3><div class="switches" role="group" aria-label="Example school"><button class="btn" data-school="A" aria-pressed="true">School A</button><button class="btn" data-school="B" aria-pressed="false">School B</button></div></div>
+    <div class="diagram">
+      <div class="phone" aria-label="Shared app example"><div class="phone-top"></div><h3 id="ss-school">School A</h3><div class="label text-small">एक ही installed app</div><div class="record"><span>Logo / नाम</span><span id="ss-brand">A</span></div><div class="record"><span>Students</span><span id="ss-students">A का data</span></div><div class="record"><span>Fees / PDF</span><span id="ss-fees">A के records</span></div><div class="record"><span>Notifications</span><span id="ss-notes">A के users</span></div></div>
+      <svg class="arrow" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 44 24"><path d="M2 12h38m-8-7 8 7-8 7"/></svg>
+      <div class="object"><h3>तुम्हारा shared server</h3><div class="record"><span>School code</span><span>पहचान</span></div><div class="record"><span>Login + membership</span><span>Permission ✓</span></div><svg class="db" viewBox="0 0 220 60" role="img" aria-label="One database with isolated school records"><ellipse cx="110" cy="12" rx="90" ry="10" fill="var(--background)" stroke="currentColor"/><path d="M20 12v32c0 14 180 14 180 0V12M20 29c0 14 180 14 180 0" fill="none" stroke="currentColor"/></svg><div class="pools"><div class="pool" data-pool="A" data-active="true">A के records</div><div class="pool" data-pool="B" data-active="false">B के records</div></div></div>
+    </div>
+    <div id="ss-result" class="text-small label" aria-live="polite" style="margin-top:12px">School A login → A की permission → सिर्फ A का data</div>
+    <div class="split" style="margin-top:20px"><div><h3>Budget package</h3><div class="label">Common app icon → अंदर school का logo</div></div><div><h3>Premium package</h3><div class="label">अलग branded app / dedicated setup</div></div></div>
+  </section>
+  <section data-panel="setup" hidden>
+    <div class="split" style="margin-bottom:20px"><div class="object"><h3>अभी का code</h3><div class="record">Session में school नहीं</div><div class="record">Login query school-wise नहीं</div><div class="record">Settings में पहला school record</div></div><div class="object"><h3>बनने के बाद</h3><div class="record">Verified school membership</div><div class="record">हर query / file school-wise</div><div class="record">School-wise settings + QR</div></div></div>
+    <div class="road"><span class="dot"></span><div class="step"><h3>Data audit + backup</h3><div class="label">Tables · files · reports · jobs · restore test</div></div><span class="dot"></span><div class="step"><h3>Schools + memberships</h3><div class="label">Current school को migrate → records को school से जोड़ना</div></div><span class="dot"></span><div class="step"><h3>Server पर isolation</h3><div class="label">Reads · writes · PDF · payments · cache · notifications</div></div><span class="dot"></span><div class="step"><h3>School onboarding + app login</h3><div class="label">Logo · admin · subscription · quotas · child/school switch</div></div><span class="dot last"></span><div class="step"><h3>दो schools की isolation testing → pilot</h3><div class="label">दूसरे school की ID / file / fees खोलने पर access बंद</div></div></div>
+    <div class="text-small label">स्थिति: proposal, migration लागू नहीं। Service-role queries के लिए केवल RLS पर्याप्त नहीं।</div>
+  </section>
+  <section data-panel="cost" hidden>
+    <div class="row"><h3>एक illustrative shared hosting setup</h3><span class="tabular-nums">$52 / month base</span></div>
+    <div class="costbar" role="img" aria-label="Supabase 25 dollars, Vercel 20 dollars, Render 7 dollars monthly"><span style="flex:25"></span><span style="flex:20"></span><span style="flex:7"></span></div>
+    <div class="costs"><div><strong>Supabase</strong><span class="tabular-nums">$25 / month</span><div class="text-small label">Database / storage plan</div></div><div><strong>Vercel</strong><span class="tabular-nums">$20 / month</span><div class="text-small label">1 paid developer seat</div></div><div><strong>Render</strong><span class="tabular-nums">$7 / month</span><div class="text-small label">Entry API service</div></div></div>
+    <div class="object" style="margin-top:20px"><div class="row"><label for="ss-count">Paying schools</label><output id="ss-count-label" class="tabular-nums">5</output></div><input id="ss-count" type="range" min="1" max="30" value="5" style="width:100%;margin:12px 0"/><div class="row" aria-live="polite"><span>सिर्फ $52 base का हिस्सा / school</span><strong id="ss-share" class="tabular-nums">$10.40 / month</strong></div><div class="text-small label" style="margin-top:8px">Arithmetic example; server capacity या selling price नहीं।</div></div>
+    <div class="split" style="margin-top:20px"><div><h3>Launch planning allowance</h3><div class="tabular-nums">₹6,000–₹12,000 / month</div><div class="text-small label">Low-traffic hosting estimate; पूरे platform का। Vendor quote / USD conversion नहीं।</div></div><div><h3>इसके ऊपर</h3><div class="label">Development · support · SMS/WhatsApp · AI · maps · payment fees · extra storage/usage · tax</div></div></div>
+    <div class="object" style="margin-top:20px"><h3>App देना</h3><div class="record"><span>PWA install</span><span>Store fee नहीं</span></div><div class="record"><span>Google Play account</span><span>$25 one-time</span></div><div class="record"><span>Apple membership</span><span>$99 / year</span></div><div class="text-small label">PWA installability/push verification बाकी। Background driver GPS की अलग जाँच।</div></div>
+    <div class="text-small label" style="margin-top:12px">Report prices checked: 16 Nov 2026 · additional usage अलग · schools की संख्या से capacity तय नहीं होती।</div>
+    <div class="sources text-small" style="margin-top:12px"><a href="https://supabase.com/pricing" target="_blank" rel="noopener">Supabase</a><a href="https://vercel.com/docs/plans/pro-plan" target="_blank" rel="noopener">Vercel</a><a href="https://render.com/pricing" target="_blank" rel="noopener">Render</a><a href="https://support.google.com/googleplay/android-developer/answer/6112435" target="_blank" rel="noopener">Google</a><a href="https://developer.apple.com/programs/whats-included/" target="_blank" rel="noopener">Apple</a></div>
+  </section>
+  <script>
+    (()=>{const root=document.getElementById('school-saas-visual');let state={view:'system',school:'A',schools:5};
+    function render(){root.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===state.view)));root.querySelectorAll('[data-panel]').forEach(p=>p.hidden=p.dataset.panel!==state.view);root.querySelectorAll('[data-school]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.school===state.school)));root.querySelectorAll('[data-pool]').forEach(p=>p.dataset.active=String(p.dataset.pool===state.school));root.querySelector('#ss-school').textContent='School '+state.school;root.querySelector('#ss-brand').textContent=state.school;root.querySelector('#ss-students').textContent=state.school+' का data';root.querySelector('#ss-fees').textContent=state.school+' के records';root.querySelector('#ss-notes').textContent=state.school+' के users';root.querySelector('#ss-result').textContent='School '+state.school+' login → '+state.school+' की permission → सिर्फ '+state.school+' का data';root.querySelector('#ss-count').value=state.schools;root.querySelector('#ss-count-label').textContent=state.schools;root.querySelector('#ss-share').textContent='$'+(52/state.schools).toFixed(2)+' / month';}
+    function restore(value){if(!value)return;const s=value.modelContent||value;if(['system','setup','cost'].includes(s.view))state.view=s.view;if(['A','B'].includes(s.school))state.school=s.school;if(Number.isFinite(s.schools))state.schools=Math.max(1,Math.min(30,Math.round(s.schools)));render()}
+    function save(){if(window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:state,privateContent:null}).catch(()=>{})}
+    root.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{state.view=b.dataset.view;render();save()});root.querySelectorAll('[data-school]').forEach(b=>b.onclick=()=>{state.school=b.dataset.school;render();save()});root.querySelector('#ss-count').oninput=e=>{state.schools=Number(e.target.value);render()};root.querySelector('#ss-count').onchange=save;window.addEventListener('openai:set_globals',e=>restore(e.detail?.globals?.widgetState));restore(window.openai?.widgetState);render();})();
+  </script>
+</div>
