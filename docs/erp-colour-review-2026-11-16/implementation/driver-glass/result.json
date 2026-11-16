@@ -1,0 +1,43 @@
+{
+  "footer": {
+    "background": "url(\"http://127.0.0.1:3334/school-transport-footer.webp\")",
+    "height": "296.391px",
+    "opacity": "0.65",
+    "repeat": "no-repeat",
+    "mask": "linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 22%)"
+  },
+  "screens": [
+    {
+      "id": "school-footer-390",
+      "width": 390,
+      "scroll": 375,
+      "text": "SR\n\nGood afternoon\n\nReview\n\nEN\nहि\nRD\nToday's route\n16 Nov\nMorning · school\nAfternoon · home\nRJ 04 TEST\nNot started\nBarmer North Route\n\nStart from\n\nReview School\n\nFinish at · Long neighbourhood stop near community centre\n\n3\nchildren\n2\nstops\nSlide to start trip\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nToday's stops\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "school-footer-360",
+      "width": 360,
+      "scroll": 345,
+      "text": "SR\n\nGood afternoon\n\nReview\n\nEN\nहि\nRD\nToday's route\n16 Nov\nMorning · school\nAfternoon · home\nRJ 04 TEST\nNot started\nBarmer North Route\n\nStart from\n\nReview School\n\nFinish at · Long neighbourhood stop near community centre\n\n3\nchildren\n2\nstops\n2.1\nkm\nroute\nSlide to start trip\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nToday's stops\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "glass-idle",
+      "width": 390,
+      "scroll": 375,
+      "text": "SR\n\nGood afternoon\n\nReview\n\nEN\nहि\nRD\nToday's route\n16 Nov\nMorning · school\nAfternoon · home\nRJ 04 TEST\nNot started\nBarmer North Route\n\nStart from\n\nReview School\n\nFinish at · Long neighbourhood stop near community centre\n\n3\nchildren\n2\nstops\n2.1\nkm\nroute\nSlide to start trip\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nToday's stops\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "glass-dragging",
+      "width": 390,
+      "scroll": 375,
+      "text": "SR\n\nGood afternoon\n\nReview\n\nEN\nहि\nRD\nToday's route\n16 Nov\nMorning · school\nAfternoon · home\nRJ 04 TEST\nNot started\nBarmer North Route\n\nStart from\n\nReview School\n\nFinish at · Long neighbourhood stop near community centre\n\n3\nchildren\n2\nstops\n2.1\nkm\nroute\nSlide to start trip\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nToday's stops\nTrip record\nHome\nProfile"
+    },
+    {
+      "id": "glass-reduced-motion",
+      "width": 390,
+      "scroll": 375,
+      "text": "SR\n\nGood afternoon\n\nReview\n\nEN\nहि\nRD\nToday's route\n16 Nov\nMorning · school\nAfternoon · home\nRJ 04 TEST\nNot started\nBarmer North Route\n\nStart from\n\nReview School\n\nFinish at · Long neighbourhood stop near community centre\n\n3\nchildren\n2\nstops\n2.1\nkm\nroute\nSlide to start trip\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nToday's stops\nTrip record\nHome\nProfile"
+    }
+  ],
+  "errors": [],
+  "synthetic": true
+}

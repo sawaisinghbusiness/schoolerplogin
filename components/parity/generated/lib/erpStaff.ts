@@ -91,7 +91,8 @@ export function passwordProblem(pw: string): Bi | null {
 /** 9000000201 → "90000 00201" */
 export const phone = (m: string) => (/^\d{10}$/.test(m) ? `${m.slice(0, 5)} ${m.slice(5)}` : m);
 export const day = (iso: string) => (iso ? new Date(iso + "T00:00:00").toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" }) : "");
-export const todayLocal = () => new Date().toISOString().slice(0, 10);
+/** Today in India (IST). toISOString() gave yesterday between midnight and 5:30 am. */
+export const todayLocal = () => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata" }).format(new Date());
 export function yearsSince(iso: string, lang: "hi" | "en") {
   if (!iso) return "";
   const y = (Date.now() - new Date(iso + "T00:00:00").getTime()) / (365.25 * 86400000);

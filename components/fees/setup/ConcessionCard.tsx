@@ -8,6 +8,7 @@ import { studentService } from "@/lib/services/studentService";
 import { feeSetupService, ConcessionHolder } from "@/lib/services/feeSetupService";
 import { toast } from "@/components/ui/Toaster";
 import { inr } from "@/components/fees/setup/parts";
+import { LoadError } from "@/components/ui/LoadError";
 
 /**
  * Concession types live in the fee setup (saved with the page);
@@ -23,9 +24,15 @@ export function ConcessionCard({ cfg, setCfg, savedCfg, disabled }: { cfg: FeeCo
   const [busy, setBusy] = useState<string | null>(null);
 
   const load = () => feeSetupService.concessions().then((r) => setHolders(r.data));
+  const [studentsError, setStudentsError] = useState<string | null>(null);
+  const loadStudents = () =>
+    studentService.fetchStudents().then((r) => {
+      setStudentsError(r.error);
+      setStudents(r.data.filter((s) => s.status !== "Inactive"));
+    });
   useEffect(() => {
     load();
-    studentService.fetchStudents().then((r) => setStudents(r.data.filter((s) => s.status !== "Inactive")));
+    loadStudents();
   }, []);
 
   const setType = (i: number, patch: Partial<Concession>) => setCfg({ ...cfg, concessions: cfg.concessions.map((c, j) => (j === i ? { ...c, ...patch } : c)) });
@@ -71,6 +78,7 @@ export function ConcessionCard({ cfg, setCfg, savedCfg, disabled }: { cfg: FeeCo
 
   return (
     <section className="card overflow-hidden">
+      {studentsError && <div className="px-5 pt-3"><LoadError what="The student list" error={studentsError} onRetry={loadStudents} /></div>}
       <div className="flex items-center justify-between border-b border-slate-100 px-5 py-3">
         <div>
           <h2 className="text-sm font-semibold text-slate-900">Concessions</h2>

@@ -1,15 +1,9 @@
 -- ==============================================================================
 -- Row Level Security + Storage buckets
 -- ------------------------------------------------------------------------------
--- IMPORTANT: This app authenticates at the application layer (a signed httpOnly
--- session cookie + Next.js middleware), NOT with Supabase Auth. All DB traffic
--- currently uses the anon key. So the policies below enable RLS and grant access
--- to the `anon` and `authenticated` roles — they make the "RLS is enabled" box
--- true and block direct unauthenticated table access from outside the app, while
--- the real authorization (who may see what) is enforced in middleware/API routes.
---
--- When you later migrate to Supabase Auth (auth.uid()), tighten these policies to
--- per-row / per-role checks. Search for "TODO: tighten" below.
+-- RLS is on with NO policy for anon/authenticated (2026-11-16). Only the backend
+-- reads and writes, with the service-role key (which bypasses RLS). Earlier versions
+-- granted anon full access; 20261116_close_anon_access.sql removes those policies.
 -- ==============================================================================
 
 DO $$
@@ -34,11 +28,7 @@ BEGIN
 
             -- App-layer access policy (idempotent recreate).
             EXECUTE format('DROP POLICY IF EXISTS app_access ON public.%I;', t);
-            -- TODO: tighten to auth.uid()/role checks after moving to Supabase Auth.
-            EXECUTE format(
-                'CREATE POLICY app_access ON public.%I FOR ALL TO anon, authenticated USING (true) WITH CHECK (true);',
-                t
-            );
+            -- No policy for anon/authenticated (2026-11-16): only the backend's service-role key reads and writes.
         END IF;
     END LOOP;
 END $$;
@@ -59,17 +49,4 @@ CREATE POLICY "public read photos" ON storage.objects
     FOR SELECT TO anon, authenticated
     USING (bucket_id IN ('student-photos', 'attachments'));
 
-DROP POLICY IF EXISTS "app write storage" ON storage.objects;
-CREATE POLICY "app write storage" ON storage.objects
-    FOR INSERT TO anon, authenticated
-    WITH CHECK (bucket_id IN ('student-photos', 'student-documents', 'attachments'));
-
-DROP POLICY IF EXISTS "app update storage" ON storage.objects;
-CREATE POLICY "app update storage" ON storage.objects
-    FOR UPDATE TO anon, authenticated
-    USING (bucket_id IN ('student-photos', 'student-documents', 'attachments'));
-
-DROP POLICY IF EXISTS "app delete storage" ON storage.objects;
-CREATE POLICY "app delete storage" ON storage.objects
-    FOR DELETE TO anon, authenticated
-    USING (bucket_id IN ('student-photos', 'student-documents', 'attachments'));
+-- Uploads go through the backend (service-role key); anon may not write to storage (2026-11-16).

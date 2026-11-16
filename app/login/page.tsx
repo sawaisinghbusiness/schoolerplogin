@@ -112,7 +112,9 @@ export default function LoginPage() {
     setSuccess(true);
     // Send people back to the page they were trying to open, if any.
     const from = new URLSearchParams(window.location.search).get("from");
-    const target = from && from.startsWith("/") && from !== "/login" ? from : res.user.role === "teacher" ? "/dashboard" : "/dashboard";
+    // Only a path on this site: "//evil.example" or "/\evil.example" would leave SchoolDesk after sign-in (2026-11-16).
+    const safe = !!from && /^\/(?![\/\\])/.test(from) && !from.startsWith("/login");
+    const target = safe ? from! : "/dashboard";
     setTimeout(() => router.push(target), 450);
   };
 

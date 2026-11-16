@@ -1,0 +1,3071 @@
+{
+  "capturedAt": "2026-11-16T08:40:24.260Z",
+  "limits": "Synthetic read-only API data; proposed styles injected in DOM only; visible opaque/composited colour samples do not certify whole-app accessibility.",
+  "rows": [
+    {
+      "mode": "web",
+      "route": "/dashboard",
+      "variant": "current",
+      "file": "round-2/screens/sapphire-web-dashboard-current.png",
+      "url": "/dashboard",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nDashboard\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nSchool overview\n\nMonday, 16 November · Fees, enrolment and work that needs attention\n\nNew admission\nCollect fee\n\nCollected this month\n\n₹1.9 L\n\n+8% vs last month\n\nCollected this session\n\n₹7.3 L\n\n73% of ₹10.1 L\n\nFees outstanding\n\n₹2.8 L\n\n20 students with dues\n\nStudents enrolled\n\n24\n\n12 boys · 12 girls\n\nFee collection\n\nSession balance and monthly collections\n\nOpen reports\n73%\ncollected\nCollected this session\n₹7.3 L\nOutstanding\n₹2.8 L\n\nMonthly collections · ₹ lakh\n\n0\n0.5\n1\n1.5\n2\nApr\nMay\nJun\nJul\nAug\nSep\nOct\nNov\n1.9\nToday at the office\n\nCollection and pending work\n\n₹9,500\n\n3 receipts\n\nCollected today\n\n3 sections need attendance\n\n3 of 6 sections marked\n\nOpen\n\n3 cheques received this week\n\n₹45,000 to review\n\nReview\n\nNo birthdays today\n\nFrom student records\n\nOutstanding fees by class\n\nClasses with the highest remaining balance\n\nView dues\n7th\n₹1.0 L\n6th\n₹88,000\n8th\n₹86,000\nPayment methods\n\nRecorded collections this session\n\n₹7.3 L\nCash\n₹2.6 L\n36%\nUPI\n₹4.4 L\n60%\nCheque\n₹30,000\n4%",
+      "named": {
+        "canvas": {
+          "text": "SBSMS Barmer Review SchoolBarmerDashboardOverviewReportDaily workStudentsFe",
+          "foreground": "#263735",
+          "background": "#f2eee7",
+          "rawBackground": "rgb(242, 238, 231)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "primary": {
+          "text": "Collect fee",
+          "foreground": "#ffffff",
+          "background": "#294e43",
+          "rawBackground": "rgb(41, 78, 67)",
+          "border": "rgb(41, 78, 67)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "500"
+        },
+        "secondary": {
+          "text": null,
+          "foreground": "#34444f",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(205, 214, 220)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "500"
+        },
+        "card": {
+          "text": "Fee collectionSession balance and monthly collectionsOpen reports73%collect",
+          "foreground": "#263735",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(216, 213, 205)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "sidebar": {
+          "text": "SBSMS Barmer Review SchoolBarmerDashboardOverviewReportDaily workStudentsFe",
+          "foreground": "#fffefa",
+          "background": "#163f49",
+          "rawBackground": "rgb(22, 63, 73)",
+          "border": "rgb(52, 89, 99)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "sidebarSearch": {
+          "text": "Find a module",
+          "foreground": "#dce8e7",
+          "background": "#f7f8fb",
+          "rawBackground": "rgb(247, 248, 251)",
+          "border": "rgb(226, 230, 239)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "400"
+        },
+        "sidebarIdentity": {
+          "text": "SB",
+          "foreground": "#dce8e7",
+          "background": "#fffefa",
+          "rawBackground": "rgb(255, 254, 250)",
+          "border": "rgb(226, 230, 239)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "600"
+        },
+        "activeNav": {
+          "text": "Dashboard",
+          "foreground": "#163f49",
+          "background": "#fffefa",
+          "rawBackground": "rgb(255, 254, 250)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "500"
+        },
+        "heading": {
+          "text": "School overview",
+          "foreground": "#263735",
+          "background": "#f2eee7",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "27px",
+          "weight": "600"
+        },
+        "support": {
+          "text": "Monday, 16 November · Fees, enrolment and work that needs attention",
+          "foreground": "#59635f",
+          "background": "#f2eee7",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "SB",
+          "foreground": "#dce8e7",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Find a module",
+          "foreground": "#dce8e7",
+          "background": "#f7f8fb",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Monday, 16 November · Fees, enrolment and work that needs attention",
+          "foreground": "#59635f",
+          "background": "#f2eee7",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collected this month",
+          "foreground": "#4c566b",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹1.9 L",
+          "foreground": "#15803d",
+          "background": "#ffffff",
+          "size": 28,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "+8% vs last month",
+          "foreground": "#687389",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collected this session",
+          "foreground": "#4c566b",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹7.3 L",
+          "foreground": "#15803d",
+          "background": "#ffffff",
+          "size": 28,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "73% of ₹10.1 L",
+          "foreground": "#687389",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Fees outstanding",
+          "foreground": "#4c566b",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹2.8 L",
+          "foreground": "#b42332",
+          "background": "#ffffff",
+          "size": 28,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "20 students with dues",
+          "foreground": "#687389",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Students enrolled",
+          "foreground": "#4c566b",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "24",
+          "foreground": "#161b27",
+          "background": "#ffffff",
+          "size": 28,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "12 boys · 12 girls",
+          "foreground": "#687389",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Session balance and monthly collections",
+          "foreground": "#59635f",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Monthly collections · ₹ lakh",
+          "foreground": "#687389",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collection and pending work",
+          "foreground": "#59635f",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹9,500",
+          "foreground": "#15803d",
+          "background": "#f9fafc",
+          "size": 30,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collected today",
+          "foreground": "#687389",
+          "background": "#f9fafc",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "3 sections need attendance",
+          "foreground": "#252c3b",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "3 of 6 sections marked",
+          "foreground": "#687389",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "3 cheques received this week",
+          "foreground": "#252c3b",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹45,000 to review",
+          "foreground": "#687389",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "No birthdays today",
+          "foreground": "#252c3b",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "From student records",
+          "foreground": "#687389",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Classes with the highest remaining balance",
+          "foreground": "#59635f",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Recorded collections this session",
+          "foreground": "#59635f",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "web",
+      "route": "/dashboard",
+      "variant": "proposed",
+      "file": "round-2/screens/sapphire-web-dashboard-proposed.png",
+      "url": "/dashboard",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nDashboard\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nSchool overview\n\nMonday, 16 November · Fees, enrolment and work that needs attention\n\nNew admission\nCollect fee\n\nCollected this month\n\n₹1.9 L\n\n+8% vs last month\n\nCollected this session\n\n₹7.3 L\n\n73% of ₹10.1 L\n\nFees outstanding\n\n₹2.8 L\n\n20 students with dues\n\nStudents enrolled\n\n24\n\n12 boys · 12 girls\n\nFee collection\n\nSession balance and monthly collections\n\nOpen reports\n73%\ncollected\nCollected this session\n₹7.3 L\nOutstanding\n₹2.8 L\n\nMonthly collections · ₹ lakh\n\n0\n0.5\n1\n1.5\n2\nApr\nMay\nJun\nJul\nAug\nSep\nOct\nNov\n1.9\nToday at the office\n\nCollection and pending work\n\n₹9,500\n\n3 receipts\n\nCollected today\n\n3 sections need attendance\n\n3 of 6 sections marked\n\nOpen\n\n3 cheques received this week\n\n₹45,000 to review\n\nReview\n\nNo birthdays today\n\nFrom student records\n\nOutstanding fees by class\n\nClasses with the highest remaining balance\n\nView dues\n7th\n₹1.0 L\n6th\n₹88,000\n8th\n₹86,000\nPayment methods\n\nRecorded collections this session\n\n₹7.3 L\nCash\n₹2.6 L\n36%\nUPI\n₹4.4 L\n60%\nCheque\n₹30,000\n4%",
+      "named": {
+        "canvas": {
+          "text": "SBSMS Barmer Review SchoolBarmerDashboardOverviewReportDaily workStudentsFe",
+          "foreground": "#222c3d",
+          "background": "#eef1f6",
+          "rawBackground": "rgb(238, 241, 246)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "primary": {
+          "text": "Collect fee",
+          "foreground": "#ffffff",
+          "background": "#28549e",
+          "rawBackground": "rgb(40, 84, 158)",
+          "border": "rgb(40, 84, 158)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "500"
+        },
+        "secondary": {
+          "text": null,
+          "foreground": "#273e49",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(130, 146, 158)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "500"
+        },
+        "card": {
+          "text": "Fee collectionSession balance and monthly collectionsOpen reports73%collect",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(214, 221, 230)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "sidebar": {
+          "text": "SBSMS Barmer Review SchoolBarmerDashboardOverviewReportDaily workStudentsFe",
+          "foreground": "#24334a",
+          "background": "#f8fafc",
+          "rawBackground": "rgb(248, 250, 252)",
+          "border": "rgb(214, 221, 230)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "sidebarSearch": {
+          "text": "Find a module",
+          "foreground": "#27364d",
+          "background": "#e8edf5",
+          "rawBackground": "rgb(232, 237, 245)",
+          "border": "rgb(125, 142, 155)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "400"
+        },
+        "sidebarIdentity": {
+          "text": "SB",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(255, 255, 255)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "600"
+        },
+        "activeNav": {
+          "text": "Dashboard",
+          "foreground": "#27529f",
+          "background": "#e8eef9",
+          "rawBackground": "rgb(232, 238, 249)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "600"
+        },
+        "heading": {
+          "text": "School overview",
+          "foreground": "#222c3d",
+          "background": "#eef1f6",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "27px",
+          "weight": "600"
+        },
+        "support": {
+          "text": "Monday, 16 November · Fees, enrolment and work that needs attention",
+          "foreground": "#536175",
+          "background": "#eef1f6",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "SB",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Find a module",
+          "foreground": "#27364d",
+          "background": "#e8edf5",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Monday, 16 November · Fees, enrolment and work that needs attention",
+          "foreground": "#536175",
+          "background": "#eef1f6",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collected this month",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹1.9 L",
+          "foreground": "#15803d",
+          "background": "#ffffff",
+          "size": 28,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "+8% vs last month",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collected this session",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹7.3 L",
+          "foreground": "#15803d",
+          "background": "#ffffff",
+          "size": 28,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "73% of ₹10.1 L",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Fees outstanding",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹2.8 L",
+          "foreground": "#b42332",
+          "background": "#ffffff",
+          "size": 28,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "20 students with dues",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Students enrolled",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "24",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 28,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "12 boys · 12 girls",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Session balance and monthly collections",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Monthly collections · ₹ lakh",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collection and pending work",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹9,500",
+          "foreground": "#15803d",
+          "background": "#f9fafc",
+          "size": 30,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collected today",
+          "foreground": "#536175",
+          "background": "#f9fafc",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "3 sections need attendance",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "3 of 6 sections marked",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "3 cheques received this week",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹45,000 to review",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "No birthdays today",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "From student records",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Classes with the highest remaining balance",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Recorded collections this session",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "web",
+      "route": "/students",
+      "variant": "current",
+      "file": "round-2/screens/sapphire-web-students-current.png",
+      "url": "/students",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nAll students\nAdmission enquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nExcel import / export\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nStudents\nAll students\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nStudent register\n\nFind student records, manage admissions and review fee balances.\n\nImport\nExport\nNew admission\nAll\n24\nFees pending\n20\nFully paid\n4\nBy bus\n8\nAny field\nName\nSR no.\nParent's name\nMobile\nAdmission no.\nRoll no.\nAddress\nPEN\n/\nClass\nAll\n6th\n7th\n8th\nAll\nSection\nAll\nA\nB\nAll\nGender\nAll\nBoys\nGirls\nAll\nCategory\nAll\nGeneral\nOBC\nMBC\nSC\nST\nEWS\nAll\n24 records\n\tStudent\tClass\tParent\tFee balance\t\nActions\n\n\n\t\nAS\nAarav Sharma\nSR-1200\n\t6th - A\nBus\n\t\nRajesh Sharma\n\tPaid\t\n\n\n\t\nAS\nAditi Soni\nSR-1206\n\t6th - A\nBus\n\t\nSuresh Rathore\n\t\n₹10,000 due\n76% paid\n\t\nCollect\n\n\n\t\nDS\nDiya Singh\nSR-1212\n\t6th - A\nBus\n\t\nRajesh Sharma\n\t\n₹14,000 due\n67% paid\n\t\nCollect\n\n\n\t\nTD\nTara Desai\nSR-1218\n\t6th - A\nBus\n\t\nSuresh Rathore\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nVS\nVihaan Singh\nSR-1203\n\t6th - B\nBus\n\t\nVikram Singh\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nAJ\nArjun Joshi\nSR-1209\n\t6th - B\nBus\n\t\nMahesh Joshi\n\t\n₹22,000 due\n48% paid\n\t\nCollect\n\n\n\t\nAB\nAditya Bhat\nSR-1215\n\t6th - B\nBus\n\t\nVikram Singh\n\t\n₹6,000 due\n86% paid\n\t\nCollect\n\n\n\t\nYV\nYash Verma\nSR-1221\n\t6th - B\nBus\n\t\nMahesh Joshi\n\tPaid\t\n\n\n\t\nIM\nIshita Mehta\nSR-1204\n\t7th - A\t\nRajesh Sharma\n\t\n₹22,000 due\n48% paid\n\t\nCollect\n\n\n\t\nKP\nKavya Patel\nSR-1210\n\t7th - A\t\nSuresh Rathore\n\t\n₹6,000 due\n86% paid\n\t\nCollect\n\n\n\t\nSA\nSiya Agarwal\nSR-1216\n\t7th - A\t\nRajesh Sharma\n\t\n₹10,000 due\n76% paid\n\t\nCollect\n\n\n\t\nRS\nRiya Saxena\nSR-1222\n\t7th - A\t\nSuresh Rathore\n\t\n₹14,000 due\n67% paid\n\t\nCollect\n\n\n\t\nPJ\nPrisha Joshi\nSR-1201\n\t7th - B\t\nMahesh Joshi\n\t\n₹10,000 due\n76% paid\n\t\nCollect\n\n\n\t\nKJ\nKabir Jain\nSR-1207\n\t7th - B\t\nVikram Singh\n\tPaid\t\n\n\n\t\nSR\nShaurya Rao\nSR-1213\n\t7th - B\t\nMahesh Joshi\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nVS\nVivaan Shah\nSR-1219\n\t7th - B\t\nVikram Singh\n\t\n₹22,000 due\n48% paid\n\t\nCollect\n\n\n\t\nAR\nAnanya Rathore\nSR-1202\n\t8th - A\t\nSuresh Rathore\n\t\n₹14,000 due\n67% paid\n\t\nCollect\n\n\n\t\nMV\nMeera Vyas\nSR-1208\n\t8th - A\t\nRajesh Sharma\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nNK\nNisha Kumari\nSR-1214\n\t8th - A\t\nSuresh Rathore\n\tPaid\t\n\n\n\t\nAG\nAvni Gupta\nSR-1220\n\t8th - A\t\nRajesh Sharma\n\t\n₹6,000 due\n86% paid\n\t\nCollect\n\n\n\t\nDC\nDev Choudhary\nSR-1205\n\t8th - B\t\nMahesh Joshi\n\t\n₹6,000 due\n86% paid\n\t\nCollect\n\n\n\t\nRM\nRohan Mehta\nSR-1211\n\t8th - B\t\nVikram Singh\n\t\n₹10,000 due\n76% paid\n\t\nCollect\n\n\n\t\nRD\nReyansh Das\nSR-1217\n\t8th - B\t\nMahesh Joshi\n\t\n₹14,000 due\n67% paid\n\t\nCollect\n\n\n\t\nDS\nDhruv Shah\nSR-1223\n\t8th - B\t\nVikram Singh\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n1–24 of 24",
+      "named": {
+        "canvas": {
+          "text": "SBSMS Barmer Review SchoolBarmerDashboardOverviewReportDaily workStudentsAl",
+          "foreground": "#263735",
+          "background": "#f2eee7",
+          "rawBackground": "rgb(242, 238, 231)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "primary": {
+          "text": "New admission",
+          "foreground": "#ffffff",
+          "background": "#294e43",
+          "rawBackground": "rgb(41, 78, 67)",
+          "border": "rgb(41, 78, 67)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "500"
+        },
+        "secondary": {
+          "text": "Import",
+          "foreground": "#34444f",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(205, 214, 220)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "500"
+        },
+        "card": {
+          "text": "All24Fees pending20Fully paid4By bus8Any fieldNameSR no.Parent's nameMobile",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "rawBackground": "rgb(255, 254, 250)",
+          "border": "rgb(216, 213, 205)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "field": {
+          "text": "Search name, SR no., father or mobile",
+          "foreground": "#161b27",
+          "background": "#f9fafc",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "sidebar": {
+          "text": "SBSMS Barmer Review SchoolBarmerDashboardOverviewReportDaily workStudentsAl",
+          "foreground": "#fffefa",
+          "background": "#163f49",
+          "rawBackground": "rgb(22, 63, 73)",
+          "border": "rgb(52, 89, 99)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "sidebarSearch": {
+          "text": "Find a module",
+          "foreground": "#dce8e7",
+          "background": "#f7f8fb",
+          "rawBackground": "rgb(247, 248, 251)",
+          "border": "rgb(226, 230, 239)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "400"
+        },
+        "sidebarIdentity": {
+          "text": "SB",
+          "foreground": "#dce8e7",
+          "background": "#fffefa",
+          "rawBackground": "rgb(255, 254, 250)",
+          "border": "rgb(226, 230, 239)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "600"
+        },
+        "activeNav": {
+          "text": "All students",
+          "foreground": "#163f49",
+          "background": "#fffefa",
+          "rawBackground": "rgb(255, 254, 250)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "12px",
+          "weight": "500"
+        },
+        "heading": {
+          "text": "Student register",
+          "foreground": "#263735",
+          "background": "#f2eee7",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "27px",
+          "weight": "600"
+        },
+        "support": {
+          "text": "Find student records, manage admissions and review fee balances.",
+          "foreground": "#59635f",
+          "background": "#f2eee7",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "SB",
+          "foreground": "#dce8e7",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Find a module",
+          "foreground": "#dce8e7",
+          "background": "#f7f8fb",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Find student records, manage admissions and review fee balances.",
+          "foreground": "#59635f",
+          "background": "#f2eee7",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Import",
+          "foreground": "#34444f",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Export",
+          "foreground": "#34444f",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "New admission",
+          "foreground": "#ffffff",
+          "background": "#294e43",
+          "size": 13,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "All24",
+          "foreground": "#12665e",
+          "background": "#ffffff",
+          "size": 13.5,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Fees pending20",
+          "foreground": "#687389",
+          "background": "#ebf0f1",
+          "size": 13.5,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Fully paid4",
+          "foreground": "#687389",
+          "background": "#ebf0f1",
+          "size": 13.5,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "By bus8",
+          "foreground": "#687389",
+          "background": "#ebf0f1",
+          "size": 13.5,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "ClassAll6th7th8thAll",
+          "foreground": "#4c566b",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "SectionAllABAll",
+          "foreground": "#4c566b",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "GenderAllBoysGirlsAll",
+          "foreground": "#4c566b",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "CategoryAllGeneralOBCMBCSCSTEWSAll",
+          "foreground": "#4c566b",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Student",
+          "foreground": "#52616c",
+          "background": "#f7f9fa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Class",
+          "foreground": "#52616c",
+          "background": "#f7f9fa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Parent",
+          "foreground": "#52616c",
+          "background": "#f7f9fa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Fee balance",
+          "foreground": "#52616c",
+          "background": "#f7f9fa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Actions",
+          "foreground": "#52616c",
+          "background": "#f7f9fa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "ASAarav SharmaSR-1200",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Aarav Sharma",
+          "foreground": "#161b27",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - ABus",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Rajesh Sharma",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "ASAditi SoniSR-1206",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Aditi Soni",
+          "foreground": "#161b27",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - ABus",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Suresh Rathore",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹10,000 due76% paid",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collect",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "DSDiya SinghSR-1212",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Diya Singh",
+          "foreground": "#161b27",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - ABus",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Rajesh Sharma",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹14,000 due67% paid",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collect",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "TDTara DesaiSR-1218",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Tara Desai",
+          "foreground": "#161b27",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - ABus",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Suresh Rathore",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹18,000 due57% paid",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collect",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "VSVihaan SinghSR-1203",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Vihaan Singh",
+          "foreground": "#161b27",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - BBus",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Vikram Singh",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹18,000 due57% paid",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collect",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "AJArjun JoshiSR-1209",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Arjun Joshi",
+          "foreground": "#161b27",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - BBus",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Mahesh Joshi",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹22,000 due48% paid",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collect",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "ABAditya BhatSR-1215",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Aditya Bhat",
+          "foreground": "#161b27",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - BBus",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Vikram Singh",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹6,000 due86% paid",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collect",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "YVYash VermaSR-1221",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Yash Verma",
+          "foreground": "#161b27",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - BBus",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Mahesh Joshi",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "IMIshita MehtaSR-1204",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Ishita Mehta",
+          "foreground": "#161b27",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "7th - A",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Rajesh Sharma",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹22,000 due48% paid",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collect",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "web",
+      "route": "/students",
+      "variant": "proposed",
+      "file": "round-2/screens/sapphire-web-students-proposed.png",
+      "url": "/students",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nAll students\nAdmission enquiries\nPromote & transfer\nCertificates\nPhotos\nID cards\nExcel import / export\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nStudents\nAll students\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nStudent register\n\nFind student records, manage admissions and review fee balances.\n\nImport\nExport\nNew admission\nAll\n24\nFees pending\n20\nFully paid\n4\nBy bus\n8\nAny field\nName\nSR no.\nParent's name\nMobile\nAdmission no.\nRoll no.\nAddress\nPEN\n/\nClass\nAll\n6th\n7th\n8th\nAll\nSection\nAll\nA\nB\nAll\nGender\nAll\nBoys\nGirls\nAll\nCategory\nAll\nGeneral\nOBC\nMBC\nSC\nST\nEWS\nAll\n24 records\n\tStudent\tClass\tParent\tFee balance\t\nActions\n\n\n\t\nAS\nAarav Sharma\nSR-1200\n\t6th - A\nBus\n\t\nRajesh Sharma\n\tPaid\t\n\n\n\t\nAS\nAditi Soni\nSR-1206\n\t6th - A\nBus\n\t\nSuresh Rathore\n\t\n₹10,000 due\n76% paid\n\t\nCollect\n\n\n\t\nDS\nDiya Singh\nSR-1212\n\t6th - A\nBus\n\t\nRajesh Sharma\n\t\n₹14,000 due\n67% paid\n\t\nCollect\n\n\n\t\nTD\nTara Desai\nSR-1218\n\t6th - A\nBus\n\t\nSuresh Rathore\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nVS\nVihaan Singh\nSR-1203\n\t6th - B\nBus\n\t\nVikram Singh\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nAJ\nArjun Joshi\nSR-1209\n\t6th - B\nBus\n\t\nMahesh Joshi\n\t\n₹22,000 due\n48% paid\n\t\nCollect\n\n\n\t\nAB\nAditya Bhat\nSR-1215\n\t6th - B\nBus\n\t\nVikram Singh\n\t\n₹6,000 due\n86% paid\n\t\nCollect\n\n\n\t\nYV\nYash Verma\nSR-1221\n\t6th - B\nBus\n\t\nMahesh Joshi\n\tPaid\t\n\n\n\t\nIM\nIshita Mehta\nSR-1204\n\t7th - A\t\nRajesh Sharma\n\t\n₹22,000 due\n48% paid\n\t\nCollect\n\n\n\t\nKP\nKavya Patel\nSR-1210\n\t7th - A\t\nSuresh Rathore\n\t\n₹6,000 due\n86% paid\n\t\nCollect\n\n\n\t\nSA\nSiya Agarwal\nSR-1216\n\t7th - A\t\nRajesh Sharma\n\t\n₹10,000 due\n76% paid\n\t\nCollect\n\n\n\t\nRS\nRiya Saxena\nSR-1222\n\t7th - A\t\nSuresh Rathore\n\t\n₹14,000 due\n67% paid\n\t\nCollect\n\n\n\t\nPJ\nPrisha Joshi\nSR-1201\n\t7th - B\t\nMahesh Joshi\n\t\n₹10,000 due\n76% paid\n\t\nCollect\n\n\n\t\nKJ\nKabir Jain\nSR-1207\n\t7th - B\t\nVikram Singh\n\tPaid\t\n\n\n\t\nSR\nShaurya Rao\nSR-1213\n\t7th - B\t\nMahesh Joshi\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nVS\nVivaan Shah\nSR-1219\n\t7th - B\t\nVikram Singh\n\t\n₹22,000 due\n48% paid\n\t\nCollect\n\n\n\t\nAR\nAnanya Rathore\nSR-1202\n\t8th - A\t\nSuresh Rathore\n\t\n₹14,000 due\n67% paid\n\t\nCollect\n\n\n\t\nMV\nMeera Vyas\nSR-1208\n\t8th - A\t\nRajesh Sharma\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n\n\n\t\nNK\nNisha Kumari\nSR-1214\n\t8th - A\t\nSuresh Rathore\n\tPaid\t\n\n\n\t\nAG\nAvni Gupta\nSR-1220\n\t8th - A\t\nRajesh Sharma\n\t\n₹6,000 due\n86% paid\n\t\nCollect\n\n\n\t\nDC\nDev Choudhary\nSR-1205\n\t8th - B\t\nMahesh Joshi\n\t\n₹6,000 due\n86% paid\n\t\nCollect\n\n\n\t\nRM\nRohan Mehta\nSR-1211\n\t8th - B\t\nVikram Singh\n\t\n₹10,000 due\n76% paid\n\t\nCollect\n\n\n\t\nRD\nReyansh Das\nSR-1217\n\t8th - B\t\nMahesh Joshi\n\t\n₹14,000 due\n67% paid\n\t\nCollect\n\n\n\t\nDS\nDhruv Shah\nSR-1223\n\t8th - B\t\nVikram Singh\n\t\n₹18,000 due\n57% paid\n\t\nCollect\n1–24 of 24",
+      "named": {
+        "canvas": {
+          "text": "SBSMS Barmer Review SchoolBarmerDashboardOverviewReportDaily workStudentsAl",
+          "foreground": "#222c3d",
+          "background": "#eef1f6",
+          "rawBackground": "rgb(238, 241, 246)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "primary": {
+          "text": "New admission",
+          "foreground": "#ffffff",
+          "background": "#285396",
+          "rawBackground": "rgb(40, 83, 150)",
+          "border": "rgb(40, 83, 150)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "500"
+        },
+        "secondary": {
+          "text": "Import",
+          "foreground": "#283e4a",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(136, 152, 164)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "500"
+        },
+        "card": {
+          "text": "All24Fees pending20Fully paid4By bus8Any fieldNameSR no.Parent's nameMobile",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(214, 221, 230)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "field": {
+          "text": "Search name, SR no., father or mobile",
+          "foreground": "#222b3c",
+          "background": "#f9fafc",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "sidebar": {
+          "text": "SBSMS Barmer Review SchoolBarmerDashboardOverviewReportDaily workStudentsAl",
+          "foreground": "#24334a",
+          "background": "#f8fafc",
+          "rawBackground": "rgb(248, 250, 252)",
+          "border": "rgb(214, 221, 230)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "sidebarSearch": {
+          "text": "Find a module",
+          "foreground": "#2b3a50",
+          "background": "#e9edf5",
+          "rawBackground": "rgb(233, 237, 245)",
+          "border": "rgb(127, 143, 156)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "400"
+        },
+        "sidebarIdentity": {
+          "text": "SB",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(255, 255, 255)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "600"
+        },
+        "activeNav": {
+          "text": "All students",
+          "foreground": "#2753a2",
+          "background": "#e7eef9",
+          "rawBackground": "rgb(231, 238, 249)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "12px",
+          "weight": "600"
+        },
+        "heading": {
+          "text": "Student register",
+          "foreground": "#222c3d",
+          "background": "#eef1f6",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "27px",
+          "weight": "600"
+        },
+        "support": {
+          "text": "Find student records, manage admissions and review fee balances.",
+          "foreground": "#536175",
+          "background": "#eef1f6",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "SB",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Find a module",
+          "foreground": "#2b3a50",
+          "background": "#e9edf5",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Find student records, manage admissions and review fee balances.",
+          "foreground": "#536175",
+          "background": "#eef1f6",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Import",
+          "foreground": "#283e4a",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Export",
+          "foreground": "#283e4a",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "New admission",
+          "foreground": "#ffffff",
+          "background": "#285396",
+          "size": 13,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "All24",
+          "foreground": "#24579a",
+          "background": "#ffffff",
+          "size": 13.5,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Fees pending20",
+          "foreground": "#566478",
+          "background": "#f7f9fc",
+          "size": 13.5,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Fully paid4",
+          "foreground": "#566478",
+          "background": "#f7f9fc",
+          "size": 13.5,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "By bus8",
+          "foreground": "#566478",
+          "background": "#f7f9fc",
+          "size": 13.5,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "ClassAll6th7th8thAll",
+          "foreground": "#525f73",
+          "background": "#fffffe",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "SectionAllABAll",
+          "foreground": "#525f73",
+          "background": "#fffffe",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "GenderAllBoysGirlsAll",
+          "foreground": "#525f73",
+          "background": "#fffffe",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "CategoryAllGeneralOBCMBCSCSTEWSAll",
+          "foreground": "#525f73",
+          "background": "#fffffe",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Student",
+          "foreground": "#52616c",
+          "background": "#f7f9fa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Class",
+          "foreground": "#52616c",
+          "background": "#f7f9fa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Parent",
+          "foreground": "#52616c",
+          "background": "#f7f9fa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Fee balance",
+          "foreground": "#52616c",
+          "background": "#f7f9fa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Actions",
+          "foreground": "#52616c",
+          "background": "#f7f9fa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "ASAarav SharmaSR-1200",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Aarav Sharma",
+          "foreground": "#222b3c",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - ABus",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Rajesh Sharma",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "ASAditi SoniSR-1206",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Aditi Soni",
+          "foreground": "#222b3c",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - ABus",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Suresh Rathore",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹10,000 due76% paid",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collect",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "DSDiya SinghSR-1212",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Diya Singh",
+          "foreground": "#222b3c",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - ABus",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Rajesh Sharma",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹14,000 due67% paid",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collect",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "TDTara DesaiSR-1218",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Tara Desai",
+          "foreground": "#222b3c",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - ABus",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Suresh Rathore",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹18,000 due57% paid",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collect",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "VSVihaan SinghSR-1203",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Vihaan Singh",
+          "foreground": "#222b3c",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - BBus",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Vikram Singh",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹18,000 due57% paid",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collect",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "AJArjun JoshiSR-1209",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Arjun Joshi",
+          "foreground": "#222b3c",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - BBus",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Mahesh Joshi",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹22,000 due48% paid",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collect",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "ABAditya BhatSR-1215",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Aditya Bhat",
+          "foreground": "#222b3c",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - BBus",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Vikram Singh",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹6,000 due86% paid",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collect",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "YVYash VermaSR-1221",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Yash Verma",
+          "foreground": "#222b3c",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th - BBus",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Mahesh Joshi",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "IMIshita MehtaSR-1204",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Ishita Mehta",
+          "foreground": "#222b3c",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "7th - A",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Rajesh Sharma",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹22,000 due48% paid",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collect",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "web",
+      "route": "/fees/collect?student=review-1",
+      "variant": "current",
+      "file": "round-2/screens/sapphire-web-fees-collect-current.png",
+      "url": "/fees/collect?student=review-1",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nCollect fee\nDues & reminders\nOnline payments\nUnclear payments\nSession close: carry dues\nReceipts\nReports\nFee setup\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nFees\nCollect fee\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nFee counter\n\nFind a student, review dues and record a payment\n\nFind a student\nName, register number or parent mobile\nFind student\n/\nPJ\nPrisha Joshi\nClass 7th - B\nRoll 2\n\nSR-1201 · Father Mahesh Joshi · \n\nChange\n\nSession fee\n\n₹48,000\n\nPaid\n\n₹16,000\n\nStill due\n\n₹32,000\n\nSession 2026-27\n33% paid\nQuarter 1\n10 Apr\n\nPaid ₹15,750\n\nQuarter 2\n10 Jul\n\n₹11,000· 128d late\n\nCleared by this payment\n\nQuarter 3\n10 Oct\n\n₹9,750· 36d late\n\nCleared by this payment\n\nQuarter 4\n10 Jan\n\n₹11,250\n\nFee being paid\nOverdue ₹20,750\nUp to Quarter 4 ₹32,000\n₹\nTuition fee\n₹12,750\nExam fee\n₹1,500\nComputer fee\n₹500\nTransport fee\n₹6,000\nLate fine\nQuarter 2 128 days late · Quarter 3 36 days late (up to ₹860)\n₹\nTotal to collect\nTwenty One Thousand Six Hundred Ten Rupees Only\n₹21,610\nPaid by\nCash\nUPI\nCheque\nNote (optional)\nCtrl + Enter\nCollect ₹21,610 & print\n\nCollected today\n\n₹9,500\n\n3 receipts\n\nCash\n₹4,500\nUPI\n₹5,000\nCheque\n₹0\nPrisha's receipts\nCash\n14 Nov · #1024\n₹2,500\nUPI\n13 Nov · #1025\n₹3,000\nCash\n12 Nov · #1026\n₹3,500\nUPI\n11 Nov · #1027\n₹4,000\nCash\n14 Nov · #1028\n₹4,500\nUPI\n13 Nov · #1029\n₹5,000\nCash\n12 Nov · #1030\n₹5,500\nUPI\n11 Nov · #1031\n₹6,000\nLatest receipts\nAarav Sharma\n14 Nov · #1024 · 6th\n₹2,500\nPrisha Joshi\n13 Nov · #1025 · 7th\n₹3,000\nAnanya Rathore\n12 Nov · #1026 · 8th\n₹3,500\nVihaan Singh\n11 Nov · #1027 · 6th\n₹4,000\nIshita Mehta\n14 Nov · #1028 · 7th\n₹4,500\nDev Choudhary\n13 Nov · #1029 · 8th\n₹5,000\nAditi Soni\n12 Nov · #1030 · 6th\n₹5,500\nKabir Jain\n11 Nov · #1031 · 7th\n₹6,000",
+      "named": {
+        "canvas": {
+          "text": "SBSMS Barmer Review SchoolBarmerDashboardOverviewReportDaily workStudentsFe",
+          "foreground": "#263735",
+          "background": "#f2eee7",
+          "rawBackground": "rgb(242, 238, 231)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "secondary": {
+          "text": "Change",
+          "foreground": "#34444f",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(205, 214, 220)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "12px",
+          "weight": "500"
+        },
+        "card": {
+          "text": "Find a studentName, register number or parent mobileFind student/",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "rawBackground": "rgb(255, 254, 250)",
+          "border": "rgb(216, 213, 205)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "field": {
+          "text": "Collect from another student…",
+          "foreground": "#161b27",
+          "background": "#fffefa",
+          "rawBackground": "rgb(255, 254, 250)",
+          "border": "rgb(203, 210, 223)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "sidebar": {
+          "text": "SBSMS Barmer Review SchoolBarmerDashboardOverviewReportDaily workStudentsFe",
+          "foreground": "#fffefa",
+          "background": "#163f49",
+          "rawBackground": "rgb(22, 63, 73)",
+          "border": "rgb(52, 89, 99)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "sidebarSearch": {
+          "text": "Find a module",
+          "foreground": "#dce8e7",
+          "background": "#f7f8fb",
+          "rawBackground": "rgb(247, 248, 251)",
+          "border": "rgb(226, 230, 239)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "400"
+        },
+        "sidebarIdentity": {
+          "text": "SB",
+          "foreground": "#dce8e7",
+          "background": "#fffefa",
+          "rawBackground": "rgb(255, 254, 250)",
+          "border": "rgb(226, 230, 239)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "600"
+        },
+        "activeNav": {
+          "text": "Collect fee",
+          "foreground": "#163f49",
+          "background": "#fffefa",
+          "rawBackground": "rgb(255, 254, 250)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "12px",
+          "weight": "500"
+        },
+        "heading": {
+          "text": "Fee counter",
+          "foreground": "#263735",
+          "background": "#f2eee7",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "27px",
+          "weight": "600"
+        },
+        "support": {
+          "text": "Find a student, review dues and record a payment",
+          "foreground": "#59635f",
+          "background": "#f2eee7",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "SB",
+          "foreground": "#dce8e7",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Find a module",
+          "foreground": "#dce8e7",
+          "background": "#f7f8fb",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Find a student, review dues and record a payment",
+          "foreground": "#59635f",
+          "background": "#f2eee7",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Find student",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "SR-1201 · Father Mahesh Joshi ·",
+          "foreground": "#687389",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Change",
+          "foreground": "#34444f",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Session fee",
+          "foreground": "#687389",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹48,000",
+          "foreground": "#161b27",
+          "background": "#ffffff",
+          "size": 20,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid",
+          "foreground": "#687389",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹16,000",
+          "foreground": "#161b27",
+          "background": "#ffffff",
+          "size": 20,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Still due",
+          "foreground": "#e11d48",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹32,000",
+          "foreground": "#be123c",
+          "background": "#ffffff",
+          "size": 20,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid ₹15,750",
+          "foreground": "#07745e",
+          "background": "#f6fef9",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹11,000· 128d late",
+          "foreground": "#e11d48",
+          "background": "#fff8f6",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Cleared by this payment",
+          "foreground": "#0e554f",
+          "background": "#fff8f6",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹9,750· 36d late",
+          "foreground": "#e11d48",
+          "background": "#fff8f6",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Cleared by this payment",
+          "foreground": "#0e554f",
+          "background": "#fff8f6",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹11,250",
+          "foreground": "#252c3b",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Fee being paid",
+          "foreground": "#161b27",
+          "background": "#fffefa",
+          "size": 15,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Overdue ₹20,750",
+          "foreground": "#0e554f",
+          "background": "#eff8f5",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Up to Quarter 4 ₹32,000",
+          "foreground": "#34444f",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collected today",
+          "foreground": "#4c566b",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹9,500",
+          "foreground": "#161b27",
+          "background": "#fffefa",
+          "size": 30,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "3 receipts",
+          "foreground": "#687389",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Cash14 Nov · #1024₹2,500",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "UPI13 Nov · #1025₹3,000",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Cash12 Nov · #1026₹3,500",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "UPI11 Nov · #1027₹4,000",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Cash14 Nov · #1028₹4,500",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "UPI13 Nov · #1029₹5,000",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Cash12 Nov · #1030₹5,500",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "UPI11 Nov · #1031₹6,000",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "web",
+      "route": "/fees/collect?student=review-1",
+      "variant": "proposed",
+      "file": "round-2/screens/sapphire-web-fees-collect-proposed.png",
+      "url": "/fees/collect?student=review-1",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nCollect fee\nDues & reminders\nOnline payments\nUnclear payments\nSession close: carry dues\nReceipts\nReports\nFee setup\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nFees\nCollect fee\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nFee counter\n\nFind a student, review dues and record a payment\n\nFind a student\nName, register number or parent mobile\nFind student\n/\nPJ\nPrisha Joshi\nClass 7th - B\nRoll 2\n\nSR-1201 · Father Mahesh Joshi · \n\nChange\n\nSession fee\n\n₹48,000\n\nPaid\n\n₹16,000\n\nStill due\n\n₹32,000\n\nSession 2026-27\n33% paid\nQuarter 1\n10 Apr\n\nPaid ₹15,750\n\nQuarter 2\n10 Jul\n\n₹11,000· 128d late\n\nCleared by this payment\n\nQuarter 3\n10 Oct\n\n₹9,750· 36d late\n\nCleared by this payment\n\nQuarter 4\n10 Jan\n\n₹11,250\n\nFee being paid\nOverdue ₹20,750\nUp to Quarter 4 ₹32,000\n₹\nTuition fee\n₹12,750\nExam fee\n₹1,500\nComputer fee\n₹500\nTransport fee\n₹6,000\nLate fine\nQuarter 2 128 days late · Quarter 3 36 days late (up to ₹860)\n₹\nTotal to collect\nTwenty One Thousand Six Hundred Ten Rupees Only\n₹21,610\nPaid by\nCash\nUPI\nCheque\nNote (optional)\nCtrl + Enter\nCollect ₹21,610 & print\n\nCollected today\n\n₹9,500\n\n3 receipts\n\nCash\n₹4,500\nUPI\n₹5,000\nCheque\n₹0\nPrisha's receipts\nCash\n14 Nov · #1024\n₹2,500\nUPI\n13 Nov · #1025\n₹3,000\nCash\n12 Nov · #1026\n₹3,500\nUPI\n11 Nov · #1027\n₹4,000\nCash\n14 Nov · #1028\n₹4,500\nUPI\n13 Nov · #1029\n₹5,000\nCash\n12 Nov · #1030\n₹5,500\nUPI\n11 Nov · #1031\n₹6,000\nLatest receipts\nAarav Sharma\n14 Nov · #1024 · 6th\n₹2,500\nPrisha Joshi\n13 Nov · #1025 · 7th\n₹3,000\nAnanya Rathore\n12 Nov · #1026 · 8th\n₹3,500\nVihaan Singh\n11 Nov · #1027 · 6th\n₹4,000\nIshita Mehta\n14 Nov · #1028 · 7th\n₹4,500\nDev Choudhary\n13 Nov · #1029 · 8th\n₹5,000\nAditi Soni\n12 Nov · #1030 · 6th\n₹5,500\nKabir Jain\n11 Nov · #1031 · 7th\n₹6,000",
+      "named": {
+        "canvas": {
+          "text": "SBSMS Barmer Review SchoolBarmerDashboardOverviewReportDaily workStudentsFe",
+          "foreground": "#222c3d",
+          "background": "#eef1f6",
+          "rawBackground": "rgb(238, 241, 246)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "secondary": {
+          "text": "Change",
+          "foreground": "#273e49",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(130, 146, 158)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "12px",
+          "weight": "500"
+        },
+        "card": {
+          "text": "Find a studentName, register number or parent mobileFind student/",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(214, 221, 230)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "field": {
+          "text": "Collect from another student…",
+          "foreground": "#212b3b",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(203, 210, 223)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "sidebar": {
+          "text": "SBSMS Barmer Review SchoolBarmerDashboardOverviewReportDaily workStudentsFe",
+          "foreground": "#24334a",
+          "background": "#f8fafc",
+          "rawBackground": "rgb(248, 250, 252)",
+          "border": "rgb(214, 221, 230)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "400"
+        },
+        "sidebarSearch": {
+          "text": "Find a module",
+          "foreground": "#27364d",
+          "background": "#e8edf5",
+          "rawBackground": "rgb(232, 237, 245)",
+          "border": "rgb(125, 142, 155)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "400"
+        },
+        "sidebarIdentity": {
+          "text": "SB",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(255, 255, 255)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "14px",
+          "weight": "600"
+        },
+        "activeNav": {
+          "text": "Collect fee",
+          "foreground": "#2854a4",
+          "background": "#e6edf9",
+          "rawBackground": "rgb(230, 237, 249)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "12px",
+          "weight": "600"
+        },
+        "heading": {
+          "text": "Fee counter",
+          "foreground": "#222c3d",
+          "background": "#eef1f6",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "27px",
+          "weight": "600"
+        },
+        "support": {
+          "text": "Find a student, review dues and record a payment",
+          "foreground": "#536175",
+          "background": "#eef1f6",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+          "size": "13px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "SB",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Find a module",
+          "foreground": "#27364d",
+          "background": "#e8edf5",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Find a student, review dues and record a payment",
+          "foreground": "#536175",
+          "background": "#eef1f6",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Find student",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "SR-1201 · Father Mahesh Joshi ·",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Change",
+          "foreground": "#273e49",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Session fee",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹48,000",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 20,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹16,000",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 20,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Still due",
+          "foreground": "#e11d48",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹32,000",
+          "foreground": "#be123c",
+          "background": "#ffffff",
+          "size": 20,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid ₹15,750",
+          "foreground": "#07745e",
+          "background": "#f6fefb",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹11,000· 128d late",
+          "foreground": "#e11d48",
+          "background": "#fff8f9",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Cleared by this payment",
+          "foreground": "#2854a6",
+          "background": "#fff8f9",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹9,750· 36d late",
+          "foreground": "#e11d48",
+          "background": "#fff8f9",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Cleared by this payment",
+          "foreground": "#2854a6",
+          "background": "#fff8f9",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹11,250",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Fee being paid",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 15,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Overdue ₹20,750",
+          "foreground": "#0e554f",
+          "background": "#eff8f5",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Up to Quarter 4 ₹32,000",
+          "foreground": "#273e49",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Collected today",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹9,500",
+          "foreground": "#222c3d",
+          "background": "#ffffff",
+          "size": 30,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "3 receipts",
+          "foreground": "#536175",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Cash14 Nov · #1024₹2,500",
+          "foreground": "#222d3c",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "UPI13 Nov · #1025₹3,000",
+          "foreground": "#222d3c",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Cash12 Nov · #1026₹3,500",
+          "foreground": "#222d3c",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "UPI11 Nov · #1027₹4,000",
+          "foreground": "#222d3c",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Cash14 Nov · #1028₹4,500",
+          "foreground": "#222d3c",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "UPI13 Nov · #1029₹5,000",
+          "foreground": "#222d3c",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Cash12 Nov · #1030₹5,500",
+          "foreground": "#222d3c",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "UPI11 Nov · #1031₹6,000",
+          "foreground": "#222d3c",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "blocked": []
+}

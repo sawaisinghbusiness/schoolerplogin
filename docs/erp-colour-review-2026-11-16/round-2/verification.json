@@ -1,0 +1,34 @@
+[
+  {
+    "direction": "ink-oxide",
+    "mode": "web",
+    "errors": [],
+    "missing": [],
+    "blockedWrites": [],
+    "overflow": []
+  },
+  {
+    "direction": "ink-oxide",
+    "mode": "erpApp",
+    "errors": [],
+    "missing": [],
+    "blockedWrites": [],
+    "overflow": []
+  },
+  {
+    "direction": "plum",
+    "mode": "web",
+    "errors": [],
+    "missing": [],
+    "blockedWrites": [],
+    "overflow": []
+  },
+  {
+    "direction": "sapphire",
+    "mode": "web",
+    "errors": [],
+    "missing": [],
+    "blockedWrites": [],
+    "overflow": []
+  }
+]

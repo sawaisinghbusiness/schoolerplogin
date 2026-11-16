@@ -39,11 +39,46 @@ for (const group of NAV_GROUPS)
             item.soon = item.children[0].soon;
             delete item.children;
         }
-export function visibleNavGroups(): NavGroup[] {
+/**
+ * Who may open a section, matching the backend's requireRole checks (sms backend/src/routes, 2026-11-16).
+ * Longest prefix wins; anything not listed is open to every signed-in staff role. Without this, teachers saw
+ * Payroll, Users and the fee counter in the menu and got "HTTP 403" on opening them.
+ */
+const ROUTE_ROLES: [prefix: string, roles: string[]][] = [
+    ["/fees", ["admin", "accountant"]],
+    ["/staff/payroll", ["admin", "accountant"]],
+    ["/staff/new", ["admin"]],
+    ["/staff/excel", ["admin"]],
+    ["/staff/allocation", ["admin"]],
+    ["/staff/class-teachers", ["admin"]],
+    ["/students/documents", ["admin", "accountant"]],
+    ["/students/enquiries", ["admin", "accountant"]],
+    ["/students/promote", ["admin"]],
+    ["/students/certificates", ["admin"]],
+    ["/students/excel", ["admin"]],
+    ["/parent-chats", ["admin"]],
+    ["/settings", ["admin"]],
+];
+/** True when `roleKey` may open `href`. An unknown role (still loading) sees everything, so the menu never flickers empty. */
+export function canOpen(href: string, roleKey?: string): boolean {
+    if (!roleKey) return true;
+    const path = href.split("?")[0];
+    const rule = ROUTE_ROLES.filter(([p]) => path === p || path.startsWith(p + "/")).sort((a, b) => b[0].length - a[0].length)[0];
+    return !rule || rule[1].includes(roleKey);
+}
+export function visibleNavGroups(roleKey?: string): NavGroup[] {
     return NAV_GROUPS.map((g) => ({
         ...g,
-        items: g.items.map((item) => (item.children && item.children.every((c) => c.soon) ? { ...item, soon: true } : item)),
-    }));
+        items: g.items
+            .map((item) => {
+                const children = item.children?.filter((c) => canOpen(c.href, roleKey));
+                if (item.children && !children?.length) return null;
+                if (!item.children && item.href && !canOpen(item.href, roleKey)) return null;
+                const next = children ? { ...item, children } : item;
+                return next.children && next.children.every((c) => c.soon) ? { ...next, soon: true } : next;
+            })
+            .filter((item): item is NavItem => !!item),
+    })).filter((g) => g.items.length > 0);
 }
 /** Flat list of every destination, for the command palette and page titles. */
 export interface NavDestination {

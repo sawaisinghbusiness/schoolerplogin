@@ -14,7 +14,8 @@ import { ROLE_INFO, passwordProblem, suggestPassword } from "@/lib/services/user
 import { IssuedLogin } from "@/components/settings/users/UserDrawer";
 
 const day = (iso: string) => (iso ? new Date(iso + "T00:00:00").toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" }) : "");
-const today = () => new Date().toISOString().slice(0, 10);
+/** Today in India (IST), not UTC. */
+const today = () => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata" }).format(new Date());
 function yearsSince(iso: string) {
   if (!iso) return "";
   const y = (Date.now() - new Date(iso + "T00:00:00").getTime()) / (365.25 * 86400000);

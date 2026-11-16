@@ -5,6 +5,7 @@ import Link from "next/link";
 import { AlertTriangle, FileText, Printer, RefreshCw } from "lucide-react";
 import { examService, Exam, Report, ReportCard, SectionProgress } from "@/lib/services/examService";
 import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
+import { SchoolProfileNotice } from "@/components/school/SchoolProfileNotice";
 import { SheetPreview } from "@/components/certificates/SheetPreview";
 import { ReportCardBack, ReportCardDocument, ReportSchool } from "@/components/exams/report/ReportCardDocument";
 import { PrintReportCards } from "@/components/exams/report/PrintReportCards";
@@ -29,7 +30,7 @@ function writeQuery(exam: string, section: string) {
 
 /** The latest exam that has already started, else the first one. */
 function defaultExam(list: Exam[]) {
-  const today = new Date().toISOString().slice(0, 10);
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata" }).format(new Date()); // India date, not UTC
   const started = list.filter((e) => e.start_date && e.start_date <= today).sort((a, b) => (b.start_date || "").localeCompare(a.start_date || ""));
   return (started[0] || list[0])?.id || "";
 }
@@ -41,7 +42,7 @@ function resultBadge(c: ReportCard) {
 }
 
 export default function ReportCardsPage() {
-  const { schoolProfile } = useSchoolProfile();
+  const { schoolProfile, ready } = useSchoolProfile();
   const [exams, setExams] = useState<Exam[] | null>(null);
   const [setupNeeded, setSetupNeeded] = useState(false);
   const [listError, setListError] = useState<string | null>(null);
@@ -172,6 +173,7 @@ export default function ReportCardsPage() {
           </div>
         )}
       </header>
+      <SchoolProfileNotice />
 
       {exams === null ? (
         <PageSkeleton />
@@ -301,11 +303,11 @@ export default function ReportCardsPage() {
                 <p className="truncate text-[14px] font-semibold text-slate-900">{card ? card.name : "Pick a student"}</p>
                 {card && <p className="truncate text-[12px] text-slate-500" title={card.result}>{card.result}</p>}
               </div>
-              <button type="button" onClick={() => card && setPrinting([card])} disabled={!card || !!printing} className="btn btn-secondary btn-sm">
+              <button type="button" onClick={() => card && setPrinting([card])} disabled={!card || !!printing || !ready} className="btn btn-secondary btn-sm">
                 <Printer className="h-4 w-4" />
                 Print this card
               </button>
-              <button type="button" onClick={() => setPrinting(cards)} disabled={!!printing} className="btn btn-primary btn-sm">
+              <button type="button" onClick={() => setPrinting(cards)} disabled={!!printing || !ready} className="btn btn-primary btn-sm">
                 <Printer className="h-4 w-4" />
                 Print whole class ({cards.length})
               </button>

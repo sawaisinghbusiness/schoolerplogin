@@ -1,0 +1,78 @@
+[
+  {
+    "variant": "current",
+    "controls": {
+      "primary": {
+        "text": "Collect fee",
+        "foreground": "#ffffff",
+        "background": "#294e43",
+        "rawBackground": "rgb(41, 78, 67)",
+        "border": "rgb(41, 78, 67)",
+        "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+        "size": "13px",
+        "weight": "500",
+        "contrast": 9.271160541429037
+      },
+      "sidebarSearch": {
+        "text": "Find a module",
+        "foreground": "#dce8e7",
+        "background": "#f7f8fb",
+        "rawBackground": "rgb(247, 248, 251)",
+        "border": "rgb(226, 230, 239)",
+        "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+        "size": "13px",
+        "weight": "400",
+        "contrast": 1.1813129692058548
+      },
+      "sidebarIdentity": {
+        "text": "SB",
+        "foreground": "#dce8e7",
+        "background": "#fffefa",
+        "rawBackground": "rgb(255, 254, 250)",
+        "border": "rgb(226, 230, 239)",
+        "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+        "size": "14px",
+        "weight": "600",
+        "contrast": 1.2431033414282515
+      }
+    }
+  },
+  {
+    "variant": "proposed",
+    "controls": {
+      "primary": {
+        "text": "Collect fee",
+        "foreground": "#ffffff",
+        "background": "#195663",
+        "rawBackground": "rgb(25, 86, 99)",
+        "border": "rgb(25, 86, 99)",
+        "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+        "size": "13px",
+        "weight": "500",
+        "contrast": 8.226839748795662
+      },
+      "sidebarSearch": {
+        "text": "Find a module",
+        "foreground": "#e7f0f2",
+        "background": "#28515e",
+        "rawBackground": "rgb(40, 81, 94)",
+        "border": "rgb(128, 160, 170)",
+        "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+        "size": "13px",
+        "weight": "400",
+        "contrast": 7.470269515882579
+      },
+      "sidebarIdentity": {
+        "text": "SB",
+        "foreground": "#183d48",
+        "background": "#ffffff",
+        "rawBackground": "rgb(255, 255, 255)",
+        "border": "rgb(255, 255, 255)",
+        "font": "\"IBM Plex Sans Variable\", \"Nirmala UI\", sans-serif",
+        "size": "14px",
+        "weight": "600",
+        "contrast": 11.667241410086753
+      }
+    }
+  }
+]

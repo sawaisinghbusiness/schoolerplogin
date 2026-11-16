@@ -67,9 +67,10 @@ export function RouteDrawer({ route, routes, school, isAdmin, onClose, onChanged
   }, [riders, query]);
   const target = routes.find((x) => x.id === (moveTo || r?.id));
 
+  // Above the early return: a hook after `if (!route) return null` crashed the page when a route opened (2026-11-16).
+  const [picking, setPicking] = useState<number | null>(null);
   if (!route) return null;
 
-  const [picking, setPicking] = useState<number | null>(null);
   const setStop = (i: number, patch: Partial<Stop>) => setF((p) => ({ ...p, stops: p.stops.map((s, j) => (j === i ? { ...s, ...patch } : s)) }));
   const moveStopRow = (i: number, d: number) =>
     setF((p) => {

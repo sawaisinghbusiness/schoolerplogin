@@ -1,0 +1,2924 @@
+{
+  "capturedAt": "2026-11-16T08:26:30.026Z",
+  "scope": "ERP web and ERP mode in Staff; source scan only, not a claim every state was rendered.",
+  "repositories": {
+    "web": {
+      "root": "F:\\folders of web\\SMS BARMER",
+      "sourceFiles": 285,
+      "routes": [
+        "app/academics/copy-check/page.tsx",
+        "app/academics/copy-check/sheet/page.tsx",
+        "app/academics/homework/page.tsx",
+        "app/academics/page.tsx",
+        "app/academics/syllabus/excel/page.tsx",
+        "app/academics/syllabus/page.tsx",
+        "app/academics/syllabus/plan/page.tsx",
+        "app/academics/timetable/page.tsx",
+        "app/admission/page.tsx",
+        "app/attendance/leave/page.tsx",
+        "app/attendance/mark/page.tsx",
+        "app/attendance/register/page.tsx",
+        "app/attendance/today/page.tsx",
+        "app/birthdays/page.tsx",
+        "app/calendar/page.tsx",
+        "app/contact/page.tsx",
+        "app/dashboard/page.tsx",
+        "app/disclosure/page.tsx",
+        "app/exams/marks/page.tsx",
+        "app/exams/marks/sheet/page.tsx",
+        "app/exams/report-cards/page.tsx",
+        "app/exams/setup/edit/page.tsx",
+        "app/exams/setup/page.tsx",
+        "app/fees/carry-forward/page.tsx",
+        "app/fees/cheques/page.tsx",
+        "app/fees/collect/page.tsx",
+        "app/fees/dues/page.tsx",
+        "app/fees/online/page.tsx",
+        "app/fees/receipts/page.tsx",
+        "app/fees/reports/page.tsx",
+        "app/fees/setup/page.tsx",
+        "app/login/page.tsx",
+        "app/meetings/new/page.tsx",
+        "app/meetings/page.tsx",
+        "app/messages/detail/page.tsx",
+        "app/messages/new/page.tsx",
+        "app/messages/page.tsx",
+        "app/page.tsx",
+        "app/parent-chats/chat/page.tsx",
+        "app/parent-chats/page.tsx",
+        "app/planned/page.tsx",
+        "app/reports/page.tsx",
+        "app/settings/classes/page.tsx",
+        "app/settings/data/page.tsx",
+        "app/settings/messaging/page.tsx",
+        "app/settings/page.tsx",
+        "app/settings/templates/page.tsx",
+        "app/settings/users/page.tsx",
+        "app/staff/allocation/page.tsx",
+        "app/staff/attendance/page.tsx",
+        "app/staff/class-teachers/page.tsx",
+        "app/staff/detail/page.tsx",
+        "app/staff/excel/page.tsx",
+        "app/staff/leave/page.tsx",
+        "app/staff/new/page.tsx",
+        "app/staff/page.tsx",
+        "app/staff/payroll/page.tsx",
+        "app/students/admission/page.tsx",
+        "app/students/certificates/issue/page.tsx",
+        "app/students/certificates/page.tsx",
+        "app/students/detail/page.tsx",
+        "app/students/documents/page.tsx",
+        "app/students/enquiries/detail/page.tsx",
+        "app/students/enquiries/new/page.tsx",
+        "app/students/enquiries/page.tsx",
+        "app/students/excel/page.tsx",
+        "app/students/page.tsx",
+        "app/students/print/page.tsx",
+        "app/students/promote/page.tsx",
+        "app/transport/page.tsx",
+        "app/transport/route/page.tsx",
+        "app/transport/students/page.tsx"
+      ],
+      "literalColourFrequency": [
+        [
+          "#12665E",
+          57
+        ],
+        [
+          "#53675B",
+          16
+        ],
+        [
+          "#5D6B75",
+          10
+        ],
+        [
+          "#294E43",
+          8
+        ],
+        [
+          "#F4F5F7",
+          7
+        ],
+        [
+          "#18252F",
+          6
+        ],
+        [
+          "#1C2A5E",
+          6
+        ],
+        [
+          "#15803D",
+          5
+        ],
+        [
+          "#163F49",
+          5
+        ],
+        [
+          "#089173",
+          5
+        ],
+        [
+          "#E0E7E1",
+          5
+        ],
+        [
+          "#43564C",
+          4
+        ],
+        [
+          "#B42332",
+          4
+        ],
+        [
+          "#0E554F",
+          4
+        ],
+        [
+          "#1FA855",
+          4
+        ],
+        [
+          "#454957",
+          4
+        ],
+        [
+          "#62677A",
+          4
+        ],
+        [
+          "#20342A",
+          4
+        ],
+        [
+          "#203F36",
+          3
+        ],
+        [
+          "#18332B",
+          3
+        ],
+        [
+          "#D7DFD8",
+          3
+        ],
+        [
+          "#F7F9FA",
+          3
+        ],
+        [
+          "#C9D2D9",
+          3
+        ],
+        [
+          "#ECF0F2",
+          3
+        ],
+        [
+          "#21343D",
+          3
+        ],
+        [
+          "#FFFEFA",
+          3
+        ],
+        [
+          "#65758B",
+          3
+        ],
+        [
+          "#B88436",
+          3
+        ],
+        [
+          "#97A1B6",
+          3
+        ],
+        [
+          "#A8D9CC",
+          3
+        ],
+        [
+          "#D93636",
+          3
+        ],
+        [
+          "#12B28C",
+          3
+        ],
+        [
+          "#C5D4EC",
+          3
+        ],
+        [
+          "#141519",
+          3
+        ],
+        [
+          "#805015",
+          3
+        ],
+        [
+          "#B4C4C7",
+          2
+        ],
+        [
+          "#D8D5CD",
+          2
+        ],
+        [
+          "#647580",
+          2
+        ],
+        [
+          "#DCE2E7",
+          2
+        ],
+        [
+          "#F2D4D4",
+          2
+        ],
+        [
+          "#CDD6DC",
+          2
+        ],
+        [
+          "#34444F",
+          2
+        ],
+        [
+          "#52616C",
+          2
+        ],
+        [
+          "#DCEFE9",
+          2
+        ],
+        [
+          "#F1F4F5",
+          2
+        ],
+        [
+          "#DCE8E7",
+          2
+        ],
+        [
+          "#CBD2DF",
+          2
+        ],
+        [
+          "#F7F8FB",
+          2
+        ],
+        [
+          "#21A04F",
+          2
+        ],
+        [
+          "#B57916",
+          2
+        ],
+        [
+          "#7755B7",
+          2
+        ],
+        [
+          "#D4D7DE",
+          2
+        ],
+        [
+          "#0284C7",
+          2
+        ],
+        [
+          "#F2F2F2",
+          2
+        ],
+        [
+          "#ECEEEB",
+          2
+        ],
+        [
+          "#D8E3F1",
+          2
+        ],
+        [
+          "#C9CCD5",
+          2
+        ],
+        [
+          "#CFDAD4",
+          2
+        ],
+        [
+          "#24593C",
+          2
+        ],
+        [
+          "#B18545",
+          1
+        ],
+        [
+          "#798D9A",
+          1
+        ],
+        [
+          "#EDF1F3",
+          1
+        ],
+        [
+          "#FFFFFF",
+          1
+        ],
+        [
+          "#B2C1C7",
+          1
+        ],
+        [
+          "#6F7B85",
+          1
+        ],
+        [
+          "#44525D",
+          1
+        ],
+        [
+          "#F5F7F8",
+          1
+        ],
+        [
+          "#AAB9C3",
+          1
+        ],
+        [
+          "#F8FAFA",
+          1
+        ],
+        [
+          "#EBF0F1",
+          1
+        ],
+        [
+          "#104640",
+          1
+        ],
+        [
+          "#4A5964",
+          1
+        ],
+        [
+          "#DFE5E9",
+          1
+        ],
+        [
+          "#F6F8F8",
+          1
+        ],
+        [
+          "#172C32",
+          1
+        ],
+        [
+          "#F2EEE7",
+          1
+        ],
+        [
+          "#263735",
+          1
+        ],
+        [
+          "#59635F",
+          1
+        ],
+        [
+          "#10323B",
+          1
+        ],
+        [
+          "#0C2830",
+          1
+        ],
+        [
+          "#D7DFDC",
+          1
+        ],
+        [
+          "#345963",
+          1
+        ],
+        [
+          "#254F59",
+          1
+        ],
+        [
+          "#496A72",
+          1
+        ],
+        [
+          "#E6EEEC",
+          1
+        ],
+        [
+          "#3446D1",
+          1
+        ],
+        [
+          "#252C3B",
+          1
+        ],
+        [
+          "#394153",
+          1
+        ],
+        [
+          "#07745E",
+          1
+        ],
+        [
+          "#B91C1C",
+          1
+        ],
+        [
+          "#924F04",
+          1
+        ],
+        [
+          "#202124",
+          1
+        ],
+        [
+          "#30363A",
+          1
+        ],
+        [
+          "#788078",
+          1
+        ],
+        [
+          "#3174B9",
+          1
+        ],
+        [
+          "#B64B7A",
+          1
+        ],
+        [
+          "#EFF1F6",
+          1
+        ],
+        [
+          "#687389",
+          1
+        ],
+        [
+          "#0EA5E9",
+          1
+        ],
+        [
+          "#D67C07",
+          1
+        ],
+        [
+          "#F2A516",
+          1
+        ],
+        [
+          "#6D5BD0",
+          1
+        ],
+        [
+          "#8B7BE8",
+          1
+        ],
+        [
+          "#E5484D",
+          1
+        ],
+        [
+          "#EEF1F8",
+          1
+        ],
+        [
+          "#EFF8EC",
+          1
+        ],
+        [
+          "#178C46",
+          1
+        ],
+        [
+          "#E8EFF7",
+          1
+        ],
+        [
+          "#FF3040",
+          1
+        ],
+        [
+          "#2563EB",
+          1
+        ],
+        [
+          "#17507A",
+          1
+        ],
+        [
+          "#0F3A59",
+          1
+        ],
+        [
+          "#E9F0FB",
+          1
+        ],
+        [
+          "#E9A23B",
+          1
+        ],
+        [
+          "#0A5C4C",
+          1
+        ],
+        [
+          "#E6F1EE",
+          1
+        ],
+        [
+          "#FAB124",
+          1
+        ],
+        [
+          "#2E313B",
+          1
+        ],
+        [
+          "#F6F8F4",
+          1
+        ],
+        [
+          "#EDF0EC",
+          1
+        ],
+        [
+          "#E4F0E7",
+          1
+        ],
+        [
+          "#FFF1D2",
+          1
+        ],
+        [
+          "#853D1C",
+          1
+        ],
+        [
+          "#FFF4ED",
+          1
+        ],
+        [
+          "#F0F3ED",
+          1
+        ],
+        [
+          "#E6EBE5",
+          1
+        ],
+        [
+          "#925211",
+          1
+        ],
+        [
+          "#D8DED7",
+          1
+        ],
+        [
+          "#FFAA40",
+          1
+        ],
+        [
+          "#9C40FF",
+          1
+        ],
+        [
+          "#1E293B",
+          1
+        ]
+      ],
+      "files": [
+        {
+          "file": "app/academics/copy-check/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "54b94139e1bf51a97a384fca7b8eec5bd223372db586cad226ad0b79e0dfafac"
+        },
+        {
+          "file": "app/academics/copy-check/sheet/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "79439f4b8d470594f20fe1d4d83844f7e07b1091ff2bbba89ea9c09d5e3de0e9"
+        },
+        {
+          "file": "app/academics/homework/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "3b91779bfb1d62dcb23d6db8ed6cdd50e3470eea8637d3b737d8f359df21a0f4"
+        },
+        {
+          "file": "app/academics/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "db769767f39d49d4611d9436c651a72245c8bfda334ed33a58179478b1ee26e3"
+        },
+        {
+          "file": "app/academics/syllabus/excel/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "b42b6986c6992eeafccdf5a6cde105a4282d2fb4c70b9b6274095573c27b189c"
+        },
+        {
+          "file": "app/academics/syllabus/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "ebfe4004aedf4d9310c4527ba4840d762261e4ea58ff62148f995b4e5b68a57c"
+        },
+        {
+          "file": "app/academics/syllabus/plan/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "537202c03bd7b255bc26d102fa0746df92a0b754b4a1bc5a329007bccb580c61"
+        },
+        {
+          "file": "app/academics/timetable/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "18d7056640d95c5eab3edc457b3fce1001a30345631601856f16f6c66581c4c8"
+        },
+        {
+          "file": "app/action-palette.css",
+          "hexOccurrences": 15,
+          "sha256": "0a2cbaf29db8d693b8dae3138b3dd5682408010b14e505d937b68e4a85696eb1"
+        },
+        {
+          "file": "app/admission/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "9ed7fe0d416633320e4f1b9496ec35a8088f9a66ea26b1acad252e20c14a302b"
+        },
+        {
+          "file": "app/attendance/leave/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "e5b8976b07a65f5945373000900c54454520139109ce107aa67ead1e2efb8cce"
+        },
+        {
+          "file": "app/attendance/mark/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "5eb6008a4048aab28cf33a06950e92b0822ec8d1bcb4a3240e5aa6e118451d21"
+        },
+        {
+          "file": "app/attendance/register/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "507e0a7649bedd915c2d5187f1b5e5d87cb895f12b1f8bb72b7b3b53bf22d860"
+        },
+        {
+          "file": "app/attendance/today/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "2585645af197028f9ba2a8285a0f16eab70425d96abc5cc534f7382daef17d1f"
+        },
+        {
+          "file": "app/birthdays/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "71f1d7ff311daae47240cfd08db0a28ba13598082e5a8c15d7c2bf3224a6c6b7"
+        },
+        {
+          "file": "app/calendar/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "d0549693f0433a9faef2ba061fb5b2518e89be80db817995952cca5ec5c0950a"
+        },
+        {
+          "file": "app/contact/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "1e4c58ed2d320d00a919512ab1eb785b6dc0d84e066a0ac57ec63dd89a24230e"
+        },
+        {
+          "file": "app/dashboard/page.tsx",
+          "hexOccurrences": 22,
+          "sha256": "3af77c6c4b80027d1051ce6629da7e0a48864e1174d86e91712541855a5e7ed3"
+        },
+        {
+          "file": "app/disclosure/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "cdb1a4f6eeb4833016563504f0f0f57de49472828e12bd1074732d55bc3047a4"
+        },
+        {
+          "file": "app/erp.css",
+          "hexOccurrences": 65,
+          "sha256": "03165702d46667c2de7db8bd2245c8d1dcbe83eb28b6f7eadfa7af1bb26cef4b"
+        },
+        {
+          "file": "app/exams/marks/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "e0b68564e26cb04768e835fbab5269af491ff1debe7ce2da9cba428a35ff4e48"
+        },
+        {
+          "file": "app/exams/marks/sheet/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "b55357a5568e1f641aee270dbe198725473ec3910edc6e8e4650809d6ffb1518"
+        },
+        {
+          "file": "app/exams/report-cards/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "f8393a0814b01cf9b3e5b8c93054056acf1373df036c7d2bcb724dc38e022041"
+        },
+        {
+          "file": "app/exams/setup/edit/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "077461f27653a6d1290d8640708c882fe2736c7aa189930bcdb50d7fc39f5801"
+        },
+        {
+          "file": "app/exams/setup/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "3ee4649756117acabb4bf9d3624351257a337f24251008cfcf45d4adb6bbcfa0"
+        },
+        {
+          "file": "app/fees/carry-forward/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "bc6506249062ad13ac705a998f5f7706227c23113c336fd6c10f5221c115d8bf"
+        },
+        {
+          "file": "app/fees/cheques/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "843d167399553797035a514ea0b12d1d24ea20b01f79195fe2bd1f46386d0029"
+        },
+        {
+          "file": "app/fees/collect/page.tsx",
+          "hexOccurrences": 3,
+          "sha256": "79a824e1b5a39c53268cc026e7b44a13dfad11b7a5c7c961942ae2900ff72dc5"
+        },
+        {
+          "file": "app/fees/dues/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "cbf3fa954af736c9615bb611835da9604fd005909ee05c8d9dcc7c1b88419d3c"
+        },
+        {
+          "file": "app/fees/online/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "0c2a757bd5b7542f6b989aedcbe9b8b1f5c7e07d55980fb6a6cbc383a11475ae"
+        },
+        {
+          "file": "app/fees/receipts/page.tsx",
+          "hexOccurrences": 6,
+          "sha256": "4282744812f32fff8fd4ba9d52c14d3aacd3db963c15b6f7ae885544965e68a9"
+        },
+        {
+          "file": "app/fees/reports/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "d83b1d0adaaedc505f37c3d90fa815d008e43b80789fd427746a8b6c41ba23c1"
+        },
+        {
+          "file": "app/fees/setup/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "6b51d1e8684f41577beb780f689c6902f39decdeee8f291e86a70220d44146ae"
+        },
+        {
+          "file": "app/globals.css",
+          "hexOccurrences": 6,
+          "sha256": "7ce637ef6afde9a40ae9b6b93134ce74f6407e6fdacca0bcc7a793ca78671e3e"
+        },
+        {
+          "file": "app/layout.tsx",
+          "hexOccurrences": 1,
+          "sha256": "2b2585197a353ae2dbf8a89485d3dedd5570172b21d1342bde8f7cf53f2b8c2a"
+        },
+        {
+          "file": "app/login/page.tsx",
+          "hexOccurrences": 3,
+          "sha256": "438bc0b5d58ae01e631e606b1d7ca720e6fbd801c4641a9f8d259da45b9e66ea"
+        },
+        {
+          "file": "app/meetings/new/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "d1c3b4683e388375449cdece74f590d1e8079d1f339f40fbacdada072fcff916"
+        },
+        {
+          "file": "app/meetings/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "5a3dd4b0c9bae9a036663c55340ea33cfceaf0ee565d122eb1127d156c70f85a"
+        },
+        {
+          "file": "app/messages/detail/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "fefe2d62e814459fb9c894191aaac3b85b9adb0820fe0b7d955266a31bbbcec3"
+        },
+        {
+          "file": "app/messages/new/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "a6a5e689489462ecc270b8210d367c3f184b55ea595733af8f2af581723bc8af"
+        },
+        {
+          "file": "app/messages/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "ca96f495e2c27b24fab97bf8d094694fd8e975c1da15c75f1ca333b14736cd94"
+        },
+        {
+          "file": "app/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "60adce57ac0dd7de328a141ecb428ca042df112ba6aa6e2675efbcd57c1d9645"
+        },
+        {
+          "file": "app/parent-chats/chat/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "d222cc9b19c359f08325de974697972fab699a43d3a7931ed0fa885093724d70"
+        },
+        {
+          "file": "app/parent-chats/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "1f893b506d90a5581777bdf79128d6114f2e17f3041ffd9fc6dcd0d7ec9f0060"
+        },
+        {
+          "file": "app/parity.css",
+          "hexOccurrences": 31,
+          "sha256": "baa8d1fe5e0acc2413eb0460990972bebec5a8f17e24049fc83564c5b6703fe0"
+        },
+        {
+          "file": "app/planned/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "f412d164c5d491133e76efffb0058651f740b814bef644d20d978d34139e3bd4"
+        },
+        {
+          "file": "app/reports/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "538a971b648a412a220743bcb157acafcccedc0ade68cddcc745e907cc9997e1"
+        },
+        {
+          "file": "app/settings/classes/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "1241d2f6bbb1fcc4b93b01dbc3e527023cf9f3f57ab2d6b4fb993648b1ee353b"
+        },
+        {
+          "file": "app/settings/data/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "a83fdaa9059a6da52fe90d35cd999e9b11f11bbfdaaba1ad14348f61e73903e8"
+        },
+        {
+          "file": "app/settings/messaging/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "b77f0cd14b5802ebd2337d3e0f08c03f4c012163d56dd3926393ce56403aa9df"
+        },
+        {
+          "file": "app/settings/page.tsx",
+          "hexOccurrences": 3,
+          "sha256": "6d3adbc1137f244af6d759f8257af5a4e1741a905c2232297cb4e0510e078351"
+        },
+        {
+          "file": "app/settings/templates/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "cc30fa30e3c54df530cbd2fea3f1c161cbe7204fb564e956fb8006c79c01c014"
+        },
+        {
+          "file": "app/settings/users/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "ab2171f1a8b4d9c10303e6f967e09ed687849de413ef0075532323cfb8e32f36"
+        },
+        {
+          "file": "app/staff/allocation/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "e15a1f2be87db84ec473b5eadce94614fe65442661db56d4624d8312320a4f66"
+        },
+        {
+          "file": "app/staff/attendance/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "1aab31d8f2e3733b8ec1aca57ce019d86437dbd076c09e37cf5f14ce420bcc0c"
+        },
+        {
+          "file": "app/staff/class-teachers/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "68de485b1234a786d709e149525706710dd213f4f0dfa524131643a9917feb2b"
+        },
+        {
+          "file": "app/staff/detail/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "1bc590ecbc1c94f4e57611c9e55a31b6ac8e8545f08404ad227229f574686502"
+        },
+        {
+          "file": "app/staff/excel/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "7e03873a64486e3379b824a0abb64e917e40cd6fe9fa9b140fdf215103d2f7e4"
+        },
+        {
+          "file": "app/staff/leave/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "f10b713a2ede89c58e4bc22d051800b1e7ea2c2e164e50776fb85345f53fdbc2"
+        },
+        {
+          "file": "app/staff/new/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "3c894ab0b99761b1e922eb716e981dc5e49fd0b633974bd12e553a0daec38f0d"
+        },
+        {
+          "file": "app/staff/page.tsx",
+          "hexOccurrences": 2,
+          "sha256": "7c519ad6f2deb99942784f2016ac37e6e74293e765879c48b419d03e8687aa38"
+        },
+        {
+          "file": "app/staff/payroll/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "425a6bddcefac7c6a6d8044c6dfa3cf304eb51cf32ac1cab7ec66897dd441262"
+        },
+        {
+          "file": "app/status-badges.css",
+          "hexOccurrences": 13,
+          "sha256": "edc62f23de5c44743946b29c1c3e89dfa008af48508e55f4c264415df49d90af"
+        },
+        {
+          "file": "app/students/admission/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "ba6efd9a546f09876c6bf04f964731c91666a1824bdb575a96fe3121d111d036"
+        },
+        {
+          "file": "app/students/certificates/issue/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "a2417966009613d58df84752bc95b374e23659ea7f46e142153f4a193e931eba"
+        },
+        {
+          "file": "app/students/certificates/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "f4f546afb6af7289c0561411b433e965d2aaa9f4d98bff8b96229914c38b22db"
+        },
+        {
+          "file": "app/students/detail/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "30da04ad889047567f00fc745a73646bb83b8e001e0e378e10d1f9a576cd5421"
+        },
+        {
+          "file": "app/students/documents/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "2022f68730e79ba6971373a45aba891ed6d720cfc43462a5d61dfd2b3eae6a5b"
+        },
+        {
+          "file": "app/students/enquiries/detail/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "0d7525dca01f39d46d8499bf30a24dc589430c202c071f891e15264b016e1589"
+        },
+        {
+          "file": "app/students/enquiries/new/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "a364ff5a964c7f60c5b0f15104498945074fb2f2d03a02149df34d5eec7d8845"
+        },
+        {
+          "file": "app/students/enquiries/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "e9636dfa7a8fa8a47356e7f27eb0adc1125a182a78e3fdf9d15376e01f19dd9d"
+        },
+        {
+          "file": "app/students/excel/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "8a7c86faa6bf7f222aee0f5e492bd337eaf4efefb3ee2c785b80e1fac05c94cf"
+        },
+        {
+          "file": "app/students/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "10c70865805e83fd35bdbd91209c36b08e6139fce37bdb5689fbcbcc9944cb2e"
+        },
+        {
+          "file": "app/students/print/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "61222d74ae7dbff7a23778038ca8a6e20b7e0b0204747b3854b4f9f13a9918a2"
+        },
+        {
+          "file": "app/students/promote/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "2bb10ee9761f282b3c2abb6eb6fff6f54ba9c0d9eea5de06f208f149c4ea0e1b"
+        },
+        {
+          "file": "app/transport/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "06bcf54f74afe59f40277d1ecbf29a4e162f97571030bda8ab3d192b126f0404"
+        },
+        {
+          "file": "app/transport/route/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "ad06cd1a7ace4ca312874717b7c9842d78dfcf712bc673302fea7fa16a6eed48"
+        },
+        {
+          "file": "app/transport/students/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "bd9d9ade6a93f0b66081d55f74a57556811a876a458e28134e0b59bf1ae0a895"
+        },
+        {
+          "file": "components/attendance/register/LowList.tsx",
+          "hexOccurrences": 0,
+          "sha256": "72e0c59c52eab6ae7c678654da141cb56cc42b5e9910c58b32edd0202034a6df"
+        },
+        {
+          "file": "components/attendance/register/PrintRegister.tsx",
+          "hexOccurrences": 1,
+          "sha256": "dcd2661e7c7e3e09e6313405ba4e030f56c40149c60cc9dd21f2cd3d298de106"
+        },
+        {
+          "file": "components/attendance/register/RegisterGrid.tsx",
+          "hexOccurrences": 0,
+          "sha256": "81450ee8c4dad9922099b5ecb369bbc9c897a4622b920464582e51b8218767c8"
+        },
+        {
+          "file": "components/certificates/CertificateDocument.tsx",
+          "hexOccurrences": 1,
+          "sha256": "f21f38d2d0ab6c22fcb8f26caef596c95486de7a424a3c7fbf713240bfb85d07"
+        },
+        {
+          "file": "components/certificates/IssueCertificateDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "f2cc607fa1ba0628182c25e58f47fe9c40d4a37ffaf3d827635d28a740ea8e2a"
+        },
+        {
+          "file": "components/certificates/SheetPreview.tsx",
+          "hexOccurrences": 0,
+          "sha256": "3c00af39b24beeba6dbb6f5fad5e9da9eb82bee1db327853323e550da13339f4"
+        },
+        {
+          "file": "components/dashboard/FeeTrendCard.tsx",
+          "hexOccurrences": 9,
+          "sha256": "90adfca0f005d76ed9338373405349d99d3d4cf68805bdcef515e1be526f7871"
+        },
+        {
+          "file": "components/dashboard/KpiCard.tsx",
+          "hexOccurrences": 8,
+          "sha256": "a43ba017713bc8f1c7acdfa5a15aaac6cb855052f7440855af9321e2de7b3cc9"
+        },
+        {
+          "file": "components/dashboard/StaffAttendanceCard.tsx",
+          "hexOccurrences": 0,
+          "sha256": "3f8ae8470a0e4dfaccf332909e7d903a24dc2d12a5c835fe91c4b4723e3bfb9c"
+        },
+        {
+          "file": "components/dashboard/StatCard.tsx",
+          "hexOccurrences": 0,
+          "sha256": "10a94d7e934722c3aa524c8e432d1a0048e22de5712ec3fb660a7db06eb75044"
+        },
+        {
+          "file": "components/dashboard/StudentAttendanceCard.tsx",
+          "hexOccurrences": 3,
+          "sha256": "64298ff183d55dad01511e84df05c7a9ce400da8d42d2947d76b27f2f76cac01"
+        },
+        {
+          "file": "components/database/DatabaseStatusModal.tsx",
+          "hexOccurrences": 0,
+          "sha256": "d2fc1a344b66678e9cd5244b947ad3f135bdd435253b3b304463f8e77e99ce2d"
+        },
+        {
+          "file": "components/enquiries/EnquiryDetailDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "0d6e07d3d53e0517e9dd2c327de9da3db7d1b2abc1d6f80ced8f38c879d1c27d"
+        },
+        {
+          "file": "components/enquiries/EnquiryFormDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "60a880b18dd57ea228afcd77d6142800fef8a00651ff5ca6019fe3c07d5e7a7b"
+        },
+        {
+          "file": "components/exams/ExamDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "1cd040a3dbbaef21034a65b9980e4bb635d7ed21b67e4fa1f4900d5eeaee9f61"
+        },
+        {
+          "file": "components/exams/MarkSheetDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "a6c5846036d1bac410b59139bbf6dd94ab68857fc75ff57be84d91d54f8685f6"
+        },
+        {
+          "file": "components/exams/report/PrintReportCards.tsx",
+          "hexOccurrences": 0,
+          "sha256": "e9870f44c5002dc96934320f6f452d3fa864d55e0ddd5c36a979832fd0bbc096"
+        },
+        {
+          "file": "components/exams/report/ReportCardDocument.tsx",
+          "hexOccurrences": 2,
+          "sha256": "00b565619f2735a33740b9f938837162e04d85671ad658ecba69b9471ea3314c"
+        },
+        {
+          "file": "components/exams/SubjectsDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "2459930e2ca77f7d8601577b02124658c84d8476015edb3f349cd9f8b771a4dd"
+        },
+        {
+          "file": "components/fees/FeeReceiptModal.tsx",
+          "hexOccurrences": 0,
+          "sha256": "6ea7e4e215dfc3ce067ae72388b5ed2c831cfd5ca2dafa76bb5f98d387ff57c1"
+        },
+        {
+          "file": "components/fees/reports/tables.tsx",
+          "hexOccurrences": 0,
+          "sha256": "1f5425ea2f9a4ba439e76e93f79b35eb7153b97b1ab353ddb1ec7c5f33c11a14"
+        },
+        {
+          "file": "components/fees/setup/ConcessionCard.tsx",
+          "hexOccurrences": 0,
+          "sha256": "e50de3bf27069e7297376be644a6e2abdd3d283d1a0183b4af40d34614d6d220"
+        },
+        {
+          "file": "components/fees/setup/parts.tsx",
+          "hexOccurrences": 0,
+          "sha256": "11073f0ab2c1f4015b477dbc1ed36a7a265edcbe243dbbf37e92736c576bb782"
+        },
+        {
+          "file": "components/homework/HomeworkDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "0ccec20989f017621e0574fcd97abb847d02e9071bfdbbad623deb4e3cb02576"
+        },
+        {
+          "file": "components/homework/HomeworkFiles.tsx",
+          "hexOccurrences": 0,
+          "sha256": "895984404701164d997ab51c017ba3762060da395ed18f3324f290fd8e697a5f"
+        },
+        {
+          "file": "components/layout/AppShell.tsx",
+          "hexOccurrences": 0,
+          "sha256": "0eb760110f5f87844eacbd660d1f02edec882a0fbd7dad57220db6e3e7d53e16"
+        },
+        {
+          "file": "components/layout/ChangePasswordModal.tsx",
+          "hexOccurrences": 0,
+          "sha256": "1fa96133826e7cd7b3bdfa07d65806c895b0adebd8038624465b1eb5b16f88e6"
+        },
+        {
+          "file": "components/layout/CommandPalette.tsx",
+          "hexOccurrences": 0,
+          "sha256": "93493967e1fd0326a795f4703427bdbd418b524b6182596c4f550abae78e96a8"
+        },
+        {
+          "file": "components/layout/MobileTabBar.tsx",
+          "hexOccurrences": 0,
+          "sha256": "a3f410a3619a7d7b0cb924f3cf7616a272580dc5e66da181f607cd3ce6923da7"
+        },
+        {
+          "file": "components/layout/Navbar.tsx",
+          "hexOccurrences": 0,
+          "sha256": "aa3cf6a54c17e9ef79bc5a852c7e34d55548043e6b43a6d963a6c670b75b2319"
+        },
+        {
+          "file": "components/layout/navConfig.ts",
+          "hexOccurrences": 0,
+          "sha256": "eed726a7e35790b458c713da8bcc219ae70124d018cebb6e5f4cb948de68706e"
+        },
+        {
+          "file": "components/layout/Sidebar.tsx",
+          "hexOccurrences": 0,
+          "sha256": "c61dbb9bb9b60aab6f3d216b89a4f6e68a01edacdcd4d167386d761f38f5e3e3"
+        },
+        {
+          "file": "components/layout/SignOutDialog.tsx",
+          "hexOccurrences": 0,
+          "sha256": "e9888526880a0fb7fa0d3d244b98b4e2e001ee076f70ea500fe97f5ac92bc21d"
+        },
+        {
+          "file": "components/layout/useCurrentUser.ts",
+          "hexOccurrences": 0,
+          "sha256": "c02427ce07ef3eb1e3dc42b6414ac84a2a0cfd99c3e0c54372bdb7473158bf10"
+        },
+        {
+          "file": "components/login/InteractiveField.tsx",
+          "hexOccurrences": 0,
+          "sha256": "bb8d870d88899dc5ef52eb64261bc6efd7dca54fe4f1d08dc884036b8a2500f1"
+        },
+        {
+          "file": "components/messages/ComposeDrawer.tsx",
+          "hexOccurrences": 1,
+          "sha256": "32db56304054d6fdb47c092eca97d9e7f4e76e14bfb39d69f7c8fd30ff1ff3cc"
+        },
+        {
+          "file": "components/messages/SendDrawer.tsx",
+          "hexOccurrences": 3,
+          "sha256": "c74e3e03b4546d5e4a05b0e78aa96b9eaeef15be03c919fcd4e7fcdde1f462de"
+        },
+        {
+          "file": "components/parity/generated/components/erp/certs/CertificateDocument.tsx",
+          "hexOccurrences": 1,
+          "sha256": "d6af63fc31e7833e288159d9f057c3bf016d73e4f2db17a1d3fe500b50436143"
+        },
+        {
+          "file": "components/parity/generated/components/erp/certs/SheetPreview.tsx",
+          "hexOccurrences": 0,
+          "sha256": "e9a925cb40948b6a3dc500c1e5fc2fc4408bf05a07663b22359f1b8b5d6ccbe7"
+        },
+        {
+          "file": "components/parity/generated/components/erp/ExcelRoundTrip.tsx",
+          "hexOccurrences": 0,
+          "sha256": "8b2d5d90f41b3982b217dd5e3a65e2a8c285bf2c4272d09fc45939134a4ba006"
+        },
+        {
+          "file": "components/parity/generated/components/erp/GatePassSheet.tsx",
+          "hexOccurrences": 0,
+          "sha256": "cf897bb415e8edd25235a86bfd546406511a05d1dce86bdf33e6f3bba151deb0"
+        },
+        {
+          "file": "components/parity/generated/components/erp/PhotoCropper.tsx",
+          "hexOccurrences": 0,
+          "sha256": "7176ebf081d8e3a66f73d752574dce2bf8cf40d091a9396b1a342349b1fcbe7a"
+        },
+        {
+          "file": "components/parity/generated/components/erp/SetupNeeded.tsx",
+          "hexOccurrences": 0,
+          "sha256": "b44202714fa2df01f4a92668da0c0f173884d57b49ea47fbe5cb0b576979f08b"
+        },
+        {
+          "file": "components/parity/generated/components/erp/StudentProfileOfficeTabs.tsx",
+          "hexOccurrences": 6,
+          "sha256": "cedb97cdbff5f87be17628f1830e00df0db4d742d054c9d5a3478fdd2512b380"
+        },
+        {
+          "file": "components/parity/generated/components/erp/StudentProfileTabs.tsx",
+          "hexOccurrences": 2,
+          "sha256": "e57c20b0016ddcf5a1ccfee29753e73076bfbeb0bfed2f0749ffdaa905bb865a"
+        },
+        {
+          "file": "components/parity/generated/components/erp/transport/DriverList.tsx",
+          "hexOccurrences": 0,
+          "sha256": "10ff234286619b511f786d1f660f6101bbf90ddcd21c637f8fefefe01c8d0f53"
+        },
+        {
+          "file": "components/parity/generated/components/ui.tsx",
+          "hexOccurrences": 6,
+          "sha256": "9ff6e0ab27bf6652e0aaf8d28d902e266fd314123e0f24a633654dc9a9cca7f3"
+        },
+        {
+          "file": "components/parity/generated/lib/actionPalette.tsx",
+          "hexOccurrences": 0,
+          "sha256": "7c0c04d20c50ae7db7ec20481b901ae85faa64359d6134d2900b790c58fa0701"
+        },
+        {
+          "file": "components/parity/generated/lib/csv.ts",
+          "hexOccurrences": 0,
+          "sha256": "515edc14311b92e9fd0a78880b380ea89885ec8492d6ccf4eac8132c061f3287"
+        },
+        {
+          "file": "components/parity/generated/lib/editorDrafts.ts",
+          "hexOccurrences": 0,
+          "sha256": "c35b6df81ac1d7d0307af6f721e85868e15f7ba5a9928d8a5812fd3431ffc802"
+        },
+        {
+          "file": "components/parity/generated/lib/erpAppearance.tsx",
+          "hexOccurrences": 0,
+          "sha256": "69d9a675e1a5f7dcd3bd9e52818e4fc1bc07a96c323a0db3e8f26fd118aed76f"
+        },
+        {
+          "file": "components/parity/generated/lib/erpAttendance.ts",
+          "hexOccurrences": 0,
+          "sha256": "d33dfdab558dcaf2bcab7e26304541d5d79c7455851442828bc63b835b854302"
+        },
+        {
+          "file": "components/parity/generated/lib/erpCerts.ts",
+          "hexOccurrences": 0,
+          "sha256": "e94c66fc3422851a4d299ef378a820e5ffc6e6d755ea9587cbb3466cafd185f0"
+        },
+        {
+          "file": "components/parity/generated/lib/erpDocs.ts",
+          "hexOccurrences": 0,
+          "sha256": "b585c5a6563f1de48ee4aebdd728e1f8e97ed8bafcaa9029255265e4f5d6d919"
+        },
+        {
+          "file": "components/parity/generated/lib/erpEnquiry.ts",
+          "hexOccurrences": 0,
+          "sha256": "b2f06c6a6bdf135e8e8fff8fc453ed3b2262e5b8935b8c57d2745fc47c4649d0"
+        },
+        {
+          "file": "components/parity/generated/lib/erpExams.ts",
+          "hexOccurrences": 0,
+          "sha256": "c17772a8cbb3a8bf24dc04522f376ffc24ff35306d0496afb05915fd6a89d586"
+        },
+        {
+          "file": "components/parity/generated/lib/erpExamSetup.ts",
+          "hexOccurrences": 0,
+          "sha256": "eb0016dfe770e09f0f249acce48613eacd90abb45805d7ea9b6c6c3a57eef6ed"
+        },
+        {
+          "file": "components/parity/generated/lib/erpFeeEngine.ts",
+          "hexOccurrences": 0,
+          "sha256": "61d55b2f68fb533f11c3c6090a54b1d860750ec002a7df151dca8c71a105ff85"
+        },
+        {
+          "file": "components/parity/generated/lib/erpGrading.ts",
+          "hexOccurrences": 0,
+          "sha256": "3c2433df120b9ff097744b8488ba258396a64f67454f31eb3b7cf9dbb69fad3e"
+        },
+        {
+          "file": "components/parity/generated/lib/erpMessages.ts",
+          "hexOccurrences": 0,
+          "sha256": "18b147b360ed289489616dda03e9179e88811f381d206d2f9f2bbb4c0cc64360"
+        },
+        {
+          "file": "components/parity/generated/lib/erpStaff.ts",
+          "hexOccurrences": 0,
+          "sha256": "d196f1b94c4b280d82cba836aced87e5453a11a1901e606be9fa8ef444df1d13"
+        },
+        {
+          "file": "components/parity/generated/lib/erpStudents.ts",
+          "hexOccurrences": 0,
+          "sha256": "e471c99e6fdeefef42e46640a136a31fdde39deddc05b5c960365c8ec01b57a4"
+        },
+        {
+          "file": "components/parity/generated/lib/erpTransport.ts",
+          "hexOccurrences": 0,
+          "sha256": "0c59782fca359f83b189acc62a92ed8b37086b495a20d5b77ddf763ac60a4be0"
+        },
+        {
+          "file": "components/parity/generated/lib/erpWords.ts",
+          "hexOccurrences": 0,
+          "sha256": "278692c4630fe322c9be42b82b741ff4a180c976e4b00db11256d77639ba1855"
+        },
+        {
+          "file": "components/parity/generated/lib/format.ts",
+          "hexOccurrences": 0,
+          "sha256": "5d38aebf828c259ece0bc219dd71fac3b7de35ef1b636362317a93670268297c"
+        },
+        {
+          "file": "components/parity/generated/lib/i18n.tsx",
+          "hexOccurrences": 0,
+          "sha256": "9c0f560568a29b71c3c53a4de9c116245c5e09986afed5aca7094ebbf0e1c802"
+        },
+        {
+          "file": "components/parity/generated/lib/marksWorkbook.ts",
+          "hexOccurrences": 0,
+          "sha256": "cb3179db1b920b1eed1ba565645e2a27298be51f713e66e1f55c8ee750b0a8b0"
+        },
+        {
+          "file": "components/parity/generated/lib/spreadsheet.ts",
+          "hexOccurrences": 0,
+          "sha256": "4898232d89dd749d1ce34e81473831b9fe780a3a76fb1d460bd54f4ea4e6e8dd"
+        },
+        {
+          "file": "components/parity/generated/lib/useDialog.ts",
+          "hexOccurrences": 0,
+          "sha256": "1e3ea011a01fd647fafbfc7797182807f1cea63508daddbbc73fbcdc54426c66"
+        },
+        {
+          "file": "components/parity/generated/lib/useUnsavedChanges.ts",
+          "hexOccurrences": 0,
+          "sha256": "4dbe0435a3695a838e98195d205d8aaf40af5c019faa855be0925a8369029543"
+        },
+        {
+          "file": "components/parity/generated/pages/attendance/today.tsx",
+          "hexOccurrences": 0,
+          "sha256": "201767b1f48f4b4881b4074d60ba7809cb4ab74e0b3e0db6c632df6ca3ae67ff"
+        },
+        {
+          "file": "components/parity/generated/pages/birthdays.tsx",
+          "hexOccurrences": 0,
+          "sha256": "f939de8eaf0e1f45e53b1a666722f40ebb4c09fa94f375ffeb415bbca04df2a0"
+        },
+        {
+          "file": "components/parity/generated/pages/calendar.tsx",
+          "hexOccurrences": 1,
+          "sha256": "8847013f7e7049d84411884b80936068ae1815fe1ac0bc19b96e262c6a29e823"
+        },
+        {
+          "file": "components/parity/generated/pages/copy-check/sheet.tsx",
+          "hexOccurrences": 0,
+          "sha256": "4054789d0c04fcd6f6941a88ae7c487ec2d68607604104dce2b068d8e1ae1f80"
+        },
+        {
+          "file": "components/parity/generated/pages/copy-check.tsx",
+          "hexOccurrences": 0,
+          "sha256": "971557ce0c5ac030074287cce1420eaff37e794c1c8af7c5feb0871e74f725be"
+        },
+        {
+          "file": "components/parity/generated/pages/exams/marks/sheet.tsx",
+          "hexOccurrences": 0,
+          "sha256": "a0c267fa4224b78477793c2dcd0a91c9a7b266cd35970a190566d12b5402eb5e"
+        },
+        {
+          "file": "components/parity/generated/pages/exams/setup/edit.tsx",
+          "hexOccurrences": 0,
+          "sha256": "8ce7ef287491b823221cea1c45493a29a33e97ff863c192cb88e628838ae2f3f"
+        },
+        {
+          "file": "components/parity/generated/pages/fees/carry-forward.tsx",
+          "hexOccurrences": 0,
+          "sha256": "618ad1bec1fa066803e340c3dfb9b9f1d9def353b1ba945b5c9cfe30f3f4fe3b"
+        },
+        {
+          "file": "components/parity/generated/pages/fees/cheques.tsx",
+          "hexOccurrences": 0,
+          "sha256": "16cea168ed738a02c916ae98aeaf1e161b0f54e433e256443cc55366ef768ee1"
+        },
+        {
+          "file": "components/parity/generated/pages/meetings/new.tsx",
+          "hexOccurrences": 0,
+          "sha256": "bc06fe697b7f227ca00f3a5ac5c41e08ddfc37d04ffa6a4b45807f345c3875a0"
+        },
+        {
+          "file": "components/parity/generated/pages/messages/detail.tsx",
+          "hexOccurrences": 2,
+          "sha256": "7e8a4a06765ca5fbac6d86cf9409b6a9eedfefb29d1d969e1982da91ac38583e"
+        },
+        {
+          "file": "components/parity/generated/pages/messages/new.tsx",
+          "hexOccurrences": 0,
+          "sha256": "adf43dfd309f7b2c3ed13a04b6f8a8f398b1e67012dd5db55aaa0d42742e0bed"
+        },
+        {
+          "file": "components/parity/generated/pages/parent-chats/chat.tsx",
+          "hexOccurrences": 4,
+          "sha256": "5ae8b279cd152179758ae2a0436b5a562f275a02c0ccd0df3b50f5e277a0af6c"
+        },
+        {
+          "file": "components/parity/generated/pages/settings/templates.tsx",
+          "hexOccurrences": 0,
+          "sha256": "9256fed50d944cbbc3da4cf48a909d55167b4e867aa22d7f55f9e8003db99136"
+        },
+        {
+          "file": "components/parity/generated/pages/staff/allocation.tsx",
+          "hexOccurrences": 0,
+          "sha256": "88ef5ac6b5428ab4b166cb509f97dfbeae0e30bef5ab41bf86f751c77ab5afb5"
+        },
+        {
+          "file": "components/parity/generated/pages/staff/class-teachers.tsx",
+          "hexOccurrences": 0,
+          "sha256": "e053fff280c4b874af1680658fcfb03b37bdc0a73c84fcefc41f376914e03e6a"
+        },
+        {
+          "file": "components/parity/generated/pages/staff/detail.tsx",
+          "hexOccurrences": 2,
+          "sha256": "91877cbee6b705cb34a634193c8e64031fb9831648505eaa7ca36a2bb2932a05"
+        },
+        {
+          "file": "components/parity/generated/pages/staff/excel.tsx",
+          "hexOccurrences": 0,
+          "sha256": "cc8ba463ed96cb0608cb2bedf1678932165c425d0ace8e7150204fc0378b8617"
+        },
+        {
+          "file": "components/parity/generated/pages/staff/new.tsx",
+          "hexOccurrences": 2,
+          "sha256": "13742bc6cba89a0d19e5464019075464ab284de149e973575676a46ddd6acd9d"
+        },
+        {
+          "file": "components/parity/generated/pages/students/admission.tsx",
+          "hexOccurrences": 18,
+          "sha256": "ffd25b67f4a8218966976769bf93d866a16d66aa978a93d101939c2214fb9499"
+        },
+        {
+          "file": "components/parity/generated/pages/students/certificates/issue.tsx",
+          "hexOccurrences": 0,
+          "sha256": "40470921cb1c47f6e86e7410e7953d934f1144ca6ba841c67f5d1848cb33c71e"
+        },
+        {
+          "file": "components/parity/generated/pages/students/detail.tsx",
+          "hexOccurrences": 4,
+          "sha256": "f850d4bca7caedb0fabf1ef788e37d3163aea45b6b97003727423a22b9c56f68"
+        },
+        {
+          "file": "components/parity/generated/pages/students/enquiries/detail.tsx",
+          "hexOccurrences": 0,
+          "sha256": "26ba54b55057319dd5fef59ad6796d4037bed4374cfeecb50e66966b3c42af21"
+        },
+        {
+          "file": "components/parity/generated/pages/students/enquiries/new.tsx",
+          "hexOccurrences": 0,
+          "sha256": "4547e881de1dc13714a9a491e928c48f2e7351aa0fafa7ff3ea365847692e343"
+        },
+        {
+          "file": "components/parity/generated/pages/students/excel.tsx",
+          "hexOccurrences": 1,
+          "sha256": "af101aabf9a15b3e6b3100350bf8a31dd0328cc41da7f9158ce4693f9bddd01d"
+        },
+        {
+          "file": "components/parity/generated/pages/syllabus/excel.tsx",
+          "hexOccurrences": 0,
+          "sha256": "cb05b27b5a6031311c590b52a8f67fe081999b584c0fd5c927032c6259d8e6c7"
+        },
+        {
+          "file": "components/parity/generated/pages/syllabus/plan.tsx",
+          "hexOccurrences": 0,
+          "sha256": "918ff9c6cf21740671ff242c0efe89cc7ebcf0771f38da26aad06048a9b60705"
+        },
+        {
+          "file": "components/parity/generated/pages/syllabus.tsx",
+          "hexOccurrences": 0,
+          "sha256": "67eb2d58e735de9696927f1c9596b43f9db3e1196374ea447661eecea665ac67"
+        },
+        {
+          "file": "components/parity/generated/pages/transport/route.tsx",
+          "hexOccurrences": 0,
+          "sha256": "cfb050111d5ac2ac9aff8f4081da520e3cf66895391b79fd2b0e991767fe1d37"
+        },
+        {
+          "file": "components/parity/generated/pages/transport/students.tsx",
+          "hexOccurrences": 0,
+          "sha256": "453f29bdabf011f9bc6b71e225a740a389868b8e12c0858880fc32fefcfc12d7"
+        },
+        {
+          "file": "components/parity/Link.tsx",
+          "hexOccurrences": 0,
+          "sha256": "ec979bb2a698a5de930bebea980c6d16188615c422b410fca2f841e97c6669da"
+        },
+        {
+          "file": "components/parity/ParityFrame.tsx",
+          "hexOccurrences": 0,
+          "sha256": "99d65be1bd45be261b3e9bcfd9949bebdf9055ea7ee26b00762afa6cd063cce1"
+        },
+        {
+          "file": "components/parity/PlannedModule.tsx",
+          "hexOccurrences": 0,
+          "sha256": "a97669ba018ef99ccb674caa14daa2b4652d8580a8f4d09ebef97558f991c48c"
+        },
+        {
+          "file": "components/payroll/PayslipDocument.tsx",
+          "hexOccurrences": 0,
+          "sha256": "ab950d4e673e9306eb7b43b9b1f8220acde70f6d5fa42dab984160a4e1f6e27a"
+        },
+        {
+          "file": "components/payroll/SalaryDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "291384d9b4cffa37581637fec549a636f8ff0a627bf87788c28442b2df43b57f"
+        },
+        {
+          "file": "components/payroll/SlipDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "59f8819239026a8e3f6c7ce44f0084ff9ee224caa25fb107ddf001b06058e9ff"
+        },
+        {
+          "file": "components/providers/SchoolProfileProvider.tsx",
+          "hexOccurrences": 0,
+          "sha256": "657211e40a473b08cc8799c362f33dce62dab0e2fcf44aca42cd6f3e84591cd9"
+        },
+        {
+          "file": "components/search/GatePassModal.tsx",
+          "hexOccurrences": 0,
+          "sha256": "a08231204470ce98fad6e3aa59b34273c8ac6e5d89907e63c63523ca2ac241f7"
+        },
+        {
+          "file": "components/settings/classes/AddClassModal.tsx",
+          "hexOccurrences": 0,
+          "sha256": "aaf55c7f325b8d9b1800143766a5353217d404463616249a38d1313f81a6d4a7"
+        },
+        {
+          "file": "components/settings/classes/AddSectionModal.tsx",
+          "hexOccurrences": 0,
+          "sha256": "8689982e91d5478960ae87f916c0abda5bebee11149d22db58307a3f6d15dc06"
+        },
+        {
+          "file": "components/settings/classes/SectionDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "adee0db945cb8c9d6880ddcf539cc346853fb8fe1a2386906a94a5e0c57c17c3"
+        },
+        {
+          "file": "components/settings/classes/shared.tsx",
+          "hexOccurrences": 0,
+          "sha256": "5c194fdc80be7b57584423a562038da1e53a5b6b445b26ff9f32a2366d86e4c8"
+        },
+        {
+          "file": "components/settings/users/PasswordModals.tsx",
+          "hexOccurrences": 0,
+          "sha256": "66a194d6ba3ff8960457ec02a2d4609f3b062f884458760038229ed649df0ee1"
+        },
+        {
+          "file": "components/settings/users/UserDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "3009b5bf46ede19d5ef9976e42712a5a16277ae5f450dd3e1c62f68868ceea12"
+        },
+        {
+          "file": "components/site/SiteShell.tsx",
+          "hexOccurrences": 7,
+          "sha256": "99d6b48981a2a45cc252b4cbd6574a77d06514fc22708a131b925cfdbd7929f0"
+        },
+        {
+          "file": "components/site/stages.ts",
+          "hexOccurrences": 0,
+          "sha256": "46a49ea900ff6e7042a948762c81f57b38dd663d22dbf59bc212016555b91069"
+        },
+        {
+          "file": "components/site/usePublicSite.ts",
+          "hexOccurrences": 0,
+          "sha256": "5d58b2e6971de9486f451585b53867dc4af2bca1d7efa8214a1c537eaa332e0d"
+        },
+        {
+          "file": "components/staff/attendance/DayTab.tsx",
+          "hexOccurrences": 0,
+          "sha256": "e4ef9760f2218230529e4577a63584a814fad6760700c2491ba56e64dff6d19c"
+        },
+        {
+          "file": "components/staff/attendance/LeaveDrawers.tsx",
+          "hexOccurrences": 0,
+          "sha256": "aabc840a07c83f6ffaec247ac206d6356e9eadc3c39827f39804cb9f19215beb"
+        },
+        {
+          "file": "components/staff/attendance/LeaveTab.tsx",
+          "hexOccurrences": 0,
+          "sha256": "400b234ca3df092ffe4ad8d00594ed23ae18c6a391ea57c580d3c3eb4631796f"
+        },
+        {
+          "file": "components/staff/attendance/PrintStaffRegister.tsx",
+          "hexOccurrences": 1,
+          "sha256": "885ac6345da06e34bec1653abbb2d244172bd73e7a7fbf1223c7dccde118c878"
+        },
+        {
+          "file": "components/staff/attendance/RegisterTab.tsx",
+          "hexOccurrences": 0,
+          "sha256": "89a6c0e7b81f96cbf05631723a1281d6d676cd5943bd7e7567550c86c1f29844"
+        },
+        {
+          "file": "components/staff/attendance/shared.tsx",
+          "hexOccurrences": 0,
+          "sha256": "8ea766e036914f4c19ca7763714123aae306a73d883567b2560e2761c2e0dd2c"
+        },
+        {
+          "file": "components/staff/attendance/StaffRegisterGrid.tsx",
+          "hexOccurrences": 0,
+          "sha256": "dd054028153b004319718e7aaa5cd76c69efe4bec656b41a251dd6a7ea5d4e78"
+        },
+        {
+          "file": "components/staff/ClassTeachersDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "5967874b28ab99a5a3b104cfcdde44095e7d6a51fdd46fa49447bae49c17dbe7"
+        },
+        {
+          "file": "components/staff/StaffFormDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "178c267411a95d07f54ef5febe0ac3f7fc90a4e7b12c6b8795d337b36178ee57"
+        },
+        {
+          "file": "components/staff/StaffProfileDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "cec55e64fe9dbed3e61b37073615ceeeebe2d0d40d93b570065067bbd469e2cf"
+        },
+        {
+          "file": "components/students/AdmissionDrawer.tsx",
+          "hexOccurrences": 1,
+          "sha256": "aa800e26fdce83df3319dae4541afa3bfc42ba01e529ff6f702e62c2430a21a1"
+        },
+        {
+          "file": "components/students/IdCardPrint.tsx",
+          "hexOccurrences": 17,
+          "sha256": "1e33c789413f0fd9582e5a5c7634b5ed1ab433b383f138dfb26067b704ee8e26"
+        },
+        {
+          "file": "components/students/ProfileMoreTabs.tsx",
+          "hexOccurrences": 1,
+          "sha256": "719a30c6cd88b01da06e5728a3afdbf51116c0f4c1fb562a74d10081d5fa9f1c"
+        },
+        {
+          "file": "components/students/StudentCard.tsx",
+          "hexOccurrences": 1,
+          "sha256": "b57fc4dd7c4131a939dd791eb382f9449e211986d21feb97e4c26437f5a16f1d"
+        },
+        {
+          "file": "components/students/StudentDrawer.tsx",
+          "hexOccurrences": 2,
+          "sha256": "8f1b340a9345e3d13dbd564a592a9ff0570e04bd79e5df9299548f5ab9af16c7"
+        },
+        {
+          "file": "components/timetable/CellModal.tsx",
+          "hexOccurrences": 0,
+          "sha256": "e6985433707a0ba9b9116f14abe621523eae4dfab65b2a32ea478c6255ae3211"
+        },
+        {
+          "file": "components/timetable/PeriodsDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "6954ab7aeea6451427188e4a7ded515995526b83fdc9dd7c672105dc2422f5a3"
+        },
+        {
+          "file": "components/timetable/TimetableDocument.tsx",
+          "hexOccurrences": 0,
+          "sha256": "96cfbe8e28b809a566da69d6d52717998698f4e6a57aee139b08c29d78db63bd"
+        },
+        {
+          "file": "components/transport/RouteDrawer.tsx",
+          "hexOccurrences": 0,
+          "sha256": "ecc02baebc134e623c063c5b8b9932478f5baf1c5feb75d0cc03cf1e4e56af5c"
+        },
+        {
+          "file": "components/transport/StopPlacePicker.tsx",
+          "hexOccurrences": 1,
+          "sha256": "a50cfb492fc716293b2f21c2b58a680b7ce15dd1ecdc713792a7f9afcbec56de"
+        },
+        {
+          "file": "components/transport/transport-live.css",
+          "hexOccurrences": 47,
+          "sha256": "d8c02db49905120df7108bb110e4adbf1031f9aba3cccddfc4b5cf32c082a040"
+        },
+        {
+          "file": "components/transport/TransportLivePanel.tsx",
+          "hexOccurrences": 0,
+          "sha256": "a6438fff421ebd0b01d8e91a28839fdb902137e6dea9aa64a3be6ed5626f96b8"
+        },
+        {
+          "file": "components/ui/Avatar.tsx",
+          "hexOccurrences": 0,
+          "sha256": "8f48547970376924db1db60f744599dac66f739fb350e4b1ea4c5d5745d405d1"
+        },
+        {
+          "file": "components/ui/badge.tsx",
+          "hexOccurrences": 0,
+          "sha256": "cf5b409fa21a19ab3a893595645c1340c10e56d9d0ee18d23f88925a454b14c8"
+        },
+        {
+          "file": "components/ui/border-beam.tsx",
+          "hexOccurrences": 2,
+          "sha256": "e075dd55e3a8688418c419f175df2848cf971e17e234a60108bede70ece1ed53"
+        },
+        {
+          "file": "components/ui/button.tsx",
+          "hexOccurrences": 0,
+          "sha256": "57df6fe559bcad3ba9b37c0828cb5616eddf19277905bf142430ede7471f6920"
+        },
+        {
+          "file": "components/ui/card.tsx",
+          "hexOccurrences": 0,
+          "sha256": "44bba2588d42d870c19ca7c841ea4938a5e48e85b10bc35707bec3da5d51058e"
+        },
+        {
+          "file": "components/ui/ComingSoon.tsx",
+          "hexOccurrences": 0,
+          "sha256": "2745e6e4aa2e95af3084a395d6ec8fa19877f98158afb6e7f8ec8b5e557172a0"
+        },
+        {
+          "file": "components/ui/kit.tsx",
+          "hexOccurrences": 0,
+          "sha256": "d5ba5548115bf765cc5e9d281e67b5bb3a10b135dd9ebfa50b9cab0e061d9e08"
+        },
+        {
+          "file": "components/ui/modal.tsx",
+          "hexOccurrences": 0,
+          "sha256": "4c4c530e1177d50f796e71d60dd320a30f0d3d164137b53881b38d1cb61daa7c"
+        },
+        {
+          "file": "components/ui/PhotoCropper.tsx",
+          "hexOccurrences": 0,
+          "sha256": "f60e813eb0bf96ed61e0d0d08577e5f87ccad34ac375ecba65e57d066bf94bb9"
+        },
+        {
+          "file": "components/ui/separator.tsx",
+          "hexOccurrences": 0,
+          "sha256": "995c54f1c5c688f712a675fe35d55bcada2b31dba561dcc71553a1ad601e59ec"
+        },
+        {
+          "file": "components/ui/shine-border.tsx",
+          "hexOccurrences": 0,
+          "sha256": "7a2696260e185dc197090b10702be19c69b5056fc70a78102eede6f125ff3dd3"
+        },
+        {
+          "file": "components/ui/SideDrawer.tsx",
+          "hexOccurrences": 1,
+          "sha256": "54d18c47e217fdb225d7631cbca46a6ed7bedba7338d248af2cbe32842082188"
+        },
+        {
+          "file": "components/ui/Toaster.tsx",
+          "hexOccurrences": 0,
+          "sha256": "da8ba60913d71c1caa3dcb446ab2b986cf8457bdbc003fc67575493d35acdce3"
+        },
+        {
+          "file": "components/ui/token-modal.tsx",
+          "hexOccurrences": 0,
+          "sha256": "3c5e2c8ff71c4a843763e311eaa4a9ae917aaff34b16f6dcddba28316aa8f9cc"
+        },
+        {
+          "file": "components/ui/useDialog.ts",
+          "hexOccurrences": 0,
+          "sha256": "74ad131a8914eb153fd35c8385237a3e0a576bbbc48ea8237ade5f202c159d77"
+        },
+        {
+          "file": "lib/apiClient.ts",
+          "hexOccurrences": 0,
+          "sha256": "c55958e8d381f91634643876d10c05ceeee3863a175098fb8f8699897d3c6aff"
+        },
+        {
+          "file": "lib/csv.ts",
+          "hexOccurrences": 0,
+          "sha256": "7fc4b783e1d45cd2a38f2ae0168c5b3ba7206204cd36f39c3146d181d5f78636"
+        },
+        {
+          "file": "lib/excelHelper.ts",
+          "hexOccurrences": 0,
+          "sha256": "2a739fb443ad7eebe9f42f734e6fdc1477d82939188b1c993f358b20e8b23627"
+        },
+        {
+          "file": "lib/feeEngine.ts",
+          "hexOccurrences": 0,
+          "sha256": "5f49ccd86d17ef50b59b63ad94bda936dd62a9312a4fb81745e16c5283523f10"
+        },
+        {
+          "file": "lib/feeHeads.ts",
+          "hexOccurrences": 0,
+          "sha256": "41d23350811fb545b55e9c9f22b0af2b7758b98dc7aba6ef1b1098d06e989efb"
+        },
+        {
+          "file": "lib/grading.ts",
+          "hexOccurrences": 0,
+          "sha256": "f2c49c9728a9d890eaf76a5579cfb30f98df27b09f6d01d272941ab10c1e7984"
+        },
+        {
+          "file": "lib/marksWorkbook.ts",
+          "hexOccurrences": 0,
+          "sha256": "2d9ae0aec8261f9a67a15a7054c805439b2e7f7e776309958d2294febb320e5d"
+        },
+        {
+          "file": "lib/parity/api.ts",
+          "hexOccurrences": 0,
+          "sha256": "2942cddc7aea29549baafb6258037853bb550c9fcaea6fc5278b8cba7dcb456c"
+        },
+        {
+          "file": "lib/parity/navigation.ts",
+          "hexOccurrences": 0,
+          "sha256": "759be6062780dd6bbeba11808a2093a139afe3fd19c822de3ea01c51737c064a"
+        },
+        {
+          "file": "lib/parity/toast.ts",
+          "hexOccurrences": 0,
+          "sha256": "c08b96e3344f047e5f63f435d3d4da0014a4fd1905a9ee16b4a0571039ca36fc"
+        },
+        {
+          "file": "lib/parity/useErpSession.ts",
+          "hexOccurrences": 0,
+          "sha256": "7fc7efae7680deba91ac171e4e3ee4d14cd80e978c10edc62553f3bc2cd2f9b2"
+        },
+        {
+          "file": "lib/pdfGenerator.ts",
+          "hexOccurrences": 1,
+          "sha256": "5c6c1a4a6debb163fcc4659a47a861c036e73c1304f823b74e8eefe7fbe131b4"
+        },
+        {
+          "file": "lib/publicRoutes.ts",
+          "hexOccurrences": 0,
+          "sha256": "f1616eb1b2322e539a295caba744f46353fbde069800b7eaeacd594212cb550c"
+        },
+        {
+          "file": "lib/roadmap.ts",
+          "hexOccurrences": 0,
+          "sha256": "78435f4410b6bc7b5a9314efbed1f76f6a2a9c749b3bad92030a781ff9a84e2f"
+        },
+        {
+          "file": "lib/services/attendanceRegisterService.ts",
+          "hexOccurrences": 0,
+          "sha256": "183dac49bbe6af826ed9885ab473bbf9714896ddb79030de94be9c7c52c53f9b"
+        },
+        {
+          "file": "lib/services/attendanceService.ts",
+          "hexOccurrences": 0,
+          "sha256": "af61b74d691e7199d1e39dc6b0d88a359bfcd16aca5fb54e49a0cd57b1bf4f99"
+        },
+        {
+          "file": "lib/services/authService.ts",
+          "hexOccurrences": 0,
+          "sha256": "5774ec284b3ad27db08d829f19f40f789181944f42c30c5cb229e9f6adebf148"
+        },
+        {
+          "file": "lib/services/certificateService.ts",
+          "hexOccurrences": 0,
+          "sha256": "65c014e9287da835802982ac835db23a7f15a53158702e40ea4a7716201556ee"
+        },
+        {
+          "file": "lib/services/classService.ts",
+          "hexOccurrences": 0,
+          "sha256": "76b06c723b3ed78492b31a20ba543bfebaa9e1a9ff8b16c442c900c1cd8e831e"
+        },
+        {
+          "file": "lib/services/dashboardService.ts",
+          "hexOccurrences": 0,
+          "sha256": "bf63219cfe1b8c1822841dc8d96947a78316d37bceca0ca0e27be9c06a9cc45e"
+        },
+        {
+          "file": "lib/services/duesService.ts",
+          "hexOccurrences": 0,
+          "sha256": "ee4f4f950bb8bc01a89727e14bf4e09101bba019ed11864885085dcad6cd4a30"
+        },
+        {
+          "file": "lib/services/enquiryService.ts",
+          "hexOccurrences": 0,
+          "sha256": "df1c4cd16bd633b1aa6a5842ea3d4fb2a8cd935f4f0d5601fd4f540514ee3cf1"
+        },
+        {
+          "file": "lib/services/examService.ts",
+          "hexOccurrences": 0,
+          "sha256": "dedae243a507611348779e30fe1315d337582774d9c402225e177873b26d292a"
+        },
+        {
+          "file": "lib/services/feeService.ts",
+          "hexOccurrences": 0,
+          "sha256": "89a43d22a3df2b34df8d7040f486bf5721fa7d2298f9c67c76d1d0b477acf99f"
+        },
+        {
+          "file": "lib/services/feeSetupService.ts",
+          "hexOccurrences": 0,
+          "sha256": "6971426811d51ea1a50030910ca2bc2e0c77c38c5b2f7b41e18ee5420baf82e9"
+        },
+        {
+          "file": "lib/services/gatePassService.ts",
+          "hexOccurrences": 0,
+          "sha256": "368c69a99ac7c17e2e53cd5afef4e10e12820deb9a81625847d1eaa4c6c4b62a"
+        },
+        {
+          "file": "lib/services/homeworkService.ts",
+          "hexOccurrences": 0,
+          "sha256": "6e2879e53634017ec8f695e3cd5ebfd5bf093a7c7841e43d93f520df3daf766d"
+        },
+        {
+          "file": "lib/services/messageService.ts",
+          "hexOccurrences": 0,
+          "sha256": "bf1a560f5576839ca9df56a2519290c7abf4739e6211c58b8bf16caf41ce0ea8"
+        },
+        {
+          "file": "lib/services/modalService.ts",
+          "hexOccurrences": 0,
+          "sha256": "2293a24daeba7e68a81f302583e0275320b58f4a56c5ad43324d0a77ee12ed5a"
+        },
+        {
+          "file": "lib/services/payrollService.ts",
+          "hexOccurrences": 0,
+          "sha256": "21c8546179cb2a422ec859f6891e8f230eb5349f1bdbc3c00c8d38c364e556da"
+        },
+        {
+          "file": "lib/services/photoService.ts",
+          "hexOccurrences": 0,
+          "sha256": "56c907f4a3728bc41dd62c2fee626918020248bc70fb7343e1dff2fdc681d176"
+        },
+        {
+          "file": "lib/services/receiptService.ts",
+          "hexOccurrences": 0,
+          "sha256": "68c9afca64521179e3c2379adbb30d9a538959f965d1e308b324d388b1b22622"
+        },
+        {
+          "file": "lib/services/reportService.ts",
+          "hexOccurrences": 0,
+          "sha256": "eb6a20601b893985839202e91c6271ea6b50bcca8e491c89385a516fe63cb7e1"
+        },
+        {
+          "file": "lib/services/schoolProfileService.ts",
+          "hexOccurrences": 0,
+          "sha256": "59bac6c3ec80af841ad129b9b9b389c9c5dc8cdf744ef7b338cb017c4ba950b3"
+        },
+        {
+          "file": "lib/services/staffAttendanceService.ts",
+          "hexOccurrences": 0,
+          "sha256": "481b8e7fd6b0b6b85a6597e2bde8479559388000c81c43aafd635642bbaaf2dd"
+        },
+        {
+          "file": "lib/services/staffService.ts",
+          "hexOccurrences": 0,
+          "sha256": "94acbffe47edb38190ba52f8b0972a337d1e3b02b5ee206cb0d286d32d52b225"
+        },
+        {
+          "file": "lib/services/studentService.ts",
+          "hexOccurrences": 0,
+          "sha256": "ab40ccd34cb21d4eb60c1e8d6ebd078b067b5dc5c59dcf7c9ef6e9979634ae7c"
+        },
+        {
+          "file": "lib/services/timetableService.ts",
+          "hexOccurrences": 0,
+          "sha256": "9b1170ca7bd5ec4ad2fe0b1c6cfcc0c21b4d3996a9d32a6d90cc44abf371f4f3"
+        },
+        {
+          "file": "lib/services/transportService.ts",
+          "hexOccurrences": 0,
+          "sha256": "0b4107a8b7827fe2ace739edd8266a63af815f67c899d2120e41ea1ec0699aaf"
+        },
+        {
+          "file": "lib/services/userService.ts",
+          "hexOccurrences": 0,
+          "sha256": "3b7adf8f3b47441e09b1220202c2834442cf490aeff59191feafafc1794b5bcc"
+        },
+        {
+          "file": "lib/services/watiService.ts",
+          "hexOccurrences": 0,
+          "sha256": "bce8fbeacc91e72768939d62a38f3993ddf89bf6f4a6d383b6b63302eed9a043"
+        },
+        {
+          "file": "lib/services/whatsappService.ts",
+          "hexOccurrences": 0,
+          "sha256": "219a71661d4ba11d76602003c346af85e7743674c7c52e2b9888cda0ecc7a45b"
+        },
+        {
+          "file": "lib/session.ts",
+          "hexOccurrences": 0,
+          "sha256": "1807d236c9d8f446b33fbcbe7a01d3c85717bc092206c10e926cb3c8224255f8"
+        },
+        {
+          "file": "lib/sessionConstants.ts",
+          "hexOccurrences": 0,
+          "sha256": "53a5ce5c9ec3d93272875bd8ebf0d3577aa85ae77e7552d4a07f9794fc989076"
+        },
+        {
+          "file": "lib/shrinkPhoto.ts",
+          "hexOccurrences": 0,
+          "sha256": "2d3a430cd1fd40644cb10b4f9bf57fe53576d391f9a1406273fe4f0d87d488e2"
+        },
+        {
+          "file": "lib/spreadsheet.ts",
+          "hexOccurrences": 0,
+          "sha256": "7c0cfaa9e221ad1d6da48514c8f560f7c1177e4bdcd1ed0e57c6f02a9e734172"
+        },
+        {
+          "file": "lib/supabaseAdmin.ts",
+          "hexOccurrences": 0,
+          "sha256": "d46ed3e63920faaeb2df1238f7aeded4c2b2dd30d5ea1459726faa0fd253dfc3"
+        },
+        {
+          "file": "lib/supabaseClient.ts",
+          "hexOccurrences": 0,
+          "sha256": "4e044789a9f396ce39dec5848461fdc307b783208f871a016e52238f2b9c4b2e"
+        },
+        {
+          "file": "lib/transportLive.ts",
+          "hexOccurrences": 0,
+          "sha256": "1abce696da6061ee7d022667ed2e5c390fe29e7315add1b9fb407fa2f49af18f"
+        },
+        {
+          "file": "lib/types/database.ts",
+          "hexOccurrences": 0,
+          "sha256": "7dc116180cf2d0c9c69d2a7b0f5870e16dcc9769e61c2b866a46b1923a649a4d"
+        },
+        {
+          "file": "lib/useErpSession.ts",
+          "hexOccurrences": 0,
+          "sha256": "f1b9f4b7f6eb1901ac4db607ba1d2a7c33e5ce9b3b6a5a23dada00480486fd3e"
+        },
+        {
+          "file": "lib/utils.ts",
+          "hexOccurrences": 0,
+          "sha256": "9e45d6d21e0d57bf85930ba2bf6fdd9f5f0175d1129844356081a6050975deb1"
+        },
+        {
+          "file": "lib/words.ts",
+          "hexOccurrences": 0,
+          "sha256": "1f07511cf592782ade7bbf9051e309d5fa419a2f40309a960bdcfdcc3d63f325"
+        }
+      ]
+    },
+    "erpApp": {
+      "root": "C:/Users/ADMIN/Desktop/folder for staff app erp project",
+      "sourceFiles": 95,
+      "routes": [
+        "app/(app)/erp/attendance/leave/page.tsx",
+        "app/(app)/erp/attendance/mark/page.tsx",
+        "app/(app)/erp/attendance/mark/section/page.tsx",
+        "app/(app)/erp/attendance/register/page.tsx",
+        "app/(app)/erp/attendance/today/page.tsx",
+        "app/(app)/erp/birthdays/page.tsx",
+        "app/(app)/erp/calendar/page.tsx",
+        "app/(app)/erp/copy-check/page.tsx",
+        "app/(app)/erp/copy-check/sheet/page.tsx",
+        "app/(app)/erp/exams/marks/page.tsx",
+        "app/(app)/erp/exams/marks/sheet/page.tsx",
+        "app/(app)/erp/exams/report-cards/page.tsx",
+        "app/(app)/erp/exams/setup/edit/page.tsx",
+        "app/(app)/erp/exams/setup/page.tsx",
+        "app/(app)/erp/fees/carry-forward/page.tsx",
+        "app/(app)/erp/fees/cheques/page.tsx",
+        "app/(app)/erp/fees/collect/page.tsx",
+        "app/(app)/erp/fees/dues/page.tsx",
+        "app/(app)/erp/fees/online/page.tsx",
+        "app/(app)/erp/fees/receipts/page.tsx",
+        "app/(app)/erp/fees/reports/page.tsx",
+        "app/(app)/erp/fees/setup/page.tsx",
+        "app/(app)/erp/homework/page.tsx",
+        "app/(app)/erp/meetings/new/page.tsx",
+        "app/(app)/erp/meetings/page.tsx",
+        "app/(app)/erp/messages/detail/page.tsx",
+        "app/(app)/erp/messages/new/page.tsx",
+        "app/(app)/erp/messages/page.tsx",
+        "app/(app)/erp/parent-chats/chat/page.tsx",
+        "app/(app)/erp/parent-chats/page.tsx",
+        "app/(app)/erp/report/page.tsx",
+        "app/(app)/erp/reports/page.tsx",
+        "app/(app)/erp/settings/classes/page.tsx",
+        "app/(app)/erp/settings/data/page.tsx",
+        "app/(app)/erp/settings/page.tsx",
+        "app/(app)/erp/settings/templates/page.tsx",
+        "app/(app)/erp/settings/users/page.tsx",
+        "app/(app)/erp/settings/whatsapp/page.tsx",
+        "app/(app)/erp/soon/page.tsx",
+        "app/(app)/erp/staff/allocation/page.tsx",
+        "app/(app)/erp/staff/attendance/page.tsx",
+        "app/(app)/erp/staff/class-teachers/page.tsx",
+        "app/(app)/erp/staff/detail/page.tsx",
+        "app/(app)/erp/staff/excel/page.tsx",
+        "app/(app)/erp/staff/new/page.tsx",
+        "app/(app)/erp/staff/page.tsx",
+        "app/(app)/erp/staff/payroll/page.tsx",
+        "app/(app)/erp/students/admission/page.tsx",
+        "app/(app)/erp/students/certificates/issue/page.tsx",
+        "app/(app)/erp/students/certificates/page.tsx",
+        "app/(app)/erp/students/detail/page.tsx",
+        "app/(app)/erp/students/enquiries/detail/page.tsx",
+        "app/(app)/erp/students/enquiries/new/page.tsx",
+        "app/(app)/erp/students/enquiries/page.tsx",
+        "app/(app)/erp/students/excel/page.tsx",
+        "app/(app)/erp/students/id-cards/page.tsx",
+        "app/(app)/erp/students/page.tsx",
+        "app/(app)/erp/students/photos/page.tsx",
+        "app/(app)/erp/students/promote/page.tsx",
+        "app/(app)/erp/syllabus/excel/page.tsx",
+        "app/(app)/erp/syllabus/page.tsx",
+        "app/(app)/erp/syllabus/plan/page.tsx",
+        "app/(app)/erp/timetable/page.tsx",
+        "app/(app)/erp/transport/page.tsx",
+        "app/(app)/erp/transport/route/page.tsx",
+        "app/(app)/erp/transport/students/page.tsx"
+      ],
+      "literalColourFrequency": [
+        [
+          "#0D2A5E",
+          83
+        ],
+        [
+          "#163F49",
+          8
+        ],
+        [
+          "#1C2A5E",
+          5
+        ],
+        [
+          "#E8EFF7",
+          4
+        ],
+        [
+          "#454957",
+          4
+        ],
+        [
+          "#62677A",
+          4
+        ],
+        [
+          "#D93636",
+          4
+        ],
+        [
+          "#2A78D6",
+          3
+        ],
+        [
+          "#EB6834",
+          3
+        ],
+        [
+          "#1BAF7A",
+          3
+        ],
+        [
+          "#ECEEEB",
+          3
+        ],
+        [
+          "#5E666D",
+          3
+        ],
+        [
+          "#242628",
+          3
+        ],
+        [
+          "#DCE4ED",
+          3
+        ],
+        [
+          "#141519",
+          3
+        ],
+        [
+          "#A8B1AA",
+          3
+        ],
+        [
+          "#294E43",
+          3
+        ],
+        [
+          "#21A04F",
+          3
+        ],
+        [
+          "#FFFEFA",
+          3
+        ],
+        [
+          "#43564C",
+          3
+        ],
+        [
+          "#C8D2DE",
+          3
+        ],
+        [
+          "#1FA855",
+          2
+        ],
+        [
+          "#D8E3F1",
+          2
+        ],
+        [
+          "#16213A",
+          2
+        ],
+        [
+          "#28D72A",
+          2
+        ],
+        [
+          "#C9CCD5",
+          2
+        ],
+        [
+          "#D4D7DE",
+          2
+        ],
+        [
+          "#12665E",
+          2
+        ],
+        [
+          "#F7F9FC",
+          2
+        ],
+        [
+          "#30363A",
+          2
+        ],
+        [
+          "#202124",
+          2
+        ],
+        [
+          "#E6EEEC",
+          2
+        ],
+        [
+          "#10323B",
+          2
+        ],
+        [
+          "#0C2830",
+          2
+        ],
+        [
+          "#D7DFDC",
+          2
+        ],
+        [
+          "#B57916",
+          2
+        ],
+        [
+          "#7755B7",
+          2
+        ],
+        [
+          "#666A6E",
+          2
+        ],
+        [
+          "#2563EB",
+          1
+        ],
+        [
+          "#E9ECF2",
+          1
+        ],
+        [
+          "#CFE3D6",
+          1
+        ],
+        [
+          "#F1F8F3",
+          1
+        ],
+        [
+          "#21613F",
+          1
+        ],
+        [
+          "#0A5C4C",
+          1
+        ],
+        [
+          "#E6F1EE",
+          1
+        ],
+        [
+          "#FAB124",
+          1
+        ],
+        [
+          "#2E313B",
+          1
+        ],
+        [
+          "#EEF1F8",
+          1
+        ],
+        [
+          "#F2F2F2",
+          1
+        ],
+        [
+          "#9A9A9A",
+          1
+        ],
+        [
+          "#E3ECEC",
+          1
+        ],
+        [
+          "#DFE5EF",
+          1
+        ],
+        [
+          "#5B6478",
+          1
+        ],
+        [
+          "#34483D",
+          1
+        ],
+        [
+          "#15803D",
+          1
+        ],
+        [
+          "#C9CEC9",
+          1
+        ],
+        [
+          "#FF3040",
+          1
+        ],
+        [
+          "#D5DAD5",
+          1
+        ],
+        [
+          "#E2E7E2",
+          1
+        ],
+        [
+          "#DCE5F4",
+          1
+        ],
+        [
+          "#233F70",
+          1
+        ],
+        [
+          "#D0DCF0",
+          1
+        ],
+        [
+          "#F8F8F5",
+          1
+        ],
+        [
+          "#F3F5F1",
+          1
+        ],
+        [
+          "#E5E9E3",
+          1
+        ],
+        [
+          "#F2EEE7",
+          1
+        ],
+        [
+          "#263735",
+          1
+        ],
+        [
+          "#59635F",
+          1
+        ],
+        [
+          "#D8D5CD",
+          1
+        ],
+        [
+          "#DCE8E7",
+          1
+        ],
+        [
+          "#496A72",
+          1
+        ],
+        [
+          "#203F36",
+          1
+        ],
+        [
+          "#18332B",
+          1
+        ],
+        [
+          "#D7DFD8",
+          1
+        ],
+        [
+          "#788078",
+          1
+        ],
+        [
+          "#3174B9",
+          1
+        ],
+        [
+          "#B64B7A",
+          1
+        ],
+        [
+          "#6A7078",
+          1
+        ],
+        [
+          "#69727D",
+          1
+        ],
+        [
+          "#0A224C",
+          1
+        ],
+        [
+          "#EEF3F9",
+          1
+        ],
+        [
+          "#B7C5D5",
+          1
+        ],
+        [
+          "#DCE7F5",
+          1
+        ],
+        [
+          "#F1F5FA",
+          1
+        ]
+      ],
+      "files": [
+        {
+          "file": "app/(app)/erp/attendance/leave/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "0fee87083bd0b82a0fa9b3e465cbff24f07e4f8f00f73b9d79ed76f9680e47e0"
+        },
+        {
+          "file": "app/(app)/erp/attendance/mark/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "c69d45c118ca30bc639ced17394adbe4fd91d56a8c690adc5e856955e86d2d10"
+        },
+        {
+          "file": "app/(app)/erp/attendance/mark/section/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "fd7b9a781a90946d3bd3dd7ff33d6b1f684a27227222739f58634aabff8fccc9"
+        },
+        {
+          "file": "app/(app)/erp/attendance/register/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "9b2dc7f8090890535d5a50a902a14441b9ced9e2cfeda5ab973af3727e075ddb"
+        },
+        {
+          "file": "app/(app)/erp/attendance/today/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "0985927f165d41dfac938a86eb995b32ca57994cd5a60c6a70fc73de0943dfbe"
+        },
+        {
+          "file": "app/(app)/erp/birthdays/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "02b97039d1ab69c836c0eb9ed873d2c5a32fce79e1efffd533c5cc62eefd1423"
+        },
+        {
+          "file": "app/(app)/erp/calendar/page.tsx",
+          "hexOccurrences": 1,
+          "sha256": "9a18fd2ffa08d8da80e99805c3fdd411d3a29443bbf4277aa838b10417ca2c84"
+        },
+        {
+          "file": "app/(app)/erp/copy-check/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "137fe0e33150ebccbcd59bb162e87b1fd2820ad5aa0df83d5ad9b2cdcdaddd38"
+        },
+        {
+          "file": "app/(app)/erp/copy-check/sheet/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "644bcad59d0dbc6f7cb7bec3c0c422f665e231b04f0662c63922a4535c840aa9"
+        },
+        {
+          "file": "app/(app)/erp/exams/marks/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "1cd1c64c24a013ecde9d4c39b65a48a9028ca7a0ead05519857ca15be6fe8bc2"
+        },
+        {
+          "file": "app/(app)/erp/exams/marks/sheet/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "f3dc1e5e89cd459e824fd344e2b5d9ac032036c966bada90f7e792e5f562801c"
+        },
+        {
+          "file": "app/(app)/erp/exams/report-cards/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "777ee5bd51d8b585bd0485fef6cdb2d96a263fc9e05aa6dc152070b640071798"
+        },
+        {
+          "file": "app/(app)/erp/exams/setup/edit/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "c38a29e0f79a1422f2bcb8c4056ffaa87c07a5e5baee838b87df58f9d6d4b68d"
+        },
+        {
+          "file": "app/(app)/erp/exams/setup/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "d904f95b27c26a021c2bddbb21d80eaa16ec29e62e7f8d4c2e8121e379c87187"
+        },
+        {
+          "file": "app/(app)/erp/fees/carry-forward/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "3743965370bb5a34f20eff27172ed63985f336dba41a6217230733ef42571568"
+        },
+        {
+          "file": "app/(app)/erp/fees/cheques/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "dd4785ad9e84ffb8ea752d8cbb548a540594c3ce981cbb1042094fffc05841d9"
+        },
+        {
+          "file": "app/(app)/erp/fees/collect/page.tsx",
+          "hexOccurrences": 3,
+          "sha256": "b8fbbee6854271faa721f723c10f4189a6ca984b8d9c36f996fea4afe474d7cd"
+        },
+        {
+          "file": "app/(app)/erp/fees/dues/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "76bf4542caaa15aba1f82b901e91f5249327d98ce142be893bd9b8cf5ba40dab"
+        },
+        {
+          "file": "app/(app)/erp/fees/online/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "872a19c5776fd65eca4660dd294d1de5d28fd7ad51c8c15e74af3fd4f0abca7b"
+        },
+        {
+          "file": "app/(app)/erp/fees/receipts/page.tsx",
+          "hexOccurrences": 3,
+          "sha256": "5692dd5e98b89b9133a374d3e6243dfa8227f7376693983e095c001f68b868d4"
+        },
+        {
+          "file": "app/(app)/erp/fees/reports/page.tsx",
+          "hexOccurrences": 3,
+          "sha256": "32b6d3a267932d6da697c007a033cf7eb91da69fdf6e338f4b6c41784a251898"
+        },
+        {
+          "file": "app/(app)/erp/fees/setup/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "9931e5ba03d0ba883c60aced7fe25c937886d02c3a7fa347d6411877b6f0fea3"
+        },
+        {
+          "file": "app/(app)/erp/homework/page.tsx",
+          "hexOccurrences": 1,
+          "sha256": "6c9210cca236f14abc36b3ee92d3356d73ed88fd2aba4317ee605dd638696d79"
+        },
+        {
+          "file": "app/(app)/erp/meetings/new/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "bb653af3424ee2c0e1e3a460d861c0824736e9f1aaa9343f94720da7d2f67bc0"
+        },
+        {
+          "file": "app/(app)/erp/meetings/page.tsx",
+          "hexOccurrences": 3,
+          "sha256": "ca77fbd4b767efb2ace3a4f37fa6c9249f1f886fe98cab5116cfb68f47c66c11"
+        },
+        {
+          "file": "app/(app)/erp/messages/detail/page.tsx",
+          "hexOccurrences": 2,
+          "sha256": "20b2c9a2a3f9fe140d5694d894a3be67c202cde20dc77f71d257132523d92e81"
+        },
+        {
+          "file": "app/(app)/erp/messages/new/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "c4cdbdfd5951e79cf195f2c06e13edda260abc2c74acfdd88445d56f0e7981b9"
+        },
+        {
+          "file": "app/(app)/erp/messages/page.tsx",
+          "hexOccurrences": 2,
+          "sha256": "eecc915c553458537c97586d2397a76903b3dcf514151253367c283626b40a04"
+        },
+        {
+          "file": "app/(app)/erp/parent-chats/chat/page.tsx",
+          "hexOccurrences": 4,
+          "sha256": "cf9ed788e060f0962bcf9680576c458bf8e494de5f912e1112e618b5d850bfd2"
+        },
+        {
+          "file": "app/(app)/erp/parent-chats/page.tsx",
+          "hexOccurrences": 2,
+          "sha256": "e9e3165827c7deeafdcc2bad83c84134affb0e6b61417a854010850163de58bb"
+        },
+        {
+          "file": "app/(app)/erp/report/page.tsx",
+          "hexOccurrences": 7,
+          "sha256": "7ef411cbca91211436a379ec388c186bd0799359f457aea78dc9ae7d4128d058"
+        },
+        {
+          "file": "app/(app)/erp/reports/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "e524ca3a94ed23e0469d3d4a49b2ecb060eb200a1af8e2cbe417b7048e171e60"
+        },
+        {
+          "file": "app/(app)/erp/settings/classes/page.tsx",
+          "hexOccurrences": 2,
+          "sha256": "6f73989c7d439a42e69445a4bcc764264e9869df6c824faba6c4a903cd7f7ab6"
+        },
+        {
+          "file": "app/(app)/erp/settings/data/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "2a32387ce3bf7f1c330d7fcab5c791aef109e877600d97d8a136b5c59c332282"
+        },
+        {
+          "file": "app/(app)/erp/settings/page.tsx",
+          "hexOccurrences": 4,
+          "sha256": "4619bd22f9d1fe22ae9cf9a83fb837abb75d14a156649aecadc198352855991b"
+        },
+        {
+          "file": "app/(app)/erp/settings/templates/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "285f46b68f5ed22016477881143c93370ae9c8047b398c7a62ec2643aa857f9e"
+        },
+        {
+          "file": "app/(app)/erp/settings/users/page.tsx",
+          "hexOccurrences": 3,
+          "sha256": "bb32c55f1d515bf7045efdecd442af23c966c3ceb18b04ba3292f48a46a6b67c"
+        },
+        {
+          "file": "app/(app)/erp/settings/whatsapp/page.tsx",
+          "hexOccurrences": 1,
+          "sha256": "710e82c4ba68d63281052df503b74e696dbc0ab087c2ac86035558f57dbacd9e"
+        },
+        {
+          "file": "app/(app)/erp/soon/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "e763f779865746ff60dbc81ce41131ea37f31c6c9ac61b53ea8968fcd5824597"
+        },
+        {
+          "file": "app/(app)/erp/staff/allocation/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "ec1890d16cbf5e447a2c5afb6bafc3671772309962254e7a95194da680060207"
+        },
+        {
+          "file": "app/(app)/erp/staff/attendance/page.tsx",
+          "hexOccurrences": 4,
+          "sha256": "03e7c293dccb252e40371edf7aa3b3734868b0a7fc7f29ea6de144d22293bad9"
+        },
+        {
+          "file": "app/(app)/erp/staff/class-teachers/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "8866261d3f84ed20b156fe580eab6bfe432a0641c214b2e104ce813b30ae2781"
+        },
+        {
+          "file": "app/(app)/erp/staff/detail/page.tsx",
+          "hexOccurrences": 2,
+          "sha256": "288fc99c22b5031928b303d61a9e7d43e7400b93be3d71fcdd32cc42a4098d75"
+        },
+        {
+          "file": "app/(app)/erp/staff/excel/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "04bd681c7b8c1c7ac991eb1b1e3face2458c015ae61e51fc95ba13fb24f53af8"
+        },
+        {
+          "file": "app/(app)/erp/staff/new/page.tsx",
+          "hexOccurrences": 2,
+          "sha256": "dcdbaebab1bd5e31b304f1d13cdc588ae453baacee129f02e9bf6819048f9dc6"
+        },
+        {
+          "file": "app/(app)/erp/staff/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "b6380402240b745763537ebac7b1ecd3f9cb7e6bd7cc059c1b0772cc33223205"
+        },
+        {
+          "file": "app/(app)/erp/staff/payroll/page.tsx",
+          "hexOccurrences": 12,
+          "sha256": "5389eedcdbf67013f4dfbbab4ce36d060c8a0f8c0161aa70a7d2f7781740b1c9"
+        },
+        {
+          "file": "app/(app)/erp/students/admission/page.tsx",
+          "hexOccurrences": 18,
+          "sha256": "ae6af968a816923d01d01f0427459638511f79c2d4ed3497a1e9db26ada49f3a"
+        },
+        {
+          "file": "app/(app)/erp/students/certificates/issue/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "63f4026ce4842bd5069ddd9fc1782a4b5f1586be79d728b91a842ac48e5afda3"
+        },
+        {
+          "file": "app/(app)/erp/students/certificates/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "55a18ec041067d6b3554cd4938e9ad1a71cd10af84098f24818e562465e07768"
+        },
+        {
+          "file": "app/(app)/erp/students/detail/page.tsx",
+          "hexOccurrences": 4,
+          "sha256": "5894f28c171e1a7021bec4fc6214af8e802386b9c8167b26a75f0e6f3b84bdf0"
+        },
+        {
+          "file": "app/(app)/erp/students/enquiries/detail/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "441f2195d314cb07366d40274bf385eaf2cd8689b06a96e61fc1375213f42c4f"
+        },
+        {
+          "file": "app/(app)/erp/students/enquiries/new/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "a91500c63ad38ed88336ed78076fb21db070f26e03c2ea618f02ac6ceac2c7ce"
+        },
+        {
+          "file": "app/(app)/erp/students/enquiries/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "f398bed0651147dbe2f6a5ee5b2621c0ed42e6708995f8f213dbf026b095105b"
+        },
+        {
+          "file": "app/(app)/erp/students/excel/page.tsx",
+          "hexOccurrences": 1,
+          "sha256": "9ba09a7ad9f482d2ec2021cfb9f050ffcfafabb4c8b402f944209bffc0b4e3d7"
+        },
+        {
+          "file": "app/(app)/erp/students/id-cards/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "ff785aeaf43843c0b8852a68aab517c0587782d4ea5bc312050d326b06ff2fd1"
+        },
+        {
+          "file": "app/(app)/erp/students/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "e387d7e32c85c7593517c001bbf77d89cad918f133584fae3abaa40d2b865146"
+        },
+        {
+          "file": "app/(app)/erp/students/photos/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "3dd6485baff515cc77d496ee36e5707a2294c8ae15c009d9ef133898d8ced9fb"
+        },
+        {
+          "file": "app/(app)/erp/students/promote/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "85de6b9d6020342b8b27ce6d7e17e420714ff048059819abfb70eaebb0256ddf"
+        },
+        {
+          "file": "app/(app)/erp/syllabus/excel/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "408d5cb899aaba18c68656a16c1a81de69b0fecf7e9451b9ed5d6ef2f67f7caf"
+        },
+        {
+          "file": "app/(app)/erp/syllabus/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "3d895a47bc3d24c26b3d6e875ca2f9a32a5f5adefe358bac60952c8ae568e1d7"
+        },
+        {
+          "file": "app/(app)/erp/syllabus/plan/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "0a3491ba0ab9ac1c512e0185700244c7e4a0f38bc67bfbb00491596e90d8f086"
+        },
+        {
+          "file": "app/(app)/erp/timetable/page.tsx",
+          "hexOccurrences": 7,
+          "sha256": "931b8bf9851b32577a086e70a0e091b026a7f5dbe4e0a4c31d3a1d98cbec3863"
+        },
+        {
+          "file": "app/(app)/erp/transport/page.tsx",
+          "hexOccurrences": 3,
+          "sha256": "34325faf15edbb4ff9d8609fd8fb5bb7271117eb1b4dda96bda69c40a892b555"
+        },
+        {
+          "file": "app/(app)/erp/transport/route/page.tsx",
+          "hexOccurrences": 3,
+          "sha256": "3ded11b03517bcbbcdb798e357da0b87821a945783b04e78714ffcabc0a91041"
+        },
+        {
+          "file": "app/(app)/erp/transport/students/page.tsx",
+          "hexOccurrences": 0,
+          "sha256": "9f3036fcdb2be3928e73ab5349215bdaab938973f9a66dde42dfe75a7b0d3d51"
+        },
+        {
+          "file": "components/erp/certs/CertificateDocument.tsx",
+          "hexOccurrences": 1,
+          "sha256": "ce8d2d8f72bf5cd3106d53f3eb61f9952814a4af7b929ffaf23d6b3f81ee0fad"
+        },
+        {
+          "file": "components/erp/certs/SheetPreview.tsx",
+          "hexOccurrences": 0,
+          "sha256": "8af2bcc17b7328950e66656feef507b5fa3ffdedaf2646f4e852805e9cf96447"
+        },
+        {
+          "file": "components/erp/ErpProfile.tsx",
+          "hexOccurrences": 2,
+          "sha256": "fd842334a10e6a0c6b62137bf33694b59bc6a2bfc4a5d981d983697c913b5ad4"
+        },
+        {
+          "file": "components/erp/ErpRollCall.tsx",
+          "hexOccurrences": 0,
+          "sha256": "a71024420bb965142afe20e67cf2830e83386b18145316b359f7a5d4c1e64e8d"
+        },
+        {
+          "file": "components/erp/ExcelRoundTrip.tsx",
+          "hexOccurrences": 0,
+          "sha256": "69f921892bd590e2ecbfd124b0758a49af590b82b8edbaa89d70c2dfa2c708bb"
+        },
+        {
+          "file": "components/erp/FeeReceiptModal.tsx",
+          "hexOccurrences": 0,
+          "sha256": "e0932c7376aab5837abb7f4204130ac8e000eae8ad2155c83f3ed3f5c19f697b"
+        },
+        {
+          "file": "components/erp/GatePassSheet.tsx",
+          "hexOccurrences": 0,
+          "sha256": "0ad182a6f0813f1feb9d9adb0c3edaf223081ef1b1121dbe91073e470fd777d5"
+        },
+        {
+          "file": "components/erp/IdCardPrint.tsx",
+          "hexOccurrences": 17,
+          "sha256": "e4bafdfe22a0954e038f30485a03114e6d591149ba4854b7e29375eab76c9508"
+        },
+        {
+          "file": "components/erp/PayslipDocument.tsx",
+          "hexOccurrences": 0,
+          "sha256": "d3d964c3938b13222d6a1a8149497cb4dbdf849d14e1e2a930cceee4593b03a7"
+        },
+        {
+          "file": "components/erp/PhotoCropper.tsx",
+          "hexOccurrences": 0,
+          "sha256": "ee8e0e2ddec7d9296f887fb6be4d24cd20eafa79017d42f1d4233fe528bd6d01"
+        },
+        {
+          "file": "components/erp/PrintReportCards.tsx",
+          "hexOccurrences": 0,
+          "sha256": "776f0bdd88cc7d3bd0bec16fb9882dc1ff3432f6146e99cddc73b810b203159d"
+        },
+        {
+          "file": "components/erp/register/PrintRegister.tsx",
+          "hexOccurrences": 1,
+          "sha256": "4d8db82687731bb197b776ca78661fa82b104761350c49d6cb8cfab3da7888f7"
+        },
+        {
+          "file": "components/erp/register/RegisterGrid.tsx",
+          "hexOccurrences": 0,
+          "sha256": "4046fda29348bab8cb99d92fff4052e2c1f547a5541e0dd620dd9b458b2ae4ac"
+        },
+        {
+          "file": "components/erp/report/ReportCardDocument.tsx",
+          "hexOccurrences": 2,
+          "sha256": "b46e12e19cbedaaf9c3ea45ebfc8e8f7b8fd61fe2ef6e8d38dc27b9e191ef390"
+        },
+        {
+          "file": "components/erp/SetupNeeded.tsx",
+          "hexOccurrences": 0,
+          "sha256": "0b1db5a19fd3a0e819020ba505b9159df9bd8824a0b8fe7606496ea5fea65985"
+        },
+        {
+          "file": "components/erp/staffRegister/PrintStaffRegister.tsx",
+          "hexOccurrences": 1,
+          "sha256": "c960ea7cc9058498ef8042b0a0efe069e3dd007648e599f3b7cac3f5121150fb"
+        },
+        {
+          "file": "components/erp/staffRegister/StaffRegisterGrid.tsx",
+          "hexOccurrences": 0,
+          "sha256": "5b767ec7b461c5edfa8435169c78f6c752a7907da612975dd678a6eb1aff4cce"
+        },
+        {
+          "file": "components/erp/StopPlacePicker.tsx",
+          "hexOccurrences": 1,
+          "sha256": "f17aec5db967762e7063ab10d444f0f01aab92aab44f288b48b3ce51971e9482"
+        },
+        {
+          "file": "components/erp/StudentProfileOfficeTabs.tsx",
+          "hexOccurrences": 6,
+          "sha256": "8c5a25de9a8d486679ec561b78e8cef048d7eb2cf7b46cc6758171fc1ded60c1"
+        },
+        {
+          "file": "components/erp/StudentProfileTabs.tsx",
+          "hexOccurrences": 2,
+          "sha256": "eaf946a3183263a09d15ebb0e8004a0f4e0d306e6398ff1ba21f58208aeb6bc4"
+        },
+        {
+          "file": "components/erp/timetable/TimetableDocument.tsx",
+          "hexOccurrences": 0,
+          "sha256": "f8da57bb291d9ce6f0acc5d37675cd131b2cdd50b60147ed346fdfff3f4b20cc"
+        },
+        {
+          "file": "components/erp/transport/DriverList.tsx",
+          "hexOccurrences": 0,
+          "sha256": "8d02f33c24f7a4c67ddfd26cb8506bd7a87f42195a8dbe36eabac9cc264c73b5"
+        },
+        {
+          "file": "components/AppShell.tsx",
+          "hexOccurrences": 8,
+          "sha256": "4fe3b04fd5aa5916b35f232498a6da48ed59b93056379487de4c2eb92780b475"
+        },
+        {
+          "file": "components/SideMenu.tsx",
+          "hexOccurrences": 3,
+          "sha256": "b5b9137a5a0c1a3de5385a0b5122b78d21ed0e0698bd21a81cac61193cc751c1"
+        },
+        {
+          "file": "components/ui.tsx",
+          "hexOccurrences": 6,
+          "sha256": "f5e2f433910c29365fc4fc71e847277f92d8256016ebb7693858072c4bbeeea7"
+        },
+        {
+          "file": "app/erp-interface.css",
+          "hexOccurrences": 48,
+          "sha256": "226a4dfec95ea8135e5a65a9fefca2ee47bbdd05e0ed5c711a6f8bca081fa48a"
+        },
+        {
+          "file": "app/action-palette.css",
+          "hexOccurrences": 5,
+          "sha256": "a647d2a34b803a4e1cdad9991d6cca678ab3cd73d19d0c179a1067d601846bec"
+        },
+        {
+          "file": "app/status-badges.css",
+          "hexOccurrences": 13,
+          "sha256": "edc62f23de5c44743946b29c1c3e89dfa008af48508e55f4c264415df49d90af"
+        },
+        {
+          "file": "app/staff-workspace.css",
+          "hexOccurrences": 21,
+          "sha256": "fad431b6101de64a99de9fea9482777bce578f1d77bacfb49a32cc7afbde24f6"
+        }
+      ]
+    }
+  }
+}

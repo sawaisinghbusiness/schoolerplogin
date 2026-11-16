@@ -7,6 +7,7 @@ import { Student } from "@/data/mockData";
 import { studentService } from "@/lib/services/studentService";
 import { schoolProfileService } from "@/lib/services/schoolProfileService";
 import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
+import { SchoolProfileNotice } from "@/components/school/SchoolProfileNotice";
 import { Avatar } from "@/components/ui/Avatar";
 import { PrintReportCards } from "@/components/exams/report/PrintReportCards";
 import { CARD_H, CARD_W, CardSchool, IdCardBack, IdCardFront, IdCardSheet, PER_SHEET } from "@/components/students/IdCardPrint";
@@ -26,7 +27,7 @@ function chunk<T>(list: T[], size: number): T[][] {
 
 export default function IdCardsPage() {
   const { session, error: sessionError } = useErpSession();
-  const { schoolProfile: p } = useSchoolProfile();
+  const { schoolProfile: p, ready } = useSchoolProfile();
   const [students, setStudents] = useState<Student[] | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [cls, setCls] = useState("");
@@ -108,11 +109,12 @@ export default function IdCardsPage() {
     <div className="flex flex-col gap-5 pb-12 lg:h-[calc(100dvh-128px)] lg:pb-0">
       <header className="page-header shrink-0">
         <h1 className="page-title">ID cards</h1>
-        <button type="button" onClick={() => setPrinting(true)} disabled={!chosen.length || !session} className="btn btn-primary">
+        <button type="button" onClick={() => setPrinting(true)} disabled={!chosen.length || !session || !ready} className="btn btn-primary">
           <Printer className="h-4 w-4" />
           {chosen.length === 1 ? "Print 1 card" : `Print ${chosen.length} cards`}
         </button>
       </header>
+      <SchoolProfileNotice />
       {!session && <p role="status" className="text-sm text-slate-600">{sessionError || "Loading academic session before printing..."}</p>}
 
       {students === null ? (

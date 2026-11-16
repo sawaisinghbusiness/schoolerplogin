@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-11-16T07:58:21.011Z",
+  "results": [
+    {
+      "width": 1280,
+      "scroll": 1265,
+      "total": "$12.26"
+    },
+    {
+      "width": 390,
+      "scroll": 375,
+      "total": "$12.26"
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "default subtotal",
+    "always-on preset",
+    "1 CU preset",
+    "desktop/mobile overflow",
+    "blank-input error"
+  ],
+  "limits": "Only offline calculator tested; no Neon or Supabase database accessed."
+}

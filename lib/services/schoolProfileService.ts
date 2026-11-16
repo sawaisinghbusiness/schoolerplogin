@@ -23,19 +23,23 @@ export interface SchoolProfile {
   updated_at?: string | null;
 }
 
-/** Shown until the backend answers, and when nothing is saved yet (the numbers are demo placeholders). */
+/**
+ * Shown until the backend answers. Empty on purpose (2026-11-16): the old demo numbers (affiliation 1730512,
+ * school code 10492) printed on real certificates and report cards whenever the profile failed to load.
+ * Official documents wait for a saved profile (useSchoolProfile().ready).
+ */
 export const DEFAULT_SCHOOL_PROFILE: SchoolProfile = {
-  school_name: "School",
+  school_name: "",
   short_name: "",
-  board: "CBSE",
-  affiliation_no: "1730512",
-  school_code: "10492",
+  board: "",
+  affiliation_no: "",
+  school_code: "",
   udise_code: "",
   address: "",
-  city: "Barmer",
-  district: "Barmer",
-  state: "Rajasthan",
-  pincode: "344001",
+  city: "",
+  district: "",
+  state: "",
+  pincode: "",
   contact1: "",
   contact2: "",
   email: "",
@@ -54,9 +58,10 @@ export interface Holiday {
 }
 
 export const schoolProfileService = {
-  async getProfile(): Promise<SchoolProfile & { saved?: boolean; setupNeeded?: boolean }> {
+  /** `loadError` is set when the server could not be reached; `saved` is false until Settings > School is saved. */
+  async getProfile(): Promise<SchoolProfile & { saved?: boolean; setupNeeded?: boolean; loadError?: string }> {
     const res = await api.get<SchoolProfile & { saved: boolean; setupNeeded: boolean }>("/api/school");
-    return res.ok && res.data ? { ...DEFAULT_SCHOOL_PROFILE, ...res.data } : DEFAULT_SCHOOL_PROFILE;
+    return res.ok && res.data ? { ...DEFAULT_SCHOOL_PROFILE, ...res.data } : { ...DEFAULT_SCHOOL_PROFILE, loadError: res.error || "Could not load the school details." };
   },
 
   async updateProfile(profile: SchoolProfile): Promise<{ success: boolean; data?: SchoolProfile & { partial?: boolean }; error?: string }> {

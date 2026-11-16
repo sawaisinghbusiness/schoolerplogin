@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { ArrowRight, Check, Loader2, Users } from "lucide-react";
 import { Student } from "@/data/mockData";
 import { studentService } from "@/lib/services/studentService";
+import { classService } from "@/lib/services/classService";
 import { nextClass } from "@/lib/words";
 import { toast } from "@/components/ui/Toaster";
 import { Avatar } from "@/components/ui/Avatar";
@@ -21,6 +22,8 @@ export default function PromotePage() {
   const [students, setStudents] = useState<Student[] | null>(null);
   const [tab, setTab] = useState<Tab>("promote");
   const [error, setError] = useState<string | null>(null);
+  // Sections set up in Settings > Classes: the target list must include a section that is empty today.
+  const [setup, setSetup] = useState<Map<string, string[]>>(new Map());
 
   const load = async () => {
     setStudents(null);
@@ -34,11 +37,13 @@ export default function PromotePage() {
   };
   useEffect(() => {
     load();
+    classService.fetchClasses().then((r) => setSetup(new Map(r.data.map((c) => [c.name, c.sections.map((x) => x.name)]))));
   }, []);
 
-  /** class -> its sections, from the students actually enrolled */
+  /** class -> its sections: those set up in Settings > Classes plus any that students are enrolled in */
   const structure = useMemo(() => {
     const m = new Map<string, Set<string>>();
+    for (const [cls, secs] of Array.from(setup)) m.set(cls, new Set(secs));
     for (const s of students || []) {
       if (!m.has(s.class)) m.set(s.class, new Set());
       m.get(s.class)!.add(s.section);
@@ -46,7 +51,7 @@ export default function PromotePage() {
     return Array.from(m.entries())
       .sort((a, b) => rank(a[0]) - rank(b[0]))
       .map(([cls, secs]) => ({ cls, sections: Array.from(secs).sort() }));
-  }, [students]);
+  }, [students, setup]);
 
   return (
     <div className="space-y-5 pb-44 md:pb-28">
@@ -97,6 +102,8 @@ export default function PromotePage() {
 
 type Structure = { cls: string; sections: string[] }[];
 
+const passOutOf = (cls: string) => !!cls && !nextClass(cls);
+
 /* ───────────────────────────── Promote ───────────────────────────── */
 
 function PromoteTab({ students, structure, onDone }: { students: Student[]; structure: Structure; onDone: () => void }) {
@@ -111,6 +118,12 @@ function PromoteTab({ students, structure, onDone }: { students: Student[]; stru
   const [saving, setSaving] = useState(false);
 
   const list = useMemo(() => students.filter((s) => s.class === fromCls && s.section === fromSec).sort(byRoll), [students, fromCls, fromSec]);
+  const occupied = (cls: string, sec: string) => students.some((s) => s.class === cls && s.section === sec);
+  // Students already sitting in the target section (2026-11-16): promoting 6th into a 7th that has not moved up
+  // yet would merge two batches. Promote from the highest class down; this needs an explicit tick to override.
+  const alreadyThere = !passOutOf(fromCls) && toCls && toSec ? students.filter((s) => s.class === toCls && s.section === toSec).length : 0;
+  const [mergeOk, setMergeOk] = useState(false);
+  useEffect(() => setMergeOk(false), [from, toSec]);
 
   // New source: everyone defaults to Promote, and the target section mirrors the current one when it exists.
   useEffect(() => {
@@ -119,7 +132,7 @@ function PromoteTab({ students, structure, onDone }: { students: Student[]; stru
   }, [from, students]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const count = (d: Decision) => list.filter((s) => (decisions[s.id] || "promote") === d).length;
-  const passOut = !!fromCls && !toCls; // 12th: promotion means passing out of school
+  const passOut = passOutOf(fromCls); // 12th: promotion means passing out of school
   const setAll = (d: Decision) => setDecisions(Object.fromEntries(list.map((s) => [s.id, d])));
   const dueCount = list.filter((s) => s.balanceFee > 0 && (decisions[s.id] || "promote") !== "detain").length;
 
@@ -159,9 +172,9 @@ function PromoteTab({ students, structure, onDone }: { students: Student[]; stru
               <option value="" disabled>
                 Choose class and section
               </option>
-              {structure.map((c) => (
+              {structure.filter((c) => c.sections.some((s) => occupied(c.cls, s))).map((c) => (
                 <optgroup key={c.cls} label={c.cls}>
-                  {c.sections.map((s) => (
+                  {c.sections.filter((s) => occupied(c.cls, s)).map((s) => (
                     <option key={s} value={`${c.cls}|${s}`}>
                       {c.cls} - {s}
                     </option>
@@ -191,6 +204,22 @@ function PromoteTab({ students, structure, onDone }: { students: Student[]; stru
           )}
         </div>
       </section>
+
+      {!from && (
+        <p className="text-sm text-slate-500">Promote the highest class first (12th, then 11th, and so on), so each class is empty before the one below moves into it.</p>
+      )}
+      {from && alreadyThere > 0 && count("promote") > 0 && (
+        <div role="alert" className="space-y-2 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">
+          <p>
+            <b>{toCls} - {toSec}</b> still has {alreadyThere} active {alreadyThere === 1 ? "student" : "students"}. Promoting now would put two batches in one section.
+            Promote {toCls} - {toSec} first, or pick another section.
+          </p>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" checked={mergeOk} onChange={(e) => setMergeOk(e.target.checked)} className="h-4 w-4" />
+            I know; put both groups in {toCls} - {toSec}
+          </label>
+        </div>
+      )}
 
       {!from ? (
         <div className="card workspace-section px-5 py-14 text-center text-sm text-slate-500">Choose the class and section to promote. Nothing moves until you confirm.</div>
@@ -263,7 +292,7 @@ function PromoteTab({ students, structure, onDone }: { students: Student[]; stru
               </>
             )}
           </span>
-          <button type="button" onClick={() => setConfirm(true)} className="btn btn-sm ml-auto bg-marigold-400 font-bold text-night-950 hover:bg-marigold-300">
+          <button type="button" onClick={() => setConfirm(true)} disabled={alreadyThere > 0 && !mergeOk && count("promote") > 0} className="btn btn-sm ml-auto bg-marigold-400 font-bold text-night-950 hover:bg-marigold-300">
             {passOut ? "Mark passed out" : "Promote"}
           </button>
         </ActionBar>

@@ -1,0 +1,2205 @@
+{
+  "capturedAt": "2026-11-16T08:27:51.034Z",
+  "limits": "Synthetic read-only API data; proposed styles injected in DOM only; visible opaque/composited colour samples do not certify whole-app accessibility.",
+  "rows": [
+    {
+      "mode": "erpApp",
+      "route": "/erp/fees/collect/?student=review-1",
+      "variant": "current",
+      "file": "screens/erpApp-erp-fees-collect-current.png",
+      "url": "/erp/fees/collect?student=review-1",
+      "width": 390,
+      "scrollWidth": 375,
+      "text": "Collect Fee\nPJ\n\nPrisha Joshi\n\n7th - B · SR-1201 · Mahesh Joshi\n\nChange\n\nSession fee\n\n₹48,000\n\nPaid\n\n₹16,000\n\nStill due\n\n₹32,000\n\nSession 2026-27\n33% paid\nQuarter 1\n10 Apr\n\nPaid\n₹15,750\n\nQuarter 2\n10 Jul\n\n₹11,000\nOverdue\n· 128d late\n\nWill be cleared by this payment\n\nQuarter 3\n10 Oct\n\n₹9,750\nOverdue\n· 36d late\n\nWill be cleared by this payment\n\nQuarter 4\n10 Jan\n\n₹11,250\n\nFee being paid\nOverdue ₹20,750\nUp to Quarter 4 ₹32,000\n₹\nTuition fee\n₹12,750\nExam fee\n₹1,500\nComputer fee\n₹500\nTransport fee\n₹6,000\nLate fine\nQuarter 2 128 days late · Quarter 3 36 days late (up to ₹860)\n₹\nTotal to collect\nTwenty One Thousand Six Hundred Ten Rupees Only\n₹21,610\nPaid by\nCash\nUPI\nCheque\nNote, optional\nCollect ₹21,610 & print\nPrisha's receipts\nCash\n14 Nov · #1024\n₹2,500\nUPI\n13 Nov · #1025\n₹3,000\nCash\n12 Nov · #1026\n₹3,500\nUPI\n11 Nov · #1027\n₹4,000\nCash\n14 Nov · #1028\n₹4,500\nUPI\n13 Nov · #1029\n₹5,000\nCash\n12 Nov · #1030\n₹5,500\nUPI\n11 Nov · #1031\n₹6,000\nLatest receipts\nAarav Sharma\n14 Nov · #1024 · 6th\n₹2,500\nPrisha Joshi\n13 Nov · #1025 · 7th\n₹3,000\nAnanya Rathore\n12 Nov · #1026 · 8th\n₹3,500\nVihaan Singh\n11 Nov · #1027 · 6th\n₹4,000\nIshita Mehta\n14 Nov · #1028 · 7th\n₹4,500\nDev Choudhary\n13 Nov · #1029 · 8th\n₹5,000\nAditi Soni\n12 Nov · #1030 · 6th\n₹5,500\nKabir Jain\n11 Nov · #1031 · 7th\n₹6,000\nHome\nStudents\nReport\nAttendance\nProfile",
+      "named": {
+        "canvas": {
+          "text": "Collect FeePJPrisha Joshi7th - B · SR-1201 · Mahesh Joshi ChangeSession fee",
+          "foreground": "#263735",
+          "background": "#f2eee7",
+          "rawBackground": "rgb(242, 238, 231)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "secondary": {
+          "text": "Change",
+          "foreground": "#163f49",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(168, 177, 170)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "600"
+        },
+        "field": {
+          "text": "Collect from another student…",
+          "foreground": "#16213a",
+          "background": "#fffefa",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "7th - B · SR-1201 · Mahesh Joshi",
+          "foreground": "#59635f",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "Prisha Joshi",
+          "foreground": "#263735",
+          "background": "#ffffff",
+          "size": 18,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "7th - B · SR-1201 · Mahesh Joshi",
+          "foreground": "#59635f",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Change",
+          "foreground": "#163f49",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Session fee",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹48,000",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 15.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹16,000",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 15.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Still due",
+          "foreground": "#dc2626",
+          "background": "#fffefa",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹32,000",
+          "foreground": "#b91c1c",
+          "background": "#fffefa",
+          "size": 15.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid ₹15,750",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹11,000Overdue· 128d late",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Will be cleared by this payment",
+          "foreground": "#0a224c",
+          "background": "#fffefa",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹9,750Overdue· 36d late",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Will be cleared by this payment",
+          "foreground": "#0a224c",
+          "background": "#fffefa",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹11,250",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Overdue ₹20,750",
+          "foreground": "#0a224c",
+          "background": "#eef3fd",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Up to Quarter 4 ₹32,000",
+          "foreground": "#384155",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/fees/collect/?student=review-1",
+      "variant": "proposed",
+      "file": "screens/erpApp-erp-fees-collect-proposed.png",
+      "url": "/erp/fees/collect?student=review-1",
+      "width": 390,
+      "scrollWidth": 375,
+      "text": "Collect Fee\nPJ\n\nPrisha Joshi\n\n7th - B · SR-1201 · Mahesh Joshi\n\nChange\n\nSession fee\n\n₹48,000\n\nPaid\n\n₹16,000\n\nStill due\n\n₹32,000\n\nSession 2026-27\n33% paid\nQuarter 1\n10 Apr\n\nPaid\n₹15,750\n\nQuarter 2\n10 Jul\n\n₹11,000\nOverdue\n· 128d late\n\nWill be cleared by this payment\n\nQuarter 3\n10 Oct\n\n₹9,750\nOverdue\n· 36d late\n\nWill be cleared by this payment\n\nQuarter 4\n10 Jan\n\n₹11,250\n\nFee being paid\nOverdue ₹20,750\nUp to Quarter 4 ₹32,000\n₹\nTuition fee\n₹12,750\nExam fee\n₹1,500\nComputer fee\n₹500\nTransport fee\n₹6,000\nLate fine\nQuarter 2 128 days late · Quarter 3 36 days late (up to ₹860)\n₹\nTotal to collect\nTwenty One Thousand Six Hundred Ten Rupees Only\n₹21,610\nPaid by\nCash\nUPI\nCheque\nNote, optional\nCollect ₹21,610 & print\nPrisha's receipts\nCash\n14 Nov · #1024\n₹2,500\nUPI\n13 Nov · #1025\n₹3,000\nCash\n12 Nov · #1026\n₹3,500\nUPI\n11 Nov · #1027\n₹4,000\nCash\n14 Nov · #1028\n₹4,500\nUPI\n13 Nov · #1029\n₹5,000\nCash\n12 Nov · #1030\n₹5,500\nUPI\n11 Nov · #1031\n₹6,000\nLatest receipts\nAarav Sharma\n14 Nov · #1024 · 6th\n₹2,500\nPrisha Joshi\n13 Nov · #1025 · 7th\n₹3,000\nAnanya Rathore\n12 Nov · #1026 · 8th\n₹3,500\nVihaan Singh\n11 Nov · #1027 · 6th\n₹4,000\nIshita Mehta\n14 Nov · #1028 · 7th\n₹4,500\nDev Choudhary\n13 Nov · #1029 · 8th\n₹5,000\nAditi Soni\n12 Nov · #1030 · 6th\n₹5,500\nKabir Jain\n11 Nov · #1031 · 7th\n₹6,000\nHome\nStudents\nReport\nAttendance\nProfile",
+      "named": {
+        "canvas": {
+          "text": "Collect FeePJPrisha Joshi7th - B · SR-1201 · Mahesh Joshi ChangeSession fee",
+          "foreground": "#18232d",
+          "background": "#f2f5f7",
+          "rawBackground": "rgb(242, 245, 247)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "secondary": {
+          "text": "Change",
+          "foreground": "#263d49",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(123, 140, 153)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "600"
+        },
+        "field": {
+          "text": "Collect from another student…",
+          "foreground": "#16213a",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "7th - B · SR-1201 · Mahesh Joshi",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "Prisha Joshi",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 18,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "7th - B · SR-1201 · Mahesh Joshi",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Change",
+          "foreground": "#263d49",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Session fee",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹48,000",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 15.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹16,000",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 15.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Still due",
+          "foreground": "#dc2626",
+          "background": "#ffffff",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹32,000",
+          "foreground": "#b91c1c",
+          "background": "#ffffff",
+          "size": 15.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid ₹15,750",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹11,000Overdue· 128d late",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Will be cleared by this payment",
+          "foreground": "#0a224c",
+          "background": "#ffffff",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹9,750Overdue· 36d late",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Will be cleared by this payment",
+          "foreground": "#0a224c",
+          "background": "#ffffff",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹11,250",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Overdue ₹20,750",
+          "foreground": "#0a224c",
+          "background": "#eef3fd",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Up to Quarter 4 ₹32,000",
+          "foreground": "#384155",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/fees/collect/?student=review-1",
+      "variant": "current",
+      "file": "screens/erpApp-erp-fees-collect-menu-current.png",
+      "url": "/erp/fees/collect?student=review-1",
+      "width": 390,
+      "scrollWidth": 390,
+      "text": "Collect Fee\nPJ\n\nPrisha Joshi\n\n7th - B · SR-1201 · Mahesh Joshi\n\nChange\n\nSession fee\n\n₹48,000\n\nPaid\n\n₹16,000\n\nStill due\n\n₹32,000\n\nSession 2026-27\n33% paid\nQuarter 1\n10 Apr\n\nPaid\n₹15,750\n\nQuarter 2\n10 Jul\n\n₹11,000\nOverdue\n· 128d late\n\nWill be cleared by this payment\n\nQuarter 3\n10 Oct\n\n₹9,750\nOverdue\n· 36d late\n\nWill be cleared by this payment\n\nQuarter 4\n10 Jan\n\n₹11,250\n\nFee being paid\nOverdue ₹20,750\nUp to Quarter 4 ₹32,000\n₹\nTuition fee\n₹12,750\nExam fee\n₹1,500\nComputer fee\n₹500\nTransport fee\n₹6,000\nLate fine\nQuarter 2 128 days late · Quarter 3 36 days late (up to ₹860)\n₹\nTotal to collect\nTwenty One Thousand Six Hundred Ten Rupees Only\n₹21,610\nPaid by\nCash\nUPI\nCheque\nNote, optional\nCollect ₹21,610 & print\nPrisha's receipts\nCash\n14 Nov · #1024\n₹2,500\nUPI\n13 Nov · #1025\n₹3,000\nCash\n12 Nov · #1026\n₹3,500\nUPI\n11 Nov · #1027\n₹4,000\nCash\n14 Nov · #1028\n₹4,500\nUPI\n13 Nov · #1029\n₹5,000\nCash\n12 Nov · #1030\n₹5,500\nUPI\n11 Nov · #1031\n₹6,000\nLatest receipts\nAarav Sharma\n14 Nov · #1024 · 6th\n₹2,500\nPrisha Joshi\n13 Nov · #1025 · 7th\n₹3,000\nAnanya Rathore\n12 Nov · #1026 · 8th\n₹3,500\nVihaan Singh\n11 Nov · #1027 · 6th\n₹4,000\nIshita Mehta\n14 Nov · #1028 · 7th\n₹4,500\nDev Choudhary\n13 Nov · #1029 · 8th\n₹5,000\nAditi Soni\n12 Nov · #1030 · 6th\n₹5,500\nKabir Jain\n11 Nov · #1031 · 7th\n₹6,000\nHome\nStudents\nReport\nAttendance\nProfile\nSB\n\nSMS Barmer Review School\n\nRO\n\nReview Operator\n\nERP login · ID review\n\nHome\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\n\nComing soon\n\nPlanned\n\nLive classes\nSoon\nCBC / Holistic progress card\nSoon\nOnline tests\nSoon\nLibrary\nSoon\nHostel\nSoon\nInventory & store\nSoon\nVisitor log\nSoon\nHealth records\nSoon\nComplaint box\nSoon\nAlumni\nSoon\nBiometric attendance\nSoon\n\nMy account\n\nProfile\nSettings\nEnglish\nहिंदी\nSign out\nAI Assistant",
+      "named": {
+        "canvas": {
+          "text": "Collect FeePJPrisha Joshi7th - B · SR-1201 · Mahesh Joshi ChangeSession fee",
+          "foreground": "#263735",
+          "background": "#f2eee7",
+          "rawBackground": "rgb(242, 238, 231)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "secondary": {
+          "text": "Change",
+          "foreground": "#163f49",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(168, 177, 170)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "600"
+        },
+        "field": {
+          "text": "Collect from another student…",
+          "foreground": "#16213a",
+          "background": "#fffefa",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "7th - B · SR-1201 · Mahesh Joshi",
+          "foreground": "#59635f",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "Prisha Joshi",
+          "foreground": "#263735",
+          "background": "#ffffff",
+          "size": 18,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "7th - B · SR-1201 · Mahesh Joshi",
+          "foreground": "#59635f",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Change",
+          "foreground": "#163f49",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Session fee",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹48,000",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 15.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹16,000",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 15.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Still due",
+          "foreground": "#dc2626",
+          "background": "#fffefa",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹32,000",
+          "foreground": "#b91c1c",
+          "background": "#fffefa",
+          "size": 15.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid ₹15,750",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹11,000Overdue· 128d late",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Will be cleared by this payment",
+          "foreground": "#0a224c",
+          "background": "#fffefa",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹9,750Overdue· 36d late",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Will be cleared by this payment",
+          "foreground": "#0a224c",
+          "background": "#fffefa",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹11,250",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Overdue ₹20,750",
+          "foreground": "#0a224c",
+          "background": "#eef3fd",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Up to Quarter 4 ₹32,000",
+          "foreground": "#384155",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/fees/collect/?student=review-1",
+      "variant": "proposed",
+      "file": "screens/erpApp-erp-fees-collect-menu-proposed.png",
+      "url": "/erp/fees/collect?student=review-1",
+      "width": 390,
+      "scrollWidth": 390,
+      "text": "Collect Fee\nPJ\n\nPrisha Joshi\n\n7th - B · SR-1201 · Mahesh Joshi\n\nChange\n\nSession fee\n\n₹48,000\n\nPaid\n\n₹16,000\n\nStill due\n\n₹32,000\n\nSession 2026-27\n33% paid\nQuarter 1\n10 Apr\n\nPaid\n₹15,750\n\nQuarter 2\n10 Jul\n\n₹11,000\nOverdue\n· 128d late\n\nWill be cleared by this payment\n\nQuarter 3\n10 Oct\n\n₹9,750\nOverdue\n· 36d late\n\nWill be cleared by this payment\n\nQuarter 4\n10 Jan\n\n₹11,250\n\nFee being paid\nOverdue ₹20,750\nUp to Quarter 4 ₹32,000\n₹\nTuition fee\n₹12,750\nExam fee\n₹1,500\nComputer fee\n₹500\nTransport fee\n₹6,000\nLate fine\nQuarter 2 128 days late · Quarter 3 36 days late (up to ₹860)\n₹\nTotal to collect\nTwenty One Thousand Six Hundred Ten Rupees Only\n₹21,610\nPaid by\nCash\nUPI\nCheque\nNote, optional\nCollect ₹21,610 & print\nPrisha's receipts\nCash\n14 Nov · #1024\n₹2,500\nUPI\n13 Nov · #1025\n₹3,000\nCash\n12 Nov · #1026\n₹3,500\nUPI\n11 Nov · #1027\n₹4,000\nCash\n14 Nov · #1028\n₹4,500\nUPI\n13 Nov · #1029\n₹5,000\nCash\n12 Nov · #1030\n₹5,500\nUPI\n11 Nov · #1031\n₹6,000\nLatest receipts\nAarav Sharma\n14 Nov · #1024 · 6th\n₹2,500\nPrisha Joshi\n13 Nov · #1025 · 7th\n₹3,000\nAnanya Rathore\n12 Nov · #1026 · 8th\n₹3,500\nVihaan Singh\n11 Nov · #1027 · 6th\n₹4,000\nIshita Mehta\n14 Nov · #1028 · 7th\n₹4,500\nDev Choudhary\n13 Nov · #1029 · 8th\n₹5,000\nAditi Soni\n12 Nov · #1030 · 6th\n₹5,500\nKabir Jain\n11 Nov · #1031 · 7th\n₹6,000\nHome\nStudents\nReport\nAttendance\nProfile\nSB\n\nSMS Barmer Review School\n\nRO\n\nReview Operator\n\nERP login · ID review\n\nHome\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\n\nComing soon\n\nPlanned\n\nLive classes\nSoon\nCBC / Holistic progress card\nSoon\nOnline tests\nSoon\nLibrary\nSoon\nHostel\nSoon\nInventory & store\nSoon\nVisitor log\nSoon\nHealth records\nSoon\nComplaint box\nSoon\nAlumni\nSoon\nBiometric attendance\nSoon\n\nMy account\n\nProfile\nSettings\nEnglish\nहिंदी\nSign out\nAI Assistant",
+      "named": {
+        "canvas": {
+          "text": "Collect FeePJPrisha Joshi7th - B · SR-1201 · Mahesh Joshi ChangeSession fee",
+          "foreground": "#18232d",
+          "background": "#f2f5f7",
+          "rawBackground": "rgb(242, 245, 247)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "secondary": {
+          "text": "Change",
+          "foreground": "#163f49",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(168, 177, 170)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "600"
+        },
+        "field": {
+          "text": "Collect from another student…",
+          "foreground": "#16213a",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "7th - B · SR-1201 · Mahesh Joshi",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "Prisha Joshi",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 18,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "7th - B · SR-1201 · Mahesh Joshi",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Change",
+          "foreground": "#163f49",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Session fee",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹48,000",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 15.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹16,000",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 15.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Still due",
+          "foreground": "#dc2626",
+          "background": "#ffffff",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹32,000",
+          "foreground": "#b91c1c",
+          "background": "#ffffff",
+          "size": 15.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Paid ₹15,750",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹11,000Overdue· 128d late",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Will be cleared by this payment",
+          "foreground": "#0a224c",
+          "background": "#ffffff",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹9,750Overdue· 36d late",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Will be cleared by this payment",
+          "foreground": "#0a224c",
+          "background": "#ffffff",
+          "size": 11.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹11,250",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 700,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Overdue ₹20,750",
+          "foreground": "#0a224c",
+          "background": "#eef3fd",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Up to Quarter 4 ₹32,000",
+          "foreground": "#384155",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "₹",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/students/admission/",
+      "variant": "current",
+      "file": "screens/erpApp-erp-students-admission-current.png",
+      "url": "/erp/students/admission",
+      "width": 390,
+      "scrollWidth": 375,
+      "text": "Admission form\n1\nStudent\n2\nClass\n3\nLast school\n4\nFamily\n5\nAddress & bus\n6\nDocuments\n7\nCheck & save\nStudent\nStep 1 of 7\n\nWrite everything as on the birth certificate.\n\nPassport photo\n\nClear face, plain background. It shows on the ID card, report card and the parent app.\n\nTake or choose photo\nName and birth\nFull name (English) *\nName in Hindi\nfor TC & certificates\n\nGender *\n\nBoy\nGirl\nOther\nDate of birth *\nAge on 1 April\nPlace of birth\nIdentity\nAadhaar number\nReligion - Hindu\nCaste\n\nCategory *\n\nGeneral\nOBC\nMBC\nSC\nST\nEWS\nNationality\nMother tongue - Hindi\nHealth\n\nBlood group\n\nA+\nA-\nB+\nB-\nO+\nO-\nAB+\nAB-\nHealth details (allergy, illness, special needs)\nNext: Class\nHome\nStudents\nReport\nAttendance\nProfile",
+      "named": {
+        "canvas": {
+          "text": "Admission form1Student2Class3Last school4Family5Address & bus6Documents7Che",
+          "foreground": "#263735",
+          "background": "#f2eee7",
+          "rawBackground": "rgb(242, 238, 231)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "card": {
+          "text": "Passport photoClear face, plain background. It shows on the ID card, report",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "rawBackground": "rgb(255, 254, 250)",
+          "border": "rgb(216, 213, 205)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "field": {
+          "text": "Aarav Singh Rathore",
+          "foreground": "#16213a",
+          "background": "#fffefa",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "2Class",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "rawBackground": "rgb(255, 254, 250)",
+          "border": "rgb(216, 213, 205)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "600"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "1Student",
+          "foreground": "#ffffff",
+          "background": "#0d2a5e",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "2Class",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "3Last school",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "4Family",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "5Address & bus",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6Documents",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "7Check & save",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Write everything as on the birth certificate.",
+          "foreground": "#59635f",
+          "background": "#f2eee7",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Passport photo",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 11.5,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Clear face, plain background. It shows on the ID card, report card and",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Take or choose photo",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Full name (English) *",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Full name (English) *",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Name in Hindifor TC & certificates",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Name in Hindi",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Gender *",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 12.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Boy",
+          "foreground": "#ffffff",
+          "background": "#0d2a5e",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Girl",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Other",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Date of birth *",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Date of birth *",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Age on 1 April",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Age on 1 April",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Place of birth",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Place of birth",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Aadhaar number",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Aadhaar number",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Religion - Hindu",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Caste",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Caste",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/students/admission/",
+      "variant": "proposed",
+      "file": "screens/erpApp-erp-students-admission-proposed.png",
+      "url": "/erp/students/admission",
+      "width": 390,
+      "scrollWidth": 375,
+      "text": "Admission form\n1\nStudent\n2\nClass\n3\nLast school\n4\nFamily\n5\nAddress & bus\n6\nDocuments\n7\nCheck & save\nStudent\nStep 1 of 7\n\nWrite everything as on the birth certificate.\n\nPassport photo\n\nClear face, plain background. It shows on the ID card, report card and the parent app.\n\nTake or choose photo\nName and birth\nFull name (English) *\nName in Hindi\nfor TC & certificates\n\nGender *\n\nBoy\nGirl\nOther\nDate of birth *\nAge on 1 April\nPlace of birth\nIdentity\nAadhaar number\nReligion - Hindu\nCaste\n\nCategory *\n\nGeneral\nOBC\nMBC\nSC\nST\nEWS\nNationality\nMother tongue - Hindi\nHealth\n\nBlood group\n\nA+\nA-\nB+\nB-\nO+\nO-\nAB+\nAB-\nHealth details (allergy, illness, special needs)\nNext: Class\nHome\nStudents\nReport\nAttendance\nProfile",
+      "named": {
+        "canvas": {
+          "text": "Admission form1Student2Class3Last school4Family5Address & bus6Documents7Che",
+          "foreground": "#18232d",
+          "background": "#f2f5f7",
+          "rawBackground": "rgb(242, 245, 247)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "card": {
+          "text": "Passport photoClear face, plain background. It shows on the ID card, report",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(220, 227, 232)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "field": {
+          "text": "Aarav Singh Rathore",
+          "foreground": "#16213a",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "2Class",
+          "foreground": "#546269",
+          "background": "#fffffd",
+          "rawBackground": "rgb(255, 255, 253)",
+          "border": "rgb(219, 222, 223)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "600"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "1Student",
+          "foreground": "#ffffff",
+          "background": "#0d2a5e",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "2Class",
+          "foreground": "#546269",
+          "background": "#fffffd",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "3Last school",
+          "foreground": "#546269",
+          "background": "#fffffd",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "4Family",
+          "foreground": "#546269",
+          "background": "#fffffd",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "5Address & bus",
+          "foreground": "#546269",
+          "background": "#fffffd",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6Documents",
+          "foreground": "#546269",
+          "background": "#fffffd",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "7Check & save",
+          "foreground": "#546269",
+          "background": "#fffffd",
+          "size": 13,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Write everything as on the birth certificate.",
+          "foreground": "#52616e",
+          "background": "#f2f5f7",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Passport photo",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 11.5,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Clear face, plain background. It shows on the ID card, report card and",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Take or choose photo",
+          "foreground": "#1a262e",
+          "background": "#fffffe",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Full name (English) *",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Full name (English) *",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Name in Hindifor TC & certificates",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Name in Hindi",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Gender *",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 12.5,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Boy",
+          "foreground": "#ffffff",
+          "background": "#0d2a5e",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Girl",
+          "foreground": "#1a262e",
+          "background": "#fffffe",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Other",
+          "foreground": "#1a262e",
+          "background": "#fffffe",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Date of birth *",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Date of birth *",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Age on 1 April",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Age on 1 April",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Place of birth",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Place of birth",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Aadhaar number",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Aadhaar number",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Religion - Hindu",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Caste",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Caste",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 12,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/staff/payroll/",
+      "variant": "current",
+      "file": "screens/erpApp-erp-staff-payroll-current.png",
+      "url": "/erp/staff/payroll",
+      "width": 390,
+      "scrollWidth": 375,
+      "text": "Payroll\nNovember 2026\nNet salary\n₹1,04,800\nPaid\n₹52,400\nTo pay\n₹52,400\nSalary not set\n2\nDownload bank sheet\nRecalculate\nPay many\nNS\nNeha Sharma\nTeacher · 30/30 days\n₹26,200\nPaid\nRM\nRakesh Mehta\nTeacher · 30/30 days\n₹26,200\nPaid\nKD\nKamla Devi\nTeacher · 30/30 days\n₹26,200\nNot paid\nMS\nManish Singh\nTeacher · 30/30 days\n₹26,200\nNot paid\nPV\nPooja Verma\nTeacher\nNot run\nSS\nSanjay Soni\nTeacher\nNot run\nSR\nSunita Rao\nOffice Clerk\nSet salary\nML\nMohan Lal\nOffice Clerk\nSet salary\nHome\nStudents\nReport\nAttendance\nProfile",
+      "named": {
+        "canvas": {
+          "text": "PayrollNovember 2026Net salary₹1,04,800Paid₹52,400To pay₹52,400Salary not s",
+          "foreground": "#263735",
+          "background": "#f2eee7",
+          "rawBackground": "rgb(242, 238, 231)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "primary": {
+          "text": "Recalculate",
+          "foreground": "#ffffff",
+          "background": "#163f49",
+          "rawBackground": "rgb(22, 63, 73)",
+          "border": "rgb(22, 63, 73)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "15px",
+          "weight": "600"
+        },
+        "secondary": {
+          "text": "Download bank sheet",
+          "foreground": "#163f49",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(168, 177, 170)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "600"
+        },
+        "card": {
+          "text": "NSNeha SharmaTeacher · 30/30 days₹26,200Paid",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "rawBackground": "rgb(255, 254, 250)",
+          "border": "rgb(216, 213, 205)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "Net salary",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "12.5px",
+          "weight": "500"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "Download bank sheet",
+          "foreground": "#163f49",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Recalculate",
+          "foreground": "#ffffff",
+          "background": "#163f49",
+          "size": 15,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Pay many",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 15,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "NSNeha SharmaTeacher · 30/30 days₹26,200Paid",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "RMRakesh MehtaTeacher · 30/30 days₹26,200Paid",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "KDKamla DeviTeacher · 30/30 days₹26,200Not paid",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "MSManish SinghTeacher · 30/30 days₹26,200Not paid",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "PVPooja VermaTeacherNot run",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/staff/payroll/",
+      "variant": "proposed",
+      "file": "screens/erpApp-erp-staff-payroll-proposed.png",
+      "url": "/erp/staff/payroll",
+      "width": 390,
+      "scrollWidth": 375,
+      "text": "Payroll\nNovember 2026\nNet salary\n₹1,04,800\nPaid\n₹52,400\nTo pay\n₹52,400\nSalary not set\n2\nDownload bank sheet\nRecalculate\nPay many\nNS\nNeha Sharma\nTeacher · 30/30 days\n₹26,200\nPaid\nRM\nRakesh Mehta\nTeacher · 30/30 days\n₹26,200\nPaid\nKD\nKamla Devi\nTeacher · 30/30 days\n₹26,200\nNot paid\nMS\nManish Singh\nTeacher · 30/30 days\n₹26,200\nNot paid\nPV\nPooja Verma\nTeacher\nNot run\nSS\nSanjay Soni\nTeacher\nNot run\nSR\nSunita Rao\nOffice Clerk\nSet salary\nML\nMohan Lal\nOffice Clerk\nSet salary\nHome\nStudents\nReport\nAttendance\nProfile",
+      "named": {
+        "canvas": {
+          "text": "PayrollNovember 2026Net salary₹1,04,800Paid₹52,400To pay₹52,400Salary not s",
+          "foreground": "#18232d",
+          "background": "#f2f5f7",
+          "rawBackground": "rgb(242, 245, 247)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "primary": {
+          "text": "Recalculate",
+          "foreground": "#ffffff",
+          "background": "#185766",
+          "rawBackground": "rgb(24, 87, 102)",
+          "border": "rgb(24, 87, 102)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "15px",
+          "weight": "600"
+        },
+        "secondary": {
+          "text": "Download bank sheet",
+          "foreground": "#253d49",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(124, 141, 154)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "600"
+        },
+        "card": {
+          "text": "NSNeha SharmaTeacher · 30/30 days₹26,200Paid",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(220, 227, 232)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "Net salary",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "12.5px",
+          "weight": "500"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "Download bank sheet",
+          "foreground": "#253d49",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Recalculate",
+          "foreground": "#ffffff",
+          "background": "#185766",
+          "size": 15,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Pay many",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 15,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "NSNeha SharmaTeacher · 30/30 days₹26,200Paid",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "RMRakesh MehtaTeacher · 30/30 days₹26,200Paid",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "KDKamla DeviTeacher · 30/30 days₹26,200Not paid",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "MSManish SinghTeacher · 30/30 days₹26,200Not paid",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "PVPooja VermaTeacherNot run",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/settings/classes/",
+      "variant": "current",
+      "file": "screens/erpApp-erp-settings-classes-current.png",
+      "url": "/erp/settings/classes",
+      "width": 390,
+      "scrollWidth": 390,
+      "text": "Classes & Subjects\n\n3 classes · 6 sections · 24 students. Tap a section to rename it or set its subjects.\n\nAdd class\n\nOther\n3 classes · 24 students\n\n6th\n8 students\nA\n4\nB\n4\nSection\n\nEnglish · Hindi · Maths · Science\n\n7th\n8 students\nA\n4\nB\n4\nSection\n\nEnglish · Hindi · Maths · Science\n\n8th\n8 students\nA\n4\nB\n4\nSection\n\nEnglish · Hindi · Maths · Science\n\nHome\nStudents\nReport\nAttendance\nProfile",
+      "named": {
+        "canvas": {
+          "text": "Classes & Subjects3 classes · 6 sections · 24 students. Tap a section to re",
+          "foreground": "#263735",
+          "background": "#f2eee7",
+          "rawBackground": "rgb(242, 238, 231)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "card": {
+          "text": "6th8 studentsA4B4 SectionEnglish · Hindi · Maths · Science",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "rawBackground": "rgb(255, 254, 250)",
+          "border": "rgb(216, 213, 205)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "3 classes · 6 sections · 24 students. Tap a section to rename it or set its",
+          "foreground": "#59635f",
+          "background": "#f2eee7",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "3 classes · 6 sections · 24 students. Tap a section to rename it or se",
+          "foreground": "#59635f",
+          "background": "#f2eee7",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Add class",
+          "foreground": "#ffffff",
+          "background": "#163f49",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Other3 classes · 24 students",
+          "foreground": "#59635f",
+          "background": "#f2eee7",
+          "size": 13,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th8 students",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "A4",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "B4",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Section",
+          "foreground": "#0d2a5e",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "English · Hindi · Maths · Science",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 12.5,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "7th8 students",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "A4",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "B4",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Section",
+          "foreground": "#0d2a5e",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "English · Hindi · Maths · Science",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 12.5,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "8th8 students",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "A4",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "B4",
+          "foreground": "#263735",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Section",
+          "foreground": "#0d2a5e",
+          "background": "#fffefa",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "English · Hindi · Maths · Science",
+          "foreground": "#59635f",
+          "background": "#fffefa",
+          "size": 12.5,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpApp",
+      "route": "/erp/settings/classes/",
+      "variant": "proposed",
+      "file": "screens/erpApp-erp-settings-classes-proposed.png",
+      "url": "/erp/settings/classes",
+      "width": 390,
+      "scrollWidth": 390,
+      "text": "Classes & Subjects\n\n3 classes · 6 sections · 24 students. Tap a section to rename it or set its subjects.\n\nAdd class\n\nOther\n3 classes · 24 students\n\n6th\n8 students\nA\n4\nB\n4\nSection\n\nEnglish · Hindi · Maths · Science\n\n7th\n8 students\nA\n4\nB\n4\nSection\n\nEnglish · Hindi · Maths · Science\n\n8th\n8 students\nA\n4\nB\n4\nSection\n\nEnglish · Hindi · Maths · Science\n\nHome\nStudents\nReport\nAttendance\nProfile",
+      "named": {
+        "canvas": {
+          "text": "Classes & Subjects3 classes · 6 sections · 24 students. Tap a section to re",
+          "foreground": "#18232d",
+          "background": "#f2f5f7",
+          "rawBackground": "rgb(242, 245, 247)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "card": {
+          "text": "6th8 studentsA4B4 SectionEnglish · Hindi · Maths · Science",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "rawBackground": "rgb(255, 255, 255)",
+          "border": "rgb(220, 227, 232)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "3 classes · 6 sections · 24 students. Tap a section to rename it or set its",
+          "foreground": "#52616e",
+          "background": "#f2f5f7",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "400"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "3 classes · 6 sections · 24 students. Tap a section to rename it or se",
+          "foreground": "#52616e",
+          "background": "#f2f5f7",
+          "size": 13,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Add class",
+          "foreground": "#ffffff",
+          "background": "#185564",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Other3 classes · 24 students",
+          "foreground": "#52616e",
+          "background": "#f2f5f7",
+          "size": 13,
+          "weight": 500,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "6th8 students",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "A4",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "B4",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Section",
+          "foreground": "#0d2a5e",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "English · Hindi · Maths · Science",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 12.5,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "7th8 students",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "A4",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "B4",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Section",
+          "foreground": "#0d2a5e",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "English · Hindi · Maths · Science",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 12.5,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "8th8 students",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 16,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "A4",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "B4",
+          "foreground": "#18232d",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Section",
+          "foreground": "#0d2a5e",
+          "background": "#ffffff",
+          "size": 14,
+          "weight": 600,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "English · Hindi · Maths · Science",
+          "foreground": "#52616e",
+          "background": "#ffffff",
+          "size": 12.5,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "blocked": []
+}

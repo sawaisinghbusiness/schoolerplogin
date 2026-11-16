@@ -25,7 +25,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [signOutOpen, setSignOutOpen] = useState(false);
   const [open, setOpen] = useState<Record<string, boolean>>({});
   const panel = useRef<HTMLElement>(null);
-  const navGroups = useMemo(() => visibleNavGroups(), []);
+  const navGroups = useMemo(() => visibleNavGroups(user.roleKey), [user.roleKey]);
   useDialog(isOpen && mobile, panel, onClose || (() => {}));
   useEffect(() => { if (mobile && !isOpen) panel.current?.setAttribute("inert", ""); else panel.current?.removeAttribute("inert"); }, [mobile, isOpen]);
 

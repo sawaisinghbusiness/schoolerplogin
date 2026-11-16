@@ -3,7 +3,8 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowRight, CornerDownLeft, Search } from "lucide-react";
-import { allDestinations } from "@/components/layout/navConfig";
+import { allDestinations, canOpen } from "@/components/layout/navConfig";
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
 
 interface CommandPaletteProps {
   open: boolean;
@@ -16,7 +17,8 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
   const [cursor, setCursor] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
-  const destinations = useMemo(() => allDestinations(), []);
+  const { roleKey } = useCurrentUser();
+  const destinations = useMemo(() => allDestinations().filter((d) => canOpen(d.href, roleKey)), [roleKey]);
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();

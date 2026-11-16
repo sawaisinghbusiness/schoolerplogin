@@ -1,0 +1,302 @@
+{
+  "method": "Opaque role pairs; not whole-app accessibility certification.",
+  "checks": [
+    {
+      "direction": "ink-oxide",
+      "name": "Primary label",
+      "fg": "#FFFFFF",
+      "bg": "#A43F20",
+      "ratio": 6.343716617935287,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "ink-oxide",
+      "name": "Hover label",
+      "fg": "#FFFFFF",
+      "bg": "#87341B",
+      "ratio": 8.276833092149078,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "ink-oxide",
+      "name": "Pressed label",
+      "fg": "#FFFFFF",
+      "bg": "#6D2916",
+      "ratio": 10.611405233009654,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "ink-oxide",
+      "name": "Body",
+      "fg": "#202938",
+      "bg": "#FFFFFF",
+      "ratio": 14.627059762444262,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "ink-oxide",
+      "name": "Support",
+      "fg": "#536071",
+      "bg": "#FFFFFF",
+      "ratio": 6.403611812591899,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "ink-oxide",
+      "name": "Rail label",
+      "fg": "#F1F4F8",
+      "bg": "#242D3C",
+      "ratio": 12.55982957598206,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "ink-oxide",
+      "name": "Rail support",
+      "fg": "#C4CDDA",
+      "bg": "#242D3C",
+      "ratio": 8.638114414238636,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "ink-oxide",
+      "name": "Rail search value",
+      "fg": "#F1F4F8",
+      "bg": "#354155",
+      "ratio": 9.33740208138753,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "ink-oxide",
+      "name": "Rail search hint",
+      "fg": "#C4CDDA",
+      "bg": "#354155",
+      "ratio": 6.421866397376558,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "ink-oxide",
+      "name": "Field boundary",
+      "fg": "#7B8C99",
+      "bg": "#FFFFFF",
+      "ratio": 3.4691215229615673,
+      "minimum": 3,
+      "pass": true
+    },
+    {
+      "direction": "ink-oxide",
+      "name": "Focus",
+      "fg": "#A43F20",
+      "bg": "#FFFFFF",
+      "ratio": 6.343716617935287,
+      "minimum": 3,
+      "pass": true
+    },
+    {
+      "direction": "plum",
+      "name": "Primary label",
+      "fg": "#FFFFFF",
+      "bg": "#674477",
+      "ratio": 7.865334438360479,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "plum",
+      "name": "Hover label",
+      "fg": "#FFFFFF",
+      "bg": "#543660",
+      "ratio": 10.127627905490138,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "plum",
+      "name": "Pressed label",
+      "fg": "#FFFFFF",
+      "bg": "#422B4C",
+      "ratio": 12.488392764724237,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "plum",
+      "name": "Body",
+      "fg": "#282535",
+      "bg": "#FFFFFF",
+      "ratio": 14.933241163886008,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "plum",
+      "name": "Support",
+      "fg": "#605A6B",
+      "bg": "#FFFFFF",
+      "ratio": 6.620152420270143,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "plum",
+      "name": "Rail label",
+      "fg": "#F5F1F8",
+      "bg": "#302A3D",
+      "ratio": 12.347140134594463,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "plum",
+      "name": "Rail support",
+      "fg": "#D0C5D9",
+      "bg": "#302A3D",
+      "ratio": 8.312590492950633,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "plum",
+      "name": "Rail search value",
+      "fg": "#F5F1F8",
+      "bg": "#443A53",
+      "ratio": 9.524726521139913,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "plum",
+      "name": "Rail search hint",
+      "fg": "#D0C5D9",
+      "bg": "#443A53",
+      "ratio": 6.412428324656968,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "plum",
+      "name": "Field boundary",
+      "fg": "#7B8C99",
+      "bg": "#FFFFFF",
+      "ratio": 3.4691215229615673,
+      "minimum": 3,
+      "pass": true
+    },
+    {
+      "direction": "plum",
+      "name": "Focus",
+      "fg": "#674477",
+      "bg": "#FFFFFF",
+      "ratio": 7.865334438360479,
+      "minimum": 3,
+      "pass": true
+    },
+    {
+      "direction": "sapphire",
+      "name": "Primary label",
+      "fg": "#FFFFFF",
+      "bg": "#2854A6",
+      "ratio": 7.21900661595714,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "sapphire",
+      "name": "Hover label",
+      "fg": "#FFFFFF",
+      "bg": "#214586",
+      "ratio": 9.29137163828582,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "sapphire",
+      "name": "Pressed label",
+      "fg": "#FFFFFF",
+      "bg": "#1B386D",
+      "ratio": 11.45602203624508,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "sapphire",
+      "name": "Body",
+      "fg": "#222C3D",
+      "bg": "#FFFFFF",
+      "ratio": 14.040497811230637,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "sapphire",
+      "name": "Support",
+      "fg": "#536175",
+      "bg": "#FFFFFF",
+      "ratio": 6.297704150781977,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "sapphire",
+      "name": "Rail label",
+      "fg": "#24334A",
+      "bg": "#F8FAFC",
+      "ratio": 12.183358559000634,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "sapphire",
+      "name": "Rail support",
+      "fg": "#526277",
+      "bg": "#F8FAFC",
+      "ratio": 5.95191726361851,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "sapphire",
+      "name": "Rail search value",
+      "fg": "#24334A",
+      "bg": "#E8EDF5",
+      "ratio": 10.843183925460336,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "sapphire",
+      "name": "Rail search hint",
+      "fg": "#526277",
+      "bg": "#E8EDF5",
+      "ratio": 5.297203828156227,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "direction": "sapphire",
+      "name": "Field boundary",
+      "fg": "#7B8C99",
+      "bg": "#FFFFFF",
+      "ratio": 3.4691215229615673,
+      "minimum": 3,
+      "pass": true
+    },
+    {
+      "direction": "sapphire",
+      "name": "Focus",
+      "fg": "#2854A6",
+      "bg": "#FFFFFF",
+      "ratio": 7.21900661595714,
+      "minimum": 3,
+      "pass": true
+    }
+  ]
+}

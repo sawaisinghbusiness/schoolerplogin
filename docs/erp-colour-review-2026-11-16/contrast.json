@@ -1,0 +1,171 @@
+{
+  "method": "WCAG relative luminance; opaque token pairs only, not whole-app conformance.",
+  "results": [
+    {
+      "name": "Body",
+      "foreground": "#18232D",
+      "background": "#FFFFFF",
+      "ratio": 15.943598596302111,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "Secondary",
+      "foreground": "#52616E",
+      "background": "#FFFFFF",
+      "ratio": 6.375608715405943,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "Hint",
+      "foreground": "#647582",
+      "background": "#FFFFFF",
+      "ratio": 4.763285045466792,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "Primary label",
+      "foreground": "#FFFFFF",
+      "background": "#185766",
+      "ratio": 8.095674288249857,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "Hover label",
+      "foreground": "#FFFFFF",
+      "background": "#164A56",
+      "ratio": 9.776520381040772,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "Pressed label",
+      "foreground": "#FFFFFF",
+      "background": "#123B45",
+      "ratio": 12.08814172557816,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "Rail text",
+      "foreground": "#E7F0F2",
+      "background": "#183D48",
+      "ratio": 10.080486076285622,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "Rail supporting text",
+      "foreground": "#B5CDD3",
+      "background": "#183D48",
+      "ratio": 7.02140687681744,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "Rail search text",
+      "foreground": "#E7F0F2",
+      "background": "#244E5B",
+      "ratio": 7.834745245893342,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "Rail search hint",
+      "foreground": "#B5CDD3",
+      "background": "#244E5B",
+      "ratio": 5.457170788325542,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "Rail search boundary",
+      "foreground": "#7E9FA9",
+      "background": "#244E5B",
+      "ratio": 3.203722103084456,
+      "minimum": 3,
+      "pass": true
+    },
+    {
+      "name": "Field boundary",
+      "foreground": "#7B8C99",
+      "background": "#FFFFFF",
+      "ratio": 3.4691215229615673,
+      "minimum": 3,
+      "pass": true
+    },
+    {
+      "name": "Focus on paper",
+      "foreground": "#23677A",
+      "background": "#FFFFFF",
+      "ratio": 6.3779534074275634,
+      "minimum": 3,
+      "pass": true
+    },
+    {
+      "name": "Focus on canvas",
+      "foreground": "#23677A",
+      "background": "#F2F5F7",
+      "ratio": 5.825043248398706,
+      "minimum": 3,
+      "pass": true
+    },
+    {
+      "name": "success text/dot",
+      "foreground": "#15803D",
+      "background": "#FFFFFF",
+      "ratio": 5.0155974781114745,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "due text/dot",
+      "foreground": "#B42332",
+      "background": "#FFFFFF",
+      "ratio": 6.507329548273491,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "warning text/dot",
+      "foreground": "#8A570B",
+      "background": "#FFFFFF",
+      "ratio": 6.089136069880162,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "running text/dot",
+      "foreground": "#7052A3",
+      "background": "#FFFFFF",
+      "ratio": 6.131861327395624,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "name": "info text/dot",
+      "foreground": "#255E8B",
+      "background": "#FFFFFF",
+      "ratio": 6.879470702408431,
+      "minimum": 4.5,
+      "pass": true
+    }
+  ],
+  "currentExamples": [
+    {
+      "name": "Current rail override on white logo/search",
+      "foreground": "#DCE8E7",
+      "background": "#FFFFFF",
+      "ratio": 1.254504401734187
+    },
+    {
+      "name": "Current warm canvas / white paper",
+      "foreground": "#F2EEE7",
+      "background": "#FFFFFF",
+      "ratio": 1.156440665489349
+    }
+  ]
+}

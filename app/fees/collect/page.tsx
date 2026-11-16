@@ -64,6 +64,13 @@ export default function CollectFeesPage() {
   const [reference, setReference] = useState("");
   const [remarks, setRemarks] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  // A ref, not the state: Ctrl+Enter twice fires before the re-render that disables the button (2026-11-16).
+  const inFlight = useRef(false);
+  // One key per payment the cashier means to take. A retry after a timeout sends the same key, and the
+  // server returns the first receipt in place of saving a second one. A new key once anything changes.
+  const payKey = useRef<string | null>(null);
+  // Only the latest fee-position request may fill the screen (fast switching between students).
+  const positionReq = useRef(0);
   const [error, setError] = useState<string | null>(null);
 
   // Live data (Supabase via the backend)
@@ -83,9 +90,11 @@ export default function CollectFeesPage() {
 
   /** Loads the student's fee position and suggests paying whatever is overdue. */
   const loadPosition = useCallback(async (id: string, suggest: boolean) => {
+    const req = ++positionReq.current;
     setPosition(null);
     setPositionError(null);
     const r = await feeService.fetchPosition(id);
+    if (req !== positionReq.current) return; // another student was picked meanwhile
     if (!r.data) return setPositionError(r.error || "Could not load the fee details.");
     setPosition(r.data);
     if (suggest) {
@@ -223,19 +232,26 @@ export default function CollectFeesPage() {
   const waived = maxFine - fine;
   const total = (over ? 0 : amt) + fine;
   const needsRef = mode !== "Cash";
+  useEffect(() => {
+    payKey.current = null;
+  }, [student?.id, amt, fine, mode, reference]);
 
   const submit = async (e?: React.FormEvent) => {
     e?.preventDefault();
+    if (inFlight.current) return;
     if (!student || !position) return setError("Pick a student first.");
     if (amt <= 0) return setError("Enter the fee amount being paid.");
     if (over) return setError(`Only ${inr(balance)} is due for the session.`);
     if (waived > 0 && waiveReason.trim().length < 3) return setError(`Write why ${inr(waived)} of the late fine is being let go.`);
     if (needsRef && !reference.trim()) return setError(mode === "UPI" ? "Enter the UPI reference (UTR) number." : "Enter the cheque number.");
 
+    inFlight.current = true;
     setSubmitting(true);
     setError(null);
+    payKey.current ||= typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
     try {
       const res = await feeService.collect({
+        idempotencyKey: payKey.current,
         studentId: student.id,
         amount: amt,
         fine,
@@ -249,6 +265,7 @@ export default function CollectFeesPage() {
         return;
       }
       const tx = res.transaction;
+      payKey.current = null;
       const newDue = res.newDue ?? Math.max(0, balance - amt);
       setStudent({ ...student, balanceFee: newDue, paidFee: student.paidFee + amt });
       setHistory((list) => [tx, ...(list || [])]);
@@ -264,6 +281,7 @@ export default function CollectFeesPage() {
     } catch (err: any) {
       setError(err?.message || "Something went wrong. Try again.");
     } finally {
+      inFlight.current = false;
       setSubmitting(false);
     }
   };

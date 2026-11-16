@@ -6,6 +6,7 @@ import { Student } from "@/data/mockData";
 import { studentService } from "@/lib/services/studentService";
 import { certificateService, Certificate, CertificateType } from "@/lib/services/certificateService";
 import { useSchoolProfile } from "@/components/providers/SchoolProfileProvider";
+import { SchoolProfileNotice } from "@/components/school/SchoolProfileNotice";
 import { CertificateDocument, SchoolInfo } from "@/components/certificates/CertificateDocument";
 import { PrintSheet } from "@/components/certificates/SheetPreview";
 import { IssueCertificateDrawer } from "@/components/certificates/IssueCertificateDrawer";
@@ -17,9 +18,10 @@ const TYPE_BADGE: Record<CertificateType, string> = { tc: "badge-rose", bonafide
 const TYPE_SHORT: Record<CertificateType, string> = { tc: "TC", bonafide: "Bonafide", character: "Character" };
 
 export default function CertificatesPage() {
-  const { schoolProfile } = useSchoolProfile();
+  const { schoolProfile, ready } = useSchoolProfile();
   const [certs, setCerts] = useState<Certificate[] | null>(null);
   const [setupError, setSetupError] = useState<string | null>(null);
+  const [studentsError, setStudentsError] = useState<string | null>(null);
   const [students, setStudents] = useState<Student[]>([]);
   const [filter, setFilter] = useState<Filter>("all");
   const [query, setQuery] = useState("");
@@ -47,9 +49,18 @@ export default function CertificatesPage() {
     setRefreshing(false);
   };
 
+  // A failed load must not look like "no students" in the Issue drawer (2026-11-16).
+  const loadStudents = () => {
+    setStudentsError(null);
+    studentService.fetchStudents().then((r) => {
+      setStudentsError(r.error);
+      setStudents(r.data.filter((s) => s.status !== "Inactive"));
+    });
+  };
+
   useEffect(() => {
     load();
-    studentService.fetchStudents().then((r) => setStudents(r.data.filter((s) => s.status !== "Inactive")));
+    loadStudents();
   }, []);
 
   const counts = useMemo(() => {
@@ -89,6 +100,14 @@ export default function CertificatesPage() {
           Issue certificate
         </button>
       </header>
+
+      <SchoolProfileNotice />
+      {studentsError && (
+        <div role="alert" className="flex flex-wrap items-center gap-3 rounded-lg border border-rose-200 bg-rose-50 p-3 text-sm text-rose-800">
+          <span>The student list did not load, so a new certificate cannot be issued yet. {studentsError}</span>
+          <button type="button" onClick={loadStudents} className="btn btn-secondary btn-sm">Try again</button>
+        </div>
+      )}
 
       {setupError ? (
         <div className="card workspace-section p-8 text-center">
@@ -220,7 +239,7 @@ export default function CertificatesPage() {
         }}
       />
 
-      {printing && (
+      {printing && ready && (
         <PrintSheet onDone={() => setPrinting(null)}>
           <CertificateDocument type={printing.type} d={printing.details} serial={printing.serial_no} school={school} />
         </PrintSheet>

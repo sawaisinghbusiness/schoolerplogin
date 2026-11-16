@@ -1,0 +1,37 @@
+﻿/* DOM-only colour study, injected into isolated review pages; not a production stylesheet. */
+.erp-shell,.erp-dialog,.erp-parity,.erp-interface{--erp-canvas:#F2F5F7;--erp-paper:#fff;--erp-surface:#fff;--erp-line:#DCE3E8;--erp-ink:#18232D;--erp-muted:#52616E;--erp-brand:#185766;--erp-pressed:#E6F0F2;--parity-ink:#18232D;--parity-muted:#52616E;--parity-line:#DCE3E8;--staff-paper:#F2F5F7;--staff-ink:#18232D;--staff-muted:#52616E;--staff-line:#DCE3E8;--staff-brand:#185766;--primary:192 62% 25%;--primary-dark:192 59% 21%;--primary-light:190 29% 93%;--accent:190 29% 93%;--accent-foreground:192 62% 25%;--ring:194 55% 31%;color:#18232D}
+.erp-shell[data-action-theme],.erp-shell .erp-parity,.erp-dialog,.erp-interface[data-action-theme],.erp-interface [data-action-theme]{--action-primary:#185766;--action-hover:#164A56;--action-pressed:#123B45;--action-disabled:#E7ECEF;--action-disabled-ink:#667681}
+.erp-shell,.erp-interface.app-page,.erp-interface:has(.erp-home){background:#F2F5F7}
+.erp-shell .erp-topbar,.erp-shell .card,.erp-shell .surface,.erp-shell .workspace-section,.erp-shell .summary-strip,.erp-shell .bg-white,.erp-dialog .bg-white,.erp-dialog,.erp-parity .row-card,.erp-parity .glass-line,.erp-parity .field-box,.erp-parity .textarea-box,.erp-interface .bg-white,.erp-interface>header,.erp-interface>nav{background-color:#fff}
+.erp-shell :is(.text-slate-900,.text-slate-800,.text-ink-900),.erp-dialog :is(.text-slate-900,.text-slate-800),.erp-interface :is(.text-ink-900,.text-ink-800){color:#18232D}
+.erp-shell :is(.text-slate-500,.text-slate-600,.text-ink-500,.text-ink-400),.erp-dialog :is(.text-slate-500,.text-slate-600),.erp-interface :is(.text-ink-500,.text-ink-400,.mlabel,.meta){color:#52616E}
+.erp-shell :is(.text-brand-700,.text-brand-600),.erp-parity .link,.erp-parity .tabs-line>[aria-selected=true]{color:#185766}
+.erp-shell :is(.field,.select,.textarea),.erp-dialog :is(.field,.select,.textarea),.erp-parity .field-box,.erp-parity .textarea-box,.erp-interface :is(.field,.field-box,.textarea-box){background:#fff;border-color:#7B8C99;color:#18232D}
+.erp-shell input::placeholder,.erp-shell textarea::placeholder,.erp-dialog input::placeholder,.erp-dialog textarea::placeholder,.erp-interface input::placeholder,.erp-interface textarea::placeholder{color:#647582;opacity:1}
+.erp-shell .btn-secondary,.erp-parity .btn-line,.erp-parity .btn-quiet,.erp-interface .btn-line{background:#fff;color:#263D49;border-color:#7B8C99}
+.erp-shell .btn-secondary:hover,.erp-parity .btn-line:hover,.erp-interface .btn-line:hover{background:#EDF2F5}
+.erp-shell :is(button,a,input,select,textarea):focus-visible,.erp-dialog :is(button,a,input,select,textarea):focus-visible,.erp-interface :is(button,a,input,select,textarea):focus-visible{outline:2px solid #23677A;outline-offset:3px;box-shadow:none}
+.erp-shell .erp-sidebar{background:#183D48;border-color:#365E69;color:#E7F0F2}
+.erp-shell .erp-sidebar :is(.text-slate-900,.text-slate-800,.text-slate-700,.text-slate-600,.text-slate-500,.text-slate-400){color:#B5CDD3}
+.erp-shell .erp-sidebar .office-school-identity p:first-child{color:#E7F0F2}
+.erp-shell .office-nav-link,.erp-shell .office-nav-child{color:#E7F0F2}
+.erp-shell .office-nav-link:hover,.erp-shell .office-nav-child:hover{background:#244E5B;color:#fff}
+.erp-shell .office-nav-link.is-active,.erp-shell .office-nav-child.is-active{background:#fff;color:#183D48}
+.erp-shell .erp-sidebar .office-school-identity>div:first-child,.erp-shell .office-sidebar-footer>span{background:#fff;color:#183D48;border-color:#fff}
+.erp-shell .erp-sidebar input[class]{background:#244E5B;color:#E7F0F2;border-color:#7E9FA9}
+.erp-shell .erp-sidebar input::placeholder{color:#B5CDD3}
+.erp-shell .office-sidebar-footer,.erp-shell .office-nav-children{border-color:#7E9FA9}
+.erp-shell .office-sidebar-footer p:first-child{color:#E7F0F2}
+.erp-shell thead,.erp-parity thead,.erp-interface thead{background:#F7F9FA;color:#52616E}
+.erp-shell .erp-mobile-nav{background:#fff;border-color:#DCE3E8}
+.erp-shell .erp-mobile-nav [aria-current=page],.erp-interface>nav [aria-current=page]{color:#185766}
+.erp-shell .erp-mobile-nav [aria-current=page]>span:first-child{background:#E6F0F2}
+.erp-interface>nav li>span[aria-hidden],.erp-parity .tabs-line-bar{background:#185766}
+.erp-interface.erp-menu [tabindex="-1"]{background:#183D48;color:#E7F0F2}
+.erp-interface.erp-menu [tabindex="-1"] :is(.text-ink-900,.text-ink-800,.text-ink-700,.text-ink-600,.text-ink-500,.text-ink-400){color:#B5CDD3}
+.erp-interface.erp-menu a[aria-current=page]{background:#fff;color:#183D48}
+.erp-interface.erp-menu a[aria-current=page] *{color:inherit}
+/* Labels stay dark; the existing semantic dots and requested financial colours remain. */
+.erp-shell ::selection,.erp-dialog ::selection,.erp-interface ::selection{background:#C7DFE5;color:#18232D}
+
+.erp-shell.erp-shell,.erp-dialog.erp-dialog,.erp-shell .erp-parity{--erp-line:#DCE3E8;--erp-ink:#18232D;--erp-muted:#52616E;color:#18232D}

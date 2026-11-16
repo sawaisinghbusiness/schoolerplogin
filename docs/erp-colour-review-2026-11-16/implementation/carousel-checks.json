@@ -1,0 +1,86 @@
+{
+  "initial": {
+    "visible": [
+      "Quarter 2\n10 Jul\n\n₹11,000\nOverdue\n· 128d late\n\nWill be cleared by this payment"
+    ],
+    "index": 1,
+    "amount": "20,750",
+    "menu": false,
+    "width": 309,
+    "left": 33,
+    "top": 440,
+    "height": 138,
+    "pageWidth": 375,
+    "viewport": 390
+  },
+  "next": {
+    "visible": [
+      "Quarter 3\n10 Oct\n\n₹9,750\nOverdue\n· 36d late\n\nWill be cleared by this payment"
+    ],
+    "index": 2,
+    "amount": "20,750",
+    "menu": false,
+    "width": 309,
+    "left": 33,
+    "top": 440,
+    "height": 138,
+    "pageWidth": 375,
+    "viewport": 390
+  },
+  "swiped": {
+    "visible": [
+      "Quarter 2\n10 Jul\n\n₹11,000\nOverdue\n· 128d late\n\nWill be cleared by this payment"
+    ],
+    "index": 1,
+    "amount": "20,750",
+    "menu": false,
+    "width": 309,
+    "left": 33,
+    "top": 440,
+    "height": 138,
+    "pageWidth": 375,
+    "viewport": 390
+  },
+  "keyboard": {
+    "visible": [
+      "Quarter 3\n10 Oct\n\n₹9,750\nOverdue\n· 36d late\n\nWill be cleared by this payment"
+    ],
+    "index": 2,
+    "amount": "20,750",
+    "menu": false,
+    "width": 309,
+    "left": 33,
+    "top": 440,
+    "height": 138,
+    "pageWidth": 375,
+    "viewport": 390
+  },
+  "last": {
+    "visible": [
+      "Quarter 4\n10 Jan\n\n₹11,250"
+    ],
+    "index": 3,
+    "amount": "20,750",
+    "menu": false,
+    "width": 309,
+    "left": 33,
+    "top": 440,
+    "height": 138,
+    "pageWidth": 375,
+    "viewport": 390
+  },
+  "narrow": {
+    "visible": [
+      "Quarter 4\n10 Jan\n\n₹11,250"
+    ],
+    "index": 3,
+    "amount": "20,750",
+    "menu": false,
+    "width": 279,
+    "left": 33,
+    "top": 440,
+    "height": 161.25,
+    "pageWidth": 345,
+    "viewport": 360
+  }
+}

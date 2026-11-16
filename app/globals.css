@@ -703,3 +703,12 @@ textarea {
     @apply hidden;
   }
 }
+
+/* Ctrl+P on ordinary pages (reports, dues, payroll): the shell is a fixed-height, overflow-hidden frame,
+   which printed only one screen. Let it flow to its natural height. Pages with their own print CSS
+   (receipts, registers, certificates, report cards) still override this. */
+@media print {
+  html, body { height: auto !important; overflow: visible !important; }
+  .erp-shell, .erp-shell > div, .erp-shell main { display: block !important; height: auto !important; min-height: 0 !important; overflow: visible !important; }
+  .erp-shell .erp-content { padding: 0 !important; animation: none !important; }
+}

@@ -38,7 +38,7 @@ The frontend does not back up school data. Database backups, restore drills, mig
 
 ## Availability and design
 
-`components/layout/navConfig.ts` defines office navigation; `docs/mobile-ui.md` defines phone layouts. Use indigo primary actions, Jade positive states and written status labels. Unbuilt routes render ComingSoon rather than invented data. Their availability is listed in the review report; do not advertise those routes as completed workflows.
+`components/layout/navConfig.ts` defines office navigation; `docs/mobile-ui.md` defines phone layouts. Use indigo primary actions, Jade positive states and written status labels. Unbuilt routes render PlannedModule rather than invented data. Their availability is listed in the review report; do not advertise those routes as completed workflows.
 
 Review and remediation records: `docs/erp-review-2026-11-14/`.
 

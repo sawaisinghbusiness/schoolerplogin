@@ -9,6 +9,7 @@ import { toast } from "@/components/ui/Toaster";
 import { EnquiryFormDrawer, dayIso } from "@/components/enquiries/EnquiryFormDrawer";
 import { EnquiryDetailDrawer, STATUS_BADGE } from "@/components/enquiries/EnquiryDetailDrawer";
 import { AdmissionDrawer, AdmissionPrefill } from "@/components/students/AdmissionDrawer";
+import { LoadError } from "@/components/ui/LoadError";
 
 type View = "due" | "open" | "admitted" | "dropped";
 
@@ -38,6 +39,13 @@ export default function EnquiriesPage() {
   const [admitFrom, setAdmitFrom] = useState<Enquiry | null>(null);
   const [refreshing, setRefreshing] = useState(false);
 
+  // Used to match an enquiry to an admitted student; a failure shows, not an empty match list.
+  const [studentsError, setStudentsError] = useState<string | null>(null);
+  const loadStudents = () =>
+    studentService.fetchStudents().then((r) => {
+      setStudentsError(r.error);
+      setStudents(r.data);
+    });
   const load = async () => {
     setRefreshing(true);
     const res = await enquiryService.list();
@@ -47,7 +55,7 @@ export default function EnquiriesPage() {
   };
   useEffect(() => {
     load();
-    studentService.fetchStudents().then((r) => setStudents(r.data));
+    loadStudents();
   }, []);
 
   const replace = (e: Enquiry) => {
@@ -125,6 +133,7 @@ export default function EnquiriesPage() {
           New enquiry
         </button>
       </header>
+      {studentsError && <LoadError what="The student list" error={studentsError} onRetry={loadStudents} />}
 
       {setupError ? (
         <div className="card workspace-section p-8 text-center">

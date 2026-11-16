@@ -18,7 +18,7 @@ function cacheModule(t) {
   const js = ts.transpileModule(fs.readFileSync(file, 'utf8'), {compilerOptions: {module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2021}}).outputText;
   vm.runInNewContext(js, {
     module, exports: module.exports,
-    require: name => name === './erpMode' ? {isErpMode: () => false} : name === './demo' ? {DEMO: false} : require(name),
+    require: name => name === './erpMode' ? {isErpMode: () => false} : name === './demo' ? {DEMO: false} : name === '@/lib/editorDrafts' ? {clearEditorDrafts() {}} : name === '@/lib/resourceStatus' ? {setResourceFailure() {}} : require(name),
     localStorage: {getItem: key => saved.get(key) || null},
   });
   return module.exports;

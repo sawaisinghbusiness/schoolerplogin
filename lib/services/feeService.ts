@@ -1,5 +1,4 @@
-import { supabase, isSupabaseConfigured } from "@/lib/supabaseClient";
-import { api, usingRemoteBackend } from "@/lib/apiClient";
+import { api } from "@/lib/apiClient";
 import type { Student } from "@/data/mockData";
 import type { FeeConfig } from "@/lib/feeEngine";
 
@@ -46,8 +45,6 @@ export interface FeeTransaction {
   };
 }
 
-// In-memory transactions cache for fallback
-let localTransactions: FeeTransaction[] = [];
 
 /**
  * Convert numeric Indian currency to English words
@@ -129,6 +126,8 @@ export const feeService = {
    * late fine applies; the counter sends the fee part and the fine collected separately.
    */
   async collect(params: {
+    /** Same key on a retry = the server returns the first receipt, never a second payment. */
+    idempotencyKey?: string;
     studentId: string;
     amount: number;
     fine: number;
@@ -150,21 +149,18 @@ export const feeService = {
 
   /** Receipts for one student, newest first (backend only). */
   async fetchStudentTransactions(studentId: string, limit = 20): Promise<FeeTransaction[]> {
-    if (!usingRemoteBackend) return localTransactions.filter((t) => t.student_id === studentId).slice(0, limit);
     const res = await api.get<{ data: FeeTransaction[] }>(`/api/fees/transactions?limit=${limit}&studentId=${encodeURIComponent(studentId)}`);
     return res.ok && res.data ? res.data.data : [];
   },
 
   /** What was collected on a day (defaults to today, India time), split by mode. */
   async fetchDaySummary(date?: string): Promise<DaySummary | null> {
-    if (!usingRemoteBackend) return null;
     const res = await api.get<{ data: DaySummary }>(`/api/fees/summary${date ? `?date=${date}` : ""}`);
     return res.ok && res.data ? res.data.data : null;
   },
 
   /** Students with the largest pending balance. */
   async fetchTopDues(limit = 6): Promise<Student[]> {
-    if (!usingRemoteBackend) return [];
     const res = await api.get<{ data: Student[] }>(`/api/fees/top-dues?limit=${limit}`);
     return res.ok && res.data ? res.data.data : [];
   },
@@ -173,60 +169,7 @@ export const feeService = {
    * Fetch recent fee transactions (for audit & reprinting)
    */
   async fetchRecentTransactions(limit = 10): Promise<FeeTransaction[]> {
-    if (usingRemoteBackend) {
-      const res = await api.get<{ data: FeeTransaction[] }>(`/api/fees/transactions?limit=${limit}`);
-      return res.ok && res.data ? res.data.data : [];
-    }
-
-    if (isSupabaseConfigured) {
-      try {
-        const { data, error } = await supabase
-          .from("fee_transactions")
-          .select(`
-            *,
-            students (
-              name,
-              sr_no,
-              admission_no,
-              class,
-              section,
-              father_name,
-              mobile
-            )
-          `)
-          .order("payment_date", { ascending: false })
-          .limit(limit);
-
-        if (!error && data) {
-          return data.map((d: any) => ({
-            id: d.id,
-            receipt_no: d.receipt_no,
-            student_id: d.student_id,
-            amount_paid: Number(d.amount),
-            payment_mode: d.payment_mode,
-            transaction_id: d.transaction_ref,
-            fee_heads: { tuition_fee: Number(d.amount), exam_fee: 0, transport_fee: 0 },
-            collected_by: d.collected_by,
-            payment_date: d.payment_date,
-            remarks: d.installment_name,
-            student: d.students
-              ? {
-                  name: d.students.name,
-                  sr_no: d.students.sr_no,
-                  admission_no: d.students.admission_no,
-                  class_name: d.students.class,
-                  section: d.students.section,
-                  father_name: d.students.father_name,
-                  contact_phone: d.students.mobile,
-                }
-              : undefined,
-          }));
-        }
-      } catch (err) {
-        console.warn("fetchRecentTransactions error:", err);
-      }
-    }
-
-    return localTransactions.slice(0, limit);
+    const res = await api.get<{ data: FeeTransaction[] }>(`/api/fees/transactions?limit=${limit}`);
+    return res.ok && res.data ? res.data.data : [];
   },
 };

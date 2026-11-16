@@ -1,0 +1,133 @@
+{
+  "capturedAt": "2026-11-16T09:31:26.189Z",
+  "limits": "Synthetic read-only API data; proposed styles injected in DOM only; visible opaque/composited colour samples do not certify whole-app accessibility.",
+  "rows": [
+    {
+      "mode": "erpApp",
+      "route": "/",
+      "variant": "live",
+      "file": "implementation/screens/erpApp-home-live.png",
+      "url": "/",
+      "width": 390,
+      "scrollWidth": 375,
+      "text": "Good afternoon\nReview\nRO\nSMS Barmer Review School\n\n16 Nov\n\nSession 2026-27\n\nSearch a student by name or SR no.\nReport\nStudents\nFees\nAttendance\nEnquiries\nExams\nHomework\nTransport\nToday at school\nClass attendance\n3 of 6 classes not marked\n3\nAbsent today\nNo one so far\nFees collected today\n3 receipts\n₹9,500\nEnquiry follow-ups\nNone due\nBirthdays today\nNone today\nHome\nStudents\nReport\nAttendance\nProfile",
+      "named": {
+        "canvas": {
+          "text": "Good afternoonReviewROSMS Barmer Review School16 NovSession 2026-27Search a",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "rawBackground": "rgb(238, 241, 245)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "heading": {
+          "text": "Good afternoonReview",
+          "foreground": "#ffffff",
+          "background": "#242d3c",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "Good afternoon",
+          "foreground": "#c4cdda",
+          "background": "#242d3c",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "12.5px",
+          "weight": "500"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "16 Nov",
+          "foreground": "#394657",
+          "background": "#eceef0",
+          "size": 12,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Session 2026-27",
+          "foreground": "#394657",
+          "background": "#eceef0",
+          "size": 12,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "mode": "erpAppNarrow",
+      "route": "/",
+      "variant": "live",
+      "file": "implementation/screens/erpAppNarrow-home-live.png",
+      "url": "/",
+      "width": 360,
+      "scrollWidth": 345,
+      "text": "Good afternoon\nReview\nRO\nSMS Barmer Review School\n\n16 Nov\n\nSession 2026-27\n\nSearch a student by name or SR no.\nReport\nStudents\nFees\nAttendance\nEnquiries\nExams\nHomework\nTransport\nToday at school\nClass attendance\n3 of 6 classes not marked\n3\nAbsent today\nNo one so far\nFees collected today\n3 receipts\n₹9,500\nEnquiry follow-ups\nNone due\nBirthdays today\nNone today\nHome\nStudents\nReport\nAttendance\nProfile",
+      "named": {
+        "canvas": {
+          "text": "Good afternoonReviewROSMS Barmer Review School16 NovSession 2026-27Search a",
+          "foreground": "#202938",
+          "background": "#eef1f5",
+          "rawBackground": "rgb(238, 241, 245)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "heading": {
+          "text": "Good afternoonReview",
+          "foreground": "#ffffff",
+          "background": "#242d3c",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400"
+        },
+        "support": {
+          "text": "Good afternoon",
+          "foreground": "#c4cdda",
+          "background": "#242d3c",
+          "rawBackground": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 231, 235)",
+          "font": "\"Plus Jakarta Sans Variable\", \"Noto Sans Devanagari Variable\", system-ui, sans-serif",
+          "size": "12.5px",
+          "weight": "500"
+        }
+      },
+      "textSamples": [
+        {
+          "text": "16 Nov",
+          "foreground": "#394657",
+          "background": "#eceef0",
+          "size": 12,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        },
+        {
+          "text": "Session 2026-27",
+          "foreground": "#394657",
+          "background": "#eceef0",
+          "size": 12,
+          "weight": 400,
+          "disabled": false,
+          "opacity": "1"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "blocked": []
+}

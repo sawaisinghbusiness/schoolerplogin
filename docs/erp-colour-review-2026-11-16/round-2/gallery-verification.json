@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "caption": "Desktop · Dashboard · Ink + Oxide · Proposed",
+      "loaded": true,
+      "overflow": false
+    },
+    {
+      "caption": "Desktop · Dashboard · Aubergine + Porcelain · Proposed",
+      "loaded": true,
+      "overflow": false
+    },
+    {
+      "caption": "Desktop · Dashboard · Light Slate + Sapphire · Proposed",
+      "loaded": true,
+      "overflow": false
+    },
+    {
+      "caption": "ERP app · Payroll · Ink + Oxide · Proposed",
+      "loaded": true
+    },
+    {
+      "width": 390,
+      "overflow": false
+    }
+  ],
+  "runtimeErrors": []
+}

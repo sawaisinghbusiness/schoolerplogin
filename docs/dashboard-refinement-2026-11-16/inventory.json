@@ -1,0 +1,21 @@
+[
+  {
+    "route": "dashboard",
+    "file": "dashboard.png",
+    "url": "http://localhost:3000/dashboard",
+    "title": "SchoolDesk ERP",
+    "text": "SB\n\nSMS Barmer Review School\n\nBarmer\n\nDashboard\n\nOverview\n\nReport\n\nDaily work\n\nStudents\nFees\nAttendance\nMessages\nMeetings & PTM\nParent–teacher chats\nCalendar\nBirthdays\n\nAcademics\n\nExams\nTime Table\nHomework\nSyllabus\nCopy check\n\nSchool\n\nStaff\nTransport\nSettings\n\nComing soon\n\nLive classes\nPlanned\nCBC / Holistic progress card\nPlanned\nOnline tests\nPlanned\nLibrary\nPlanned\nHostel\nPlanned\nInventory & store\nPlanned\nVisitor log\nPlanned\nHealth records\nPlanned\nComplaint box\nPlanned\nAlumni\nPlanned\nBiometric attendance\nPlanned\nRO\n\nReview Operator\n\nAdministrator\n\nHome\nDashboard\nSearch pages…\nCtrl K\nSession 2026-27\nRO\nReview Operator\nAdministrator\nSchool overview\n\nMonday, 16 November · Fees, enrolment and work that needs attention\n\nNew admission\nCollect fee\n\nCollected this month\n\n₹1.9 L\n\n+8% vs last month\n\nCollected this session\n\n₹7.3 L\n\n73% of ₹10.1 L\n\nFees outstanding\n\n₹2.8 L\n\n20 students with dues\n\nStudents enrolled\n\n24\n\n12 boys · 12 girls\n\nFee collection\n\nSession balance and monthly collections\n\nOpen reports\n73%\ncollected\nCollected this session\n₹7.3 L\nOutstanding\n₹2.8 L\n\nMonthly collections · ₹ lakh\n\n0\n0.5\n1\n1.5\n2\nApr\nMay\nJun\nJul\nAug\nSep\nOct\nNov\n1.9\nToday at the office\n\nCollection and pending work\n\n₹9,500\n\n3 receipts\n\nCollected today\n\n3 sections need attendance\n\n3 of 6 sections marked\n\nOpen\n\n3 cheques received this week\n\n₹45,000 to review\n\nReview\n\nNo birthdays today\n\nFrom student records\n\nOutstanding fees by class\n\nClasses with the highest remaining balance\n\nView dues\n7th\n₹1.0 L\n6th\n₹88,000\n8th\n₹86,000\nPayment methods\n\nRecorded collections this session\n\n₹7.3 L\nCash\n₹2.6 L\n36%\nUPI\n₹4.4 L\n60%\nCheque\n₹30,000\n4%",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "headings": [
+      "School overview",
+      "Fee collection",
+      "Today at the office",
+      "Outstanding fees by class",
+      "Payment methods"
+    ],
+    "loading": false,
+    "errors": [],
+    "missingFixtures": []
+  }
+]

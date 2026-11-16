@@ -1,0 +1,32 @@
+{
+  "checks": [
+    "Trip confirmation track has glass",
+    "Dark at-stop track has glass",
+    "Arrow handles have no glass",
+    "Partial stop swipe does not open roster",
+    "Full stop swipe opens roster"
+  ],
+  "screens": [
+    {
+      "id": "trip-confirm-glass",
+      "width": 390,
+      "scroll": 390,
+      "text": "Barmer North Route · Afternoon · home\n\nToday's route\n\n2 stops · 3 children\n\n2.1 km\n\n~6 min\n\nSlide to confirm\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?"
+    },
+    {
+      "id": "stop-glass",
+      "width": 390,
+      "scroll": 390,
+      "text": "Vehicle number\n\nRJ 04 TEST\n\nReview School\n\n4:26 PM\n\nLong neighbourhood stop near community centre\n\n~4:32 PM\n\nDistance left\n2.1 km\nSpeed\n31 km/h\nOn board\n3\n\nLast location sent: 4:26 PM\n\nAfternoon · home · 0 min\nEnd trip\nNext stop · 1/2\nSecond stop\n1 getting off · about 3 min\n910 m\nR\n3 on board\n\n0%0 of 2 stops done\n\nSlide at the stop\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nReport delay\nMore"
+    },
+    {
+      "id": "stop-roster",
+      "width": 390,
+      "scroll": 390,
+      "text": "Vehicle number\n\nRJ 04 TEST\n\nReview School\n\n4:26 PM\n\nLong neighbourhood stop near community centre\n\n~4:32 PM\n\nDistance left\n2.1 km\nSpeed\n154 km/h\nOn board\n3\n\nLast location sent: 4:26 PM\n\nAfternoon · home · 0 min\nEnd trip\nNext stop · 1/2\nSecond stop\n1 getting off · about 3 min\n910 m\nR\n3 on board\n\n0%0 of 2 stops done\n\nSlide at the stop\nSlide the handle right to confirm. With a keyboard, press Enter.\nCan't swipe?\nReport delay\nMore\nSecond stop\n\nStop 1\n\n0/1\n\noff\n\nRT\nReview Child Three\nClass 5 - A\nGot off\nStop done (1 left) · Next"
+    }
+  ],
+  "errors": [],
+  "synthetic": true,
+  "limits": "API writes mocked; no real trip started."
+}

@@ -20,6 +20,12 @@ export function FeeReceiptModal({ isOpen, onClose, transaction, schoolName: give
   // The name from ERP Settings unless the page passes one.
   const { schoolProfile } = useSchoolProfile();
   const schoolName = given || schoolProfile.school_name || "School";
+  // Letterhead from Settings > School, not a fixed "Barmer (Rajasthan)" (2026-11-16).
+  const p = schoolProfile;
+  const place = [p.address, p.city, [p.state, p.pincode].filter(Boolean).join(" ")].filter(Boolean).join(", ");
+  const contact = [[p.contact1, p.contact2].filter(Boolean).join(", "), p.email].filter(Boolean).join(" · ");
+  const affiliation = p.affiliation_no ? `${p.board || "CBSE"} Affiliation No. ${p.affiliation_no}${p.school_code ? ` · School code ${p.school_code}` : ""}` : "";
+  const letterhead = { place, contact, affiliation };
   const printRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -117,14 +123,14 @@ export function FeeReceiptModal({ isOpen, onClose, transaction, schoolName: give
 
           <div className="receipt-body flex-1 overflow-y-auto bg-slate-100 p-4 sm:p-6">
             <div id="printable-fee-receipt" className="mx-auto max-w-xl">
-              <ReceiptSlip copy="Parent copy" schoolName={schoolName} t={transaction} />
+              <ReceiptSlip copy="Parent copy" schoolName={schoolName} letterhead={letterhead} t={transaction} />
               <div className="print-only hidden">
                 <p className="my-5 flex items-center gap-2 text-[10px] text-slate-400">
                   <span className="h-px flex-1 border-t border-dashed border-slate-400" />
                   cut here
                   <span className="h-px flex-1 border-t border-dashed border-slate-400" />
                 </p>
-                <ReceiptSlip copy="School copy" schoolName={schoolName} t={transaction} />
+                <ReceiptSlip copy="School copy" schoolName={schoolName} letterhead={letterhead} t={transaction} />
               </div>
             </div>
           </div>
@@ -148,7 +154,7 @@ export function FeeReceiptModal({ isOpen, onClose, transaction, schoolName: give
   );
 }
 
-function ReceiptSlip({ copy, schoolName, t }: { copy: string; schoolName: string; t: FeeTransaction }) {
+function ReceiptSlip({ copy, schoolName, letterhead, t }: { copy: string; schoolName: string; letterhead: { place: string; contact: string; affiliation: string }; t: FeeTransaction }) {
   const s = t.student;
   const rows: { key: string; label: string; amount: number }[] = headRows(t.fee_heads);
   if (!rows.length) rows.push({ key: "fee", label: "Fee payment", amount: Number(t.amount_paid) || 0 });
@@ -177,7 +183,9 @@ function ReceiptSlip({ copy, schoolName, t }: { copy: string; schoolName: string
       <header className="relative border-b border-slate-800 pb-3 text-center">
         <span className="absolute right-0 top-0 text-[11px] text-slate-600">{copy}</span>
         <p className="text-base font-bold uppercase tracking-wide">{schoolName}</p>
-        <p className="text-xs text-slate-600">Barmer (Rajasthan)</p>
+        {letterhead.place && <p className="text-xs text-slate-600">{letterhead.place}</p>}
+        {letterhead.contact && <p className="text-[11px] text-slate-600">{letterhead.contact}</p>}
+        {letterhead.affiliation && <p className="text-[11px] text-slate-600">{letterhead.affiliation}</p>}
         <p className="mt-2 inline-block border border-slate-800 px-3 py-0.5 text-xs font-semibold">FEE RECEIPT</p>
       </header>
 

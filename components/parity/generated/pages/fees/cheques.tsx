@@ -12,6 +12,7 @@ import { api, ApiError, useApi } from "@/lib/parity/api";
 import { useL, useLang } from "@/components/parity/generated/lib/i18n";
 import { fullDate, rupees } from "@/components/parity/generated/lib/format";
 import { toast } from "@/lib/parity/toast";
+import { useCurrentUser } from "@/components/layout/useCurrentUser";
 import { Empty, ErrorCard, LineTabs, ListSkeleton, Status } from "@/components/parity/generated/components/ui";
 
 interface Cheque {
@@ -37,6 +38,8 @@ export default function ErpChequesPage() {
   const [view, setView] = useState<"pending" | "all">("pending");
   const q = useApi<{ setupNeeded: boolean; items: Cheque[] }>(`/erp/fees/cheques?status=${view}`);
   const [busy, setBusy] = useState("");
+  // Only an admin may mark a cheque bounced (the server allows admin only, 2026-11-16).
+  const isAdmin = useCurrentUser().roleKey === "admin";
 
   async function act(c: Cheque, what: "clear" | "bounce") {
     let note = "";
@@ -94,13 +97,15 @@ export default function ErpChequesPage() {
                   <span className="tnum text-[15px] font-semibold">{rupees(c.amount)}</span>
                 </div>
                 {c.status === "pending" ? (
-                  <div className="mt-2 grid grid-cols-2 gap-2">
+                  <div className={clsx("mt-2 grid gap-2", isAdmin ? "grid-cols-2" : "grid-cols-1")}>
                     <button type="button" className="btn-line" disabled={!!busy} onClick={() => act(c, "clear")}>
                       {L({ hi: "क्लियर हुआ", en: "Cleared" })}
                     </button>
-                    <button type="button" className="btn-line !text-rose-700" disabled={!!busy} onClick={() => act(c, "bounce")}>
-                      {L({ hi: "बाउंस हुआ", en: "Bounced" })}
-                    </button>
+                    {isAdmin && (
+                      <button type="button" className="btn-line !text-rose-700" disabled={!!busy} onClick={() => act(c, "bounce")}>
+                        {L({ hi: "बाउंस हुआ", en: "Bounced" })}
+                      </button>
+                    )}
                   </div>
                 ) : (
                   <p className={clsx("mt-1 text-[12.5px]", c.status === "bounced" ? "text-rose-700" : "text-ink-500")}>

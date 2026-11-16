@@ -1,0 +1,8 @@
+const fs=require('fs'),t=require('./tokens.json');
+function lum(hex){const c=hex.replace('#','').match(/../g).map(x=>parseInt(x,16)/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4);return c[0]*.2126+c[1]*.7152+c[2]*.0722}
+function ratio(a,b){const l=[lum(a),lum(b)].sort((a,b)=>b-a);return(l[0]+.05)/(l[1]+.05)}
+const pairs=[['Body','text','surface',4.5],['Secondary','textSecondary','surface',4.5],['Hint','textHint','surface',4.5],['Primary label','onPrimary','primary',4.5],['Hover label','onPrimary','primaryHover',4.5],['Pressed label','onPrimary','primaryPressed',4.5],['Rail text','railText','rail',4.5],['Rail supporting text','railSecondary','rail',4.5],['Rail search text','railText','railHover',4.5],['Rail search hint','railSecondary','railHover',4.5],['Rail search boundary','railControlBorder','railHover',3],['Field boundary','controlBorder','surface',3],['Focus on paper','focus','surface',3],['Focus on canvas','focus','canvas',3],...['success','due','warning','running','info'].map(k=>[k+' text/dot',k,'surface',4.5])];
+const results=pairs.map(([name,fg,bg,min])=>({name,foreground:t[fg],background:t[bg],ratio:ratio(t[fg],t[bg]),minimum:min,pass:ratio(t[fg],t[bg])>=min}));
+const currentExamples=[['Current rail override on white logo/search','#DCE8E7','#FFFFFF'],['Current warm canvas / white paper','#F2EEE7','#FFFFFF']].map(([name,fg,bg])=>({name,foreground:fg,background:bg,ratio:ratio(fg,bg)}));
+fs.writeFileSync(__dirname+'/contrast.json',JSON.stringify({method:'WCAG relative luminance; opaque token pairs only, not whole-app conformance.',results,currentExamples},null,2));console.log(results.map(r=>`${r.pass?'PASS':'FAIL'} ${r.name}: ${r.ratio.toFixed(2)}`).join('\n'));if(results.some(r=>!r.pass))process.exitCode=1;
+module.exports={ratio};

@@ -1,0 +1,51 @@
+[
+  {
+    "id": "ink-oxide",
+    "name": "Ink + Oxide",
+    "canvas": "#EEF1F5",
+    "ink": "#202938",
+    "muted": "#536071",
+    "primary": "#A43F20",
+    "hover": "#87341B",
+    "pressed": "#6D2916",
+    "rail": "#242D3C",
+    "railHover": "#354155",
+    "railText": "#F1F4F8",
+    "railMuted": "#C4CDDA",
+    "selection": "#F2E7E2",
+    "focus": "#A43F20"
+  },
+  {
+    "id": "plum",
+    "name": "Aubergine + Porcelain",
+    "canvas": "#F0F1F5",
+    "ink": "#282535",
+    "muted": "#605A6B",
+    "primary": "#674477",
+    "hover": "#543660",
+    "pressed": "#422B4C",
+    "rail": "#302A3D",
+    "railHover": "#443A53",
+    "railText": "#F5F1F8",
+    "railMuted": "#D0C5D9",
+    "selection": "#EDE7F0",
+    "focus": "#674477"
+  },
+  {
+    "id": "sapphire",
+    "name": "Light Slate + Sapphire",
+    "canvas": "#EEF1F6",
+    "ink": "#222C3D",
+    "muted": "#536175",
+    "primary": "#2854A6",
+    "hover": "#214586",
+    "pressed": "#1B386D",
+    "rail": "#F8FAFC",
+    "railHover": "#E8EDF5",
+    "railText": "#24334A",
+    "railMuted": "#526277",
+    "selection": "#E6EDF9",
+    "focus": "#2854A6",
+    "light": true
+  }
+]

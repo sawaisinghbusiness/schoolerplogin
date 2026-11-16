@@ -151,15 +151,3 @@
 @media(max-width:639px) { .erp-shell .summary-three > * { padding: 12px 8px; } .erp-shell .summary-three .kpi-value { font-size: 22px; } }
 
 .erp-mobile-nav { font-family: "IBM Plex Sans Variable", "Nirmala UI", sans-serif; }
-
-/* Approved Petrol + Sand, ERP workspace only. */
-.erp-shell,.erp-dialog,.erp-shell .erp-parity{--erp-canvas:#F2EEE7;--erp-paper:#FFFEFA;--erp-line:#D8D5CD;--erp-ink:#263735;--erp-muted:#59635F;--primary:192 54% 19%;--ring:192 54% 19%;--action-primary:#163F49;--action-hover:#10323B;--action-pressed:#0C2830;--action-disabled:#D7DFDC;--action-disabled-ink:#43564C;}
-.erp-shell .erp-topbar,.erp-shell .card,.erp-shell .surface,.erp-dialog .card,.erp-shell .erp-mobile-nav,.erp-shell .bg-white,.erp-dialog .bg-white{background-color:var(--erp-paper)}
-.erp-shell .erp-sidebar{background:#163F49;color:#FFFEFA;border-color:#345963}
-.erp-shell .erp-sidebar :is(.text-slate-900,.text-slate-800,.text-slate-700,.text-slate-600,.text-slate-500,.text-slate-400){color:#DCE8E7}
-.erp-shell .office-nav-link,.erp-shell .office-nav-child{color:#DCE8E7}
-.erp-shell .office-nav-link:hover,.erp-shell .office-nav-child:hover{background:#254F59;color:#fff}
-.erp-shell .office-nav-link.is-active,.erp-shell .office-nav-child.is-active{background:#FFFEFA;color:#163F49}
-.erp-shell .office-nav-children,.erp-shell .office-sidebar-footer{border-color:#496A72}
-.erp-shell thead{background:#E6EEEC;color:#163F49}
-.erp-shell .erp-mobile-nav [aria-current=page]{color:#163F49}

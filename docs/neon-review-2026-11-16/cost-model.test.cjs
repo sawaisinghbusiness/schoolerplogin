@@ -1,0 +1,16 @@
+const assert=require('node:assert/strict'),{estimate}=require('./cost-model.js');
+const base={hours:24,days:30,cu:.25,computeRate:.106,databaseGB:0,databaseRate:.35,objectGB:0,objectRate:.023,historyGB:0,historyRate:.2,egressGB:0,includedEgressGB:500,egressRate:.1,other:0,existingBill:25,migrationCost:0};
+const near=(a,b)=>assert(Math.abs(a-b)<1e-9,`${a} != ${b}`);
+near(estimate(base).compute,19.08);
+near(estimate({...base,hours:8,days:26}).compute,5.512);
+near(estimate({...base,hours:14}).compute,11.13);
+near(estimate({...base,cu:1}).compute,76.32);
+near(estimate({...base,hours:0,databaseGB:2}).total,.70);
+near(estimate({...base,egressGB:501}).network,.1);
+near(estimate({...base,egressGB:499}).network,0);
+near(estimate({...base,hours:0,databaseGB:2,objectGB:10,historyGB:1,other:3}).total,4.13);
+assert.equal(estimate({...base,cu:2,migrationCost:300}).breakEvenMonths,null);
+near(estimate({...base,hours:0,migrationCost:100}).breakEvenMonths,4);
+assert.throws(()=>estimate({...base,cu:-1}));
+assert.throws(()=>estimate({...base,hours:25}));
+console.log('12 calculation checks passed. No live API or database connection.');

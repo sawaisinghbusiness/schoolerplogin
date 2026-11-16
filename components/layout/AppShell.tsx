@@ -40,6 +40,14 @@ export function AppShell({ children }: AppShellProps) {
   }, []);
   // The public website and the login page have their own full-page layout.
   const isAuthPage = isPublicPage(pathname || "/");
+  // The shell stays mounted across sign-in, so clear the "session expired" note once the login page is reached.
+  useEffect(() => {
+    if (isAuthPage) setExpired(false);
+  }, [isAuthPage]);
+  // The sign-in link keeps the whole current address (filters in ?query too), read when the note is clicked.
+  const signInAgain = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.currentTarget.href = `/login?from=${encodeURIComponent(window.location.pathname + window.location.search)}`;
+  };
 
   if (isAuthPage) {
     return (
@@ -53,12 +61,17 @@ export function AppShell({ children }: AppShellProps) {
   return (
     <SchoolProfileProvider>
       <div data-action-theme="evergreen" className="erp-shell flex h-[100dvh] w-screen overflow-hidden font-sans text-slate-900">
-        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+        {/* Ctrl+P prints the page only: the menu, top bar and tab bar drop out (globals.css @media print). */}
+        <div className="contents print:hidden">
+          <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+        </div>
 
         <div className="flex-1 flex flex-col min-w-0 h-full overflow-hidden">
-          <Navbar onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} isSidebarOpen={isSidebarOpen} />
+          <div className="contents print:hidden">
+            <Navbar onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} isSidebarOpen={isSidebarOpen} />
+          </div>
           <main className="relative flex-1 overflow-y-auto overflow-x-hidden min-h-0">
-            {expired && <div role="alert" className="mx-4 mt-4 rounded-lg border border-rose-200 bg-rose-50 p-3 text-sm text-rose-800">Your session has expired. Keep a copy of any unsaved changes, then <a href={`/login?from=${encodeURIComponent(pathname || "/dashboard")}`} className="font-semibold underline">sign in again</a>.</div>}
+            {expired && <div role="alert" className="mx-4 mt-4 rounded-lg border border-rose-200 bg-rose-50 p-3 text-sm text-rose-800">Your session has expired. Keep a copy of any unsaved changes, then <a href={`/login?from=${encodeURIComponent(pathname || "/dashboard")}`} onClick={signInAgain} className="font-semibold underline">sign in again</a>.</div>}
             {/* Phones: 16px gutter, and room at the bottom for the tab bar. */}
             <div key={pathname} data-nav={navDir} className="erp-content page-enter relative mx-auto w-full px-4 pb-[calc(5rem+env(safe-area-inset-bottom))] pt-5 sm:px-6 md:py-6 lg:px-7">
               {children}
@@ -66,7 +79,9 @@ export function AppShell({ children }: AppShellProps) {
           </main>
         </div>
       </div>
-      <MobileTabBar />
+      <div className="contents print:hidden">
+        <MobileTabBar />
+      </div>
       <Toaster />
     </SchoolProfileProvider>
   );

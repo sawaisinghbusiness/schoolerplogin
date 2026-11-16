@@ -32,8 +32,9 @@ export function useSchoolInfo(): SchoolInfo {
   return {
     name: p?.school_name || "School",
     short: p?.short_name || "",
-    affiliationNo: p?.affiliation_no || "1730512",
-    schoolCode: p?.school_code || "10492",
+    // No made-up numbers when the profile is missing (2026-11-16): print what is saved, or nothing.
+    affiliationNo: p?.affiliation_no || "",
+    schoolCode: p?.school_code || "",
     place: [p?.address, p?.city || "Barmer", p?.state || "Rajasthan"].filter(Boolean).join(", "),
     pincode: p?.pincode || "344001",
     phone: [p?.contact1, p?.contact2].filter(Boolean).join(", "),

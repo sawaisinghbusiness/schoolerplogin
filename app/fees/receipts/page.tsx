@@ -42,7 +42,7 @@ export default function ReceiptsPage() {
   const { session, error: sessionError } = useErpSession();
   const { schoolProfile } = useSchoolProfile();
   const user = useCurrentUser();
-  const isAdmin = user.role === "Administrator";
+  const isAdmin = user.roleKey === "admin"; // the role key, not the display label
   const [range, setRange] = useState<Range>("month");
   const [custom, setCustom] = useState<[string, string]>(rangeDates("month"));
   const [list, setList] = useState<ReceiptList | null>(null);

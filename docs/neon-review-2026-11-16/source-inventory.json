@@ -1,0 +1,3130 @@
+{
+  "capturedAt": "2026-11-16T07:41:48.794Z",
+  "scope": "Static source review only; no credentials, live databases or provider accounts accessed.",
+  "repositories": {
+    "backend": {
+      "root": "F:/folders of web/sms backend",
+      "head": "48d826f0517e71370041999de981e33635f21325",
+      "trackedChanges": [
+        "src/index.ts",
+        "src/routes/feeSetup.ts",
+        "src/routes/fees.ts",
+        "src/routes/students.ts",
+        "src/services/feeService.ts",
+        "src/services/feeSetupService.ts",
+        "src/services/parentService.ts",
+        "src/services/parentStudyService.ts",
+        "src/services/transportLiveService.ts"
+      ],
+      "remoteReviewed": {
+        "ref": "origin/main",
+        "sha": "7b35969dbcec235a29e23e9e9656101bf921ebe3",
+        "aheadBehind": "0\t3",
+        "changedPaths": [
+          "src/routes/parentStudy.ts",
+          "src/services/busService.ts",
+          "src/services/parentStudyService.ts",
+          "src/services/staffWorkService.ts",
+          "src/services/transportService.ts",
+          "supabase/migrations/20261116_homework_submissions.sql"
+        ],
+        "note": "Fetched and inspected only, not merged; includes homework_submissions beyond local scan counts."
+      }
+    },
+    "web": {
+      "root": "F:/folders of web/SMS BARMER",
+      "head": "c1b8e07d7e807fbc1ac090c07ef49d5dc6f21875",
+      "trackedChanges": []
+    },
+    "staff": {
+      "root": "C:/Users/ADMIN/Desktop/folder for staff app erp project",
+      "head": "1f972fa092f16e67311736df1b89c83120d9c1ea",
+      "trackedChanges": []
+    },
+    "parents": {
+      "root": "C:/Users/ADMIN/Desktop/folder for parents app erp project",
+      "head": "2805d9eb017620c646475bbc21320ceaf33633a6",
+      "trackedChanges": []
+    }
+  },
+  "backend": {
+    "files": [
+      {
+        "file": "src/lib/config.ts",
+        "fromSites": 0,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "9d91489dc83fb02e5650116793ac741d22406078d353f798094bdc42db86f861"
+      },
+      {
+        "file": "src/lib/receiptFilter.ts",
+        "fromSites": 1,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "79545435546c04c38ce217b4cfe428233899bd1d9a83814cc6e4a47323860a90"
+      },
+      {
+        "file": "src/lib/supabase.ts",
+        "fromSites": 0,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "33d9cb59920fe3a85c5da41b5594ce7c95f640e4da5f7fcb6e0b88bb44064fd6"
+      },
+      {
+        "file": "src/middleware/auth.ts",
+        "fromSites": 3,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "460ea22517e6303c5ac4915548ccabb1446892dbd55f89ce88b39b1b671a8133"
+      },
+      {
+        "file": "src/routes/health.ts",
+        "fromSites": 1,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "23347ce7b1cb4b9e6e014510bc18f3c89a8bbcc62c96f8ee8770148370b1ee69"
+      },
+      {
+        "file": "src/routes/messageTemplates.ts",
+        "fromSites": 4,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "6fd5906ec7c250c144782370aa623def46dd35501092200cd6909d4fbb04f46c"
+      },
+      {
+        "file": "src/routes/public.ts",
+        "fromSites": 2,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "4fd0eda7197725017568877c259732f6d4f5faa86eeeb0965f724d4a196832e7"
+      },
+      {
+        "file": "src/routes/whatsapp.ts",
+        "fromSites": 1,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "666090c72b3740315726e3eeb4ab84c3e8de7e8247faf846b15b123be47124e3"
+      },
+      {
+        "file": "src/services/attendanceRegisterService.ts",
+        "fromSites": 2,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "54cb9f8e8804c183260d2656e17c75bc1422bf0900ab18b09c145ce98673c1bd"
+      },
+      {
+        "file": "src/services/attendanceService.ts",
+        "fromSites": 11,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "500e49ef8e527e3c6b32ec7bc9aff49c9b5b0fd76084778f815b0d84fb067c5d"
+      },
+      {
+        "file": "src/services/auditService.ts",
+        "fromSites": 2,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "ec1a49438eaaa70d91817fca4bf27b669d45f4f0d5157ac3789c94485e233efa"
+      },
+      {
+        "file": "src/services/authService.ts",
+        "fromSites": 4,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "078b6bbdd5d71daa627f06d4583d6c04fd2bce9d27e3b23eb98664c80ed98728"
+      },
+      {
+        "file": "src/services/birthdayService.ts",
+        "fromSites": 0,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "87fa32cc049f53756d2b78230181901358863c150788a89d6d6cdab245ce55b2"
+      },
+      {
+        "file": "src/services/busService.ts",
+        "fromSites": 20,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "25f63f93363082d29812fb5c38066b549906983d6bede182e6dbfaff7bee9235"
+      },
+      {
+        "file": "src/services/calendarService.ts",
+        "fromSites": 4,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "0ed314c07e3ee11930d779abfe45fd3b4f1624b10cac20a0c5e846915b62ec96"
+      },
+      {
+        "file": "src/services/certificateService.ts",
+        "fromSites": 3,
+        "rpcSites": 1,
+        "storage": false,
+        "sha256": "728b5b55133ea6a44badaed5e1e8a081295de88d7a6ad964c0cf62ba7465415c"
+      },
+      {
+        "file": "src/services/chatService.ts",
+        "fromSites": 36,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "3fe7aa7cbbac8210a795beb20e0bf080d57cf7c729d800c33e7143dce7693eea"
+      },
+      {
+        "file": "src/services/chequeService.ts",
+        "fromSites": 5,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "9a4f4cfc3edec6f8f43ebf6b716b8bf684c3249dcdc2e4df6a64769573087531"
+      },
+      {
+        "file": "src/services/classService.ts",
+        "fromSites": 24,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "d1a09b4706d8a7783128ba490e844a89014cec831c4cbd4e288baf8687ee53db"
+      },
+      {
+        "file": "src/services/copyCheckService.ts",
+        "fromSites": 11,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "4487e1ebae50d1e7dfafadd924ed18d6cce2d5f8473c73d5675f10b85837ffa7"
+      },
+      {
+        "file": "src/services/dashboardService.ts",
+        "fromSites": 0,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "01fb0b0829fca1b0e1336abb86a6af870e8d12a4d7e3120fb78a8c9474fff3b6"
+      },
+      {
+        "file": "src/services/documentService.ts",
+        "fromSites": 3,
+        "rpcSites": 0,
+        "storage": true,
+        "sha256": "22d777dc72093f748032a353baa8ec518aa373168a3077702d2343632a36ea97"
+      },
+      {
+        "file": "src/services/duesService.ts",
+        "fromSites": 0,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "0945c62a3ff15bcbc178cf61d3bed47884a21574fbe0cdc509bb2e0386a05c6e"
+      },
+      {
+        "file": "src/services/enquiryService.ts",
+        "fromSites": 5,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "5773e5bdd01e68c14fdb2932c9cc52593f9e31ffe6e2f58c817785920cec79c1"
+      },
+      {
+        "file": "src/services/examService.ts",
+        "fromSites": 16,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "470570b6ba2b0a0c457fdad9132ee6bed09a7c2119a1946ca8d3a350dc304e39"
+      },
+      {
+        "file": "src/services/feeClaimService.ts",
+        "fromSites": 9,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "23507e0ccf44b42e64496ba573cd59e09c8a795f21e7008c7ffdecfad4192cc8"
+      },
+      {
+        "file": "src/services/feeService.ts",
+        "fromSites": 10,
+        "rpcSites": 4,
+        "storage": false,
+        "sha256": "023cae681de0bcee90e3584c702cf41fe308d8477f085fa460e618829446e4c5"
+      },
+      {
+        "file": "src/services/feeSetupService.ts",
+        "fromSites": 7,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "3db0ffe4d6319e80b86081eb661db1b57b77fbb76cc10f5e939528dbc2b3b661"
+      },
+      {
+        "file": "src/services/gatePassService.ts",
+        "fromSites": 2,
+        "rpcSites": 1,
+        "storage": false,
+        "sha256": "d3dd6d1cffda3540324a7a5e18116189de598df831e4c10cf435d98393d7c75e"
+      },
+      {
+        "file": "src/services/homeworkFileService.ts",
+        "fromSites": 1,
+        "rpcSites": 0,
+        "storage": true,
+        "sha256": "90fa231e892b15ee945a550217268eb776cbd549c1341afbae6911797418525d"
+      },
+      {
+        "file": "src/services/homeworkService.ts",
+        "fromSites": 8,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "d7e5ef1280714ccf68125a0458f9bb5f6140120e386c6f49d4eca19658d47eb5"
+      },
+      {
+        "file": "src/services/leaveRequestService.ts",
+        "fromSites": 5,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "e211f892286a93e22e305c0954a841ab38b334584ce369149f60ca9a1e267390"
+      },
+      {
+        "file": "src/services/meetingService.ts",
+        "fromSites": 8,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "141c617a8091e8aaefe34ad21f26fc63b94e254bf6ff05fbaf2dc7d8511e9233"
+      },
+      {
+        "file": "src/services/messageService.ts",
+        "fromSites": 12,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "632d5a3be3863e828983b7c6beb0e4c9c41c8f3e78bb84cad00efc47efc17ddc"
+      },
+      {
+        "file": "src/services/parentFeesService.ts",
+        "fromSites": 5,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "5faf23ed6beb309480c355ad6d2004857a30510fdd1084c5c3069c997cd76c6a"
+      },
+      {
+        "file": "src/services/parentMoreService.ts",
+        "fromSites": 9,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "b23f7bd68f8c999da88db3aca29dda93ec88fc8ade4e8203c70e0ac3b6400985"
+      },
+      {
+        "file": "src/services/parentService.ts",
+        "fromSites": 20,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "4104e6c5beea812deaea718493fadef671b6b1e29c432fa21eaa1f2aadbde679"
+      },
+      {
+        "file": "src/services/parentStudyService.ts",
+        "fromSites": 5,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "cde1906f8350d36b07742f148aea9d24ab57d955b4327c3ae815308d47b7fbb6"
+      },
+      {
+        "file": "src/services/payrollService.ts",
+        "fromSites": 16,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "107e643311e8fb46ec2a876590de998184c1b288597115137db1ffc3d72df9e2"
+      },
+      {
+        "file": "src/services/photoService.ts",
+        "fromSites": 5,
+        "rpcSites": 0,
+        "storage": true,
+        "sha256": "0bc950fbbf1f616bc48742cd6829c31a5ded4a8a40f299654eea8f648fd48c4d"
+      },
+      {
+        "file": "src/services/receiptService.ts",
+        "fromSites": 1,
+        "rpcSites": 1,
+        "storage": false,
+        "sha256": "f7c6e9fed9c1186004c23cb69d7208e8c20a1803fed6ce01795cadc3f36baae3"
+      },
+      {
+        "file": "src/services/remarkService.ts",
+        "fromSites": 3,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "02b64439cc8aabb4a8fa53406b7dc962cb947bf959b4d1c332c49c41509b4fb5"
+      },
+      {
+        "file": "src/services/reportService.ts",
+        "fromSites": 0,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "02492c0a33891b772d6ae4d1394fc87ce6839c3545afd153fc73be934934ae68"
+      },
+      {
+        "file": "src/services/schoolService.ts",
+        "fromSites": 7,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "cb74b2904dc0145f67eb26d815861b026c6932a2c0e25573937080778abe7286"
+      },
+      {
+        "file": "src/services/staffAppService.ts",
+        "fromSites": 8,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "ba1c94accc388af0ab57c170566670e8f902c5d9d9f9bc6c615c6255e49e3a4b"
+      },
+      {
+        "file": "src/services/staffAttendanceService.ts",
+        "fromSites": 16,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "80a2662644263c501c0285df3b853804650445480651e896acddf1f74d9afa0a"
+      },
+      {
+        "file": "src/services/staffService.ts",
+        "fromSites": 23,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "ec08400faf193488a3194552f8cccfb1392c3b2dc6bacc3d78ee28b0e6f5c2be"
+      },
+      {
+        "file": "src/services/staffWorkService.ts",
+        "fromSites": 27,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "8f1280649227c98c1a8bdfc19a59377f0070338b3bdc19e19852fae2f71c6df7"
+      },
+      {
+        "file": "src/services/studentImportService.ts",
+        "fromSites": 6,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "c8caed41eb099a0675542759a4330477ecbe86df488a6adad4fa71ad557129ca"
+      },
+      {
+        "file": "src/services/studentMoneyService.ts",
+        "fromSites": 3,
+        "rpcSites": 2,
+        "storage": false,
+        "sha256": "0500e636125484dd1b40f0142fb86d5564bad00995335966244a1192f9c55bdb"
+      },
+      {
+        "file": "src/services/studentProfileService.ts",
+        "fromSites": 5,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "2eabe0d063cc7ba3a9ffcb57142b51b589cf030e7cd9e2d828f0a1187f28d9e4"
+      },
+      {
+        "file": "src/services/studentService.ts",
+        "fromSites": 23,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "e8e86af3caa0e57611758c97b5ae6b688723c5053f51b23ad7ab743dd9b52976"
+      },
+      {
+        "file": "src/services/syllabusService.ts",
+        "fromSites": 15,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "67cbacb8db128ac616e4139a9ef9ca8b8cb5a2c813bd007733321a3f73a08bbd"
+      },
+      {
+        "file": "src/services/timetableService.ts",
+        "fromSites": 17,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "2a889692a02c21bd8792c5ec98d945f9ce6c83168758518c13ab4b210db05a8a"
+      },
+      {
+        "file": "src/services/transportLiveService.ts",
+        "fromSites": 2,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "99ea7f66dfaf8a5b2ac7afe734b638f764cbff7ec3e50c6fd7a9e45d1ce07ea5"
+      },
+      {
+        "file": "src/services/transportService.ts",
+        "fromSites": 17,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "9f103dee2887f281a74211ba099be2d706fae59548857c36215bccc41f9a3d76"
+      },
+      {
+        "file": "src/services/userService.ts",
+        "fromSites": 7,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "7cfc83270081d9ef7306b7222fc05fff854a680c5eabaea6eca86116b3faec5b"
+      },
+      {
+        "file": "src/services/whatsapp/authState.ts",
+        "fromSites": 0,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "d1d2807d9d50a5c7ad16de0b720e39535f9f1b98ec465fd30710fc926d075f0f"
+      },
+      {
+        "file": "src/services/whatsapp/notify.ts",
+        "fromSites": 1,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "9f2a04642324031b19b2c51af54403f04a752ef33f8262fb65f18925b15016a1"
+      },
+      {
+        "file": "src/services/whatsapp/whatsappService.ts",
+        "fromSites": 12,
+        "rpcSites": 0,
+        "storage": false,
+        "sha256": "48de130323e6330dd338189fcede3e53359b618bfbbfbe393794ac9114ae34a6"
+      }
+    ],
+    "tables": {
+      "fee_transactions": [
+        {
+          "file": "src/lib/receiptFilter.ts",
+          "line": 14
+        },
+        {
+          "file": "src/services/chequeService.ts",
+          "line": 18
+        },
+        {
+          "file": "src/services/chequeService.ts",
+          "line": 27
+        },
+        {
+          "file": "src/services/chequeService.ts",
+          "line": 60
+        },
+        {
+          "file": "src/services/chequeService.ts",
+          "line": 73
+        },
+        {
+          "file": "src/services/chequeService.ts",
+          "line": 77
+        },
+        {
+          "file": "src/services/feeClaimService.ts",
+          "line": 104
+        },
+        {
+          "file": "src/services/feeService.ts",
+          "line": 217
+        },
+        {
+          "file": "src/services/feeService.ts",
+          "line": 234
+        },
+        {
+          "file": "src/services/feeService.ts",
+          "line": 246
+        },
+        {
+          "file": "src/services/feeService.ts",
+          "line": 266
+        },
+        {
+          "file": "src/services/parentFeesService.ts",
+          "line": 28
+        },
+        {
+          "file": "src/services/parentFeesService.ts",
+          "line": 119
+        },
+        {
+          "file": "src/services/receiptService.ts",
+          "line": 45
+        }
+      ],
+      "parent_accounts": [
+        {
+          "file": "src/middleware/auth.ts",
+          "line": 33
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 162
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 200
+        }
+      ],
+      "staff": [
+        {
+          "file": "src/middleware/auth.ts",
+          "line": 46
+        },
+        {
+          "file": "src/services/attendanceService.ts",
+          "line": 70
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 112
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 269
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 436
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 456
+        },
+        {
+          "file": "src/services/homeworkService.ts",
+          "line": 37
+        },
+        {
+          "file": "src/services/parentStudyService.ts",
+          "line": 111
+        },
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 43
+        },
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 126
+        },
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 207
+        },
+        {
+          "file": "src/services/photoService.ts",
+          "line": 66
+        },
+        {
+          "file": "src/services/photoService.ts",
+          "line": 78
+        },
+        {
+          "file": "src/services/staffAppService.ts",
+          "line": 81
+        },
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 64
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 108
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 132
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 150
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 164
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 166
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 168
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 177
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 179
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 274
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 286
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 317
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 342
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 354
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 67
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 128
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 147
+        }
+      ],
+      "users": [
+        {
+          "file": "src/middleware/auth.ts",
+          "line": 57
+        },
+        {
+          "file": "src/services/authService.ts",
+          "line": 59
+        },
+        {
+          "file": "src/services/authService.ts",
+          "line": 74
+        },
+        {
+          "file": "src/services/authService.ts",
+          "line": 94
+        },
+        {
+          "file": "src/services/authService.ts",
+          "line": 97
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 116
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 278
+        },
+        {
+          "file": "src/services/userService.ts",
+          "line": 60
+        },
+        {
+          "file": "src/services/userService.ts",
+          "line": 69
+        },
+        {
+          "file": "src/services/userService.ts",
+          "line": 75
+        },
+        {
+          "file": "src/services/userService.ts",
+          "line": 90
+        },
+        {
+          "file": "src/services/userService.ts",
+          "line": 99
+        },
+        {
+          "file": "src/services/userService.ts",
+          "line": 118
+        },
+        {
+          "file": "src/services/userService.ts",
+          "line": 127
+        }
+      ],
+      "students": [
+        {
+          "file": "src/routes/health.ts",
+          "line": 32
+        },
+        {
+          "file": "src/routes/public.ts",
+          "line": 28
+        },
+        {
+          "file": "src/routes/whatsapp.ts",
+          "line": 131
+        },
+        {
+          "file": "src/services/attendanceRegisterService.ts",
+          "line": 208
+        },
+        {
+          "file": "src/services/attendanceService.ts",
+          "line": 134
+        },
+        {
+          "file": "src/services/attendanceService.ts",
+          "line": 152
+        },
+        {
+          "file": "src/services/attendanceService.ts",
+          "line": 203
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 175
+        },
+        {
+          "file": "src/services/certificateService.ts",
+          "line": 62
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 164
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 99
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 108
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 135
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 144
+        },
+        {
+          "file": "src/services/copyCheckService.ts",
+          "line": 25
+        },
+        {
+          "file": "src/services/documentService.ts",
+          "line": 33
+        },
+        {
+          "file": "src/services/documentService.ts",
+          "line": 72
+        },
+        {
+          "file": "src/services/documentService.ts",
+          "line": 91
+        },
+        {
+          "file": "src/services/examService.ts",
+          "line": 115
+        },
+        {
+          "file": "src/services/examService.ts",
+          "line": 203
+        },
+        {
+          "file": "src/services/feeService.ts",
+          "line": 133
+        },
+        {
+          "file": "src/services/meetingService.ts",
+          "line": 161
+        },
+        {
+          "file": "src/services/messageService.ts",
+          "line": 45
+        },
+        {
+          "file": "src/services/parentMoreService.ts",
+          "line": 253
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 89
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 124
+        },
+        {
+          "file": "src/services/photoService.ts",
+          "line": 87
+        },
+        {
+          "file": "src/services/photoService.ts",
+          "line": 100
+        },
+        {
+          "file": "src/services/photoService.ts",
+          "line": 110
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 91
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 99
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 111
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 417
+        },
+        {
+          "file": "src/services/studentImportService.ts",
+          "line": 88
+        },
+        {
+          "file": "src/services/studentImportService.ts",
+          "line": 223
+        },
+        {
+          "file": "src/services/studentImportService.ts",
+          "line": 257
+        },
+        {
+          "file": "src/services/studentImportService.ts",
+          "line": 264
+        },
+        {
+          "file": "src/services/studentProfileService.ts",
+          "line": 133
+        },
+        {
+          "file": "src/services/studentProfileService.ts",
+          "line": 138
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 259
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 262
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 266
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 268
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 287
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 316
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 326
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 341
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 346
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 350
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 364
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 369
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 391
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 401
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 428
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 433
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 437
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 442
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 463
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 474
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 41
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 127
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 132
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 134
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 142
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 177
+        },
+        {
+          "file": "src/services/whatsapp/notify.ts",
+          "line": 47
+        }
+      ],
+      "message_templates": [
+        {
+          "file": "src/routes/messageTemplates.ts",
+          "line": 38
+        },
+        {
+          "file": "src/routes/messageTemplates.ts",
+          "line": 50
+        },
+        {
+          "file": "src/routes/messageTemplates.ts",
+          "line": 63
+        },
+        {
+          "file": "src/routes/messageTemplates.ts",
+          "line": 76
+        }
+      ],
+      "calendar_events": [
+        {
+          "file": "src/routes/public.ts",
+          "line": 46
+        },
+        {
+          "file": "src/services/attendanceRegisterService.ts",
+          "line": 157
+        },
+        {
+          "file": "src/services/attendanceService.ts",
+          "line": 38
+        },
+        {
+          "file": "src/services/calendarService.ts",
+          "line": 46
+        },
+        {
+          "file": "src/services/calendarService.ts",
+          "line": 53
+        },
+        {
+          "file": "src/services/calendarService.ts",
+          "line": 60
+        },
+        {
+          "file": "src/services/calendarService.ts",
+          "line": 67
+        },
+        {
+          "file": "src/services/parentMoreService.ts",
+          "line": 99
+        },
+        {
+          "file": "src/services/parentMoreService.ts",
+          "line": 127
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 304
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 356
+        },
+        {
+          "file": "src/services/schoolService.ts",
+          "line": 131
+        },
+        {
+          "file": "src/services/schoolService.ts",
+          "line": 143
+        },
+        {
+          "file": "src/services/schoolService.ts",
+          "line": 152
+        },
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 100
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 131
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 160
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 225
+        }
+      ],
+      "attendance_student": [
+        {
+          "file": "src/services/attendanceService.ts",
+          "line": 31
+        },
+        {
+          "file": "src/services/attendanceService.ts",
+          "line": 161
+        },
+        {
+          "file": "src/services/attendanceService.ts",
+          "line": 227
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 193
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 172
+        },
+        {
+          "file": "src/services/examService.ts",
+          "line": 318
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 303
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 308
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 355
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 357
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 123
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 412
+        }
+      ],
+      "teacher_subject_assignments": [
+        {
+          "file": "src/services/attendanceService.ts",
+          "line": 67
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 108
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 322
+        },
+        {
+          "file": "src/services/homeworkService.ts",
+          "line": 39
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 117
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 276
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 315
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 319
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 322
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 329
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 353
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 60
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 68
+        }
+      ],
+      "staff_reminders": [
+        {
+          "file": "src/services/attendanceService.ts",
+          "line": 71
+        },
+        {
+          "file": "src/services/attendanceService.ts",
+          "line": 78
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 205
+        }
+      ],
+      "audit_log": [
+        {
+          "file": "src/services/auditService.ts",
+          "line": 22
+        },
+        {
+          "file": "src/services/auditService.ts",
+          "line": 46
+        }
+      ],
+      "transport_routes": [
+        {
+          "file": "src/services/busService.ts",
+          "line": 128
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 138
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 166
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 305
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 389
+        },
+        {
+          "file": "src/services/parentMoreService.ts",
+          "line": 238
+        },
+        {
+          "file": "src/services/staffAppService.ts",
+          "line": 74
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 81
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 88
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 107
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 108
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 117
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 124
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 140
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 144
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 153
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 158
+        },
+        {
+          "file": "src/services/transportService.ts",
+          "line": 172
+        }
+      ],
+      "bus_settings": [
+        {
+          "file": "src/services/busService.ts",
+          "line": 143
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 315
+        }
+      ],
+      "bus_trips": [
+        {
+          "file": "src/services/busService.ts",
+          "line": 150
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 155
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 247
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 264
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 278
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 290
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 328
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 344
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 356
+        },
+        {
+          "file": "src/services/busService.ts",
+          "line": 357
+        },
+        {
+          "file": "src/services/transportLiveService.ts",
+          "line": 36
+        },
+        {
+          "file": "src/services/transportLiveService.ts",
+          "line": 38
+        }
+      ],
+      "student_leave_requests": [
+        {
+          "file": "src/services/busService.ts",
+          "line": 192
+        },
+        {
+          "file": "src/services/leaveRequestService.ts",
+          "line": 33
+        },
+        {
+          "file": "src/services/leaveRequestService.ts",
+          "line": 34
+        },
+        {
+          "file": "src/services/leaveRequestService.ts",
+          "line": 42
+        },
+        {
+          "file": "src/services/leaveRequestService.ts",
+          "line": 53
+        },
+        {
+          "file": "src/services/leaveRequestService.ts",
+          "line": 61
+        },
+        {
+          "file": "src/services/parentMoreService.ts",
+          "line": 167
+        },
+        {
+          "file": "src/services/parentMoreService.ts",
+          "line": 194
+        },
+        {
+          "file": "src/services/parentMoreService.ts",
+          "line": 206
+        },
+        {
+          "file": "src/services/parentMoreService.ts",
+          "line": 218
+        },
+        {
+          "file": "src/services/parentMoreService.ts",
+          "line": 224
+        }
+      ],
+      "certificates": [
+        {
+          "file": "src/services/certificateService.ts",
+          "line": 48
+        },
+        {
+          "file": "src/services/certificateService.ts",
+          "line": 69
+        }
+      ],
+      "teacher_messages": [
+        {
+          "file": "src/services/chatService.ts",
+          "line": 82
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 97
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 247
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 260
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 293
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 301
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 304
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 369
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 389
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 391
+        }
+      ],
+      "teacher_chats": [
+        {
+          "file": "src/services/chatService.ts",
+          "line": 131
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 141
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 155
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 185
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 203
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 226
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 242
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 263
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 299
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 315
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 420
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 430
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 453
+        }
+      ],
+      "meetings": [
+        {
+          "file": "src/services/chatService.ts",
+          "line": 272
+        },
+        {
+          "file": "src/services/chatService.ts",
+          "line": 295
+        },
+        {
+          "file": "src/services/meetingService.ts",
+          "line": 69
+        },
+        {
+          "file": "src/services/meetingService.ts",
+          "line": 154
+        },
+        {
+          "file": "src/services/meetingService.ts",
+          "line": 208
+        },
+        {
+          "file": "src/services/meetingService.ts",
+          "line": 215
+        }
+      ],
+      "meeting_replies": [
+        {
+          "file": "src/services/chatService.ts",
+          "line": 291
+        },
+        {
+          "file": "src/services/meetingService.ts",
+          "line": 79
+        },
+        {
+          "file": "src/services/meetingService.ts",
+          "line": 128
+        },
+        {
+          "file": "src/services/meetingService.ts",
+          "line": 143
+        }
+      ],
+      "timetable_periods": [
+        {
+          "file": "src/services/chatService.ts",
+          "line": 404
+        },
+        {
+          "file": "src/services/parentStudyService.ts",
+          "line": 99
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 39
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 44
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 62
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 205
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 211
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 211
+        }
+      ],
+      "timetable_entries": [
+        {
+          "file": "src/services/chatService.ts",
+          "line": 405
+        },
+        {
+          "file": "src/services/parentStudyService.ts",
+          "line": 100
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 94
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 95
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 113
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 149
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 156
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 173
+        },
+        {
+          "file": "src/services/timetableService.ts",
+          "line": 198
+        }
+      ],
+      "sections": [
+        {
+          "file": "src/services/classService.ts",
+          "line": 43
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 45
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 126
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 131
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 133
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 141
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 150
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 156
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 164
+        }
+      ],
+      "classes": [
+        {
+          "file": "src/services/classService.ts",
+          "line": 52
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 68
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 70
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 72
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 80
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 90
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 94
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 96
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 106
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 111
+        },
+        {
+          "file": "src/services/classService.ts",
+          "line": 172
+        }
+      ],
+      "notebook_checks": [
+        {
+          "file": "src/services/copyCheckService.ts",
+          "line": 40
+        },
+        {
+          "file": "src/services/copyCheckService.ts",
+          "line": 53
+        },
+        {
+          "file": "src/services/copyCheckService.ts",
+          "line": 102
+        },
+        {
+          "file": "src/services/copyCheckService.ts",
+          "line": 109
+        },
+        {
+          "file": "src/services/copyCheckService.ts",
+          "line": 120
+        },
+        {
+          "file": "src/services/copyCheckService.ts",
+          "line": 126
+        }
+      ],
+      "notebook_check_marks": [
+        {
+          "file": "src/services/copyCheckService.ts",
+          "line": 58
+        },
+        {
+          "file": "src/services/copyCheckService.ts",
+          "line": 106
+        },
+        {
+          "file": "src/services/copyCheckService.ts",
+          "line": 114
+        },
+        {
+          "file": "src/services/copyCheckService.ts",
+          "line": 143
+        }
+      ],
+      "enquiries": [
+        {
+          "file": "src/services/enquiryService.ts",
+          "line": 48
+        },
+        {
+          "file": "src/services/enquiryService.ts",
+          "line": 57
+        },
+        {
+          "file": "src/services/enquiryService.ts",
+          "line": 68
+        },
+        {
+          "file": "src/services/enquiryService.ts",
+          "line": 81
+        },
+        {
+          "file": "src/services/enquiryService.ts",
+          "line": 87
+        }
+      ],
+      "exams": [
+        {
+          "file": "src/services/examService.ts",
+          "line": 63
+        },
+        {
+          "file": "src/services/examService.ts",
+          "line": 139
+        },
+        {
+          "file": "src/services/examService.ts",
+          "line": 172
+        },
+        {
+          "file": "src/services/examService.ts",
+          "line": 172
+        },
+        {
+          "file": "src/services/examService.ts",
+          "line": 177
+        },
+        {
+          "file": "src/services/examService.ts",
+          "line": 187
+        },
+        {
+          "file": "src/services/examService.ts",
+          "line": 194
+        }
+      ],
+      "exam_marks": [
+        {
+          "file": "src/services/examService.ts",
+          "line": 168
+        },
+        {
+          "file": "src/services/examService.ts",
+          "line": 204
+        },
+        {
+          "file": "src/services/examService.ts",
+          "line": 234
+        },
+        {
+          "file": "src/services/examService.ts",
+          "line": 296
+        },
+        {
+          "file": "src/services/examService.ts",
+          "line": 300
+        },
+        {
+          "file": "src/services/examService.ts",
+          "line": 314
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 413
+        }
+      ],
+      "fee_payment_claims": [
+        {
+          "file": "src/services/feeClaimService.ts",
+          "line": 61
+        },
+        {
+          "file": "src/services/feeClaimService.ts",
+          "line": 98
+        },
+        {
+          "file": "src/services/feeClaimService.ts",
+          "line": 110
+        },
+        {
+          "file": "src/services/feeClaimService.ts",
+          "line": 130
+        },
+        {
+          "file": "src/services/feeClaimService.ts",
+          "line": 133
+        },
+        {
+          "file": "src/services/feeClaimService.ts",
+          "line": 142
+        },
+        {
+          "file": "src/services/parentFeesService.ts",
+          "line": 35
+        },
+        {
+          "file": "src/services/parentFeesService.ts",
+          "line": 111
+        },
+        {
+          "file": "src/services/parentFeesService.ts",
+          "line": 123
+        }
+      ],
+      "parent_app_settings": [
+        {
+          "file": "src/services/feeClaimService.ts",
+          "line": 151
+        },
+        {
+          "file": "src/services/feeClaimService.ts",
+          "line": 181
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 138
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 282
+        }
+      ],
+      "fee_ledger": [
+        {
+          "file": "src/services/feeService.ts",
+          "line": 126
+        },
+        {
+          "file": "src/services/feeService.ts",
+          "line": 138
+        },
+        {
+          "file": "src/services/feeService.ts",
+          "line": 143
+        },
+        {
+          "file": "src/services/feeService.ts",
+          "line": 238
+        },
+        {
+          "file": "src/services/feeService.ts",
+          "line": 282
+        },
+        {
+          "file": "src/services/feeSetupService.ts",
+          "line": 125
+        },
+        {
+          "file": "src/services/feeSetupService.ts",
+          "line": 129
+        },
+        {
+          "file": "src/services/feeSetupService.ts",
+          "line": 225
+        },
+        {
+          "file": "src/services/feeSetupService.ts",
+          "line": 255
+        },
+        {
+          "file": "src/services/feeSetupService.ts",
+          "line": 270
+        },
+        {
+          "file": "src/services/studentImportService.ts",
+          "line": 250
+        },
+        {
+          "file": "src/services/studentImportService.ts",
+          "line": 254
+        },
+        {
+          "file": "src/services/studentProfileService.ts",
+          "line": 95
+        },
+        {
+          "file": "src/services/studentProfileService.ts",
+          "line": 147
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 357
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 361
+        },
+        {
+          "file": "src/services/studentService.ts",
+          "line": 413
+        }
+      ],
+      "fee_structures": [
+        {
+          "file": "src/services/feeSetupService.ts",
+          "line": 142
+        },
+        {
+          "file": "src/services/feeSetupService.ts",
+          "line": 163
+        }
+      ],
+      "gate_passes": [
+        {
+          "file": "src/services/gatePassService.ts",
+          "line": 42
+        },
+        {
+          "file": "src/services/gatePassService.ts",
+          "line": 60
+        }
+      ],
+      "homework": [
+        {
+          "file": "src/services/homeworkFileService.ts",
+          "line": 40
+        },
+        {
+          "file": "src/services/homeworkService.ts",
+          "line": 76
+        },
+        {
+          "file": "src/services/homeworkService.ts",
+          "line": 85
+        },
+        {
+          "file": "src/services/homeworkService.ts",
+          "line": 98
+        },
+        {
+          "file": "src/services/homeworkService.ts",
+          "line": 111
+        },
+        {
+          "file": "src/services/homeworkService.ts",
+          "line": 118
+        },
+        {
+          "file": "src/services/homeworkService.ts",
+          "line": 126
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 407
+        },
+        {
+          "file": "src/services/parentStudyService.ts",
+          "line": 63
+        },
+        {
+          "file": "src/services/parentStudyService.ts",
+          "line": 76
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 480
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 481
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 530
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 539
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 681
+        }
+      ],
+      "messages": [
+        {
+          "file": "src/services/messageService.ts",
+          "line": 169
+        },
+        {
+          "file": "src/services/messageService.ts",
+          "line": 213
+        },
+        {
+          "file": "src/services/messageService.ts",
+          "line": 222
+        },
+        {
+          "file": "src/services/messageService.ts",
+          "line": 229
+        },
+        {
+          "file": "src/services/messageService.ts",
+          "line": 260
+        },
+        {
+          "file": "src/services/messageService.ts",
+          "line": 265
+        },
+        {
+          "file": "src/services/messageService.ts",
+          "line": 274
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 159
+        }
+      ],
+      "message_recipients": [
+        {
+          "file": "src/services/messageService.ts",
+          "line": 211
+        },
+        {
+          "file": "src/services/messageService.ts",
+          "line": 235
+        },
+        {
+          "file": "src/services/messageService.ts",
+          "line": 251
+        },
+        {
+          "file": "src/services/messageService.ts",
+          "line": 259
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 423
+        }
+      ],
+      "parent_otps": [
+        {
+          "file": "src/services/parentService.ts",
+          "line": 206
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 208
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 224
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 252
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 265
+        },
+        {
+          "file": "src/services/parentService.ts",
+          "line": 268
+        }
+      ],
+      "attendance_staff": [
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 53
+        },
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 65
+        },
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 258
+        },
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 265
+        },
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 288
+        },
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 377
+        },
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 392
+        },
+        {
+          "file": "src/services/staffService.ts",
+          "line": 350
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 185
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 224
+        }
+      ],
+      "payslips": [
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 94
+        },
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 100
+        },
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 168
+        },
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 194
+        },
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 203
+        },
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 221
+        },
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 233
+        },
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 245
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 244
+        }
+      ],
+      "salary_structures": [
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 99
+        },
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 152
+        },
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 167
+        },
+        {
+          "file": "src/services/payrollService.ts",
+          "line": 209
+        }
+      ],
+      "student_remarks": [
+        {
+          "file": "src/services/remarkService.ts",
+          "line": 22
+        },
+        {
+          "file": "src/services/remarkService.ts",
+          "line": 41
+        },
+        {
+          "file": "src/services/remarkService.ts",
+          "line": 49
+        }
+      ],
+      "institution_settings": [
+        {
+          "file": "src/services/schoolService.ts",
+          "line": 76
+        },
+        {
+          "file": "src/services/schoolService.ts",
+          "line": 87
+        },
+        {
+          "file": "src/services/schoolService.ts",
+          "line": 108
+        },
+        {
+          "file": "src/services/schoolService.ts",
+          "line": 109
+        }
+      ],
+      "staff_otps": [
+        {
+          "file": "src/services/staffAppService.ts",
+          "line": 124
+        },
+        {
+          "file": "src/services/staffAppService.ts",
+          "line": 127
+        },
+        {
+          "file": "src/services/staffAppService.ts",
+          "line": 143
+        },
+        {
+          "file": "src/services/staffAppService.ts",
+          "line": 167
+        },
+        {
+          "file": "src/services/staffAppService.ts",
+          "line": 178
+        },
+        {
+          "file": "src/services/staffAppService.ts",
+          "line": 181
+        }
+      ],
+      "leave_applications": [
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 66
+        },
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 238
+        },
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 244
+        },
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 289
+        },
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 407
+        },
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 448
+        },
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 463
+        },
+        {
+          "file": "src/services/staffAttendanceService.ts",
+          "line": 469
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 287
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 335
+        }
+      ],
+      "homework_checks": [
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 551
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 569
+        }
+      ],
+      "teacher_notes": [
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 579
+        },
+        {
+          "file": "src/services/staffWorkService.ts",
+          "line": 595
+        }
+      ],
+      "wallet_entries": [
+        {
+          "file": "src/services/studentMoneyService.ts",
+          "line": 56
+        }
+      ],
+      "fee_refunds": [
+        {
+          "file": "src/services/studentMoneyService.ts",
+          "line": 119
+        },
+        {
+          "file": "src/services/studentMoneyService.ts",
+          "line": 159
+        },
+        {
+          "file": "src/services/studentProfileService.ts",
+          "line": 105
+        }
+      ],
+      "syllabus_chapters": [
+        {
+          "file": "src/services/syllabusService.ts",
+          "line": 35
+        },
+        {
+          "file": "src/services/syllabusService.ts",
+          "line": 71
+        },
+        {
+          "file": "src/services/syllabusService.ts",
+          "line": 92
+        },
+        {
+          "file": "src/services/syllabusService.ts",
+          "line": 96
+        },
+        {
+          "file": "src/services/syllabusService.ts",
+          "line": 105
+        },
+        {
+          "file": "src/services/syllabusService.ts",
+          "line": 111
+        },
+        {
+          "file": "src/services/syllabusService.ts",
+          "line": 118
+        },
+        {
+          "file": "src/services/syllabusService.ts",
+          "line": 133
+        },
+        {
+          "file": "src/services/syllabusService.ts",
+          "line": 195
+        },
+        {
+          "file": "src/services/syllabusService.ts",
+          "line": 199
+        },
+        {
+          "file": "src/services/syllabusService.ts",
+          "line": 207
+        }
+      ],
+      "syllabus_progress": [
+        {
+          "file": "src/services/syllabusService.ts",
+          "line": 38
+        },
+        {
+          "file": "src/services/syllabusService.ts",
+          "line": 75
+        },
+        {
+          "file": "src/services/syllabusService.ts",
+          "line": 213
+        },
+        {
+          "file": "src/services/syllabusService.ts",
+          "line": 217
+        }
+      ],
+      "whatsapp_outbox": [
+        {
+          "file": "src/services/whatsapp/whatsappService.ts",
+          "line": 245
+        },
+        {
+          "file": "src/services/whatsapp/whatsappService.ts",
+          "line": 255
+        },
+        {
+          "file": "src/services/whatsapp/whatsappService.ts",
+          "line": 258
+        },
+        {
+          "file": "src/services/whatsapp/whatsappService.ts",
+          "line": 325
+        },
+        {
+          "file": "src/services/whatsapp/whatsappService.ts",
+          "line": 327
+        },
+        {
+          "file": "src/services/whatsapp/whatsappService.ts",
+          "line": 379
+        },
+        {
+          "file": "src/services/whatsapp/whatsappService.ts",
+          "line": 389
+        },
+        {
+          "file": "src/services/whatsapp/whatsappService.ts",
+          "line": 394
+        },
+        {
+          "file": "src/services/whatsapp/whatsappService.ts",
+          "line": 407
+        },
+        {
+          "file": "src/services/whatsapp/whatsappService.ts",
+          "line": 422
+        }
+      ],
+      "whatsapp_settings": [
+        {
+          "file": "src/services/whatsapp/whatsappService.ts",
+          "line": 349
+        },
+        {
+          "file": "src/services/whatsapp/whatsappService.ts",
+          "line": 357
+        }
+      ]
+    },
+    "rpcs": {
+      "next_certificate_no": [
+        {
+          "file": "src/services/certificateService.ts",
+          "line": 44
+        }
+      ],
+      "next_fee_receipt_no": [
+        {
+          "file": "src/services/feeService.ts",
+          "line": 96
+        }
+      ],
+      "apply_fee_payment": [
+        {
+          "file": "src/services/feeService.ts",
+          "line": 224
+        }
+      ],
+      "increment_paid_fee": [
+        {
+          "file": "src/services/feeService.ts",
+          "line": 226
+        },
+        {
+          "file": "src/services/feeService.ts",
+          "line": 230
+        }
+      ],
+      "next_gate_pass_no": [
+        {
+          "file": "src/services/gatePassService.ts",
+          "line": 39
+        }
+      ],
+      "cancel_fee_receipt": [
+        {
+          "file": "src/services/receiptService.ts",
+          "line": 100
+        }
+      ],
+      "add_wallet_entry": [
+        {
+          "file": "src/services/studentMoneyService.ts",
+          "line": 37
+        }
+      ],
+      "refund_fee_paid": [
+        {
+          "file": "src/services/studentMoneyService.ts",
+          "line": 142
+        }
+      ]
+    },
+    "sqlTables": [
+      {
+        "name": "public.certificates",
+        "file": "supabase/migrations/20260929_certificates.sql"
+      },
+      {
+        "name": "public.certificate_counters",
+        "file": "supabase/migrations/20260929_certificates.sql"
+      },
+      {
+        "name": "public.enquiries",
+        "file": "supabase/migrations/20260929_enquiries.sql"
+      },
+      {
+        "name": "public.gate_passes",
+        "file": "supabase/migrations/20260929_gate_passes.sql"
+      },
+      {
+        "name": "public.fee_structures",
+        "file": "supabase/migrations/20260930_fee_setup.sql"
+      },
+      {
+        "name": "public.messages",
+        "file": "supabase/migrations/20261001_messages.sql"
+      },
+      {
+        "name": "public.message_recipients",
+        "file": "supabase/migrations/20261001_messages.sql"
+      },
+      {
+        "name": "public.salary_structures",
+        "file": "supabase/migrations/20261002_payroll_transport.sql"
+      },
+      {
+        "name": "public.payslips",
+        "file": "supabase/migrations/20261002_payroll_transport.sql"
+      },
+      {
+        "name": "public.transport_routes",
+        "file": "supabase/migrations/20261002_payroll_transport.sql"
+      },
+      {
+        "name": "public.whatsapp_auth",
+        "file": "supabase/migrations/20261002_whatsapp.sql"
+      },
+      {
+        "name": "public.whatsapp_settings",
+        "file": "supabase/migrations/20261002_whatsapp.sql"
+      },
+      {
+        "name": "public.whatsapp_outbox",
+        "file": "supabase/migrations/20261002_whatsapp.sql"
+      },
+      {
+        "name": "public.homework",
+        "file": "supabase/migrations/20261003_homework.sql"
+      },
+      {
+        "name": "public.timetable_periods",
+        "file": "supabase/migrations/20261003_timetable.sql"
+      },
+      {
+        "name": "public.timetable_entries",
+        "file": "supabase/migrations/20261003_timetable.sql"
+      },
+      {
+        "name": "public.parent_accounts",
+        "file": "supabase/migrations/20261006_parent_app.sql"
+      },
+      {
+        "name": "public.parent_otps",
+        "file": "supabase/migrations/20261006_parent_app.sql"
+      },
+      {
+        "name": "public.student_leave_requests",
+        "file": "supabase/migrations/20261006_parent_app.sql"
+      },
+      {
+        "name": "public.fee_payment_claims",
+        "file": "supabase/migrations/20261006_parent_app.sql"
+      },
+      {
+        "name": "public.parent_app_settings",
+        "file": "supabase/migrations/20261006_parent_app.sql"
+      },
+      {
+        "name": "public.staff_otps",
+        "file": "supabase/migrations/20261009_bus_tracking.sql"
+      },
+      {
+        "name": "public.bus_trips",
+        "file": "supabase/migrations/20261009_bus_tracking.sql"
+      },
+      {
+        "name": "public.bus_settings",
+        "file": "supabase/migrations/20261009_bus_tracking.sql"
+      },
+      {
+        "name": "public.meetings",
+        "file": "supabase/migrations/20261012_meetings.sql"
+      },
+      {
+        "name": "public.meeting_replies",
+        "file": "supabase/migrations/20261012_meetings.sql"
+      },
+      {
+        "name": "public.teacher_chats",
+        "file": "supabase/migrations/20261013_teacher_chat.sql"
+      },
+      {
+        "name": "public.teacher_messages",
+        "file": "supabase/migrations/20261013_teacher_chat.sql"
+      },
+      {
+        "name": "public.homework_checks",
+        "file": "supabase/migrations/20261014_staff_app_work.sql"
+      },
+      {
+        "name": "public.teacher_notes",
+        "file": "supabase/migrations/20261014_staff_app_work.sql"
+      },
+      {
+        "name": "public.syllabus_chapters",
+        "file": "supabase/migrations/20261019_syllabus_copycheck.sql"
+      },
+      {
+        "name": "public.syllabus_progress",
+        "file": "supabase/migrations/20261019_syllabus_copycheck.sql"
+      },
+      {
+        "name": "public.notebook_checks",
+        "file": "supabase/migrations/20261019_syllabus_copycheck.sql"
+      },
+      {
+        "name": "public.notebook_check_marks",
+        "file": "supabase/migrations/20261019_syllabus_copycheck.sql"
+      },
+      {
+        "name": "public.message_templates",
+        "file": "supabase/migrations/20261019_syllabus_copycheck.sql"
+      },
+      {
+        "name": "public.staff_reminders",
+        "file": "supabase/migrations/20261026_staff_reminders.sql"
+      },
+      {
+        "name": "public.student_remarks",
+        "file": "supabase/migrations/20261115_student_profile_360.sql"
+      },
+      {
+        "name": "public.audit_log",
+        "file": "supabase/migrations/20261115_student_profile_360.sql"
+      },
+      {
+        "name": "public.wallet_entries",
+        "file": "supabase/migrations/20261115_student_profile_360.sql"
+      },
+      {
+        "name": "public.fee_refunds",
+        "file": "supabase/migrations/20261115_student_profile_360.sql"
+      },
+      {
+        "name": "institution_settings",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "academic_sessions",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "classes",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "sections",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "users",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "students",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "staff",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "teacher_subject_assignments",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "attendance_student",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "attendance_staff",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "fee_ledger",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "fee_transactions",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "homework",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "copy_checks",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "academic_terms",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "exams",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "exam_marks",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "coscholastic_grades",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "circulars",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "notification_logs",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "leave_applications",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "call_campaigns",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "call_logs",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "calendar_events",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "offline_admission_tests",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "admission_test_results",
+        "file": "supabase/schema.sql"
+      },
+      {
+        "name": "institution_settings",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "academic_sessions",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "classes",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "sections",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "users",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "students",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "staff",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "teacher_subject_assignments",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "attendance_student",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "attendance_staff",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "fee_ledger",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "fee_transactions",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "homework",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "copy_checks",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "academic_terms",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "exams",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "exam_marks",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "coscholastic_grades",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "circulars",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "notification_logs",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "leave_applications",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "call_campaigns",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "call_logs",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "calendar_events",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "offline_admission_tests",
+        "file": "supabase/setup_all.sql"
+      },
+      {
+        "name": "admission_test_results",
+        "file": "supabase/setup_all.sql"
+      }
+    ],
+    "sqlFunctions": [
+      {
+        "name": "public.next_fee_receipt_no",
+        "file": "supabase/migrations/20260928_fee_receipt_details.sql"
+      },
+      {
+        "name": "public.next_certificate_no",
+        "file": "supabase/migrations/20260929_certificates.sql"
+      },
+      {
+        "name": "public.next_gate_pass_no",
+        "file": "supabase/migrations/20260929_gate_passes.sql"
+      },
+      {
+        "name": "public.apply_fee_payment",
+        "file": "supabase/migrations/20260930_fee_fine.sql"
+      },
+      {
+        "name": "public.cancel_fee_receipt",
+        "file": "supabase/migrations/20260930_fee_fine.sql"
+      },
+      {
+        "name": "public.cancel_fee_receipt",
+        "file": "supabase/migrations/20260930_receipt_cancel.sql"
+      },
+      {
+        "name": "public.add_wallet_entry",
+        "file": "supabase/migrations/20261115_student_profile_360.sql"
+      },
+      {
+        "name": "public.refund_fee_paid",
+        "file": "supabase/migrations/20261115_student_profile_360.sql"
+      },
+      {
+        "name": "increment_paid_fee",
+        "file": "supabase/migrations/add_increment_paid_fee.sql"
+      },
+      {
+        "name": "increment_paid_fee",
+        "file": "supabase/setup_all.sql"
+      }
+    ],
+    "sqlMigrations": [
+      "supabase/migrations/20260928_fee_receipt_details.sql",
+      "supabase/migrations/20260929_certificates.sql",
+      "supabase/migrations/20260929_enquiries.sql",
+      "supabase/migrations/20260929_gate_passes.sql",
+      "supabase/migrations/20260930_fee_fine.sql",
+      "supabase/migrations/20260930_fee_setup.sql",
+      "supabase/migrations/20260930_receipt_cancel.sql",
+      "supabase/migrations/20260930_settings.sql",
+      "supabase/migrations/20261001_exams.sql",
+      "supabase/migrations/20261001_messages.sql",
+      "supabase/migrations/20261002_exam_scope.sql",
+      "supabase/migrations/20261002_payroll_transport.sql",
+      "supabase/migrations/20261002_staff.sql",
+      "supabase/migrations/20261002_whatsapp.sql",
+      "supabase/migrations/20261003_homework.sql",
+      "supabase/migrations/20261003_timetable.sql",
+      "supabase/migrations/20261006_parent_app.sql",
+      "supabase/migrations/20261009_bus_tracking.sql",
+      "supabase/migrations/20261010_bus_v2.sql",
+      "supabase/migrations/20261012_meetings.sql",
+      "supabase/migrations/20261013_teacher_chat.sql",
+      "supabase/migrations/20261014_staff_app_work.sql",
+      "supabase/migrations/20261014_staff_photo_stream.sql",
+      "supabase/migrations/20261019_syllabus_copycheck.sql",
+      "supabase/migrations/20261020_student_admission_details.sql",
+      "supabase/migrations/20261026_homework_files.sql",
+      "supabase/migrations/20261026_staff_reminders.sql",
+      "supabase/migrations/20261113_school_hero.sql",
+      "supabase/migrations/20261114_pay_qr.sql",
+      "supabase/migrations/20261115_student_profile_360.sql",
+      "supabase/migrations/add_increment_paid_fee.sql",
+      "supabase/migrations/add_rls_and_storage.sql",
+      "supabase/schema.sql",
+      "supabase/seed_users.sql",
+      "supabase/setup_all.sql"
+    ]
+  },
+  "clients": {
+    "web": [
+      {
+        "file": "app/exams/report-cards/page.tsx",
+        "supabase": true,
+        "polling": false
+      },
+      {
+        "file": "app/settings/messaging/page.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "components/database/DatabaseStatusModal.tsx",
+        "supabase": true,
+        "polling": false
+      },
+      {
+        "file": "components/transport/TransportLivePanel.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "lib/services/feeService.ts",
+        "supabase": true,
+        "polling": false
+      },
+      {
+        "file": "lib/services/studentService.ts",
+        "supabase": true,
+        "polling": false
+      },
+      {
+        "file": "lib/supabaseAdmin.ts",
+        "supabase": true,
+        "polling": false
+      },
+      {
+        "file": "lib/supabaseClient.ts",
+        "supabase": true,
+        "polling": false
+      }
+    ],
+    "staff": [
+      {
+        "file": "app/(app)/erp/settings/whatsapp/page.tsx",
+        "supabase": true,
+        "polling": true
+      },
+      {
+        "file": "app/(app)/erp/staff/attendance/page.tsx",
+        "supabase": true,
+        "polling": false
+      },
+      {
+        "file": "app/(app)/erp/staff/page.tsx",
+        "supabase": true,
+        "polling": false
+      },
+      {
+        "file": "app/(app)/erp/timetable/page.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "app/(app)/erp/transport/page.tsx",
+        "supabase": true,
+        "polling": false
+      },
+      {
+        "file": "app/(app)/lectures/page.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "app/(app)/messages/chat/page.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "app/(app)/timetable/page.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "app/(app)/trip/page.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "components/driver/DropAlert.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "components/SahayakThinking.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "components/StaffHome.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "components/transport/TransportLivePanel.tsx",
+        "supabase": false,
+        "polling": true
+      }
+    ],
+    "parents": [
+      {
+        "file": "app/(app)/bus/live.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "app/(app)/search/page.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "app/(app)/teachers/chat/page.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "components/BannerSlider.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "components/CalendarScreen.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "components/LiveBus.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "components/SahayakThinking.tsx",
+        "supabase": false,
+        "polling": true
+      },
+      {
+        "file": "components/StudyScreen.tsx",
+        "supabase": false,
+        "polling": true
+      }
+    ]
+  }
+}
