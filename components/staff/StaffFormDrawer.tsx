@@ -36,12 +36,13 @@ function Field({ id, label, children, hint }: { id: string; label: string; child
 /** Add a staff member, or edit one. */
 export function StaffFormDrawer({ isOpen, staff, onClose, onSaved }: { isOpen: boolean; staff: StaffMember | null; onClose: () => void; onSaved: (s: StaffMember) => void }) {
   const [f, setF] = useState(EMPTY);
+  const [step, setStep] = useState(0);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!isOpen) return;
-    setError(null);
+    setError(null); setStep(0);
     if (staff) {
       setF({
         empCode: staff.empCode,
@@ -69,6 +70,13 @@ export function StaffFormDrawer({ isOpen, staff, onClose, onSaved }: { isOpen: b
   const set = (k: keyof typeof EMPTY) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => setF((x) => ({ ...x, [k]: e.target.value }));
   const setType = (t: StaffType) => setF((x) => ({ ...x, staffType: t, designation: DESIGNATIONS[t].includes(x.designation) || !x.designation ? "" : x.designation }));
 
+  const validate = () => {
+    if (step === 0 && f.name.trim().length < 2) { setError("Enter the full name."); document.getElementById("st-name")?.focus(); return false; }
+    if (step === 1 && !f.designation.trim()) { setError("Choose or type a designation."); document.getElementById("st-designation")?.focus(); return false; }
+    if (step === 2 && !/^[6-9]\d{9}$/.test(f.mobile)) { setError("Enter a 10-digit mobile number."); document.getElementById("st-mobile")?.focus(); return false; }
+    if (step === 2 && f.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) { setError("Enter a valid email address."); return false; }
+    setError(null); return true;
+  };
   const save = async () => {
     if (f.name.trim().length < 2) return setError("Enter the full name.");
     if (!/^[6-9]\d{9}$/.test(f.mobile)) return setError("Enter a 10-digit mobile number.");
@@ -76,106 +84,35 @@ export function StaffFormDrawer({ isOpen, staff, onClose, onSaved }: { isOpen: b
     setBusy(true);
     setError(null);
     const input: StaffInput = { ...f, experienceYears: f.experienceYears === "" ? null : Number(f.experienceYears) };
-    const r = staff ? await staffService.update(staff.id, input) : await staffService.create(input);
-    setBusy(false);
-    if (r.error || !r.data) return setError(r.error || "Could not save.");
-    onSaved(r.data);
+    try {
+      const r = staff ? await staffService.update(staff.id, input) : await staffService.create(input);
+      if (r.error || !r.data) return setError(r.error || "Could not save.");
+      onSaved(r.data);
+    } catch {
+      setError("Could not save. Your entered details are still here. Try again.");
+    } finally {
+      setBusy(false);
+    }
   };
 
-  return (
-    <SideDrawer
-      isOpen={isOpen}
-      onClose={onClose}
-      busy={busy}
-      width="max-w-[640px]"
-      title={staff ? `Edit ${staff.name}` : "Add staff"}
-      subtitle={staff ? `${staff.empCode} · ${staff.designation}` : "Teachers and office staff"}
-      footer={
-        <>
-          <button type="button" onClick={onClose} disabled={busy} className="btn btn-secondary ml-auto">Cancel</button>
-          <button type="button" onClick={save} disabled={busy} className="btn btn-primary">
-            {busy && <Loader2 className="h-4 w-4 animate-spin" />}
-            {staff ? "Save changes" : "Add staff"}
-          </button>
-        </>
-      }
-    >
-      <div className="bg-white">
-        {error && <p role="alert" className="rounded-lg bg-rose-50 px-3 py-2 text-sm text-rose-700 ring-1 ring-rose-100">{error}</p>}
 
-        <section className="workspace-section space-y-4 border-b border-slate-200 p-5 last:border-b-0">
-          <div className="flex gap-1 rounded-xl bg-slate-100 p-1" role="radiogroup" aria-label="Staff type">
-            {([["teaching", "Teaching"], ["non_teaching", "Non-teaching"]] as [StaffType, string][]).map(([t, label]) => (
-              <button key={t} type="button" role="radio" aria-checked={f.staffType === t} onClick={() => setType(t)} className={`flex-1 rounded-lg px-3 py-1.5 text-[13px] font-semibold ${f.staffType === t ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}>
-                {label}
-              </button>
-            ))}
-          </div>
-          <div className="grid gap-4 sm:grid-cols-[1fr_9rem]">
-            <Field id="st-name" label="Full name">
-              <input id="st-name" value={f.name} onChange={set("name")} className="field w-full" maxLength={150} placeholder="e.g. Sunita Sharma" />
-            </Field>
-            <Field id="st-code" label="Employee code">
-              <input id="st-code" value={f.empCode} onChange={(e) => setF((x) => ({ ...x, empCode: e.target.value.toUpperCase() }))} disabled={!!staff} className="field w-full font-mono" maxLength={30} />
-            </Field>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Field id="st-desig" label="Designation">
-              <input id="st-desig" list="st-desig-list" value={f.designation} onChange={set("designation")} className="field w-full" maxLength={100} placeholder={f.staffType === "teaching" ? "e.g. TGT" : "e.g. Office Clerk"} />
-              <datalist id="st-desig-list">
-                {DESIGNATIONS[f.staffType].map((d) => (
-                  <option key={d} value={d} />
-                ))}
-              </datalist>
-            </Field>
-            <Field id="st-dept" label="Department" hint={f.staffType === "teaching" ? "e.g. Science, Primary wing" : "e.g. Office, Transport"}>
-              <input id="st-dept" value={f.department} onChange={set("department")} className="field w-full" maxLength={100} />
-            </Field>
-          </div>
-        </section>
-
-        <section className="workspace-section grid gap-4 border-b border-slate-200 p-5 last:border-b-0 sm:grid-cols-2">
-          <Field id="st-mobile" label="Mobile">
-            <input id="st-mobile" inputMode="numeric" maxLength={10} value={f.mobile} onChange={(e) => setF((x) => ({ ...x, mobile: e.target.value.replace(/\D/g, "") }))} className="field w-full tabular-nums" />
-          </Field>
-          <Field id="st-alt" label="Other mobile (optional)">
-            <input id="st-alt" inputMode="numeric" maxLength={10} value={f.altMobile} onChange={(e) => setF((x) => ({ ...x, altMobile: e.target.value.replace(/\D/g, "") }))} className="field w-full tabular-nums" />
-          </Field>
-          <Field id="st-email" label="Email (optional)">
-            <input id="st-email" type="email" value={f.email} onChange={set("email")} className="field w-full" maxLength={150} />
-          </Field>
-          <Field id="st-gender" label="Gender">
-            <select id="st-gender" value={f.gender} onChange={set("gender")} className="field w-full">
-              <option value="">—</option>
-              <option>Female</option>
-              <option>Male</option>
-              <option>Other</option>
-            </select>
-          </Field>
-          <Field id="st-dob" label="Date of birth">
-            <input id="st-dob" type="date" value={f.dob} onChange={set("dob")} className="field w-full" />
-          </Field>
-          <Field id="st-join" label="Joined on">
-            <input id="st-join" type="date" value={f.joiningDate} onChange={set("joiningDate")} className="field w-full" />
-          </Field>
-          <Field id="st-qual" label="Qualification">
-            <input id="st-qual" value={f.qualification} onChange={set("qualification")} className="field w-full" maxLength={150} placeholder="e.g. M.Sc., B.Ed." />
-          </Field>
-          <Field id="st-exp" label="Experience before joining (years)">
-            <input id="st-exp" type="number" min={0} max={60} value={f.experienceYears} onChange={set("experienceYears")} className="field w-full tabular-nums" />
-          </Field>
-          <div className="sm:col-span-2">
-            <Field id="st-addr" label="Address">
-              <textarea id="st-addr" rows={2} value={f.address} onChange={set("address")} className="field w-full" maxLength={300} />
-            </Field>
-          </div>
-          <div className="sm:col-span-2">
-            <Field id="st-notes" label="Notes (office only)">
-              <textarea id="st-notes" rows={2} value={f.notes} onChange={set("notes")} className="field w-full" maxLength={500} />
-            </Field>
-          </div>
-        </section>
+  const titles = ["Profile", "Job & joining", "Contact", "Review"];
+  const descriptions = ["Start with the person joining your school.", "Record their role, joining details and qualifications.", "Add the number your office can reach them on.", "Check the record before adding this staff member."];
+  const input = (key: keyof typeof EMPTY, label: string, type = "text", required = false) => <Field id={"st-"+key} label={label+(required ? " *" : "")}><input id={"st-"+key} type={type} value={f[key]} onChange={set(key)} className="field w-full" disabled={key === "empCode" && !!staff} maxLength={key === "name" ? 150 : 150} {...(type === "number" ? {min:0,max:60,step:0.5} : {})} /></Field>;
+  return <SideDrawer isOpen={isOpen} onClose={onClose} busy={busy} width="max-w-[720px]" title={staff ? "Edit staff record" : "New staff member"} subtitle={staff ? staff.empCode : "Create a staff record · Required fields marked *"} footer={<>
+    <button type="button" disabled={busy} onClick={() => step ? setStep(step-1) : onClose()} className="btn btn-secondary">{step ? "Back" : "Cancel"}</button>
+    <span className="mr-auto text-xs text-slate-500">Step {step+1} of 4</span>
+    <button type="button" disabled={busy} onClick={() => {if(step<3){if(validate())setStep(step+1)}else void save()}} className="btn btn-primary">{busy && <Loader2 className="h-4 w-4 animate-spin" />}{step<3 ? "Continue" : staff ? "Save changes" : "Create staff record"}</button>
+  </>}>
+    <div className="bg-white">
+      <nav aria-label="Staff onboarding progress" className="grid grid-cols-4 border-b border-slate-200 px-5">{titles.map((title,i)=><div key={title} aria-current={step===i ? "step" : undefined} className={"flex items-center gap-2 border-b-2 py-4 text-xs font-medium "+(step===i?"border-slate-900 text-slate-900":"border-transparent text-slate-500")}><span className={"grid h-6 w-6 shrink-0 place-items-center rounded-full border "+(i<step?"border-green-700 bg-green-700 text-white":"border-slate-300")}>{i<step?"✓":i+1}</span><span>{title}</span></div>)}</nav>
+      <div className="p-5 sm:p-7"><h3 className="text-xl font-semibold text-slate-900">{titles[step]}</h3><p className="mb-7 mt-1 text-sm text-slate-500">{descriptions[step]}</p>
+      {error && <p role="alert" className="mb-4 border-l-2 border-red-700 pl-3 text-sm text-red-700">{error}</p>}
+      {step===0 && <div className="grid gap-5 sm:grid-cols-2"><div className="sm:col-span-2">{input("name","Full name","text",true)}</div>{input("empCode","Employee code")}<p className="self-center text-xs leading-relaxed text-slate-500">A code is suggested automatically. Each staff member needs their own code.</p>{input("dob","Date of birth","date")}<Field id="st-gender" label="Gender (optional)"><select id="st-gender" className="field w-full" value={f.gender} onChange={set("gender")}><option value="">Select gender</option><option>Female</option><option>Male</option><option>Other</option></select></Field></div>}
+      {step===1 && <div className="grid gap-5 sm:grid-cols-2"><fieldset className="sm:col-span-2"><legend className="field-label">Staff category</legend><div className="flex gap-5">{(["teaching","non_teaching"] as StaffType[]).map(t=><label key={t} className="flex items-center gap-2 text-sm"><input type="radio" name="staff-category" checked={f.staffType===t} onChange={()=>setType(t)}/>{t==="teaching"?"Teaching":"Non-teaching"}</label>)}</div></fieldset><Field id="st-designation" label="Designation *"><input id="st-designation" list="staff-designations" className="field w-full" value={f.designation} onChange={set("designation")}/><datalist id="staff-designations">{DESIGNATIONS[f.staffType].map(d=><option key={d} value={d}/>)}</datalist></Field>{input("department","Department")}{input("joiningDate","Date of joining","date")}{input("qualification","Qualification")}{input("experienceYears","Previous experience (years)","number")}</div>}
+      {step===2 && <div className="grid gap-5 sm:grid-cols-2">{(["mobile","altMobile"] as const).map(k=><Field key={k} id={"st-"+k} label={k==="mobile"?"Mobile number *":"Other mobile (optional)"}><input id={"st-"+k} type="tel" inputMode="numeric" maxLength={10} value={f[k]} onChange={e=>setF(x=>({...x,[k]:e.target.value.replace(/\D/g,"")}))} className="field w-full"/></Field>)}<div className="sm:col-span-2">{input("email","Email (optional)","email")}</div><div className="sm:col-span-2"><Field id="st-address" label="Address"><textarea id="st-address" rows={3} className="field w-full" value={f.address} onChange={set("address")} maxLength={300}/></Field></div></div>}
+      {step===3 && <div><dl className="divide-y divide-slate-200">{[["Full name",f.name],["Employee code",f.empCode||"Assigned when saved"],["Category",f.staffType==="teaching"?"Teaching":"Non-teaching"],["Designation",f.designation],["Department",f.department],["Joining date",f.joiningDate],["Mobile",f.mobile],["Email",f.email],["Qualification",f.qualification]].map(([label,value])=><div key={label} className="grid grid-cols-[1fr_1.4fr] gap-4 py-3 text-sm"><dt className="text-slate-500">{label}</dt><dd className="break-words font-medium text-slate-900">{value||"Not provided"}</dd></div>)}</dl><div className="mt-6"><Field id="st-notes" label="Office notes (optional)"><textarea id="st-notes" className="field w-full" rows={2} value={f.notes} onChange={set("notes")} maxLength={500}/></Field></div><p className="mt-5 text-xs leading-relaxed text-slate-500">After creating this record, set up salary, app access and teaching assignments from the staff profile.</p></div>}
       </div>
-    </SideDrawer>
-  );
+    </div>
+  </SideDrawer>;
 }
