@@ -25,7 +25,7 @@ export function FeeReceiptModal({ isOpen, onClose, transaction, schoolName: give
   const place = [p.address, p.city, [p.state, p.pincode].filter(Boolean).join(" ")].filter(Boolean).join(", ");
   const contact = [[p.contact1, p.contact2].filter(Boolean).join(", "), p.email].filter(Boolean).join(" · ");
   const affiliation = p.affiliation_no ? `${p.board || "CBSE"} Affiliation No. ${p.affiliation_no}${p.school_code ? ` · School code ${p.school_code}` : ""}` : "";
-  const letterhead = { place, contact, affiliation };
+  const letterhead = { place, contact, affiliation, logo: p.logo_url };
   const printRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -48,6 +48,23 @@ export function FeeReceiptModal({ isOpen, onClose, transaction, schoolName: give
         receipt flow at natural height on A4 with both copies.
       */}
       <style jsx global>{`
+        #receipt-portal .receipt-slip { border: 2px solid #1c2a5e; padding: 20px 24px; color: #17233c; font-family: Georgia, 'Times New Roman', serif; box-shadow: inset 0 0 0 4px white, inset 0 0 0 5px #d0d5e1; }
+        #receipt-portal .receipt-letterhead { display: flex; align-items: center; gap: 16px; padding-bottom: 12px; border-bottom: 2px solid #1c2a5e; }
+        #receipt-portal .receipt-letterhead img { width: 62px; height: 62px; object-fit: contain; flex-shrink: 0; }
+        #receipt-portal .receipt-letterhead-details { flex: 1; text-align: center; }
+        #receipt-portal .receipt-school-name { font-size: 20px; font-weight: 700; line-height: 1.2; color: #1c2a5e; }
+        #receipt-portal .receipt-copy { text-align: right; font: 10px Arial,sans-serif; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; color: #59647b; }
+        #receipt-portal .receipt-document-title { display:flex; justify-content:space-between; align-items:center; gap:12px; border-bottom:1px solid #b8c1d1; padding:9px 0; margin-bottom:2px; }
+        #receipt-portal .receipt-document-title h3 { font-size:16px; font-weight:700; letter-spacing:2px; color:#1c2a5e; }
+        #receipt-portal .receipt-slip dl { font-family:Arial,sans-serif; font-size:11px; gap:9px 16px; padding:12px 0; }
+        #receipt-portal .receipt-slip dl dt { width:65px; }
+        #receipt-portal .receipt-slip table { font:11px Arial,sans-serif; border-color:#a6b1c6; }
+        #receipt-portal .receipt-slip th { background:#eef1f8; color:#1c2a5e; padding:8px; text-transform:uppercase; font-size:10px; letter-spacing:.5px; }
+        #receipt-portal .receipt-slip td { padding:7px 8px; }
+        #receipt-portal .receipt-slip tr:last-child { background:#eef1f8; color:#1c2a5e; }
+        #receipt-portal .receipt-amount-words { padding:9px 0; border-bottom:1px solid #d0d5e1; font-size:11px; }
+        #receipt-portal .receipt-signatures { display:flex; justify-content:space-between; gap:16px; margin-top:28px; font:10px Arial,sans-serif; }
+        @media(max-width:480px) { #receipt-portal .receipt-slip {padding:16px 12px;} #receipt-portal .receipt-school-name {font-size:17px;} #receipt-portal .receipt-letterhead img {width:46px;height:46px;} #receipt-portal .receipt-slip dl {grid-template-columns:1fr;} }
         @media print {
           @page {
             size: A4 portrait;
@@ -90,7 +107,17 @@ export function FeeReceiptModal({ isOpen, onClose, transaction, schoolName: give
           }
           #receipt-portal .receipt-slip {
             break-inside: avoid;
+            padding: 12px 18px;
+            font-size: 11px;
+            line-height: 1.2;
           }
+          #receipt-portal .receipt-letterhead { padding-bottom: 8px; }
+          #receipt-portal .receipt-letterhead img { width: 46px; height: 46px; }
+          #receipt-portal .receipt-school-name { font-size: 18px; }
+          #receipt-portal .receipt-document-title { padding: 6px 0; }
+          #receipt-portal .receipt-slip dl { grid-template-columns: 1fr 1fr; padding: 8px 0; gap: 5px 16px; }
+          #receipt-portal .receipt-slip td, #receipt-portal .receipt-slip th { padding: 5px 8px; }
+          #receipt-portal .receipt-signatures { margin-top: 20px; }
         }
       `}</style>
 
@@ -154,7 +181,7 @@ export function FeeReceiptModal({ isOpen, onClose, transaction, schoolName: give
   );
 }
 
-function ReceiptSlip({ copy, schoolName, letterhead, t }: { copy: string; schoolName: string; letterhead: { place: string; contact: string; affiliation: string }; t: FeeTransaction }) {
+export function ReceiptSlip({ copy, schoolName, letterhead, t }: { copy: string; schoolName: string; letterhead: { place: string; contact: string; affiliation: string; logo?: string }; t: FeeTransaction }) {
   const s = t.student;
   const rows: { key: string; label: string; amount: number }[] = headRows(t.fee_heads);
   if (!rows.length) rows.push({ key: "fee", label: "Fee payment", amount: Number(t.amount_paid) || 0 });
@@ -167,6 +194,7 @@ function ReceiptSlip({ copy, schoolName, letterhead, t }: { copy: string; school
     ["Class", s?.class_name ? `${s.class_name}${s.section ? " - " + s.section : ""}` : "—"],
     ["Father", s?.father_name || "—"],
     ["SR no.", s?.sr_no || "—"],
+    ["Admission no.", s?.admission_no || "—"],
     ["Paid by", `${t.payment_mode}${t.transaction_id ? ` · ${t.transaction_id}` : ""}`],
     ["Received by", t.collected_by || "Fee counter"],
   ];
@@ -180,14 +208,17 @@ function ReceiptSlip({ copy, schoolName, letterhead, t }: { copy: string; school
           {t.cancel_reason && <span className="mt-6 -rotate-[18deg] bg-white/80 px-2 text-xs font-semibold text-rose-700">{t.cancel_reason}</span>}
         </div>
       )}
-      <header className="relative border-b border-slate-800 pb-3 text-center">
-        <span className="absolute right-0 top-0 text-[11px] text-slate-600">{copy}</span>
-        <p className="text-base font-bold uppercase tracking-wide">{schoolName}</p>
+      <p className="receipt-copy">{copy}</p>
+      <header className="receipt-letterhead">
+        {letterhead.logo && <img src={letterhead.logo} alt="School logo" />}
+        <div className="receipt-letterhead-details">
+        <p className="receipt-school-name">{schoolName}</p>
         {letterhead.place && <p className="text-xs text-slate-600">{letterhead.place}</p>}
         {letterhead.contact && <p className="text-[11px] text-slate-600">{letterhead.contact}</p>}
         {letterhead.affiliation && <p className="text-[11px] text-slate-600">{letterhead.affiliation}</p>}
-        <p className="mt-2 inline-block border border-slate-800 px-3 py-0.5 text-xs font-semibold">FEE RECEIPT</p>
+        </div>
       </header>
+      <div className="receipt-document-title"><h3>FEE RECEIPT</h3><span className="text-[10px] text-slate-600">{t.cancelled ? "Cancelled record" : "Payment acknowledgement"}</span></div>
 
       <div className="flex justify-between py-2.5">
         <span>
@@ -230,12 +261,13 @@ function ReceiptSlip({ copy, schoolName, letterhead, t }: { copy: string; school
         </tbody>
       </table>
 
-      <p className="mt-2">
+      <p className="receipt-amount-words">
         <span className="text-slate-600">Rupees in words: </span>
         <span className="font-medium">{numberToWordsIndian(Number(t.amount_paid) || 0)}</span>
       </p>
 
-      <div className="mt-10 flex items-end justify-between text-xs text-slate-600">
+      {t.remarks && <p className="mt-2 text-[10px] text-slate-600">Remarks: {t.remarks}</p>}
+      <div className="receipt-signatures">
         <span className="border-t border-slate-500 px-4 pt-1">Depositor&apos;s signature</span>
         <span className="border-t border-slate-500 px-4 pt-1">Cashier (signature &amp; seal)</span>
       </div>

@@ -207,12 +207,12 @@ export function OfflineNote({ show }: { show: boolean }) {
   );
 }
 
-export function ErrorCard({ offline, onRetry }: { offline?: boolean; onRetry: () => unknown }) {
+export function ErrorCard({ offline, slow, onRetry }: { offline?: boolean; slow?: boolean; onRetry: () => unknown }) {
   const L = useL();
   return (
     <div className="row-card flex flex-col items-start gap-3 p-4" role="alert">
       <p className="text-ink-700">
-        {offline ? L({ hi: "इंटरनेट नहीं है। कनेक्शन आने पर दोबारा कोशिश करें।", en: "No internet. Try again when you are connected." }) : L({ hi: "कुछ गड़बड़ हुई। दोबारा कोशिश करें।", en: "Something went wrong. Please try again." })}
+        {slow ? L({ hi: "जवाब आने में समय लगा। दोबारा कोशिश करें।", en: "The request took too long. Please try again." }) : offline ? L({ hi: "इंटरनेट नहीं है। कनेक्शन आने पर दोबारा कोशिश करें।", en: "No internet. Try again when you are connected." }) : L({ hi: "कुछ गड़बड़ हुई। दोबारा कोशिश करें।", en: "Something went wrong. Please try again." })}
       </p>
       <RetryButton onRetry={onRetry} />
     </div>

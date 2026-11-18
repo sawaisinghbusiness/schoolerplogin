@@ -26,7 +26,7 @@ export interface UserInput {
 
 /** What each role can open — matches the checks in the backend routes. */
 export const ROLE_INFO: Record<UserRole, { label: string; badge: string; can: string; staff: boolean }> = {
-  admin: { label: "Admin", badge: "badge-brand", staff: true, can: "Everything: students, fees, fee setup, settings and these user accounts." },
+  admin: { label: "Director", badge: "badge-brand", staff: true, can: "Everything: students, fees, fee setup, settings and these user accounts." },
   accountant: { label: "Accounts", badge: "badge-emerald", staff: true, can: "Collects fees and prints receipts, handles enquiries. Sees students and reports." },
   teacher: { label: "Teacher", badge: "badge-sky", staff: true, can: "Marks attendance and issues gate passes. Sees students and reports." },
   exam_cell: { label: "Exam cell", badge: "badge-violet", staff: true, can: "Sees students and reports. Marks entry will open for them with Exams." },

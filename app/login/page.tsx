@@ -43,7 +43,7 @@ function SchoolLogo({ url, short, size, dark }: { url: string; short: string; si
 type UserRole = "admin" | "teacher" | "accountant" | "parent";
 
 const ROLES: { id: UserRole; label: string; icon: typeof ShieldCheck }[] = [
-  { id: "admin", label: "Admin", icon: ShieldCheck },
+  { id: "admin", label: "Director", icon: ShieldCheck },
   { id: "teacher", label: "Faculty", icon: Briefcase },
   { id: "accountant", label: "Accounts", icon: Wallet },
   { id: "parent", label: "Parent", icon: Users },

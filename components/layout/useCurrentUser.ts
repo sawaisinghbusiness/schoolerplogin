@@ -11,7 +11,7 @@ export interface CurrentUser {
 }
 
 const ROLE_LABELS: Record<string, string> = {
-  admin: "Administrator",
+  admin: "Director",
   teacher: "Faculty",
   exam_cell: "Exam Cell",
   accountant: "Accounts",
